@@ -10,8 +10,8 @@ sourceDir = 'u8g2/tools/font/bdf'
 outDir = 'mpy-fonts'
 prefix = 'mPyEZfont_u8g2_'
 
-sources = os.listdir(sourceDir)
-#sources = os.listdir(sourceDir)[:20] # good for test and debug
+#sources = os.listdir(sourceDir)
+sources = os.listdir(sourceDir)[:20] # good for test and debug
 
 charsets = {
             'e':None,
@@ -58,7 +58,7 @@ def checkValid(file):
         return False
 
 def doFont(base,chars='e'):
-    global generated,badFontFiles
+    global badFontFiles
     infile = sourceDir + '/' + base + '.bdf'
     if chars == 'e':
         charset = ''
@@ -73,15 +73,7 @@ def doFont(base,chars='e'):
     if run.returncode != 0:
         return True  # a softfail
     realHeight = int(run.stdout.split(b'\n')[3].split(b' ')[2])
-    # log
-    if base not in generated.keys():
-        generated[base] = [realHeight]
-    generated[base].append(fileName)
-    outSubDir = outDir + '/' + str(realHeight)
-    os.makedirs(outSubDir, exist_ok=True)
-    if os.path.exists(outSubDir + '/' + fileName):
-        os.remove(outSubDir + '/' + fileName)
-    os.rename('tmp_' + fileName, outSubDir + '/' + fileName)
+    packageInfo(base,infile,fileName,realHeight)
     print(' ' + chars, end='')
     return True
 
@@ -91,6 +83,53 @@ def includeFont(name):
         if re.match(fam,name):
             return True
     return False
+
+def packageInfo(base,infile,fileName,realHeight):
+    global generated
+    copyrightTxt = []
+    commentTxt = []
+    f = open(infile,'r')
+    for line in f:
+        if re.match('^.*COPYRIGHT',line):
+            copyrightTxt.append(line)
+        if re.match('^.*COMMENT',line):
+            commentTxt.append(line)
+    if base not in generated.keys():
+        generated[base] = [realHeight]
+    generated[base].append(fileName)
+    outSubDir = outDir + '/' + str(realHeight)
+    os.makedirs(outSubDir, exist_ok=True)
+    if os.path.exists(outSubDir + '/' + fileName):
+        # clean for overwrite
+        os.remove(outSubDir + '/' + fileName)
+    tmp = open('tmp_' + fileName,'r')
+    ffile = open(outSubDir + '/' + fileName,'w')
+    ffile.write("'''\n")
+    ffile.write('    ' + fileName + ' : generated as part of the microPyEZfonts repository\n')
+    ffile.write('      https://github.com/easytarget/microPyEZfonts\n\n')
+    ffile.write('    Original ' + base + '.bdf font file was sourced from the U8G2 project:\n')
+    ffile.write('      https://github.com/olikraus/u8g2\n\n')
+    ffile.write('    This font definition can be used with the "writer" class from Peter Hinches\n')
+    ffile.write('      micropython font-to-py tool, and was generated using his tooling from\n')
+    ffile.write('      https://github.com/peterhinch/micropython-font-to-py\n\n')
+    ffile.write('    Original Copyright Notice from source:\n\n')
+    if len(copyrightTxt) > 0:
+        for line in copyrightTxt:
+            ffile.write('    ' + line)
+    else:
+        ffile.write('    None found:\n')
+    ffile.write('\n    Original Comments from source (may include copyright info):\n\n')
+    if len(commentTxt) > 0:
+        for line in commentTxt:
+            ffile.write('    ' + line)
+    else:
+        ffile.write('    None found:\n')
+    ffile.write("'''\n\n")
+    for line in tmp:
+        ffile.write(line)
+    tmp.close()
+    ffile.close()
+    os.remove('tmp_' + fileName)
 
 '''
     init
@@ -103,6 +142,7 @@ for s in charsets.keys():
     o = open(c,'w')
     o.write(charsets[s])
     o.close()
+
 
 '''
     main loop
@@ -123,6 +163,9 @@ for file in sources:
             break
     print()
 
+'''
+    Wrap up and summary
+'''
 #print('Ignored:\n',ignoredFontFiles)
 
 if len(badFontFiles) > 0:
