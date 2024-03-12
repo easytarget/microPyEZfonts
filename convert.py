@@ -10,8 +10,8 @@ sourceDir = 'u8g2/tools/font/bdf'
 outDir = 'mpy-fonts'
 prefix = 'mPyEZfont_u8g2_'
 
-#sources = os.listdir(sourceDir)
-sources = os.listdir(sourceDir)[:20] # good for test and debug
+sources = os.listdir(sourceDir)
+#sources = os.listdir(sourceDir)[:20] # good for test and debug
 
 charsets = {
             'e':None,
@@ -63,7 +63,7 @@ def doFont(base,chars='e'):
     if chars == 'e':
         charset = ''
     else:
-        charset = '-k ' + chars + '-char.set '
+        charset = '-k ' + outDir + '/' + chars + '-char.set '
     fileName = prefix + base + '_' + chars + '.py'
     cmd = 'micropython-font-to-py/font_to_py.py -x ' + charset + infile + ' 0 tmp_' + fileName
     if not checkValid(infile):
@@ -134,11 +134,13 @@ def packageInfo(base,infile,fileName,realHeight):
 '''
     init
 '''
+os.makedirs(outDir,exist_ok=True)
+
 # (re)create our charset files:
 for s in charsets.keys():
     if charsets[s] is None:
         continue
-    c = s + '-char.set'
+    c = outDir + '/' + s + '-char.set'
     o = open(c,'w')
     o.write(charsets[s])
     o.close()
@@ -147,7 +149,6 @@ for s in charsets.keys():
 '''
     main loop
 '''
-os.makedirs(outDir,exist_ok=True)
 sources.sort()
 for file in sources:
     if file[-4:] != '.bdf':
