@@ -4,11 +4,12 @@ import re
 '''
     converter
     surprisingly badly documented for one of my scripts.. sorry.
-    'documented in code' I suppose.
+    - it is 'documented in code', I suppose.
 '''
 sourceDir = 'u8g2/tools/font/bdf'
 outDir = 'mpy-fonts'
 prefix = 'mPyEZfont_u8g2_'
+debug = False  # see the return from font_to_py runs
 
 sources = os.listdir(sourceDir)
 #sources = os.listdir(sourceDir)[:20] # good for test and debug
@@ -65,11 +66,13 @@ def doFont(base,chars='e'):
     else:
         charset = '-k ' + outDir + '/' + chars + '-char.set '
     fileName = prefix + base + '_' + chars + '.py'
-    cmd = 'micropython-font-to-py/font_to_py.py -x ' + charset + infile + ' 0 tmp_' + fileName
     if not checkValid(infile):
         badFontFiles.append(str(base))
         return False  # a hardfail
+    cmd = 'micropython-font-to-py/font_to_py.py -x ' + charset + infile + ' 0 tmp_' + fileName
     run = subprocess.run(cmd, shell=True, capture_output=True)
+    if debug:
+        print(run)
     if run.returncode != 0:
         return True  # a softfail
     realHeight = int(run.stdout.split(b'\n')[3].split(b' ')[2])
@@ -160,7 +163,7 @@ for file in sources:
     print(file,end=':')
     for chrs in charsets.keys():
         if not doFont(baseName,chrs):
-            # HardFail here == bad .bdf file/format
+            # HardFail here == bad .bdf file/format, skip to next font
             break
     print()
 
@@ -177,7 +180,7 @@ if len(badFontFiles) > 0:
 def height(e):
     return generated[e][0]
 
-print('\nGenerated font files: (' + str(len(generated)) + ')')
+print('\nGeneratng from ' + str(len(generated)) + ' font files that match and have compatible .bdf format')
 if len(generated) == 0:
     print('None: check settings and errors')
     exit()
