@@ -93,9 +93,9 @@ def packageInfo(base,infile,fileName,realHeight):
     commentTxt = []
     f = open(infile,'r')
     for line in f:
-        if re.match('^.*COPYRIGHT',line):
+        if re.match('^\s*COPYRIGHT',line):
             copyrightTxt.append(line)
-        if re.match('^.*COMMENT',line):
+        if re.match('^\s*COMMENT',line):
             commentTxt.append(line)
     if base not in generated.keys():
         generated[base] = [realHeight]
