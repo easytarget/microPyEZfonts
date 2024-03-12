@@ -60,15 +60,15 @@ def checkValid(file):
 
 def doFont(base,chars='e'):
     global badFontFiles
-    infile = sourceDir + '/' + base + '.bdf'
     if chars == 'e':
         charset = ''
     else:
         charset = '-k ' + outDir + '/' + chars + '-char.set '
-    fileName = prefix + base + '_' + chars + '.py'
+    infile = sourceDir + '/' + base + '.bdf'
     if not checkValid(infile):
         badFontFiles.append(str(base))
-        return False  # a hardfail
+        return False  # a hardfail, the font file is bad or the wrong version.
+    fileName = prefix + base.replace('-','_') + '_' + chars + '.py'
     cmd = 'micropython-font-to-py/font_to_py.py -x ' + charset + infile + ' 0 tmp_' + fileName
     run = subprocess.run(cmd, shell=True, capture_output=True)
     if debug:
@@ -93,9 +93,9 @@ def packageInfo(base,infile,fileName,realHeight):
     commentTxt = []
     f = open(infile,'r')
     for line in f:
-        if re.match('^\s*COPYRIGHT',line):
+        if re.match('^ *COPYRIGHT',line):
             copyrightTxt.append(line)
-        if re.match('^\s*COMMENT',line):
+        if re.match('^ *COMMENT',line):
             commentTxt.append(line)
     if base not in generated.keys():
         generated[base] = [realHeight]
