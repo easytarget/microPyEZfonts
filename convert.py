@@ -3,13 +3,15 @@ import subprocess
 import re
 '''
     converter
+    surprisingly badly documented for one of my scripts.. sorry.
+    'documented in code' I suppose.
 '''
 sourceDir = 'u8g2/tools/font/bdf'
 outDir = 'mpy-fonts'
-prefix = 'mpyFbFont_u8g2_'
+prefix = 'mPyEZfont_u8g2_'
 
 sources = os.listdir(sourceDir)
-#sources = os.listdir(sourceDir)[:20] # good for debug
+#sources = os.listdir(sourceDir)[:20] # good for test and debug
 
 charsets = {
             'e':None,
@@ -85,13 +87,11 @@ def doFont(base,chars='e'):
 
 def includeFont(name):
     # looks 'name' up against a list of allowed font patterns, return True if OK
-    # all 'vanilla' u8g2 fonts go in
-    #if re.match('^\\d+x\\d+$',name):
-    #    return True
     for fam in includeList:
         if re.match(fam,name):
             return True
     return False
+
 '''
     init
 '''
