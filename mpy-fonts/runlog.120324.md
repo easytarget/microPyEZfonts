@@ -1,3 +1,5 @@
+Initial generation/import, 12 Mar 2024:
+```
 Generated font files: (92)
 6px : 4x6
     mPyEZfont_u8g2_4x6_e.py
@@ -529,4 +531,4 @@ Generated font files: (92)
     mPyEZfont_u8g2_spleen-32x64_u.py
 
 Processed 92 font files into 436 variants.
-
+```
