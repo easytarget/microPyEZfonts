@@ -4,3 +4,11 @@ A collection of fonts sourced from the [u8g2](https://github.com/olikraus/u8g2) 
 
 ## WORK IN PROGRESS; NO FONTS YET
 I need to work out licencing and copyright notice xfer into the `font.py` files; until then I im only presenting the conversion tool here.
+
+### Requirements
+* This repo
+* Git Submodules updated
+* `freetype-py` installed:
+  * pip install --upgrade freetype-py
+
+The `convert.py` script will create and populate the `mpy-fonts` folder with all matching and successful fonts; organised by height.
