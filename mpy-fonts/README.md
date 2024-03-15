@@ -276,12 +276,6 @@ Generatng from 92 font files that match and have compatible .bdf format
     mPyEZfont_u8g2_unifont_r.py
     mPyEZfont_u8g2_unifont_n.py
     mPyEZfont_u8g2_unifont_u.py
-16px : unifont_upper
-    mPyEZfont_u8g2_unifont_upper_e.py
-    mPyEZfont_u8g2_unifont_upper_f.py
-    mPyEZfont_u8g2_unifont_upper_r.py
-    mPyEZfont_u8g2_unifont_upper_n.py
-    mPyEZfont_u8g2_unifont_upper_u.py
 17px : courB14
     mPyEZfont_u8g2_courB14_e.py
     mPyEZfont_u8g2_courB14_f.py

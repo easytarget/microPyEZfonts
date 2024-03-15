@@ -2,8 +2,17 @@
 
 A collection of fonts sourced from the [u8g2](https://github.com/olikraus/u8g2) project and converted to use with Peter Hinches [writer](https://github.com/peterhinch/micropython-font-to-py/tree/master/writer) class using the tools provided in [his Repo](https://github.com/peterhinch/micropython-font-to-py)
 
-## WORK IN PROGRESS; But we do have an initial font set
-Font files are now in the [mpy-fonts](mpy_fonts) folder.
+## This is very much a WORK IN PROGRESS; but it does have an initial font set
+
+Fot the moment the only way to use these is viat Peter Hinches Writer class, see the links above. I am writing a much simpler tool since the scope and complexity of that class is a barrier to casual font use.
+
+## Pre-provided Fonts
+
+Font files are now in the [mpy-fonts](mpy_fonts) folder. See the `README` there for a 'map'
+
+This is a *restricted* set of the `U8G2` fonts, many of the fonts available there are in an older version of `.bdf` font file format that is not supported by the converter tool. Others have unclear or burdonsome licence restrictions. 
+
+The selection provided here covers the devault U8G2 fonts, a lot of common X11 fonts and the 'spleen' small font set. There are some symbol and icon fonts but I wish the selction was better, sorry.
 
 They are organised by vertical size! and (where possible) come in up to 5 different charset formats:
 ```
@@ -14,11 +23,9 @@ n =  *+,-./0123456789:
 e = Every character that font-to-mpy can convert, can be large
 ```
 These can loosely be described as **f**ull (all chars up to 255), **r**eadable (ascii charset), **u**ppercase (just the minimum, good for symbol fonts), **n**umbers (plus a few time related symbols) and **e**verything.
-* Characters will only be present when they are defined in the font source
+* Characters will only be present when they are defined in the font source! not all fonts have all characters.
   * missing characters are skipped.
   * Empty font files are not uploaded.
-
- !! There is a known issue with class naming (some font names have a '-' hyphen in them, this will be fixed soon.
 
 See the `Writer` class (link above) to use these; I will provide better use documentation later. For now look at the `writer-demo.py` script to see how these fonts can be used.
 

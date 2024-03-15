@@ -40,7 +40,7 @@ includeList = [
                 '^freedoom',
                 '^7Segments',
                 '^7_Seg',
-                '^unifont',
+                '^unifont$',
                 '^\\d+x\\d+$',  # X11 fonts
                 '^micro$`',
                 '^cursor$',
