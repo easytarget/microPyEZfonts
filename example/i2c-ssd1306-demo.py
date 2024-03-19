@@ -2,38 +2,61 @@ from time import sleep_ms,ticks_ms,ticks_diff
 from machine import Pin,I2C
 from ssd1306 import SSD1306_I2C
 from sys import path
+
 # fonts
+from writer import Writer
 path.append('fonts')
+import mPyEZfont_u8g2_spleen_12x24_n
+import mPyEZfont_u8g2_spleen_16x32_n
+import mPyEZfont_u8g2_6x12_r
+import mPyEZfont_u8g2_helvR14_r
 
 '''
+WIP
 '''
 
 # I2C
-I2C0_SDA_PIN = 28
-I2C0_SCL_PIN = 29
+I2C0_SDA_PIN = 21
+I2C0_SCL_PIN = 22
+#I2C0_SDA_PIN = 28 # rp2040
+#I2C0_SCL_PIN = 29
+
 i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
 # Dispayl
 d0 = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
 d0.invert(False)
-d0.rotate(1)
-do.contrast(0.5)  # my screen is very bright
+d0.rotate(0)
+d0.contrast(255)  # my screen is very bright
 
 # Init
-d0.rect(0, 0, 127, 16, 1)
-d0.rect(10, 20, 107, 43, 1)
-d0.text('serialOM', 40, 5, 1)
-w0 = Writer(self._d0, mpyFbFont_u8g2_spleen_12x24)
-w0.printstring("abcdef")
+wTop = Writer(d0, mPyEZfont_u8g2_helvR14_r)
+wMins = Writer(d0, mPyEZfont_u8g2_spleen_12x24_n)
+wSecs = Writer(d0, mPyEZfont_u8g2_spleen_16x32_n)
+wSecsDec = Writer(d0, mPyEZfont_u8g2_6x12_r)
+
+
+
+d0.rect(0, 0, 127, 62, 1)
+Writer.set_textpos(d0, 5, 15)  # Y,X
+wTop.printstring('mpyEZfont')
 d0.show()
 
+begin = ticks_ms()
 sleep_ms(2500)
 
 while True:
-    now = int(ticks_diff(ticks_ms(), self._begin))
-    secs = int((now / 1000) % 60)
-    mins = int((now / 60000) % 60)
-    self._d0.fill_rect(11, 21, 105, 41, 0)
-    self._d0.text(str(secs), 58, 35, 1)
-    self._d0.rect(1, 1, 125, 14, 0, True)
-    self._d0.show()
-    slep_ms(1000)
+    now = int(ticks_diff(ticks_ms(), begin)*10)
+    secs = int((now / 10000) % 60)
+    mins = int((now / 600000) % 60)
+    d0.rect(11, 21, 105, 21, 0,True)
+    Writer.set_textpos(d0, 36, 22)  # Y,X
+    wMins.printstring('{0:02d}'.format(mins) + ':')
+    Writer.set_textpos(d0, 28, 55)  # Y,X
+    wSecs.printstring('{0:02d}'.format(secs))
+    Writer.set_textpos(d0, 44, 88)  # Y,X
+    wSecsDec.printstring(':' + '{0:01d}'.format(int(now/10 % 10)))
+    #d0.text(str(secs), 55, 30, 1)
+    d0.show()
+
+
+ 
