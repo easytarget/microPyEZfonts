@@ -24,10 +24,19 @@ colorspaces = {
 # Basic string printing class
 class ezFBstr():
 
-    def __init__(self, device, font, fmt=framebuf.MONO_VLSB, color=None, halign='left', valign='top', rot=0, verbose=True):
+    def __init__(self, device,
+                 font,
+                 size = None,
+                 fmt = None,
+                 color = None,
+                 halign = 'left',
+                 valign = 'top',
+                 rot = 0,
+                 verbose=True):
         self._device = device
         self._font = font
         self._fmt = fmt
+        self._verbose = verbose
 
         if font.height() >= device.height or font.max_width() >= device.width:
             raise ValueError('Font too large for screen')
@@ -37,26 +46,37 @@ class ezFBstr():
             self.map = framebuf.MONO_HMSB if font.reverse() else framebuf.MONO_HLSB
         else:
             raise ValueError('Font must be horizontally mapped.')
-        if verbose:
-            fstr = 'Orientation: Horizontal. Reversal: {}. Width: {}. Height: {}.'
-            print(fstr.format(font.reverse(), device.width, device.height))
 
-        self._screenwidth = device.width  # In pixels
-        self._screenheight = device.height
+        if size is None:
+            try:
+                self._screenwidth = device.width  # In pixels
+                self._screenheight = device.height
+            except Exception as e:
+                errtxt = 'Cannot determine screen size from driver, supply with size=(x,y) at init.'
+                raise ValueError(errtxt + repr(e))
+        else:
+            self._screenwidth = size[0]  # In pixels
+            self._screenheight = size[1]
 
-        self._colormax = colorspaces[fmt] -1
+        if fmt is None:
+            try:
+                self._format = device.format  # pixel format
+            except Exception as e:
+                errtxt = 'Cannot determine screen format from driver, supply with fmt=XXX at init.'
+                raise ValueError(errtxt + repr(e))
+        else:
+                self._format = fmt
 
-        # Need to test color range and transparency key
-        # put in a local func()
-        self._fg = color[0]
-        self._bg = color[1]
-        self._tkey = color[2]
+        self._colormax = colorspaces[self._format] -1
+        self._fg, self._bg, self._tkey = self._check_color(color)
+        self._halign = self._check_halign(halign)
+        self._valign = self._check_valign(valign)
+        self._dir = self._check_rot(rot)
 
-        # Alignment also needs testing
-        # put in a local func()
-        self._halign = _check_halign(halign)
-        self._valign = _check_valign(valign)
-        self._rot = rot
+        if self._verbose:
+            fstr = 'width: {}, height: {}\nfg: {}, bg: {}, tr: {}'
+            print(fstr.format(device.width, device.height,
+                              self._fg, self._bg, self._tkey))
 
     def _check_color(self, color):
         ret = (self._colormax, 0, -1)
@@ -81,21 +101,38 @@ class ezFBstr():
             color = 0
         if color > self._colormax:
             color = self._colormax
+        print(color)
         return color
 
     def _check_halign(self, halign):
         if halign not in ('left','center','right'):
             raise ValueError('Unknown horizontal alignment: ' + halign)
-        if verbose:
+        if self._verbose:
             print('horizontal alignment: ' + halign)
         return halign
 
     def _check_valign(self, valign):
         if valign not in ('top','center','baseline','bottom'):
             raise ValueError('Unknown vertical alignment: ' + valign)
-        if verbose:
+        if self._verbose:
             print('vertical alignment: ' + valign)
         return valign
+
+    def _check_rot(self, rot):
+        # returns a 'direction' tuple, (X,Y) giving direction in each axis (-1|0|1)
+        #if rot not in (0,90,120,270): <- when rotated text is implemented!
+        if rot not in (0,):
+            raise ValueError('Unsupported rotation angle: ' + rot)
+        if self._verbose:
+            print('rotation angle: ' + str(rot))
+        if rot == 0:
+            return(1,0)
+        elif rot == 90:
+            return(0,1)
+        elif rot == 180:
+            return(-1,0)
+        elif rot == 270:
+            return(0,-1)
 
     def size(self, string):
         if not len(string):
@@ -106,12 +143,18 @@ class ezFBstr():
             x += char_width
         return (x,self._font.height())
 
-    def area(self, string, (x,y), halign='left', valign='top'):
+    def area(self, string, pos, halign=None, valign=None):
         # tbd
+	# ignore clipping!
         xmin = xmax = ymin = ymax = 0
         return (xmin,xmax,ymin,ymax)
 
-    def _put_char(self, char, recurse):
+     def write(self, string, pos, color=None, halign=None, valign=None):
+        # todo
+	# return clipping status
+        return False
+
+   def _put_char(self, char, recurse):
         glyph, char_height, char_width = self.font.get_ch(char)
 
     # Method using blitting. Efficient rendering for monochrome displays.
@@ -129,14 +172,3 @@ class ezFBstr():
         self.device.blit(fbc, s.text_col, s.text_row)
         s.text_col += self.char_width
         self.cpos += 1
-
-    @property
-    def color(self):
-        return(self._fg, self._bg, self._tkey)
-
-    @color.setter
-    def color(self, fg=self._fg, bg=self._bg, tkey=-1):
-        # check in range
-        self._fg = fg
-        self._bg = bg
-        self._tkey = tkey
