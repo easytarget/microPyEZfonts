@@ -135,40 +135,48 @@ class ezFBstr():
             return(0,-1)
 
     def size(self, string):
+        # Needs mods for rotated strings
         if not len(string):
             return (0,0)
         x = 0
         for char in string[:-1]:
-            _, _, char_width = self.font.get_ch(char)
+            _, _, char_width = self._font.get_ch(char)
             x += char_width
         return (x,self._font.height())
 
     def area(self, string, pos, halign=None, valign=None):
-        # tbd
-	# ignore clipping!
+        # tbd, consider rotation?
+        # ignore clipping!
         xmin = xmax = ymin = ymax = 0
         return (xmin,xmax,ymin,ymax)
 
-     def write(self, string, pos, color=None, halign=None, valign=None):
+    def write(self, string, pos, color=None, halign=None, valign=None):
         # todo
-	# return clipping status
-        return False
+        # return clipping status
+        x = pos[0]
+        y = pos[1]
+        for char in string:
+            if char is '\n':
+                # needs mods for rotation
+                x = pos[0]
+                y = y + self._font.height()
+            elif ord(char) in range(self._font.min_ch(), self._font.max_ch() + 1):
+                cx, cy = self._put_char(char, x, y)
+                x = x + (cx * self._dir[0])
+                y = y + (cy * self._dir[1])
+            else:
+                print('unprintable char: "' + char + '" (' + str(ord(char)) + ')')
+        return  # (add clip status check)
 
-   def _put_char(self, char, recurse):
-        glyph, char_height, char_width = self.font.get_ch(char)
-
-    # Method using blitting. Efficient rendering for monochrome displays.
-    # Tested on SSD1306. Invert is for black-on-white rendering.
-    def _printchar(self, char, invert=False, recurse=False):
-        s = self._getstate()
-        self._get_char(char, recurse)
-        if self.glyph is None:
-            return  # All done
-        buf = bytearray(self.glyph)
-        if invert:
-            for i, v in enumerate(buf):
-                buf[i] = 0xFF & ~ v
-        fbc = framebuf.FrameBuffer(buf, self.clip_width, self.char_height, self.map)
-        self.device.blit(fbc, s.text_col, s.text_row)
-        s.text_col += self.char_width
-        self.cpos += 1
+    def _put_char(self, char, x, y):
+        glyph, char_height, char_width = self._font.get_ch(char)
+        if glyph is None:
+            return 0, 0  # Nothing to print. (Could put error char here?)
+        buf = bytearray(glyph)
+        # map colors here... orig:
+        #if invert:
+        #    for i, v in enumerate(buf):
+        #        buf[i] = 0xFF & ~ v
+        charbuf = framebuf.FrameBuffer(buf, char_width, char_height, self.map)
+        self._device.blit(charbuf, x, y)
+        return char_width, char_height
