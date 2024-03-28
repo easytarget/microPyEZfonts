@@ -32,7 +32,7 @@ class ezFBstr():
                  halign = 'left',
                  valign = 'top',
                  rot = 0,
-                 verbose=True):
+                 verbose=False):
         self._device = device
         self._font = font
         self._fmt = fmt
@@ -67,8 +67,9 @@ class ezFBstr():
         else:
                 self._format = fmt
 
-        self._colormax = colorspaces[self._format] -1
-        self._fg, self._bg, self._tkey = self._check_color(color)
+        self._colors = colorspaces[self._format]
+        defcol = [0, self._colors -1, -1]
+        self._color = self._check_color(color, defcol)
         self._halign = self._check_halign(halign)
         self._valign = self._check_valign(valign)
         self._dir = self._check_rot(rot)
@@ -78,8 +79,8 @@ class ezFBstr():
             print(fstr.format(device.width, device.height,
                               self._fg, self._bg, self._tkey))
 
-    def _check_color(self, color):
-        ret = (self._colormax, 0, -1)
+    def _check_color(self, color, default):
+        ret = default
         if color is None:
             return ret
         if len(color) not in (1,2,3):
@@ -92,16 +93,14 @@ class ezFBstr():
         if len(color) > 2:
             if color[2] != -1:
                 ret[2] = self._color_range(color[2])
-            else:
-                ret[2] = -1
         return ret
 
     def _color_range(self, color):
+        # forces colors into correct range (0...max)
         if color < 0:
             color = 0
-        if color > self._colormax:
-            color = self._colormax
-        print(color)
+        if color >= self._colors:
+            color = self._colors -1
         return color
 
     def _check_halign(self, halign):
@@ -135,14 +134,19 @@ class ezFBstr():
             return(0,-1)
 
     def size(self, string):
-        # Needs mods for rotated strings
+        # Todo: replace/integrate into main char class.
+        # Needs mods for rotated strings, padding
         if not len(string):
             return (0,0)
         x = 0
+        y = self._font.height()
         for char in string[:-1]:
+            if char is '\n':
+                y += self._font.height()
+                continue
             _, _, char_width = self._font.get_ch(char)
             x += char_width
-        return (x,self._font.height())
+        return (x,y)
 
     def area(self, string, pos, halign=None, valign=None):
         # tbd, consider rotation?
@@ -151,7 +155,7 @@ class ezFBstr():
         return (xmin,xmax,ymin,ymax)
 
     def write(self, string, pos, color=None, halign=None, valign=None):
-        # todo
+        # todo: lots (color, alignment)
         # return clipping status
         x = pos[0]
         y = pos[1]
@@ -161,22 +165,28 @@ class ezFBstr():
                 x = pos[0]
                 y = y + self._font.height()
             elif ord(char) in range(self._font.min_ch(), self._font.max_ch() + 1):
-                cx, cy = self._put_char(char, x, y)
+                cx, cy = self._put_char(char, x, y, color)
                 x = x + (cx * self._dir[0])
                 y = y + (cy * self._dir[1])
             else:
                 print('unprintable char: "' + char + '" (' + str(ord(char)) + ')')
         return  # (add clip status check)
 
-    def _put_char(self, char, x, y):
+    def _put_char(self, char, x, y, color=None):
+        # fetch the glyph
         glyph, char_height, char_width = self._font.get_ch(char)
         if glyph is None:
             return 0, 0  # Nothing to print. (Could put error char here?)
+        # colors
+        fg, bg, tkey = self._check_color(color, self._color)
+        # buffers
+        pal = bytearray((self._colors // 8) + 1)
         buf = bytearray(glyph)
-        # map colors here... orig:
-        #if invert:
-        #    for i, v in enumerate(buf):
-        #        buf[i] = 0xFF & ~ v
+        # assemble color map
+        palette = framebuf.FrameBuffer(pal, self._colors, 1, self.map)
+        palette.pixel(0, 0, fg)
+        palette.pixel(self._colors -1, 0, bg)
+        # fetch and blit the glyph
         charbuf = framebuf.FrameBuffer(buf, char_width, char_height, self.map)
-        self._device.blit(charbuf, x, y)
+        self._device.blit(charbuf, x, y, tkey, palette)
         return char_width, char_height

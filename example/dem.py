@@ -7,8 +7,10 @@ from time import sleep_ms
 # fonts
 from writer import Writer
 path.append('fonts')
+import mPyEZfont_u8g2_spleen_12x24_r
 import mPyEZfont_u8g2_spleen_16x32_n
 import mPyEZfont_u8g2_6x12_r
+import mPyEZfont_u8g2_symb18_e
 
 '''
 WIP
@@ -23,31 +25,22 @@ i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
 
 # Display
 d0 = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
-d0.invert(False)
-d0.rotate(0)
-d0.contrast(255)  # my screen is very bright
+d0.invert(False)  # as needed
+d0.rotate(0)      # as needed
+d0.contrast(128)  # as needed
 
-# Writer Init
-font = ezFBstr(d0,
-               mPyEZfont_u8g2_spleen_16x32_n,
-               size=None,
-               fmt=None,
-               color=None,
-               halign='left',
-               valign='top',
-               rot=0,
-               verbose=True)
+# Font Init
+font1 = ezFBstr(d0, mPyEZfont_u8g2_spleen_12x24_r)
+font2 = ezFBstr(d0, mPyEZfont_u8g2_spleen_16x32_n, color=(1,0))
+font3 = ezFBstr(d0, mPyEZfont_u8g2_6x12_r)
+font4 = ezFBstr(d0, mPyEZfont_u8g2_symb18_e, color=(0,1,0))
 
 # Screen Init
 d0.rect(0, 0, 127, 62, 1)
 d0.show()
-sleep_ms(1000)
-
-font.write('12:34:56', (30, 20))
+# demo
+font2.write('1.23', (56, 4))
+font1.write('Test', (0, 0))
+font3.write('Hello\nWorld', (6, 32))
+font4.write('bB1!%Z', (44, 32))
 d0.show()
-sleep_ms(1000)
-
-font.write('56:7\n8:90', (30, 20))
-d0.show()
-
- 
