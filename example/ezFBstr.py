@@ -26,27 +26,29 @@ class ezFBstr():
 
     def __init__(self, device,
                  font,
-                 size = None,
-                 fmt = None,
-                 color = None,
+                 fg = None,
+                 bg = None,
+                 tkey = None,
                  halign = 'left',
-                 valign = 'top',
-                 rot = 0,
+                 valign = 'baseline',
+                 size = None,
+                 colors = None,
                  verbose=False):
+
         self._device = device
         self._font = font
-        self._fmt = fmt
         self._verbose = verbose
+        self._dir = (1,0)   # will change for oriented text etc.
 
+        # Sanity check
         if font.height() >= device.height or font.max_width() >= device.width:
             raise ValueError('Font too large for screen')
-
         # Allow to work with reverse or normal font mapping
         if font.hmap():
             self.map = framebuf.MONO_HMSB if font.reverse() else framebuf.MONO_HLSB
         else:
             raise ValueError('Font must be horizontally mapped.')
-
+        # Screen size
         if size is None:
             try:
                 self._screenwidth = device.width  # In pixels
@@ -57,43 +59,31 @@ class ezFBstr():
         else:
             self._screenwidth = size[0]  # In pixels
             self._screenheight = size[1]
-
-        if fmt is None:
+        # Number of colors, default color and transparency
+        if colors is None:
+            errtxt = 'Cannot determine number of colors from driver, supply with colors=N at init.'
             try:
-                self._format = device.format  # pixel format
+                format = device.format  # pixel format
             except Exception as e:
-                errtxt = 'Cannot determine screen format from driver, supply with fmt=XXX at init.'
                 raise ValueError(errtxt + repr(e))
+            try:
+                self._colors = colorspaces[format]
+            except KeyError:
+                raise ValueError('Unknown format. ' + errtxt)
         else:
-                self._format = fmt
-
-        self._colors = colorspaces[self._format]
-        defcol = [0, self._colors -1, -1]
-        self._color = self._check_color(color, defcol)
+            self._colors = colors
+        self.fg = self._colors - 1
+        self.bg = 0
+        self.tkey = -1
+        self.set_color(fg, bg, tkey)
+        # Alignment
         self._halign = self._check_halign(halign)
         self._valign = self._check_valign(valign)
-        self._dir = self._check_rot(rot)
-
+        # Fluff
         if self._verbose:
             fstr = 'width: {}, height: {}\nfg: {}, bg: {}, tr: {}'
             print(fstr.format(device.width, device.height,
                               self._fg, self._bg, self._tkey))
-
-    def _check_color(self, color, default):
-        ret = default
-        if color is None:
-            return ret
-        if len(color) not in (1,2,3):
-            raise ValueError('Unknown color tuple: ' + str(color))
-        ret[0] = self._color_range(color[0])
-        if len(color) > 1:
-            ret[1] = self._color_range(color[1])
-        else:
-            ret[1] = 0
-        if len(color) > 2:
-            if color[2] != -1:
-                ret[2] = self._color_range(color[2])
-        return ret
 
     def _color_range(self, color):
         # forces colors into correct range (0...max)
@@ -117,23 +107,7 @@ class ezFBstr():
             print('vertical alignment: ' + valign)
         return valign
 
-    def _check_rot(self, rot):
-        # returns a 'direction' tuple, (X,Y) giving direction in each axis (-1|0|1)
-        #if rot not in (0,90,120,270): <- when rotated text is implemented!
-        if rot not in (0,):
-            raise ValueError('Unsupported rotation angle: ' + rot)
-        if self._verbose:
-            print('rotation angle: ' + str(rot))
-        if rot == 0:
-            return(1,0)
-        elif rot == 90:
-            return(0,1)
-        elif rot == 180:
-            return(-1,0)
-        elif rot == 270:
-            return(0,-1)
-
-    def size(self, string):
+    def _line_size(self, string):
         # Todo: replace/integrate into main char class.
         # Needs mods for rotated strings, padding
         if not len(string):
@@ -148,45 +122,75 @@ class ezFBstr():
             x += char_width
         return (x,y)
 
-    def area(self, string, pos, halign=None, valign=None):
-        # tbd, consider rotation?
-        # ignore clipping!
-        xmin = xmax = ymin = ymax = 0
-        return (xmin,xmax,ymin,ymax)
-
-    def write(self, string, pos, color=None, halign=None, valign=None):
-        # todo: lots (color, alignment)
-        # return clipping status
-        x = pos[0]
-        y = pos[1]
-        for char in string:
-            if char is '\n':
-                # needs mods for rotation
-                x = pos[0]
-                y = y + self._font.height()
-            elif ord(char) in range(self._font.min_ch(), self._font.max_ch() + 1):
-                cx, cy = self._put_char(char, x, y, color)
-                x = x + (cx * self._dir[0])
-                y = y + (cy * self._dir[1])
-            else:
-                print('unprintable char: "' + char + '" (' + str(ord(char)) + ')')
-        return  # (add clip status check)
-
-    def _put_char(self, char, x, y, color=None):
+    def _put_char(self, char, x, y, fg, bg, tkey):
         # fetch the glyph
         glyph, char_height, char_width = self._font.get_ch(char)
         if glyph is None:
-            return 0, 0  # Nothing to print. (Could put error char here?)
-        # colors
-        fg, bg, tkey = self._check_color(color, self._color)
+            return 0, 0  # Nothing to print. skip.
         # buffers
         pal = bytearray((self._colors // 8) + 1)
         buf = bytearray(glyph)
+        # Mirror, flip and turn here, adjusting char-width and height
         # assemble color map
         palette = framebuf.FrameBuffer(pal, self._colors, 1, self.map)
-        palette.pixel(0, 0, fg)
-        palette.pixel(self._colors -1, 0, bg)
+        palette.pixel(0, 0, bg)
+        palette.pixel(self._colors -1, 0, fg)
         # fetch and blit the glyph
         charbuf = framebuf.FrameBuffer(buf, char_width, char_height, self.map)
         self._device.blit(charbuf, x, y, tkey, palette)
         return char_width, char_height
+
+    def set_color(self, fg=None, bg=None, tkey=None):
+        if fg is not None:
+            self.fg = self._color_range(fg)
+        if bg is not None:
+            self.bg = self._color_range(bg)
+        if tkey is not None:
+            self.tkey = self._color_range(tkey)
+    
+    def set_align(self, halign=None, valign=None):
+        if halign is not None:
+            self._halign = self._check_halign(halign)
+        if valign is not None:
+            self._valign = self._check_valign(valign)
+
+    def size(self, string):
+        # todo. padding affects this
+        return (0,0)
+
+    def area(self, string, pos, halign=None, valign=None):
+        # todo
+        # ignore clipping!
+        xmin = xmax = ymin = ymax = 0
+        return (xmin,xmax,ymin,ymax)
+
+    def write(self, string, pos, fg=None, bg=None, tkey=None, halign=None, valign=None):
+        # todo: alignment, return clipping status
+        x = pos[0]
+        y = pos[1]
+        if fg is None:
+            fg = self.fg
+        else:
+            fg = self._color_range(fg)
+        if bg is None:
+            bg = self.bg
+        else:
+            bg = self._color_range(bg)
+        if tkey is None:
+            tkey = self.tkey
+        else:
+            tkey = self._color_range(tkey)
+        xmax = ymax = xmin = ymin = 0
+        # align! orient.
+        for char in string:
+            if char is '\n':
+                # needs mods for alignment
+                x = pos[0]
+                y = y + self._font.height()
+            elif ord(char) in range(self._font.min_ch(), self._font.max_ch() + 1):
+                cx, cy = self._put_char(char, x, y, fg, bg, tkey)
+                x = x + (cx * self._dir[0])
+                y = y + (cy * self._dir[1])
+            else:
+                print('unprintable char: "' + char + '" (' + str(ord(char)) + ')')
+        return  # (add cliping status check)

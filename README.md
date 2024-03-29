@@ -50,19 +50,19 @@ The `convert.py` script will create and populate the `mpy-fonts` folder with all
 
 # ezFBstr.py
 
-Design notes; not canon. When I have code I can publish this will get updated, ignore till then.
+Design notes; not canon. But this is an attempt to document the alpha release.
 
 Class initiated against a font..
 
 ```python
 from ezFBstr.py import ezFBstr
-import mPyEZFont_XYY
+import mPyEZFont_XYZ
 
-... create a framebuffer device
-ZYXfont = ezFBstr(device,'mPyEZFont_XYY')
+... create a font object attahed to a framebuffer device
+myfont = ezFBstr(device,'mPyEZFont_XYZ')
 
 ... use it to write on the framebuffer
-XYZfont.write(string,position,[Kargs])
+myfont.write(string,x,y)
 
 ... eventually..
 device.show()
@@ -73,35 +73,37 @@ device.show()
 The font needs to be imported:
 
 ```python
-import mPyEZFont_XYY
+import mPyEZFont_myfont
 ```
 
 And is then used to create a font writer instance:
 
 ```python
-YXfont = ezFBstr(device,'mPyEZFont_XYY', color=(fg,bg,tkey), halign='left', valign='top', rot=0)
+myfont = ezFBstr(device, fontName, fg=max_allowed, bg=0 ,tkey=-1, halign='left', valign='top', colors=?, size=(?,?))
 ```
 Positional Arguments:
 * device : The framebuffer device to write to
-* font : the name of the font to use, 'mPyEZFont_XYY'
+* fontName : the name of the font you imported above, eg: mPyEZFont_myfont
 Optional Arguments:
-* color : tuple, foreGround, backGround and optional transparent key
-  * foreGround and backGround will default to max-color and min-color respectively
-  * max and min colors are derived from the Framebuffer type.
+* foreground and background colors, plus transparentcy key
+  * foreground and background will default to max-color and min-color respectively
+  * max and min colors are derived from the Framebuffer type
   * transparent key is -1 by default (none), otherwise the transparent color
-  * *this is still unclear how it works, taken from the 'key' field from framebuffer.blit()*
 * halign: 'left|right|center' : how to align on the X axis
 * valign: 'top|center|baseline|bottom' : how to align on Y axis
-* rot: 0|90|180|270 : reserved for future expansion, inactive
+Device dependent arguments:
+* colors: integer, the total number of colors we support, 2 for mono, up to 65536 for 16 bit color
+  * the max-color used above will always be this value -1, min-color is always 0
+* size: display dimensions as a tuple (x,y)
 
 ## Use it:
 
 ```python
-XYZfont.write(str, (X,Y), color=(fg,bg,trans), halign='left', valign='top')
+myfont.write(str, X, Y, fg=None, bg=None, tkey=None, halign=None, valign=None)
 ```
 Positional Arguments:
-* string : natch..
-* (X,Y) : position, pixels, top-left is (0,0)
+* string : The string to be written to the framebuffer
+* x, y : position (pixels), framebuffer top-left is 0, 0
 
 Optional Arguments:
 * as per init options, override the default.
@@ -109,18 +111,28 @@ Optional Arguments:
 Returns False if anything was clipped
 
 ```python
-(x,y) = XYZfont.size(str)
+TODO: x,y = myfont.size(str)
 ```
 Returns the pixel width and height of the string
 
 ```python
-(xmin,xmax,ymin,ymax) = XYZfont.area(str, halign='left', valign='top')
+TODO: xmin,xmax,ymin,ymax = myfont.area(str, x, y, halign=None, valign=None)
 ```
 Returns the area to be written to, options as above
 
+```python
+myfont.set_color(fg=None, bg=None, tkey=None)
+```
+Sets the default foreground, background and transparency colors as needed
+
+```python
+myfont.area(str, x, y, halign=None, valign=None)
+```
+Sets the default horizontal and vertical alignment as needed
+
 ### Thoughts:
 
-Rotated text can wait, I've got enough to do already
+Instead of rotation; provide an orient tuple of bool's : `(Mirror, Flip, Turn)`, this will allow all text directions and effects etc. Better than just 0,90,180,270 rotation options provide.
 
 Class can provide height, width and other props for the font
 
