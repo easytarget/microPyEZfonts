@@ -147,7 +147,7 @@ class ezFBfont():
             self.bg = self._color_range(bg)
         if tkey is not None:
             self.tkey = self._color_range(tkey)
-    
+
     def set_align(self, halign=None, valign=None):
         if halign is not None:
             self._halign = self._check_halign(halign)

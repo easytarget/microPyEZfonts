@@ -5,7 +5,6 @@ from sys import path
 from time import sleep_ms
 
 # fonts
-from writer import Writer
 path.append('fonts')
 import mPyEZfont_u8g2_spleen_12x24_r
 import mPyEZfont_u8g2_spleen_16x32_n
@@ -16,11 +15,13 @@ import mPyEZfont_u8g2_symb18_e
 WIP
 '''
 
+# pins
+I2C0_SDA_PIN = 21  # default esp32
+I2C0_SCL_PIN = 22  # default esp32
+#I2C0_SDA_PIN = 28  # default rp2040
+#I2C0_SCL_PIN = 29  # default rp2040
+
 # I2C
-I2C0_SDA_PIN = 21  # ESP32
-I2C0_SCL_PIN = 22
-#I2C0_SDA_PIN = 28 # rp2040
-#I2C0_SCL_PIN = 29
 i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
 
 # Display
@@ -35,14 +36,16 @@ font2 = ezFBfont(d0, mPyEZfont_u8g2_spleen_16x32_n, fg=0, bg=1)
 font3 = ezFBfont(d0, mPyEZfont_u8g2_6x12_r)
 font4 = ezFBfont(d0, mPyEZfont_u8g2_symb18_e)
 
+# main
 font4.set_color(tkey=0)
 
-# Screen Init
+# frame
 d0.rect(0, 0, 127, 62, 1)
 d0.show()
-# demo
+# write
 font1.write('Test', (0, 0))
 font2.write('1.23', (56, 4))
 font3.write('Hello\nWorld', (6, 32))
 font4.write('bB1!%Z', (44, 32))
 d0.show()
+# fin
