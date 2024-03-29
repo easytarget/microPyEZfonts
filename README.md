@@ -2,17 +2,16 @@
 
 A collection of fonts sourced from the [u8g2](https://github.com/olikraus/u8g2) project
 
-Converted to use with Peter Hinches [writer](https://github.com/peterhinch/micropython-font-to-py/tree/master/writer) class using the tools provided in [his Repo](https://github.com/peterhinch/micropython-font-to-py)
+Thes fonts have been processed using the tools provided in Peter Hinches [`font-to-py`](https://github.com/peterhinch/micropython-font-to-py) repo, and can be used with either his (comprehensive) [writer](https://github.com/peterhinch/micropython-font-to-py/tree/master/writer) class, or the easy font writer class in this repo.
 
-These can be used with the built-in microPyton framebuffer: https://docs.micropython.org/en/latest/library/framebuf.html and any display device that can be attached to that (eg OLED's)
+These can be used with any display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html), I intend to build a driver database here for all screens tested and known to work
 
-The goal, eventually, is to provide a simpler 'string writer' class to enble very casual use of these fonts in microPython
+## This is very much a WORK IN PROGRESS!
+### but it does have an initial font set and a basic writer that supports color and transparency
 
-## This is very much a WORK IN PROGRESS; but it does have an initial font set
+See the `examples` folder for the alpha release..
 
-Fot the moment the only way to use these is via Peter Hinches Writer class, see the links above.
-
-I am writing a much simpler tool since the scope and complexity of that class is a barrier to casual font use.
+..the `dev` branch is where the latest stuff will be (unstable? unusable? ymmv!)
 
 ## Provided Fonts
 
@@ -58,11 +57,11 @@ Class initiated against a font..
 from ezFBstr.py import ezFBstr
 import mPyEZFont_XYZ
 
-... create a font object attahed to a framebuffer device
-myfont = ezFBstr(device,'mPyEZFont_XYZ')
+... create a font object attached to a framebuffer device
+myfont = ezFBstr(device, mPyEZFont_XYZ)
 
 ... use it to write on the framebuffer
-myfont.write(string,x,y)
+myfont.write(string, x, y)
 
 ... eventually..
 device.show()
@@ -84,6 +83,7 @@ myfont = ezFBstr(device, fontName, fg=max_allowed, bg=0 ,tkey=-1, halign='left',
 Positional Arguments:
 * device : The framebuffer device to write to
 * fontName : the name of the font you imported above, eg: mPyEZFont_myfont
+
 Optional Arguments:
 * foreground and background colors, plus transparentcy key
   * foreground and background will default to max-color and min-color respectively
@@ -91,7 +91,8 @@ Optional Arguments:
   * transparent key is -1 by default (none), otherwise the transparent color
 * halign: 'left|right|center' : how to align on the X axis
 * valign: 'top|center|baseline|bottom' : how to align on Y axis
-Device dependent arguments:
+
+Device dependent arguments: Need to be supplied if your device does not report it's settings properly.
 * colors: integer, the total number of colors we support, 2 for mono, up to 65536 for 16 bit color
   * the max-color used above will always be this value -1, min-color is always 0
 * size: display dimensions as a tuple (x,y)
@@ -137,4 +138,4 @@ Instead of rotation; provide an orient tuple of bool's : `(Mirror, Flip, Turn)`,
 Class can provide height, width and other props for the font
 
 ### Wanted:
-a python library to rotate `MONO_VLSB` framebuffers..
+a python library to rotate `MONO_VLSB` framebuffers by 90 degrees
