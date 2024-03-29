@@ -2,14 +2,13 @@ from machine import Pin,I2C
 from ssd1306 import SSD1306_I2C
 from ezFBfont import ezFBfont
 from sys import path
-from time import sleep_ms
+from time import sleep_ms,ticks_ms
 
 # fonts
 path.append('fonts')
 import mPyEZfont_u8g2_spleen_12x24_r
 import mPyEZfont_u8g2_spleen_16x32_n
-import mPyEZfont_u8g2_6x12_r
-import mPyEZfont_u8g2_symb18_e
+import mPyEZfont_u8g2_helvR14_r
 
 '''
 WIP
@@ -31,21 +30,21 @@ d0.rotate(0)      # as needed
 d0.contrast(128)  # as needed
 
 # Font Init
-font1 = ezFBfont(d0, mPyEZfont_u8g2_spleen_12x24_r)
-font2 = ezFBfont(d0, mPyEZfont_u8g2_spleen_16x32_n, fg=0, bg=1)
-font3 = ezFBfont(d0, mPyEZfont_u8g2_6x12_r)
-font4 = ezFBfont(d0, mPyEZfont_u8g2_symb18_e)
-
-# main
-font4.set_color(tkey=0)
+heading = ezFBfont(d0, mPyEZfont_u8g2_helvR14_r)
+seconds = ezFBfont(d0, mPyEZfont_u8g2_spleen_12x24_r)
+boxtime = ezFBfont(d0, mPyEZfont_u8g2_spleen_16x32_n)
 
 # frame
-d0.rect(0, 0, 127, 62, 1)
+d0.rect(0, 24, 127, 38, 1)
+heading.write('UpTime:', 7, 1)
 d0.show()
-# write
-font1.write('Test', 0, 0)
-font2.write('1.23', 56, 4)
-font3.write('Hello\nWorld', 6, 32)
-font4.write('bB1!%Z', 44, 32)
-d0.show()
-# fin
+
+# loop
+while True:
+    upsecs = int(ticks_ms() / 1000)
+    secs = upsecs % 60
+    mins = int(upsecs / 60) % 60
+    hrs = int(upsecs / 3600)
+    boxtime.write('%d:%02.d' % (hrs, mins), 17, 27)
+    seconds.write('.%02.d' % secs, 82, 34)
+    d0.show()

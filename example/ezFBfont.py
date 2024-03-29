@@ -158,16 +158,16 @@ class ezFBfont():
         # todo. padding affects this
         return (0,0)
 
-    def area(self, string, pos, halign=None, valign=None):
+    def area(self, string, x, y, halign=None, valign=None):
         # todo
         # ignore clipping!
         xmin = xmax = ymin = ymax = 0
         return (xmin,xmax,ymin,ymax)
 
-    def write(self, string, pos, fg=None, bg=None, tkey=None, halign=None, valign=None):
+    def write(self, string, x, y, fg=None, bg=None, tkey=None, halign=None, valign=None):
         # todo: alignment, return clipping status
-        x = pos[0]
-        y = pos[1]
+        xpos = x
+        ypos = y
         if fg is None:
             fg = self.fg
         else:
@@ -185,12 +185,12 @@ class ezFBfont():
         for char in string:
             if char is '\n':
                 # needs mods for alignment
-                x = pos[0]
-                y = y + self._font.height()
+                xpos = x
+                ypos = ypos + self._font.height()
             elif ord(char) in range(self._font.min_ch(), self._font.max_ch() + 1):
-                cx, cy = self._put_char(char, x, y, fg, bg, tkey)
-                x = x + (cx * self._dir[0])
-                y = y + (cy * self._dir[1])
+                cx, cy = self._put_char(char, xpos, ypos, fg, bg, tkey)
+                xpos = xpos + (cx * self._dir[0])
+                ypos = ypos + (cy * self._dir[1])
             else:
                 print('unprintable char: "' + char + '" (' + str(ord(char)) + ')')
         return  # (add cliping status check)
