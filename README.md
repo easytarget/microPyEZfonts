@@ -47,18 +47,18 @@ The `convert.py` script will create and populate the `mpy-fonts` folder with all
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-# ezFBstr.py
+# ezFBfont.py
 
 Design notes; not canon. But this is an attempt to document the alpha release.
 
 Class initiated against a font..
 
 ```python
-from ezFBstr.py import ezFBstr
+from ezFBfont.py import ezFBfont
 import mPyEZFont_XYZ
 
 ... create a font object attached to a framebuffer device
-myfont = ezFBstr(device, mPyEZFont_XYZ)
+myfont = ezFBfont(device, mPyEZFont_XYZ)
 
 ... use it to write on the framebuffer
 myfont.write(string, x, y)
@@ -78,7 +78,7 @@ import mPyEZFont_myfont
 And is then used to create a font writer instance:
 
 ```python
-myfont = ezFBstr(device, fontName, fg=max_allowed, bg=0 ,tkey=-1, halign='left', valign='top', colors=?, size=(?,?))
+myfont = ezFBfont(device, fontName, fg=max_allowed, bg=0 ,tkey=-1, halign='left', valign='top', colors=?, size=(?,?))
 ```
 Positional Arguments:
 * device : The framebuffer device to write to

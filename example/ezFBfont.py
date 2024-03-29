@@ -1,4 +1,4 @@
-# ezFBstr.py() : a simple string writer for small mono displays and user selected fonts.
+# ezFBfont.py() : a simple string writer for small mono displays and user selected fonts.
 
 # Extensively re-worked from the 'writer' class by
 # Peter Hinch:
@@ -22,7 +22,7 @@ colorspaces = {
                 }
 
 # Basic string printing class
-class ezFBstr():
+class ezFBfont():
 
     def __init__(self, device,
                  font,

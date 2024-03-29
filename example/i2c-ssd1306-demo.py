@@ -1,6 +1,6 @@
 from machine import Pin,I2C
 from ssd1306 import SSD1306_I2C
-from ezFBstr import ezFBstr
+from ezFBfont import ezFBfont
 from sys import path
 from time import sleep_ms
 
@@ -30,10 +30,10 @@ d0.rotate(0)      # as needed
 d0.contrast(128)  # as needed
 
 # Font Init
-font1 = ezFBstr(d0, mPyEZfont_u8g2_spleen_12x24_r)
-font2 = ezFBstr(d0, mPyEZfont_u8g2_spleen_16x32_n, fg=0, bg=1)
-font3 = ezFBstr(d0, mPyEZfont_u8g2_6x12_r)
-font4 = ezFBstr(d0, mPyEZfont_u8g2_symb18_e)
+font1 = ezFBfont(d0, mPyEZfont_u8g2_spleen_12x24_r)
+font2 = ezFBfont(d0, mPyEZfont_u8g2_spleen_16x32_n, fg=0, bg=1)
+font3 = ezFBfont(d0, mPyEZfont_u8g2_6x12_r)
+font4 = ezFBfont(d0, mPyEZfont_u8g2_symb18_e)
 
 font4.set_color(tkey=0)
 
