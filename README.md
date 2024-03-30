@@ -6,8 +6,7 @@ Thes fonts have been processed using the tools provided in Peter Hinches [`font-
 
 These can be used with any display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html), I intend to build a driver database here for all screens tested and known to work
 
-## This is very much a WORK IN PROGRESS!
-### but it does have an initial font set and a basic writer that supports color and transparency
+## This is a WORK IN PROGRESS!
 
 See the `examples` folder for the alpha release..
 
@@ -83,15 +82,15 @@ And then used to create a font writer instance for all the imported fonts:
 myfont = ezFBfont(device, fontName, fg=max_allowed, bg=0 ,tkey=-1, halign='left', valign='top', colors=?)
 ```
 Positional Arguments:
-* device : The framebuffer device to write to
-* fontName : the name of the font you imported above, eg: mPyEZFont_myfont
+* *device* : The framebuffer device to write to
+* *fontName* : the name of the font you imported above, eg: mPyEZFont_myfont
 
 Optional Arguments:
-* fg, bg, tkey: (integers) foreground and background colors, plus transparency key
+* *fg*, *bg*, *tkey*: (integers) foreground and background colors, plus transparency key
   * foreground and background will default to *max-color* and *min-color* respectively (see below)
   * transparent key is -1 by default (none), otherwise the transparent color
-* halign: (string) 'left|right|center' : how to align on the X axis
-* valign: (string) 'top|center|baseline|bottom' : how to align on Y axis
+* *halign*: (string) 'left|right|center' : how to align on the X axis
+* ** NOT IMPLEMENTED YET:** *valign*: (string) 'top|center|baseline|bottom' : how to align on Y axis
 
 Device dependent: Needs to be supplied if your display device driver does not report it's settings properly.
 * colors: (integer) the total number of colors or greyscales we support, 2 for mono, up to 65536 for 16 bit color
@@ -103,8 +102,8 @@ Device dependent: Needs to be supplied if your display device driver does not re
 myfont.write(str, X, Y, fg=None, bg=None, tkey=None, halign=None, valign=None)
 ```
 Positional Arguments:
-* string : The string to be written to the framebuffer
-* x, y : position (pixels), framebuffer top-left is 0, 0
+* *string* : The string to be written to the framebuffer
+* *x*, *y* : position (pixels), framebuffer top-left is 0, 0
 
 Optional Arguments:
 * as per init options, override the default.
