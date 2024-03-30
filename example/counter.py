@@ -31,20 +31,22 @@ d0.contrast(128)  # as needed
 
 # Font Init
 heading = ezFBfont(d0, mPyEZfont_u8g2_helvR14_r)
-seconds = ezFBfont(d0, mPyEZfont_u8g2_spleen_12x24_r)
-boxtime = ezFBfont(d0, mPyEZfont_u8g2_spleen_16x32_n)
+minutes = ezFBfont(d0, mPyEZfont_u8g2_spleen_16x32_n, halign='right', valign='baseline')
+seconds = ezFBfont(d0, mPyEZfont_u8g2_spleen_12x24_r, valign='baseline')
 
 # frame
 d0.rect(0, 24, 127, 38, 1)
-heading.write('UpTime:', 7, 1)
+heading.write('UpTime:', 0, 0)
 d0.show()
 
+x = 86
+y = 53
 # loop
 while True:
     upsecs = int(ticks_ms() / 1000)
     secs = upsecs % 60
     mins = int(upsecs / 60) % 60
-    hrs = int(upsecs / 3600)
-    boxtime.write('%d:%02.d' % (hrs, mins), 17, 27)
-    seconds.write('.%02.d' % secs, 82, 34)
+    hrs = int(upsecs / 3600) % 24
+    minutes.write('%d:%02.d' % (hrs, mins), x, y)
+    seconds.write('.%02.d' % secs, x, y)
     d0.show()

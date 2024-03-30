@@ -36,16 +36,17 @@ font2 = ezFBfont(d0, mPyEZfont_u8g2_spleen_16x32_n)
 font3 = ezFBfont(d0, mPyEZfont_u8g2_6x12_r, verbose=True)
 font4 = ezFBfont(d0, mPyEZfont_u8g2_symb18_e)
 
-# main
-font3.set_default(halign='center')
+# multiline demo stuff
+font3.set_default(halign='center', valign='baseline')
 text = 'Hello!\nNew\nWorld'
-tx = 6
-ty = 22
+tx = 24
+ty = 32
 a,b,c,d = font3.rect(text, tx, ty)
 
 # frame
 d0.rect(0, 0, 127, 62, 1)
 d0.show()
+
 # write
 font1.write('Test', 0, 0)
 font2.write('1.23', 63, 0, fg=0, bg=1)
@@ -53,8 +54,11 @@ font3.write(text, tx, ty)
 font4.write('bB1!%Z', 44, 32)
 d0.show()
 
-if False:  # rect() demo
+while True:  # rect() demo
     sleep_ms(1500)
     d0.rect(a,b,c,d,0,True)
+    d0.show()
+    sleep_ms(1500)
+    font3.write(text, tx, ty)
     d0.show()
 # fin

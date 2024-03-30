@@ -147,10 +147,28 @@ class ezFBfont():
         return w, h
 
     def rect(self, string, x, y, halign=None, valign=None):
+        if halign is None:
+            halign = self.halign
+        else:
+            halign = self._check_halign(halign)
+        if valign is None:
+            valign = self.valign
+        else:
+            valign = self._check_valign(valign)
         wide, high = self.size(string)
         # todo: position offset
         xmin = x
+        if halign is 'center':
+            xmin = int(x - (wide / 2))
+        elif halign is 'right':
+            xmin = x - wide
         ymin = y
+        if valign is 'baseline':
+            ymin = y - self._font.baseline()
+        elif valign is 'center':
+            ymin = int(y - (high / 2))
+        elif valign is 'bottom':
+            ymin = y - high
         return xmin,ymin,wide,high
 
     def write(self, string, x, y, fg=None, bg=None, tkey=None, halign=None, valign=None):
@@ -177,27 +195,29 @@ class ezFBfont():
             valign = self.valign
         else:
             valign = self._check_valign(valign)
-
-        # Write the string lines(s)
         # todo: orient
         lines = string.split('\n')
-        # alignment
-        lwidth = []
-        for line in lines:
-            lwidth.append(self._line_size(line)[0])
-        xl = x
-        xr = x + max(lwidth)
-        xc = x + int((xr - xl) / 2)
+        # vertical alignment
+        high = len(lines) * self._font.height()
         ypos = y
-        for idx, line in enumerate(lines):
+        if valign is 'baseline':
+            ypos = y - self._font.baseline()
+        elif valign is 'center':
+            ypos = int(y - (high / 2))
+        elif valign is 'bottom':
+            ypos = y - high
+        for line in lines:
+            # horizontal alignment
+            wide = self._line_size(line)[0]
             xpos = x
             if halign is 'center':
-                xpos = int(xc - (lwidth[idx] / 2))
+                xpos = int(x - (wide / 2))
             elif halign is 'right':
-                xpos = xr - lwidth[idx]
+                xpos = x - wide
+            # write the line
             for char in line:
                 if ord(char) in range(self._font.min_ch(), self._font.max_ch() + 1):
-                    cx, cy = self._put_char(char, xpos, ypos, fg, bg, tkey)
+                    cx, _ = self._put_char(char, xpos, ypos, fg, bg, tkey)
                     # needs mods for orientation
                     xpos = xpos + cx
                 else:
