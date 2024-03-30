@@ -33,11 +33,11 @@ d0.contrast(128)  # as needed
 # Font Init
 font1 = ezFBfont(d0, mPyEZfont_u8g2_spleen_12x24_r, tkey=0)
 font2 = ezFBfont(d0, mPyEZfont_u8g2_spleen_16x32_n)
-font3 = ezFBfont(d0, mPyEZfont_u8g2_6x12_r, halign='center')
+font3 = ezFBfont(d0, mPyEZfont_u8g2_6x12_r, verbose=True)
 font4 = ezFBfont(d0, mPyEZfont_u8g2_symb18_e)
 
 # main
-font3.set_default(fg=0, bg=1)
+font3.set_default(halign='center')
 text = 'Hello!\nNew\nWorld'
 tx = 6
 ty = 22

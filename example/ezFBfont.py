@@ -10,7 +10,7 @@ import framebuf
 from uctypes import bytearray_at, addressof
 from sys import implementation
 
-# a table to find max color and data width
+# a table to find color space from the framebuffer format
 colorspaces = {
                 framebuf.MONO_VLSB : 2,
                 framebuf.MONO_HLSB : 2,
@@ -30,36 +30,21 @@ class ezFBfont():
                  bg = None,
                  tkey = None,
                  halign = 'left',
-                 valign = 'baseline',
-                 size = None,
+                 valign = 'top',
                  colors = None,
                  verbose=False):
 
         self._device = device
         self._font = font
         self._verbose = verbose
-        self._dir = (1,0)   # will change for oriented text etc.
+        self.name = self._font.__name__
 
-        # Sanity check
-        if font.height() >= device.height or font.max_width() >= device.width:
-            raise ValueError('Font too large for screen')
-        # Allow to work with reverse or normal font mapping
+        # allow to work with reverse or normal font mapping
         if font.hmap():
-            self.map = framebuf.MONO_HMSB if font.reverse() else framebuf.MONO_HLSB
+            self._map = framebuf.MONO_HMSB if font.reverse() else framebuf.MONO_HLSB
         else:
             raise ValueError('Font must be horizontally mapped.')
-        # Screen size
-        if size is None:
-            try:
-                self._screenwidth = device.width  # In pixels
-                self._screenheight = device.height
-            except Exception as e:
-                errtxt = 'Cannot determine screen size from driver, supply with size=(x,y) at init.'
-                raise ValueError(errtxt + repr(e))
-        else:
-            self._screenwidth = size[0]  # In pixels
-            self._screenheight = size[1]
-        # Number of colors
+        # number of colors
         if colors is None:
             errtxt = 'Cannot determine number of colors from driver, supply with colors=N at init.'
             try:
@@ -76,13 +61,12 @@ class ezFBfont():
         self.fg = self._colors - 1
         self.bg = 0
         self.tkey = -1
-        # Set user color and alignment overrides
+        # apply user color and alignment overrides
         self.set_default(fg, bg, tkey, halign, valign)
-        # Fluff
         if self._verbose:
-            fstr = 'width: {}, height: {}\nfg: {}, bg: {}, tr: {}'
-            print(fstr.format(device.width, device.height,
-                              self._fg, self._bg, self._tkey))
+            fstr = '{} = fg: {}, bg: {}, tr: {}, halign: {}, valign: {}'
+            print(fstr.format(self.name, self.fg, self.bg, self.tkey,
+                              self.halign, self.valign))
 
     def _color_range(self, color):
         # forces colors into correct range (0...max)
@@ -103,15 +87,11 @@ class ezFBfont():
     def _check_halign(self, halign):
         if halign not in ('left','center','right'):
             raise ValueError('Unknown horizontal alignment: ' + halign)
-        if self._verbose:
-            print('horizontal alignment: ' + halign)
         return halign
 
     def _check_valign(self, valign):
         if valign not in ('top','center','baseline','bottom'):
             raise ValueError('Unknown vertical alignment: ' + valign)
-        if self._verbose:
-            print('vertical alignment: ' + valign)
         return valign
 
     def _line_size(self, string):
@@ -135,11 +115,11 @@ class ezFBfont():
         buf = bytearray(glyph)
         # Mirror, flip and turn here, adjusting char-width and height
         # assemble color map
-        palette = framebuf.FrameBuffer(pal, self._colors, 1, self.map)
+        palette = framebuf.FrameBuffer(pal, self._colors, 1, self._map)
         palette.pixel(0, 0, bg)
         palette.pixel(self._colors -1, 0, fg)
         # fetch and blit the glyph
-        charbuf = framebuf.FrameBuffer(buf, char_width, char_height, self.map)
+        charbuf = framebuf.FrameBuffer(buf, char_width, char_height, self._map)
         self._device.blit(charbuf, x, y, tkey, palette)
         return char_width, char_height
 
@@ -151,14 +131,14 @@ class ezFBfont():
         if tkey is not None:
             self.tkey = self._tkey_range(tkey)
         if halign is not None:
-            self._halign = self._check_halign(halign)
+            self.halign = self._check_halign(halign)
         if valign is not None:
-            self._valign = self._check_valign(valign)
+            self.valign = self._check_valign(valign)
 
     def size(self, string):
         lines = string.split('\n')
         w = h = 0
-        # todo. padding affects this
+        # todo: orientation
         for line in lines:
             x, y = self._line_size(line)
             if x > w:  # record the widest line
@@ -174,9 +154,9 @@ class ezFBfont():
         return xmin,ymin,wide,high
 
     def write(self, string, x, y, fg=None, bg=None, tkey=None, halign=None, valign=None):
-        # todo: alignment, return clipping status
-        xpos = x
-        ypos = y
+        if len(string) == 0:
+            return
+        # Argument overrides
         if fg is None:
             fg = self.fg
         else:
@@ -189,17 +169,39 @@ class ezFBfont():
             tkey = self.tkey
         else:
             tkey = self._tkey_range(tkey)
-        xmax = ymax = xmin = ymin = 0
-        # align! orient.
-        for char in string:
-            if char is '\n':
-                # needs mods for alignment
-                xpos = x
-                ypos = ypos + self._font.height()
-            elif ord(char) in range(self._font.min_ch(), self._font.max_ch() + 1):
-                cx, cy = self._put_char(char, xpos, ypos, fg, bg, tkey)
-                xpos = xpos + (cx * self._dir[0])
-                ypos = ypos + (cy * self._dir[1])
-            else:
-                print('unprintable char: "' + char + '" (' + str(ord(char)) + ')')
-        return  # (add cliping status check)
+        if halign is None:
+            halign = self.halign
+        else:
+            halign = self._check_halign(halign)
+        if valign is None:
+            valign = self.valign
+        else:
+            valign = self._check_valign(valign)
+
+        # Write the string lines(s)
+        # todo: orient
+        lines = string.split('\n')
+        # alignment
+        lwidth = []
+        for line in lines:
+            lwidth.append(self._line_size(line)[0])
+        xl = x
+        xr = x + max(lwidth)
+        xc = x + int((xr - xl) / 2)
+        ypos = y
+        for idx, line in enumerate(lines):
+            xpos = x
+            if halign is 'center':
+                xpos = int(xc - (lwidth[idx] / 2))
+            elif halign is 'right':
+                xpos = xr - lwidth[idx]
+            for char in line:
+                if ord(char) in range(self._font.min_ch(), self._font.max_ch() + 1):
+                    cx, cy = self._put_char(char, xpos, ypos, fg, bg, tkey)
+                    # needs mods for orientation
+                    xpos = xpos + cx
+                else:
+                    print('unprintable char: "' + char + '" (' + str(ord(char)) + ')')
+            # needs mods for alignment and orientation
+            ypos = ypos + self._font.height()
+        return
