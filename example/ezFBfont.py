@@ -59,11 +59,11 @@ class ezFBfont():
         else:
             self._screenwidth = size[0]  # In pixels
             self._screenheight = size[1]
-        # Number of colors, default color and transparency
+        # Number of colors
         if colors is None:
             errtxt = 'Cannot determine number of colors from driver, supply with colors=N at init.'
             try:
-                format = device.format  # pixel format
+                format = device.format  # framebuffer format
             except Exception as e:
                 raise ValueError(errtxt + repr(e))
             try:
@@ -72,13 +72,12 @@ class ezFBfont():
                 raise ValueError('Unknown format. ' + errtxt)
         else:
             self._colors = colors
+        # default color scheme
         self.fg = self._colors - 1
         self.bg = 0
         self.tkey = -1
-        self.set_color(fg, bg, tkey)
-        # Alignment
-        self._halign = self._check_halign(halign)
-        self._valign = self._check_valign(valign)
+        # Set user color and alignment overrides
+        self.set_default(fg, bg, tkey, halign, valign)
         # Fluff
         if self._verbose:
             fstr = 'width: {}, height: {}\nfg: {}, bg: {}, tr: {}'
@@ -92,6 +91,14 @@ class ezFBfont():
         if color >= self._colors:
             color = self._colors -1
         return color
+
+    def _tkey_range(self, tkey):
+        # forces colors into correct range (0...max)
+        if tkey < -1:
+            tkey = 0
+        if tkey >= self._colors:
+            tkey = self._colors -1
+        return tkey
 
     def _check_halign(self, halign):
         if halign not in ('left','center','right'):
@@ -111,16 +118,12 @@ class ezFBfont():
         # Todo: replace/integrate into main char class.
         # Needs mods for rotated strings, padding
         if not len(string):
-            return (0,0)
+            return 0,0
         x = 0
-        y = self._font.height()
-        for char in string[:-1]:
-            if char is '\n':
-                y += self._font.height()
-                continue
+        for char in string:
             _, _, char_width = self._font.get_ch(char)
             x += char_width
-        return (x,y)
+        return x, self._font.height()
 
     def _put_char(self, char, x, y, fg, bg, tkey):
         # fetch the glyph
@@ -140,29 +143,35 @@ class ezFBfont():
         self._device.blit(charbuf, x, y, tkey, palette)
         return char_width, char_height
 
-    def set_color(self, fg=None, bg=None, tkey=None):
+    def set_default(self, fg=None, bg=None, tkey=None, halign=None, valign=None):
         if fg is not None:
             self.fg = self._color_range(fg)
         if bg is not None:
             self.bg = self._color_range(bg)
         if tkey is not None:
-            self.tkey = self._color_range(tkey)
-
-    def set_align(self, halign=None, valign=None):
+            self.tkey = self._tkey_range(tkey)
         if halign is not None:
             self._halign = self._check_halign(halign)
         if valign is not None:
             self._valign = self._check_valign(valign)
 
     def size(self, string):
+        lines = string.split('\n')
+        w = h = 0
         # todo. padding affects this
-        return (0,0)
+        for line in lines:
+            x, y = self._line_size(line)
+            if x > w:  # record the widest line
+                w = x
+            h = h + y  # total the height
+        return w, h
 
-    def area(self, string, x, y, halign=None, valign=None):
-        # todo
-        # ignore clipping!
-        xmin = xmax = ymin = ymax = 0
-        return (xmin,xmax,ymin,ymax)
+    def rect(self, string, x, y, halign=None, valign=None):
+        wide, high = self.size(string)
+        # todo: position offset
+        xmin = x
+        ymin = y
+        return xmin,ymin,wide,high
 
     def write(self, string, x, y, fg=None, bg=None, tkey=None, halign=None, valign=None):
         # todo: alignment, return clipping status
@@ -179,7 +188,7 @@ class ezFBfont():
         if tkey is None:
             tkey = self.tkey
         else:
-            tkey = self._color_range(tkey)
+            tkey = self._tkey_range(tkey)
         xmax = ymax = xmin = ymin = 0
         # align! orient.
         for char in string:
