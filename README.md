@@ -54,7 +54,7 @@ Design notes; not canon. But this is an attempt to document the alpha release.
 Class initiated against a font..
 
 ```python
-from ezFBfont.py import ezFBfont
+from ezFBfont import ezFBfont
 import mPyEZFont_XYZ
 
 ... create a font object attached to a framebuffer device
@@ -69,13 +69,15 @@ device.show()
 
 ## Create an instance for the font:
 
-The font needs to be imported:
+The font class and the font(s) required need to be imported:
 
 ```python
+from ezFBfont import ezFBfont
 import mPyEZFont_myfont
+...
 ```
 
-And is then used to create a font writer instance:
+And then used to create a font writer instance for all the imported fonts:
 
 ```python
 myfont = ezFBfont(device, fontName, fg=max_allowed, bg=0 ,tkey=-1, halign='left', valign='top', colors=?)
@@ -85,18 +87,18 @@ Positional Arguments:
 * fontName : the name of the font you imported above, eg: mPyEZFont_myfont
 
 Optional Arguments:
-* foreground and background colors, plus transparentcy key
-  * foreground and background will default to max-color and min-color respectively (see below)
+* fg, bg, tkey: (integers) foreground and background colors, plus transparency key
+  * foreground and background will default to *max-color* and *min-color* respectively (see below)
   * transparent key is -1 by default (none), otherwise the transparent color
-* halign: 'left|right|center' : how to align on the X axis
-* valign: 'top|center|baseline|bottom' : how to align on Y axis
+* halign: (string) 'left|right|center' : how to align on the X axis
+* valign: (string) 'top|center|baseline|bottom' : how to align on Y axis
 
 Device dependent: Needs to be supplied if your display device driver does not report it's settings properly.
-* colors: integer, the total number of colors or greyscales we support, 2 for mono, up to 65536 for 16 bit color
-  * the max-color used above will always be (this value - 1), min-color is always 0
+* colors: (integer) the total number of colors or greyscales we support, 2 for mono, up to 65536 for 16 bit color
+  * the *max-color* used above will always be (this value - 1), *min-color* is always 0
 
-## Use it:
-
+## Use:
+#### write()
 ```python
 myfont.write(str, X, Y, fg=None, bg=None, tkey=None, halign=None, valign=None)
 ```
@@ -107,26 +109,24 @@ Positional Arguments:
 Optional Arguments:
 * as per init options, override the default.
 
+#### size()
 ```python
 x, y = myfont.size(str)
 ```
 Returns the pixel width and height of the string
 
+#### rect()
 ```python
 xmin, xmax, width, height = myfont.rect(str, x, y, halign=None, valign=None)
 ```
 Returns the area that the string would be written to with `myfont.write()`
 * The return is suitable for passing directly to `display.rect()`
 
+#### set_default()
 ```python
 myfont.set_default(fg=None, bg=None, tkey=None, halign=None, valign=None)
 ```
 Changes the default value of the supplied argument(s)
-
-```python
-myfont.area(str, x, y, halign=None, valign=None)
-```
-Sets the default horizontal and vertical alignment as needed
 
 ### Thoughts:
 
