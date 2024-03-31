@@ -29,10 +29,10 @@ class ezFBfont():
                  fg = None,
                  bg = None,
                  tkey = None,
-                 halign = 'left',
-                 valign = 'top',
+                 halign = None,
+                 valign = None,
                  colors = None,
-                 verbose=False):
+                 verbose = False):
 
         self._device = device
         self._font = font
@@ -44,6 +44,7 @@ class ezFBfont():
             self._map = framebuf.MONO_HMSB if font.reverse() else framebuf.MONO_HLSB
         else:
             raise ValueError('Font must be horizontally mapped.')
+
         # currently only support monochrome fonts
         self._font_colors = 2
         self._palette_format = framebuf.RGB565
@@ -58,15 +59,18 @@ class ezFBfont():
                     print(errtxt, '\nassuming a 2 color (mono) display')
                 format = framebuf.MONO_VLSB
             try:
-                self._colors = colorspaces[format]
+                self.colors = colorspaces[format]
             except KeyError:
                 raise ValueError(errtxt + 'Unknown format: ' + str(format))
         else:
-            self._colors = colors
+            self.colors = colors
         # default color scheme
-        self.fg = self._colors - 1
+        self.fg = self.colors - 1
         self.bg = 0
         self.tkey = -1
+        # default alignment
+        self.halign = 'left'
+        self.valign = 'top'
         # apply user color and alignment overrides
         self.set_default(fg, bg, tkey, halign, valign)
 
@@ -74,16 +78,16 @@ class ezFBfont():
         # forces colors into correct range (0...max)
         if color < 0:
             color = 0
-        if color >= self._colors:
-            color = self._colors -1
+        if color >= self.colors:
+            color = self.colors -1
         return color
 
     def _tkey_range(self, tkey):
-        # forces colors into correct range (0...max)
+        # forces tkey into correct range (0...max)
         if tkey < -1:
             tkey = 0
-        if tkey >= self._colors:
-            tkey = self._colors -1
+        if tkey >= self._font_colors:
+            tkey = self._font_colors -1
         return tkey
 
     def _check_halign(self, halign):
@@ -119,7 +123,7 @@ class ezFBfont():
         # assemble color map
         palette = framebuf.FrameBuffer(palette_buf, self._font_colors, 1, self._palette_format)
         palette.pixel(0, 0, bg)
-        palette.pixel(self._colors -1, 0, fg)
+        palette.pixel(self.colors -1, 0, fg)
         # fetch and blit the glyph
         charbuf = framebuf.FrameBuffer(buf, char_width, char_height, self._map)
         self._device.blit(charbuf, x, y, tkey, palette)
@@ -138,7 +142,7 @@ class ezFBfont():
             self.valign = self._check_valign(valign)
         if self._verbose:
             fstr = '{} = colors: {}, fg: {}, bg: {}, tr: {}, halign: {}, valign: {}'
-            print(fstr.format(self.name, self._colors, self.fg, self.bg, self.tkey,
+            print(fstr.format(self.name, self.colors, self.fg, self.bg, self.tkey,
                               self.halign, self.valign))
 
     def size(self, string):
