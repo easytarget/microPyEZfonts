@@ -1,8 +1,8 @@
 # Fonts for the MicroPython framebuffer
 
-A collection of fonts sourced from the [u8g2](https://github.com/olikraus/u8g2) project
+A collection of fonts sourced from the [u8g2](https://github.com/olikraus/u8g2) project and packaged for use on small devices, with small displays, running [MicroPython](https://micropython.org/)
 
-Thes fonts have been processed using the tools provided in Peter Hinches [`font-to-py`](https://github.com/peterhinch/micropython-font-to-py) repo, and can be used with either his (comprehensive) [writer](https://github.com/peterhinch/micropython-font-to-py/tree/master/writer) class, or the easy font writer class in this repo.
+These fonts have been processed using the tools provided in Peter Hinches excellent [`font-to-py`](https://github.com/peterhinch/micropython-font-to-py) repo, and can be used with either his (comprehensive) [writer](https://github.com/peterhinch/micropython-font-to-py/tree/master/writer) class, or the **easy FrameBuffer font** writer in this repo
 
 These can be used with any display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html), I intend to build a driver database here for all screens tested and known to work
 
@@ -11,24 +11,27 @@ Currently in beta release, a full point release will come when this has been tes
 ..the `dev` branch is where the latest stuff happens, (it may be unstable or unusable.. ymmv!)
 
 # Fonts
-Font files are in the [mpy-fonts](mpy_fonts) folder. See the `README` there for a description, a table of all the fonts and heights, and the conversion tool itself.
+Font files are in the [`mpy-fonts`](mpy_fonts) folder
+* Currently there are 92 font/size combinations available :smile:
+* See the `README` there for a description, a table of all the fonts and heights, and the conversion tool itself
 
-This is a *restricted* set of the `U8G2` fonts, many of the fonts available there are in an older version of `.bdf` font file format that is not supported by the converter tool. Others have unclear or burdonsome licence restrictions.
+This is a *limited* subset of the `U8G2` fonts, many of the fonts available there are in an older version of `.bdf` font file format that is not supported by the converter tool. Others have unclear or burdonsome licence restrictions :innocent:
 
-The selection provided here covers the devault U8G2 fonts, a lot of common X11 fonts and the 'spleen' small font set. There are some symbol and icon fonts but I wish the selction was better, sorry.
+The selection provided here covers the devault U8G2 fonts, a lot of common X11 fonts and the 'spleen' small font set. There are some symbol and icon fonts but I wish the selction was better, sorry :frowning_face:
 
 # Drivers
-The font writer should work with all displays that have a microPython framebuffer compatible driver
+The font writer should work with all displays that have a MicroPython framebuffer compatible driver
 
-A selection of 'good' drivers is provided (along with some documentation on using your own driver) in the `drivers` folder.
+A selection of 'good' drivers is provided,along with some documentation on using your own driver, in the [`drivers`](drivers) folder
 
 # Easy use via `ezFBfont.py`
-*easyFBfont* is a Class that is initiated against a framebuffer device, and a font..
+*easyFBfont* is a python class that is initiated against a framebuffer device, and a font
 
 ### install:
-Copy the `ezFBfont.py` file into the root of your microPython project, along with the relevant display driver and font files you want to use
+Copy the `ezFBfont.py` file into the root (or path) of your MicroPython project, along with the relevant display driver and font files you want to use
 
 ### quickstart
+See the [`examples`](examples) folder for some working code that uses all the features described below
 ```python
 from ezFBfont import ezFBfont
 import mPyEZFont_XYZ
@@ -37,7 +40,7 @@ import mPyEZFont_XYZ
 myfont = ezFBfont(device, mPyEZFont_XYZ)
 
 ... use it to write on the framebuffer
-myfont.write(string, x, y)
+myfont.write('string', x, y)
 
 ... eventually..
 device.show()
@@ -50,7 +53,7 @@ The font class and the font(s) required need to be imported:
 ```python
 from ezFBfont import ezFBfont
 import mPyEZFont_myfont
-...etc fo all fonts
+#...etc for all fonts
 ```
 
 You then create a font instance for each imported font:
@@ -66,10 +69,10 @@ Optional Arguments:
 * *fg*, *bg*, *tkey*: (integers) foreground and background colors, plus transparency key
   * foreground and background will default to *max-color* and *min-color* respectively (see below)
   * transparent key is -1 by default (none), otherwise it defines a font color that should be rendered transparent, currently we only support mono fonts so is limited to `-1`, `0` or `1`
-* *halign*: (string) 'left|right|center' : how to align on the X axis
+* *halign*: (string) `left|right|center` : how to align on the X axis
   * Defaults to `left`
   * This also works as justification, and is applied on a per-line basis
-* *valign*: (string) 'top|center|baseline|bottom' : how to align on Y axis
+* *valign*: (string) `top|center|baseline|bottom` : how to align on Y axis
   * Defaults to `top`
   * The `baseline` setting is applied for the first line of multi-line strings
 
@@ -79,16 +82,14 @@ Device dependent: May need to be supplied if your display device driver does not
   * This defaults to `2` (mono displays) if not supplied and not determined automatically
 
 ## Methods:
-
-Use the font class to draw on screen:
-* After writing your data do not forget to do a `device.show()` to see the results ;-)
+(After writing your data do not forget to do a `device.show()` to see the results :wink:)
 
 #### write()
 ```python
-myfont.write(str, X, Y, fg=None, bg=None, tkey=None, halign=None, valign=None)
+myfont.write(string, X, Y, fg=None, bg=None, tkey=None, halign=None, valign=None)
 ```
 Positional Arguments:
-* *string* : The string to be written to the framebuffer
+* *string* : The text to be written to the framebuffer
 * *x*, *y* : position (pixels), framebuffer top-left is 0, 0
 
 Optional Arguments:
@@ -104,7 +105,7 @@ Returns the pixel width and height of the string
 ```python
 xmin, xmax, width, height = myfont.rect(str, x, y, halign=None, valign=None)
 ```
-Returns the area that the string would be written to with `myfont.write()`
+Returns the exact area that the string would be written to with `myfont.write()`
 * The return is suitable for passing directly to `display.rect()`
 
 #### set_default()
