@@ -17,8 +17,10 @@ This is a *restricted* set of the `U8G2` fonts, many of the fonts available ther
 
 The selection provided here covers the devault U8G2 fonts, a lot of common X11 fonts and the 'spleen' small font set. There are some symbol and icon fonts but I wish the selction was better, sorry.
 
-## Drivers
-The font writer should work with all displays that have a microPython framebuffer compatible driver, a selection of 'good' drivers is provided (along with some documentation on using your own driver) in the `drivers` folder.
+# Drivers
+The font writer should work with all displays that have a microPython framebuffer compatible driver
+
+A selection of 'good' drivers is provided (along with some documentation on using your own driver) in the `drivers` folder.
 
 # Easy use via `ezFBfont.py`
 *easyFBfont* is a Class that is initiated against a framebuffer device, and a font..
