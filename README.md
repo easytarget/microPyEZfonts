@@ -79,7 +79,7 @@ import mPyEZFont_myfont
 And then used to create a font writer instance for all the imported fonts:
 
 ```python
-myfont = ezFBfont(device, fontName, fg=max_allowed, bg=0 ,tkey=-1, halign='left', valign='top', colors=?)
+myfont = ezFBfont(device, fontName, fg=None, bg=None ,tkey=None, halign=None, valign=None, colors=None)
 ```
 Positional Arguments:
 * *device* : The framebuffer device to write to
@@ -90,11 +90,16 @@ Optional Arguments:
   * foreground and background will default to *max-color* and *min-color* respectively (see below)
   * transparent key is -1 by default (none), otherwise the transparent color
 * *halign*: (string) 'left|right|center' : how to align on the X axis
-* ** NOT IMPLEMENTED YET:** *valign*: (string) 'top|center|baseline|bottom' : how to align on Y axis
+  * Defaults to `left`
+  * This also works as justification, and is applied on a per-line basis
+* *valign*: (string) 'top|center|baseline|bottom' : how to align on Y axis
+  * Defaults to `top`
+  * The `baseline` setting is applied for the first line of multi-line strings
 
-Device dependent: Needs to be supplied if your display device driver does not report it's settings properly.
-* colors: (integer) the total number of colors or greyscales we support, 2 for mono, up to 65536 for 16 bit color
-  * the *max-color* used above will always be (this value - 1), *min-color* is always 0
+Device dependent: May need to be supplied if your display device driver does not report it's settings properly.
+* *colors*: (integer) the total number of colors or greyscales we support, 2 for mono, up to 65536 for 16 bit color
+  * The *max-color* used above will always be `total colors - 1`, *min-color* is always 0
+  * This defaults to `2` (mono displays) if not supplied and not determined automatically
 
 ## Use:
 #### write()
