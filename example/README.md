@@ -1,9 +1,9 @@
-## example.
+# examples`.
 Not very well documented yet..
 
-look in `i2c-ssd1306-demo.py`
+look in `i2c-ssd1306-demo.py` and `i2c-ssd1306-counter.py`
 
 ## Tested on ESP32 and ssd1306 I2C OLED.
-clipping, colors and transparency work.
+clipping, colors, transparency, alignment all work.
 
-![work in progress](./demo-alpha1.jpeg)
+![a taste of what it does](../doc/demo-alpha1.jpeg)
