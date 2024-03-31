@@ -44,17 +44,23 @@ class ezFBfont():
             self._map = framebuf.MONO_HMSB if font.reverse() else framebuf.MONO_HLSB
         else:
             raise ValueError('Font must be horizontally mapped.')
+        # currently only support monochrome fonts
+        self._font_colors = 2
+        self._palette_format = framebuf.RGB565
+
         # number of colors
         if colors is None:
             errtxt = 'Cannot determine number of colors from driver, supply with colors=N at init.'
             try:
                 format = device.format  # framebuffer format
             except Exception as e:
-                raise ValueError(errtxt + repr(e))
+                if self._verbose:
+                    print(errtxt, '\nassuming a 2 color (mono) display')
+                format = framebuf.MONO_VLSB
             try:
                 self._colors = colorspaces[format]
             except KeyError:
-                raise ValueError('Unknown format. ' + errtxt)
+                raise ValueError(errtxt + 'Unknown format: ' + str(format))
         else:
             self._colors = colors
         # default color scheme
@@ -63,10 +69,6 @@ class ezFBfont():
         self.tkey = -1
         # apply user color and alignment overrides
         self.set_default(fg, bg, tkey, halign, valign)
-        if self._verbose:
-            fstr = '{} = fg: {}, bg: {}, tr: {}, halign: {}, valign: {}'
-            print(fstr.format(self.name, self.fg, self.bg, self.tkey,
-                              self.halign, self.valign))
 
     def _color_range(self, color):
         # forces colors into correct range (0...max)
@@ -111,11 +113,11 @@ class ezFBfont():
         if glyph is None:
             return 0, 0  # Nothing to print. skip.
         # buffers
-        pal = bytearray((self._colors // 8) + 1)
+        palette_buf = bytearray(self._font_colors * 2)
         buf = bytearray(glyph)
         # Mirror, flip and turn here, adjusting char-width and height
         # assemble color map
-        palette = framebuf.FrameBuffer(pal, self._colors, 1, self._map)
+        palette = framebuf.FrameBuffer(palette_buf, self._font_colors, 1, self._palette_format)
         palette.pixel(0, 0, bg)
         palette.pixel(self._colors -1, 0, fg)
         # fetch and blit the glyph
@@ -134,6 +136,10 @@ class ezFBfont():
             self.halign = self._check_halign(halign)
         if valign is not None:
             self.valign = self._check_valign(valign)
+        if self._verbose:
+            fstr = '{} = colors: {}, fg: {}, bg: {}, tr: {}, halign: {}, valign: {}'
+            print(fstr.format(self.name, self._colors, self.fg, self.bg, self.tkey,
+                              self.halign, self.valign))
 
     def size(self, string):
         lines = string.split('\n')
