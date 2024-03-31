@@ -1,5 +1,9 @@
-## example.
-* currently uses writer class, but some fonts from my collection
-* copy `writer.py` from https://github.com/peterhinch/micropython-font-to-py/tree/master/writer into the same folder as the example script
+# examples`.
+Not very well documented yet..
+
+look in `i2c-ssd1306-demo.py` and `i2c-ssd1306-counter.py`
 
 ## Tested on ESP32 and ssd1306 I2C OLED.
+clipping, colors, transparency, alignment all work.
+
+![a taste of what it does](../doc/demo-alpha1.jpeg)

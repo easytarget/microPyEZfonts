@@ -7,7 +7,7 @@ import re
     - it is 'documented in code', I suppose.
 '''
 sourceDir = 'u8g2/tools/font/bdf'
-outDir = 'mpy-fonts'
+outDir = '.'
 prefix = 'mPyEZfont_u8g2_'
 debug = False  # see the return from font_to_py runs
 
