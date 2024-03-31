@@ -6,26 +6,27 @@ Thes fonts have been processed using the tools provided in Peter Hinches [`font-
 
 These can be used with any display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html), I intend to build a driver database here for all screens tested and known to work
 
-## This is a WORK IN PROGRESS!
-
-See the `examples` folder for the alpha release..
-
-..the `dev` branch is where the latest stuff will be (unstable? unusable? ymmv!)
+## Status
+Currently in beta release, a full point release will come when this has been tested further
+..the `dev` branch is where the latest stuff happens, (it may be unstable or unusable.. ymmv!)
 
 # Fonts
-
 Font files are in the [mpy-fonts](mpy_fonts) folder. See the `README` there for a description, a table of all the fonts and heights, and the conversion tool itself.
 
 This is a *restricted* set of the `U8G2` fonts, many of the fonts available there are in an older version of `.bdf` font file format that is not supported by the converter tool. Others have unclear or burdonsome licence restrictions.
 
 The selection provided here covers the devault U8G2 fonts, a lot of common X11 fonts and the 'spleen' small font set. There are some symbol and icon fonts but I wish the selction was better, sorry.
 
-# ezFBfont.py
+## Drivers
+The font writer should work with all displays that have a microPython framebuffer compatible driver, a selection of 'good' drivers is provided (along with some documentation on using your own driver) in the `drivers` folder.
 
-Design notes; not canon. But this is an attempt to document the alpha release.
+# Easy use via `ezFBfont.py`
+*easyFBfont* is a Class that is initiated against a framebuffer device, and a font..
 
-Class initiated against a font..
+### install:
+Copy the `ezFBfont.py` file into the root of your microPython project, along with the relevant display driver and font files you want to use
 
+### quickstart
 ```python
 from ezFBfont import ezFBfont
 import mPyEZFont_XYZ
@@ -47,10 +48,10 @@ The font class and the font(s) required need to be imported:
 ```python
 from ezFBfont import ezFBfont
 import mPyEZFont_myfont
-...
+...etc fo all fonts
 ```
 
-And then used to create a font writer instance for all the imported fonts:
+You then create a font instance for each imported font:
 
 ```python
 myfont = ezFBfont(device, fontName, fg=None, bg=None ,tkey=None, halign=None, valign=None, colors=None)
@@ -62,7 +63,7 @@ Positional Arguments:
 Optional Arguments:
 * *fg*, *bg*, *tkey*: (integers) foreground and background colors, plus transparency key
   * foreground and background will default to *max-color* and *min-color* respectively (see below)
-  * transparent key is -1 by default (none), otherwise the transparent color
+  * transparent key is -1 by default (none), otherwise it defines a font color that should be rendered transparent, currently we only support mono fonts so is limited to `-1`, `0` or `1`
 * *halign*: (string) 'left|right|center' : how to align on the X axis
   * Defaults to `left`
   * This also works as justification, and is applied on a per-line basis
@@ -75,7 +76,11 @@ Device dependent: May need to be supplied if your display device driver does not
   * The *max-color* used above will always be `total colors - 1`, *min-color* is always 0
   * This defaults to `2` (mono displays) if not supplied and not determined automatically
 
-## Use:
+## Methods:
+
+Use the font class to draw on screen:
+* After writing your data do not forget to do a `device.show()` to see the results ;-)
+
 #### write()
 ```python
 myfont.write(str, X, Y, fg=None, bg=None, tkey=None, halign=None, valign=None)
@@ -85,7 +90,7 @@ Positional Arguments:
 * *x*, *y* : position (pixels), framebuffer top-left is 0, 0
 
 Optional Arguments:
-* as per init options, override the default.
+* as per init options, values supplied will override the default.
 
 #### size()
 ```python
@@ -106,11 +111,21 @@ myfont.set_default(fg=None, bg=None, tkey=None, halign=None, valign=None)
 ```
 Changes the default value of the supplied argument(s)
 
+## Properties
+```
+myfont.name   : font name
+myfont.fg     : default foreground color
+myfont.bg     : default background color
+myfont.tkey   : default transparency key
+myfont.halign : default horizontal alignment
+myfont.valign : default vertical alignment
+myfont.colors : total number of available colors
+```
+
 ### Thoughts:
-
-Instead of rotation; provide an orient tuple of bool's : `(Mirror, Flip, Turn)`, this will allow all text directions and effects etc. Better than just 0,90,180,270 rotation options provide.
-
-Class can provide height, width and other props for the font
+Some ideas; see the issue list for status/planning
+* `Flip`, `Mirror`, `Turn`: these will allow all text directions and effects etc.
+* Padding : both removal and addition
 
 ### Wanted:
 a python library to rotate `MONO_VLSB` and `MONO_HMSB` framebuffers by 90 degrees
