@@ -1,5 +1,29 @@
+# Font files
+
+This folder contains font files suitable for use with `ezFBfont` and Peter Hinches `writer` class.
+
+They are organised by vertical size; and (where possible) come in up to 5 different charset formats:
+* Characters will only be present when they are defined in the font source!
+  * Not all fonts have all characters.
+  * Empty font files are ignored.
+ 
+For font descriptions and previews look for the corresponding font entry in the U8G2 wiki:
+https://github.com/olikraus/u8g2/wiki/fntlistall
+
+```
+f = !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ
+r =  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+U =  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_
+n =  *+,-./0123456789:
+e = Every character that font-to-mpy can convert, can be large
+```
+These can loosely be described as **f**ull (all chars up to 255), **r**eadable (ascii charset), **u**ppercase (just the minimum, good for symbol fonts), **n**umbers (plus a few time related symbols) and **e**verything.
+
+For usage see the `ezFBfont.py` documentation in the main `README`.
+
+----------------------
+
 Initial generation/import, 12 Mar 2024:
-part II: font class names with a hyphen in them are transposed to an underscore now
 ```
 Generatng from 92 font files that match and have compatible .bdf format
 6px : 4x6
@@ -527,3 +551,14 @@ Generatng from 92 font files that match and have compatible .bdf format
 
 Processed 92 font files into 436 variants.
 ```
+---------------------
+
+# Converter script
+The font structure is created by the 'convert.py' script in this folder.
+### requirements
+* This repo
+* Git Submodules updated
+* `freetype-py` installed:
+  * pip install --upgrade freetype-py
+
+The `convert.py` script will create and populate the `mpy-fonts` folder with all matching and successful fonts; organised by height
