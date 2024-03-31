@@ -3,6 +3,7 @@ from ssd1306 import SSD1306_I2C
 from ezFBfont import ezFBfont
 from sys import path
 from time import sleep_ms
+from gc import collect, mem_free
 
 # fonts
 path.append('fonts')
@@ -12,7 +13,11 @@ import mPyEZfont_u8g2_6x12_r
 import mPyEZfont_u8g2_symb18_e
 
 '''
-WIP
+A demo of using ezMPfont to splat a load of fonts onto
+a display; showing color setting, alignment, and changing
+defaults for a font.
+Also shows how to use info obtained from font.rect() to
+blank (fill with display.rect()) the written string.
 '''
 
 # pins
@@ -31,10 +36,10 @@ d0.rotate(0)      # as needed
 d0.contrast(128)  # as needed
 
 # Font Init
-font1 = ezFBfont(d0, mPyEZfont_u8g2_spleen_12x24_r, tkey=0)
-font2 = ezFBfont(d0, mPyEZfont_u8g2_spleen_16x32_n)
+font1 = ezFBfont(d0, mPyEZfont_u8g2_spleen_12x24_r, tkey=0, verbose=True)
+font2 = ezFBfont(d0, mPyEZfont_u8g2_spleen_16x32_n, verbose=True)
 font3 = ezFBfont(d0, mPyEZfont_u8g2_6x12_r, verbose=True)
-font4 = ezFBfont(d0, mPyEZfont_u8g2_symb18_e)
+font4 = ezFBfont(d0, mPyEZfont_u8g2_symb18_e, verbose=True)
 
 # multiline demo stuff
 font3.set_default(halign='center', valign='baseline')
