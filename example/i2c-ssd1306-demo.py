@@ -18,6 +18,9 @@ a display; showing color setting, alignment, and changing
 defaults for a font.
 Also shows how to use info obtained from font.rect() to
 blank (fill with display.rect()) the written string.
+
+This is a good example to 'play' with, try changing fonts,
+adding/removing options etc.
 '''
 
 # pins
@@ -43,7 +46,7 @@ font4 = ezFBfont(d0, mPyEZfont_u8g2_symb18_e, verbose=True)
 
 # multiline demo stuff
 font3.set_default(halign='center', valign='baseline')
-text = 'Hello!\nNew\nWorld'
+text = 'Hello!\nmy\nWorld'
 tx = 24
 ty = 32
 a,b,c,d = font3.rect(text, tx, ty)
@@ -60,10 +63,10 @@ font4.write('bB1!%Z', 44, 32)
 d0.show()
 
 while True:  # rect() demo
-    sleep_ms(1500)
+    sleep_ms(1000)
     d0.rect(a,b,c,d,0,True)
     d0.show()
-    sleep_ms(1500)
+    sleep_ms(1000)
     font3.write(text, tx, ty)
     d0.show()
 # fin
