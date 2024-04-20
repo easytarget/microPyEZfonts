@@ -12,12 +12,12 @@ Currently in beta release, a full point release will come when this has been tes
 
 # Fonts
 Font files are in the [`mpy-fonts`](mpy_fonts) folder
-* Currently there are 92 font/size combinations available :smile:
+* Currently there are 92 font/size combinations available
 * See the `README` there for a description, a table of all the fonts and heights, and the conversion tool itself
 
 This is a *limited* subset of the `U8G2` fonts, many of the fonts available there are in an older version of `.bdf` font file format that is not supported by the converter tool. Others have unclear or burdonsome licence restrictions :innocent:
 
-The selection provided here covers the devault U8G2 fonts, a lot of common X11 fonts and the 'spleen' small font set. There are some symbol and icon fonts but I wish the selction was better, sorry :frowning_face:
+The selection provided here covers the devault U8G2 fonts, a lot of common X11 fonts and the 'spleen' small font set. There are some symbol and icon fonts but I wish the selction was better, sorry
 
 # Drivers
 The font writer should work with all displays that have a MicroPython framebuffer compatible driver
@@ -94,6 +94,8 @@ Positional Arguments:
 
 Optional Arguments:
 * as per init options, values supplied will override the default.
+
+Returns `False` if any characters failed to be written (not present in the font)
 
 #### size()
 ```python

@@ -39,24 +39,18 @@ class ezFBfont():
         self._verbose = verbose
         self.name = self._font.__name__
 
-        # allow to work with reverse or normal font mapping
-        if font.hmap():
-            self._map = framebuf.MONO_HMSB if font.reverse() else framebuf.MONO_HLSB
-        else:
-            raise ValueError('Font must be horizontally mapped.')
-
-        # currently only support monochrome fonts
+        # font details; only monochrome HLSB fonts are supported
+        self._font_format = framebuf.MONO_HLSB
         self._font_colors = 2
-        self._palette_format = framebuf.RGB565
-
-        # number of colors
+        self._palette_format = framebuf.RGB565  # support up to 65536 colors when blitting
+        # display colors
         if colors is None:
             errtxt = 'Cannot determine number of colors from driver, supply with colors=N at init.'
             try:
-                format = device.format  # framebuffer format
+                format = device.format  # does driver supply framebuffer format?
             except Exception as e:
                 if self._verbose:
-                    print(errtxt, '\nassuming a 2 color (mono) display')
+                    print(self.name, errtxt, '\nassuming a 2 color (mono) display')
                 format = framebuf.MONO_VLSB
             try:
                 self.colors = colorspaces[format]
@@ -71,7 +65,7 @@ class ezFBfont():
         # default alignment
         self.halign = 'left'
         self.valign = 'top'
-        # apply user color and alignment overrides
+        # apply color and alignment overrides from init
         self.set_default(fg, bg, tkey, halign, valign)
 
     def _color_range(self, color):
@@ -101,7 +95,6 @@ class ezFBfont():
         return valign
 
     def _line_size(self, string):
-        # Todo: replace/integrate into main char class.
         # Needs mods for rotated strings, padding
         if not len(string):
             return 0,0
@@ -125,27 +118,26 @@ class ezFBfont():
         palette.pixel(0, 0, bg)
         palette.pixel(self.colors -1, 0, fg)
         # fetch and blit the glyph
-        charbuf = framebuf.FrameBuffer(buf, char_width, char_height, self._map)
+        charbuf = framebuf.FrameBuffer(buf, char_width, char_height, self._font_format)
         self._device.blit(charbuf, x, y, tkey, palette)
         return char_width, char_height
 
     def set_default(self, fg=None, bg=None, tkey=None, halign=None, valign=None):
-        if fg is not None:
-            self.fg = self._color_range(fg)
-        if bg is not None:
-            self.bg = self._color_range(bg)
-        if tkey is not None:
-            self.tkey = self._tkey_range(tkey)
-        if halign is not None:
-            self.halign = self._check_halign(halign)
-        if valign is not None:
-            self.valign = self._check_valign(valign)
+        # Sets the default value for all supplied arguments
+        self.fg = self.fg if fg is None else self._color_range(fg)
+        self.bg = self.bg if bg is None else self._color_range(bg)
+        self.tkey = self.tkey if tkey is None else self._tkey_range(tkey)
+        self.fg = self.fg if fg is None else self._color_range(fg)
+        self.halign = self.halign if halign is None else self._check_halign(halign)
+        self.valign = self.valign if valign is None else self._check_valign(valign)
         if self._verbose:
             fstr = '{} = colors: {}, fg: {}, bg: {}, tr: {}, halign: {}, valign: {}'
             print(fstr.format(self.name, self.colors, self.fg, self.bg, self.tkey,
                               self.halign, self.valign))
 
     def size(self, string):
+        if len(string) == 0:
+            return 0, 0
         lines = string.split('\n')
         w = h = 0
         # todo: orientation
@@ -157,16 +149,14 @@ class ezFBfont():
         return w, h
 
     def rect(self, string, x, y, halign=None, valign=None):
-        if halign is None:
-            halign = self.halign
-        else:
-            halign = self._check_halign(halign)
-        if valign is None:
-            valign = self.valign
-        else:
-            valign = self._check_valign(valign)
+        if len(string) == 0:
+            return x, y, 0, 0
+        # apply alignment overrides
+        halign = self.halign if halign is None else self._check_halign(halign)
+        valign = self.valign if valign is None else self._check_valign(valign)
+        # get the x,y size of the rendered string
         wide, high = self.size(string)
-        # todo: position offset
+        # apply alignment
         xmin = x
         if halign is 'center':
             xmin = int(x - (wide / 2))
@@ -179,32 +169,19 @@ class ezFBfont():
             ymin = int(y - (high / 2))
         elif valign is 'bottom':
             ymin = y - high
+        # return the result
         return xmin,ymin,wide,high
 
     def write(self, string, x, y, fg=None, bg=None, tkey=None, halign=None, valign=None):
         if len(string) == 0:
-            return
+            return True
+        all_good = True
         # Argument overrides
-        if fg is None:
-            fg = self.fg
-        else:
-            fg = self._color_range(fg)
-        if bg is None:
-            bg = self.bg
-        else:
-            bg = self._color_range(bg)
-        if tkey is None:
-            tkey = self.tkey
-        else:
-            tkey = self._tkey_range(tkey)
-        if halign is None:
-            halign = self.halign
-        else:
-            halign = self._check_halign(halign)
-        if valign is None:
-            valign = self.valign
-        else:
-            valign = self._check_valign(valign)
+        fg = self.fg if fg is None else self._color_range(fg)
+        bg = self.bg if bg is None else self._color_range(bg)
+        tkey = self.tkey if tkey is None else self._tkey_range(tkey)
+        halign = self.halign if halign is None else self._check_halign(halign)
+        valign = self.valign if valign is None else self._check_valign(valign)
         # todo: orient
         lines = string.split('\n')
         # vertical alignment
@@ -232,6 +209,7 @@ class ezFBfont():
                     xpos = xpos + cx
                 else:
                     print('unprintable char: "' + char + '" (' + str(ord(char)) + ')')
+                    all_good = False
             # needs mods for alignment and orientation
             ypos = ypos + self._font.height()
-        return
+        return all_good
