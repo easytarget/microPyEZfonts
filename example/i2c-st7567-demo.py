@@ -54,7 +54,7 @@ d0.rect(0, 0, 127, 62, 1)
 d0.show()
 
 # write
-font1.write('Test', 1, 1)
+font1.write('Test', 0, 0)
 font2.write('1.23', 63, 0, fg=0, bg=1)
 font3.write(text, tx, ty)
 font4.write('bB1!%Z', 44, 32)
