@@ -24,6 +24,10 @@ The font writer should work with all displays that have a MicroPython framebuffe
 
 A selection of 'good' drivers is provided,along with some documentation on using your own driver, in the [`drivers`](drivers) folder
 
+## Alternatives
+The display drivers from here: https://github.com/peterhinch/micropython-nano-gui/blob/master/DRIVERS.md support many larger and color displays; they can use the fonts from my font packs.
+TODO: expand this.
+
 # Easy use via `ezFBfont.py`
 *easyFBfont* is a python class that is initiated against a framebuffer device, and a font
 
