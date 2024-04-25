@@ -1,5 +1,5 @@
 from machine import Pin,I2C
-from ssd1306 import SSD1306_I2C
+from st7567_i2c import ST7567
 from ezFBfont import ezFBfont
 from sys import path
 from time import sleep_ms,ticks_ms
@@ -27,10 +27,9 @@ I2C0_SCL_PIN = 22  # default esp32
 i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
 
 # Display
-d0 = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
-d0.invert(False)  # as needed
-d0.rotate(0)      # as needed
-d0.contrast(128)  # as needed
+# Display
+d0 = ST7567(128, 64, i2c0, addr=0x3f)
+d0.set_contrast(31)  # as needed (max 63)
 
 # Font Init
 heading = ezFBfont(d0, mPyEZfont_u8g2_helvR14_r)

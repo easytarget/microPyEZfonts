@@ -17,7 +17,7 @@ Font files are in the [`mpy-fonts`](mpy_fonts) folder
 
 This is a *limited* subset of the `U8G2` fonts, many of the fonts available there are in an older version of `.bdf` font file format that is not supported by the converter tool. Others have unclear or burdonsome licence restrictions :innocent:
 
-The selection provided here covers the devault U8G2 fonts, a lot of common X11 fonts and the 'spleen' small font set. There are some symbol and icon fonts but I wish the selction was better, sorry
+The selection provided here covers the default U8G2 fonts, a lot of common X11 fonts and the 'spleen' small font set. There are some symbol and icon fonts but I wish the selction was better, sorry
 
 # Drivers
 The font writer should work with all displays that have a MicroPython framebuffer compatible driver
