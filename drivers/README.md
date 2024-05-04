@@ -6,6 +6,8 @@ Drivers here have been tested and where necesscary modified for use with `ezFBfo
 * For color or greyscale displays you need to supply the optional `color` argument at init.
   * Or modify the driver to return a `.format` property with the framebuffer format as defined [here](https://docs.micropython.org/en/latest/library/framebuf.html#constants).
 
+https://github.com/peterhinch/micropython-nano-gui/tree/master/drivers
+
 ## List
 (current as of 24/apr/2024)
 * `ssd1306.py`
