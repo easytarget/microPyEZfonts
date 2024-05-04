@@ -10,7 +10,7 @@ These can be used with any display that has a driver for the built-in microPyton
 Currently in beta release, a full point release will come when this has been tested further
 ..the `dev` branch is where the latest stuff happens, (it may be unstable or unusable.. ymmv!)
 
-![LCD](../doc/demo-LCD.jpg)![OLED (Note. this display has dead lines at the bottom, this is NOT my drivers fault..)](../doc/demo-OLED.jpg)
+![LCD](doc/demo-LCD.jpg)![OLED (Note. this display has dead lines at the bottom, this is NOT my drivers fault..)](doc/demo-OLED.jpg)
 # Fonts
 Font files are in the [`mpy-fonts`](mpy_fonts) folder
 * Currently there are 92 font/size combinations available
