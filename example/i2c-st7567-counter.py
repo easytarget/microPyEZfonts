@@ -1,4 +1,4 @@
-from machine import Pin,I2C
+from machine import Pin, I2C, SoftI2C
 from st7567_i2c import ST7567
 from ezFBfont import ezFBfont
 from sys import path
@@ -24,6 +24,12 @@ I2C0_SCL_PIN = 22  # default esp32
 #I2C0_SCL_PIN = 29  # default rp2040
 
 # I2C
+# Wiring is important, you need good connections and pullup resisitors on the lines.
+#  If you see continual 'OSError: with 'ENODEV' or 'ETIMEDOUT' you can try the SoftI2C
+#  function instead, it is more tolerant of timing errors.
+#  You can also play with frequency and timeout values, default:
+#  freq=400000, timeout= 50000
+#i2c0=SoftI2C(sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN),  freq=200000, timeout=100000)
 i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
 
 # Display
