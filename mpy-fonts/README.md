@@ -23,7 +23,7 @@ For usage see the `ezFBfont.py` documentation in the main `README`.
 
 ----------------------
 
-Fonts as of May 7, 2024
+Fonts as of May 7, 2024, organised by height.
 ```
   5:
     tom_thumb..............Tom Thumb fonts (numeric, uppercase)
