@@ -85,7 +85,7 @@ for height in heights:
 for height in heights:
     print('{:>3}:'.format(height))
     for font in outmap[str(height)]:
-        print('    ' + font + '.' * (widest - len(font)), end='')
+        print('    ' + font + '.' * (widest - len(font)), end=' ')
         named = False
         for name in fontnames:
             if font[:len(name)] == name:
