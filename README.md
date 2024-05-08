@@ -7,10 +7,9 @@ These fonts have been processed using the tools provided in Peter Hinches excell
 These can be used with any display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html), I intend to build a driver database here for all screens tested and known to work
 
 ## Status
-Currently in beta release, a full point release will come when this has been tested further
-..the `dev` branch is where the latest stuff happens, (it may be unstable or unusable.. ymmv!)
-
+Working and tested on a ssd1306 i2c OLED display and a st7567 i2c LCD
 ![LCD](doc/demo-LCD.jpg)![OLED (Note. this display has dead lines at the bottom, this is NOT my drivers fault..)](doc/demo-OLED.jpg)
+
 # Fonts
 Font files are in the [`mpy-fonts`](mpy-fonts) folder
 * Currently there are 92 font/size combinations available
@@ -26,10 +25,23 @@ The font writer should work with all displays that have a MicroPython framebuffe
 A selection of 'good' drivers is provided,along with some documentation on using your own driver, in the [`drivers`](drivers) folder
 
 ## Alternatives
-The display drivers from here: https://github.com/peterhinch/micropython-nano-gui/blob/master/DRIVERS.md support many larger and color displays; they can use the fonts from my font packs.
-TODO: expand this.
+If you are implementing a full 'GUI', or have a color display, especially a large(ish) one, then you should consider the alternatives below. They support large displays, full color displays, have GUI elements, and are faster.
 
-# Easy use via `ezFBfont.py`
+The fonts in this repo will work with Peter Hinches comprehensive `writer` class:
+* https://github.com/peterhinch/micropython-font-to-py/blob/master/writer/WRITER.md
+This is a good class to use if you are driving a console type display since it has goodies like word-wrap, tab alignment, etc.
+
+Also from the same author are the display drivers here:
+* https://github.com/peterhinch/micropython-nano-gui/blob/master/DRIVERS.md
+These support many larger and color displays; they can use the fonts from my font packs. They are part of a complete 'small gui' Library for Micropython.
+
+Another great resource, especially for display drivers, is at:
+https://github.com/bdbarnett/mpdisplay
+
+And finally, for people building fast GUI's on color displays, and who are willing to deal with more complex installs, there is [LVGL](https://lvgl.io/):
+https://docs.lvgl.io/7.11/get-started/micropython.html
+
+# Easy font use via `ezFBfont.py`
 *easyFBfont* is a python class that is initiated against a framebuffer device, and a font
 
 ### install:
