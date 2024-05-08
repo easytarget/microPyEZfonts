@@ -2,19 +2,23 @@
 
 This folder contains font files suitable for use with `ezFBfont` and Peter Hinches `writer` class.
 
-They are organised by vertical size; and (where possible) come in up to 5 different charset formats:
-* Characters will only be present when they are defined in the font source!
-  * Not all fonts have all characters.
-  * Empty font files are ignored.
-
+They are organised by vertical size; and (where possible) come in up to 5 different character sets:
+* The 'height' of each font set is the *true height*; the height of the tallest character in that set.
+* This can vary from the height declared in the font name!
+* The same font may appear listed as different heights depending which character set is being provided.
+  * eg: numeric charsets are typically shorter than the full charsets.
+ 
+The character sets are:
 ```
-f = !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ
 r =  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
-u =  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_
 n =  *+,-./0123456789:
-e = Every character that font-to-mpy can convert, can be large
+e = Every character that font-to-mpy can convert
 ```
-These can loosely be described as **F**ull (all chars up to 255), **R**eadable (ascii charset), **U**ppercase (just the minimum, good for symbol fonts), **N**umeric (plus a few time related symbols) and **E**verything.
+These can loosely be described as **R**eadable (ascii charset), **N**umeric (plus a few time related symbols) and **E**verything.
+
+Pay attention to the file sizes; 
+* With the `e` (everything) set characters will only be present when they are defined in the font source!
+* Other charsets encode a 'blank' character in place of missing characters, this can make them bigger than the `e` set!
 
 For more detailed font descriptions and previews look for the corresponding font entry in the U8G2 wiki:
 https://github.com/olikraus/u8g2/wiki/fntlistall
