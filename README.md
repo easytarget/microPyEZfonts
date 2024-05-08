@@ -3,8 +3,7 @@
 A collection of fonts sourced from the [u8g2](https://github.com/olikraus/u8g2) project and packaged for use on small devices, with small displays, running [MicroPython](https://micropython.org/).
 
 They will work with **`EZ FrameBuffer Font Writer`** (see [below](#easy-font-use-via-ezfbfontpy)).
-* This is optimised for ease of installation and use; especially for small 'info panel' type projects.
-* The fonts and writer will work with *any* display that has a driver for the built-in microPyton [**framebuffer**](https://docs.micropython.org/en/latest/library/framebuf.html).
+* This is optimised for ease of installation and use; especially for small 'info panel' type projects and will work with *any* display that has a driver for the built-in microPyton [**framebuffer**](https://docs.micropython.org/en/latest/library/framebuf.html).
 
 And will also work with Peter Hinches comprehensive [writer](https://github.com/peterhinch/micropython-font-to-py/tree/master/writer) class.
 
