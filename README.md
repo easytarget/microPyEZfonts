@@ -1,13 +1,18 @@
-# Fonts for the MicroPython framebuffer
+# Fonts and Font Writer for the MicroPython framebuffer
 
 A collection of fonts sourced from the [u8g2](https://github.com/olikraus/u8g2) project and packaged for use on small devices, with small displays, running [MicroPython](https://micropython.org/)
 
-These fonts have been processed using the tools provided in Peter Hinches excellent [`font-to-py`](https://github.com/peterhinch/micropython-font-to-py) repo, and can be used with either his (comprehensive) [writer](https://github.com/peterhinch/micropython-font-to-py/tree/master/writer) class, or the **easy FrameBuffer font** writer in this repo
+They will work with **`EZ FrameBuffer Font Writer`** (see [below](#easy-font-use-via-ezfbfontpy)).
+* This is optimised for ease of installation and use; especially for small 'info panel' type projects.
+* The fonts and writer will work with *any* display that has a driver for the built-in microPyton [**framebuffer**](https://docs.micropython.org/en/latest/library/framebuf.html).
 
-These can be used with any display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html), I intend to build a driver database here for all screens tested and known to work
+And will also work with Peter Hinches comprehensive [writer](https://github.com/peterhinch/micropython-font-to-py/tree/master/writer) class.
+
+The fonts presented here were processed using the tools provided in Peter Hinches excellent [`font-to-py`](https://github.com/peterhinch/micropython-font-to-py) repo using font data sourced from the Arduino/C++ [`u8g2`](https://github.com/olikraus/u8g2) project
 
 ## Status
 Working and tested on a ssd1306 i2c OLED display and a st7567 i2c LCD
+
 ![LCD](doc/demo-LCD.jpg)![OLED (Note. this display has dead lines at the bottom, this is NOT my drivers fault..)](doc/demo-OLED.jpg)
 
 # Fonts
@@ -29,17 +34,18 @@ If you are implementing a full 'GUI', or have a color display, especially a larg
 
 The fonts in this repo will work with Peter Hinches comprehensive `writer` class:
 * https://github.com/peterhinch/micropython-font-to-py/blob/master/writer/WRITER.md
-This is a good class to use if you are driving a console type display since it has goodies like word-wrap, tab alignment, etc.
+* This is a good class to use if you are driving a console type display since it has goodies like word-wrap, tab alignment, etc.
 
 Also from the same author are the display drivers here:
 * https://github.com/peterhinch/micropython-nano-gui/blob/master/DRIVERS.md
-These support many larger and color displays; they can use the fonts from my font packs. They are part of a complete 'small gui' Library for Micropython.
+* These support many larger and color displays and can also use the fonts from this repo
+* They are part of a complete 'small gui' Library for Micropython.
 
 Another great resource, especially for display drivers, is at:
-https://github.com/bdbarnett/mpdisplay
+* https://github.com/bdbarnett/mpdisplay
 
-And finally, for people building fast GUI's on color displays, and who are willing to deal with more complex installs, there is [LVGL](https://lvgl.io/):
-https://docs.lvgl.io/7.11/get-started/micropython.html
+And finally, for people building fast GUI's on color displays and who are willing to deal with more complex installs; there is [LVGL](https://lvgl.io/):
+* https://docs.lvgl.io/7.11/get-started/micropython.html
 
 # Easy font use via `ezFBfont.py`
 *easyFBfont* is a python class that is initiated against a framebuffer device, and a font
