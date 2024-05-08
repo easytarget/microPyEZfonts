@@ -12,7 +12,7 @@ Currently in beta release, a full point release will come when this has been tes
 
 ![LCD](doc/demo-LCD.jpg)![OLED (Note. this display has dead lines at the bottom, this is NOT my drivers fault..)](doc/demo-OLED.jpg)
 # Fonts
-Font files are in the [`mpy-fonts`](mpy_fonts) folder
+Font files are in the [`mpy-fonts`](mpy-fonts) folder
 * Currently there are 92 font/size combinations available
 * See the `README` there for a description, a table of all the fonts and heights, and the conversion tool itself
 
