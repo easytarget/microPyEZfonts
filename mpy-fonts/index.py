@@ -83,8 +83,10 @@ for height in heights:
 
 # Show us the money
 for height in heights:
-    print('{:>3}:'.format(height))
-    for font in outmap[str(height)]:
+    print('{:>3}px:'.format(height))
+    #print(list(sorted(outmap[str(height)].keys())))
+    #continue
+    for font in sorted(outmap[str(height)].keys()):
         print('    ' + font + '.' * (widest - len(font)), end=' ')
         named = False
         for name in fontnames:
