@@ -7,20 +7,23 @@ import re
     - it is 'documented in code', I suppose.
 '''
 sourceDir = 'u8g2/tools/font/bdf'
-outDir = '.'
+outDir = 'mpy-fonts'
 prefix = 'mPyEZfont_u8g2_'
 debug = False  # see the return from font_to_py runs
 
 sources = os.listdir(sourceDir)
-#sources = os.listdir(sourceDir)[:20] # good for test and debug
+#sources = os.listdir(sourceDir)[61:74] # good for test and debug
 
 charsets = {
             'e':None,
-            'f':bytes(list(range(32,127)) + list(range(160,256))).decode("latin-1"),
             'r':bytes(list(range(32,127))).decode("latin-1"),
             'n':bytes([32] + list(range(42,59))).decode("latin-1"),
-            'u':bytes(list(range(32,96))).decode("latin-1"),
             }
+'''
+unused:
+'f':bytes(list(range(32,127)) + list(range(160,256))).decode("latin-1"),
+'u':bytes(list(range(32,96))).decode("latin-1"),
+'''
 
 includeList = [
                 '^cour',
@@ -72,11 +75,11 @@ def doFont(base,chars='e'):
     cmd = 'micropython-font-to-py/font_to_py.py -x ' + charset + infile + ' 0 tmp_' + fileName
     run = subprocess.run(cmd, shell=True, capture_output=True)
     if debug:
-        print(run)
+        print('\nsubprocess return::\n', run)
     if run.returncode != 0:
         return True  # a softfail
-    realHeight = int(run.stdout.split(b'\n')[3].split(b' ')[2])
-    packageInfo(base,infile,fileName,realHeight)
+    fontHeight = int(run.stdout.split(b'\n')[3].split(b' ')[2])
+    packageInfo(base,infile,fileName,fontHeight)
     print(' ' + chars, end='')
     return True
 
@@ -87,7 +90,7 @@ def includeFont(name):
             return True
     return False
 
-def packageInfo(base,infile,fileName,realHeight):
+def packageInfo(base,infile,fileName,fontHeight):
     global generated
     copyrightTxt = []
     commentTxt = []
@@ -98,13 +101,15 @@ def packageInfo(base,infile,fileName,realHeight):
         if re.match('^ *COMMENT',line):
             commentTxt.append(line)
     if base not in generated.keys():
-        generated[base] = [realHeight]
+        generated[base] = [fontHeight]
     generated[base].append(fileName)
-    outSubDir = outDir + '/' + str(realHeight)
+    outSubDir = outDir + '/' + str(fontHeight)
     os.makedirs(outSubDir, exist_ok=True)
     if os.path.exists(outSubDir + '/' + fileName):
         # clean for overwrite
         os.remove(outSubDir + '/' + fileName)
+    if debug:
+        print('PostProcessing:', 'tmp_' + fileName)
     tmp = open('tmp_' + fileName,'r')
     ffile = open(outSubDir + '/' + fileName,'w')
     ffile.write("'''\n")
@@ -180,16 +185,18 @@ if len(badFontFiles) > 0:
 def height(e):
     return generated[e][0]
 
-print('\nGeneratng from ' + str(len(generated)) + ' font files that match and have compatible .bdf format')
+print('\nProcessed ' + str(len(generated)) + ' font files that match and have compatible .bdf format')
 if len(generated) == 0:
-    print('None: check settings and errors')
+    print('None! (check settings and errors, try changing debug to True)')
     exit()
 list = list(generated.keys())
 list.sort(key=height)
 total = 0
 for font in list:
-    print(str(generated[font][0]) + 'px : ' + font)
+    if debug:
+        print(str(generated[font][0]) + 'px : ' + font)
     for file in generated[font][1:]:
-        print('    ' + file)
+        if debug:
+            print('    ' + file)
         total += 1
 print('\nProcessed ' + str(len(generated)) + ' font files into ' + str(total) +  ' variants.')
