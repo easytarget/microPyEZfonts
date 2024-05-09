@@ -7,16 +7,18 @@ They are organised by vertical size; and (where possible) come in 3 different ch
 * This can vary from the height declared in the font name!
 * The same font may appear listed as different heights depending which character set is being provided.
   * eg: numeric charsets are typically shorter than the full charsets.
- 
+
+There is a mixture of proportional width and monospaced fonts in the collection; the font name will typically note the size for monospaced fonts. The proportional (X11) fonts also mostly come in regular and bold weights.
+
 The character sets are:
 ```
 r =  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
-n =  *+,-./0123456789:
+n =  %*+,-./0123456789:°
 e = Every character that font-to-mpy can convert
 ```
-These can loosely be described as **R**eadable (ascii charset), **N**umeric (plus a few time related symbols) and **E**verything.
+These can loosely be described as **R**eadable (ascii charset), **N**umeric (plus a few related symbols) and **E**verything.
 
-Pay attention to the file sizes; 
+Pay attention to the file sizes;
 * With the `e` (everything) set characters will only be present when they are defined in the font source!
 * Other charsets encode a 'blank' character in place of missing characters, this *can* make them bigger than the `e` set!
 
