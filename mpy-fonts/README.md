@@ -11,7 +11,7 @@ They are organised by vertical size; and (where possible) come in 3 different ch
 The character sets are:
 ```
 r =  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
-n =  *+,-./0123456789:
+n =  %*+,-./0123456789:°
 e = Every character that font-to-mpy can convert
 ```
 These can loosely be described as **R**eadable (ascii charset), **N**umeric (plus a few time related symbols) and **E**verything.
