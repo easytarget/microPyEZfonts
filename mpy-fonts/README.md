@@ -2,7 +2,7 @@
 
 This folder contains font files suitable for use with `ezFBfont` and Peter Hinches `writer` class.
 
-They are organised by vertical size; and (where possible) come in up to 5 different character sets:
+They are organised by vertical size; and (where possible) come in 3 different character sets:
 * The 'height' of each font set is the *true height*; the height of the tallest character in that set.
 * This can vary from the height declared in the font name!
 * The same font may appear listed as different heights depending which character set is being provided.
