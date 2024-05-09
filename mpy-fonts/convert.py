@@ -17,7 +17,7 @@ sources = os.listdir(sourceDir)
 charsets = {
             'e':None,
             'r':bytes(list(range(32,127))).decode("latin-1"),
-            'n':bytes([32] + list(range(42,59))).decode("latin-1"),
+            'n':bytes([32] + [37] + list(range(42,59)) + [248]).decode("latin-1"),
             }
 '''
 unused:
