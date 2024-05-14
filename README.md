@@ -20,6 +20,7 @@ The above is showing demo programs from the [examples](examples); with various f
 # Fonts
 Font files are in the [`mpy-fonts`](mpy-fonts) folder
 * Currently there are 92 font/size combinations available
+* Each font comes in 4 increasing sets of characters (eg 'numbers' packs are smaller than 'latin-1' ones) 
 * See the `README` there for a description, a table of all the fonts and heights, and the conversion tool itself.
 
 This is a *limited* subset of the `U8G2` fonts, many of the fonts available there are in an older version of `.bdf` font file format that is not supported by the converter tool. Others have unclear or burdonsome licence restrictions :innocent:
