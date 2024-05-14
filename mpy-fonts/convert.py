@@ -15,9 +15,10 @@ sources = os.listdir(sourceDir)
 #sources = os.listdir(sourceDir)[61:74] # good for test and debug
 
 charsets = {
-            'e':None,
+            'e':bytes(list(range(32,255))).decode("latin-1"),
             'r':bytes(list(range(32,127))).decode("latin-1"),
-            'n':bytes([32] + [37] + list(range(42,59)) + [176]).decode("latin-1"),
+            'n':bytes([32] + [37] + list(range(40,59)) + [176]).decode("latin-1"),
+            't':bytes([32] + [43] + [45] + [46] +list(range(48,59))).decode("latin-1"),
             }
 '''
 unused:
@@ -72,7 +73,7 @@ def doFont(base,chars='e'):
         badFontFiles.append(str(base))
         return False  # a hardfail, the font file is bad or the wrong version.
     fileName = prefix + base.replace('-','_') + '_' + chars + '.py'
-    cmd = 'micropython-font-to-py/font_to_py.py -x ' + charset + infile + ' 0 tmp_' + fileName
+    cmd = 'micropython-font-to-py/font_to_py.py -x ' + charset + '-e 32 ' + infile + ' 0 tmp_' + fileName
     run = subprocess.run(cmd, shell=True, capture_output=True)
     if debug:
         print('\nsubprocess return::\n', run)

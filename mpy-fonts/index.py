@@ -13,10 +13,9 @@ outmap = {}
 
 charsets = {
             'e':'everything',
-            'f':'full',
             'r':'readable',
             'n':'numeric',
-            'u':'uppercase',
+            't':'time',
             }
 
 fontnames = {
@@ -46,7 +45,7 @@ fontnames = {
 def mapfont(name, height):
     n = name[:-2]
     s = name[-1:]
-    if (name[-2:-1] != '_') or (s not in 'rfneu'):
+    if (name[-2:-1] != '_') or (s not in charsets.keys()):
         print('Not a font: ' + height + '/' + name)
         return
     if n not in outmap[height].keys():
