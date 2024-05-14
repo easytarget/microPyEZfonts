@@ -16,13 +16,13 @@ The character sets are:
 t =  +-.0123456789
 n =  %()*+,-./0123456789:°
 r =  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
-e =  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþ
+e =  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþ
 ```
 These can loosely be described as:
 * **t**ime (numbers and seperators for clocks and timers)
 * **n**umeric (numbers, seperators and related symbols for displaying values)
 * **r**eadable (ascii charset up to `0x7F`)
-* **e**verything (latin-1 charset up to `0xFF`)
+* **e**verything (all the available latin-1 chars in the font up to `0xFF`)
 
 Pay attention to the file sizes;
 * With the `e` (everything) set characters will only be present when they are defined in the font source!
