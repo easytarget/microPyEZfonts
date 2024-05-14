@@ -6,8 +6,9 @@ import re
     surprisingly badly documented for one of my scripts.. sorry.
     - it is 'documented in code', I suppose.
 '''
-sourceDir = 'u8g2/tools/font/bdf'
-outDir = 'mpy-fonts'
+sourceDir = '../u8g2/tools/font/bdf'
+outDir = '.'
+fontTool = '../micropython-font-to-py/font_to_py.py'
 prefix = 'mPyEZfont_u8g2_'
 debug = False  # see the return from font_to_py runs
 
@@ -73,7 +74,7 @@ def doFont(base,chars='e'):
         badFontFiles.append(str(base))
         return False  # a hardfail, the font file is bad or the wrong version.
     fileName = prefix + base.replace('-','_') + '_' + chars + '.py'
-    cmd = 'micropython-font-to-py/font_to_py.py -x ' + charset + '-e 32 ' + infile + ' 0 tmp_' + fileName
+    cmd = fontTool + ' -x ' + charset + '-e 32 ' + infile + ' 0 tmp_' + fileName
     run = subprocess.run(cmd, shell=True, capture_output=True)
     if debug:
         print('\nsubprocess return::\n', run)
