@@ -26,6 +26,8 @@ This is a *limited* subset of the `U8G2` fonts, many of the fonts available ther
 
 The selection provided here covers the default U8G2 fonts, a lot of common X11 fonts and the 'spleen' small font set. There are some symbol and icon fonts too.
 
+They are all derived from freely redistributable sources and retain their original copyright notices, most are very 'free', but the proportional X11 derived fonts need extra consideration. See the [fonts page documentation](mpy-fonts/README.md#Copyright) for more.
+
 ## Drivers
 The font writer should work with any display that has a MicroPython framebuffer compatible driver.
 

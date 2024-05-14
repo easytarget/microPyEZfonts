@@ -10,6 +10,15 @@ They are organised by vertical size; and (where possible) come in 3 different ch
 
 There is a mixture of proportional width and monospaced fonts in the collection; the font name will typically note the size for monospaced fonts. The proportional (X11) fonts also mostly come in regular and bold weights.
 
+# CopyRight
+See the copyright notice in the font files themselves; all the fonts here were sourced from the [u8g2](https://github.com/olikraus/u8g2/blob/master/LICENSE) project fonts; a curated repository of freely redistributable + open-source fonts.
+
+All fonts retain copyright info in the `.py` include file for the font; some are very simple, especially the fonts created for the U8G2 project itself. Some are more general open-source type licences and are redistributable as is.
+
+If using the X11 fonts (COUR, HELV, NCEN, TIM, SYMB) you should include the Adobe/Digital boilerplate licence in your distributed codes main licence, see the example in this repositories [LICENCE](../LICENCE).
+
+# Collections (character sets)
+
 The character sets are:
 ```python
 # all charsets begin with 0x32, the space character
@@ -33,6 +42,7 @@ https://github.com/olikraus/u8g2/wiki/fntlistall
 
 For usage see the `ezFBfont.py` documentation in the main `README`.
 
+# The list
 ----------------------
 
 Fonts as of May 14, 2024, organised by height.
@@ -264,6 +274,9 @@ Fonts as of May 14, 2024, organised by height.
     spleen_32x64........... Spleen small display font (everything, numeric, readable, time)
 ```
 ---------------------
+
+# Housekeeping
+Stuff related to building this collection
 
 ## Converter script
 The font structure is created by the 'convert.py' script in this folder.
