@@ -65,10 +65,7 @@ def checkValid(file):
 
 def doFont(base,chars='e'):
     global badFontFiles
-    if chars == 'e':
-        charset = ''
-    else:
-        charset = '-k ' + outDir + '/' + chars + '-char.set '
+    charset = '-k ' + outDir + '/' + chars + '-char.set '
     infile = sourceDir + '/' + base + '.bdf'
     if not checkValid(infile):
         badFontFiles.append(str(base))
