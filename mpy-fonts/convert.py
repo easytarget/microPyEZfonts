@@ -60,7 +60,7 @@ def checkValid(file):
     chars = int(res.stdout.split()[1])
     return chars
 
-def doFont(base, cset='e'):
+def doFont(base, cset):
     global badFontFiles
     charset = outDir + '/' + cset + '-char.set'
     infile = sourceDir + '/' + base + '.bdf'
@@ -75,7 +75,7 @@ def doFont(base, cset='e'):
     elif cset == 'r':
         maxchar = 127 if maxchar > 127 else maxchar
         cmd = fontTool + ' -x -l ' + str(maxchar) + ' -e 32 ' + infile + ' 0 tmp_' + fileName
-    elif cset == 'n':
+    elif cset == 'u':
         maxchar = 95 if maxchar > 95 else maxchar
         cmd = fontTool + ' -x -l ' + str(maxchar) + ' -e 32 ' + infile + ' 0 tmp_' + fileName
     else:
@@ -158,8 +158,9 @@ for s in charsets.keys():
     if charsets[s] is None:
         continue
     c = outDir + '/' + s + '-char.set'
-    o = open(c,'wb')
-    o.write(bytes(charsets[s].encode('latin-1')))
+    o = open(c,'w')
+    #o.write(bytes(charsets[s].encode('latin-1')))
+    o.write(charsets[s])
     o.close()
 
 
