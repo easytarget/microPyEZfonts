@@ -14,6 +14,7 @@ outmap = {}
 charsets = {
             'e':'everything',
             'r':'readable',
+            'u':'uppercase',
             'n':'numeric',
             't':'time',
             }

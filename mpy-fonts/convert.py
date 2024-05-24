@@ -16,16 +16,12 @@ sources = os.listdir(sourceDir)
 #sources = os.listdir(sourceDir)[61:74] # good for test and debug
 
 charsets = {
-            'e':bytes(list(range(32,255))).decode("latin-1"),
-            'r':bytes(list(range(32,127))).decode("latin-1"),
+            'e':bytes(list(range(32,256))).decode("latin-1"),
+            'r':bytes(list(range(32,128))).decode("latin-1"),
+            'u':bytes(list(range(32,96))).decode("latin-1"),
             'n':bytes([32] + [37] + list(range(40,59)) + [176]).decode("latin-1"),
             't':bytes([32] + [43] + [45] + [46] +list(range(48,59))).decode("latin-1"),
             }
-'''
-unused:
-'f':bytes(list(range(32,127)) + list(range(160,256))).decode("latin-1"),
-'u':bytes(list(range(32,96))).decode("latin-1"),
-'''
 
 includeList = [
                 '^cour',
@@ -51,6 +47,7 @@ includeList = [
                 '^cursor$',
                ]
 
+
 ignoredFontFiles = []
 badFontFiles = []
 generated = {}
@@ -58,28 +55,45 @@ generated = {}
 
 def checkValid(file):
     res = subprocess.run('grep "^CHARS " ' + file, shell=True, capture_output=True)
-    if res.returncode == 0:
-        return True
-    else:
-        return False
+    if res.returncode != 0:
+        return 0
+    chars = int(res.stdout.split()[1])
+    return chars
 
-def doFont(base,chars='e'):
+def doFont(base, cset):
     global badFontFiles
-    charset = '-k ' + outDir + '/' + chars + '-char.set '
+    charset = outDir + '/' + cset + '-char.set'
     infile = sourceDir + '/' + base + '.bdf'
-    if not checkValid(infile):
+    maxchar = checkValid(infile)
+    if maxchar == 0:
         badFontFiles.append(str(base))
         return False  # a hardfail, the font file is bad or the wrong version.
-    fileName = prefix + base.replace('-','_') + '_' + chars + '.py'
-    cmd = fontTool + ' -x ' + charset + '-e 32 ' + infile + ' 0 tmp_' + fileName
+    fileName = prefix + base.replace('-','_') + '_' + cset + '.py'
+    if cset == 'e':
+        maxchar = 255 if maxchar > 255 else maxchar
+        cmd = fontTool + ' -x -l ' + str(maxchar) + ' -e 32 ' + infile + ' 0 tmp_' + fileName
+    elif cset == 'r':
+        maxchar = 127 if maxchar > 127 else maxchar
+        cmd = fontTool + ' -x -l ' + str(maxchar) + ' -e 32 ' + infile + ' 0 tmp_' + fileName
+    elif cset == 'u':
+        maxchar = 95 if maxchar > 95 else maxchar
+        cmd = fontTool + ' -x -l ' + str(maxchar) + ' -e 32 ' + infile + ' 0 tmp_' + fileName
+    else:
+        cmd = fontTool + ' -x -k ' + charset + ' -e 32 ' + infile + ' 0 tmp_' + fileName
     run = subprocess.run(cmd, shell=True, capture_output=True)
     if debug:
         print('\nsubprocess return::\n', run)
     if run.returncode != 0:
+        if os.path.exists('tmp_' + fileName):
+            os.remove('tmp_' + fileName)
         return True  # a softfail
     fontHeight = int(run.stdout.split(b'\n')[3].split(b' ')[2])
     packageInfo(base,infile,fileName,fontHeight)
-    print(' ' + chars, end='')
+    print(' ' + cset, end='')
+    if b'Sparse' in run.stdout:
+        print('*', end='')
+    else:
+        print('+', end='')
     return True
 
 def includeFont(name):
@@ -149,6 +163,7 @@ for s in charsets.keys():
         continue
     c = outDir + '/' + s + '-char.set'
     o = open(c,'w')
+    #o.write(bytes(charsets[s].encode('latin-1')))
     o.write(charsets[s])
     o.close()
 
@@ -157,6 +172,7 @@ for s in charsets.keys():
     main loop
 '''
 sources.sort()
+print('Font File: charsets ("*" = sparse, "+" = full)')
 for file in sources:
     if file[-4:] != '.bdf':
         print('Not BDF:',file)
