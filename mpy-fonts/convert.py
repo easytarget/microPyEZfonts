@@ -90,6 +90,10 @@ def doFont(base, cset):
     fontHeight = int(run.stdout.split(b'\n')[3].split(b' ')[2])
     packageInfo(base,infile,fileName,fontHeight)
     print(' ' + cset, end='')
+    if b'Sparse' in run.stdout:
+        print('*', end='')
+    else:
+        print('+', end='')
     return True
 
 def includeFont(name):
@@ -168,6 +172,7 @@ for s in charsets.keys():
     main loop
 '''
 sources.sort()
+print('Font File: charsets ("*" = sparse, "+" = full)')
 for file in sources:
     if file[-4:] != '.bdf':
         print('Not BDF:',file)

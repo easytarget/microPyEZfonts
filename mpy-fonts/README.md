@@ -22,7 +22,7 @@ If using the X11 fonts (COUR, HELV, NCEN, TIM, SYMB) you should include the Adob
 The character sets are:
 ```python
 # all charsets begin with 0x32, the space character
-t =  +-.0123456789
+t =  +-.0123456789:
 n =  %()*+,-./0123456789:°
 u =  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_
 r =  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
@@ -35,9 +35,7 @@ These can loosely be described as:
 * **r**eadable (ascii charset up to `0x7F`)
 * **e**verything (all the available latin-1 chars in the font up to `0xFF`)
 
-Pay attention to the file sizes;
-* With the `e` and `r` (everything, readable) sets characters will only be present when they are defined in the font source
-* Other charsets encode a 'blank' character in place of missing characters, this *can* make them bigger than the other sets.
+Pay attention to the file sizes; the full sets (especially the '`e`' set) can get large. Font size is a major factor too.
 
 For more detailed font descriptions and previews look for the corresponding font entry in the U8G2 wiki:
 https://github.com/olikraus/u8g2/wiki/fntlistall
