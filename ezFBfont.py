@@ -7,7 +7,6 @@
 # - Copyright (c) 2019-2021 Peter Hinch
 
 import framebuf
-from uctypes import bytearray_at, addressof
 from sys import implementation
 
 # a table to find color space from the framebuffer format
