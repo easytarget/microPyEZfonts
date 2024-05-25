@@ -4,3 +4,6 @@
 [submodule "micropython-font-to-py"]
 	path = micropython-font-to-py
 	url = https://github.com/peterhinch/micropython-font-to-py.git
+[submodule "dictFont/bdfparser"]
+	path = dictFont/bdfparser
+	url = /dictFont/bdfparser
