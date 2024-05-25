@@ -1,6 +1,8 @@
 import os
 import subprocess
 import re
+import sys
+
 '''
     converter
     surprisingly badly documented for one of my scripts.. sorry.
@@ -9,19 +11,20 @@ import re
 sourceDir = '../u8g2/tools/font/bdf'
 outDir = '.'
 prefix = 'dictFont_'
-debug = False  # see the return from bdfToDict runs
+# provide debug argument to see the return from bdfToDict runs
+debug = sys.argv[1] if len(sys.argv) > 1 else False
 
-sources = os.listdir(sourceDir)
-#sources = os.listdir(sourceDir)[61:74] # good for test and debug
+#sources = os.listdir(sourceDir)
+sources = os.listdir(sourceDir)[11:64] # good for test and debug
 
 charsets = {
-            'e':bytes(list(range(32,256))).decode("latin-1"),
+            'n':bytes([32] + [37] + list(range(40,59)) + [176]),
+            't':bytes([32] + [43] + [45] + [46] +list(range(48,59))),
+            'e':bytes(list(range(32,256))),
+            'r':bytes(list(range(32,128))),
+            'u':bytes(list(range(32,96))),
             }
 '''
-            'r':bytes(list(range(32,128))).decode("latin-1"),
-            'u':bytes(list(range(32,96))).decode("latin-1"),
-            'n':bytes([32] + [37] + list(range(40,59)) + [176]).decode("latin-1"),
-            't':bytes([32] + [43] + [45] + [46] +list(range(48,59))).decode("latin-1"),
 '''
 
 includeList = [
@@ -60,39 +63,26 @@ generated = {}
 
 def doFont(base, cset):
     charset = outDir + '/' + cset + '-char.set'
-    infile = sourceDir + '/' + base + '.bdf'
-    maxchar = 255   # TODO <------- needs work ;-)
-    fileName = prefix + base.replace('-','_') + '_' + cset + '.py'
-    if cset == 'e':
-        maxchar = 255 if maxchar > 255 else maxchar
-        cmd = 'python bdfToDict.py ' + infile
-    elif cset == 'r':
-        maxchar = 127 if maxchar > 127 else maxchar
-        cmd = fontTool + ' -x -l ' + str(maxchar) + ' -e 32 ' + infile + ' 0 tmp_' + fileName
-    elif cset == 'u':
-        maxchar = 95 if maxchar > 95 else maxchar
-        cmd = fontTool + ' -x -l ' + str(maxchar) + ' -e 32 ' + infile + ' 0 tmp_' + fileName
-    else:
-        cmd = fontTool + ' -x -k ' + charset + ' -e 32 ' + infile + ' 0 tmp_' + fileName
+    inFile = sourceDir + '/' + base + '.bdf'
+    outFile = prefix + base.replace('-','_') + '_' + cset + '.py'
+    cmd = 'python bdfToDict.py ' + inFile + ' ' + charset
+    if debug:
+        cmd += ' True'
     run = subprocess.run(cmd, shell=True, capture_output=True)
     if debug:
         print('\nsubprocess return::\n', run)
     if run.returncode != 0:
-        if os.path.exists('tmp_' + fileName):
-            os.remove('tmp_' + fileName)
-        print('Fail: ',run.stdout.decode('latin-1').strip(), end="")
+        if os.path.exists('tmp_' + outFile):
+            os.remove('tmp_' + outFile)
+        print('\nFail: ',run.stdout.decode('latin-1').strip(), end="")
         return True  # a softfail
     # DEBUG
+    print('\n' + cset, end=' : ')
     print(run.stdout.decode('latin-1').strip(),end='')
     return True
     # DEBUG
     fontHeight = int(run.stdout.split(b'\n')[3].split(b' ')[2])
     packageInfo(base,infile,fileName,fontHeight)
-    print(' ' + cset, end='')
-    if b'Sparse' in run.stdout:
-        print('*', end='')
-    else:
-        print('+', end='')
     return True
 
 def includeFont(name):
@@ -160,12 +150,9 @@ os.makedirs(outDir,exist_ok=True)
 for s in charsets.keys():
     if charsets[s] is None:
         continue
-    c = outDir + '/' + s + '-char.set'
-    o = open(c,'w')
-    #o.write(bytes(charsets[s].encode('latin-1')))
-    o.write(charsets[s])
-    o.close()
-
+    cfile = outDir + '/' + s + '-char.set'
+    with open(cfile,'wb') as f:
+        f.write(charsets[s])
 
 '''
     main loop
