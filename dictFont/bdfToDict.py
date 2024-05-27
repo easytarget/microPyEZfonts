@@ -1,13 +1,20 @@
-from bdfparser import Font
 from sys import argv
+try:
+    from bdfparser import Font
+except ImportError:
+    print('bdfparser (patched) needs to be installed, use venv.')
+    exit()
 
-debug = argv[3] if len(argv) == 4 else False
 if len(argv) < 3:
-    print('Two arguments, the font file path, and the charset, are required')
+    print('Two arguments, the font and charset file paths, are required')
     exit()
 
 fontFile = argv[1]
 charset = argv[2]
+# You can add 'True' as a extra argument to turn debug on
+debug = argv[3] if len(argv) > 3 else False
+# You can add 'True' as a extra argument to turn debug on
+showGlyph = argv[4] if len(argv) > 4 else False
 
 if debug:
     print('Parsing: {} with charset {}'.format(fontFile, charset))
@@ -37,12 +44,10 @@ height = {}
 origin = {}
 # todo: position and baseline..
 glyphDict = {}
-glyphDraw = {}
+glyphWidth = {}
 
-font_dict_string = 'font_dict = {\n'
 
-# find info we need:
-#print(len(font.glyphs), font.glyphs.keys())
+# find basic info we need:
 for fchar in font.glyphs.keys():
     if fchar not in range(0,256):
         continue
@@ -59,30 +64,32 @@ for fchar in font.glyphs.keys():
         maxHeight = max(maxHeight, height[fchar])
         origin[fchar] = g.origin()
         glyphDict[fchar] = g.meta['hexdata']
-        glyphDraw[fchar] = g.draw()
 
 if matches == 0:
     print('No matches for this charset, skipping')
     exit(1)
 
-# dump info, for present
+# convert glyphs and dump info in debug mode
+if debug:
+    print('\nGlyphs: ord#, width, height, origin(x,y), bytes/line')
+font_dict_string = 'font_dict = {\n'
 for c in glyphDict.keys():
-    #print('{}({}):  w{} h{} o{}\ndraw:\n{}\nhexdata:'
-    #      .format(c, chr(c), width[c], height[c], origin[c], glyphDraw[c]))
-    #print('{}({}):  w{} h{} o{}'
-    #      .format(c, chr(c), width[c], height[c], origin[c]))
-    print('{: 3d}: w{} h{} o{}'
-          .format(c, width[c], height[c], origin[c]))
+    bytesWide = (width[c] - 1) // 8 + 1
+    if debug:
+        print('{: 3d}: w{} h{} o{} b{}'
+          .format(c, width[c], height[c], origin[c], bytesWide))
     for l in range(len(glyphDict[c])):
+        # glyphDict returns Hexadecimal strings; convert to int()
         glyphDict[c][l] = int(glyphDict[c][l],16)
-        bintxt = '{:b}'.format(glyphDict[c][l])
-        bintxt = bintxt.replace('0','.').replace('1','#')
-        binpad = '.' * (fontWidth - len(bintxt))
-        #print('{}{}'.format(binpad,bintxt))
+        if debug and showGlyph:
+            bintxt = '{:b}'.format(glyphDict[c][l])
+            bintxt = bintxt.replace('0','.').replace('1','#')
+            binpad = '.' * ((bytesWide * 8) - len(bintxt))
+            print('{}{}'.format(binpad, bintxt)[:width[c]])
 
     dictstring = ''
     for l in glyphDict[c]:
-        dictstring += '0x{:X},'.format(l)
+        dictstring += '{:d},'.format(l)
     font_dict_string += ' "{}":[{}]\n'.format(c, dictstring[:-1])
 font_dict_string += '}'
 
@@ -93,3 +100,4 @@ print('maxWidth: {}, maxHeight: {}'.format(maxWidth, maxHeight))
 print(font_dict_string)
 print('Length:',len(font_dict_string))
 
+print(width)
