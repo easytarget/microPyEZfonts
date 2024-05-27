@@ -94,8 +94,6 @@ class ezFBfont():
 
     def _line_size(self, string):
         # Needs mods for rotated strings, padding
-        if not len(string):
-            return 0,0
         x = 0
         for char in string:
             _, _, char_width = self._font.get_ch(char)
@@ -193,7 +191,7 @@ class ezFBfont():
             ypos = y - high
         for line in lines:
             # horizontal alignment
-            wide = self._line_size(line)[0]
+            wide, _ = self._line_size(line)
             xpos = x
             if halign is 'center':
                 xpos = int(x - (wide / 2))
