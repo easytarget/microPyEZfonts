@@ -93,7 +93,6 @@ class ezFBfont():
         return valign
 
     def _line_size(self, string):
-        # Needs mods for rotated strings, padding
         x = 0
         for char in string:
             _, _, char_width = self._font.get_ch(char)
@@ -108,7 +107,6 @@ class ezFBfont():
         # buffers
         palette_buf = bytearray(self._font_colors * 2)
         buf = bytearray(glyph)
-        # Mirror, flip and turn here, adjusting char-width and height
         # assemble color map
         palette = framebuf.FrameBuffer(palette_buf, self._font_colors, 1, self._palette_format)
         palette.pixel(0, 0, bg)
@@ -136,7 +134,6 @@ class ezFBfont():
             return 0, 0
         lines = string.split('\n')
         w = h = 0
-        # todo: orientation
         for line in lines:
             x, y = self._line_size(line)
             if x > w:  # record the widest line
@@ -178,7 +175,6 @@ class ezFBfont():
         tkey = self.tkey if tkey is None else self._tkey_range(tkey)
         halign = self.halign if halign is None else self._check_halign(halign)
         valign = self.valign if valign is None else self._check_valign(valign)
-        # todo: orient
         lines = string.split('\n')
         # vertical alignment
         high = len(lines) * self._font.height()
@@ -206,6 +202,5 @@ class ezFBfont():
                 else:
                     print('unprintable char: "' + char + '" (' + str(ord(char)) + ')')
                     all_good = False
-            # needs mods for alignment and orientation
             ypos = ypos + self._font.height()
         return all_good
