@@ -14,17 +14,17 @@ prefix = 'dictFont_'
 # provide debug argument to see the return from bdfToDict runs
 debug = sys.argv[1] if len(sys.argv) > 1 else False
 
-#sources = os.listdir(sourceDir)
-sources = os.listdir(sourceDir)[11:64] # good for test and debug
+sources = os.listdir(sourceDir)
+#sources = os.listdir(sourceDir)[11:64] # good for test and debug
 
 charsets = {
-            'n':bytes([32] + [37] + list(range(40,59)) + [176]),
-            't':bytes([32] + [43] + [45] + [46] +list(range(48,59))),
             'e':bytes(list(range(32,256))),
-            'r':bytes(list(range(32,128))),
-            'u':bytes(list(range(32,96))),
             }
 '''
+            'n':bytes([32] + [37] + list(range(40,59)) + [176]),
+            'r':bytes(list(range(32,128))),
+            't':bytes([32] + [43] + [45] + [46] +list(range(48,59))),
+            'u':bytes(list(range(32,96))),
 '''
 
 includeList = [
@@ -50,11 +50,6 @@ includeList = [
                 '^micro$`',
                 '^cursor$',
                ]
-
-specialsets = {
-                    '^battery':[32,48],
-                    '^7_seg':[70,77],
-                    }
 
 ignoredFontFiles = []
 badFontFiles = []
