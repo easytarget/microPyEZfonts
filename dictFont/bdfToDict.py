@@ -51,8 +51,8 @@ font_below = int(font.props['font_descent'])
 font_max_width = 0
 font_max_height = 0
 matches = 0
-glyph_max_width = 0
-glyph_max_height = 0
+matching_max_width = 0
+matching_max_height = 0
 fixed_width = True
 
 # glyph data
@@ -89,32 +89,40 @@ for fchar in font.glyphs.keys():
         wide = int(g.meta['bbw'])
         cent = 0
     glyph_widths[fchar] = wide
+    glyph_bytes = (wide - 1) // 8 + 1
     # calculate the left edge
     start = -font_box_off_x + glyph_box_off_x - cent
     end = start + wide
     if start < 0:
+        #### FIX THIS (7Seg font fails here)
         print(font_file, ":: BAD GLYPH BOX")
         exit()
-    if debug:
+    if show_glyph:
         print(g.meta)
-        #print('center: {}; start: {}, wide: {}, end: {}'.format(cent, start, wide, end))
-        print(' ' * cent + '=' * glyph_box_width)
-        #####################
-        for line in str(g.draw()).split('\n'):
-            line_string = line[start:end].replace('.','0').replace('#','1')
-            glyph_dict[fchar].append(int(line_string,2))
-            print(line_string, glyph_dict[fchar])
-        #####################
-    glyph_max_width = max(glyph_max_width, glyph_box_width)
+    glyph_grid = str(g.draw()).split('\n')
+    for line in range(len(glyph_grid)):
+        line_string = glyph_grid[line]
+        vmark = ' '
+        vpos = font_box_height - line
+        # Find the section we need
+        line_string = line_string[start:end]
+        # Calculate how many zeros to append to match byte width
+        xbits = ((glyph_bytes * 8) - len(line_string))
+        # Now create an int() to store from the binary representation
+        bs = line_string.replace('.','0').replace('#','1')
+        bs += '0' * xbits
+        glyph_dict[fchar].append(int(bs, 2))
+        # dump the glyph data when needed
+        if show_glyph:
+            print('{}{}{:<2d} {} {}'.format(line_string,
+                                        ' ' * xbits,
+                                        vpos,
+                                        bs,
+                                        glyph_dict[fchar][-1:]))
+    matching_max_width = max(matching_max_width, glyph_box_width)
     if glyph_box_width != font_box_width:
         fixed_width = False
-    glyph_max_height = max(glyph_max_height, int(g.meta['bbh']))
-    glyph_dict[fchar] = g.meta['hexdata']
-    for l in range(len(glyph_dict[fchar])):
-        # THIS NEEDS TO BE COMBINED WITH LINE STUFF ABOVE
-        #####################
-        glyph_dict[fchar][l] = int(glyph_dict[fchar][l],16)
-        #####################
+    matching_max_height = max(matching_max_height, int(g.meta['bbh']))
 
 # No matching characters, exit.
 if matches == 0:
@@ -129,7 +137,7 @@ glyph_dict_string = 'glyph_dict = {\n'
 for fchar in glyph_dict.keys():
     bytesWide = (glyph_widths[fchar] - 1) // 8 + 1
     if debug:
-        print('{: 3d}: width: {}, {}bits'
+        print('{: 3d}: width: {: 3d}, {: 3d}-bit'
           .format(fchar, glyph_widths[fchar], bytesWide * 8))
     line_string = ''
     for l in glyph_dict[fchar]:
@@ -148,7 +156,7 @@ print('Declared: above / below baseline: {}, {}'.format(font_above, font_below))
 print('Discovered: max width: {}, max height: {}'.format(font_max_width, font_max_height))
 
 print('Matching: {}'.format(matches))
-print('Matching: max width: {}, max height: {}'.format(glyph_max_width, glyph_max_height))
+print('Matching: max width: {}, max height: {}'.format(matching_max_width, matching_max_height))
 print('Fixed width: {}'.format(fixed_width))
 
 if debug:
