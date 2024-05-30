@@ -43,10 +43,10 @@ font_box_width = int(font.headers['fbbx'])
 font_box_height = int(font.headers['fbby'])
 font_box_off_x = int(font.headers['fbbxoff'])
 font_box_off_y = int(font.headers['fbbyoff'])
-# Find the baseline
 if font_box_off_y > 0:
     print(font_file, ":: BAD FONT BOX Y POSITION")
     exit()
+# Find the baseline
 font_base_line = font_box_height + font_box_off_y
 # declared variation from baseline. (unreliable?)
 font_above = int(font.props['font_ascent'])
@@ -55,11 +55,11 @@ font_below = int(font.props['font_descent'])
 # Defaults
 font_max_width = 0
 font_max_height = 0
-font_top_line = 0
-font_bottom_line = 0
 matches = 0
-matching_max_width = 0
-matching_max_height = 0
+match_max_width = 0
+match_max_height = 0
+match_top_line = 1000
+match_bottom_line = 0
 fixed_width = True
 
 # glyph data
@@ -82,14 +82,21 @@ for fchar in font.glyphs.keys():
     # Valid character, now see if it has a glyph.
     if len(g.meta['hexdata']) == 0:
         continue
-    # If we got here, we have a glyph to process, add to the dict
+    # If we got here, we have a glyph to process
     matches += 1
+    # note maximum vertical limits
+    top = font_base_line - int(g.meta['bbyoff']) - int(g.meta['bbh']) + 1
+    bottom = font_base_line - int(g.meta['bbyoff'])
+    match_top_line = min(match_top_line, top)
+    match_bottom_line = max(match_bottom_line, bottom)
+    # If we got here, we have a glyph to process, add to the dict
     glyph_dict[fchar] = []
 
 # Find the vertical occupied lines
-font_box_lines = range(1,font_box_height + 1)
+print('match top/bottom', match_top_line, match_bottom_line)
+font_box_lines = range(match_top_line, match_bottom_line + 1)
 print(list(font_box_lines))
-print(glyph_dict.keys())
+#print(glyph_dict.keys())
 
 # Now process each matching glyph
 for fchar in glyph_dict.keys():
@@ -102,10 +109,12 @@ for fchar in glyph_dict.keys():
     # Find the vertical origin
     glyph_box_height = int(g.meta['bbh'])
     glyph_box_off_y = int(g.meta['bbyoff'])
-    print(glyph_box_height,glyph_box_off_y)
+    top = font_base_line - glyph_box_off_y - glyph_box_height + 1
+    bottom = font_base_line - glyph_box_off_y
+    print(top,bottom)
     # record the maximum glyph box dimensions
-    matching_max_width = max(matching_max_width, glyph_box_width)
-    matching_max_height = max(matching_max_height, glyph_box_height)
+    match_max_width = max(match_max_width, glyph_box_width)
+    match_max_height = max(match_max_height, glyph_box_height)
     # check if we have a variable width font
     if glyph_box_width != font_box_width:
         fixed_width = False
@@ -133,9 +142,13 @@ for fchar in glyph_dict.keys():
         line_string = glyph_grid[line - 1]
         vnote = '   '
         if line in font_box_lines:
-            vnote = '<  '
+            vnote = '<-'
         if line == font_base_line:
-            vnote = '<-O'
+            vnote += 'O'
+        if line == top:
+            vnote += 'T'
+        if line == bottom:
+            vnote += 'B'
         # Find the section we need
         line_string = line_string[start:end]
         # Calculate how many zeros to append to match byte width
@@ -185,7 +198,7 @@ print('Declared: above / below baseline: {}, {}'.format(font_above, font_below))
 print('Discovered: max width: {}, max height: {}'.format(font_max_width, font_max_height))
 
 print('Matching: {}'.format(matches))
-print('Matching: max width: {}, max height: {}'.format(matching_max_width, matching_max_height))
+print('Matching: max width: {}, max height: {}'.format(match_max_width, match_max_height))
 print('Fixed width: {}'.format(fixed_width))
 
 if debug:
