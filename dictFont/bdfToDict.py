@@ -39,6 +39,12 @@ font_name = font.headers['fontname']
 font_family = None
 if 'family_name' in font.props.keys():
     font_family = font.props['family_name']
+font_weight = None
+if 'weight_name' in font.props.keys():
+    font_weight = font.props['weight_name']
+font_size = None
+if 'pixel_size' in font.props.keys():
+    font_size = font.props['pixel_size']
 font_box_width = int(font.headers['fbbx'])
 font_box_height = int(font.headers['fbby'])
 font_box_off_x = int(font.headers['fbbxoff'])
@@ -64,7 +70,8 @@ fixed_width = True
 
 # glyph data
 glyph_dict = {}
-glyph_widths = {}
+glyph_px_widths = {}
+glyph_first_lines = {}
 
 # Import and format glyph data
 for fchar in font.glyphs.keys():
@@ -99,6 +106,8 @@ font_box_lines = range(match_top_line, match_bottom_line + 1)
 for fchar in glyph_dict.keys():
     # load the glyph
     g = font.glyphbycp(fchar)
+    if show_glyph:
+        print(g.meta)
     # get width data
     glyph_bit_width = int(g.meta['dwx0'])
     glyph_box_width = int(g.meta['bbw'])
@@ -109,6 +118,8 @@ for fchar in glyph_dict.keys():
     top = font_base_line - glyph_box_off_y - glyph_box_height + 1
     bottom = font_base_line - glyph_box_off_y
     glyph_lines = range(top, bottom + 1)
+    # store the top glyph line position in a dict
+    glyph_first_lines[fchar] = top
     # record the maximum glyph box dimensions
     match_max_width = max(match_max_width, glyph_box_width)
     match_max_height = max(match_max_height, glyph_box_height)
@@ -123,23 +134,21 @@ for fchar in glyph_dict.keys():
         wide = glyph_box_width
         cent = 0
     # store width in dict, and calculate byte width
-    glyph_widths[fchar] = wide
+    glyph_px_widths[fchar] = wide
     glyph_bytes = (wide - 1) // 8 + 1
     # calculate the left edge
     start = -font_box_off_x + glyph_box_off_x - cent
     end = start + wide
     if start < 0:
         #### FIX THIS (7Seg font fails here)
-        print(font_file, ":: BAD GLYPH BOX")
+        print(font_file, ":: BAD GLYPH BOX for", fchar)
         exit()
-    if show_glyph:
-        print(g.meta)
     glyph_grid = str(g.draw()).split('\n')
     for line in range(1, len(glyph_grid) + 1):
         line_string = glyph_grid[line - 1]
         if line not in font_box_lines:
             if '#' in line_string:
-                print(font_file, ":: GLYPH OUTSIDE FONT BOX", fchar)
+                print(font_file, ":: GLYPH OUTSIDE FONT BOX for", fchar)
             continue
         if line in glyph_lines:
             vnote = '-'
@@ -185,49 +194,52 @@ if matches == 0:
 # Generate DICT structure from glyphs
 if debug:
     print('\nGlyphs')
-# Glyph bitmap data
+
+# Construct the output glyph dictionary
 glyph_dict_string = 'glyph_dict = {\n'
 for fchar in glyph_dict.keys():
-    bytesWide = (glyph_widths[fchar] - 1) // 8 + 1
+    bytesWide = (glyph_px_widths[fchar] - 1) // 8 + 1
     if debug:
         print('{: 3d}: width: {: 3d}, {: 3d}-bit'
-          .format(fchar, glyph_widths[fchar], bytesWide * 8))
+          .format(fchar, glyph_px_widths[fchar], bytesWide * 8))
     line_string = ''
     for l in glyph_dict[fchar]:
         line_string += '{:d},'.format(l)
-    glyph_dict_string += ' {}:[{}]\n'.format(fchar, line_string[:-1])
+    glyph_dict_string += ' {}:({},[{}]'.format(fchar,
+                                                  glyph_first_lines[fchar],
+                                                  line_string[:-1])
+    if fixed_width:
+        glyph_dict_string += ')\n'
+    else:
+        glyph_dict_string += ',{})\n'.format(glyph_px_widths[fchar])
 glyph_dict_string += '}'
-# generate width list (wont be used for fixed fonts)
-glyph_width = list(glyph_widths.values())
-glyph_width_string = 'glyph_widths = {}'.format(str(glyph_width).replace(' ',''))
 
-print('-\nFont: {}'.format(name))
-print('Declared: name: {}, family: {}'.format(font_name, font_family))
-print('Declared: box width: {}, Height: {}'.format(font_box_width, font_box_height))
-print('Declared: offset: x:{} y:{}'.format(font_box_off_x, font_box_off_y))
-print('Declared: above and below baseline: {}, {}'.format(font_above, font_below))
-print('Discovered: max width: {}, max height: {}'.format(font_max_width, font_max_height))
-
+# output font summary
+print('\nFont: {} ({})'.format(name, font_file))
+print('Declared: name: {}'.format(font_name))
+print('Declared: family: {}'.format(font_family))
+print('Declared: weight: {}'.format(font_weight))
+print('Declared: size: {}'.format(font_size))
 print('Matching: {}'.format(matches))
 print('Matching: max width: {}, max height: {}'.format(match_max_width, match_max_height))
-print('Matching: top and bottom lines: {}, {}'.format(match_top_line, match_bottom_line))
 print('Fixed width: {}'.format(fixed_width))
 
 if debug:
     print('Headers:\n', font.headers)
     print('Props:\n', font.props)
 
-if True:
+if not True:
     exit()   # turn on to avoid font.py output
 
 # Generate the Output:
 print('===============================================')
 # add preamble, static methods
 print('\n{}'.format(glyph_dict_string))
+print('Length: {}'.format(len(glyph_dict_string)))
+
 if fixed_width:
-    print('Length: {}'.format(len(glyph_dict_string)))
+    pass
     # add the fixed-width-writer
 else:
-    print('\n{}'.format(glyph_width_string))
-    print('Length: {}'.format(len(glyph_dict_string) + len(glyph_width_string)))
+    pass
     # add the variable-width-writer
