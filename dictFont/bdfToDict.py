@@ -93,10 +93,7 @@ for fchar in font.glyphs.keys():
     glyph_dict[fchar] = []
 
 # Find the vertical occupied lines
-print('match top/bottom', match_top_line, match_bottom_line)
 font_box_lines = range(match_top_line, match_bottom_line + 1)
-print(list(font_box_lines))
-#print(glyph_dict.keys())
 
 # Now process each matching glyph
 for fchar in glyph_dict.keys():
@@ -111,7 +108,7 @@ for fchar in glyph_dict.keys():
     glyph_box_off_y = int(g.meta['bbyoff'])
     top = font_base_line - glyph_box_off_y - glyph_box_height + 1
     bottom = font_base_line - glyph_box_off_y
-    print(top,bottom)
+    glyph_lines = range(top, bottom + 1)
     # record the maximum glyph box dimensions
     match_max_width = max(match_max_width, glyph_box_width)
     match_max_height = max(match_max_height, glyph_box_height)
@@ -140,31 +137,45 @@ for fchar in glyph_dict.keys():
     glyph_grid = str(g.draw()).split('\n')
     for line in range(1, len(glyph_grid) + 1):
         line_string = glyph_grid[line - 1]
-        vnote = '   '
-        if line in font_box_lines:
-            vnote = '<-'
+        if line not in font_box_lines:
+            if '#' in line_string:
+                print(font_file, ":: GLYPH OUTSIDE FONT BOX", fchar)
+            continue
+        if line in glyph_lines:
+            vnote = '-'
+        else:
+            vnote = ' '
+            if '#' in line_string:
+                print(font_file, ":: DATA OUTSIDE GLYPH BOX", fchar)
+            line_string = line_string.replace('.',',')
         if line == font_base_line:
             vnote += 'O'
         if line == top:
             vnote += 'T'
         if line == bottom:
             vnote += 'B'
+        vnote += ' ' * (4 - len(vnote))
         # Find the section we need
         line_string = line_string[start:end]
         # Calculate how many zeros to append to match byte width
         xbits = ((glyph_bytes * 8) - len(line_string))
-        # Now create an int() to store from the binary representation
-        bs = line_string.replace('.','0').replace('#','1')
-        bs += '0' * xbits
-        glyph_dict[fchar].append(int(bs, 2))
+        if line in glyph_lines:
+            # Now create an int() to store from the binary representation
+            bit_string = line_string.replace('.','0').replace('#','1')
+            bit_string += '0' * xbits
+            dict_entry = int(bit_string, 2)
+            glyph_dict[fchar].append(dict_entry)
+        else:
+            bit_string = ''
+            dict_entry = ''
         # dump the glyph data when needed
         if show_glyph:
             print('{}{}{:<2d}{} {} {}'.format(line_string,
                                         ',' * xbits,
                                         line,
                                         vnote,
-                                        bs,
-                                        glyph_dict[fchar][-1:]))
+                                        bit_string,
+                                        dict_entry))
 
 # No matching characters, exit.
 if matches == 0:
@@ -194,11 +205,12 @@ print('-\nFont: {}'.format(name))
 print('Declared: name: {}, family: {}'.format(font_name, font_family))
 print('Declared: box width: {}, Height: {}'.format(font_box_width, font_box_height))
 print('Declared: offset: x:{} y:{}'.format(font_box_off_x, font_box_off_y))
-print('Declared: above / below baseline: {}, {}'.format(font_above, font_below))
+print('Declared: above and below baseline: {}, {}'.format(font_above, font_below))
 print('Discovered: max width: {}, max height: {}'.format(font_max_width, font_max_height))
 
 print('Matching: {}'.format(matches))
 print('Matching: max width: {}, max height: {}'.format(match_max_width, match_max_height))
+print('Matching: top and bottom lines: {}, {}'.format(match_top_line, match_bottom_line))
 print('Fixed width: {}'.format(fixed_width))
 
 if debug:
