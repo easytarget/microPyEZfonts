@@ -18,13 +18,13 @@ sources = os.listdir(sourceDir)
 #sources = os.listdir(sourceDir)[11:64] # good for test and debug
 
 charsets = {
-            'e':bytes(list(range(32,256))),
+            't':bytes([32] + [43] + [45] + [46] + list(range(48, 59))),
+            'n':bytes([32] + [37] + list(range(40, 59)) + [176]),
+            'u':bytes(list(range(32, 96))),
+            'r':bytes(list(range(32, 127))),
+            'e':bytes(list(range(32, 127)) + list(range(160, 256))),
             }
 '''
-            'n':bytes([32] + [37] + list(range(40,59)) + [176]),
-            'r':bytes(list(range(32,128))),
-            't':bytes([32] + [43] + [45] + [46] +list(range(48,59))),
-            'u':bytes(list(range(32,96))),
 '''
 
 includeList = [
