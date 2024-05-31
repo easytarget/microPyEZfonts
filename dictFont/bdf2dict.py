@@ -53,7 +53,7 @@ if font_box_off_y > 0:
     print(font_file, ":: BAD FONT BOX Y POSITION")
     exit()
 # Find the baseline
-font_base_line = font_box_height + font_box_off_y
+font_baseline = font_box_height + font_box_off_y
 # declared variation from baseline. (unreliable?)
 font_above = int(font.props['font_ascent'])
 font_below = int(font.props['font_descent'])
@@ -62,10 +62,15 @@ font_below = int(font.props['font_descent'])
 matches = 0
 fixed_width = True
 
+# glyph line limits
+first = {}
+last = {}
+
 # glyph data
 glyph_dict = {}
 glyph_px = {}
 glyph_top = {}
+glyph_widest = 0
 
 # Import and format glyph data
 for fchar in font.glyphs.keys():
@@ -93,8 +98,6 @@ for fchar in font.glyphs.keys():
     glyph_bit_width = int(g.meta['dwx0'])
     glyph_box_width = int(g.meta['bbw'])
     glyph_box_off_x = int(g.meta['bbxoff'])
-    # start with the full glyph, so top line = 1
-    glyph_top[fchar] = 1
     # check if we have a variable width font
     # TODO: do this test later by looking at widths..
     if glyph_box_width != font_box_width:
@@ -106,9 +109,10 @@ for fchar in font.glyphs.keys():
     else:
         wide = glyph_box_width
         cent = 0
-    # store width in dict, and calculate byte width
+    # store width in dict, and note byte width
     glyph_px[fchar] = wide
     glyph_bytes = (wide - 1) // 8 + 1
+    glyph_widest = max(glyph_widest, wide)
     # calculate the left edge
     start = -font_box_off_x + glyph_box_off_x - cent
     end = start + wide
@@ -118,21 +122,30 @@ for fchar in font.glyphs.keys():
         start = 0
     glyph_grid = str(g.draw()).split('\n')
 
+    # Walk the lines of the drawn glyph select and generate the correct padded
+    # dict entry values for all glyph lines
+    # also find first and last line numbers, plus create a preview map of the glyph
+    first[fchar] = len(glyph_grid)
+    last[fchar] = 0
     glyph_map = ""
     for line in range(1, len(glyph_grid) + 1):
         line_string = glyph_grid[line - 1]
         vnote = '  '
-        if line == font_base_line:
+        if line == font_baseline:
             vnote = '-O'
         # Find the section we need
         line_string = line_string[start:end]
-        # Calculate how many zeros to append to match byte width
+        # Calculate how many zeros need to be appended to reach the byte width
         xbits = ((glyph_bytes * 8) - len(line_string))
-        # Now create an int() to store from the binary representation
+        # Now create an int() from that and store it in the glyphs line list
         bit_string = line_string.replace('.','0').replace('#','1')
         bit_string += '0' * xbits
         dict_entry = int(bit_string, 2)
         glyph_dict[fchar].append(dict_entry)
+        # determine first/last lines.
+        if dict_entry > 0:
+            first[fchar] = min(first[fchar], line)
+            last[fchar] = max(last[fchar], line)
         # dump the glyph data
         glyph_map += '{}{}{:<2d} {} {} {}\n'.format(
                         line_string,
@@ -141,9 +154,14 @@ for fchar in font.glyphs.keys():
                         vnote,
                         bit_string,
                         dict_entry)
+    if last[fchar] == 0:
+        # empty char (eg space), set to a single entry @ baseline
+        last[fchar] = first[fchar] = font_baseline
     if show_glyph:
         print('Char: {} ({})'.format(fchar, glyph_name))
-        print(glyph_map)
+        print(glyph_map,end='')
+        high = last[fchar] - first[fchar] + 1
+        print('Lines: {}, first line: {}, last line: {}\n'.format(high, first[fchar], last[fchar]))
 
 # No matching characters, exit.
 if matches == 0:
@@ -151,22 +169,25 @@ if matches == 0:
     exit(1)
 
 # Scan the matched glyphs to find true top and height of charset
+font_first = font_baseline
+font_last = 0
+for fchar in glyph_dict.keys():
+    font_first = min(font_first, first[fchar])
+    font_last = max(font_last, last[fchar])
+font_height = font_last - font_first + 1
 
 # Remove all empty lines from top and bottom of glyph
+for fchar in glyph_dict.keys():
+    glyph_dict[fchar] = glyph_dict[fchar][first[fchar] - 1 :last[fchar]]
+    glyph_top[fchar] = first[fchar] - font_first + 1
 
 # Construct the output glyph dictionary
 glyph_dict_string = 'glyph_dict = {\n'
 for fchar in glyph_dict.keys():
-    bytesWide = (glyph_px[fchar] - 1) // 8 + 1
-    if False:
-        print('{: 4d}:: top: {: 3d}, width: {: 3d}, {: 3d}-bit'
-          .format(fchar, glyph_top[fchar], glyph_px[fchar], bytesWide * 8))
     line_string = ''
     for l in glyph_dict[fchar]:
         line_string += '{:d},'.format(l)
-    glyph_dict_string += ' {}:({},[{}]'.format(fchar,
-                                                  glyph_top[fchar],
-                                                  line_string[:-1])
+    glyph_dict_string += ' {}:({},[{}]'.format(fchar, glyph_top[fchar], line_string[:-1])
     if fixed_width:
         glyph_dict_string += ')\n'
     else:
@@ -174,12 +195,14 @@ for fchar in glyph_dict.keys():
 glyph_dict_string += '}'
 
 # output font summary
-print('\nFont: {} ({})'.format(name, font_file))
+print('Font: {} ({})'.format(name, font_file))
 print('Declared: name: {}'.format(font_name))
 print('Declared: family: {}'.format(font_family))
 print('Declared: weight: {}'.format(font_weight))
 print('Declared: size: {}'.format(font_size))
 print('Matching: {}'.format(matches))
+print('- Height: {} (first: {}, last {})'.format(font_height, font_first, font_last))
+print('- Max width: {}'.format(glyph_widest))
 print('Fixed width: {}'.format(fixed_width))
 
 if debug:
