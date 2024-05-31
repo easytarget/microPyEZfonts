@@ -59,13 +59,7 @@ font_above = int(font.props['font_ascent'])
 font_below = int(font.props['font_descent'])
 
 # Defaults
-font_max_width = 0
-font_max_height = 0
 matches = 0
-match_max_width = 0
-match_max_height = 0
-match_top_line = 1000
-match_bottom_line = 0
 fixed_width = True
 
 # glyph data
@@ -78,8 +72,8 @@ for fchar in font.glyphs.keys():
     # load ALL glyphs to find absolute font size
     # ... Necesscary? if not, only load if valid..
     g = font.glyphbycp(fchar)
-    font_max_width = max(font_max_width, int(g.meta['bbw']))
-    font_max_height = max(font_max_height, int(g.meta['bbh']))
+    # Extreme debug..
+    # print(g.draw(),end='\n\n')
     # Test if char is a byte (latin-1), skip if outside range
     if fchar not in range(0,256):
         continue
@@ -89,37 +83,20 @@ for fchar in font.glyphs.keys():
     # Valid character, now see if it has a glyph.
     if len(g.meta['hexdata']) == 0:
         continue
+
     # If we got here, we have a glyph to process
     matches += 1
-    # note maximum vertical limits
-    top = font_base_line - int(g.meta['bbyoff']) - int(g.meta['bbh']) + 1
-    bottom = font_base_line - int(g.meta['bbyoff'])
-    match_top_line = min(match_top_line, top)
-    match_bottom_line = max(match_bottom_line, bottom)
-    # If we got here, we have a glyph to process, add to the dict
+    # add to the dict
     glyph_dict[fchar] = []
-
-# Find the vertical occupied lines
-font_box_lines = range(match_top_line, match_bottom_line + 1)
-
-# Now process each matching glyph
-for fchar in glyph_dict.keys():
-    # load the glyph
-    g = font.glyphbycp(fchar)
     glyph_name = g.meta['glyphname']
     # get width data
     glyph_bit_width = int(g.meta['dwx0'])
     glyph_box_width = int(g.meta['bbw'])
     glyph_box_off_x = int(g.meta['bbxoff'])
-    # Find the vertical origin
-    glyph_box_height = int(g.meta['bbh'])
-    glyph_box_off_y = int(g.meta['bbyoff'])
-    # store the top glyph top line position in a dict
-    glyph_top[fchar] = top - match_top_line + 1
-    # record the maximum glyph box dimensions
-    match_max_width = max(match_max_width, glyph_box_width)
-    match_max_height = max(match_max_height, glyph_box_height)
+    # start with the full glyph, so top line = 1
+    glyph_top[fchar] = 1
     # check if we have a variable width font
+    # TODO: do this test later by looking at widths..
     if glyph_box_width != font_box_width:
         fixed_width = False
     # define the width of glyph.
@@ -138,7 +115,7 @@ for fchar in glyph_dict.keys():
     if start < 0:
         #### FIX THIS (7Seg font fails here)
         print(font_file, ":: BAD GLYPH BOX for", fchar)
-        exit()
+        start = 0
     glyph_grid = str(g.draw()).split('\n')
 
     glyph_map = ""
@@ -148,7 +125,6 @@ for fchar in glyph_dict.keys():
         if line == font_base_line:
             vnote = '-O'
         # Find the section we need
-        print(line_string)
         line_string = line_string[start:end]
         # Calculate how many zeros to append to match byte width
         xbits = ((glyph_bytes * 8) - len(line_string))
@@ -174,9 +150,9 @@ if matches == 0:
     print('No matches for this charset, skipping')
     exit(1)
 
-# Generate DICT structure from glyphs
-if debug:
-    print('\nGlyphs')
+# Scan the matched glyphs to find true top and height of charset
+
+# Remove all empty lines from top and bottom of glyph
 
 # Construct the output glyph dictionary
 glyph_dict_string = 'glyph_dict = {\n'
@@ -204,7 +180,6 @@ print('Declared: family: {}'.format(font_family))
 print('Declared: weight: {}'.format(font_weight))
 print('Declared: size: {}'.format(font_size))
 print('Matching: {}'.format(matches))
-print('Matching: max width: {}, max height: {}'.format(match_max_width, match_max_height))
 print('Fixed width: {}'.format(fixed_width))
 
 if debug:
