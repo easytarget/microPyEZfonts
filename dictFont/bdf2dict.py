@@ -77,7 +77,7 @@ for fchar in font.glyphs.keys():
     # ... Necesscary? if not, only load if valid..
     g = font.glyphbycp(fchar)
     # Extreme debug..
-    # print(g.draw(),end='\n\n')
+    #print(g.draw(),end='\n\n')
     # Test if char is a byte (latin-1), skip if outside range
     if fchar not in range(0,256):
         continue
@@ -90,13 +90,18 @@ for fchar in font.glyphs.keys():
 
     # If we got here, we have a glyph to process
     matches += 1
+
     # add to the dict
     glyph_dict[fchar] = []
     glyph_name = g.meta['glyphname']
+    # Deep debug..
+    #print(g.draw(),end='\n\n')
+
     # get width data
     glyph_bit_width = int(g.meta['dwx0'])
     glyph_box_width = int(g.meta['bbw'])
     glyph_box_off_x = int(g.meta['bbxoff'])
+
     # define the width of glyph.
     if glyph_box_width < glyph_bit_width:
         wide = glyph_bit_width
@@ -104,17 +109,20 @@ for fchar in font.glyphs.keys():
     else:
         wide = glyph_box_width
         cent = 0
-    # store width in dict, and note byte width
-    glyph_px[fchar] = wide
-    glyph_bytes = (wide - 1) // 8 + 1
-    glyph_widest = max(glyph_widest, wide)
+
     # calculate the left edge
     start = -font_box_off_x + glyph_box_off_x - cent
     end = start + wide
     if start < 0:
-        #### FIX THIS (7Seg font fails here)
-        print(font_file, ":: BAD GLYPH BOX for", fchar)
+        print('INFO: Bad glyph box for char# {}'.format(fchar))
         start = 0
+
+    # store width in dict, and note byte width and max width
+    glyph_px[fchar] = wide
+    glyph_bytes = (wide - 1) // 8 + 1
+    glyph_widest = max(glyph_widest, wide)
+
+    # get the grid as drawn by bsdparser
     glyph_grid = str(g.draw()).split('\n')
 
     # Walk the lines of the drawn glyph select and generate the correct padded
@@ -156,7 +164,7 @@ for fchar in font.glyphs.keys():
         print('Char: {} ({})'.format(fchar, glyph_name))
         print(glyph_map,end='')
         high = last[fchar] - first[fchar] + 1
-        print('Lines: {}, first line: {}, last line: {}\n'.format(high, first[fchar], last[fchar]))
+        print('Width: {}, Lines: {}, first line: {}, last line: {}\n'.format(wide, high, first[fchar], last[fchar]))
 
 # No matching characters, exit.
 if matches == 0:
@@ -174,17 +182,19 @@ for fchar in glyph_dict.keys():
         fixed_width = False
 font_height = font_last - font_first + 1
 
-# Remove all empty lines from top and bottom of glyph
+# Remove all empty lines from top and bottom of glyph, set top line position
 for fchar in glyph_dict.keys():
     glyph_dict[fchar] = glyph_dict[fchar][first[fchar] - 1 :last[fchar]]
     glyph_top[fchar] = first[fchar] - font_first + 1
+# adjust baseline too
+font_baseline = font_baseline - font_first + 1
 
 # Construct the output glyph dictionary
 glyph_dict_string = 'glyph_dict = {\n'
 for fchar in glyph_dict.keys():
     line_string = ''
     for l in glyph_dict[fchar]:
-        line_string += '{:d},'.format(l)
+        line_string += '{:x},'.format(l)
     glyph_dict_string += ' {}:({},[{}]'.format(fchar, glyph_top[fchar], line_string[:-1])
     if fixed_width:
         glyph_dict_string += ')\n'
@@ -200,6 +210,7 @@ print('Declared: weight: {}'.format(font_weight))
 print('Declared: size: {}'.format(font_size))
 print('Matching: {}'.format(matches))
 print('Height: {}'.format(font_height))
+print('Baseline: {}'.format(font_baseline))
 print('Max width: {}'.format(glyph_widest))
 print('Fixed width: {}'.format(fixed_width))
 
@@ -213,7 +224,7 @@ if not True:
 # Generate the Output:
 print('===============================================')
 # add preamble, static methods
-print('\n{}'.format(glyph_dict_string))
+print('{}'.format(glyph_dict_string))
 
 if fixed_width:
     pass
