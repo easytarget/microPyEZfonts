@@ -14,8 +14,8 @@ prefix = 'dictFont_'
 # provide debug argument to see the return from bdfToDict runs
 debug = sys.argv[1] if len(sys.argv) > 1 else False
 
-sources = os.listdir(sourceDir)
-#sources = os.listdir(sourceDir)[11:64] # good for test and debug
+#sources = os.listdir(sourceDir)
+sources = os.listdir(sourceDir)[11:64] # good for test and debug
 
 charsets = {
             't':bytes([32] + [43] + [45] + [46] + list(range(48, 59))),
@@ -53,31 +53,36 @@ includeList = [
 
 ignoredFontFiles = []
 badFontFiles = []
-generated = {}
+generated = 0
 
 
 def doFont(base, cset):
     charset = outDir + '/' + cset + '-char.set'
-    inFile = sourceDir + '/' + base + '.bdf'
-    outFile = prefix + base.replace('-','_') + '_' + cset + '.py'
-    cmd = 'python bdfToDict.py ' + inFile + ' ' + charset
+    infile = sourceDir + '/' + base + '.bdf'
+    outname = prefix + base.replace('-','_') + '_' + cset
+    cmd = 'python bdf2dict.py ' + infile + ' ' + charset
     if debug:
         cmd += ' True'
     run = subprocess.run(cmd, shell=True, capture_output=True)
     if debug:
         print('\nsubprocess return::\n', run)
     if run.returncode != 0:
-        if os.path.exists('tmp_' + outFile):
-            os.remove('tmp_' + outFile)
         print('\nFail: ',run.stdout.decode('latin-1').strip(), end="")
         return True  # a softfail
-    # DEBUG
-    print('\n' + cset, end=' : ')
-    print(run.stdout.decode('latin-1').strip(),end='')
-    return True
-    # DEBUG
-    fontHeight = int(run.stdout.split(b'\n')[3].split(b' ')[2])
-    packageInfo(base,infile,fileName,fontHeight)
+
+    response = run.stdout.decode('latin-1')
+    files = response.split('===============================================\n')
+    if len(files) != 2:
+        print('{} - Bad response from bdf2py'.format(cset))
+        return True
+    fontheight = 0
+    for line in files[0].split('\n'):
+        if re.match('^Height: ',line):
+            fontheight = int(line.split(' ')[1])
+    if fontheight == 0:
+        print('{} - Bad summary response from bdf2py'.format(cset))
+        return True
+    packageInfo(base, infile, outname, fontheight, files)
     return True
 
 def includeFont(name):
@@ -87,54 +92,53 @@ def includeFont(name):
             return True
     return False
 
-def packageInfo(base,infile,fileName,fontHeight):
+def packageInfo(base, infile, outfile, fontheight, files):
     global generated
+    generated += 1
     copyrightTxt = []
     commentTxt = []
-    f = open(infile,'r')
-    for line in f:
-        if re.match('^ *COPYRIGHT',line):
-            copyrightTxt.append(line)
-        if re.match('^ *COMMENT',line):
-            commentTxt.append(line)
-    if base not in generated.keys():
-        generated[base] = [fontHeight]
-    generated[base].append(fileName)
-    outSubDir = outDir + '/' + str(fontHeight)
+    with open(infile,'r') as f:
+        for line in f:
+            if re.match('^ *COPYRIGHT',line):
+                copyrightTxt.append(line)
+            if re.match('^ *NOTICE',line):
+                commentTxt.append(line)
+            if re.match('^ *COMMENT',line):
+                commentTxt.append(line)
+    outSubDir = outDir + '/' + str(fontheight)
     os.makedirs(outSubDir, exist_ok=True)
-    if os.path.exists(outSubDir + '/' + fileName):
+    if os.path.exists(outSubDir + '/' + outfile):
         # clean for overwrite
-        os.remove(outSubDir + '/' + fileName)
+        os.remove(outSubDir + '/' + outfile)
     if debug:
-        print('PostProcessing:', 'tmp_' + fileName)
-    tmp = open('tmp_' + fileName,'r')
-    ffile = open(outSubDir + '/' + fileName,'w')
-    ffile.write("'''\n")
-    ffile.write('    ' + fileName + ' : generated as part of the microPyEZfonts repository\n')
-    ffile.write('      https://github.com/easytarget/microPyEZfonts\n\n')
-    ffile.write('    Original ' + base + '.bdf font file was sourced from the U8G2 project:\n')
-    ffile.write('      https://github.com/olikraus/u8g2\n\n')
-    ffile.write('    This font definition can be used with the "writer" class from Peter Hinches\n')
-    ffile.write('      micropython font-to-py tool, and was generated using his tooling from\n')
-    ffile.write('      https://github.com/peterhinch/micropython-font-to-py\n\n')
-    ffile.write('    Original Copyright Notice from source:\n\n')
-    if len(copyrightTxt) > 0:
-        for line in copyrightTxt:
-            ffile.write('    ' + line)
-    else:
-        ffile.write('    None found:\n')
-    ffile.write('\n    Original Comments from source (may include copyright info):\n\n')
-    if len(commentTxt) > 0:
-        for line in commentTxt:
-            ffile.write('    ' + line)
-    else:
-        ffile.write('    None found:\n')
-    ffile.write("'''\n\n")
-    for line in tmp:
-        ffile.write(line)
-    tmp.close()
-    ffile.close()
-    os.remove('tmp_' + fileName)
+        print('PostProcessing:', outfile)
+    with open(outSubDir + '/' + outfile + '.info','w') as i:
+        i.write(files[0])
+    with open(outSubDir + '/' + outfile + '.py','w') as f:
+        f.write("'''\n")
+        f.write('    ' + outfile + ' : generated as part of the microPyEZfonts repository\n')
+        f.write('      https://github.com/easytarget/microPyEZfonts\n\n')
+        f.write('    This font definition can be used with the "ezFBfont" class provided there.\n')
+        f.write('    It can also be used with the "writer" class from Peter Hinches micropython\n')
+        f.write('      font-to-py tool: https://github.com/peterhinch/micropython-font-to-py\n\n')
+        f.write('    Original ' + base + '.bdf font file was sourced from the U8G2 project:\n')
+        f.write('      https://github.com/olikraus/u8g2\n\n')
+        f.write('    Original Copyright information from source:\n')
+        if len(copyrightTxt) > 0:
+            for line in copyrightTxt:
+                f.write('    ' + line)
+        else:
+            f.write('    None found\n')
+        f.write('\n    Original Comments and Notices from source:\n')
+        f.write('    (may include copyright and trademark info):\n')
+        if len(commentTxt) > 0:
+            for line in commentTxt:
+                f.write('    ' + line)
+        else:
+            f.write('    None found\n')
+        f.write("'''\n")
+        for line in files[1]:
+            f.write(line)
 
 '''
     init
@@ -153,7 +157,7 @@ for s in charsets.keys():
     main loop
 '''
 sources.sort()
-print('Font File: charsets ("*" = sparse, "+" = full)')
+print('Font File: charsets')
 for file in sources:
     if file[-4:] != '.bdf':
         print('Not BDF:',file)
@@ -163,7 +167,8 @@ for file in sources:
         continue
     print(file,end=':')
     for chrs in charsets.keys():
-        if not doFont(baseName,chrs):
+        print(' ' + chrs, end='')
+        if not doFont(baseName, chrs):
             # HardFail here == bad .bdf file/format, skip to next font
             break
     print()
@@ -172,21 +177,7 @@ for file in sources:
     Wrap up and summary
 '''
 
-def height(e):
-    return generated[e][0]
-
-print('\nProcessed ' + str(len(generated)) + ' font files that match and have compatible .bdf format')
-if len(generated) == 0:
+print('\nProcessed ' + str(generated) + ' font files that match and have compatible .bdf format')
+if generated == 0:
     print('None! (check settings and errors, try changing debug to True)')
     exit()
-list = list(generated.keys())
-list.sort(key=height)
-total = 0
-for font in list:
-    if debug:
-        print(str(generated[font][0]) + 'px : ' + font)
-    for file in generated[font][1:]:
-        if debug:
-            print('    ' + file)
-        total += 1
-print('\nProcessed ' + str(len(generated)) + ' font files into ' + str(total) +  ' variants.')

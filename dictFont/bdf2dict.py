@@ -60,7 +60,6 @@ font_below = int(font.props['font_descent'])
 
 # Defaults
 matches = 0
-fixed_width = True
 
 # glyph line limits
 first = {}
@@ -98,10 +97,6 @@ for fchar in font.glyphs.keys():
     glyph_bit_width = int(g.meta['dwx0'])
     glyph_box_width = int(g.meta['bbw'])
     glyph_box_off_x = int(g.meta['bbxoff'])
-    # check if we have a variable width font
-    # TODO: do this test later by looking at widths..
-    if glyph_box_width != font_box_width:
-        fixed_width = False
     # define the width of glyph.
     if glyph_box_width < glyph_bit_width:
         wide = glyph_bit_width
@@ -171,9 +166,12 @@ if matches == 0:
 # Scan the matched glyphs to find true top and height of charset
 font_first = font_baseline
 font_last = 0
+fixed_width = True
 for fchar in glyph_dict.keys():
     font_first = min(font_first, first[fchar])
     font_last = max(font_last, last[fchar])
+    if glyph_px[fchar] != glyph_widest:
+        fixed_width = False
 font_height = font_last - font_first + 1
 
 # Remove all empty lines from top and bottom of glyph
@@ -201,8 +199,8 @@ print('Declared: family: {}'.format(font_family))
 print('Declared: weight: {}'.format(font_weight))
 print('Declared: size: {}'.format(font_size))
 print('Matching: {}'.format(matches))
-print('- Height: {} (first: {}, last {})'.format(font_height, font_first, font_last))
-print('- Max width: {}'.format(glyph_widest))
+print('Height: {}'.format(font_height))
+print('Max width: {}'.format(glyph_widest))
 print('Fixed width: {}'.format(fixed_width))
 
 if debug:
@@ -216,7 +214,6 @@ if not True:
 print('===============================================')
 # add preamble, static methods
 print('\n{}'.format(glyph_dict_string))
-print('Length: {}'.format(len(glyph_dict_string)))
 
 if fixed_width:
     pass
