@@ -8,8 +8,8 @@ import sys
     surprisingly badly documented for one of my scripts.. sorry.
     - it is 'documented in code', I suppose.
 '''
-sourceDir = 'source-fonts'
-outDir = 'testing'
+sourceDir = 'bdf-sources'
+outDir = '.'
 prefix = 'dictFont_'
 # provide debug argument to see the return from bdfToDict runs
 debug = sys.argv[1] if len(sys.argv) > 1 else False
