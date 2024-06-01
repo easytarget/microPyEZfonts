@@ -8,50 +8,26 @@ import sys
     surprisingly badly documented for one of my scripts.. sorry.
     - it is 'documented in code', I suppose.
 '''
-sourceDir = '../u8g2/tools/font/bdf'
-outDir = '.'
+sourceDir = 'source-fonts'
+outDir = 'testing'
 prefix = 'dictFont_'
 # provide debug argument to see the return from bdfToDict runs
 debug = sys.argv[1] if len(sys.argv) > 1 else False
 
-#sources = os.listdir(sourceDir)
-sources = os.listdir(sourceDir)[11:64] # good for test and debug
+sources = os.listdir(sourceDir)
+#sources = os.listdir(sourceDir)[11:64] # good for test and debug
 
 charsets = {
             't':bytes([32] + [43] + [45] + [46] + list(range(48, 59))),
             'n':bytes([32] + [37] + list(range(40, 59)) + [176]),
             'u':bytes(list(range(32, 96))),
             'r':bytes(list(range(32, 127))),
+            'x':bytes(list(range(160, 256))),
             'e':bytes(list(range(32, 127)) + list(range(160, 256))),
             }
 '''
 '''
 
-includeList = [
-                '^cour',
-                '^helv',
-                '^ncen',
-                '^px',
-                '^tim',
-                '^font_tiny',
-                '^tom-thumb',
-                '^spleen',
-                '^symb',
-                '^u8g2',
-                '^u8x8',
-                '^u8glib',
-                '^emoticons',
-                '^battery',
-                '^freedoom',
-                '^7Segments',
-                '^7_Seg',
-                '^unifont$',
-                '^\\d+x\\d+$',  # X11 fonts
-                '^micro$`',
-                '^cursor$',
-               ]
-
-ignoredFontFiles = []
 badFontFiles = []
 generated = 0
 
@@ -60,7 +36,7 @@ def doFont(base, cset):
     charset = outDir + '/' + cset + '-char.set'
     infile = sourceDir + '/' + base + '.bdf'
     outname = prefix + base.replace('-','_') + '_' + cset
-    cmd = 'python bdf2dict.py ' + infile + ' ' + charset
+    cmd = 'python bdf2dict.py ' + infile + ' ' + charset + ' True'
     if debug:
         cmd += ' True'
     run = subprocess.run(cmd, shell=True, capture_output=True)
@@ -73,7 +49,7 @@ def doFont(base, cset):
     response = run.stdout.decode('latin-1')
     files = response.split('===============================================\n')
     if len(files) != 2:
-        print('{} - Bad response from bdf2py'.format(cset))
+        #print('{} - Bad response from bdf2py'.format(cset))
         return True
     fontheight = 0
     for line in files[0].split('\n'):
@@ -84,13 +60,6 @@ def doFont(base, cset):
         return True
     packageInfo(base, infile, outname, fontheight, files)
     return True
-
-def includeFont(name):
-    # looks 'name' up against a list of allowed font patterns, return True if OK
-    for fam in includeList:
-        if re.match(fam,name):
-            return True
-    return False
 
 def packageInfo(base, infile, outfile, fontheight, files):
     global generated
@@ -162,9 +131,6 @@ for file in sources:
     if file[-4:] != '.bdf':
         print('Not BDF:',file)
     baseName = file[:-4]
-    if not includeFont(baseName):
-        ignoredFontFiles.append(str(file))
-        continue
     print(file,end=':')
     for chrs in charsets.keys():
         print(' ' + chrs, end='')

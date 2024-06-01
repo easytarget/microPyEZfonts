@@ -13,13 +13,10 @@ if len(argv) < 3:
 
 font_file = argv[1]
 charset = argv[2]
-# You can add 'True' as a extra argument to turn debug on
-debug = argv[3] if len(argv) > 3 else False
-# You can add 'True' as a extra argument to turn debug on
-show_glyph = argv[4] if len(argv) > 4 else False
-
-if debug:
-    print('Parsing: {} with charset {}'.format(font_file, charset))
+# You can add 'True' as a extra argument to turn glyph output on
+show_glyph = argv[3] if len(argv) > 3 else False
+# You can add another 'True' to turn debug on
+debug = argv[4] if len(argv) > 4 else False
 
 # extract font file name
 name = Path(font_file).stem
@@ -30,6 +27,7 @@ with open(charset,'rb') as setfile:
 
 # import font
 font = Font(argv[1])
+print('\nProcessing: {} with charset {}\n'.format(font_file, charset))
 if 'fontname' not in font.headers.keys():
     print('{}: font has no headers, skipping'.format(argv[1]))
     exit(1)
@@ -150,26 +148,27 @@ for fchar in font.glyphs.keys():
             first[fchar] = min(first[fchar], line)
             last[fchar] = max(last[fchar], line)
         # dump the glyph data
-        glyph_map += '{}{}{:<2d} {} {} {}\n'.format(
+        glyph_map += '{}{}{:<2d} {} {:X}\n'.format(
                         line_string,
                         ' ' * xbits,
                         line,
                         vnote,
-                        bit_string,
                         dict_entry)
     if last[fchar] == 0:
         # empty char (eg space), set to a single entry @ baseline
         last[fchar] = first[fchar] = font_baseline
     if show_glyph:
         print('Char: {} ({})'.format(fchar, glyph_name))
+        if debug:
+            print(g.meta)
         print(glyph_map,end='')
         high = last[fchar] - first[fchar] + 1
         print('Width: {}, Lines: {}, first line: {}, last line: {}\n'.format(wide, high, first[fchar], last[fchar]))
 
-# No matching characters, exit.
+# No matching characters, soft exit.
 if matches == 0:
     print('No matches for this charset, skipping')
-    exit(1)
+    exit(0)
 
 # Scan the matched glyphs to find true top and height of charset
 font_first = font_baseline
