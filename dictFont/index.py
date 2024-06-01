@@ -6,7 +6,7 @@ import re
     - it is 'documented in code', I suppose.
 '''
 sourceDir = '.'
-prefix = 'dictFont_'
+prefix = 'ezPYfont_'
 #prefix = 'mPyEZfont_u8g2_'
 fonts = {}
 heights = []

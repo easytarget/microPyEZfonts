@@ -10,7 +10,7 @@ import sys
 '''
 sourceDir = 'bdf-sources'
 outDir = '.'
-prefix = 'dictFont_'
+prefix = 'ezPYfont_'
 # provide debug argument to see the return from bdfToDict runs
 debug = sys.argv[1] if len(sys.argv) > 1 else False
 
@@ -36,7 +36,7 @@ def doFont(base, cset):
     charset = outDir + '/' + cset + '-char.set'
     infile = sourceDir + '/' + base + '.bdf'
     outname = prefix + base.replace('-','_') + '_' + cset
-    cmd = 'python bdf2dict.py ' + infile + ' ' + charset + ' True'
+    cmd = 'python bdf2dict.py ' + infile + ' ' + charset
     if debug:
         cmd += ' True'
     run = subprocess.run(cmd, shell=True, capture_output=True)

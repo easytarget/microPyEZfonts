@@ -196,9 +196,9 @@ for fchar in glyph_dict.keys():
         line_string += '{:x},'.format(l)
     glyph_dict_string += ' {}:({},[{}]'.format(fchar, glyph_top[fchar], line_string[:-1])
     if fixed_width:
-        glyph_dict_string += ')\n'
+        glyph_dict_string += '),\n'
     else:
-        glyph_dict_string += ',{})\n'.format(glyph_px[fchar])
+        glyph_dict_string += ',{}),\n'.format(glyph_px[fchar])
 glyph_dict_string += '}'
 
 # output font summary
@@ -223,11 +223,37 @@ if not True:
 # Generate the Output:
 print('===============================================')
 # add preamble, static methods
+def method(n,v):
+    print('def {}:\n    return {}\n'.format(n,v))
+
+prelude = ("""'''
+This is a python font definition file.
+ it returns a HMSB buffer for the requested character
+ plus width and height information.
+ Static methods provide other information.
+'''""")
+print(prelude)
+
+method('height', font_height)
+method('max_width', glyph_widest)
+method('baseline', font_baseline)
+
 print('{}'.format(glyph_dict_string))
 
 if fixed_width:
-    pass
-    # add the fixed-width-writer
+    func = '''
+def glyph(char):
+    if char not in glyph_dict.keys():
+        return None
+    bitmap = char
+    return bitmap, {}, {}
+'''.format(font_height, glyph_widest)
 else:
-    pass
-    # add the variable-width-writer
+    func = '''
+def glyph(char):
+    if char not in glyph_dict.keys():
+        return None
+    bitmap = char
+    return bitmap, glyph_dict[char][2], {}
+'''.format(glyph_widest)
+print(func)
