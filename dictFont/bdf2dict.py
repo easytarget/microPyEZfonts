@@ -10,7 +10,7 @@ except ImportError:
 
 if len(argv) < 3:
     print('Two arguments, the font and charset file paths, are required')
-    exit()
+    exit(1)
 
 font_file = argv[1]
 charset = argv[2]
@@ -170,7 +170,7 @@ for fchar in font.glyphs.keys():
 # No matching characters, soft exit.
 if matches == 0:
     print('No matches for this charset, skipping')
-    exit(0)
+    exit(1)
 
 # Scan the matched glyphs to find true top and height of charset
 font_first = font_baseline

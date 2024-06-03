@@ -15,7 +15,7 @@ prefix = 'ezPYfont_'
 debug = sys.argv[1] if len(sys.argv) > 1 else False
 
 sources = os.listdir(sourceDir)
-#sources = os.listdir(sourceDir)[11:64] # good for test and debug
+#sources = os.listdir(sourceDir)[11:22] # good for test and debug
 
 charsets = {
             't':bytes([32] + [43] + [45] + [46] + list(range(48, 59))),
@@ -43,7 +43,8 @@ def doFont(base, cset):
     if debug:
         print('\nsubprocess return::\n', run)
     if run.returncode != 0:
-        print('\nFail: ',run.stdout.decode('latin-1').strip(), end="")
+        if debug:
+            print('\nFail: ',run.stdout.decode('latin-1').strip(), end="")
         return True  # a softfail
 
     file = run.stdout.decode('latin-1')
@@ -58,6 +59,7 @@ def doFont(base, cset):
     if fontheight == 0:
         print('{} - Bad font from bdf2py'.format(cset))
         return True
+    print(' ' + ch, end='')
     packageInfo(base, infile, outname, fontheight, file)
     return True
 
@@ -128,11 +130,11 @@ print('Font File: charsets')
 for file in sources:
     if file[-4:] != '.bdf':
         print('Not BDF:',file)
+        continue
     baseName = file[:-4]
     print(file,end=':')
-    for chrs in charsets.keys():
-        print(' ' + chrs, end='')
-        if not doFont(baseName, chrs):
+    for ch in charsets.keys():
+        if not doFont(baseName, ch):
             # HardFail here == bad .bdf file/format, skip to next font
             break
     print()
