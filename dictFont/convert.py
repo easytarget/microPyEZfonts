@@ -46,22 +46,23 @@ def doFont(base, cset):
         print('\nFail: ',run.stdout.decode('latin-1').strip(), end="")
         return True  # a softfail
 
-    response = run.stdout.decode('latin-1')
-    files = response.split('===============================================\n')
-    if len(files) != 2:
-        #print('{} - Bad response from bdf2py'.format(cset))
-        return True
+    file = run.stdout.decode('latin-1')
     fontheight = 0
-    for line in files[0].split('\n'):
-        if re.match('^Height: ',line):
-            fontheight = int(line.split(' ')[1])
+    nextline = False
+    for line in file.split('\n'):
+        if nextline:
+            print(line.split('return'))
+            fontheight = int(line.split('return')[1])
+            break
+        if re.match('^def height',line):
+            nextline = True
     if fontheight == 0:
-        print('{} - Bad summary response from bdf2py'.format(cset))
+        print('{} - Bad font from bdf2py'.format(cset))
         return True
-    packageInfo(base, infile, outname, fontheight, files)
+    packageInfo(base, infile, outname, fontheight, file)
     return True
 
-def packageInfo(base, infile, outfile, fontheight, files):
+def packageInfo(base, infile, outfile, fontheight, file):
     global generated
     generated += 1
     copyrightTxt = []
@@ -81,8 +82,6 @@ def packageInfo(base, infile, outfile, fontheight, files):
         os.remove(outSubDir + '/' + outfile)
     if debug:
         print('PostProcessing:', outfile)
-    with open(outSubDir + '/' + outfile + '.info','w') as i:
-        i.write(files[0])
     with open(outSubDir + '/' + outfile + '.py','w') as f:
         f.write("'''\n")
         f.write('    ' + outfile + ' : generated as part of the microPyEZfonts repository\n')
@@ -106,7 +105,7 @@ def packageInfo(base, infile, outfile, fontheight, files):
         else:
             f.write('    None found\n')
         f.write("'''\n")
-        for line in files[1]:
+        for line in file:
             f.write(line)
 
 '''
