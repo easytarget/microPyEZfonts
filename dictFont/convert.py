@@ -51,7 +51,6 @@ def doFont(base, cset):
     nextline = False
     for line in file.split('\n'):
         if nextline:
-            print(line.split('return'))
             fontheight = int(line.split('return')[1])
             break
         if re.match('^def height',line):
