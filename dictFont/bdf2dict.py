@@ -252,12 +252,7 @@ method('min_ch', list(glyph_dict.keys())[0])
 method('max_ch', list(glyph_dict.keys())[-1])
 
 # This is the glyph data
-mpy = True
-if mpy:
-    print('_g = const({})'.format(glyph_dict_string))
-    # `const = lambda x: x` makes this work in CPython
-else:
-    print('_g = {}'.format(glyph_dict_string))
+print('_g = {}'.format(glyph_dict_string))
 
 # Now the get_ch() method:
 func = '''
