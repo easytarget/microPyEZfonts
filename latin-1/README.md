@@ -20,20 +20,28 @@ If using the X11 fonts (COUR, HELV, NCEN, TIM, SYMB) you should include the Adob
 # Collections (character sets)
 
 The character sets are:
+
 t : ``` +-.0123456789:```
+
 n : ``` %()*+,-./0123456789:°```
+
 u : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_```
-r : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_```abcdefghijklmnopqrstuvwxyz{|}~```
+
+r : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~```
+
 s : ```¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ```
+
 e : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ```
+
 Nb: All charsets except `e` begin with 0x32, the space character
+
 These can loosely be described as:
-* **t**ime (numbers and seperators for clocks and timers)
-* **n**umeric (numbers, seperators and related symbols for displaying values)
-* **u**uppercase (ascii charset up to `0x5F`, lower memory, useful for symbols etc)
-* **r**eadable (ascii charset up to `0x7F`)
-* **s**upplemental (characters from `0xA0` to `0xFF`)
-* **e**verything (all the *printable* latin-1 chars in the font up to `0xFF`)
+* **T**ime (numbers and seperators for clocks and timers)
+* **N**umeric (numbers, seperators and related symbols for displaying values)
+* **U**uppercase (ascii charset up to `0x5F`, lower memory, useful for symbols etc)
+* **R**eadable (ascii charset up to `0x7F`)
+* **S**upplemental (characters from `0xA0` to `0xFF`)
+* **E**verything (all the *printable* latin-1 chars in the font up to `0xFF`)
 
 Pay attention to the file sizes; the full sets (especially the '`e`' set) can get large. Font size is a major factor too.
 
