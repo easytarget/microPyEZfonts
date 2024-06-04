@@ -7,7 +7,7 @@ They will work with **`EZ FrameBuffer Font Writer`** (see [below](#easy-font-use
 
 And will also work with Peter Hinches comprehensive [writer](https://github.com/peterhinch/micropython-font-to-py/tree/master/writer) class.
 
-The fonts presented here were processed using the tools provided in Peter Hinches excellent [`font-to-py`](https://github.com/peterhinch/micropython-font-to-py) repo using font data sourced from the Arduino/C++ [`u8g2`](https://github.com/olikraus/u8g2) project.
+The fonts presented here were processed using the tools and font sources provided in the [`tooling`](tooling) folder.
 
 ## Status
 The fonts and libraries have been tested on a `ssd1306` OLED display, and a `st7567` LCD module, both using I2C.
@@ -18,9 +18,9 @@ The above is showing demo programs from the [examples](examples); with various f
 
 -----------------
 # Fonts
-Font files are in the [`mpy-fonts`](mpy-fonts) folder
+Font files are in the [`latin-1`](latin-1) folder
 * Currently there are 92 font/size combinations available
-* Each font comes in 4 increasing sets of characters (eg 'numbers' packs are smaller than 'latin-1' ones) 
+* Each font comes in 4 increasing sets of characters (eg 'numbers' packs are smaller than 'full' ones)
 * See the `README` there for a description, a table of all the fonts and heights, and the conversion tool itself.
 
 This is a *limited* subset of the `U8G2` fonts, many of the fonts available there are in an older version of `.bdf` font file format that is not supported by the converter tool. Others have unclear or burdonsome licence restrictions :innocent:

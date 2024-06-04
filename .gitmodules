@@ -5,5 +5,5 @@
 	path = micropython-font-to-py
 	url = https://github.com/peterhinch/micropython-font-to-py.git
 [submodule "dictFont/bdfparser"]
-	path = dictFont/bdfparser
+	path = tooling/bdfparser
 	url = https://github.com/easytarget/bdfparser.git
