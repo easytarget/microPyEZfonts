@@ -6,7 +6,7 @@ import re
     - it is 'documented in code', I suppose.
 '''
 sourceDir = '.'
-prefix = 'ezPYfont_'
+prefix = 'ezFBfont_'
 #prefix = 'mPyEZfont_u8g2_'
 fonts = {}
 heights = []
@@ -14,7 +14,7 @@ outmap = {}
 
 charsets = {
             'e':'everything',
-            'x':'extended',
+            's':'supplemental',
             'r':'readable',
             'u':'uppercase',
             'n':'numeric',
