@@ -9,8 +9,8 @@ import sys
     - it is 'documented in code', I suppose.
 '''
 sourceDir = 'bdf-sources'
-outDir = '.'
-prefix = 'ezPYfont_'
+outDir = 'mpy'
+prefix = 'ezFBfont_'
 # provide debug argument to see the return from bdfToDict runs
 debug = sys.argv[1] if len(sys.argv) > 1 else False
 
