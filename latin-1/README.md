@@ -21,19 +21,19 @@ If using the X11 fonts (COUR, HELV, NCEN, TIM, SYMB) you should include the Adob
 
 The character sets are:
 
-* **`t`** : ``` +-.0123456789:```
-* **`n`** : ``` %()*+,-./0123456789:°```
-* **`u`** : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_```
-* **`r`** : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~```
-* **`s`** : ```¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ```
-* **`e`** : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ```
+* **t** : ``` +-.0123456789:```
+* **n** : ``` %()*+,-./0123456789:°```
+* **u** : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_```
+* **r** : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~```
+* **s** : ```¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ```
+* **e** : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ```
 
 Nb: All charsets except `e` begin with 0x32, the space character
 
 These can loosely be described as:
 * **T**ime (numbers and seperators for clocks and timers)
 * **N**umeric (numbers, seperators and related symbols for displaying values)
-* **U**uppercase (ascii charset up to `0x5F`, lower memory, useful for symbols etc)
+* **U**ppercase (ascii charset up to `0x5F`, lower memory, useful for symbols etc)
 * **R**eadable (ascii charset up to `0x7F`)
 * **S**upplemental (characters from `0xA0` to `0xFF`)
 * **E**verything (all the *printable* latin-1 chars in the font up to `0xFF`)
@@ -48,7 +48,7 @@ For usage see the `ezFBfont.py` documentation in the main `README`.
 # The list
 ----------------------
 
-Fonts as of May 14, 2024, organised by height.
+Fonts as of Jun 4, 2024, organised by height.
 ```
   1px:
     spleen_5x8............. Spleen small display (supplemental)
