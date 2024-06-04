@@ -1,9 +1,0 @@
-[submodule "u8g2"]
-	path = u8g2
-	url = https://github.com/olikraus/u8g2.git
-[submodule "micropython-font-to-py"]
-	path = micropython-font-to-py
-	url = https://github.com/peterhinch/micropython-font-to-py.git
-[submodule "dictFont/bdfparser"]
-	path = tooling/bdfparser
-	url = https://github.com/easytarget/bdfparser.git
