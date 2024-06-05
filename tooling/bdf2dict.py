@@ -1,3 +1,19 @@
+'''
+    bsd2dict, takes two arguments; a .bdf font file and a binary file with a UTF-8
+    encoded list of characters in it.
+
+    It returns a text output with the corresponding micropython font class.
+
+    There are two optional arguments; appending 'True' will ialso return a
+    human-readable summary and ascii-art glyph maps for the font pack.
+    Adding a second 'True' enables debug; displaying a lot more info, including
+    raw data structures from the font, and extended data in the glyph maps.
+
+    This is a /terrible/ script as far as structure goes.. my apologies.
+    Basically it starts at the top and runs to the end, no real use of functions,
+    classes or python niceities. It's also wasteful of memory and cpu cycles..
+    However, it gets the job done well enough to be useful ;-)
+'''
 from datetime import datetime
 from sys import argv
 from pathlib import Path
@@ -5,7 +21,8 @@ from pathlib import Path
 try:
     from bdfparser import Font
 except ImportError:
-    print('bdfparser (patched) needs to be installed; hint: use a venv.')
+    print('"bdfparser" needs to be installed! exiting.\n
+            (hint: Use a venv then "pip install bdfparser", see README.md for more)')
     exit()
 
 if len(argv) < 3:
