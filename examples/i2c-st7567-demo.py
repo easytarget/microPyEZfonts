@@ -7,10 +7,10 @@ from gc import collect, mem_free
 
 # fonts
 path.append('fonts')
-import mPyEZfont_u8g2_spleen_12x24_r
-import mPyEZfont_u8g2_spleen_16x32_n
-import mPyEZfont_u8g2_6x12_r
-import mPyEZfont_u8g2_symb18_e
+import ezFBfont_spleen_12x24_r
+import ezFBfont_spleen_16x32_n
+import ezFBfont_6x12_r
+import ezFBfont_symb18_e
 
 '''
 A demo of using ezMPfont to splat a load of fonts onto
@@ -43,10 +43,10 @@ d0 = ST7567(128, 64, i2c0, addr=0x3f)
 d0.set_contrast(31)  # as needed (max 63)
 
 # Font Init
-font1 = ezFBfont(d0, mPyEZfont_u8g2_spleen_12x24_r, tkey=0, verbose=True)
-font2 = ezFBfont(d0, mPyEZfont_u8g2_spleen_16x32_n, verbose=True)
-font3 = ezFBfont(d0, mPyEZfont_u8g2_6x12_r, verbose=True)
-font4 = ezFBfont(d0, mPyEZfont_u8g2_symb18_e, verbose=True)
+font1 = ezFBfont(d0, ezFBfont_spleen_12x24_r, tkey=0, verbose=True)
+font2 = ezFBfont(d0, ezFBfont_spleen_16x32_n, verbose=True)
+font3 = ezFBfont(d0, ezFBfont_6x12_r, verbose=True)
+font4 = ezFBfont(d0, ezFBfont_symb18_e, verbose=True)
 
 # multiline demo stuff
 font3.set_default(halign='center', valign='baseline')

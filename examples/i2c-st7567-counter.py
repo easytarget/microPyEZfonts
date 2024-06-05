@@ -6,9 +6,9 @@ from time import sleep_ms,ticks_ms
 
 # fonts
 path.append('fonts')
-import mPyEZfont_u8g2_spleen_12x24_r
-import mPyEZfont_u8g2_spleen_16x32_n
-import mPyEZfont_u8g2_helvR14_r
+import ezFBfont_spleen_12x24_r
+import ezFBfont_spleen_16x32_n
+import ezFBfont_helvR14_r
 
 '''
 A demo of using ezMPfont to do a simple uptime counter.
@@ -38,9 +38,9 @@ d0 = ST7567(128, 64, i2c0, addr=0x3f)
 d0.set_contrast(31)  # as needed (max 63)
 
 # Font Init
-heading = ezFBfont(d0, mPyEZfont_u8g2_helvR14_r)
-minutes = ezFBfont(d0, mPyEZfont_u8g2_spleen_16x32_n, halign='right', valign='baseline')
-seconds = ezFBfont(d0, mPyEZfont_u8g2_spleen_12x24_r, valign='baseline')
+heading = ezFBfont(d0, ezFBfont_helvR14_r)
+minutes = ezFBfont(d0, ezFBfont_spleen_16x32_n, halign='right', valign='baseline')
+seconds = ezFBfont(d0, ezFBfont_spleen_12x24_r, valign='baseline')
 
 # frame
 d0.rect(0, 24, 127, 38, 1)
