@@ -44,11 +44,11 @@ with open(charset,'rb') as setfile:
 
 # import font
 font = Font(argv[1])
-if debug or show_glyph:
-    print('\nProcessing: {} with charset {}\n'.format(font_file, charset))
 if 'fontname' not in font.headers.keys():
-    print('{}: font has no headers, skipping'.format(argv[1]))
+    stderr.write('ERROR: {}: font has no headers, nothing to output\n'.format(argv[1]))
     exit(1)
+if debug:
+    print('\nProcessing: {} with charset {}\n'.format(font_file, charset))
 
 # Gather basic font data
 font_name = font.headers['fontname']
@@ -84,6 +84,7 @@ last = {}
 # glyph data
 glyph_dict = {}
 glyph_px = {}
+glyph_name = {}
 glyph_widest = 0
 
 # Import and format glyph data
@@ -108,7 +109,7 @@ for fchar in font.glyphs.keys():
 
     # add to the dict
     glyph_dict[fchar] = ''
-    glyph_name = g.meta['glyphname']
+    glyph_name[fchar] = g.meta['glyphname']
     # Deep debug..
     #print(g.draw(),end='\n\n')
 
@@ -176,15 +177,13 @@ for fchar in font.glyphs.keys():
     if last[fchar] == 0:
         # empty char (eg space): set to a single entry @ baseline
         last[fchar] = first[fchar] = font_baseline
-    if show_glyph:
-        print('Char: {} ({})'.format(fchar, glyph_name))
-        if debug:
-            print(g.meta)
+    if debug:
+        print('Char: {} ({})'.format(fchar, glyph_name[fchar]))
+        print(g.meta)
         print(glyph_map,end='')
         high = last[fchar] - first[fchar] + 1
         print('Width: {}, Lines: {}, first line: {}, last line: {}'.format(wide, high, first[fchar], last[fchar]))
-        if debug:
-            print('dict entry: {} ({} chars)'.format(glyph_dict[fchar], len(glyph_dict[fchar])))
+        print('dict entry: {} ({} chars)'.format(glyph_dict[fchar], len(glyph_dict[fchar])))
         print()
 
 # No matching characters, exit.
@@ -235,7 +234,19 @@ if show_glyph or debug:
     if debug:
         print('Headers:\n', font.headers)
         print('Props:\n', font.props)
-    print('===============================================')
+    else:
+        # A human-readable ascii-art glyph map
+        for fchar in glyph_dict.keys():
+            wide = glyph_widest if fixed_width else glyph_px[fchar]
+            hwide = ((glyph_px[fchar] - 1) // 8 + 1) * 2
+            print('\nChar: {} ({}), width: {}'.format(fchar, glyph_name[fchar], wide))
+            for l in range(0, len(glyph_dict[fchar]), hwide):
+                bs = '{:0{}b}'.format(int(glyph_dict[fchar][l:l+hwide], 16), hwide * 4)
+                bt = bs.replace('0',' ').replace('1','#')[0:wide]
+                bl = '_' if l  == ((font_baseline - 1) * hwide)  else '.'
+                print('  {1}{0}{1}'.format(bt, bl))
+
+    print('\n===============================================')
 
 # Generate the Output:
 
