@@ -15,14 +15,13 @@
     However, it gets the job done well enough to be useful ;-)
 '''
 from datetime import datetime
-from sys import argv
+from sys import argv, stderr
 from pathlib import Path
 
 try:
     from bdfparser import Font
 except ImportError:
-    print('"bdfparser" needs to be installed! exiting.\n
-            (hint: Use a venv then "pip install bdfparser", see README.md for more)')
+    print('"bdfparser" needs to be installed! exiting.\n(hint: Use a venv then "pip install bdfparser", see README.md for more)')
     exit()
 
 if len(argv) < 3:
@@ -130,7 +129,7 @@ for fchar in font.glyphs.keys():
     start = -font_box_off_x + glyph_box_off_x - cent
     end = start + wide
     if start < 0:
-        print('INFO: Bad glyph box for char# {}'.format(fchar))
+        stderr.write('WARNING: Bad glyph box for char# {}\n'.format(fchar))
         start = 0
 
     # store width in dict, and note byte width and max width
