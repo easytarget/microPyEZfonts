@@ -30,5 +30,5 @@ for char in range(font.min_ch(), font.max_ch() + 1):
         line = ""
         for byte in range(0, bwidth):
             line += '{0:08b}'.format(buf[(index * bwidth) + byte])
-        pix(line[0:char_width], '-' if index == font.baseline() else ':')
+        pix(line[0:char_width], '-' if index == font.baseline() - 1 else ':')
     print()
