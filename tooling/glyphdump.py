@@ -1,11 +1,28 @@
-# a demo
+'''
+    Dump out a (micro) python font as ascii-art glyphs.
+    Takes a single argument, the name of the font file.
+'''
+import importlib
 from sys import argv
-print(argv)
-import font as font
+from os import path
 
-print('Name: {}'.format(font.__name__))
+# Do some minimal checking to catch obvious errors
+if len(argv) != 2:
+    print(argv[0], ': please supply a path to one font file')
+    exit()
+if argv[1][-3:] != '.py':
+    print(argv[0], ': file must be a python font file')
+    exit()
+if not path.isfile(argv[1]):
+    print(argv[0], ': file not found:', argv[1])
+    exit()
+
+# import as 'font'
+font = importlib.import_module(argv[1][:-3], package=None)
+
+print('name: {}, file: {}'.format(font.__name__, argv[1]))
 print('height: {}px, baseline: {}, max width: {}px'.format(font.height(), font.baseline(), font.max_width()))
-print('chars from: {} to {}'.format(font.min_ch(), font.max_ch()))
+print('chars from: {} to {}\n'.format(font.min_ch(), font.max_ch()))
 
 def pix(bitchars,frame):
     print(' ' + frame, end='')
