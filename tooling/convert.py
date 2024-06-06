@@ -2,31 +2,35 @@ import os
 import subprocess
 import re
 import sys
+import importlib
 
 '''
     converter
     surprisingly badly documented for one of my scripts.. sorry.
     - it is 'documented in code', I suppose.
 '''
-sourceDir = 'bdf-sources'
-outDir = '../latin-1'
-prefix = 'ezFBfont_'
+sourceDir = '../tooling/bdf-sources'
+outDir = '.'
+prefix = 'ezFBfont'
+
 # provide debug argument to see the return from bdfToDict runs
 debug = sys.argv[1] if len(sys.argv) > 1 else False
 
-sources = os.listdir(sourceDir)
-#sources = os.listdir(sourceDir)[11:22] # good for test and debug
+# import sets definition
+if not os.path.isfile('sets.py'):
+    print('This script must be run in a folder that contains "sets.py"')
+    exit()
+sys.path.append(os.getcwd())
+sets = importlib.import_module('sets', package=None)
 
-charsets = {
-            't':bytes([32] + [43] + [45] + [46] + list(range(48, 59))),
-            'n':bytes([32] + [37] + list(range(40, 59)) + [176]),
-            'u':bytes(list(range(32, 96))),
-            'r':bytes(list(range(32, 127))),
-            's':bytes(list(range(160, 256))),
-            'e':bytes(list(range(32, 127)) + list(range(160, 256))),
-            }
-'''
-'''
+tooldir = os.path.dirname(os.path.realpath(__file__))
+if not os.path.isfile(tooldir + '/bdf2dict.py'):
+    print('Cannot find "bdf2dict.py" in:', tooldir)
+    exit()
+
+sources = os.listdir(sourceDir)
+#sources = os.listdir(sourceDir)[0:10] # good for test and debug
+
 
 badFontFiles = []
 generated = 0
@@ -35,8 +39,7 @@ generated = 0
 def doFont(base, cset):
     charset = outDir + '/' + cset + '-char.set'
     infile = sourceDir + '/' + base + '.bdf'
-    outname = prefix + base.replace('-','_') + '_' + cset
-    cmd = 'python bdf2dict.py ' + infile + ' ' + charset
+    cmd = 'python {}/bdf2dict.py {} {} True'.format(tooldir, infile, charset)
     if debug:
         cmd += ' True'
     run = subprocess.run(cmd, shell=True, capture_output=True)
@@ -47,23 +50,31 @@ def doFont(base, cset):
             print('\nFail: ',run.stdout.decode('latin-1').strip(), end="")
         return True  # a softfail
 
-    file = run.stdout.decode('latin-1')
-    fontheight = 0
-    nextline = False
-    for line in file.split('\n'):
-        if nextline:
-            fontheight = int(line.split('return')[1])
-            break
-        if re.match('^def height',line):
-            nextline = True
-    if fontheight == 0:
-        print('{} - Bad font from bdf2py'.format(cset))
+    response = run.stdout.decode('latin-1')
+    files = response.split('===============================================\n')
+    if len(files) != 2:
+        #print('{} - Bad response from bdf2py'.format(cset))
+        # Just skip... ignore fails here
         return True
-    print(' ' + ch, end='')
-    packageInfo(base, infile, outname, fontheight, file)
+    fontheight = 0
+    fontfamily = ''
+    for line in files[0].split('\n'):
+        if re.match('^Declared family:',line):
+            fam = line[16:].strip().replace(' ','-')
+            fam = 'generic' if fam == 'None' else fam
+            fontfamily = fam if len(fam) > 0 else 'generic'
+        if re.match('^Height',line):
+            fontheight = int(line.split(' ')[1])
+    if fontheight == 0:
+        print(files[0])
+        print(' {} (bad font return)'.format(cset), end='')
+        return True
+    print(' ' + cset, end='')
+    outname = '{}_{:02d}_{}_{}'.format(prefix, fontheight, base.replace('-','_'), cset)
+    packageInfo(base, infile, outname, cset, fontheight, fontfamily, files)
     return True
 
-def packageInfo(base, infile, outfile, fontheight, file):
+def packageInfo(base, infile, outfile, cset, fontheight, fontfamily, files):
     global generated
     generated += 1
     copyrightTxt = []
@@ -76,13 +87,17 @@ def packageInfo(base, infile, outfile, fontheight, file):
                 commentTxt.append(line)
             if re.match('^ *COMMENT',line):
                 commentTxt.append(line)
-    outSubDir = outDir + '/' + str(fontheight)
+    outSubDir = '{}/{}/{}'.format(outDir, cset, fontfamily)
     os.makedirs(outSubDir, exist_ok=True)
+    outMapDir = '{}/maps'.format(outSubDir)
+    os.makedirs(outMapDir, exist_ok=True)
     if os.path.exists(outSubDir + '/' + outfile):
         # clean for overwrite
         os.remove(outSubDir + '/' + outfile)
     if debug:
         print('PostProcessing:', outfile)
+    with open(outMapDir + '/' + outfile + '.map','w') as i:
+        i.write(files[0])
     with open(outSubDir + '/' + outfile + '.py','w') as f:
         f.write("'''\n")
         f.write('    ' + outfile + ' : generated as part of the microPyEZfonts repository\n')
@@ -106,7 +121,7 @@ def packageInfo(base, infile, outfile, fontheight, file):
         else:
             f.write('    None found\n')
         f.write("'''\n")
-        for line in file:
+        for line in files[1]:
             f.write(line)
 
 '''
@@ -115,12 +130,13 @@ def packageInfo(base, infile, outfile, fontheight, file):
 os.makedirs(outDir,exist_ok=True)
 
 # (re)create our charset files:
-for s in charsets.keys():
-    if charsets[s] is None:
+for s in sets.charsets.keys():
+    if sets.charsets[s] is None:
         continue
     cfile = outDir + '/' + s + '-char.set'
-    with open(cfile,'wb') as f:
-        f.write(charsets[s])
+    with open(cfile,'w') as f:
+        for c in sets.charsets[s]:
+            f.write(chr(c))
 
 '''
     main loop
@@ -129,15 +145,17 @@ sources.sort()
 print('Font File: charsets')
 for file in sources:
     if file[-4:] != '.bdf':
-        print('Not BDF:',file)
+        #print('Not BDF:',file)
         continue
     baseName = file[:-4]
-    print(file,end=':')
-    for ch in charsets.keys():
-        if not doFont(baseName, ch):
-            # HardFail here == bad .bdf file/format, skip to next font
-            break
-    print()
+    for fo in sets.fonts:
+        if re.match(fo, baseName):
+            print(file,end=':')
+            for ch in sets.charsets.keys():
+                if not doFont(baseName, ch):
+                    # HardFail here == bad .bdf file/format, skip to next font
+                    break
+            print()
 
 '''
     Wrap up and summary
