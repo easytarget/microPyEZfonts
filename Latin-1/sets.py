@@ -20,11 +20,11 @@ fonts = [
         ]
 
 charsets = {
-        'time':bytes([32] + [43] + [45] + [46] + list(range(48, 59))),
-        'num':bytes([32] + [37] + list(range(40, 59)) + [176]),
-        'upper':bytes(list(range(32, 96))),
-        'ascii':bytes(list(range(32, 127))),
-        'supp':bytes(list(range(160, 256))),
-        'latin':bytes(list(range(32, 127)) + list(range(160, 256))),
-        'full':bytes(list(range(0, 256)))
+        'time':list([32, 43, 45, 46] + range(48, 59)),
+        'num':list([32, 37] + range(40, 59) + [176]),
+        'upper':list(range(32, 96)),
+        'ascii':list(range(32, 127)),
+        'supp':list(range(160, 256)),
+        'latin':list(range(32, 127) + range(160, 256)),
+        'full':list(range(0, 256))
         }

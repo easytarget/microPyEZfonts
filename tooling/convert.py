@@ -134,9 +134,9 @@ for s in sets.charsets.keys():
     if sets.charsets[s] is None:
         continue
     cfile = outDir + '/' + s + '-char.set'
-    with open(cfile,'w') as f:
+    with open(cfile,'wb') as f:
         for c in sets.charsets[s]:
-            f.write(chr(c))
+            f.write(chr(c).encode("utf-8", "replace"))
 
 '''
     main loop
