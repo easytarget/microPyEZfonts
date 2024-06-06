@@ -1,4 +1,4 @@
-# Latin-1 Font files
+# Symbol Font files
 
 This folder contains font files suitable for use with `ezFBfont` and Peter Hinches `writer` class.
 
@@ -8,7 +8,6 @@ They are organised by character set, font family and vertical size.
 * The 'height' of each font set is the *true height*; the height of the tallest character in that set.
 * This can vary from the height declared in the font name!
 * The same fonts may appear listed as different heights depending which character set is being provided.
-  * eg: numeric charsets are typically shorter than the full ascii charsets.
 
 There is a mixture of proportional width and monospaced fonts in the collection; the font name will typically note the size for monospaced fonts. The proportional (X11) fonts also mostly come in regular and bold weights.
 
@@ -23,24 +22,7 @@ If using the X11 fonts (COUR, HELV, NCEN, TIM, SYMB) you should include the Adob
 
 The character sets are:
 
-* **time** : ``` +-.0123456789:```
-* **num** : ``` %()*+,-./0123456789:°```
-* **upper** : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_```
-* **ascii** : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~```
-* **supp** : ```¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ```
-* **latin** : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ```
-* **full** : All chars from `0x00` to `0xFF`
-
-Nb: Most charsets begin with `0x32`, the space character.
-
-These can loosely be described as:
-* **Time** : numbers and seperators for clocks and timers.
-* **Num**eric : numbers, seperators and related symbols for displaying values.
-* **Upper**case : ascii charset up to `0x5f`, lower memory, useful for symbols etc.
-* **Ascii** : full ascii charset up to `0x7f`.
-* **Supp**lemental : characters from `0xa0` to `0xff`.
-* **Latin** : all the *printable* chars in the font up to `0xff`.
-* **Full** : every character in the font pack up to `0xff`, even if not *printable*
+###TBD
 
 Pay attention to the file sizes; the full sets (especially the '`latin`' set) can get large.
 

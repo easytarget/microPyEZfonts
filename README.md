@@ -18,12 +18,8 @@ The above is showing demo programs from the [examples](examples); with various f
 
 -----------------
 # Fonts
-Font files are in the [`latin-1`](latin-1) folder
-* Currently there are 92 font/size combinations available
-* Each font comes in 4 increasing sets of characters (eg 'numbers' packs are smaller than 'full' ones)
+Font files are in the [`Latin-1`](Latin-1), [`Unicode`](Unicode) and [`Symbols`](Symbols) folders
 * See the `README` there for a description, a table of all the fonts and heights, and the conversion tool itself.
-
-This is a *limited* subset of the `U8G2` fonts, many of the fonts available there are in an older version of `.bdf` font file format that is not supported by the converter tool. Others have unclear or burdonsome licence restrictions :innocent:
 
 The selection provided here covers the default U8G2 fonts, a lot of common X11 fonts and the 'spleen' small font set. There are some symbol and icon fonts too.
 
@@ -32,7 +28,7 @@ They are all derived from freely redistributable sources and retain their origin
 ## Drivers
 The font writer should work with any display that has a MicroPython framebuffer compatible driver.
 
-A selection of 'good' drivers is provided,along with some documentation on using your own driver, in the [`drivers`](drivers) folder.
+A small selection of 'good' drivers is provided, along with some documentation on using your own driver, in the [`drivers`](drivers) folder. If you find a driver that works and is not in my list please let me know by submitting a issue.
 
 ## Alternatives
 If you are implementing a full 'GUI', or have a color display, especially a large(ish) one, then you should consider the alternatives below. They support large displays, full color displays, have GUI elements, and are faster.
