@@ -23,5 +23,3 @@ charsets = {
     'extended':list(range(0x100, 0xfff)),
     'all':list(range(0x00, 0xfff)),
 }
-
-
