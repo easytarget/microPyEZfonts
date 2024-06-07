@@ -2,7 +2,7 @@
 
 This folder contains font files suitable for use with `ezFBfont` and Peter Hinches `writer` class.
 
-They are organised by character set, font family and vertical size.
+They are organised by font family, character set and vertical size.
 * See below for a discussion of the available character sets.
 * The font family is that declared in the source font file, or `Generic` if unknown.
 * The 'height' of each font set is the *true height*; the height of the tallest character in that set.
@@ -27,7 +27,7 @@ The symbol character sets are organised into logical blocks based on the ordinal
 * **mid** : `0x80` through `0xc0`
 * **upper** : `0xc0` through `0x100`
 * **extended** : `0x100` through `0xfff`
-* **all** : `0x00` through `0xfff`
+* **full** : `0x00` through `0xfff`
 
 Pay attention to the file sizes; the `extended` and `all` sets can get large, and will consume more ram on your target device.
 

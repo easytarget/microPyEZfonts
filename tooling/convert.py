@@ -9,7 +9,7 @@ import importlib
     surprisingly badly documented for one of my scripts.. sorry.
     - it is 'documented in code', I suppose.
 '''
-sourceDir = '../tooling/bdf-sources.t'
+sourceDir = '../tooling/bdf-sources'
 outDir = '.'
 prefix = 'ezFBfont'
 
@@ -95,7 +95,7 @@ def packageInfo(base, infile, outfile, cset, fontheight, fontfamily, files):
                 commentTxt.append(line)
             if re.match('^ *COMMENT',line):
                 commentTxt.append(line)
-    outSubDir = '{}/{}/{}'.format(outDir, cset, fontfamily)
+    outSubDir = '{}/{}/{}'.format(outDir, fontfamily, cset)
     os.makedirs(outSubDir, exist_ok=True)
     outMapDir = '{}/maps'.format(outSubDir)
     os.makedirs(outMapDir, exist_ok=True)
@@ -158,7 +158,7 @@ for file in sources:
     baseName = file[:-4]
     for matchfonts in sets.fonts:
         if re.match(matchfonts, baseName):
-            print(file,end=':')
+            print(file,end=' :')
             bodycount = []
             for ch in sets.charsets.keys():
                 if not doFont(baseName, ch, bodycount):
