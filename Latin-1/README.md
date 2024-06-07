@@ -30,7 +30,7 @@ The character sets are organised by function, with small sets for time and senso
 * **supp** : ```¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ```
 * **latin** : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ```
 * **full** : All chars from `0x00` to `0xFF`
-* **extended-a' : chars from `0x100` to `0x17F`
+* **extended-a** : chars from `0x100` to `0x17F`
 * **extended-b** : chars from `0x180` to `0x24F`
 * **ipa-extensions** : chars from `0x250` to `0x2AF`
 
