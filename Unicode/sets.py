@@ -20,7 +20,6 @@ fonts = [
         ]
 
 charsets = {
-        'ipa-extensions' : list(range(0x0250, 0x02AF)),
         'spacing-modifier-letters' : list(range(0x02B0, 0x02FF)),
         'combining-diacritical-marks' : list(range(0x0300, 0x036F)),
         'greek-and-coptic' : list(range(0x0370, 0x03FF)),

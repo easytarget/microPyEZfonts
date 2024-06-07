@@ -31,4 +31,5 @@ charsets = {
         #'latin-1-supplement' : list(range(0x0080, 0x00FF)),
         'extended-a' : list(range(0x0100, 0x017F)),
         'extended-b' : list(range(0x0180, 0x024F)),
+        'ipa-extensions' : list(range(0x0250, 0x02AF)),
         }
