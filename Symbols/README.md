@@ -20,11 +20,16 @@ If using the X11 fonts (COUR, HELV, NCEN, TIM, SYMB) you should include the Adob
 
 # Collections (character sets)
 
-The character sets are:
+The symbol character sets are organised into logical blocks based on the ordinal (character #) values. The sets are:
 
-###TBD
+* **base** : `0x00` through `0x39`
+* **lower** : `0x40` through `0x80`
+* **mid** : `0x80` through `0xc0`
+* **upper** : `0xc0` through `0x100`
+* **extended** : `0x100` through `0xfff`
+* **all** : `0x00` through `0xfff`
 
-Pay attention to the file sizes; the full sets (especially the '`latin`' set) can get large.
+Pay attention to the file sizes; the `extended` and `all` sets can get large, and will consume more ram on your target device.
 
 For a detailed font file description and preview look at the corresponding `.map` file in the 'maps' sub-folder.
 

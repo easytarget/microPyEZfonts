@@ -21,7 +21,7 @@ If using the X11 fonts (COUR, HELV, NCEN, TIM, SYMB) you should include the Adob
 
 # Collections (character sets)
 
-The character sets are:
+The character sets are organised by function, with small sets for time and sensor data, and larger sets with the full character range, as follows:
 
 * **time** : ``` +-.0123456789:```
 * **num** : ``` %()*+,-./0123456789:°```
