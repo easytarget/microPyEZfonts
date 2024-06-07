@@ -9,7 +9,7 @@ import importlib
     surprisingly badly documented for one of my scripts.. sorry.
     - it is 'documented in code', I suppose.
 '''
-sourceDir = '../tooling/bdf-sources'
+sourceDir = '../tooling/bdf-sources.t'
 outDir = '.'
 prefix = 'ezFBfont'
 
@@ -36,7 +36,7 @@ badFontFiles = []
 generated = 0
 
 
-def doFont(base, cset):
+def doFont(base, cset, bodycount):
     charset = outDir + '/' + cset + '-char.set'
     infile = sourceDir + '/' + base + '.bdf'
     cmd = 'python {}/bdf2dict.py {} {} True'.format(tooldir, infile, charset)
@@ -76,6 +76,14 @@ def doFont(base, cset):
 
 def packageInfo(base, infile, outfile, cset, fontheight, fontfamily, files):
     global generated
+    body = files[1].split('\n')[7:]
+    for bod in bodycount:
+        if body == bod:
+            # already covered by a previous charset, skip
+            print('-', end='')
+            return
+    bodycount.append(body)
+    print('+', end='')
     generated += 1
     copyrightTxt = []
     commentTxt = []
@@ -148,11 +156,12 @@ for file in sources:
         #print('Not BDF:',file)
         continue
     baseName = file[:-4]
-    for fo in sets.fonts:
-        if re.match(fo, baseName):
+    for matchfonts in sets.fonts:
+        if re.match(matchfonts, baseName):
             print(file,end=':')
+            bodycount = []
             for ch in sets.charsets.keys():
-                if not doFont(baseName, ch):
+                if not doFont(baseName, ch, bodycount):
                     # HardFail here == bad .bdf file/format, skip to next font
                     break
             print()
