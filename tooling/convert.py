@@ -69,7 +69,7 @@ def doFont(base, cset, bodycount):
         print(files[0])
         print(' {} (bad font return)'.format(cset), end='')
         return True
-    print(' ' + cset, end='')
+    print(' ' + cset, end='', flush=True)
     outname = '{}_{:02d}_{}_{}'.format(prefix, fontheight, base.replace('-','_'), cset)
     packageInfo(base, infile, outname, cset, fontheight, fontfamily, files)
     return True
@@ -80,10 +80,10 @@ def packageInfo(base, infile, outfile, cset, fontheight, fontfamily, files):
     for bod in bodycount:
         if body == bod:
             # already covered by a previous charset, skip
-            print('-', end='')
+            print('-', end='', flush=True)
             return
     bodycount.append(body)
-    print('+', end='')
+    print('+', end='', flush=True)
     generated += 1
     copyrightTxt = []
     commentTxt = []
@@ -158,7 +158,7 @@ for file in sources:
     baseName = file[:-4]
     for matchfonts in sets.fonts:
         if re.match(matchfonts, baseName):
-            print(file,end=' :')
+            print(file,end=' :', flush=True)
             bodycount = []
             for ch in sets.charsets.keys():
                 if not doFont(baseName, ch, bodycount):
