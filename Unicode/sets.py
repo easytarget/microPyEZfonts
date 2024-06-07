@@ -20,10 +20,6 @@ fonts = [
         ]
 
 charsets = {
-        'basic-latin' : list(range(0x0000, 0x007F)),
-        'latin-1-supplement' : list(range(0x0080, 0x00FF)),
-        'latin-extended-a' : list(range(0x0100, 0x017F)),
-        'latin-extended-b' : list(range(0x0180, 0x024F)),
         'ipa-extensions' : list(range(0x0250, 0x02AF)),
         'spacing-modifier-letters' : list(range(0x02B0, 0x02FF)),
         'combining-diacritical-marks' : list(range(0x0300, 0x036F)),

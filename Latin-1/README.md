@@ -30,6 +30,8 @@ The character sets are organised by function, with small sets for time and senso
 * **supp** : ```¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ```
 * **latin** : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ```
 * **full** : All chars from `0x00` to `0xFF`
+* **extended-a' : Chars from `0x100` to `0x17F`
+* **extended-b** : Chars from `0x180` to `0x24F`
 
 Nb: Most charsets begin with `0x32`, the space character.
 
@@ -40,7 +42,8 @@ These can loosely be described as:
 * **Ascii** : full ascii charset up to `0x7f`.
 * **Supp**lemental : characters from `0xa0` to `0xff`.
 * **Latin** : all the *printable* chars in the font up to `0xff`.
-* **Full** : every character in the font pack up to `0xff`, even if not *printable*
+* **Full** : every character in the font pack up to `0xff`, even if not *printable*.
+* **extended-a & b** : additional unicode latin blocks, the sets above cover the unicode *basic* and *supplemental* blocks.
 
 Pay attention to the file sizes; the full sets (especially the '`latin`' set) can get large.
 

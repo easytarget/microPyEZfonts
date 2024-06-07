@@ -27,4 +27,8 @@ charsets = {
         'supp':list(range(160, 256)),
         'latin':list(list(range(32, 127)) + list(range(160, 256))),
         'full':list(range(0, 256))
+        #'basic-latin' : list(range(0x0000, 0x007F)),
+        #'latin-1-supplement' : list(range(0x0080, 0x00FF)),
+        'extended-a' : list(range(0x0100, 0x017F)),
+        'extended-b' : list(range(0x0180, 0x024F)),
         }

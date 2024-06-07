@@ -1,9 +1,9 @@
 '''
-    This script was originally used to produce a set of Unicode symbo fonts.
+    This script was originally used to produce a set of Unicode symbol fonts.
+
     But I was unhappy with the confusion this caused in the Symbols folder.
-    So it now also contains a scriptlet that generates a list to go in the
-    README.md file..
-'''
+    So it now contains a scriptlet that generates a boilerplate with links to
+    available Unicode symbol fonts, this is then added to the README.md file.
 
 fonts = [
         # All the normal latin/unicode fonts
@@ -16,7 +16,7 @@ fonts = [
         '^spleen',
         '^amstrad',
         '^etl',
-        #'^b\\d+', --> overheats my laptop!
+        '^b\\d+', # --> has been known to overheat my laptop!
         '^freedoom',
         '^unifont',
         '^\\d+x\\d+$',  # X11 fonts
@@ -33,6 +33,7 @@ fonts = [
         '^open_iconic',
         '^u8g2_percent_circle',
         ]
+'''
 
 charsets = {
         'arrows' : list(range(0x2190, 0x21FF)),
