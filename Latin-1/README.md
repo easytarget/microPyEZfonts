@@ -30,9 +30,6 @@ The character sets are organised by function, with small sets for time and senso
 * **supp** : ```¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ```
 * **latin** : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ```
 * **full** : All chars from `0x00` to `0xFF`
-* **extended-a** : chars from `0x100` to `0x17F`
-* **extended-b** : chars from `0x180` to `0x24F`
-* **ipa-extensions** : chars from `0x250` to `0x2AF`
 
 Nb: Most charsets begin with `0x32`, the space character.
 
@@ -44,7 +41,8 @@ These can loosely be described as:
 * **Supp**lemental : characters from `0xa0` to `0xff`.
 * **Latin** : all the *printable* chars in the font up to `0xff`.
 * **Full** : every character in the font pack up to `0xff`, even if not *printable*.
-* **extended-a & b, ipa** : these are unicode latin blocks, the sets above cover the unicode *basic* and *supplemental* blocks.
+
+Only 'Basic Latin' and 'Latin Supplemental' characters are covered by these sets. If you want Latin characters from the Unicode 'Latin Extended ..' or 'IPA Extensions' blocks these can be found in the [Unicode](/unicode) folder.
 
 Pay attention to the file sizes; the full sets (especially the '`latin`' set) can get large.
 

@@ -20,8 +20,6 @@ If using the X11 fonts (COUR, HELV, NCEN, TIM, SYMB) you should include the Adob
 
 # Collections (character sets)
 
-Please note that tha Latin unicode blocks are not generated here, see the [Latin-1](/Latin-1) folder for them.
-
 The unicode standard defines standard 'blocks' for character sets in different scripts. The character sets here reflect this block structure.
 
 For a good description of the blocks structure  and the characters they contain I recommend the Wikipedia [Unicode Blocks](https://en.m.wikipedia.org/wiki/Unicode_block) page.

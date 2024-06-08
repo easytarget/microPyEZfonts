@@ -18,8 +18,8 @@ The above is showing demo programs from the [examples](examples); with various f
 
 -----------------
 # Fonts
-Font files are in the [`Latin-1`](Latin-1), [`Unicode`](Unicode) and [`Symbols`](Symbols) folders
-* See the `README` there for a description, a table of all the fonts and heights, and the conversion tool itself.
+Font files are in the [`Latin-1`](Latin-1), [`Unicode`](Unicode) and [`Symbols`](Symbols) folders as appropriate.
+* See the `README` in each for a description, and a map of all the fonts and heights.
 
 The selection provided here covers the default U8G2 fonts, a lot of common X11 fonts and the 'spleen' small font set. There are some symbol and icon fonts too.
 
