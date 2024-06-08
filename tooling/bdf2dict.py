@@ -283,6 +283,6 @@ def get_ch(ch):
     c = ord(ch)
     if c not in _g.keys():
         return None, 0, 0
-    return memoryview(_g[c][0]), height(), {}
-'''.format('max_width()' if fixed_width else 'int(_g[c][1])')
+    return memoryview(_g[c][0]), {}, {}
+'''.format(font_height, glyph_widest if fixed_width else 'int(_g[c][1])')
 print(func)
