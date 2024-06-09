@@ -31,6 +31,9 @@ The symbol character sets are organised into logical blocks based on the ordinal
 
 These are essentially blocks of 64 characters covering the first 256 character values. Plus an extended range since several symbol fonts extend beyond `0xFF`.
 
+In addition there are a number of symbol related blocks in the [Unicode](/Unicode) folder, includingrd dingbats, arrows, mathematical symbols, runes and more.
+
+
 * Pay attention to the file sizes; the `extended` and `all` sets can get large, and will consume more ram on your target device.
 * For a detailed font file description and preview look at the corresponding `.map` file in the 'maps' sub-folder.
   * This contains an ascii-art glyph for all characters in the font file; showing the name, size, bitmap and baseline.
@@ -276,12 +279,6 @@ Full (0x00 - 0xfff) character set
    64px:
        generic........ezFBfont_64_open_iconic_all_8x_full.py
 
-```
-
----------------------
-
-In addition there are a number of symbol related fonts in the [Unicode](/Unicode) folder.
-```
 ```
 
 ---------------------
