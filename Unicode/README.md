@@ -37,505 +37,6 @@ For usage see the `ezFBfont.py` documentation in the main `README`.
 
 Fonts as of 9 June 2024 organised by charset/family/height.
 ```
-character set: Letterlike-symbols
----------------------------------
-    3px :
-       amstrad-cpc.......ezFBfont_03_amstrad_cpc_extended_letterlike-symbols.py
-    5px :
-             fixed........................ezFBfont_05_4x6_letterlike-symbols.py
-    7px :
-             fixed........................ezFBfont_07_6x9_letterlike-symbols.py
-             fixed........................ezFBfont_07_5x7_letterlike-symbols.py
-    8px :
-             fixed........................ezFBfont_08_5x8_letterlike-symbols.py
-    9px :
-           courier....................ezFBfont_09_courR08_letterlike-symbols.py (regular)
-           courier....................ezFBfont_09_courB08_letterlike-symbols.py (bold)
-             fixed.......................ezFBfont_09_6x10_letterlike-symbols.py
-           biwidth......................ezFBfont_09_b10_b_letterlike-symbols.py (bold)
-           biwidth........................ezFBfont_09_b10_letterlike-symbols.py
-   10px :
-             times.....................ezFBfont_10_timB08_letterlike-symbols.py (bold)
-   11px :
-         helvetica....................ezFBfont_11_helvB08_letterlike-symbols.py (bold)
-         helvetica....................ezFBfont_11_helvR08_letterlike-symbols.py (regular)
-        schoolbook....................ezFBfont_11_ncenB08_letterlike-symbols.py (bold)
-        schoolbook....................ezFBfont_11_ncenR08_letterlike-symbols.py (regular)
-           biwidth........................ezFBfont_11_b12_letterlike-symbols.py
-           biwidth......................ezFBfont_11_b12_b_letterlike-symbols.py (bold)
-   12px :
-             times.....................ezFBfont_12_timR08_letterlike-symbols.py (regular)
-           courier....................ezFBfont_12_courB10_letterlike-symbols.py (bold)
-           courier....................ezFBfont_12_courR10_letterlike-symbols.py (regular)
-             fixed.......................ezFBfont_12_6x12_letterlike-symbols.py
-           biwidth........................ezFBfont_12_b14_letterlike-symbols.py
-           biwidth......................ezFBfont_12_b14_b_letterlike-symbols.py (bold)
-   13px :
-             fixed.......................ezFBfont_13_7x13_letterlike-symbols.py
-             fixed.......................ezFBfont_13_8x13_letterlike-symbols.py
-             fixed.......................ezFBfont_13_6x13_letterlike-symbols.py
-             fixed.......................ezFBfont_13_7x14_letterlike-symbols.py
-   14px :
-             times.....................ezFBfont_14_timB10_letterlike-symbols.py (bold)
-           courier....................ezFBfont_14_courB12_letterlike-symbols.py (bold)
-           courier....................ezFBfont_14_courR12_letterlike-symbols.py (regular)
-         helvetica....................ezFBfont_14_helvR10_letterlike-symbols.py (regular)
-         helvetica....................ezFBfont_14_helvB10_letterlike-symbols.py (bold)
-        schoolbook....................ezFBfont_14_ncenR10_letterlike-symbols.py (regular)
-           biwidth........................ezFBfont_14_b16_letterlike-symbols.py
-           biwidth......................ezFBfont_14_b16_b_letterlike-symbols.py (bold)
-   15px :
-           courier....................ezFBfont_15_courR14_letterlike-symbols.py (regular)
-           courier....................ezFBfont_15_courB14_letterlike-symbols.py (bold)
-         helvetica....................ezFBfont_15_helvR12_letterlike-symbols.py (regular)
-             fixed.......................ezFBfont_15_9x18_letterlike-symbols.py
-             fixed.......................ezFBfont_15_9x15_letterlike-symbols.py
-        schoolbook....................ezFBfont_15_ncenB10_letterlike-symbols.py (bold)
-   16px :
-             times.....................ezFBfont_16_timB12_letterlike-symbols.py (bold)
-         helvetica....................ezFBfont_16_helvB12_letterlike-symbols.py (bold)
-        schoolbook....................ezFBfont_16_ncenB12_letterlike-symbols.py (bold)
-        schoolbook....................ezFBfont_16_ncenR12_letterlike-symbols.py (regular)
-   17px :
-             times.....................ezFBfont_17_timR10_letterlike-symbols.py (regular)
-             times.....................ezFBfont_17_timB14_letterlike-symbols.py (bold)
-         helvetica....................ezFBfont_17_helvR14_letterlike-symbols.py (regular)
-   18px :
-             times.....................ezFBfont_18_timR12_letterlike-symbols.py (regular)
-         helvetica....................ezFBfont_18_helvB14_letterlike-symbols.py (bold)
-   19px :
-           courier....................ezFBfont_19_courR18_letterlike-symbols.py (regular)
-             fixed......................ezFBfont_19_10x20_letterlike-symbols.py
-        schoolbook....................ezFBfont_19_ncenB14_letterlike-symbols.py (bold)
-        schoolbook....................ezFBfont_19_ncenR14_letterlike-symbols.py (regular)
-   20px :
-           courier....................ezFBfont_20_courB18_letterlike-symbols.py (bold)
-   22px :
-             times.....................ezFBfont_22_timR14_letterlike-symbols.py (regular)
-   23px :
-             times.....................ezFBfont_23_timB18_letterlike-symbols.py (bold)
-   24px :
-         helvetica....................ezFBfont_24_helvB18_letterlike-symbols.py (bold)
-         helvetica....................ezFBfont_24_helvR18_letterlike-symbols.py (regular)
-        schoolbook....................ezFBfont_24_ncenB18_letterlike-symbols.py (bold)
-        schoolbook....................ezFBfont_24_ncenR18_letterlike-symbols.py (regular)
-   26px :
-           courier....................ezFBfont_26_courR24_letterlike-symbols.py (regular)
-           courier....................ezFBfont_26_courB24_letterlike-symbols.py (bold)
-   28px :
-             times.....................ezFBfont_28_timR18_letterlike-symbols.py (regular)
-   30px :
-             times.....................ezFBfont_30_timB24_letterlike-symbols.py (bold)
-   31px :
-         helvetica....................ezFBfont_31_helvB24_letterlike-symbols.py (bold)
-         helvetica....................ezFBfont_31_helvR24_letterlike-symbols.py (regular)
-   32px :
-        schoolbook....................ezFBfont_32_ncenR24_letterlike-symbols.py (regular)
-   33px :
-        schoolbook....................ezFBfont_33_ncenB24_letterlike-symbols.py (bold)
-   37px :
-             times.....................ezFBfont_37_timR24_letterlike-symbols.py (regular)
-
-character set: High-surrogates
-------------------------------
-    5px :
-          fixed4x6.....................ezFBfont_05_tom_thumb_high-surrogates.py
-           generic....................ezFBfont_05_font_tiny5_high-surrogates.py
-           generic.........................ezFBfont_05_micro_high-surrogates.py
-             fixed...........................ezFBfont_05_4x6_high-surrogates.py
-    6px :
-           courier.......................ezFBfont_06_courB08_high-surrogates.py (bold)
-           courier.......................ezFBfont_06_courR08_high-surrogates.py (regular)
-             fixed...........................ezFBfont_06_5x7_high-surrogates.py
-             fixed...........................ezFBfont_06_5x8_high-surrogates.py
-           biwidth.........................ezFBfont_06_b10_b_high-surrogates.py (bold)
-           biwidth...........................ezFBfont_06_b10_high-surrogates.py
-    7px :
-       amstrad-cpc..........ezFBfont_07_amstrad_cpc_extended_high-surrogates.py
-             times........................ezFBfont_07_timB08_high-surrogates.py (bold)
-             times........................ezFBfont_07_timR08_high-surrogates.py (regular)
-             fixed..........................ezFBfont_07_6x12_high-surrogates.py
-             fixed..........................ezFBfont_07_6x10_high-surrogates.py
-             fixed...........................ezFBfont_07_6x9_high-surrogates.py
-            spleen....................ezFBfont_07_spleen_5x8_high-surrogates.py
-           biwidth...........................ezFBfont_07_b12_high-surrogates.py
-           biwidth.........................ezFBfont_07_b12_b_high-surrogates.py (bold)
-    8px :
-         helvetica...................ezFBfont_08_helvB08_gps_high-surrogates.py (bold)
-         helvetica.......................ezFBfont_08_helvB08_high-surrogates.py (bold)
-         helvetica.......................ezFBfont_08_helvR08_high-surrogates.py (regular)
-            spleen...................ezFBfont_08_spleen_6x12_high-surrogates.py
-        schoolbook.......................ezFBfont_08_ncenB08_high-surrogates.py (bold)
-        schoolbook.......................ezFBfont_08_ncenR08_high-surrogates.py (regular)
-    9px :
-           courier.......................ezFBfont_09_courB10_high-surrogates.py (bold)
-           courier.......................ezFBfont_09_courR10_high-surrogates.py (regular)
-             fixed..........................ezFBfont_09_6x13_high-surrogates.py
-             fixed....................ezFBfont_09_etl14_thai_high-surrogates.py
-             fixed..........................ezFBfont_09_8x13_high-surrogates.py
-             fixed..........................ezFBfont_09_7x13_high-surrogates.py
-           biwidth.........................ezFBfont_09_b14_b_high-surrogates.py (bold)
-           biwidth...........................ezFBfont_09_b14_high-surrogates.py
-   10px :
-             times........................ezFBfont_10_timB10_high-surrogates.py (bold)
-             times........................ezFBfont_10_timR10_high-surrogates.py (regular)
-           courier.......................ezFBfont_10_courB12_high-surrogates.py (bold)
-           courier.......................ezFBfont_10_courR12_high-surrogates.py (regular)
-             fixed....................ezFBfont_10_etl16_thai_high-surrogates.py
-             fixed..........................ezFBfont_10_9x15_high-surrogates.py
-             fixed..........................ezFBfont_10_7x14_high-surrogates.py
-             fixed..........................ezFBfont_10_9x18_high-surrogates.py
-            spleen...................ezFBfont_10_spleen_8x16_high-surrogates.py
-           biwidth.........................ezFBfont_10_b16_b_high-surrogates.py (bold)
-           biwidth...........................ezFBfont_10_b16_high-surrogates.py
-   11px :
-             times........................ezFBfont_11_timR12_high-surrogates.py (regular)
-             times........................ezFBfont_11_timB12_high-surrogates.py (bold)
-           courier.......................ezFBfont_11_courB14_high-surrogates.py (bold)
-           courier.......................ezFBfont_11_courR14_high-surrogates.py (regular)
-         helvetica.......................ezFBfont_11_helvR10_high-surrogates.py (regular)
-         helvetica.......................ezFBfont_11_helvB10_high-surrogates.py (bold)
-        schoolbook.......................ezFBfont_11_ncenR10_high-surrogates.py (regular)
-        schoolbook.......................ezFBfont_11_ncenB10_high-surrogates.py (bold)
-   12px :
-         helvetica.......................ezFBfont_12_helvR12_high-surrogates.py (regular)
-         helvetica.......................ezFBfont_12_helvB12_high-surrogates.py (bold)
-        schoolbook.......................ezFBfont_12_ncenB12_high-surrogates.py (bold)
-        schoolbook.......................ezFBfont_12_ncenR12_high-surrogates.py (regular)
-   13px :
-             times........................ezFBfont_13_timR14_high-surrogates.py (regular)
-             times........................ezFBfont_13_timB14_high-surrogates.py (bold)
-             fixed.........................ezFBfont_13_10x20_high-surrogates.py
-   14px :
-           courier.......................ezFBfont_14_courR18_high-surrogates.py (regular)
-         helvetica.......................ezFBfont_14_helvR14_high-surrogates.py (regular)
-         helvetica.......................ezFBfont_14_helvB14_high-surrogates.py (bold)
-        schoolbook.......................ezFBfont_14_ncenB14_high-surrogates.py (bold)
-        schoolbook.......................ezFBfont_14_ncenR14_high-surrogates.py (regular)
-   15px :
-           courier.......................ezFBfont_15_courB18_high-surrogates.py (bold)
-             fixed....................ezFBfont_15_etl24_thai_high-surrogates.py
-            spleen..................ezFBfont_15_spleen_12x24_high-surrogates.py
-   17px :
-             times........................ezFBfont_17_timB18_high-surrogates.py (bold)
-             times........................ezFBfont_17_timR18_high-surrogates.py (regular)
-   18px :
-        schoolbook.......................ezFBfont_18_ncenB18_high-surrogates.py (bold)
-        schoolbook.......................ezFBfont_18_ncenR18_high-surrogates.py (regular)
-   19px :
-           courier.......................ezFBfont_19_courR24_high-surrogates.py (regular)
-         helvetica.......................ezFBfont_19_helvR18_high-surrogates.py (regular)
-         helvetica.......................ezFBfont_19_helvB18_high-surrogates.py (bold)
-   20px :
-           courier.......................ezFBfont_20_courB24_high-surrogates.py (bold)
-            spleen..................ezFBfont_20_spleen_16x32_high-surrogates.py
-   23px :
-             times........................ezFBfont_23_timR24_high-surrogates.py (regular)
-             times........................ezFBfont_23_timB24_high-surrogates.py (bold)
-   25px :
-         helvetica.......................ezFBfont_25_helvB24_high-surrogates.py (bold)
-         helvetica.......................ezFBfont_25_helvR24_high-surrogates.py (regular)
-        schoolbook.......................ezFBfont_25_ncenB24_high-surrogates.py (bold)
-        schoolbook.......................ezFBfont_25_ncenR24_high-surrogates.py (regular)
-   40px :
-            spleen..................ezFBfont_40_spleen_32x64_high-surrogates.py
-
-character set: General-punctuation
-----------------------------------
-    3px :
-       amstrad-cpc......ezFBfont_03_amstrad_cpc_extended_general-punctuation.py
-          fixed4x6.................ezFBfont_03_tom_thumb_general-punctuation.py
-    6px :
-             fixed.......................ezFBfont_06_4x6_general-punctuation.py
-    7px :
-             fixed.......................ezFBfont_07_5x7_general-punctuation.py
-    8px :
-           courier...................ezFBfont_08_courB08_general-punctuation.py (bold)
-             fixed.......................ezFBfont_08_5x8_general-punctuation.py
-    9px :
-             times....................ezFBfont_09_timR08_general-punctuation.py (regular)
-             times....................ezFBfont_09_timB08_general-punctuation.py (bold)
-             fixed.......................ezFBfont_09_6x9_general-punctuation.py
-           biwidth.....................ezFBfont_09_b10_b_general-punctuation.py (bold)
-           biwidth.......................ezFBfont_09_b10_general-punctuation.py
-   10px :
-           courier...................ezFBfont_10_courR08_general-punctuation.py (regular)
-         helvetica...................ezFBfont_10_helvB08_general-punctuation.py (bold)
-         helvetica...................ezFBfont_10_helvR08_general-punctuation.py (regular)
-             fixed......................ezFBfont_10_6x10_general-punctuation.py
-        schoolbook...................ezFBfont_10_ncenR08_general-punctuation.py (regular)
-        schoolbook...................ezFBfont_10_ncenB08_general-punctuation.py (bold)
-   11px :
-           biwidth.......................ezFBfont_11_b12_general-punctuation.py
-           biwidth.....................ezFBfont_11_b12_b_general-punctuation.py (bold)
-   12px :
-             times....................ezFBfont_12_timB10_general-punctuation.py (bold)
-             times....................ezFBfont_12_timR10_general-punctuation.py (regular)
-           courier...................ezFBfont_12_courR10_general-punctuation.py (regular)
-           courier...................ezFBfont_12_courB10_general-punctuation.py (bold)
-             fixed......................ezFBfont_12_8x13_general-punctuation.py
-             fixed......................ezFBfont_12_6x12_general-punctuation.py
-             fixed......................ezFBfont_12_6x13_general-punctuation.py
-            spleen...............ezFBfont_12_spleen_8x16_general-punctuation.py
-   13px :
-             fixed......................ezFBfont_13_7x14_general-punctuation.py
-             fixed......................ezFBfont_13_7x13_general-punctuation.py
-        schoolbook...................ezFBfont_13_ncenB10_general-punctuation.py (bold)
-   14px :
-           courier...................ezFBfont_14_courB12_general-punctuation.py (bold)
-           courier...................ezFBfont_14_courR12_general-punctuation.py (regular)
-         helvetica...................ezFBfont_14_helvB10_general-punctuation.py (bold)
-         helvetica...................ezFBfont_14_helvR10_general-punctuation.py (regular)
-        schoolbook...................ezFBfont_14_ncenR10_general-punctuation.py (regular)
-           biwidth.....................ezFBfont_14_b14_b_general-punctuation.py (bold)
-           biwidth.......................ezFBfont_14_b14_general-punctuation.py
-   15px :
-             times....................ezFBfont_15_timR12_general-punctuation.py (regular)
-           courier...................ezFBfont_15_courR14_general-punctuation.py (regular)
-           courier...................ezFBfont_15_courB14_general-punctuation.py (bold)
-         helvetica...................ezFBfont_15_helvR12_general-punctuation.py (regular)
-         helvetica...................ezFBfont_15_helvB12_general-punctuation.py (bold)
-             fixed......................ezFBfont_15_9x18_general-punctuation.py
-             fixed......................ezFBfont_15_9x15_general-punctuation.py
-        schoolbook...................ezFBfont_15_ncenR12_general-punctuation.py (regular)
-        schoolbook...................ezFBfont_15_ncenB12_general-punctuation.py (bold)
-   16px :
-             times....................ezFBfont_16_timR14_general-punctuation.py (regular)
-             times....................ezFBfont_16_timB14_general-punctuation.py (bold)
-             times....................ezFBfont_16_timB12_general-punctuation.py (bold)
-           biwidth.....................ezFBfont_16_b16_b_general-punctuation.py (bold)
-           biwidth.......................ezFBfont_16_b16_general-punctuation.py
-   17px :
-        schoolbook...................ezFBfont_17_ncenR14_general-punctuation.py (regular)
-        schoolbook...................ezFBfont_17_ncenB14_general-punctuation.py (bold)
-   18px :
-         helvetica...................ezFBfont_18_helvR14_general-punctuation.py (regular)
-         helvetica...................ezFBfont_18_helvB14_general-punctuation.py (bold)
-   19px :
-           courier...................ezFBfont_19_courR18_general-punctuation.py (regular)
-           courier...................ezFBfont_19_courB18_general-punctuation.py (bold)
-            spleen..............ezFBfont_19_spleen_12x24_general-punctuation.py
-   20px :
-             fixed.....................ezFBfont_20_10x20_general-punctuation.py
-   21px :
-             times....................ezFBfont_21_timR18_general-punctuation.py (regular)
-   22px :
-             times....................ezFBfont_22_timB18_general-punctuation.py (bold)
-        schoolbook...................ezFBfont_22_ncenR18_general-punctuation.py (regular)
-        schoolbook...................ezFBfont_22_ncenB18_general-punctuation.py (bold)
-   24px :
-         helvetica...................ezFBfont_24_helvB18_general-punctuation.py (bold)
-         helvetica...................ezFBfont_24_helvR18_general-punctuation.py (regular)
-            spleen..............ezFBfont_24_spleen_16x32_general-punctuation.py
-   26px :
-           courier...................ezFBfont_26_courB24_general-punctuation.py (bold)
-   27px :
-           courier...................ezFBfont_27_courR24_general-punctuation.py (regular)
-   29px :
-             times....................ezFBfont_29_timB24_general-punctuation.py (bold)
-   30px :
-             times....................ezFBfont_30_timR24_general-punctuation.py (regular)
-        schoolbook...................ezFBfont_30_ncenR24_general-punctuation.py (regular)
-   31px :
-         helvetica...................ezFBfont_31_helvR24_general-punctuation.py (regular)
-        schoolbook...................ezFBfont_31_ncenB24_general-punctuation.py (bold)
-   32px :
-         helvetica...................ezFBfont_32_helvB24_general-punctuation.py (bold)
-   48px :
-            spleen..............ezFBfont_48_spleen_32x64_general-punctuation.py
-
-character set: Currency-symbols
--------------------------------
-    5px :
-          fixed4x6....................ezFBfont_05_tom_thumb_currency-symbols.py
-             fixed..........................ezFBfont_05_4x6_currency-symbols.py
-    7px :
-       amstrad-cpc.........ezFBfont_07_amstrad_cpc_extended_currency-symbols.py
-             fixed..........................ezFBfont_07_5x7_currency-symbols.py
-    8px :
-             times.......................ezFBfont_08_timR08_currency-symbols.py (regular)
-             times.......................ezFBfont_08_timB08_currency-symbols.py (bold)
-           courier......................ezFBfont_08_courB08_currency-symbols.py (bold)
-             fixed..........................ezFBfont_08_5x8_currency-symbols.py
-           biwidth........................ezFBfont_08_b10_b_currency-symbols.py (bold)
-           biwidth..........................ezFBfont_08_b10_currency-symbols.py
-    9px :
-           courier......................ezFBfont_09_courR08_currency-symbols.py (regular)
-         helvetica......................ezFBfont_09_helvB08_currency-symbols.py (bold)
-         helvetica......................ezFBfont_09_helvR08_currency-symbols.py (regular)
-             fixed..........................ezFBfont_09_6x9_currency-symbols.py
-             fixed.........................ezFBfont_09_6x10_currency-symbols.py
-            spleen..................ezFBfont_09_spleen_8x16_currency-symbols.py
-        schoolbook......................ezFBfont_09_ncenB08_currency-symbols.py (bold)
-           biwidth........................ezFBfont_09_b12_b_currency-symbols.py (bold)
-           biwidth..........................ezFBfont_09_b12_currency-symbols.py
-   10px :
-             fixed.........................ezFBfont_10_6x12_currency-symbols.py
-        schoolbook......................ezFBfont_10_ncenR08_currency-symbols.py (regular)
-   11px :
-             times.......................ezFBfont_11_timB10_currency-symbols.py (bold)
-           courier......................ezFBfont_11_courR10_currency-symbols.py (regular)
-   12px :
-             times.......................ezFBfont_12_timR10_currency-symbols.py (regular)
-             times.......................ezFBfont_12_timB12_currency-symbols.py (bold)
-           courier......................ezFBfont_12_courB10_currency-symbols.py (bold)
-         helvetica......................ezFBfont_12_helvB10_currency-symbols.py (bold)
-         helvetica......................ezFBfont_12_helvR10_currency-symbols.py (regular)
-             fixed.........................ezFBfont_12_6x13_currency-symbols.py
-             fixed.........................ezFBfont_12_8x13_currency-symbols.py
-             fixed.........................ezFBfont_12_7x13_currency-symbols.py
-             fixed.........................ezFBfont_12_7x14_currency-symbols.py
-           biwidth..........................ezFBfont_12_b14_currency-symbols.py
-           biwidth........................ezFBfont_12_b14_b_currency-symbols.py (bold)
-   13px :
-             times.......................ezFBfont_13_timR12_currency-symbols.py (regular)
-           courier......................ezFBfont_13_courR12_currency-symbols.py (regular)
-         helvetica......................ezFBfont_13_helvB12_currency-symbols.py (bold)
-         helvetica......................ezFBfont_13_helvR12_currency-symbols.py (regular)
-             fixed.........................ezFBfont_13_9x18_currency-symbols.py
-             fixed.........................ezFBfont_13_9x15_currency-symbols.py
-        schoolbook......................ezFBfont_13_ncenR10_currency-symbols.py (regular)
-        schoolbook......................ezFBfont_13_ncenB10_currency-symbols.py (bold)
-   14px :
-           courier......................ezFBfont_14_courB12_currency-symbols.py (bold)
-        schoolbook......................ezFBfont_14_ncenB12_currency-symbols.py (bold)
-        schoolbook......................ezFBfont_14_ncenR12_currency-symbols.py (regular)
-           biwidth........................ezFBfont_14_b16_b_currency-symbols.py (bold)
-           biwidth..........................ezFBfont_14_b16_currency-symbols.py
-   15px :
-             times.......................ezFBfont_15_timB14_currency-symbols.py (bold)
-   16px :
-           courier......................ezFBfont_16_courB14_currency-symbols.py (bold)
-           courier......................ezFBfont_16_courR14_currency-symbols.py (regular)
-         helvetica......................ezFBfont_16_helvR14_currency-symbols.py (regular)
-         helvetica......................ezFBfont_16_helvB14_currency-symbols.py (bold)
-            spleen.................ezFBfont_16_spleen_12x24_currency-symbols.py
-        schoolbook......................ezFBfont_16_ncenR14_currency-symbols.py (regular)
-        schoolbook......................ezFBfont_16_ncenB14_currency-symbols.py (bold)
-   17px :
-             times.......................ezFBfont_17_timR14_currency-symbols.py (regular)
-   18px :
-           courier......................ezFBfont_18_courR18_currency-symbols.py (regular)
-             fixed........................ezFBfont_18_10x20_currency-symbols.py
-   19px :
-             times.......................ezFBfont_19_timB18_currency-symbols.py (bold)
-   20px :
-           courier......................ezFBfont_20_courB18_currency-symbols.py (bold)
-            spleen.................ezFBfont_20_spleen_16x32_currency-symbols.py
-   21px :
-             times.......................ezFBfont_21_timR18_currency-symbols.py (regular)
-         helvetica......................ezFBfont_21_helvR18_currency-symbols.py (regular)
-         helvetica......................ezFBfont_21_helvB18_currency-symbols.py (bold)
-        schoolbook......................ezFBfont_21_ncenB18_currency-symbols.py (bold)
-        schoolbook......................ezFBfont_21_ncenR18_currency-symbols.py (regular)
-   25px :
-           courier......................ezFBfont_25_courR24_currency-symbols.py (regular)
-   27px :
-             times.......................ezFBfont_27_timB24_currency-symbols.py (bold)
-           courier......................ezFBfont_27_courB24_currency-symbols.py (bold)
-   28px :
-             times.......................ezFBfont_28_timR24_currency-symbols.py (regular)
-         helvetica......................ezFBfont_28_helvB24_currency-symbols.py (bold)
-         helvetica......................ezFBfont_28_helvR24_currency-symbols.py (regular)
-   29px :
-        schoolbook......................ezFBfont_29_ncenB24_currency-symbols.py (bold)
-        schoolbook......................ezFBfont_29_ncenR24_currency-symbols.py (regular)
-   40px :
-            spleen.................ezFBfont_40_spleen_32x64_currency-symbols.py
-
-character set: Ipa-extensions
------------------------------
-    4px :
-             fixed............................ezFBfont_04_6x9_ipa-extensions.py
-             fixed............................ezFBfont_04_4x6_ipa-extensions.py
-             fixed............................ezFBfont_04_5x8_ipa-extensions.py
-    5px :
-             fixed...........................ezFBfont_05_6x10_ipa-extensions.py
-    7px :
-             fixed............................ezFBfont_07_5x7_ipa-extensions.py
-           biwidth............................ezFBfont_07_b10_ipa-extensions.py
-           biwidth..........................ezFBfont_07_b10_b_ipa-extensions.py (bold)
-    9px :
-             times.........................ezFBfont_09_timR08_ipa-extensions.py (regular)
-           courier........................ezFBfont_09_courB08_ipa-extensions.py (bold)
-           courier........................ezFBfont_09_courR08_ipa-extensions.py (regular)
-   10px :
-         helvetica........................ezFBfont_10_helvB08_ipa-extensions.py (bold)
-         helvetica........................ezFBfont_10_helvR08_ipa-extensions.py (regular)
-             fixed...........................ezFBfont_10_6x12_ipa-extensions.py
-        schoolbook........................ezFBfont_10_ncenB08_ipa-extensions.py (bold)
-        schoolbook........................ezFBfont_10_ncenR08_ipa-extensions.py (regular)
-           biwidth............................ezFBfont_10_b12_ipa-extensions.py
-           biwidth..........................ezFBfont_10_b12_b_ipa-extensions.py (bold)
-   11px :
-             times.........................ezFBfont_11_timB08_ipa-extensions.py (bold)
-   12px :
-             fixed...........................ezFBfont_12_8x13_ipa-extensions.py
-             fixed...........................ezFBfont_12_7x13_ipa-extensions.py
-             fixed...........................ezFBfont_12_6x13_ipa-extensions.py
-   13px :
-             times.........................ezFBfont_13_timR10_ipa-extensions.py (regular)
-             times.........................ezFBfont_13_timB10_ipa-extensions.py (bold)
-           courier........................ezFBfont_13_courB10_ipa-extensions.py (bold)
-           courier........................ezFBfont_13_courR12_ipa-extensions.py (regular)
-           courier........................ezFBfont_13_courR10_ipa-extensions.py (regular)
-           biwidth............................ezFBfont_13_b16_ipa-extensions.py
-           biwidth..........................ezFBfont_13_b16_b_ipa-extensions.py (bold)
-           biwidth..........................ezFBfont_13_b14_b_ipa-extensions.py (bold)
-           biwidth............................ezFBfont_13_b14_ipa-extensions.py
-   14px :
-           courier........................ezFBfont_14_courB12_ipa-extensions.py (bold)
-         helvetica........................ezFBfont_14_helvR10_ipa-extensions.py (regular)
-         helvetica........................ezFBfont_14_helvB10_ipa-extensions.py (bold)
-             fixed...........................ezFBfont_14_9x15_ipa-extensions.py
-             fixed...........................ezFBfont_14_9x18_ipa-extensions.py
-             fixed...........................ezFBfont_14_7x14_ipa-extensions.py
-        schoolbook........................ezFBfont_14_ncenR10_ipa-extensions.py (regular)
-        schoolbook........................ezFBfont_14_ncenB10_ipa-extensions.py (bold)
-   15px :
-        schoolbook........................ezFBfont_15_ncenR12_ipa-extensions.py (regular)
-        schoolbook........................ezFBfont_15_ncenB12_ipa-extensions.py (bold)
-   16px :
-             times.........................ezFBfont_16_timB12_ipa-extensions.py (bold)
-             times.........................ezFBfont_16_timR12_ipa-extensions.py (regular)
-           courier........................ezFBfont_16_courR14_ipa-extensions.py (regular)
-         helvetica........................ezFBfont_16_helvR12_ipa-extensions.py (regular)
-   17px :
-             times.........................ezFBfont_17_timR14_ipa-extensions.py (regular)
-             times.........................ezFBfont_17_timB14_ipa-extensions.py (bold)
-           courier........................ezFBfont_17_courB14_ipa-extensions.py (bold)
-         helvetica........................ezFBfont_17_helvB12_ipa-extensions.py (bold)
-   18px :
-         helvetica........................ezFBfont_18_helvR14_ipa-extensions.py (regular)
-         helvetica........................ezFBfont_18_helvB14_ipa-extensions.py (bold)
-             fixed..........................ezFBfont_18_10x20_ipa-extensions.py
-        schoolbook........................ezFBfont_18_ncenB14_ipa-extensions.py (bold)
-        schoolbook........................ezFBfont_18_ncenR14_ipa-extensions.py (regular)
-   21px :
-           courier........................ezFBfont_21_courR18_ipa-extensions.py (regular)
-           courier........................ezFBfont_21_courB18_ipa-extensions.py (bold)
-   22px :
-             times.........................ezFBfont_22_timB18_ipa-extensions.py (bold)
-   23px :
-        schoolbook........................ezFBfont_23_ncenR18_ipa-extensions.py (regular)
-        schoolbook........................ezFBfont_23_ncenB18_ipa-extensions.py (bold)
-   24px :
-             times.........................ezFBfont_24_timR18_ipa-extensions.py (regular)
-         helvetica........................ezFBfont_24_helvR18_ipa-extensions.py (regular)
-         helvetica........................ezFBfont_24_helvB18_ipa-extensions.py (bold)
-   26px :
-           courier........................ezFBfont_26_courR24_ipa-extensions.py (regular)
-   29px :
-           courier........................ezFBfont_29_courB24_ipa-extensions.py (bold)
-   30px :
-             times.........................ezFBfont_30_timB24_ipa-extensions.py (bold)
-             times.........................ezFBfont_30_timR24_ipa-extensions.py (regular)
-   32px :
-         helvetica........................ezFBfont_32_helvB24_ipa-extensions.py (bold)
-         helvetica........................ezFBfont_32_helvR24_ipa-extensions.py (regular)
-        schoolbook........................ezFBfont_32_ncenR24_ipa-extensions.py (regular)
-        schoolbook........................ezFBfont_32_ncenB24_ipa-extensions.py (bold)
-
 character set: Latin-extended-a
 -------------------------------
     5px :
@@ -646,312 +147,6 @@ character set: Latin-extended-a
         schoolbook......................ezFBfont_45_ncenB24_latin-extended-a.py (bold)
    64px :
             spleen.................ezFBfont_64_spleen_32x64_latin-extended-a.py
-
-character set: Arrows
----------------------
-    5px :
-             fixed....................................ezFBfont_05_4x6_arrows.py
-    7px :
-             fixed....................................ezFBfont_07_5x8_arrows.py
-             fixed....................................ezFBfont_07_5x7_arrows.py
-           biwidth....................................ezFBfont_07_b10_arrows.py
-           biwidth..................................ezFBfont_07_b10_b_arrows.py (bold)
-    8px :
-             fixed....................................ezFBfont_08_6x9_arrows.py
-    9px :
-             fixed...................................ezFBfont_09_6x12_arrows.py
-   10px :
-             fixed...................................ezFBfont_10_6x13_arrows.py
-             fixed...................................ezFBfont_10_6x10_arrows.py
-   11px :
-             fixed...................................ezFBfont_11_7x14_arrows.py
-   12px :
-             fixed...................................ezFBfont_12_7x13_arrows.py
-           biwidth..................................ezFBfont_12_b12_b_arrows.py (bold)
-           biwidth....................................ezFBfont_12_b12_arrows.py
-   13px :
-             fixed...................................ezFBfont_13_8x13_arrows.py
-             fixed...................................ezFBfont_13_9x18_arrows.py
-             fixed...................................ezFBfont_13_9x15_arrows.py
-           biwidth..................................ezFBfont_13_b16_b_arrows.py (bold)
-           biwidth....................................ezFBfont_13_b16_arrows.py
-   14px :
-           biwidth....................................ezFBfont_14_b14_arrows.py
-           biwidth..................................ezFBfont_14_b14_b_arrows.py (bold)
-   15px :
-             times.................................ezFBfont_15_timR10_arrows.py (regular)
-             times.................................ezFBfont_15_timR08_arrows.py (regular)
-             times.................................ezFBfont_15_timR12_arrows.py (regular)
-   17px :
-             fixed..................................ezFBfont_17_10x20_arrows.py
-   19px :
-             times.................................ezFBfont_19_timR14_arrows.py (regular)
-   24px :
-             times.................................ezFBfont_24_timR18_arrows.py (regular)
-   32px :
-             times.................................ezFBfont_32_timR24_arrows.py (regular)
-
-character set: Latin-extended-additional
-----------------------------------------
-    6px :
-             fixed.................ezFBfont_06_4x6_latin-extended-additional.py
-    7px :
-             fixed.................ezFBfont_07_5x7_latin-extended-additional.py
-    8px :
-             fixed.................ezFBfont_08_5x8_latin-extended-additional.py
-           biwidth.................ezFBfont_08_b10_latin-extended-additional.py
-           biwidth...............ezFBfont_08_b10_b_latin-extended-additional.py (bold)
-    9px :
-             fixed.................ezFBfont_09_6x9_latin-extended-additional.py
-   10px :
-             fixed................ezFBfont_10_6x10_latin-extended-additional.py
-   12px :
-             fixed................ezFBfont_12_6x12_latin-extended-additional.py
-           biwidth...............ezFBfont_12_b12_b_latin-extended-additional.py (bold)
-           biwidth.................ezFBfont_12_b12_latin-extended-additional.py
-   13px :
-             fixed................ezFBfont_13_6x13_latin-extended-additional.py
-             fixed................ezFBfont_13_8x13_latin-extended-additional.py
-             fixed................ezFBfont_13_7x13_latin-extended-additional.py
-   14px :
-             fixed................ezFBfont_14_7x14_latin-extended-additional.py
-           biwidth...............ezFBfont_14_b14_b_latin-extended-additional.py (bold)
-           biwidth.................ezFBfont_14_b14_latin-extended-additional.py
-   15px :
-             fixed................ezFBfont_15_9x15_latin-extended-additional.py
-   16px :
-           courier.............ezFBfont_16_courB08_latin-extended-additional.py (bold)
-           courier.............ezFBfont_16_courR08_latin-extended-additional.py (regular)
-           biwidth...............ezFBfont_16_b16_b_latin-extended-additional.py (bold)
-           biwidth.................ezFBfont_16_b16_latin-extended-additional.py
-   17px :
-             times..............ezFBfont_17_timR08_latin-extended-additional.py (regular)
-   18px :
-             times..............ezFBfont_18_timB08_latin-extended-additional.py (bold)
-         helvetica.............ezFBfont_18_helvB08_latin-extended-additional.py (bold)
-         helvetica.............ezFBfont_18_helvR08_latin-extended-additional.py (regular)
-             fixed................ezFBfont_18_9x18_latin-extended-additional.py
-        schoolbook.............ezFBfont_18_ncenR08_latin-extended-additional.py (regular)
-   19px :
-        schoolbook.............ezFBfont_19_ncenB08_latin-extended-additional.py (bold)
-   20px :
-           courier.............ezFBfont_20_courR10_latin-extended-additional.py (regular)
-             fixed...............ezFBfont_20_10x20_latin-extended-additional.py
-   21px :
-           courier.............ezFBfont_21_courB10_latin-extended-additional.py (bold)
-   22px :
-         helvetica.............ezFBfont_22_helvR10_latin-extended-additional.py (regular)
-   23px :
-         helvetica.............ezFBfont_23_helvB10_latin-extended-additional.py (bold)
-   24px :
-             times..............ezFBfont_24_timB10_latin-extended-additional.py (bold)
-             times..............ezFBfont_24_timR10_latin-extended-additional.py (regular)
-           courier.............ezFBfont_24_courB12_latin-extended-additional.py (bold)
-           courier.............ezFBfont_24_courR12_latin-extended-additional.py (regular)
-        schoolbook.............ezFBfont_24_ncenR10_latin-extended-additional.py (regular)
-   25px :
-        schoolbook.............ezFBfont_25_ncenB10_latin-extended-additional.py (bold)
-   26px :
-             times..............ezFBfont_26_timR12_latin-extended-additional.py (regular)
-             times..............ezFBfont_26_timB12_latin-extended-additional.py (bold)
-           courier.............ezFBfont_26_courR14_latin-extended-additional.py (regular)
-           courier.............ezFBfont_26_courB14_latin-extended-additional.py (bold)
-         helvetica.............ezFBfont_26_helvR12_latin-extended-additional.py (regular)
-        schoolbook.............ezFBfont_26_ncenB12_latin-extended-additional.py (bold)
-        schoolbook.............ezFBfont_26_ncenR12_latin-extended-additional.py (regular)
-   27px :
-         helvetica.............ezFBfont_27_helvB12_latin-extended-additional.py (bold)
-   28px :
-             times..............ezFBfont_28_timR14_latin-extended-additional.py (regular)
-             times..............ezFBfont_28_timB14_latin-extended-additional.py (bold)
-   29px :
-         helvetica.............ezFBfont_29_helvB14_latin-extended-additional.py (bold)
-         helvetica.............ezFBfont_29_helvR14_latin-extended-additional.py (regular)
-        schoolbook.............ezFBfont_29_ncenR14_latin-extended-additional.py (regular)
-   31px :
-        schoolbook.............ezFBfont_31_ncenB14_latin-extended-additional.py (bold)
-   32px :
-           courier.............ezFBfont_32_courR18_latin-extended-additional.py (regular)
-   35px :
-             times..............ezFBfont_35_timB18_latin-extended-additional.py (bold)
-           courier.............ezFBfont_35_courB18_latin-extended-additional.py (bold)
-   36px :
-             times..............ezFBfont_36_timR18_latin-extended-additional.py (regular)
-        schoolbook.............ezFBfont_36_ncenR18_latin-extended-additional.py (regular)
-   37px :
-         helvetica.............ezFBfont_37_helvB18_latin-extended-additional.py (bold)
-         helvetica.............ezFBfont_37_helvR18_latin-extended-additional.py (regular)
-   39px :
-        schoolbook.............ezFBfont_39_ncenB18_latin-extended-additional.py (bold)
-   42px :
-           courier.............ezFBfont_42_courR24_latin-extended-additional.py (regular)
-   44px :
-           courier.............ezFBfont_44_courB24_latin-extended-additional.py (bold)
-   48px :
-             times..............ezFBfont_48_timR24_latin-extended-additional.py (regular)
-         helvetica.............ezFBfont_48_helvR24_latin-extended-additional.py (regular)
-   49px :
-             times..............ezFBfont_49_timB24_latin-extended-additional.py (bold)
-         helvetica.............ezFBfont_49_helvB24_latin-extended-additional.py (bold)
-   50px :
-        schoolbook.............ezFBfont_50_ncenR24_latin-extended-additional.py (regular)
-   52px :
-        schoolbook.............ezFBfont_52_ncenB24_latin-extended-additional.py (bold)
-
-character set: Geometric-shapes
--------------------------------
-    4px :
-             fixed..........................ezFBfont_04_4x6_geometric-shapes.py
-    7px :
-             times.......................ezFBfont_07_timR08_geometric-shapes.py (regular)
-             fixed..........................ezFBfont_07_5x7_geometric-shapes.py
-    8px :
-             fixed..........................ezFBfont_08_5x8_geometric-shapes.py
-            spleen...................ezFBfont_08_spleen_5x8_geometric-shapes.py
-    9px :
-             fixed..........................ezFBfont_09_6x9_geometric-shapes.py
-   10px :
-             fixed.........................ezFBfont_10_6x10_geometric-shapes.py
-           biwidth..........................ezFBfont_10_b10_geometric-shapes.py
-           biwidth........................ezFBfont_10_b10_b_geometric-shapes.py (bold)
-   11px :
-             times.......................ezFBfont_11_timR10_geometric-shapes.py (regular)
-   12px :
-             times.......................ezFBfont_12_timR12_geometric-shapes.py (regular)
-             fixed.........................ezFBfont_12_6x12_geometric-shapes.py
-            spleen..................ezFBfont_12_spleen_6x12_geometric-shapes.py
-           biwidth........................ezFBfont_12_b12_b_geometric-shapes.py (bold)
-           biwidth..........................ezFBfont_12_b12_geometric-shapes.py
-   13px :
-             fixed.........................ezFBfont_13_6x13_geometric-shapes.py
-             fixed.........................ezFBfont_13_7x13_geometric-shapes.py
-             fixed.........................ezFBfont_13_8x13_geometric-shapes.py
-   14px :
-             times.......................ezFBfont_14_timR14_geometric-shapes.py (regular)
-             fixed.........................ezFBfont_14_7x14_geometric-shapes.py
-           biwidth..........................ezFBfont_14_b14_geometric-shapes.py
-           biwidth........................ezFBfont_14_b14_b_geometric-shapes.py (bold)
-   15px :
-             fixed.........................ezFBfont_15_9x15_geometric-shapes.py
-   16px :
-            spleen..................ezFBfont_16_spleen_8x16_geometric-shapes.py
-           biwidth........................ezFBfont_16_b16_b_geometric-shapes.py (bold)
-           biwidth..........................ezFBfont_16_b16_geometric-shapes.py
-   18px :
-             times.......................ezFBfont_18_timR18_geometric-shapes.py (regular)
-             fixed.........................ezFBfont_18_9x18_geometric-shapes.py
-   20px :
-             fixed........................ezFBfont_20_10x20_geometric-shapes.py
-   24px :
-            spleen.................ezFBfont_24_spleen_12x24_geometric-shapes.py
-   25px :
-             times.......................ezFBfont_25_timR24_geometric-shapes.py (regular)
-   32px :
-            spleen.................ezFBfont_32_spleen_16x32_geometric-shapes.py
-   64px :
-            spleen.................ezFBfont_64_spleen_32x64_geometric-shapes.py
-
-character set: Greek-and-coptic
--------------------------------
-    6px :
-             fixed..........................ezFBfont_06_4x6_greek-and-coptic.py
-    7px :
-             fixed..........................ezFBfont_07_5x7_greek-and-coptic.py
-    8px :
-             fixed..........................ezFBfont_08_5x8_greek-and-coptic.py
-           biwidth..........................ezFBfont_08_b10_greek-and-coptic.py
-           biwidth........................ezFBfont_08_b10_b_greek-and-coptic.py (bold)
-    9px :
-             fixed..........................ezFBfont_09_6x9_greek-and-coptic.py
-   10px :
-             fixed.........................ezFBfont_10_6x10_greek-and-coptic.py
-   11px :
-           courier......................ezFBfont_11_courB08_greek-and-coptic.py (bold)
-           courier......................ezFBfont_11_courR08_greek-and-coptic.py (regular)
-   12px :
-             times.......................ezFBfont_12_timB08_greek-and-coptic.py (bold)
-             fixed.........................ezFBfont_12_8x13_greek-and-coptic.py
-             fixed.........................ezFBfont_12_7x13_greek-and-coptic.py
-             fixed.........................ezFBfont_12_6x13_greek-and-coptic.py
-             fixed.........................ezFBfont_12_6x12_greek-and-coptic.py
-        schoolbook......................ezFBfont_12_ncenR08_greek-and-coptic.py (regular)
-           biwidth........................ezFBfont_12_b12_b_greek-and-coptic.py (bold)
-           biwidth..........................ezFBfont_12_b12_greek-and-coptic.py
-   13px :
-         helvetica......................ezFBfont_13_helvR08_greek-and-coptic.py (regular)
-         helvetica......................ezFBfont_13_helvB08_greek-and-coptic.py (bold)
-             fixed.........................ezFBfont_13_7x14_greek-and-coptic.py
-        schoolbook......................ezFBfont_13_ncenB08_greek-and-coptic.py (bold)
-   14px :
-             times.......................ezFBfont_14_timR08_greek-and-coptic.py (regular)
-             fixed.........................ezFBfont_14_9x15_greek-and-coptic.py
-           biwidth..........................ezFBfont_14_b14_greek-and-coptic.py
-           biwidth........................ezFBfont_14_b14_b_greek-and-coptic.py (bold)
-   15px :
-           courier......................ezFBfont_15_courR10_greek-and-coptic.py (regular)
-   16px :
-           courier......................ezFBfont_16_courB10_greek-and-coptic.py (bold)
-         helvetica......................ezFBfont_16_helvR10_greek-and-coptic.py (regular)
-           biwidth........................ezFBfont_16_b16_b_greek-and-coptic.py (bold)
-           biwidth..........................ezFBfont_16_b16_greek-and-coptic.py
-   17px :
-             times.......................ezFBfont_17_timB10_greek-and-coptic.py (bold)
-           courier......................ezFBfont_17_courB12_greek-and-coptic.py (bold)
-           courier......................ezFBfont_17_courR12_greek-and-coptic.py (regular)
-         helvetica......................ezFBfont_17_helvB10_greek-and-coptic.py (bold)
-             fixed.........................ezFBfont_17_9x18_greek-and-coptic.py
-        schoolbook......................ezFBfont_17_ncenB10_greek-and-coptic.py (bold)
-        schoolbook......................ezFBfont_17_ncenR10_greek-and-coptic.py (regular)
-   18px :
-             times.......................ezFBfont_18_timB12_greek-and-coptic.py (bold)
-             times.......................ezFBfont_18_timR10_greek-and-coptic.py (regular)
-        schoolbook......................ezFBfont_18_ncenR12_greek-and-coptic.py (regular)
-        schoolbook......................ezFBfont_18_ncenB12_greek-and-coptic.py (bold)
-   19px :
-           courier......................ezFBfont_19_courB14_greek-and-coptic.py (bold)
-         helvetica......................ezFBfont_19_helvB12_greek-and-coptic.py (bold)
-             fixed........................ezFBfont_19_10x20_greek-and-coptic.py
-   20px :
-             times.......................ezFBfont_20_timB14_greek-and-coptic.py (bold)
-           courier......................ezFBfont_20_courR14_greek-and-coptic.py (regular)
-         helvetica......................ezFBfont_20_helvR12_greek-and-coptic.py (regular)
-        schoolbook......................ezFBfont_20_ncenR14_greek-and-coptic.py (regular)
-   21px :
-             times.......................ezFBfont_21_timR12_greek-and-coptic.py (regular)
-   22px :
-         helvetica......................ezFBfont_22_helvR14_greek-and-coptic.py (regular)
-         helvetica......................ezFBfont_22_helvB14_greek-and-coptic.py (bold)
-        schoolbook......................ezFBfont_22_ncenB14_greek-and-coptic.py (bold)
-   23px :
-             times.......................ezFBfont_23_timR14_greek-and-coptic.py (regular)
-   24px :
-           courier......................ezFBfont_24_courR18_greek-and-coptic.py (regular)
-   25px :
-           courier......................ezFBfont_25_courB18_greek-and-coptic.py (bold)
-   26px :
-             times.......................ezFBfont_26_timB18_greek-and-coptic.py (bold)
-   27px :
-        schoolbook......................ezFBfont_27_ncenR18_greek-and-coptic.py (regular)
-   28px :
-         helvetica......................ezFBfont_28_helvR18_greek-and-coptic.py (regular)
-         helvetica......................ezFBfont_28_helvB18_greek-and-coptic.py (bold)
-   29px :
-             times.......................ezFBfont_29_timR18_greek-and-coptic.py (regular)
-        schoolbook......................ezFBfont_29_ncenB18_greek-and-coptic.py (bold)
-   32px :
-           courier......................ezFBfont_32_courR24_greek-and-coptic.py (regular)
-   35px :
-             times.......................ezFBfont_35_timB24_greek-and-coptic.py (bold)
-           courier......................ezFBfont_35_courB24_greek-and-coptic.py (bold)
-   36px :
-        schoolbook......................ezFBfont_36_ncenR24_greek-and-coptic.py (regular)
-   37px :
-         helvetica......................ezFBfont_37_helvR24_greek-and-coptic.py (regular)
-        schoolbook......................ezFBfont_37_ncenB24_greek-and-coptic.py (bold)
-   38px :
-         helvetica......................ezFBfont_38_helvB24_greek-and-coptic.py (bold)
-   40px :
-             times.......................ezFBfont_40_timR24_greek-and-coptic.py (regular)
 
 character set: Latin-extended-b
 -------------------------------
@@ -1067,6 +262,99 @@ character set: Latin-extended-b
    64px :
             spleen.................ezFBfont_64_spleen_32x64_latin-extended-b.py
 
+character set: Ipa-extensions
+-----------------------------
+    4px :
+             fixed............................ezFBfont_04_6x9_ipa-extensions.py
+             fixed............................ezFBfont_04_4x6_ipa-extensions.py
+             fixed............................ezFBfont_04_5x8_ipa-extensions.py
+    5px :
+             fixed...........................ezFBfont_05_6x10_ipa-extensions.py
+    7px :
+             fixed............................ezFBfont_07_5x7_ipa-extensions.py
+           biwidth............................ezFBfont_07_b10_ipa-extensions.py
+           biwidth..........................ezFBfont_07_b10_b_ipa-extensions.py (bold)
+    9px :
+             times.........................ezFBfont_09_timR08_ipa-extensions.py (regular)
+           courier........................ezFBfont_09_courB08_ipa-extensions.py (bold)
+           courier........................ezFBfont_09_courR08_ipa-extensions.py (regular)
+   10px :
+         helvetica........................ezFBfont_10_helvB08_ipa-extensions.py (bold)
+         helvetica........................ezFBfont_10_helvR08_ipa-extensions.py (regular)
+             fixed...........................ezFBfont_10_6x12_ipa-extensions.py
+        schoolbook........................ezFBfont_10_ncenB08_ipa-extensions.py (bold)
+        schoolbook........................ezFBfont_10_ncenR08_ipa-extensions.py (regular)
+           biwidth............................ezFBfont_10_b12_ipa-extensions.py
+           biwidth..........................ezFBfont_10_b12_b_ipa-extensions.py (bold)
+   11px :
+             times.........................ezFBfont_11_timB08_ipa-extensions.py (bold)
+   12px :
+             fixed...........................ezFBfont_12_8x13_ipa-extensions.py
+             fixed...........................ezFBfont_12_7x13_ipa-extensions.py
+             fixed...........................ezFBfont_12_6x13_ipa-extensions.py
+   13px :
+             times.........................ezFBfont_13_timR10_ipa-extensions.py (regular)
+             times.........................ezFBfont_13_timB10_ipa-extensions.py (bold)
+           courier........................ezFBfont_13_courB10_ipa-extensions.py (bold)
+           courier........................ezFBfont_13_courR12_ipa-extensions.py (regular)
+           courier........................ezFBfont_13_courR10_ipa-extensions.py (regular)
+           biwidth............................ezFBfont_13_b16_ipa-extensions.py
+           biwidth..........................ezFBfont_13_b16_b_ipa-extensions.py (bold)
+           biwidth..........................ezFBfont_13_b14_b_ipa-extensions.py (bold)
+           biwidth............................ezFBfont_13_b14_ipa-extensions.py
+   14px :
+           courier........................ezFBfont_14_courB12_ipa-extensions.py (bold)
+         helvetica........................ezFBfont_14_helvR10_ipa-extensions.py (regular)
+         helvetica........................ezFBfont_14_helvB10_ipa-extensions.py (bold)
+             fixed...........................ezFBfont_14_9x15_ipa-extensions.py
+             fixed...........................ezFBfont_14_9x18_ipa-extensions.py
+             fixed...........................ezFBfont_14_7x14_ipa-extensions.py
+        schoolbook........................ezFBfont_14_ncenR10_ipa-extensions.py (regular)
+        schoolbook........................ezFBfont_14_ncenB10_ipa-extensions.py (bold)
+   15px :
+        schoolbook........................ezFBfont_15_ncenR12_ipa-extensions.py (regular)
+        schoolbook........................ezFBfont_15_ncenB12_ipa-extensions.py (bold)
+   16px :
+             times.........................ezFBfont_16_timB12_ipa-extensions.py (bold)
+             times.........................ezFBfont_16_timR12_ipa-extensions.py (regular)
+           courier........................ezFBfont_16_courR14_ipa-extensions.py (regular)
+         helvetica........................ezFBfont_16_helvR12_ipa-extensions.py (regular)
+   17px :
+             times.........................ezFBfont_17_timR14_ipa-extensions.py (regular)
+             times.........................ezFBfont_17_timB14_ipa-extensions.py (bold)
+           courier........................ezFBfont_17_courB14_ipa-extensions.py (bold)
+         helvetica........................ezFBfont_17_helvB12_ipa-extensions.py (bold)
+   18px :
+         helvetica........................ezFBfont_18_helvR14_ipa-extensions.py (regular)
+         helvetica........................ezFBfont_18_helvB14_ipa-extensions.py (bold)
+             fixed..........................ezFBfont_18_10x20_ipa-extensions.py
+        schoolbook........................ezFBfont_18_ncenB14_ipa-extensions.py (bold)
+        schoolbook........................ezFBfont_18_ncenR14_ipa-extensions.py (regular)
+   21px :
+           courier........................ezFBfont_21_courR18_ipa-extensions.py (regular)
+           courier........................ezFBfont_21_courB18_ipa-extensions.py (bold)
+   22px :
+             times.........................ezFBfont_22_timB18_ipa-extensions.py (bold)
+   23px :
+        schoolbook........................ezFBfont_23_ncenR18_ipa-extensions.py (regular)
+        schoolbook........................ezFBfont_23_ncenB18_ipa-extensions.py (bold)
+   24px :
+             times.........................ezFBfont_24_timR18_ipa-extensions.py (regular)
+         helvetica........................ezFBfont_24_helvR18_ipa-extensions.py (regular)
+         helvetica........................ezFBfont_24_helvB18_ipa-extensions.py (bold)
+   26px :
+           courier........................ezFBfont_26_courR24_ipa-extensions.py (regular)
+   29px :
+           courier........................ezFBfont_29_courB24_ipa-extensions.py (bold)
+   30px :
+             times.........................ezFBfont_30_timB24_ipa-extensions.py (bold)
+             times.........................ezFBfont_30_timR24_ipa-extensions.py (regular)
+   32px :
+         helvetica........................ezFBfont_32_helvB24_ipa-extensions.py (bold)
+         helvetica........................ezFBfont_32_helvR24_ipa-extensions.py (regular)
+        schoolbook........................ezFBfont_32_ncenR24_ipa-extensions.py (regular)
+        schoolbook........................ezFBfont_32_ncenB24_ipa-extensions.py (bold)
+
 character set: Spacing-modifier-letters
 ---------------------------------------
     6px :
@@ -1167,54 +455,1011 @@ character set: Spacing-modifier-letters
    62px :
             spleen.........ezFBfont_62_spleen_32x64_spacing-modifier-letters.py
 
-character set: Miscellaneous-symbols
-------------------------------------
-    5px :
-             times..................ezFBfont_05_timR08_miscellaneous-symbols.py (regular)
-             fixed.....................ezFBfont_05_4x6_miscellaneous-symbols.py
-            spleen.............ezFBfont_05_spleen_6x12_miscellaneous-symbols.py
-            spleen..............ezFBfont_05_spleen_5x8_miscellaneous-symbols.py
+character set: Combining-diacritical-marks
+------------------------------------------
     7px :
-             times..................ezFBfont_07_timR10_miscellaneous-symbols.py (regular)
-             fixed.....................ezFBfont_07_5x7_miscellaneous-symbols.py
-            spleen.............ezFBfont_07_spleen_8x16_miscellaneous-symbols.py
+             fixed...............ezFBfont_07_5x7_combining-diacritical-marks.py
     8px :
-             fixed.....................ezFBfont_08_6x9_miscellaneous-symbols.py
-             fixed.....................ezFBfont_08_5x8_miscellaneous-symbols.py
+             fixed...............ezFBfont_08_5x8_combining-diacritical-marks.py
     9px :
-             times..................ezFBfont_09_timR14_miscellaneous-symbols.py (regular)
+             fixed...............ezFBfont_09_6x9_combining-diacritical-marks.py
+           biwidth...............ezFBfont_09_b10_combining-diacritical-marks.py
+           biwidth.............ezFBfont_09_b10_b_combining-diacritical-marks.py (bold)
    10px :
-             times..................ezFBfont_10_timR12_miscellaneous-symbols.py (regular)
-             fixed....................ezFBfont_10_6x10_miscellaneous-symbols.py
-           biwidth...................ezFBfont_10_b10_b_miscellaneous-symbols.py (bold)
-           biwidth.....................ezFBfont_10_b10_miscellaneous-symbols.py
+             fixed..............ezFBfont_10_6x10_combining-diacritical-marks.py
    12px :
-             fixed....................ezFBfont_12_6x12_miscellaneous-symbols.py
-            spleen............ezFBfont_12_spleen_12x24_miscellaneous-symbols.py
-           biwidth...................ezFBfont_12_b12_b_miscellaneous-symbols.py (bold)
-           biwidth.....................ezFBfont_12_b12_miscellaneous-symbols.py
+             fixed..............ezFBfont_12_6x12_combining-diacritical-marks.py
+           biwidth...............ezFBfont_12_b12_combining-diacritical-marks.py
+           biwidth.............ezFBfont_12_b12_b_combining-diacritical-marks.py (bold)
    13px :
-             times..................ezFBfont_13_timR18_miscellaneous-symbols.py (regular)
-             fixed....................ezFBfont_13_6x13_miscellaneous-symbols.py
-             fixed....................ezFBfont_13_8x13_miscellaneous-symbols.py
-             fixed....................ezFBfont_13_7x13_miscellaneous-symbols.py
-             fixed....................ezFBfont_13_7x14_miscellaneous-symbols.py
-           biwidth.....................ezFBfont_13_b16_miscellaneous-symbols.py
-           biwidth...................ezFBfont_13_b16_b_miscellaneous-symbols.py (bold)
+             fixed..............ezFBfont_13_7x13_combining-diacritical-marks.py
+             fixed..............ezFBfont_13_6x13_combining-diacritical-marks.py
+             fixed..............ezFBfont_13_8x13_combining-diacritical-marks.py
    14px :
-           biwidth.....................ezFBfont_14_b14_miscellaneous-symbols.py
-           biwidth...................ezFBfont_14_b14_b_miscellaneous-symbols.py (bold)
+             fixed..............ezFBfont_14_7x14_combining-diacritical-marks.py
+           biwidth...............ezFBfont_14_b14_combining-diacritical-marks.py
+           biwidth.............ezFBfont_14_b14_b_combining-diacritical-marks.py (bold)
    15px :
-             fixed....................ezFBfont_15_9x15_miscellaneous-symbols.py
-             fixed....................ezFBfont_15_9x18_miscellaneous-symbols.py
+             fixed..............ezFBfont_15_9x15_combining-diacritical-marks.py
    16px :
-            spleen............ezFBfont_16_spleen_16x32_miscellaneous-symbols.py
+           biwidth.............ezFBfont_16_b16_b_combining-diacritical-marks.py (bold)
+           biwidth...............ezFBfont_16_b16_combining-diacritical-marks.py
    18px :
-             times..................ezFBfont_18_timR24_miscellaneous-symbols.py (regular)
+             fixed..............ezFBfont_18_9x18_combining-diacritical-marks.py
    20px :
-             fixed...................ezFBfont_20_10x20_miscellaneous-symbols.py
+             fixed.............ezFBfont_20_10x20_combining-diacritical-marks.py
+
+character set: Greek-and-coptic
+-------------------------------
+    6px :
+             fixed..........................ezFBfont_06_4x6_greek-and-coptic.py
+    7px :
+             fixed..........................ezFBfont_07_5x7_greek-and-coptic.py
+    8px :
+             fixed..........................ezFBfont_08_5x8_greek-and-coptic.py
+           biwidth..........................ezFBfont_08_b10_greek-and-coptic.py
+           biwidth........................ezFBfont_08_b10_b_greek-and-coptic.py (bold)
+    9px :
+             fixed..........................ezFBfont_09_6x9_greek-and-coptic.py
+   10px :
+             fixed.........................ezFBfont_10_6x10_greek-and-coptic.py
+   11px :
+           courier......................ezFBfont_11_courB08_greek-and-coptic.py (bold)
+           courier......................ezFBfont_11_courR08_greek-and-coptic.py (regular)
+   12px :
+             times.......................ezFBfont_12_timB08_greek-and-coptic.py (bold)
+             fixed.........................ezFBfont_12_8x13_greek-and-coptic.py
+             fixed.........................ezFBfont_12_7x13_greek-and-coptic.py
+             fixed.........................ezFBfont_12_6x13_greek-and-coptic.py
+             fixed.........................ezFBfont_12_6x12_greek-and-coptic.py
+        schoolbook......................ezFBfont_12_ncenR08_greek-and-coptic.py (regular)
+           biwidth........................ezFBfont_12_b12_b_greek-and-coptic.py (bold)
+           biwidth..........................ezFBfont_12_b12_greek-and-coptic.py
+   13px :
+         helvetica......................ezFBfont_13_helvR08_greek-and-coptic.py (regular)
+         helvetica......................ezFBfont_13_helvB08_greek-and-coptic.py (bold)
+             fixed.........................ezFBfont_13_7x14_greek-and-coptic.py
+        schoolbook......................ezFBfont_13_ncenB08_greek-and-coptic.py (bold)
+   14px :
+             times.......................ezFBfont_14_timR08_greek-and-coptic.py (regular)
+             fixed.........................ezFBfont_14_9x15_greek-and-coptic.py
+           biwidth..........................ezFBfont_14_b14_greek-and-coptic.py
+           biwidth........................ezFBfont_14_b14_b_greek-and-coptic.py (bold)
+   15px :
+           courier......................ezFBfont_15_courR10_greek-and-coptic.py (regular)
+   16px :
+           courier......................ezFBfont_16_courB10_greek-and-coptic.py (bold)
+         helvetica......................ezFBfont_16_helvR10_greek-and-coptic.py (regular)
+           biwidth........................ezFBfont_16_b16_b_greek-and-coptic.py (bold)
+           biwidth..........................ezFBfont_16_b16_greek-and-coptic.py
+   17px :
+             times.......................ezFBfont_17_timB10_greek-and-coptic.py (bold)
+           courier......................ezFBfont_17_courB12_greek-and-coptic.py (bold)
+           courier......................ezFBfont_17_courR12_greek-and-coptic.py (regular)
+         helvetica......................ezFBfont_17_helvB10_greek-and-coptic.py (bold)
+             fixed.........................ezFBfont_17_9x18_greek-and-coptic.py
+        schoolbook......................ezFBfont_17_ncenB10_greek-and-coptic.py (bold)
+        schoolbook......................ezFBfont_17_ncenR10_greek-and-coptic.py (regular)
+   18px :
+             times.......................ezFBfont_18_timB12_greek-and-coptic.py (bold)
+             times.......................ezFBfont_18_timR10_greek-and-coptic.py (regular)
+        schoolbook......................ezFBfont_18_ncenR12_greek-and-coptic.py (regular)
+        schoolbook......................ezFBfont_18_ncenB12_greek-and-coptic.py (bold)
+   19px :
+           courier......................ezFBfont_19_courB14_greek-and-coptic.py (bold)
+         helvetica......................ezFBfont_19_helvB12_greek-and-coptic.py (bold)
+             fixed........................ezFBfont_19_10x20_greek-and-coptic.py
+   20px :
+             times.......................ezFBfont_20_timB14_greek-and-coptic.py (bold)
+           courier......................ezFBfont_20_courR14_greek-and-coptic.py (regular)
+         helvetica......................ezFBfont_20_helvR12_greek-and-coptic.py (regular)
+        schoolbook......................ezFBfont_20_ncenR14_greek-and-coptic.py (regular)
+   21px :
+             times.......................ezFBfont_21_timR12_greek-and-coptic.py (regular)
+   22px :
+         helvetica......................ezFBfont_22_helvR14_greek-and-coptic.py (regular)
+         helvetica......................ezFBfont_22_helvB14_greek-and-coptic.py (bold)
+        schoolbook......................ezFBfont_22_ncenB14_greek-and-coptic.py (bold)
+   23px :
+             times.......................ezFBfont_23_timR14_greek-and-coptic.py (regular)
+   24px :
+           courier......................ezFBfont_24_courR18_greek-and-coptic.py (regular)
+   25px :
+           courier......................ezFBfont_25_courB18_greek-and-coptic.py (bold)
+   26px :
+             times.......................ezFBfont_26_timB18_greek-and-coptic.py (bold)
+   27px :
+        schoolbook......................ezFBfont_27_ncenR18_greek-and-coptic.py (regular)
+   28px :
+         helvetica......................ezFBfont_28_helvR18_greek-and-coptic.py (regular)
+         helvetica......................ezFBfont_28_helvB18_greek-and-coptic.py (bold)
+   29px :
+             times.......................ezFBfont_29_timR18_greek-and-coptic.py (regular)
+        schoolbook......................ezFBfont_29_ncenB18_greek-and-coptic.py (bold)
    32px :
-            spleen............ezFBfont_32_spleen_32x64_miscellaneous-symbols.py
+           courier......................ezFBfont_32_courR24_greek-and-coptic.py (regular)
+   35px :
+             times.......................ezFBfont_35_timB24_greek-and-coptic.py (bold)
+           courier......................ezFBfont_35_courB24_greek-and-coptic.py (bold)
+   36px :
+        schoolbook......................ezFBfont_36_ncenR24_greek-and-coptic.py (regular)
+   37px :
+         helvetica......................ezFBfont_37_helvR24_greek-and-coptic.py (regular)
+        schoolbook......................ezFBfont_37_ncenB24_greek-and-coptic.py (bold)
+   38px :
+         helvetica......................ezFBfont_38_helvB24_greek-and-coptic.py (bold)
+   40px :
+             times.......................ezFBfont_40_timR24_greek-and-coptic.py (regular)
+
+character set: Cyrillic
+-----------------------
+    6px :
+             fixed..................................ezFBfont_06_4x6_cyrillic.py
+    7px :
+             fixed..................................ezFBfont_07_5x7_cyrillic.py
+    8px :
+             fixed..................................ezFBfont_08_5x8_cyrillic.py
+           biwidth..................................ezFBfont_08_b10_cyrillic.py
+           biwidth................................ezFBfont_08_b10_b_cyrillic.py (bold)
+    9px :
+             fixed..................................ezFBfont_09_6x9_cyrillic.py
+   10px :
+             fixed.................................ezFBfont_10_6x10_cyrillic.py
+   12px :
+             fixed.................................ezFBfont_12_6x12_cyrillic.py
+           biwidth..................................ezFBfont_12_b12_cyrillic.py
+           biwidth................................ezFBfont_12_b12_b_cyrillic.py (bold)
+   13px :
+             fixed.................................ezFBfont_13_8x13_cyrillic.py
+             fixed.................................ezFBfont_13_6x13_cyrillic.py
+             fixed.................................ezFBfont_13_7x13_cyrillic.py
+   14px :
+             fixed.................................ezFBfont_14_7x14_cyrillic.py
+           biwidth................................ezFBfont_14_b14_b_cyrillic.py (bold)
+           biwidth..................................ezFBfont_14_b14_cyrillic.py
+   15px :
+             fixed.................................ezFBfont_15_9x15_cyrillic.py
+   16px :
+           biwidth................................ezFBfont_16_b16_b_cyrillic.py (bold)
+           biwidth..................................ezFBfont_16_b16_cyrillic.py
+   17px :
+             fixed.................................ezFBfont_17_9x18_cyrillic.py
+   20px :
+             fixed................................ezFBfont_20_10x20_cyrillic.py
+
+character set: Cyrillic-supplement
+----------------------------------
+    9px :
+             fixed......................ezFBfont_09_6x12_cyrillic-supplement.py
+   11px :
+             fixed......................ezFBfont_11_6x13_cyrillic-supplement.py
+             fixed......................ezFBfont_11_8x13_cyrillic-supplement.py
+   12px :
+             fixed......................ezFBfont_12_7x14_cyrillic-supplement.py
+             fixed......................ezFBfont_12_9x15_cyrillic-supplement.py
+             fixed......................ezFBfont_12_9x18_cyrillic-supplement.py
+   17px :
+             fixed.....................ezFBfont_17_10x20_cyrillic-supplement.py
+
+character set: Armenian
+-----------------------
+   12px :
+             fixed.................................ezFBfont_12_8x13_armenian.py
+             fixed.................................ezFBfont_12_7x14_armenian.py
+             fixed.................................ezFBfont_12_6x13_armenian.py
+             fixed.................................ezFBfont_12_6x12_armenian.py
+             fixed.................................ezFBfont_12_7x13_armenian.py
+   14px :
+           biwidth..................................ezFBfont_14_b14_armenian.py
+           biwidth................................ezFBfont_14_b14_b_armenian.py (bold)
+   15px :
+             fixed.................................ezFBfont_15_9x15_armenian.py
+             fixed.................................ezFBfont_15_9x18_armenian.py
+   16px :
+           biwidth................................ezFBfont_16_b16_b_armenian.py (bold)
+           biwidth..................................ezFBfont_16_b16_armenian.py
+   17px :
+             fixed................................ezFBfont_17_10x20_armenian.py
+
+character set: Hebrew
+---------------------
+    5px :
+             fixed....................................ezFBfont_05_5x7_hebrew.py
+             fixed....................................ezFBfont_05_5x8_hebrew.py
+           biwidth....................................ezFBfont_05_b10_hebrew.py
+           biwidth..................................ezFBfont_05_b10_b_hebrew.py (bold)
+    6px :
+             fixed....................................ezFBfont_06_4x6_hebrew.py
+    8px :
+             fixed....................................ezFBfont_08_6x9_hebrew.py
+    9px :
+             fixed...................................ezFBfont_09_6x10_hebrew.py
+   10px :
+           biwidth....................................ezFBfont_10_b12_hebrew.py
+           biwidth..................................ezFBfont_10_b12_b_hebrew.py (bold)
+   11px :
+             fixed...................................ezFBfont_11_7x13_hebrew.py
+   12px :
+             fixed...................................ezFBfont_12_7x14_hebrew.py
+             fixed...................................ezFBfont_12_8x13_hebrew.py
+             fixed...................................ezFBfont_12_6x12_hebrew.py
+   13px :
+             fixed...................................ezFBfont_13_6x13_hebrew.py
+           biwidth....................................ezFBfont_13_b14_hebrew.py
+           biwidth..................................ezFBfont_13_b14_b_hebrew.py (bold)
+   14px :
+             fixed...................................ezFBfont_14_9x15_hebrew.py
+   15px :
+             fixed...................................ezFBfont_15_9x18_hebrew.py
+   16px :
+           biwidth..................................ezFBfont_16_b16_b_hebrew.py (bold)
+           biwidth....................................ezFBfont_16_b16_hebrew.py
+   19px :
+             fixed..................................ezFBfont_19_10x20_hebrew.py
+
+character set: Arabic
+---------------------
+   15px :
+             fixed...................................ezFBfont_15_9x15_arabic.py
+           biwidth....................................ezFBfont_15_b16_arabic.py
+           biwidth..................................ezFBfont_15_b16_b_arabic.py (bold)
+   20px :
+             fixed..................................ezFBfont_20_10x20_arabic.py
+
+character set: Devanagari
+-------------------------
+   16px :
+           biwidth................................ezFBfont_16_b16_devanagari.py
+           biwidth..............................ezFBfont_16_b16_b_devanagari.py (bold)
+
+character set: Thai
+-------------------
+   13px :
+             fixed.....................................ezFBfont_13_6x13_thai.py
+             fixed.....................................ezFBfont_13_8x13_thai.py
+             fixed.....................................ezFBfont_13_7x13_thai.py
+   14px :
+             fixed.....................................ezFBfont_14_7x14_thai.py
+           biwidth......................................ezFBfont_14_b14_thai.py
+           biwidth....................................ezFBfont_14_b14_b_thai.py (bold)
+   15px :
+             fixed.....................................ezFBfont_15_9x15_thai.py
+   16px :
+           biwidth......................................ezFBfont_16_b16_thai.py
+           biwidth....................................ezFBfont_16_b16_b_thai.py (bold)
+   18px :
+             fixed.....................................ezFBfont_18_9x18_thai.py
+   20px :
+             fixed....................................ezFBfont_20_10x20_thai.py
+
+character set: Lao
+------------------
+    1px :
+          fixed4x6.................................ezFBfont_01_tom_thumb_lao.py
+   14px :
+           biwidth.....................................ezFBfont_14_b14_b_lao.py (bold)
+           biwidth.......................................ezFBfont_14_b14_lao.py
+   15px :
+             fixed......................................ezFBfont_15_9x15_lao.py
+   16px :
+           biwidth.......................................ezFBfont_16_b16_lao.py
+           biwidth.....................................ezFBfont_16_b16_b_lao.py (bold)
+
+character set: Georgian
+-----------------------
+   12px :
+             fixed.................................ezFBfont_12_7x13_georgian.py
+             fixed.................................ezFBfont_12_6x13_georgian.py
+             fixed.................................ezFBfont_12_8x13_georgian.py
+           biwidth................................ezFBfont_12_b14_b_georgian.py (bold)
+           biwidth..................................ezFBfont_12_b14_georgian.py
+   14px :
+           biwidth................................ezFBfont_14_b16_b_georgian.py (bold)
+           biwidth..................................ezFBfont_14_b16_georgian.py
+   15px :
+             fixed.................................ezFBfont_15_9x15_georgian.py
+             fixed.................................ezFBfont_15_9x18_georgian.py
+   20px :
+             fixed................................ezFBfont_20_10x20_georgian.py
+
+character set: Hangul-jamo
+--------------------------
+    8px :
+             fixed..............................ezFBfont_08_6x13_hangul-jamo.py
+   14px :
+           biwidth...............................ezFBfont_14_b14_hangul-jamo.py
+           biwidth.............................ezFBfont_14_b14_b_hangul-jamo.py (bold)
+
+character set: Ethiopic
+-----------------------
+   13px :
+             fixed.................................ezFBfont_13_9x15_ethiopic.py
+             fixed.................................ezFBfont_13_9x18_ethiopic.py
+   17px :
+             fixed................................ezFBfont_17_10x20_ethiopic.py
+
+character set: Cherokee
+-----------------------
+    1px :
+          fixed4x6............................ezFBfont_01_tom_thumb_cherokee.py
+   11px :
+             fixed.................................ezFBfont_11_9x18_cherokee.py
+
+character set: Unified-canadian-aboriginal-syllabics
+----------------------------------------------------
+   14px :
+             fixed....ezFBfont_14_9x18_unified-canadian-aboriginal-syllabics.py
+
+character set: Ogham
+--------------------
+   10px :
+             fixed....................................ezFBfont_10_6x12_ogham.py
+             fixed....................................ezFBfont_10_6x13_ogham.py
+   15px :
+             fixed...................................ezFBfont_15_10x20_ogham.py
+
+character set: Runic
+--------------------
+    6px :
+             fixed.....................................ezFBfont_06_5x7_runic.py
+           biwidth...................................ezFBfont_06_b10_b_runic.py (bold)
+           biwidth.....................................ezFBfont_06_b10_runic.py
+    7px :
+             fixed....................................ezFBfont_07_6x10_runic.py
+    9px :
+             fixed....................................ezFBfont_09_7x13_runic.py
+   10px :
+             fixed....................................ezFBfont_10_7x14_runic.py
+             fixed....................................ezFBfont_10_6x12_runic.py
+           biwidth...................................ezFBfont_10_b14_b_runic.py (bold)
+           biwidth.....................................ezFBfont_10_b14_runic.py
+   11px :
+             fixed....................................ezFBfont_11_8x13_runic.py
+             fixed....................................ezFBfont_11_9x15_runic.py
+             fixed....................................ezFBfont_11_9x18_runic.py
+             fixed....................................ezFBfont_11_6x13_runic.py
+           biwidth...................................ezFBfont_11_b16_b_runic.py (bold)
+           biwidth.....................................ezFBfont_11_b16_runic.py
+   15px :
+             fixed...................................ezFBfont_15_10x20_runic.py
+
+character set: Phonetic-extensions
+----------------------------------
+   19px :
+             fixed.....................ezFBfont_19_10x20_phonetic-extensions.py
+
+character set: Latin-extended-additional
+----------------------------------------
+    6px :
+             fixed.................ezFBfont_06_4x6_latin-extended-additional.py
+    7px :
+             fixed.................ezFBfont_07_5x7_latin-extended-additional.py
+    8px :
+             fixed.................ezFBfont_08_5x8_latin-extended-additional.py
+           biwidth.................ezFBfont_08_b10_latin-extended-additional.py
+           biwidth...............ezFBfont_08_b10_b_latin-extended-additional.py (bold)
+    9px :
+             fixed.................ezFBfont_09_6x9_latin-extended-additional.py
+   10px :
+             fixed................ezFBfont_10_6x10_latin-extended-additional.py
+   12px :
+             fixed................ezFBfont_12_6x12_latin-extended-additional.py
+           biwidth...............ezFBfont_12_b12_b_latin-extended-additional.py (bold)
+           biwidth.................ezFBfont_12_b12_latin-extended-additional.py
+   13px :
+             fixed................ezFBfont_13_6x13_latin-extended-additional.py
+             fixed................ezFBfont_13_8x13_latin-extended-additional.py
+             fixed................ezFBfont_13_7x13_latin-extended-additional.py
+   14px :
+             fixed................ezFBfont_14_7x14_latin-extended-additional.py
+           biwidth...............ezFBfont_14_b14_b_latin-extended-additional.py (bold)
+           biwidth.................ezFBfont_14_b14_latin-extended-additional.py
+   15px :
+             fixed................ezFBfont_15_9x15_latin-extended-additional.py
+   16px :
+           courier.............ezFBfont_16_courB08_latin-extended-additional.py (bold)
+           courier.............ezFBfont_16_courR08_latin-extended-additional.py (regular)
+           biwidth...............ezFBfont_16_b16_b_latin-extended-additional.py (bold)
+           biwidth.................ezFBfont_16_b16_latin-extended-additional.py
+   17px :
+             times..............ezFBfont_17_timR08_latin-extended-additional.py (regular)
+   18px :
+             times..............ezFBfont_18_timB08_latin-extended-additional.py (bold)
+         helvetica.............ezFBfont_18_helvB08_latin-extended-additional.py (bold)
+         helvetica.............ezFBfont_18_helvR08_latin-extended-additional.py (regular)
+             fixed................ezFBfont_18_9x18_latin-extended-additional.py
+        schoolbook.............ezFBfont_18_ncenR08_latin-extended-additional.py (regular)
+   19px :
+        schoolbook.............ezFBfont_19_ncenB08_latin-extended-additional.py (bold)
+   20px :
+           courier.............ezFBfont_20_courR10_latin-extended-additional.py (regular)
+             fixed...............ezFBfont_20_10x20_latin-extended-additional.py
+   21px :
+           courier.............ezFBfont_21_courB10_latin-extended-additional.py (bold)
+   22px :
+         helvetica.............ezFBfont_22_helvR10_latin-extended-additional.py (regular)
+   23px :
+         helvetica.............ezFBfont_23_helvB10_latin-extended-additional.py (bold)
+   24px :
+             times..............ezFBfont_24_timB10_latin-extended-additional.py (bold)
+             times..............ezFBfont_24_timR10_latin-extended-additional.py (regular)
+           courier.............ezFBfont_24_courB12_latin-extended-additional.py (bold)
+           courier.............ezFBfont_24_courR12_latin-extended-additional.py (regular)
+        schoolbook.............ezFBfont_24_ncenR10_latin-extended-additional.py (regular)
+   25px :
+        schoolbook.............ezFBfont_25_ncenB10_latin-extended-additional.py (bold)
+   26px :
+             times..............ezFBfont_26_timR12_latin-extended-additional.py (regular)
+             times..............ezFBfont_26_timB12_latin-extended-additional.py (bold)
+           courier.............ezFBfont_26_courR14_latin-extended-additional.py (regular)
+           courier.............ezFBfont_26_courB14_latin-extended-additional.py (bold)
+         helvetica.............ezFBfont_26_helvR12_latin-extended-additional.py (regular)
+        schoolbook.............ezFBfont_26_ncenB12_latin-extended-additional.py (bold)
+        schoolbook.............ezFBfont_26_ncenR12_latin-extended-additional.py (regular)
+   27px :
+         helvetica.............ezFBfont_27_helvB12_latin-extended-additional.py (bold)
+   28px :
+             times..............ezFBfont_28_timR14_latin-extended-additional.py (regular)
+             times..............ezFBfont_28_timB14_latin-extended-additional.py (bold)
+   29px :
+         helvetica.............ezFBfont_29_helvB14_latin-extended-additional.py (bold)
+         helvetica.............ezFBfont_29_helvR14_latin-extended-additional.py (regular)
+        schoolbook.............ezFBfont_29_ncenR14_latin-extended-additional.py (regular)
+   31px :
+        schoolbook.............ezFBfont_31_ncenB14_latin-extended-additional.py (bold)
+   32px :
+           courier.............ezFBfont_32_courR18_latin-extended-additional.py (regular)
+   35px :
+             times..............ezFBfont_35_timB18_latin-extended-additional.py (bold)
+           courier.............ezFBfont_35_courB18_latin-extended-additional.py (bold)
+   36px :
+             times..............ezFBfont_36_timR18_latin-extended-additional.py (regular)
+        schoolbook.............ezFBfont_36_ncenR18_latin-extended-additional.py (regular)
+   37px :
+         helvetica.............ezFBfont_37_helvB18_latin-extended-additional.py (bold)
+         helvetica.............ezFBfont_37_helvR18_latin-extended-additional.py (regular)
+   39px :
+        schoolbook.............ezFBfont_39_ncenB18_latin-extended-additional.py (bold)
+   42px :
+           courier.............ezFBfont_42_courR24_latin-extended-additional.py (regular)
+   44px :
+           courier.............ezFBfont_44_courB24_latin-extended-additional.py (bold)
+   48px :
+             times..............ezFBfont_48_timR24_latin-extended-additional.py (regular)
+         helvetica.............ezFBfont_48_helvR24_latin-extended-additional.py (regular)
+   49px :
+             times..............ezFBfont_49_timB24_latin-extended-additional.py (bold)
+         helvetica.............ezFBfont_49_helvB24_latin-extended-additional.py (bold)
+   50px :
+        schoolbook.............ezFBfont_50_ncenR24_latin-extended-additional.py (regular)
+   52px :
+        schoolbook.............ezFBfont_52_ncenB24_latin-extended-additional.py (bold)
+
+character set: Greek-extended
+-----------------------------
+    7px :
+             fixed............................ezFBfont_07_5x7_greek-extended.py
+           biwidth............................ezFBfont_07_b10_greek-extended.py
+           biwidth..........................ezFBfont_07_b10_b_greek-extended.py (bold)
+    9px :
+           biwidth..........................ezFBfont_09_b12_b_greek-extended.py (bold)
+           biwidth............................ezFBfont_09_b12_greek-extended.py
+   10px :
+             fixed...........................ezFBfont_10_6x10_greek-extended.py
+   12px :
+             fixed...........................ezFBfont_12_6x12_greek-extended.py
+   13px :
+             fixed...........................ezFBfont_13_7x13_greek-extended.py
+             fixed...........................ezFBfont_13_6x13_greek-extended.py
+             fixed...........................ezFBfont_13_8x13_greek-extended.py
+   14px :
+             fixed...........................ezFBfont_14_7x14_greek-extended.py
+           biwidth..........................ezFBfont_14_b14_b_greek-extended.py (bold)
+           biwidth............................ezFBfont_14_b14_greek-extended.py
+   15px :
+             fixed...........................ezFBfont_15_9x15_greek-extended.py
+   16px :
+           biwidth..........................ezFBfont_16_b16_b_greek-extended.py (bold)
+           biwidth............................ezFBfont_16_b16_greek-extended.py
+   17px :
+             fixed...........................ezFBfont_17_9x18_greek-extended.py
+   19px :
+             fixed..........................ezFBfont_19_10x20_greek-extended.py
+
+character set: General-punctuation
+----------------------------------
+    3px :
+       amstrad-cpc......ezFBfont_03_amstrad_cpc_extended_general-punctuation.py
+          fixed4x6.................ezFBfont_03_tom_thumb_general-punctuation.py
+    6px :
+             fixed.......................ezFBfont_06_4x6_general-punctuation.py
+    7px :
+             fixed.......................ezFBfont_07_5x7_general-punctuation.py
+    8px :
+           courier...................ezFBfont_08_courB08_general-punctuation.py (bold)
+             fixed.......................ezFBfont_08_5x8_general-punctuation.py
+    9px :
+             times....................ezFBfont_09_timR08_general-punctuation.py (regular)
+             times....................ezFBfont_09_timB08_general-punctuation.py (bold)
+             fixed.......................ezFBfont_09_6x9_general-punctuation.py
+           biwidth.....................ezFBfont_09_b10_b_general-punctuation.py (bold)
+           biwidth.......................ezFBfont_09_b10_general-punctuation.py
+   10px :
+           courier...................ezFBfont_10_courR08_general-punctuation.py (regular)
+         helvetica...................ezFBfont_10_helvB08_general-punctuation.py (bold)
+         helvetica...................ezFBfont_10_helvR08_general-punctuation.py (regular)
+             fixed......................ezFBfont_10_6x10_general-punctuation.py
+        schoolbook...................ezFBfont_10_ncenR08_general-punctuation.py (regular)
+        schoolbook...................ezFBfont_10_ncenB08_general-punctuation.py (bold)
+   11px :
+           biwidth.......................ezFBfont_11_b12_general-punctuation.py
+           biwidth.....................ezFBfont_11_b12_b_general-punctuation.py (bold)
+   12px :
+             times....................ezFBfont_12_timB10_general-punctuation.py (bold)
+             times....................ezFBfont_12_timR10_general-punctuation.py (regular)
+           courier...................ezFBfont_12_courR10_general-punctuation.py (regular)
+           courier...................ezFBfont_12_courB10_general-punctuation.py (bold)
+             fixed......................ezFBfont_12_8x13_general-punctuation.py
+             fixed......................ezFBfont_12_6x12_general-punctuation.py
+             fixed......................ezFBfont_12_6x13_general-punctuation.py
+            spleen...............ezFBfont_12_spleen_8x16_general-punctuation.py
+   13px :
+             fixed......................ezFBfont_13_7x14_general-punctuation.py
+             fixed......................ezFBfont_13_7x13_general-punctuation.py
+        schoolbook...................ezFBfont_13_ncenB10_general-punctuation.py (bold)
+   14px :
+           courier...................ezFBfont_14_courB12_general-punctuation.py (bold)
+           courier...................ezFBfont_14_courR12_general-punctuation.py (regular)
+         helvetica...................ezFBfont_14_helvB10_general-punctuation.py (bold)
+         helvetica...................ezFBfont_14_helvR10_general-punctuation.py (regular)
+        schoolbook...................ezFBfont_14_ncenR10_general-punctuation.py (regular)
+           biwidth.....................ezFBfont_14_b14_b_general-punctuation.py (bold)
+           biwidth.......................ezFBfont_14_b14_general-punctuation.py
+   15px :
+             times....................ezFBfont_15_timR12_general-punctuation.py (regular)
+           courier...................ezFBfont_15_courR14_general-punctuation.py (regular)
+           courier...................ezFBfont_15_courB14_general-punctuation.py (bold)
+         helvetica...................ezFBfont_15_helvR12_general-punctuation.py (regular)
+         helvetica...................ezFBfont_15_helvB12_general-punctuation.py (bold)
+             fixed......................ezFBfont_15_9x18_general-punctuation.py
+             fixed......................ezFBfont_15_9x15_general-punctuation.py
+        schoolbook...................ezFBfont_15_ncenR12_general-punctuation.py (regular)
+        schoolbook...................ezFBfont_15_ncenB12_general-punctuation.py (bold)
+   16px :
+             times....................ezFBfont_16_timR14_general-punctuation.py (regular)
+             times....................ezFBfont_16_timB14_general-punctuation.py (bold)
+             times....................ezFBfont_16_timB12_general-punctuation.py (bold)
+           biwidth.....................ezFBfont_16_b16_b_general-punctuation.py (bold)
+           biwidth.......................ezFBfont_16_b16_general-punctuation.py
+   17px :
+        schoolbook...................ezFBfont_17_ncenR14_general-punctuation.py (regular)
+        schoolbook...................ezFBfont_17_ncenB14_general-punctuation.py (bold)
+   18px :
+         helvetica...................ezFBfont_18_helvR14_general-punctuation.py (regular)
+         helvetica...................ezFBfont_18_helvB14_general-punctuation.py (bold)
+   19px :
+           courier...................ezFBfont_19_courR18_general-punctuation.py (regular)
+           courier...................ezFBfont_19_courB18_general-punctuation.py (bold)
+            spleen..............ezFBfont_19_spleen_12x24_general-punctuation.py
+   20px :
+             fixed.....................ezFBfont_20_10x20_general-punctuation.py
+   21px :
+             times....................ezFBfont_21_timR18_general-punctuation.py (regular)
+   22px :
+             times....................ezFBfont_22_timB18_general-punctuation.py (bold)
+        schoolbook...................ezFBfont_22_ncenR18_general-punctuation.py (regular)
+        schoolbook...................ezFBfont_22_ncenB18_general-punctuation.py (bold)
+   24px :
+         helvetica...................ezFBfont_24_helvB18_general-punctuation.py (bold)
+         helvetica...................ezFBfont_24_helvR18_general-punctuation.py (regular)
+            spleen..............ezFBfont_24_spleen_16x32_general-punctuation.py
+   26px :
+           courier...................ezFBfont_26_courB24_general-punctuation.py (bold)
+   27px :
+           courier...................ezFBfont_27_courR24_general-punctuation.py (regular)
+   29px :
+             times....................ezFBfont_29_timB24_general-punctuation.py (bold)
+   30px :
+             times....................ezFBfont_30_timR24_general-punctuation.py (regular)
+        schoolbook...................ezFBfont_30_ncenR24_general-punctuation.py (regular)
+   31px :
+         helvetica...................ezFBfont_31_helvR24_general-punctuation.py (regular)
+        schoolbook...................ezFBfont_31_ncenB24_general-punctuation.py (bold)
+   32px :
+         helvetica...................ezFBfont_32_helvB24_general-punctuation.py (bold)
+   48px :
+            spleen..............ezFBfont_48_spleen_32x64_general-punctuation.py
+
+character set: Superscripts-and-subscripts
+------------------------------------------
+    3px :
+             fixed...............ezFBfont_03_4x6_superscripts-and-subscripts.py
+    4px :
+             times............ezFBfont_04_timB08_superscripts-and-subscripts.py (bold)
+             times............ezFBfont_04_timR08_superscripts-and-subscripts.py (regular)
+           courier...........ezFBfont_04_courB08_superscripts-and-subscripts.py (bold)
+           courier...........ezFBfont_04_courR08_superscripts-and-subscripts.py (regular)
+         helvetica...........ezFBfont_04_helvB08_superscripts-and-subscripts.py (bold)
+         helvetica...........ezFBfont_04_helvR08_superscripts-and-subscripts.py (regular)
+        schoolbook...........ezFBfont_04_ncenR08_superscripts-and-subscripts.py (regular)
+        schoolbook...........ezFBfont_04_ncenB08_superscripts-and-subscripts.py (bold)
+    6px :
+             times............ezFBfont_06_timB10_superscripts-and-subscripts.py (bold)
+             times............ezFBfont_06_timR10_superscripts-and-subscripts.py (regular)
+           courier...........ezFBfont_06_courB12_superscripts-and-subscripts.py (bold)
+           courier...........ezFBfont_06_courB10_superscripts-and-subscripts.py (bold)
+           courier...........ezFBfont_06_courR10_superscripts-and-subscripts.py (regular)
+           courier...........ezFBfont_06_courR12_superscripts-and-subscripts.py (regular)
+         helvetica...........ezFBfont_06_helvR10_superscripts-and-subscripts.py (regular)
+         helvetica...........ezFBfont_06_helvB10_superscripts-and-subscripts.py (bold)
+        schoolbook...........ezFBfont_06_ncenR10_superscripts-and-subscripts.py (regular)
+        schoolbook...........ezFBfont_06_ncenB10_superscripts-and-subscripts.py (bold)
+    7px :
+             times............ezFBfont_07_timB12_superscripts-and-subscripts.py (bold)
+             times............ezFBfont_07_timR12_superscripts-and-subscripts.py (regular)
+           courier...........ezFBfont_07_courR14_superscripts-and-subscripts.py (regular)
+           courier...........ezFBfont_07_courB14_superscripts-and-subscripts.py (bold)
+         helvetica...........ezFBfont_07_helvR12_superscripts-and-subscripts.py (regular)
+         helvetica...........ezFBfont_07_helvB12_superscripts-and-subscripts.py (bold)
+             fixed...............ezFBfont_07_5x7_superscripts-and-subscripts.py
+        schoolbook...........ezFBfont_07_ncenB12_superscripts-and-subscripts.py (bold)
+        schoolbook...........ezFBfont_07_ncenR12_superscripts-and-subscripts.py (regular)
+    8px :
+             times............ezFBfont_08_timB14_superscripts-and-subscripts.py (bold)
+             times............ezFBfont_08_timR14_superscripts-and-subscripts.py (regular)
+         helvetica...........ezFBfont_08_helvR14_superscripts-and-subscripts.py (regular)
+         helvetica...........ezFBfont_08_helvB14_superscripts-and-subscripts.py (bold)
+             fixed...............ezFBfont_08_5x8_superscripts-and-subscripts.py
+             fixed...............ezFBfont_08_6x9_superscripts-and-subscripts.py
+        schoolbook...........ezFBfont_08_ncenR14_superscripts-and-subscripts.py (regular)
+        schoolbook...........ezFBfont_08_ncenB14_superscripts-and-subscripts.py (bold)
+           biwidth...............ezFBfont_08_b10_superscripts-and-subscripts.py
+           biwidth.............ezFBfont_08_b10_b_superscripts-and-subscripts.py (bold)
+    9px :
+           courier...........ezFBfont_09_courB18_superscripts-and-subscripts.py (bold)
+           courier...........ezFBfont_09_courR18_superscripts-and-subscripts.py (regular)
+   10px :
+             times............ezFBfont_10_timB18_superscripts-and-subscripts.py (bold)
+             times............ezFBfont_10_timR18_superscripts-and-subscripts.py (regular)
+         helvetica...........ezFBfont_10_helvR18_superscripts-and-subscripts.py (regular)
+         helvetica...........ezFBfont_10_helvB18_superscripts-and-subscripts.py (bold)
+             fixed..............ezFBfont_10_6x10_superscripts-and-subscripts.py
+   11px :
+        schoolbook...........ezFBfont_11_ncenB18_superscripts-and-subscripts.py (bold)
+        schoolbook...........ezFBfont_11_ncenR18_superscripts-and-subscripts.py (regular)
+   12px :
+             fixed..............ezFBfont_12_7x13_superscripts-and-subscripts.py
+             fixed..............ezFBfont_12_8x13_superscripts-and-subscripts.py
+             fixed..............ezFBfont_12_9x15_superscripts-and-subscripts.py
+             fixed..............ezFBfont_12_6x12_superscripts-and-subscripts.py
+             fixed..............ezFBfont_12_9x18_superscripts-and-subscripts.py
+           biwidth.............ezFBfont_12_b12_b_superscripts-and-subscripts.py (bold)
+           biwidth...............ezFBfont_12_b12_superscripts-and-subscripts.py
+   13px :
+             fixed..............ezFBfont_13_6x13_superscripts-and-subscripts.py
+             fixed..............ezFBfont_13_7x14_superscripts-and-subscripts.py
+   14px :
+             times............ezFBfont_14_timR24_superscripts-and-subscripts.py (regular)
+             times............ezFBfont_14_timB24_superscripts-and-subscripts.py (bold)
+           courier...........ezFBfont_14_courB24_superscripts-and-subscripts.py (bold)
+           courier...........ezFBfont_14_courR24_superscripts-and-subscripts.py (regular)
+        schoolbook...........ezFBfont_14_ncenB24_superscripts-and-subscripts.py (bold)
+        schoolbook...........ezFBfont_14_ncenR24_superscripts-and-subscripts.py (regular)
+           biwidth...............ezFBfont_14_b16_superscripts-and-subscripts.py
+           biwidth...............ezFBfont_14_b14_superscripts-and-subscripts.py
+           biwidth.............ezFBfont_14_b16_b_superscripts-and-subscripts.py (bold)
+           biwidth.............ezFBfont_14_b14_b_superscripts-and-subscripts.py (bold)
+   15px :
+         helvetica...........ezFBfont_15_helvB24_superscripts-and-subscripts.py (bold)
+         helvetica...........ezFBfont_15_helvR24_superscripts-and-subscripts.py (regular)
+   16px :
+             fixed.............ezFBfont_16_10x20_superscripts-and-subscripts.py
+
+character set: Currency-symbols
+-------------------------------
+    5px :
+          fixed4x6....................ezFBfont_05_tom_thumb_currency-symbols.py
+             fixed..........................ezFBfont_05_4x6_currency-symbols.py
+    7px :
+       amstrad-cpc.........ezFBfont_07_amstrad_cpc_extended_currency-symbols.py
+             fixed..........................ezFBfont_07_5x7_currency-symbols.py
+    8px :
+             times.......................ezFBfont_08_timR08_currency-symbols.py (regular)
+             times.......................ezFBfont_08_timB08_currency-symbols.py (bold)
+           courier......................ezFBfont_08_courB08_currency-symbols.py (bold)
+             fixed..........................ezFBfont_08_5x8_currency-symbols.py
+           biwidth........................ezFBfont_08_b10_b_currency-symbols.py (bold)
+           biwidth..........................ezFBfont_08_b10_currency-symbols.py
+    9px :
+           courier......................ezFBfont_09_courR08_currency-symbols.py (regular)
+         helvetica......................ezFBfont_09_helvB08_currency-symbols.py (bold)
+         helvetica......................ezFBfont_09_helvR08_currency-symbols.py (regular)
+             fixed..........................ezFBfont_09_6x9_currency-symbols.py
+             fixed.........................ezFBfont_09_6x10_currency-symbols.py
+            spleen..................ezFBfont_09_spleen_8x16_currency-symbols.py
+        schoolbook......................ezFBfont_09_ncenB08_currency-symbols.py (bold)
+           biwidth........................ezFBfont_09_b12_b_currency-symbols.py (bold)
+           biwidth..........................ezFBfont_09_b12_currency-symbols.py
+   10px :
+             fixed.........................ezFBfont_10_6x12_currency-symbols.py
+        schoolbook......................ezFBfont_10_ncenR08_currency-symbols.py (regular)
+   11px :
+             times.......................ezFBfont_11_timB10_currency-symbols.py (bold)
+           courier......................ezFBfont_11_courR10_currency-symbols.py (regular)
+   12px :
+             times.......................ezFBfont_12_timR10_currency-symbols.py (regular)
+             times.......................ezFBfont_12_timB12_currency-symbols.py (bold)
+           courier......................ezFBfont_12_courB10_currency-symbols.py (bold)
+         helvetica......................ezFBfont_12_helvB10_currency-symbols.py (bold)
+         helvetica......................ezFBfont_12_helvR10_currency-symbols.py (regular)
+             fixed.........................ezFBfont_12_6x13_currency-symbols.py
+             fixed.........................ezFBfont_12_8x13_currency-symbols.py
+             fixed.........................ezFBfont_12_7x13_currency-symbols.py
+             fixed.........................ezFBfont_12_7x14_currency-symbols.py
+           biwidth..........................ezFBfont_12_b14_currency-symbols.py
+           biwidth........................ezFBfont_12_b14_b_currency-symbols.py (bold)
+   13px :
+             times.......................ezFBfont_13_timR12_currency-symbols.py (regular)
+           courier......................ezFBfont_13_courR12_currency-symbols.py (regular)
+         helvetica......................ezFBfont_13_helvB12_currency-symbols.py (bold)
+         helvetica......................ezFBfont_13_helvR12_currency-symbols.py (regular)
+             fixed.........................ezFBfont_13_9x18_currency-symbols.py
+             fixed.........................ezFBfont_13_9x15_currency-symbols.py
+        schoolbook......................ezFBfont_13_ncenR10_currency-symbols.py (regular)
+        schoolbook......................ezFBfont_13_ncenB10_currency-symbols.py (bold)
+   14px :
+           courier......................ezFBfont_14_courB12_currency-symbols.py (bold)
+        schoolbook......................ezFBfont_14_ncenB12_currency-symbols.py (bold)
+        schoolbook......................ezFBfont_14_ncenR12_currency-symbols.py (regular)
+           biwidth........................ezFBfont_14_b16_b_currency-symbols.py (bold)
+           biwidth..........................ezFBfont_14_b16_currency-symbols.py
+   15px :
+             times.......................ezFBfont_15_timB14_currency-symbols.py (bold)
+   16px :
+           courier......................ezFBfont_16_courB14_currency-symbols.py (bold)
+           courier......................ezFBfont_16_courR14_currency-symbols.py (regular)
+         helvetica......................ezFBfont_16_helvR14_currency-symbols.py (regular)
+         helvetica......................ezFBfont_16_helvB14_currency-symbols.py (bold)
+            spleen.................ezFBfont_16_spleen_12x24_currency-symbols.py
+        schoolbook......................ezFBfont_16_ncenR14_currency-symbols.py (regular)
+        schoolbook......................ezFBfont_16_ncenB14_currency-symbols.py (bold)
+   17px :
+             times.......................ezFBfont_17_timR14_currency-symbols.py (regular)
+   18px :
+           courier......................ezFBfont_18_courR18_currency-symbols.py (regular)
+             fixed........................ezFBfont_18_10x20_currency-symbols.py
+   19px :
+             times.......................ezFBfont_19_timB18_currency-symbols.py (bold)
+   20px :
+           courier......................ezFBfont_20_courB18_currency-symbols.py (bold)
+            spleen.................ezFBfont_20_spleen_16x32_currency-symbols.py
+   21px :
+             times.......................ezFBfont_21_timR18_currency-symbols.py (regular)
+         helvetica......................ezFBfont_21_helvR18_currency-symbols.py (regular)
+         helvetica......................ezFBfont_21_helvB18_currency-symbols.py (bold)
+        schoolbook......................ezFBfont_21_ncenB18_currency-symbols.py (bold)
+        schoolbook......................ezFBfont_21_ncenR18_currency-symbols.py (regular)
+   25px :
+           courier......................ezFBfont_25_courR24_currency-symbols.py (regular)
+   27px :
+             times.......................ezFBfont_27_timB24_currency-symbols.py (bold)
+           courier......................ezFBfont_27_courB24_currency-symbols.py (bold)
+   28px :
+             times.......................ezFBfont_28_timR24_currency-symbols.py (regular)
+         helvetica......................ezFBfont_28_helvB24_currency-symbols.py (bold)
+         helvetica......................ezFBfont_28_helvR24_currency-symbols.py (regular)
+   29px :
+        schoolbook......................ezFBfont_29_ncenB24_currency-symbols.py (bold)
+        schoolbook......................ezFBfont_29_ncenR24_currency-symbols.py (regular)
+   40px :
+            spleen.................ezFBfont_40_spleen_32x64_currency-symbols.py
+
+character set: Combining-diacritical-marks-for-symbols
+------------------------------------------------------
+    7px :
+             fixed...ezFBfont_07_5x7_combining-diacritical-marks-for-symbols.py
+    8px :
+             fixed...ezFBfont_08_5x8_combining-diacritical-marks-for-symbols.py
+           biwidth.ezFBfont_08_b10_b_combining-diacritical-marks-for-symbols.py (bold)
+           biwidth...ezFBfont_08_b10_combining-diacritical-marks-for-symbols.py
+    9px :
+             fixed...ezFBfont_09_6x9_combining-diacritical-marks-for-symbols.py
+   10px :
+             fixed..ezFBfont_10_6x10_combining-diacritical-marks-for-symbols.py
+   12px :
+             fixed..ezFBfont_12_6x12_combining-diacritical-marks-for-symbols.py
+           biwidth...ezFBfont_12_b12_combining-diacritical-marks-for-symbols.py
+           biwidth.ezFBfont_12_b12_b_combining-diacritical-marks-for-symbols.py (bold)
+   13px :
+             fixed..ezFBfont_13_6x13_combining-diacritical-marks-for-symbols.py
+             fixed..ezFBfont_13_8x13_combining-diacritical-marks-for-symbols.py
+             fixed..ezFBfont_13_7x14_combining-diacritical-marks-for-symbols.py
+             fixed..ezFBfont_13_7x13_combining-diacritical-marks-for-symbols.py
+           biwidth.ezFBfont_13_b14_b_combining-diacritical-marks-for-symbols.py (bold)
+           biwidth...ezFBfont_13_b14_combining-diacritical-marks-for-symbols.py
+   15px :
+             fixed..ezFBfont_15_9x15_combining-diacritical-marks-for-symbols.py
+           biwidth.ezFBfont_15_b16_b_combining-diacritical-marks-for-symbols.py (bold)
+           biwidth...ezFBfont_15_b16_combining-diacritical-marks-for-symbols.py
+   18px :
+             fixed..ezFBfont_18_9x18_combining-diacritical-marks-for-symbols.py
+   20px :
+             fixed.ezFBfont_20_10x20_combining-diacritical-marks-for-symbols.py
+
+character set: Letterlike-symbols
+---------------------------------
+    3px :
+       amstrad-cpc.......ezFBfont_03_amstrad_cpc_extended_letterlike-symbols.py
+    5px :
+             fixed........................ezFBfont_05_4x6_letterlike-symbols.py
+    7px :
+             fixed........................ezFBfont_07_6x9_letterlike-symbols.py
+             fixed........................ezFBfont_07_5x7_letterlike-symbols.py
+    8px :
+             fixed........................ezFBfont_08_5x8_letterlike-symbols.py
+    9px :
+           courier....................ezFBfont_09_courR08_letterlike-symbols.py (regular)
+           courier....................ezFBfont_09_courB08_letterlike-symbols.py (bold)
+             fixed.......................ezFBfont_09_6x10_letterlike-symbols.py
+           biwidth......................ezFBfont_09_b10_b_letterlike-symbols.py (bold)
+           biwidth........................ezFBfont_09_b10_letterlike-symbols.py
+   10px :
+             times.....................ezFBfont_10_timB08_letterlike-symbols.py (bold)
+   11px :
+         helvetica....................ezFBfont_11_helvB08_letterlike-symbols.py (bold)
+         helvetica....................ezFBfont_11_helvR08_letterlike-symbols.py (regular)
+        schoolbook....................ezFBfont_11_ncenB08_letterlike-symbols.py (bold)
+        schoolbook....................ezFBfont_11_ncenR08_letterlike-symbols.py (regular)
+           biwidth........................ezFBfont_11_b12_letterlike-symbols.py
+           biwidth......................ezFBfont_11_b12_b_letterlike-symbols.py (bold)
+   12px :
+             times.....................ezFBfont_12_timR08_letterlike-symbols.py (regular)
+           courier....................ezFBfont_12_courB10_letterlike-symbols.py (bold)
+           courier....................ezFBfont_12_courR10_letterlike-symbols.py (regular)
+             fixed.......................ezFBfont_12_6x12_letterlike-symbols.py
+           biwidth........................ezFBfont_12_b14_letterlike-symbols.py
+           biwidth......................ezFBfont_12_b14_b_letterlike-symbols.py (bold)
+   13px :
+             fixed.......................ezFBfont_13_7x13_letterlike-symbols.py
+             fixed.......................ezFBfont_13_8x13_letterlike-symbols.py
+             fixed.......................ezFBfont_13_6x13_letterlike-symbols.py
+             fixed.......................ezFBfont_13_7x14_letterlike-symbols.py
+   14px :
+             times.....................ezFBfont_14_timB10_letterlike-symbols.py (bold)
+           courier....................ezFBfont_14_courB12_letterlike-symbols.py (bold)
+           courier....................ezFBfont_14_courR12_letterlike-symbols.py (regular)
+         helvetica....................ezFBfont_14_helvR10_letterlike-symbols.py (regular)
+         helvetica....................ezFBfont_14_helvB10_letterlike-symbols.py (bold)
+        schoolbook....................ezFBfont_14_ncenR10_letterlike-symbols.py (regular)
+           biwidth........................ezFBfont_14_b16_letterlike-symbols.py
+           biwidth......................ezFBfont_14_b16_b_letterlike-symbols.py (bold)
+   15px :
+           courier....................ezFBfont_15_courR14_letterlike-symbols.py (regular)
+           courier....................ezFBfont_15_courB14_letterlike-symbols.py (bold)
+         helvetica....................ezFBfont_15_helvR12_letterlike-symbols.py (regular)
+             fixed.......................ezFBfont_15_9x18_letterlike-symbols.py
+             fixed.......................ezFBfont_15_9x15_letterlike-symbols.py
+        schoolbook....................ezFBfont_15_ncenB10_letterlike-symbols.py (bold)
+   16px :
+             times.....................ezFBfont_16_timB12_letterlike-symbols.py (bold)
+         helvetica....................ezFBfont_16_helvB12_letterlike-symbols.py (bold)
+        schoolbook....................ezFBfont_16_ncenB12_letterlike-symbols.py (bold)
+        schoolbook....................ezFBfont_16_ncenR12_letterlike-symbols.py (regular)
+   17px :
+             times.....................ezFBfont_17_timR10_letterlike-symbols.py (regular)
+             times.....................ezFBfont_17_timB14_letterlike-symbols.py (bold)
+         helvetica....................ezFBfont_17_helvR14_letterlike-symbols.py (regular)
+   18px :
+             times.....................ezFBfont_18_timR12_letterlike-symbols.py (regular)
+         helvetica....................ezFBfont_18_helvB14_letterlike-symbols.py (bold)
+   19px :
+           courier....................ezFBfont_19_courR18_letterlike-symbols.py (regular)
+             fixed......................ezFBfont_19_10x20_letterlike-symbols.py
+        schoolbook....................ezFBfont_19_ncenB14_letterlike-symbols.py (bold)
+        schoolbook....................ezFBfont_19_ncenR14_letterlike-symbols.py (regular)
+   20px :
+           courier....................ezFBfont_20_courB18_letterlike-symbols.py (bold)
+   22px :
+             times.....................ezFBfont_22_timR14_letterlike-symbols.py (regular)
+   23px :
+             times.....................ezFBfont_23_timB18_letterlike-symbols.py (bold)
+   24px :
+         helvetica....................ezFBfont_24_helvB18_letterlike-symbols.py (bold)
+         helvetica....................ezFBfont_24_helvR18_letterlike-symbols.py (regular)
+        schoolbook....................ezFBfont_24_ncenB18_letterlike-symbols.py (bold)
+        schoolbook....................ezFBfont_24_ncenR18_letterlike-symbols.py (regular)
+   26px :
+           courier....................ezFBfont_26_courR24_letterlike-symbols.py (regular)
+           courier....................ezFBfont_26_courB24_letterlike-symbols.py (bold)
+   28px :
+             times.....................ezFBfont_28_timR18_letterlike-symbols.py (regular)
+   30px :
+             times.....................ezFBfont_30_timB24_letterlike-symbols.py (bold)
+   31px :
+         helvetica....................ezFBfont_31_helvB24_letterlike-symbols.py (bold)
+         helvetica....................ezFBfont_31_helvR24_letterlike-symbols.py (regular)
+   32px :
+        schoolbook....................ezFBfont_32_ncenR24_letterlike-symbols.py (regular)
+   33px :
+        schoolbook....................ezFBfont_33_ncenB24_letterlike-symbols.py (bold)
+   37px :
+             times.....................ezFBfont_37_timR24_letterlike-symbols.py (regular)
+
+character set: Number-forms
+---------------------------
+    6px :
+             fixed..............................ezFBfont_06_4x6_number-forms.py
+    7px :
+             fixed..............................ezFBfont_07_5x7_number-forms.py
+             fixed..............................ezFBfont_07_5x8_number-forms.py
+    8px :
+             fixed..............................ezFBfont_08_6x9_number-forms.py
+    9px :
+           biwidth..............................ezFBfont_09_b10_number-forms.py
+           biwidth............................ezFBfont_09_b10_b_number-forms.py (bold)
+   10px :
+             fixed.............................ezFBfont_10_7x13_number-forms.py
+             fixed.............................ezFBfont_10_9x18_number-forms.py
+             fixed.............................ezFBfont_10_9x15_number-forms.py
+             fixed.............................ezFBfont_10_7x14_number-forms.py
+             fixed.............................ezFBfont_10_8x13_number-forms.py
+             fixed.............................ezFBfont_10_6x10_number-forms.py
+             fixed.............................ezFBfont_10_6x13_number-forms.py
+   11px :
+             fixed.............................ezFBfont_11_6x12_number-forms.py
+           biwidth............................ezFBfont_11_b16_b_number-forms.py (bold)
+           biwidth..............................ezFBfont_11_b16_number-forms.py
+   12px :
+           biwidth..............................ezFBfont_12_b14_number-forms.py
+           biwidth..............................ezFBfont_12_b12_number-forms.py
+           biwidth............................ezFBfont_12_b14_b_number-forms.py (bold)
+           biwidth............................ezFBfont_12_b12_b_number-forms.py (bold)
+   16px :
+             fixed............................ezFBfont_16_10x20_number-forms.py
+
+character set: Arrows
+---------------------
+    5px :
+             fixed....................................ezFBfont_05_4x6_arrows.py
+    7px :
+             fixed....................................ezFBfont_07_5x8_arrows.py
+             fixed....................................ezFBfont_07_5x7_arrows.py
+           biwidth....................................ezFBfont_07_b10_arrows.py
+           biwidth..................................ezFBfont_07_b10_b_arrows.py (bold)
+    8px :
+             fixed....................................ezFBfont_08_6x9_arrows.py
+    9px :
+             fixed...................................ezFBfont_09_6x12_arrows.py
+   10px :
+             fixed...................................ezFBfont_10_6x13_arrows.py
+             fixed...................................ezFBfont_10_6x10_arrows.py
+   11px :
+             fixed...................................ezFBfont_11_7x14_arrows.py
+   12px :
+             fixed...................................ezFBfont_12_7x13_arrows.py
+           biwidth..................................ezFBfont_12_b12_b_arrows.py (bold)
+           biwidth....................................ezFBfont_12_b12_arrows.py
+   13px :
+             fixed...................................ezFBfont_13_8x13_arrows.py
+             fixed...................................ezFBfont_13_9x18_arrows.py
+             fixed...................................ezFBfont_13_9x15_arrows.py
+           biwidth..................................ezFBfont_13_b16_b_arrows.py (bold)
+           biwidth....................................ezFBfont_13_b16_arrows.py
+   14px :
+           biwidth....................................ezFBfont_14_b14_arrows.py
+           biwidth..................................ezFBfont_14_b14_b_arrows.py (bold)
+   15px :
+             times.................................ezFBfont_15_timR10_arrows.py (regular)
+             times.................................ezFBfont_15_timR08_arrows.py (regular)
+             times.................................ezFBfont_15_timR12_arrows.py (regular)
+   17px :
+             fixed..................................ezFBfont_17_10x20_arrows.py
+   19px :
+             times.................................ezFBfont_19_timR14_arrows.py (regular)
+   24px :
+             times.................................ezFBfont_24_timR18_arrows.py (regular)
+   32px :
+             times.................................ezFBfont_32_timR24_arrows.py (regular)
 
 character set: Mathematical-operators
 -------------------------------------
@@ -1361,150 +1606,80 @@ character set: Miscellaneous-technical
    34px :
              times................ezFBfont_34_timR24_miscellaneous-technical.py (regular)
 
-character set: Superscripts-and-subscripts
-------------------------------------------
+character set: Control-pictures
+-------------------------------
     3px :
-             fixed...............ezFBfont_03_4x6_superscripts-and-subscripts.py
-    4px :
-             times............ezFBfont_04_timB08_superscripts-and-subscripts.py (bold)
-             times............ezFBfont_04_timR08_superscripts-and-subscripts.py (regular)
-           courier...........ezFBfont_04_courB08_superscripts-and-subscripts.py (bold)
-           courier...........ezFBfont_04_courR08_superscripts-and-subscripts.py (regular)
-         helvetica...........ezFBfont_04_helvB08_superscripts-and-subscripts.py (bold)
-         helvetica...........ezFBfont_04_helvR08_superscripts-and-subscripts.py (regular)
-        schoolbook...........ezFBfont_04_ncenR08_superscripts-and-subscripts.py (regular)
-        schoolbook...........ezFBfont_04_ncenB08_superscripts-and-subscripts.py (bold)
+           biwidth..........................ezFBfont_03_b14_control-pictures.py
+           biwidth........................ezFBfont_03_b14_b_control-pictures.py (bold)
     6px :
-             times............ezFBfont_06_timB10_superscripts-and-subscripts.py (bold)
-             times............ezFBfont_06_timR10_superscripts-and-subscripts.py (regular)
-           courier...........ezFBfont_06_courB12_superscripts-and-subscripts.py (bold)
-           courier...........ezFBfont_06_courB10_superscripts-and-subscripts.py (bold)
-           courier...........ezFBfont_06_courR10_superscripts-and-subscripts.py (regular)
-           courier...........ezFBfont_06_courR12_superscripts-and-subscripts.py (regular)
-         helvetica...........ezFBfont_06_helvR10_superscripts-and-subscripts.py (regular)
-         helvetica...........ezFBfont_06_helvB10_superscripts-and-subscripts.py (bold)
-        schoolbook...........ezFBfont_06_ncenR10_superscripts-and-subscripts.py (regular)
-        schoolbook...........ezFBfont_06_ncenB10_superscripts-and-subscripts.py (bold)
-    7px :
-             times............ezFBfont_07_timB12_superscripts-and-subscripts.py (bold)
-             times............ezFBfont_07_timR12_superscripts-and-subscripts.py (regular)
-           courier...........ezFBfont_07_courR14_superscripts-and-subscripts.py (regular)
-           courier...........ezFBfont_07_courB14_superscripts-and-subscripts.py (bold)
-         helvetica...........ezFBfont_07_helvR12_superscripts-and-subscripts.py (regular)
-         helvetica...........ezFBfont_07_helvB12_superscripts-and-subscripts.py (bold)
-             fixed...............ezFBfont_07_5x7_superscripts-and-subscripts.py
-        schoolbook...........ezFBfont_07_ncenB12_superscripts-and-subscripts.py (bold)
-        schoolbook...........ezFBfont_07_ncenR12_superscripts-and-subscripts.py (regular)
+             fixed..........................ezFBfont_06_4x6_control-pictures.py
+             fixed..........................ezFBfont_06_5x7_control-pictures.py
     8px :
-             times............ezFBfont_08_timB14_superscripts-and-subscripts.py (bold)
-             times............ezFBfont_08_timR14_superscripts-and-subscripts.py (regular)
-         helvetica...........ezFBfont_08_helvR14_superscripts-and-subscripts.py (regular)
-         helvetica...........ezFBfont_08_helvB14_superscripts-and-subscripts.py (bold)
-             fixed...............ezFBfont_08_5x8_superscripts-and-subscripts.py
-             fixed...............ezFBfont_08_6x9_superscripts-and-subscripts.py
-        schoolbook...........ezFBfont_08_ncenR14_superscripts-and-subscripts.py (regular)
-        schoolbook...........ezFBfont_08_ncenB14_superscripts-and-subscripts.py (bold)
-           biwidth...............ezFBfont_08_b10_superscripts-and-subscripts.py
-           biwidth.............ezFBfont_08_b10_b_superscripts-and-subscripts.py (bold)
+             fixed..........................ezFBfont_08_5x8_control-pictures.py
+             fixed..........................ezFBfont_08_6x9_control-pictures.py
+           biwidth..........................ezFBfont_08_b10_control-pictures.py
+           biwidth........................ezFBfont_08_b10_b_control-pictures.py (bold)
     9px :
-           courier...........ezFBfont_09_courB18_superscripts-and-subscripts.py (bold)
-           courier...........ezFBfont_09_courR18_superscripts-and-subscripts.py (regular)
+             fixed.........................ezFBfont_09_8x13_control-pictures.py
+             fixed.........................ezFBfont_09_6x10_control-pictures.py
    10px :
-             times............ezFBfont_10_timB18_superscripts-and-subscripts.py (bold)
-             times............ezFBfont_10_timR18_superscripts-and-subscripts.py (regular)
-         helvetica...........ezFBfont_10_helvR18_superscripts-and-subscripts.py (regular)
-         helvetica...........ezFBfont_10_helvB18_superscripts-and-subscripts.py (bold)
-             fixed..............ezFBfont_10_6x10_superscripts-and-subscripts.py
+           biwidth........................ezFBfont_10_b16_b_control-pictures.py (bold)
+           biwidth..........................ezFBfont_10_b16_control-pictures.py
    11px :
-        schoolbook...........ezFBfont_11_ncenB18_superscripts-and-subscripts.py (bold)
-        schoolbook...........ezFBfont_11_ncenR18_superscripts-and-subscripts.py (regular)
+             fixed.........................ezFBfont_11_9x18_control-pictures.py
+             fixed.........................ezFBfont_11_9x15_control-pictures.py
+           biwidth........................ezFBfont_11_b12_b_control-pictures.py (bold)
+           biwidth..........................ezFBfont_11_b12_control-pictures.py
    12px :
-             fixed..............ezFBfont_12_7x13_superscripts-and-subscripts.py
-             fixed..............ezFBfont_12_8x13_superscripts-and-subscripts.py
-             fixed..............ezFBfont_12_9x15_superscripts-and-subscripts.py
-             fixed..............ezFBfont_12_6x12_superscripts-and-subscripts.py
-             fixed..............ezFBfont_12_9x18_superscripts-and-subscripts.py
-           biwidth.............ezFBfont_12_b12_b_superscripts-and-subscripts.py (bold)
-           biwidth...............ezFBfont_12_b12_superscripts-and-subscripts.py
+             fixed.........................ezFBfont_12_6x12_control-pictures.py
    13px :
-             fixed..............ezFBfont_13_6x13_superscripts-and-subscripts.py
-             fixed..............ezFBfont_13_7x14_superscripts-and-subscripts.py
-   14px :
-             times............ezFBfont_14_timR24_superscripts-and-subscripts.py (regular)
-             times............ezFBfont_14_timB24_superscripts-and-subscripts.py (bold)
-           courier...........ezFBfont_14_courB24_superscripts-and-subscripts.py (bold)
-           courier...........ezFBfont_14_courR24_superscripts-and-subscripts.py (regular)
-        schoolbook...........ezFBfont_14_ncenB24_superscripts-and-subscripts.py (bold)
-        schoolbook...........ezFBfont_14_ncenR24_superscripts-and-subscripts.py (regular)
-           biwidth...............ezFBfont_14_b16_superscripts-and-subscripts.py
-           biwidth...............ezFBfont_14_b14_superscripts-and-subscripts.py
-           biwidth.............ezFBfont_14_b16_b_superscripts-and-subscripts.py (bold)
-           biwidth.............ezFBfont_14_b14_b_superscripts-and-subscripts.py (bold)
+             fixed.........................ezFBfont_13_7x14_control-pictures.py
+             fixed.........................ezFBfont_13_7x13_control-pictures.py
+             fixed.........................ezFBfont_13_6x13_control-pictures.py
    15px :
-         helvetica...........ezFBfont_15_helvB24_superscripts-and-subscripts.py (bold)
-         helvetica...........ezFBfont_15_helvR24_superscripts-and-subscripts.py (regular)
-   16px :
-             fixed.............ezFBfont_16_10x20_superscripts-and-subscripts.py
+             fixed........................ezFBfont_15_10x20_control-pictures.py
 
-character set: Block-elements
------------------------------
-    6px :
-             fixed............................ezFBfont_06_4x6_block-elements.py
-    7px :
-             fixed............................ezFBfont_07_5x7_block-elements.py
+character set: Optical-character-recognition
+--------------------------------------------
     8px :
-             fixed............................ezFBfont_08_5x8_block-elements.py
-           biwidth..........................ezFBfont_08_b10_b_block-elements.py (bold)
-           biwidth............................ezFBfont_08_b10_block-elements.py
+             fixed............ezFBfont_08_6x12_optical-character-recognition.py
     9px :
-             fixed............................ezFBfont_09_6x9_block-elements.py
+             fixed............ezFBfont_09_8x13_optical-character-recognition.py
+             fixed............ezFBfont_09_7x13_optical-character-recognition.py
+             fixed............ezFBfont_09_6x13_optical-character-recognition.py
    10px :
-             fixed...........................ezFBfont_10_6x10_block-elements.py
+           biwidth.............ezFBfont_10_b14_optical-character-recognition.py
+           biwidth...........ezFBfont_10_b16_b_optical-character-recognition.py (bold)
+           biwidth.............ezFBfont_10_b16_optical-character-recognition.py
+           biwidth...........ezFBfont_10_b14_b_optical-character-recognition.py (bold)
    11px :
-           courier........................ezFBfont_11_courB08_block-elements.py (bold)
-           courier........................ezFBfont_11_courR08_block-elements.py (regular)
-   12px :
-             fixed...........................ezFBfont_12_6x12_block-elements.py
-           biwidth..........................ezFBfont_12_b12_b_block-elements.py (bold)
-           biwidth............................ezFBfont_12_b12_block-elements.py
+             fixed............ezFBfont_11_9x18_optical-character-recognition.py
+             fixed............ezFBfont_11_9x15_optical-character-recognition.py
    13px :
-             fixed...........................ezFBfont_13_6x13_block-elements.py
-             fixed...........................ezFBfont_13_7x13_block-elements.py
-             fixed...........................ezFBfont_13_8x13_block-elements.py
+             fixed...........ezFBfont_13_10x20_optical-character-recognition.py
+
+character set: Enclosed-alphanumerics
+-------------------------------------
+    9px :
+             fixed...................ezFBfont_09_6x13_enclosed-alphanumerics.py
+   10px :
+           biwidth....................ezFBfont_10_b10_enclosed-alphanumerics.py
+           biwidth..................ezFBfont_10_b10_b_enclosed-alphanumerics.py (bold)
+   11px :
+             fixed...................ezFBfont_11_6x12_enclosed-alphanumerics.py
+   12px :
+           biwidth....................ezFBfont_12_b12_enclosed-alphanumerics.py
+           biwidth..................ezFBfont_12_b12_b_enclosed-alphanumerics.py (bold)
+   13px :
+             fixed...................ezFBfont_13_9x15_enclosed-alphanumerics.py
+             fixed..................ezFBfont_13_10x20_enclosed-alphanumerics.py
+             fixed...................ezFBfont_13_9x18_enclosed-alphanumerics.py
    14px :
-             fixed...........................ezFBfont_14_7x14_block-elements.py
-           biwidth............................ezFBfont_14_b14_block-elements.py
-           biwidth..........................ezFBfont_14_b14_b_block-elements.py (bold)
-   15px :
-           courier........................ezFBfont_15_courR10_block-elements.py (regular)
-             fixed...........................ezFBfont_15_9x15_block-elements.py
+           biwidth..................ezFBfont_14_b14_b_enclosed-alphanumerics.py (bold)
+           biwidth....................ezFBfont_14_b14_enclosed-alphanumerics.py
    16px :
-           courier........................ezFBfont_16_courB12_block-elements.py (bold)
-           courier........................ezFBfont_16_courB10_block-elements.py (bold)
-           courier........................ezFBfont_16_courR12_block-elements.py (regular)
-            spleen....................ezFBfont_16_spleen_8x16_block-elements.py
-           biwidth............................ezFBfont_16_b16_block-elements.py
-           biwidth..........................ezFBfont_16_b16_b_block-elements.py (bold)
-   18px :
-           courier........................ezFBfont_18_courR14_block-elements.py (regular)
-             fixed...........................ezFBfont_18_9x18_block-elements.py
-   19px :
-           courier........................ezFBfont_19_courB14_block-elements.py (bold)
-   20px :
-             fixed..........................ezFBfont_20_10x20_block-elements.py
-   23px :
-           courier........................ezFBfont_23_courR18_block-elements.py (regular)
-   24px :
-           courier........................ezFBfont_24_courB18_block-elements.py (bold)
-            spleen...................ezFBfont_24_spleen_12x24_block-elements.py
-   30px :
-           courier........................ezFBfont_30_courR24_block-elements.py (regular)
-   31px :
-           courier........................ezFBfont_31_courB24_block-elements.py (bold)
-   32px :
-            spleen...................ezFBfont_32_spleen_16x32_block-elements.py
-   64px :
-            spleen...................ezFBfont_64_spleen_32x64_block-elements.py
+           biwidth....................ezFBfont_16_b16_enclosed-alphanumerics.py
+           biwidth..................ezFBfont_16_b16_b_enclosed-alphanumerics.py (bold)
 
 character set: Box-drawing
 --------------------------
@@ -1568,546 +1743,223 @@ character set: Box-drawing
    64px :
             spleen......................ezFBfont_64_spleen_32x64_box-drawing.py
 
-character set: Lao
-------------------
-    1px :
-          fixed4x6.................................ezFBfont_01_tom_thumb_lao.py
-   14px :
-           biwidth.....................................ezFBfont_14_b14_b_lao.py (bold)
-           biwidth.......................................ezFBfont_14_b14_lao.py
-   15px :
-             fixed......................................ezFBfont_15_9x15_lao.py
-   16px :
-           biwidth.......................................ezFBfont_16_b16_lao.py
-           biwidth.....................................ezFBfont_16_b16_b_lao.py (bold)
-
-character set: Cherokee
------------------------
-    1px :
-          fixed4x6............................ezFBfont_01_tom_thumb_cherokee.py
-   11px :
-             fixed.................................ezFBfont_11_9x18_cherokee.py
-
-character set: Thai
--------------------
-   13px :
-             fixed.....................................ezFBfont_13_6x13_thai.py
-             fixed.....................................ezFBfont_13_8x13_thai.py
-             fixed.....................................ezFBfont_13_7x13_thai.py
-   14px :
-             fixed.....................................ezFBfont_14_7x14_thai.py
-           biwidth......................................ezFBfont_14_b14_thai.py
-           biwidth....................................ezFBfont_14_b14_b_thai.py (bold)
-   15px :
-             fixed.....................................ezFBfont_15_9x15_thai.py
-   16px :
-           biwidth......................................ezFBfont_16_b16_thai.py
-           biwidth....................................ezFBfont_16_b16_b_thai.py (bold)
-   18px :
-             fixed.....................................ezFBfont_18_9x18_thai.py
-   20px :
-             fixed....................................ezFBfont_20_10x20_thai.py
-
-character set: Arabic
----------------------
-   15px :
-             fixed...................................ezFBfont_15_9x15_arabic.py
-           biwidth....................................ezFBfont_15_b16_arabic.py
-           biwidth..................................ezFBfont_15_b16_b_arabic.py (bold)
-   20px :
-             fixed..................................ezFBfont_20_10x20_arabic.py
-
-character set: Yijing-hexagram-symbols
---------------------------------------
-   17px :
-             fixed.................ezFBfont_17_10x20_yijing-hexagram-symbols.py
-
-character set: Optical-character-recognition
---------------------------------------------
-    8px :
-             fixed............ezFBfont_08_6x12_optical-character-recognition.py
-    9px :
-             fixed............ezFBfont_09_8x13_optical-character-recognition.py
-             fixed............ezFBfont_09_7x13_optical-character-recognition.py
-             fixed............ezFBfont_09_6x13_optical-character-recognition.py
-   10px :
-           biwidth.............ezFBfont_10_b14_optical-character-recognition.py
-           biwidth...........ezFBfont_10_b16_b_optical-character-recognition.py (bold)
-           biwidth.............ezFBfont_10_b16_optical-character-recognition.py
-           biwidth...........ezFBfont_10_b14_b_optical-character-recognition.py (bold)
-   11px :
-             fixed............ezFBfont_11_9x18_optical-character-recognition.py
-             fixed............ezFBfont_11_9x15_optical-character-recognition.py
-   13px :
-             fixed...........ezFBfont_13_10x20_optical-character-recognition.py
-
-character set: Latin-extended-c
--------------------------------
-   11px :
-             fixed.........................ezFBfont_11_6x12_latin-extended-c.py
-
-character set: Control-pictures
--------------------------------
-    3px :
-           biwidth..........................ezFBfont_03_b14_control-pictures.py
-           biwidth........................ezFBfont_03_b14_b_control-pictures.py (bold)
-    6px :
-             fixed..........................ezFBfont_06_4x6_control-pictures.py
-             fixed..........................ezFBfont_06_5x7_control-pictures.py
-    8px :
-             fixed..........................ezFBfont_08_5x8_control-pictures.py
-             fixed..........................ezFBfont_08_6x9_control-pictures.py
-           biwidth..........................ezFBfont_08_b10_control-pictures.py
-           biwidth........................ezFBfont_08_b10_b_control-pictures.py (bold)
-    9px :
-             fixed.........................ezFBfont_09_8x13_control-pictures.py
-             fixed.........................ezFBfont_09_6x10_control-pictures.py
-   10px :
-           biwidth........................ezFBfont_10_b16_b_control-pictures.py (bold)
-           biwidth..........................ezFBfont_10_b16_control-pictures.py
-   11px :
-             fixed.........................ezFBfont_11_9x18_control-pictures.py
-             fixed.........................ezFBfont_11_9x15_control-pictures.py
-           biwidth........................ezFBfont_11_b12_b_control-pictures.py (bold)
-           biwidth..........................ezFBfont_11_b12_control-pictures.py
-   12px :
-             fixed.........................ezFBfont_12_6x12_control-pictures.py
-   13px :
-             fixed.........................ezFBfont_13_7x14_control-pictures.py
-             fixed.........................ezFBfont_13_7x13_control-pictures.py
-             fixed.........................ezFBfont_13_6x13_control-pictures.py
-   15px :
-             fixed........................ezFBfont_15_10x20_control-pictures.py
-
-character set: Cyrillic
------------------------
-    6px :
-             fixed..................................ezFBfont_06_4x6_cyrillic.py
-    7px :
-             fixed..................................ezFBfont_07_5x7_cyrillic.py
-    8px :
-             fixed..................................ezFBfont_08_5x8_cyrillic.py
-           biwidth..................................ezFBfont_08_b10_cyrillic.py
-           biwidth................................ezFBfont_08_b10_b_cyrillic.py (bold)
-    9px :
-             fixed..................................ezFBfont_09_6x9_cyrillic.py
-   10px :
-             fixed.................................ezFBfont_10_6x10_cyrillic.py
-   12px :
-             fixed.................................ezFBfont_12_6x12_cyrillic.py
-           biwidth..................................ezFBfont_12_b12_cyrillic.py
-           biwidth................................ezFBfont_12_b12_b_cyrillic.py (bold)
-   13px :
-             fixed.................................ezFBfont_13_8x13_cyrillic.py
-             fixed.................................ezFBfont_13_6x13_cyrillic.py
-             fixed.................................ezFBfont_13_7x13_cyrillic.py
-   14px :
-             fixed.................................ezFBfont_14_7x14_cyrillic.py
-           biwidth................................ezFBfont_14_b14_b_cyrillic.py (bold)
-           biwidth..................................ezFBfont_14_b14_cyrillic.py
-   15px :
-             fixed.................................ezFBfont_15_9x15_cyrillic.py
-   16px :
-           biwidth................................ezFBfont_16_b16_b_cyrillic.py (bold)
-           biwidth..................................ezFBfont_16_b16_cyrillic.py
-   17px :
-             fixed.................................ezFBfont_17_9x18_cyrillic.py
-   20px :
-             fixed................................ezFBfont_20_10x20_cyrillic.py
-
-character set: Number-forms
----------------------------
-    6px :
-             fixed..............................ezFBfont_06_4x6_number-forms.py
-    7px :
-             fixed..............................ezFBfont_07_5x7_number-forms.py
-             fixed..............................ezFBfont_07_5x8_number-forms.py
-    8px :
-             fixed..............................ezFBfont_08_6x9_number-forms.py
-    9px :
-           biwidth..............................ezFBfont_09_b10_number-forms.py
-           biwidth............................ezFBfont_09_b10_b_number-forms.py (bold)
-   10px :
-             fixed.............................ezFBfont_10_7x13_number-forms.py
-             fixed.............................ezFBfont_10_9x18_number-forms.py
-             fixed.............................ezFBfont_10_9x15_number-forms.py
-             fixed.............................ezFBfont_10_7x14_number-forms.py
-             fixed.............................ezFBfont_10_8x13_number-forms.py
-             fixed.............................ezFBfont_10_6x10_number-forms.py
-             fixed.............................ezFBfont_10_6x13_number-forms.py
-   11px :
-             fixed.............................ezFBfont_11_6x12_number-forms.py
-           biwidth............................ezFBfont_11_b16_b_number-forms.py (bold)
-           biwidth..............................ezFBfont_11_b16_number-forms.py
-   12px :
-           biwidth..............................ezFBfont_12_b14_number-forms.py
-           biwidth..............................ezFBfont_12_b12_number-forms.py
-           biwidth............................ezFBfont_12_b14_b_number-forms.py (bold)
-           biwidth............................ezFBfont_12_b12_b_number-forms.py (bold)
-   16px :
-             fixed............................ezFBfont_16_10x20_number-forms.py
-
-character set: Georgian
------------------------
-   12px :
-             fixed.................................ezFBfont_12_7x13_georgian.py
-             fixed.................................ezFBfont_12_6x13_georgian.py
-             fixed.................................ezFBfont_12_8x13_georgian.py
-           biwidth................................ezFBfont_12_b14_b_georgian.py (bold)
-           biwidth..................................ezFBfont_12_b14_georgian.py
-   14px :
-           biwidth................................ezFBfont_14_b16_b_georgian.py (bold)
-           biwidth..................................ezFBfont_14_b16_georgian.py
-   15px :
-             fixed.................................ezFBfont_15_9x15_georgian.py
-             fixed.................................ezFBfont_15_9x18_georgian.py
-   20px :
-             fixed................................ezFBfont_20_10x20_georgian.py
-
-character set: Supplemental-mathematical-operators
---------------------------------------------------
-   11px :
-             fixed......ezFBfont_11_8x13_supplemental-mathematical-operators.py
-             fixed......ezFBfont_11_7x13_supplemental-mathematical-operators.py
-             fixed......ezFBfont_11_6x13_supplemental-mathematical-operators.py
-   12px :
-             fixed......ezFBfont_12_9x18_supplemental-mathematical-operators.py
-             fixed......ezFBfont_12_6x12_supplemental-mathematical-operators.py
-   15px :
-             fixed......ezFBfont_15_9x15_supplemental-mathematical-operators.py
-   17px :
-             fixed.....ezFBfont_17_10x20_supplemental-mathematical-operators.py
-
-character set: Halfwidth-and-fullwidth-forms
---------------------------------------------
-   10px :
-           biwidth.............ezFBfont_10_b10_halfwidth-and-fullwidth-forms.py
-           biwidth...........ezFBfont_10_b10_b_halfwidth-and-fullwidth-forms.py (bold)
-   11px :
-             fixed............ezFBfont_11_8x13_halfwidth-and-fullwidth-forms.py
-   12px :
-           biwidth...........ezFBfont_12_b12_b_halfwidth-and-fullwidth-forms.py (bold)
-           biwidth.............ezFBfont_12_b12_halfwidth-and-fullwidth-forms.py
-   13px :
-             fixed............ezFBfont_13_9x15_halfwidth-and-fullwidth-forms.py
-             fixed............ezFBfont_13_6x13_halfwidth-and-fullwidth-forms.py
-             fixed............ezFBfont_13_7x14_halfwidth-and-fullwidth-forms.py
-   14px :
-             fixed...........ezFBfont_14_10x20_halfwidth-and-fullwidth-forms.py
-           biwidth.............ezFBfont_14_b14_halfwidth-and-fullwidth-forms.py
-           biwidth...........ezFBfont_14_b14_b_halfwidth-and-fullwidth-forms.py (bold)
-   16px :
-             fixed............ezFBfont_16_9x18_halfwidth-and-fullwidth-forms.py
-           biwidth...........ezFBfont_16_b16_b_halfwidth-and-fullwidth-forms.py (bold)
-           biwidth.............ezFBfont_16_b16_halfwidth-and-fullwidth-forms.py
-
-character set: Arabic-presentation-forms-b
-------------------------------------------
-   15px :
-             fixed..............ezFBfont_15_9x15_arabic-presentation-forms-b.py
-   20px :
-             fixed.............ezFBfont_20_10x20_arabic-presentation-forms-b.py
-
-character set: Combining-diacritical-marks
-------------------------------------------
-    7px :
-             fixed...............ezFBfont_07_5x7_combining-diacritical-marks.py
-    8px :
-             fixed...............ezFBfont_08_5x8_combining-diacritical-marks.py
-    9px :
-             fixed...............ezFBfont_09_6x9_combining-diacritical-marks.py
-           biwidth...............ezFBfont_09_b10_combining-diacritical-marks.py
-           biwidth.............ezFBfont_09_b10_b_combining-diacritical-marks.py (bold)
-   10px :
-             fixed..............ezFBfont_10_6x10_combining-diacritical-marks.py
-   12px :
-             fixed..............ezFBfont_12_6x12_combining-diacritical-marks.py
-           biwidth...............ezFBfont_12_b12_combining-diacritical-marks.py
-           biwidth.............ezFBfont_12_b12_b_combining-diacritical-marks.py (bold)
-   13px :
-             fixed..............ezFBfont_13_7x13_combining-diacritical-marks.py
-             fixed..............ezFBfont_13_6x13_combining-diacritical-marks.py
-             fixed..............ezFBfont_13_8x13_combining-diacritical-marks.py
-   14px :
-             fixed..............ezFBfont_14_7x14_combining-diacritical-marks.py
-           biwidth...............ezFBfont_14_b14_combining-diacritical-marks.py
-           biwidth.............ezFBfont_14_b14_b_combining-diacritical-marks.py (bold)
-   15px :
-             fixed..............ezFBfont_15_9x15_combining-diacritical-marks.py
-   16px :
-           biwidth.............ezFBfont_16_b16_b_combining-diacritical-marks.py (bold)
-           biwidth...............ezFBfont_16_b16_combining-diacritical-marks.py
-   18px :
-             fixed..............ezFBfont_18_9x18_combining-diacritical-marks.py
-   20px :
-             fixed.............ezFBfont_20_10x20_combining-diacritical-marks.py
-
-character set: Runic
---------------------
-    6px :
-             fixed.....................................ezFBfont_06_5x7_runic.py
-           biwidth...................................ezFBfont_06_b10_b_runic.py (bold)
-           biwidth.....................................ezFBfont_06_b10_runic.py
-    7px :
-             fixed....................................ezFBfont_07_6x10_runic.py
-    9px :
-             fixed....................................ezFBfont_09_7x13_runic.py
-   10px :
-             fixed....................................ezFBfont_10_7x14_runic.py
-             fixed....................................ezFBfont_10_6x12_runic.py
-           biwidth...................................ezFBfont_10_b14_b_runic.py (bold)
-           biwidth.....................................ezFBfont_10_b14_runic.py
-   11px :
-             fixed....................................ezFBfont_11_8x13_runic.py
-             fixed....................................ezFBfont_11_9x15_runic.py
-             fixed....................................ezFBfont_11_9x18_runic.py
-             fixed....................................ezFBfont_11_6x13_runic.py
-           biwidth...................................ezFBfont_11_b16_b_runic.py (bold)
-           biwidth.....................................ezFBfont_11_b16_runic.py
-   15px :
-             fixed...................................ezFBfont_15_10x20_runic.py
-
-character set: Unified-canadian-aboriginal-syllabics
-----------------------------------------------------
-   14px :
-             fixed....ezFBfont_14_9x18_unified-canadian-aboriginal-syllabics.py
-
-character set: Supplemental-punctuation
----------------------------------------
-   11px :
-             fixed.................ezFBfont_11_6x13_supplemental-punctuation.py
-   12px :
-             fixed.................ezFBfont_12_9x15_supplemental-punctuation.py
-             fixed.................ezFBfont_12_9x18_supplemental-punctuation.py
-
-character set: Ethiopic
------------------------
-   13px :
-             fixed.................................ezFBfont_13_9x15_ethiopic.py
-             fixed.................................ezFBfont_13_9x18_ethiopic.py
-   17px :
-             fixed................................ezFBfont_17_10x20_ethiopic.py
-
-character set: Enclosed-alphanumerics
--------------------------------------
-    9px :
-             fixed...................ezFBfont_09_6x13_enclosed-alphanumerics.py
-   10px :
-           biwidth....................ezFBfont_10_b10_enclosed-alphanumerics.py
-           biwidth..................ezFBfont_10_b10_b_enclosed-alphanumerics.py (bold)
-   11px :
-             fixed...................ezFBfont_11_6x12_enclosed-alphanumerics.py
-   12px :
-           biwidth....................ezFBfont_12_b12_enclosed-alphanumerics.py
-           biwidth..................ezFBfont_12_b12_b_enclosed-alphanumerics.py (bold)
-   13px :
-             fixed...................ezFBfont_13_9x15_enclosed-alphanumerics.py
-             fixed..................ezFBfont_13_10x20_enclosed-alphanumerics.py
-             fixed...................ezFBfont_13_9x18_enclosed-alphanumerics.py
-   14px :
-           biwidth..................ezFBfont_14_b14_b_enclosed-alphanumerics.py (bold)
-           biwidth....................ezFBfont_14_b14_enclosed-alphanumerics.py
-   16px :
-           biwidth....................ezFBfont_16_b16_enclosed-alphanumerics.py
-           biwidth..................ezFBfont_16_b16_b_enclosed-alphanumerics.py (bold)
-
-character set: Combining-diacritical-marks-for-symbols
-------------------------------------------------------
-    7px :
-             fixed...ezFBfont_07_5x7_combining-diacritical-marks-for-symbols.py
-    8px :
-             fixed...ezFBfont_08_5x8_combining-diacritical-marks-for-symbols.py
-           biwidth.ezFBfont_08_b10_b_combining-diacritical-marks-for-symbols.py (bold)
-           biwidth...ezFBfont_08_b10_combining-diacritical-marks-for-symbols.py
-    9px :
-             fixed...ezFBfont_09_6x9_combining-diacritical-marks-for-symbols.py
-   10px :
-             fixed..ezFBfont_10_6x10_combining-diacritical-marks-for-symbols.py
-   12px :
-             fixed..ezFBfont_12_6x12_combining-diacritical-marks-for-symbols.py
-           biwidth...ezFBfont_12_b12_combining-diacritical-marks-for-symbols.py
-           biwidth.ezFBfont_12_b12_b_combining-diacritical-marks-for-symbols.py (bold)
-   13px :
-             fixed..ezFBfont_13_6x13_combining-diacritical-marks-for-symbols.py
-             fixed..ezFBfont_13_8x13_combining-diacritical-marks-for-symbols.py
-             fixed..ezFBfont_13_7x14_combining-diacritical-marks-for-symbols.py
-             fixed..ezFBfont_13_7x13_combining-diacritical-marks-for-symbols.py
-           biwidth.ezFBfont_13_b14_b_combining-diacritical-marks-for-symbols.py (bold)
-           biwidth...ezFBfont_13_b14_combining-diacritical-marks-for-symbols.py
-   15px :
-             fixed..ezFBfont_15_9x15_combining-diacritical-marks-for-symbols.py
-           biwidth.ezFBfont_15_b16_b_combining-diacritical-marks-for-symbols.py (bold)
-           biwidth...ezFBfont_15_b16_combining-diacritical-marks-for-symbols.py
-   18px :
-             fixed..ezFBfont_18_9x18_combining-diacritical-marks-for-symbols.py
-   20px :
-             fixed.ezFBfont_20_10x20_combining-diacritical-marks-for-symbols.py
-
-character set: Arabic-presentation-forms-a
-------------------------------------------
-   15px :
-             fixed..............ezFBfont_15_9x15_arabic-presentation-forms-a.py
-   20px :
-             fixed.............ezFBfont_20_10x20_arabic-presentation-forms-a.py
-
-character set: Specials
------------------------
-    1px :
-           biwidth..................................ezFBfont_01_b14_specials.py
-           biwidth................................ezFBfont_01_b14_b_specials.py (bold)
-    6px :
-             fixed..................................ezFBfont_06_4x6_specials.py
-    7px :
-             fixed..................................ezFBfont_07_5x7_specials.py
-    8px :
-             fixed..................................ezFBfont_08_5x8_specials.py
-             fixed.................................ezFBfont_08_6x10_specials.py
-           biwidth..................................ezFBfont_08_b10_specials.py
-           biwidth................................ezFBfont_08_b10_b_specials.py (bold)
-    9px :
-             fixed.................................ezFBfont_09_6x12_specials.py
-             fixed..................................ezFBfont_09_6x9_specials.py
-             fixed.................................ezFBfont_09_7x13_specials.py
-             fixed.................................ezFBfont_09_8x13_specials.py
-           biwidth..................................ezFBfont_09_b12_specials.py
-           biwidth................................ezFBfont_09_b12_b_specials.py (bold)
-   10px :
-             fixed.................................ezFBfont_10_7x14_specials.py
-             fixed.................................ezFBfont_10_9x15_specials.py
-             fixed.................................ezFBfont_10_9x18_specials.py
-   11px :
-           biwidth................................ezFBfont_11_b16_b_specials.py (bold)
-           biwidth..................................ezFBfont_11_b16_specials.py
-   13px :
-             fixed.................................ezFBfont_13_6x13_specials.py
-             fixed................................ezFBfont_13_10x20_specials.py
-
-character set: Hangul-jamo
---------------------------
-    8px :
-             fixed..............................ezFBfont_08_6x13_hangul-jamo.py
-   14px :
-           biwidth...............................ezFBfont_14_b14_hangul-jamo.py
-           biwidth.............................ezFBfont_14_b14_b_hangul-jamo.py (bold)
-
-character set: Variation-selectors
-----------------------------------
-    1px :
-             fixed.....................ezFBfont_01_10x20_variation-selectors.py
-
-character set: Ogham
---------------------
-   10px :
-             fixed....................................ezFBfont_10_6x12_ogham.py
-             fixed....................................ezFBfont_10_6x13_ogham.py
-   15px :
-             fixed...................................ezFBfont_15_10x20_ogham.py
-
-character set: Greek-extended
+character set: Block-elements
 -----------------------------
+    6px :
+             fixed............................ezFBfont_06_4x6_block-elements.py
     7px :
-             fixed............................ezFBfont_07_5x7_greek-extended.py
-           biwidth............................ezFBfont_07_b10_greek-extended.py
-           biwidth..........................ezFBfont_07_b10_b_greek-extended.py (bold)
+             fixed............................ezFBfont_07_5x7_block-elements.py
+    8px :
+             fixed............................ezFBfont_08_5x8_block-elements.py
+           biwidth..........................ezFBfont_08_b10_b_block-elements.py (bold)
+           biwidth............................ezFBfont_08_b10_block-elements.py
     9px :
-           biwidth..........................ezFBfont_09_b12_b_greek-extended.py (bold)
-           biwidth............................ezFBfont_09_b12_greek-extended.py
+             fixed............................ezFBfont_09_6x9_block-elements.py
    10px :
-             fixed...........................ezFBfont_10_6x10_greek-extended.py
+             fixed...........................ezFBfont_10_6x10_block-elements.py
+   11px :
+           courier........................ezFBfont_11_courB08_block-elements.py (bold)
+           courier........................ezFBfont_11_courR08_block-elements.py (regular)
    12px :
-             fixed...........................ezFBfont_12_6x12_greek-extended.py
+             fixed...........................ezFBfont_12_6x12_block-elements.py
+           biwidth..........................ezFBfont_12_b12_b_block-elements.py (bold)
+           biwidth............................ezFBfont_12_b12_block-elements.py
    13px :
-             fixed...........................ezFBfont_13_7x13_greek-extended.py
-             fixed...........................ezFBfont_13_6x13_greek-extended.py
-             fixed...........................ezFBfont_13_8x13_greek-extended.py
+             fixed...........................ezFBfont_13_6x13_block-elements.py
+             fixed...........................ezFBfont_13_7x13_block-elements.py
+             fixed...........................ezFBfont_13_8x13_block-elements.py
    14px :
-             fixed...........................ezFBfont_14_7x14_greek-extended.py
-           biwidth..........................ezFBfont_14_b14_b_greek-extended.py (bold)
-           biwidth............................ezFBfont_14_b14_greek-extended.py
+             fixed...........................ezFBfont_14_7x14_block-elements.py
+           biwidth............................ezFBfont_14_b14_block-elements.py
+           biwidth..........................ezFBfont_14_b14_b_block-elements.py (bold)
    15px :
-             fixed...........................ezFBfont_15_9x15_greek-extended.py
+           courier........................ezFBfont_15_courR10_block-elements.py (regular)
+             fixed...........................ezFBfont_15_9x15_block-elements.py
    16px :
-           biwidth..........................ezFBfont_16_b16_b_greek-extended.py (bold)
-           biwidth............................ezFBfont_16_b16_greek-extended.py
-   17px :
-             fixed...........................ezFBfont_17_9x18_greek-extended.py
+           courier........................ezFBfont_16_courB12_block-elements.py (bold)
+           courier........................ezFBfont_16_courB10_block-elements.py (bold)
+           courier........................ezFBfont_16_courR12_block-elements.py (regular)
+            spleen....................ezFBfont_16_spleen_8x16_block-elements.py
+           biwidth............................ezFBfont_16_b16_block-elements.py
+           biwidth..........................ezFBfont_16_b16_b_block-elements.py (bold)
+   18px :
+           courier........................ezFBfont_18_courR14_block-elements.py (regular)
+             fixed...........................ezFBfont_18_9x18_block-elements.py
    19px :
-             fixed..........................ezFBfont_19_10x20_greek-extended.py
+           courier........................ezFBfont_19_courB14_block-elements.py (bold)
+   20px :
+             fixed..........................ezFBfont_20_10x20_block-elements.py
+   23px :
+           courier........................ezFBfont_23_courR18_block-elements.py (regular)
+   24px :
+           courier........................ezFBfont_24_courB18_block-elements.py (bold)
+            spleen...................ezFBfont_24_spleen_12x24_block-elements.py
+   30px :
+           courier........................ezFBfont_30_courR24_block-elements.py (regular)
+   31px :
+           courier........................ezFBfont_31_courB24_block-elements.py (bold)
+   32px :
+            spleen...................ezFBfont_32_spleen_16x32_block-elements.py
+   64px :
+            spleen...................ezFBfont_64_spleen_32x64_block-elements.py
 
-character set: Armenian
------------------------
-   12px :
-             fixed.................................ezFBfont_12_8x13_armenian.py
-             fixed.................................ezFBfont_12_7x14_armenian.py
-             fixed.................................ezFBfont_12_6x13_armenian.py
-             fixed.................................ezFBfont_12_6x12_armenian.py
-             fixed.................................ezFBfont_12_7x13_armenian.py
-   14px :
-           biwidth..................................ezFBfont_14_b14_armenian.py
-           biwidth................................ezFBfont_14_b14_b_armenian.py (bold)
-   15px :
-             fixed.................................ezFBfont_15_9x15_armenian.py
-             fixed.................................ezFBfont_15_9x18_armenian.py
-   16px :
-           biwidth................................ezFBfont_16_b16_b_armenian.py (bold)
-           biwidth..................................ezFBfont_16_b16_armenian.py
-   17px :
-             fixed................................ezFBfont_17_10x20_armenian.py
-
-character set: Cyrillic-extended-a
-----------------------------------
-    6px :
-             fixed......................ezFBfont_06_6x12_cyrillic-extended-a.py
-
-character set: Phonetic-extensions
-----------------------------------
-   19px :
-             fixed.....................ezFBfont_19_10x20_phonetic-extensions.py
-
-character set: Cyrillic-supplement
-----------------------------------
-    9px :
-             fixed......................ezFBfont_09_6x12_cyrillic-supplement.py
-   11px :
-             fixed......................ezFBfont_11_6x13_cyrillic-supplement.py
-             fixed......................ezFBfont_11_8x13_cyrillic-supplement.py
-   12px :
-             fixed......................ezFBfont_12_7x14_cyrillic-supplement.py
-             fixed......................ezFBfont_12_9x15_cyrillic-supplement.py
-             fixed......................ezFBfont_12_9x18_cyrillic-supplement.py
-   17px :
-             fixed.....................ezFBfont_17_10x20_cyrillic-supplement.py
-
-character set: Alphabetic-presentation-forms
---------------------------------------------
-    6px :
-             fixed.............ezFBfont_06_5x7_alphabetic-presentation-forms.py
-             fixed.............ezFBfont_06_5x8_alphabetic-presentation-forms.py
-             fixed.............ezFBfont_06_6x9_alphabetic-presentation-forms.py
-           biwidth...........ezFBfont_06_b10_b_alphabetic-presentation-forms.py (bold)
-           biwidth.............ezFBfont_06_b10_alphabetic-presentation-forms.py
+character set: Geometric-shapes
+-------------------------------
+    4px :
+             fixed..........................ezFBfont_04_4x6_geometric-shapes.py
     7px :
-             fixed............ezFBfont_07_6x10_alphabetic-presentation-forms.py
-             fixed............ezFBfont_07_6x12_alphabetic-presentation-forms.py
-           biwidth...........ezFBfont_07_b12_b_alphabetic-presentation-forms.py (bold)
-           biwidth.............ezFBfont_07_b12_alphabetic-presentation-forms.py
+             times.......................ezFBfont_07_timR08_geometric-shapes.py (regular)
+             fixed..........................ezFBfont_07_5x7_geometric-shapes.py
+    8px :
+             fixed..........................ezFBfont_08_5x8_geometric-shapes.py
+            spleen...................ezFBfont_08_spleen_5x8_geometric-shapes.py
+    9px :
+             fixed..........................ezFBfont_09_6x9_geometric-shapes.py
+   10px :
+             fixed.........................ezFBfont_10_6x10_geometric-shapes.py
+           biwidth..........................ezFBfont_10_b10_geometric-shapes.py
+           biwidth........................ezFBfont_10_b10_b_geometric-shapes.py (bold)
    11px :
-             fixed............ezFBfont_11_7x13_alphabetic-presentation-forms.py
+             times.......................ezFBfont_11_timR10_geometric-shapes.py (regular)
    12px :
-             fixed............ezFBfont_12_8x13_alphabetic-presentation-forms.py
-             fixed............ezFBfont_12_7x14_alphabetic-presentation-forms.py
-             fixed............ezFBfont_12_6x13_alphabetic-presentation-forms.py
-           biwidth...........ezFBfont_12_b14_b_alphabetic-presentation-forms.py (bold)
-           biwidth.............ezFBfont_12_b14_alphabetic-presentation-forms.py
+             times.......................ezFBfont_12_timR12_geometric-shapes.py (regular)
+             fixed.........................ezFBfont_12_6x12_geometric-shapes.py
+            spleen..................ezFBfont_12_spleen_6x12_geometric-shapes.py
+           biwidth........................ezFBfont_12_b12_b_geometric-shapes.py (bold)
+           biwidth..........................ezFBfont_12_b12_geometric-shapes.py
+   13px :
+             fixed.........................ezFBfont_13_6x13_geometric-shapes.py
+             fixed.........................ezFBfont_13_7x13_geometric-shapes.py
+             fixed.........................ezFBfont_13_8x13_geometric-shapes.py
    14px :
-           biwidth...........ezFBfont_14_b16_b_alphabetic-presentation-forms.py (bold)
-           biwidth.............ezFBfont_14_b16_alphabetic-presentation-forms.py
+             times.......................ezFBfont_14_timR14_geometric-shapes.py (regular)
+             fixed.........................ezFBfont_14_7x14_geometric-shapes.py
+           biwidth..........................ezFBfont_14_b14_geometric-shapes.py
+           biwidth........................ezFBfont_14_b14_b_geometric-shapes.py (bold)
    15px :
-             fixed............ezFBfont_15_9x15_alphabetic-presentation-forms.py
+             fixed.........................ezFBfont_15_9x15_geometric-shapes.py
    16px :
-             fixed............ezFBfont_16_9x18_alphabetic-presentation-forms.py
-   19px :
-             fixed...........ezFBfont_19_10x20_alphabetic-presentation-forms.py
+            spleen..................ezFBfont_16_spleen_8x16_geometric-shapes.py
+           biwidth........................ezFBfont_16_b16_b_geometric-shapes.py (bold)
+           biwidth..........................ezFBfont_16_b16_geometric-shapes.py
+   18px :
+             times.......................ezFBfont_18_timR18_geometric-shapes.py (regular)
+             fixed.........................ezFBfont_18_9x18_geometric-shapes.py
+   20px :
+             fixed........................ezFBfont_20_10x20_geometric-shapes.py
+   24px :
+            spleen.................ezFBfont_24_spleen_12x24_geometric-shapes.py
+   25px :
+             times.......................ezFBfont_25_timR24_geometric-shapes.py (regular)
+   32px :
+            spleen.................ezFBfont_32_spleen_16x32_geometric-shapes.py
+   64px :
+            spleen.................ezFBfont_64_spleen_32x64_geometric-shapes.py
+
+character set: Miscellaneous-symbols
+------------------------------------
+    5px :
+             times..................ezFBfont_05_timR08_miscellaneous-symbols.py (regular)
+             fixed.....................ezFBfont_05_4x6_miscellaneous-symbols.py
+            spleen.............ezFBfont_05_spleen_6x12_miscellaneous-symbols.py
+            spleen..............ezFBfont_05_spleen_5x8_miscellaneous-symbols.py
+    7px :
+             times..................ezFBfont_07_timR10_miscellaneous-symbols.py (regular)
+             fixed.....................ezFBfont_07_5x7_miscellaneous-symbols.py
+            spleen.............ezFBfont_07_spleen_8x16_miscellaneous-symbols.py
+    8px :
+             fixed.....................ezFBfont_08_6x9_miscellaneous-symbols.py
+             fixed.....................ezFBfont_08_5x8_miscellaneous-symbols.py
+    9px :
+             times..................ezFBfont_09_timR14_miscellaneous-symbols.py (regular)
+   10px :
+             times..................ezFBfont_10_timR12_miscellaneous-symbols.py (regular)
+             fixed....................ezFBfont_10_6x10_miscellaneous-symbols.py
+           biwidth...................ezFBfont_10_b10_b_miscellaneous-symbols.py (bold)
+           biwidth.....................ezFBfont_10_b10_miscellaneous-symbols.py
+   12px :
+             fixed....................ezFBfont_12_6x12_miscellaneous-symbols.py
+            spleen............ezFBfont_12_spleen_12x24_miscellaneous-symbols.py
+           biwidth...................ezFBfont_12_b12_b_miscellaneous-symbols.py (bold)
+           biwidth.....................ezFBfont_12_b12_miscellaneous-symbols.py
+   13px :
+             times..................ezFBfont_13_timR18_miscellaneous-symbols.py (regular)
+             fixed....................ezFBfont_13_6x13_miscellaneous-symbols.py
+             fixed....................ezFBfont_13_8x13_miscellaneous-symbols.py
+             fixed....................ezFBfont_13_7x13_miscellaneous-symbols.py
+             fixed....................ezFBfont_13_7x14_miscellaneous-symbols.py
+           biwidth.....................ezFBfont_13_b16_miscellaneous-symbols.py
+           biwidth...................ezFBfont_13_b16_b_miscellaneous-symbols.py (bold)
+   14px :
+           biwidth.....................ezFBfont_14_b14_miscellaneous-symbols.py
+           biwidth...................ezFBfont_14_b14_b_miscellaneous-symbols.py (bold)
+   15px :
+             fixed....................ezFBfont_15_9x15_miscellaneous-symbols.py
+             fixed....................ezFBfont_15_9x18_miscellaneous-symbols.py
+   16px :
+            spleen............ezFBfont_16_spleen_16x32_miscellaneous-symbols.py
+   18px :
+             times..................ezFBfont_18_timR24_miscellaneous-symbols.py (regular)
+   20px :
+             fixed...................ezFBfont_20_10x20_miscellaneous-symbols.py
+   32px :
+            spleen............ezFBfont_32_spleen_32x64_miscellaneous-symbols.py
+
+character set: Dingbats
+-----------------------
+    9px :
+           biwidth................................ezFBfont_09_b10_b_dingbats.py (bold)
+           biwidth..................................ezFBfont_09_b10_dingbats.py
+   10px :
+             fixed.................................ezFBfont_10_6x12_dingbats.py
+   11px :
+           biwidth................................ezFBfont_11_b12_b_dingbats.py (bold)
+           biwidth..................................ezFBfont_11_b12_dingbats.py
+   13px :
+             fixed.................................ezFBfont_13_9x18_dingbats.py
+             fixed................................ezFBfont_13_10x20_dingbats.py
+             fixed.................................ezFBfont_13_9x15_dingbats.py
+             fixed.................................ezFBfont_13_6x13_dingbats.py
+   14px :
+           biwidth................................ezFBfont_14_b14_b_dingbats.py (bold)
+           biwidth..................................ezFBfont_14_b14_dingbats.py
+   16px :
+           biwidth................................ezFBfont_16_b16_b_dingbats.py (bold)
+           biwidth..................................ezFBfont_16_b16_dingbats.py
+
+character set: Miscellaneous-mathematical-symbols-a
+---------------------------------------------------
+    6px :
+             fixed......ezFBfont_06_5x8_miscellaneous-mathematical-symbols-a.py
+             fixed......ezFBfont_06_5x7_miscellaneous-mathematical-symbols-a.py
+    7px :
+             fixed.....ezFBfont_07_6x10_miscellaneous-mathematical-symbols-a.py
+             fixed......ezFBfont_07_6x9_miscellaneous-mathematical-symbols-a.py
+   11px :
+             fixed.....ezFBfont_11_6x13_miscellaneous-mathematical-symbols-a.py
+             fixed.....ezFBfont_11_7x13_miscellaneous-mathematical-symbols-a.py
+             fixed.....ezFBfont_11_8x13_miscellaneous-mathematical-symbols-a.py
+   12px :
+             fixed.....ezFBfont_12_9x18_miscellaneous-mathematical-symbols-a.py
+             fixed.....ezFBfont_12_6x12_miscellaneous-mathematical-symbols-a.py
+   13px :
+             fixed.....ezFBfont_13_9x15_miscellaneous-mathematical-symbols-a.py
+             fixed....ezFBfont_13_10x20_miscellaneous-mathematical-symbols-a.py
+   14px :
+             fixed.....ezFBfont_14_7x14_miscellaneous-mathematical-symbols-a.py
+
+character set: Supplemental-arrows-a
+------------------------------------
+    7px :
+             fixed....................ezFBfont_07_6x12_supplemental-arrows-a.py
+             fixed....................ezFBfont_07_6x13_supplemental-arrows-a.py
+             fixed....................ezFBfont_07_7x13_supplemental-arrows-a.py
+    9px :
+             fixed....................ezFBfont_09_8x13_supplemental-arrows-a.py
+             fixed...................ezFBfont_09_10x20_supplemental-arrows-a.py
+   12px :
+             fixed....................ezFBfont_12_9x15_supplemental-arrows-a.py
+             fixed....................ezFBfont_12_9x18_supplemental-arrows-a.py
 
 character set: Braille-patterns
 -------------------------------
@@ -2146,117 +1998,6 @@ character set: Braille-patterns
    56px :
             spleen.................ezFBfont_56_spleen_32x64_braille-patterns.py
 
-character set: Supplemental-arrows-a
-------------------------------------
-    7px :
-             fixed....................ezFBfont_07_6x12_supplemental-arrows-a.py
-             fixed....................ezFBfont_07_6x13_supplemental-arrows-a.py
-             fixed....................ezFBfont_07_7x13_supplemental-arrows-a.py
-    9px :
-             fixed....................ezFBfont_09_8x13_supplemental-arrows-a.py
-             fixed...................ezFBfont_09_10x20_supplemental-arrows-a.py
-   12px :
-             fixed....................ezFBfont_12_9x15_supplemental-arrows-a.py
-             fixed....................ezFBfont_12_9x18_supplemental-arrows-a.py
-
-character set: Miscellaneous-mathematical-symbols-a
----------------------------------------------------
-    6px :
-             fixed......ezFBfont_06_5x8_miscellaneous-mathematical-symbols-a.py
-             fixed......ezFBfont_06_5x7_miscellaneous-mathematical-symbols-a.py
-    7px :
-             fixed.....ezFBfont_07_6x10_miscellaneous-mathematical-symbols-a.py
-             fixed......ezFBfont_07_6x9_miscellaneous-mathematical-symbols-a.py
-   11px :
-             fixed.....ezFBfont_11_6x13_miscellaneous-mathematical-symbols-a.py
-             fixed.....ezFBfont_11_7x13_miscellaneous-mathematical-symbols-a.py
-             fixed.....ezFBfont_11_8x13_miscellaneous-mathematical-symbols-a.py
-   12px :
-             fixed.....ezFBfont_12_9x18_miscellaneous-mathematical-symbols-a.py
-             fixed.....ezFBfont_12_6x12_miscellaneous-mathematical-symbols-a.py
-   13px :
-             fixed.....ezFBfont_13_9x15_miscellaneous-mathematical-symbols-a.py
-             fixed....ezFBfont_13_10x20_miscellaneous-mathematical-symbols-a.py
-   14px :
-             fixed.....ezFBfont_14_7x14_miscellaneous-mathematical-symbols-a.py
-
-character set: Combining-half-marks
------------------------------------
-    2px :
-             fixed.....................ezFBfont_02_6x13_combining-half-marks.py
-             fixed.....................ezFBfont_02_7x13_combining-half-marks.py
-             fixed.....................ezFBfont_02_8x13_combining-half-marks.py
-             fixed.....................ezFBfont_02_6x12_combining-half-marks.py
-           biwidth....................ezFBfont_02_b12_b_combining-half-marks.py (bold)
-           biwidth......................ezFBfont_02_b12_combining-half-marks.py
-    3px :
-             fixed....................ezFBfont_03_10x20_combining-half-marks.py
-             fixed.....................ezFBfont_03_9x15_combining-half-marks.py
-             fixed.....................ezFBfont_03_9x18_combining-half-marks.py
-           biwidth....................ezFBfont_03_b16_b_combining-half-marks.py (bold)
-           biwidth......................ezFBfont_03_b16_combining-half-marks.py
-
-character set: Private-use-area
--------------------------------
-    8px :
-            spleen...................ezFBfont_08_spleen_5x8_private-use-area.py
-   12px :
-             fixed.........................ezFBfont_12_6x13_private-use-area.py
-            spleen..................ezFBfont_12_spleen_6x12_private-use-area.py
-   13px :
-             fixed.........................ezFBfont_13_9x15_private-use-area.py
-   16px :
-            spleen..................ezFBfont_16_spleen_8x16_private-use-area.py
-   24px :
-            spleen.................ezFBfont_24_spleen_12x24_private-use-area.py
-   32px :
-            spleen.................ezFBfont_32_spleen_16x32_private-use-area.py
-   64px :
-            spleen.................ezFBfont_64_spleen_32x64_private-use-area.py
-
-character set: Hebrew
----------------------
-    5px :
-             fixed....................................ezFBfont_05_5x7_hebrew.py
-             fixed....................................ezFBfont_05_5x8_hebrew.py
-           biwidth....................................ezFBfont_05_b10_hebrew.py
-           biwidth..................................ezFBfont_05_b10_b_hebrew.py (bold)
-    6px :
-             fixed....................................ezFBfont_06_4x6_hebrew.py
-    8px :
-             fixed....................................ezFBfont_08_6x9_hebrew.py
-    9px :
-             fixed...................................ezFBfont_09_6x10_hebrew.py
-   10px :
-           biwidth....................................ezFBfont_10_b12_hebrew.py
-           biwidth..................................ezFBfont_10_b12_b_hebrew.py (bold)
-   11px :
-             fixed...................................ezFBfont_11_7x13_hebrew.py
-   12px :
-             fixed...................................ezFBfont_12_7x14_hebrew.py
-             fixed...................................ezFBfont_12_8x13_hebrew.py
-             fixed...................................ezFBfont_12_6x12_hebrew.py
-   13px :
-             fixed...................................ezFBfont_13_6x13_hebrew.py
-           biwidth....................................ezFBfont_13_b14_hebrew.py
-           biwidth..................................ezFBfont_13_b14_b_hebrew.py (bold)
-   14px :
-             fixed...................................ezFBfont_14_9x15_hebrew.py
-   15px :
-             fixed...................................ezFBfont_15_9x18_hebrew.py
-   16px :
-           biwidth..................................ezFBfont_16_b16_b_hebrew.py (bold)
-           biwidth....................................ezFBfont_16_b16_hebrew.py
-   19px :
-             fixed..................................ezFBfont_19_10x20_hebrew.py
-
-character set: Miscellaneous-symbols-and-arrows
------------------------------------------------
-   11px :
-             fixed.........ezFBfont_11_6x12_miscellaneous-symbols-and-arrows.py
-   13px :
-             fixed........ezFBfont_13_10x20_miscellaneous-symbols-and-arrows.py
-
 character set: Supplemental-arrows-b
 ------------------------------------
     7px :
@@ -2265,28 +2006,6 @@ character set: Supplemental-arrows-b
    10px :
              fixed....................ezFBfont_10_6x12_supplemental-arrows-b.py
 
-character set: Dingbats
------------------------
-    9px :
-           biwidth................................ezFBfont_09_b10_b_dingbats.py (bold)
-           biwidth..................................ezFBfont_09_b10_dingbats.py
-   10px :
-             fixed.................................ezFBfont_10_6x12_dingbats.py
-   11px :
-           biwidth................................ezFBfont_11_b12_b_dingbats.py (bold)
-           biwidth..................................ezFBfont_11_b12_dingbats.py
-   13px :
-             fixed.................................ezFBfont_13_9x18_dingbats.py
-             fixed................................ezFBfont_13_10x20_dingbats.py
-             fixed.................................ezFBfont_13_9x15_dingbats.py
-             fixed.................................ezFBfont_13_6x13_dingbats.py
-   14px :
-           biwidth................................ezFBfont_14_b14_b_dingbats.py (bold)
-           biwidth..................................ezFBfont_14_b14_dingbats.py
-   16px :
-           biwidth................................ezFBfont_16_b16_b_dingbats.py (bold)
-           biwidth..................................ezFBfont_16_b16_dingbats.py
-
 character set: Miscellaneous-mathematical-symbols-b
 ---------------------------------------------------
    11px :
@@ -2294,35 +2013,44 @@ character set: Miscellaneous-mathematical-symbols-b
    12px :
              fixed.....ezFBfont_12_6x13_miscellaneous-mathematical-symbols-b.py
 
-character set: Cjk-compatibility-forms
---------------------------------------
-    9px :
-           biwidth.................ezFBfont_09_b10_b_cjk-compatibility-forms.py (bold)
-           biwidth...................ezFBfont_09_b10_cjk-compatibility-forms.py
+character set: Supplemental-mathematical-operators
+--------------------------------------------------
    11px :
-           biwidth.................ezFBfont_11_b12_b_cjk-compatibility-forms.py (bold)
-           biwidth...................ezFBfont_11_b12_cjk-compatibility-forms.py
-   13px :
-           biwidth...................ezFBfont_13_b14_cjk-compatibility-forms.py
-           biwidth.................ezFBfont_13_b14_b_cjk-compatibility-forms.py (bold)
-   15px :
-           biwidth.................ezFBfont_15_b16_b_cjk-compatibility-forms.py (bold)
-           biwidth...................ezFBfont_15_b16_cjk-compatibility-forms.py
-
-character set: Cjk-unified-ideographs
--------------------------------------
-   10px :
-           biwidth..................ezFBfont_10_b10_b_cjk-unified-ideographs.py (bold)
-           biwidth....................ezFBfont_10_b10_cjk-unified-ideographs.py
+             fixed......ezFBfont_11_8x13_supplemental-mathematical-operators.py
+             fixed......ezFBfont_11_7x13_supplemental-mathematical-operators.py
+             fixed......ezFBfont_11_6x13_supplemental-mathematical-operators.py
    12px :
-           biwidth....................ezFBfont_12_b12_cjk-unified-ideographs.py
-           biwidth..................ezFBfont_12_b12_b_cjk-unified-ideographs.py (bold)
-   14px :
-           biwidth..................ezFBfont_14_b14_b_cjk-unified-ideographs.py (bold)
-           biwidth....................ezFBfont_14_b14_cjk-unified-ideographs.py
-   16px :
-           biwidth..................ezFBfont_16_b16_b_cjk-unified-ideographs.py (bold)
-           biwidth....................ezFBfont_16_b16_cjk-unified-ideographs.py
+             fixed......ezFBfont_12_9x18_supplemental-mathematical-operators.py
+             fixed......ezFBfont_12_6x12_supplemental-mathematical-operators.py
+   15px :
+             fixed......ezFBfont_15_9x15_supplemental-mathematical-operators.py
+   17px :
+             fixed.....ezFBfont_17_10x20_supplemental-mathematical-operators.py
+
+character set: Miscellaneous-symbols-and-arrows
+-----------------------------------------------
+   11px :
+             fixed.........ezFBfont_11_6x12_miscellaneous-symbols-and-arrows.py
+   13px :
+             fixed........ezFBfont_13_10x20_miscellaneous-symbols-and-arrows.py
+
+character set: Latin-extended-c
+-------------------------------
+   11px :
+             fixed.........................ezFBfont_11_6x12_latin-extended-c.py
+
+character set: Cyrillic-extended-a
+----------------------------------
+    6px :
+             fixed......................ezFBfont_06_6x12_cyrillic-extended-a.py
+
+character set: Supplemental-punctuation
+---------------------------------------
+   11px :
+             fixed.................ezFBfont_11_6x13_supplemental-punctuation.py
+   12px :
+             fixed.................ezFBfont_12_9x15_supplemental-punctuation.py
+             fixed.................ezFBfont_12_9x18_supplemental-punctuation.py
 
 character set: Cjk-symbols-and-punctuation
 ------------------------------------------
@@ -2339,11 +2067,20 @@ character set: Cjk-symbols-and-punctuation
            biwidth.............ezFBfont_16_b16_b_cjk-symbols-and-punctuation.py (bold)
            biwidth...............ezFBfont_16_b16_cjk-symbols-and-punctuation.py
 
-character set: Devanagari
--------------------------
+character set: Hiragana
+-----------------------
+    9px :
+           biwidth..................................ezFBfont_09_b10_hiragana.py
+           biwidth................................ezFBfont_09_b10_b_hiragana.py (bold)
+   12px :
+           biwidth................................ezFBfont_12_b12_b_hiragana.py (bold)
+           biwidth..................................ezFBfont_12_b12_hiragana.py
+   14px :
+           biwidth..................................ezFBfont_14_b14_hiragana.py
+           biwidth................................ezFBfont_14_b14_b_hiragana.py (bold)
    16px :
-           biwidth................................ezFBfont_16_b16_devanagari.py
-           biwidth..............................ezFBfont_16_b16_b_devanagari.py (bold)
+           biwidth..................................ezFBfont_16_b16_hiragana.py
+           biwidth................................ezFBfont_16_b16_b_hiragana.py (bold)
 
 character set: Katakana
 -----------------------
@@ -2375,6 +2112,21 @@ character set: Bopomofo
            biwidth..................................ezFBfont_15_b16_bopomofo.py
            biwidth................................ezFBfont_15_b16_b_bopomofo.py (bold)
 
+character set: Hangul-compatibility-jamo
+----------------------------------------
+    9px :
+           biwidth...............ezFBfont_09_b10_b_hangul-compatibility-jamo.py (bold)
+           biwidth.................ezFBfont_09_b10_hangul-compatibility-jamo.py
+   11px :
+           biwidth...............ezFBfont_11_b12_b_hangul-compatibility-jamo.py (bold)
+           biwidth.................ezFBfont_11_b12_hangul-compatibility-jamo.py
+   13px :
+           biwidth...............ezFBfont_13_b14_b_hangul-compatibility-jamo.py (bold)
+           biwidth.................ezFBfont_13_b14_hangul-compatibility-jamo.py
+   14px :
+           biwidth.................ezFBfont_14_b16_hangul-compatibility-jamo.py
+           biwidth...............ezFBfont_14_b16_b_hangul-compatibility-jamo.py (bold)
+
 character set: Enclosed-cjk-letters-and-months
 ----------------------------------------------
    10px :
@@ -2389,21 +2141,6 @@ character set: Enclosed-cjk-letters-and-months
    16px :
            biwidth.........ezFBfont_16_b16_b_enclosed-cjk-letters-and-months.py (bold)
            biwidth...........ezFBfont_16_b16_enclosed-cjk-letters-and-months.py
-
-character set: Hangul-syllables
--------------------------------
-    9px :
-           biwidth........................ezFBfont_09_b10_b_hangul-syllables.py (bold)
-           biwidth..........................ezFBfont_09_b10_hangul-syllables.py
-   11px :
-           biwidth..........................ezFBfont_11_b12_hangul-syllables.py
-           biwidth........................ezFBfont_11_b12_b_hangul-syllables.py (bold)
-   14px :
-           biwidth..........................ezFBfont_14_b14_hangul-syllables.py
-           biwidth........................ezFBfont_14_b14_b_hangul-syllables.py (bold)
-   16px :
-           biwidth..........................ezFBfont_16_b16_hangul-syllables.py
-           biwidth........................ezFBfont_16_b16_b_hangul-syllables.py (bold)
 
 character set: Cjk-compatibility
 --------------------------------
@@ -2420,20 +2157,177 @@ character set: Cjk-compatibility
            biwidth.......................ezFBfont_16_b16_b_cjk-compatibility.py (bold)
            biwidth.........................ezFBfont_16_b16_cjk-compatibility.py
 
-character set: Hiragana
------------------------
+character set: Cjk-unified-ideographs-extension-a
+-------------------------------------------------
     9px :
-           biwidth..................................ezFBfont_09_b10_hiragana.py
-           biwidth................................ezFBfont_09_b10_b_hiragana.py (bold)
-   12px :
-           biwidth................................ezFBfont_12_b12_b_hiragana.py (bold)
-           biwidth..................................ezFBfont_12_b12_hiragana.py
+           biwidth......ezFBfont_09_b10_b_cjk-unified-ideographs-extension-a.py (bold)
+           biwidth........ezFBfont_09_b10_cjk-unified-ideographs-extension-a.py
+   11px :
+           biwidth........ezFBfont_11_b12_cjk-unified-ideographs-extension-a.py
+           biwidth......ezFBfont_11_b12_b_cjk-unified-ideographs-extension-a.py (bold)
    14px :
-           biwidth..................................ezFBfont_14_b14_hiragana.py
-           biwidth................................ezFBfont_14_b14_b_hiragana.py (bold)
+           biwidth........ezFBfont_14_b14_cjk-unified-ideographs-extension-a.py
+           biwidth......ezFBfont_14_b14_b_cjk-unified-ideographs-extension-a.py (bold)
    16px :
-           biwidth..................................ezFBfont_16_b16_hiragana.py
-           biwidth................................ezFBfont_16_b16_b_hiragana.py (bold)
+           biwidth......ezFBfont_16_b16_b_cjk-unified-ideographs-extension-a.py (bold)
+           biwidth........ezFBfont_16_b16_cjk-unified-ideographs-extension-a.py
+
+character set: Yijing-hexagram-symbols
+--------------------------------------
+   17px :
+             fixed.................ezFBfont_17_10x20_yijing-hexagram-symbols.py
+
+character set: Cjk-unified-ideographs
+-------------------------------------
+   10px :
+           biwidth..................ezFBfont_10_b10_b_cjk-unified-ideographs.py (bold)
+           biwidth....................ezFBfont_10_b10_cjk-unified-ideographs.py
+   12px :
+           biwidth....................ezFBfont_12_b12_cjk-unified-ideographs.py
+           biwidth..................ezFBfont_12_b12_b_cjk-unified-ideographs.py (bold)
+   14px :
+           biwidth..................ezFBfont_14_b14_b_cjk-unified-ideographs.py (bold)
+           biwidth....................ezFBfont_14_b14_cjk-unified-ideographs.py
+   16px :
+           biwidth..................ezFBfont_16_b16_b_cjk-unified-ideographs.py (bold)
+           biwidth....................ezFBfont_16_b16_cjk-unified-ideographs.py
+
+character set: Hangul-syllables
+-------------------------------
+    9px :
+           biwidth........................ezFBfont_09_b10_b_hangul-syllables.py (bold)
+           biwidth..........................ezFBfont_09_b10_hangul-syllables.py
+   11px :
+           biwidth..........................ezFBfont_11_b12_hangul-syllables.py
+           biwidth........................ezFBfont_11_b12_b_hangul-syllables.py (bold)
+   14px :
+           biwidth..........................ezFBfont_14_b14_hangul-syllables.py
+           biwidth........................ezFBfont_14_b14_b_hangul-syllables.py (bold)
+   16px :
+           biwidth..........................ezFBfont_16_b16_hangul-syllables.py
+           biwidth........................ezFBfont_16_b16_b_hangul-syllables.py (bold)
+
+character set: High-surrogates
+------------------------------
+    5px :
+          fixed4x6.....................ezFBfont_05_tom_thumb_high-surrogates.py
+           generic....................ezFBfont_05_font_tiny5_high-surrogates.py
+           generic.........................ezFBfont_05_micro_high-surrogates.py
+             fixed...........................ezFBfont_05_4x6_high-surrogates.py
+    6px :
+           courier.......................ezFBfont_06_courB08_high-surrogates.py (bold)
+           courier.......................ezFBfont_06_courR08_high-surrogates.py (regular)
+             fixed...........................ezFBfont_06_5x7_high-surrogates.py
+             fixed...........................ezFBfont_06_5x8_high-surrogates.py
+           biwidth.........................ezFBfont_06_b10_b_high-surrogates.py (bold)
+           biwidth...........................ezFBfont_06_b10_high-surrogates.py
+    7px :
+       amstrad-cpc..........ezFBfont_07_amstrad_cpc_extended_high-surrogates.py
+             times........................ezFBfont_07_timB08_high-surrogates.py (bold)
+             times........................ezFBfont_07_timR08_high-surrogates.py (regular)
+             fixed..........................ezFBfont_07_6x12_high-surrogates.py
+             fixed..........................ezFBfont_07_6x10_high-surrogates.py
+             fixed...........................ezFBfont_07_6x9_high-surrogates.py
+            spleen....................ezFBfont_07_spleen_5x8_high-surrogates.py
+           biwidth...........................ezFBfont_07_b12_high-surrogates.py
+           biwidth.........................ezFBfont_07_b12_b_high-surrogates.py (bold)
+    8px :
+         helvetica...................ezFBfont_08_helvB08_gps_high-surrogates.py (bold)
+         helvetica.......................ezFBfont_08_helvB08_high-surrogates.py (bold)
+         helvetica.......................ezFBfont_08_helvR08_high-surrogates.py (regular)
+            spleen...................ezFBfont_08_spleen_6x12_high-surrogates.py
+        schoolbook.......................ezFBfont_08_ncenB08_high-surrogates.py (bold)
+        schoolbook.......................ezFBfont_08_ncenR08_high-surrogates.py (regular)
+    9px :
+           courier.......................ezFBfont_09_courB10_high-surrogates.py (bold)
+           courier.......................ezFBfont_09_courR10_high-surrogates.py (regular)
+             fixed..........................ezFBfont_09_6x13_high-surrogates.py
+             fixed....................ezFBfont_09_etl14_thai_high-surrogates.py
+             fixed..........................ezFBfont_09_8x13_high-surrogates.py
+             fixed..........................ezFBfont_09_7x13_high-surrogates.py
+           biwidth.........................ezFBfont_09_b14_b_high-surrogates.py (bold)
+           biwidth...........................ezFBfont_09_b14_high-surrogates.py
+   10px :
+             times........................ezFBfont_10_timB10_high-surrogates.py (bold)
+             times........................ezFBfont_10_timR10_high-surrogates.py (regular)
+           courier.......................ezFBfont_10_courB12_high-surrogates.py (bold)
+           courier.......................ezFBfont_10_courR12_high-surrogates.py (regular)
+             fixed....................ezFBfont_10_etl16_thai_high-surrogates.py
+             fixed..........................ezFBfont_10_9x15_high-surrogates.py
+             fixed..........................ezFBfont_10_7x14_high-surrogates.py
+             fixed..........................ezFBfont_10_9x18_high-surrogates.py
+            spleen...................ezFBfont_10_spleen_8x16_high-surrogates.py
+           biwidth.........................ezFBfont_10_b16_b_high-surrogates.py (bold)
+           biwidth...........................ezFBfont_10_b16_high-surrogates.py
+   11px :
+             times........................ezFBfont_11_timR12_high-surrogates.py (regular)
+             times........................ezFBfont_11_timB12_high-surrogates.py (bold)
+           courier.......................ezFBfont_11_courB14_high-surrogates.py (bold)
+           courier.......................ezFBfont_11_courR14_high-surrogates.py (regular)
+         helvetica.......................ezFBfont_11_helvR10_high-surrogates.py (regular)
+         helvetica.......................ezFBfont_11_helvB10_high-surrogates.py (bold)
+        schoolbook.......................ezFBfont_11_ncenR10_high-surrogates.py (regular)
+        schoolbook.......................ezFBfont_11_ncenB10_high-surrogates.py (bold)
+   12px :
+         helvetica.......................ezFBfont_12_helvR12_high-surrogates.py (regular)
+         helvetica.......................ezFBfont_12_helvB12_high-surrogates.py (bold)
+        schoolbook.......................ezFBfont_12_ncenB12_high-surrogates.py (bold)
+        schoolbook.......................ezFBfont_12_ncenR12_high-surrogates.py (regular)
+   13px :
+             times........................ezFBfont_13_timR14_high-surrogates.py (regular)
+             times........................ezFBfont_13_timB14_high-surrogates.py (bold)
+             fixed.........................ezFBfont_13_10x20_high-surrogates.py
+   14px :
+           courier.......................ezFBfont_14_courR18_high-surrogates.py (regular)
+         helvetica.......................ezFBfont_14_helvR14_high-surrogates.py (regular)
+         helvetica.......................ezFBfont_14_helvB14_high-surrogates.py (bold)
+        schoolbook.......................ezFBfont_14_ncenB14_high-surrogates.py (bold)
+        schoolbook.......................ezFBfont_14_ncenR14_high-surrogates.py (regular)
+   15px :
+           courier.......................ezFBfont_15_courB18_high-surrogates.py (bold)
+             fixed....................ezFBfont_15_etl24_thai_high-surrogates.py
+            spleen..................ezFBfont_15_spleen_12x24_high-surrogates.py
+   17px :
+             times........................ezFBfont_17_timB18_high-surrogates.py (bold)
+             times........................ezFBfont_17_timR18_high-surrogates.py (regular)
+   18px :
+        schoolbook.......................ezFBfont_18_ncenB18_high-surrogates.py (bold)
+        schoolbook.......................ezFBfont_18_ncenR18_high-surrogates.py (regular)
+   19px :
+           courier.......................ezFBfont_19_courR24_high-surrogates.py (regular)
+         helvetica.......................ezFBfont_19_helvR18_high-surrogates.py (regular)
+         helvetica.......................ezFBfont_19_helvB18_high-surrogates.py (bold)
+   20px :
+           courier.......................ezFBfont_20_courB24_high-surrogates.py (bold)
+            spleen..................ezFBfont_20_spleen_16x32_high-surrogates.py
+   23px :
+             times........................ezFBfont_23_timR24_high-surrogates.py (regular)
+             times........................ezFBfont_23_timB24_high-surrogates.py (bold)
+   25px :
+         helvetica.......................ezFBfont_25_helvB24_high-surrogates.py (bold)
+         helvetica.......................ezFBfont_25_helvR24_high-surrogates.py (regular)
+        schoolbook.......................ezFBfont_25_ncenB24_high-surrogates.py (bold)
+        schoolbook.......................ezFBfont_25_ncenR24_high-surrogates.py (regular)
+   40px :
+            spleen..................ezFBfont_40_spleen_32x64_high-surrogates.py
+
+character set: Private-use-area
+-------------------------------
+    8px :
+            spleen...................ezFBfont_08_spleen_5x8_private-use-area.py
+   12px :
+             fixed.........................ezFBfont_12_6x13_private-use-area.py
+            spleen..................ezFBfont_12_spleen_6x12_private-use-area.py
+   13px :
+             fixed.........................ezFBfont_13_9x15_private-use-area.py
+   16px :
+            spleen..................ezFBfont_16_spleen_8x16_private-use-area.py
+   24px :
+            spleen.................ezFBfont_24_spleen_12x24_private-use-area.py
+   32px :
+            spleen.................ezFBfont_32_spleen_16x32_private-use-area.py
+   64px :
+            spleen.................ezFBfont_64_spleen_32x64_private-use-area.py
 
 character set: Cjk-compatibility-ideographs
 -------------------------------------------
@@ -2450,20 +2344,79 @@ character set: Cjk-compatibility-ideographs
            biwidth............ezFBfont_16_b16_b_cjk-compatibility-ideographs.py (bold)
            biwidth..............ezFBfont_16_b16_cjk-compatibility-ideographs.py
 
-character set: Hangul-compatibility-jamo
-----------------------------------------
-    9px :
-           biwidth...............ezFBfont_09_b10_b_hangul-compatibility-jamo.py (bold)
-           biwidth.................ezFBfont_09_b10_hangul-compatibility-jamo.py
+character set: Alphabetic-presentation-forms
+--------------------------------------------
+    6px :
+             fixed.............ezFBfont_06_5x7_alphabetic-presentation-forms.py
+             fixed.............ezFBfont_06_5x8_alphabetic-presentation-forms.py
+             fixed.............ezFBfont_06_6x9_alphabetic-presentation-forms.py
+           biwidth...........ezFBfont_06_b10_b_alphabetic-presentation-forms.py (bold)
+           biwidth.............ezFBfont_06_b10_alphabetic-presentation-forms.py
+    7px :
+             fixed............ezFBfont_07_6x10_alphabetic-presentation-forms.py
+             fixed............ezFBfont_07_6x12_alphabetic-presentation-forms.py
+           biwidth...........ezFBfont_07_b12_b_alphabetic-presentation-forms.py (bold)
+           biwidth.............ezFBfont_07_b12_alphabetic-presentation-forms.py
    11px :
-           biwidth...............ezFBfont_11_b12_b_hangul-compatibility-jamo.py (bold)
-           biwidth.................ezFBfont_11_b12_hangul-compatibility-jamo.py
-   13px :
-           biwidth...............ezFBfont_13_b14_b_hangul-compatibility-jamo.py (bold)
-           biwidth.................ezFBfont_13_b14_hangul-compatibility-jamo.py
+             fixed............ezFBfont_11_7x13_alphabetic-presentation-forms.py
+   12px :
+             fixed............ezFBfont_12_8x13_alphabetic-presentation-forms.py
+             fixed............ezFBfont_12_7x14_alphabetic-presentation-forms.py
+             fixed............ezFBfont_12_6x13_alphabetic-presentation-forms.py
+           biwidth...........ezFBfont_12_b14_b_alphabetic-presentation-forms.py (bold)
+           biwidth.............ezFBfont_12_b14_alphabetic-presentation-forms.py
    14px :
-           biwidth.................ezFBfont_14_b16_hangul-compatibility-jamo.py
-           biwidth...............ezFBfont_14_b16_b_hangul-compatibility-jamo.py (bold)
+           biwidth...........ezFBfont_14_b16_b_alphabetic-presentation-forms.py (bold)
+           biwidth.............ezFBfont_14_b16_alphabetic-presentation-forms.py
+   15px :
+             fixed............ezFBfont_15_9x15_alphabetic-presentation-forms.py
+   16px :
+             fixed............ezFBfont_16_9x18_alphabetic-presentation-forms.py
+   19px :
+             fixed...........ezFBfont_19_10x20_alphabetic-presentation-forms.py
+
+character set: Arabic-presentation-forms-a
+------------------------------------------
+   15px :
+             fixed..............ezFBfont_15_9x15_arabic-presentation-forms-a.py
+   20px :
+             fixed.............ezFBfont_20_10x20_arabic-presentation-forms-a.py
+
+character set: Variation-selectors
+----------------------------------
+    1px :
+             fixed.....................ezFBfont_01_10x20_variation-selectors.py
+
+character set: Combining-half-marks
+-----------------------------------
+    2px :
+             fixed.....................ezFBfont_02_6x13_combining-half-marks.py
+             fixed.....................ezFBfont_02_7x13_combining-half-marks.py
+             fixed.....................ezFBfont_02_8x13_combining-half-marks.py
+             fixed.....................ezFBfont_02_6x12_combining-half-marks.py
+           biwidth....................ezFBfont_02_b12_b_combining-half-marks.py (bold)
+           biwidth......................ezFBfont_02_b12_combining-half-marks.py
+    3px :
+             fixed....................ezFBfont_03_10x20_combining-half-marks.py
+             fixed.....................ezFBfont_03_9x15_combining-half-marks.py
+             fixed.....................ezFBfont_03_9x18_combining-half-marks.py
+           biwidth....................ezFBfont_03_b16_b_combining-half-marks.py (bold)
+           biwidth......................ezFBfont_03_b16_combining-half-marks.py
+
+character set: Cjk-compatibility-forms
+--------------------------------------
+    9px :
+           biwidth.................ezFBfont_09_b10_b_cjk-compatibility-forms.py (bold)
+           biwidth...................ezFBfont_09_b10_cjk-compatibility-forms.py
+   11px :
+           biwidth.................ezFBfont_11_b12_b_cjk-compatibility-forms.py (bold)
+           biwidth...................ezFBfont_11_b12_cjk-compatibility-forms.py
+   13px :
+           biwidth...................ezFBfont_13_b14_cjk-compatibility-forms.py
+           biwidth.................ezFBfont_13_b14_b_cjk-compatibility-forms.py (bold)
+   15px :
+           biwidth.................ezFBfont_15_b16_b_cjk-compatibility-forms.py (bold)
+           biwidth...................ezFBfont_15_b16_cjk-compatibility-forms.py
 
 character set: Small-form-variants
 ----------------------------------
@@ -2480,20 +2433,68 @@ character set: Small-form-variants
            biwidth.......................ezFBfont_15_b16_small-form-variants.py
            biwidth.....................ezFBfont_15_b16_b_small-form-variants.py (bold)
 
-character set: Cjk-unified-ideographs-extension-a
--------------------------------------------------
-    9px :
-           biwidth......ezFBfont_09_b10_b_cjk-unified-ideographs-extension-a.py (bold)
-           biwidth........ezFBfont_09_b10_cjk-unified-ideographs-extension-a.py
+character set: Arabic-presentation-forms-b
+------------------------------------------
+   15px :
+             fixed..............ezFBfont_15_9x15_arabic-presentation-forms-b.py
+   20px :
+             fixed.............ezFBfont_20_10x20_arabic-presentation-forms-b.py
+
+character set: Halfwidth-and-fullwidth-forms
+--------------------------------------------
+   10px :
+           biwidth.............ezFBfont_10_b10_halfwidth-and-fullwidth-forms.py
+           biwidth...........ezFBfont_10_b10_b_halfwidth-and-fullwidth-forms.py (bold)
    11px :
-           biwidth........ezFBfont_11_b12_cjk-unified-ideographs-extension-a.py
-           biwidth......ezFBfont_11_b12_b_cjk-unified-ideographs-extension-a.py (bold)
+             fixed............ezFBfont_11_8x13_halfwidth-and-fullwidth-forms.py
+   12px :
+           biwidth...........ezFBfont_12_b12_b_halfwidth-and-fullwidth-forms.py (bold)
+           biwidth.............ezFBfont_12_b12_halfwidth-and-fullwidth-forms.py
+   13px :
+             fixed............ezFBfont_13_9x15_halfwidth-and-fullwidth-forms.py
+             fixed............ezFBfont_13_6x13_halfwidth-and-fullwidth-forms.py
+             fixed............ezFBfont_13_7x14_halfwidth-and-fullwidth-forms.py
    14px :
-           biwidth........ezFBfont_14_b14_cjk-unified-ideographs-extension-a.py
-           biwidth......ezFBfont_14_b14_b_cjk-unified-ideographs-extension-a.py (bold)
+             fixed...........ezFBfont_14_10x20_halfwidth-and-fullwidth-forms.py
+           biwidth.............ezFBfont_14_b14_halfwidth-and-fullwidth-forms.py
+           biwidth...........ezFBfont_14_b14_b_halfwidth-and-fullwidth-forms.py (bold)
    16px :
-           biwidth......ezFBfont_16_b16_b_cjk-unified-ideographs-extension-a.py (bold)
-           biwidth........ezFBfont_16_b16_cjk-unified-ideographs-extension-a.py
+             fixed............ezFBfont_16_9x18_halfwidth-and-fullwidth-forms.py
+           biwidth...........ezFBfont_16_b16_b_halfwidth-and-fullwidth-forms.py (bold)
+           biwidth.............ezFBfont_16_b16_halfwidth-and-fullwidth-forms.py
+
+character set: Specials
+-----------------------
+    1px :
+           biwidth..................................ezFBfont_01_b14_specials.py
+           biwidth................................ezFBfont_01_b14_b_specials.py (bold)
+    6px :
+             fixed..................................ezFBfont_06_4x6_specials.py
+    7px :
+             fixed..................................ezFBfont_07_5x7_specials.py
+    8px :
+             fixed..................................ezFBfont_08_5x8_specials.py
+             fixed.................................ezFBfont_08_6x10_specials.py
+           biwidth..................................ezFBfont_08_b10_specials.py
+           biwidth................................ezFBfont_08_b10_b_specials.py (bold)
+    9px :
+             fixed.................................ezFBfont_09_6x12_specials.py
+             fixed..................................ezFBfont_09_6x9_specials.py
+             fixed.................................ezFBfont_09_7x13_specials.py
+             fixed.................................ezFBfont_09_8x13_specials.py
+           biwidth..................................ezFBfont_09_b12_specials.py
+           biwidth................................ezFBfont_09_b12_b_specials.py (bold)
+   10px :
+             fixed.................................ezFBfont_10_7x14_specials.py
+             fixed.................................ezFBfont_10_9x15_specials.py
+             fixed.................................ezFBfont_10_9x18_specials.py
+   11px :
+           biwidth................................ezFBfont_11_b16_b_specials.py (bold)
+           biwidth..................................ezFBfont_11_b16_specials.py
+   13px :
+             fixed.................................ezFBfont_13_6x13_specials.py
+             fixed................................ezFBfont_13_10x20_specials.py
+
 ```
 
 ---------------------

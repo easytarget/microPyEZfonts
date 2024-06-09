@@ -52,7 +52,6 @@ for family in sources:
                                            'height':height}
 heights.sort()
 families.sort()
-print(len(outmap), families, csets, heights)
 
 # Show us the money
 for cset in csets:
@@ -77,5 +76,5 @@ for cset in csets:
                 style = ' (bold)'
             else:
                 style = ''
-            print('       {:>{}}{:.>{}}{}'.format(outmap[font]['family'], famwidth, font, namewidth + 1, style))
+            print('       {:>{}}{:.>{}}{}'.format(outmap[font]['family'], famwidth, font, namewidth + 2, style))
     print()
