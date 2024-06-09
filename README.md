@@ -12,18 +12,24 @@ The fonts presented here were processed using the tools and font sources provide
 ## Status
 The fonts and libraries have been tested on a `ssd1306` OLED display, and a `st7567` LCD module, both using I2C.
 
-![OLED (Note. this display has dead lines at the bottom, this is NOT my drivers fault..)](doc/demo-OLED.jpg)![LCD](doc/demo-LCD.jpg)
+![OLED (Note. this display has dead lines at the bottom, this is a hardware issue and not  my drivers fault..)](doc/demo-OLED.jpg)![LCD](doc/demo-LCD.jpg)
 
 The above is showing demo programs from the [examples](examples); with various fonts, alignments and colors.
 
 -----------------
 # Fonts
 Font files are in the [`Latin-1`](Latin-1), [`Unicode`](Unicode) and [`Symbols`](Symbols) folders as appropriate.
-* See the `README` in each for a description, and a map of all the fonts and heights.
+* See the `README` in each for a description, a map of all the fonts and heights, and other considerations.
 
 The selection provided here covers the default U8G2 fonts, a lot of common X11 fonts and the 'spleen' small font set. There are some symbol and icon fonts too.
 
-They are all derived from freely redistributable sources and retain their original copyright notices, most are very 'free', but the proportional X11 derived fonts need extra consideration. See the [fonts page documentation](mpy-fonts/README.md#Copyright) for more.
+They are all derived from **112** open and redistributable *.bdf* font definition files covering 11 font families. These have been packed into *.py* font modules based on the character set(s) they contain.
+* Fonts are generated and stored by font family, then character set and vertical size.
+  * 570 **Latin-1** font modules cover the basic latin character sets in groups of related characters.
+  * 1576 **Unicode** font modules are packaged by Unicode block, many languages and speciality typefaces are available.
+  * 114 **Symbol** modules cover specialist symbol fonts (battery, 7 segment, etc); there are also some symbol fonts available in the Unicode packs (dingbats, emoticons, mathmatics symbols and so on.)
+
+All font modules contain and retain the original copyright notices of the source files, most are very 'free', but the proportional X11 derived fonts need extra consideration. See the documentation on the font index pages for more.
 
 ## Drivers
 The font writer should work with any display that has a MicroPython framebuffer compatible driver.
