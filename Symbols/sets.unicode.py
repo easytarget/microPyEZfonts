@@ -57,4 +57,4 @@ print('Some common unicode symbol font blocks are:\n')
 for set in charsets.keys():
     if path.isdir('../Unicode/{0}'.format(set)):
         print("* [{0}](../Unicode/{0}); chars: '0x{1:x}:0x{2:x} ({1}:{2})'".format(set, charsets[set][0], charsets[set][-1]))
-print('\nThey are to be found in the [Unicode](../Unicode) folder, along with specialist mathematics and similar font sets.')
+print('\nThey are to be found in the [Unicode](../Unicode) folder, along with specialist mathematics and similar sets.')

@@ -7,8 +7,8 @@ import re
 '''
 sourceDir = '.'
 prefix = 'ezFBfont_'
-#prefix = 'mPyEZfont_u8g2_'
-csets = []
+dirname = os.getcwd().split('/')[-1]
+
 families = []
 heights = []
 outmap = {}
@@ -16,13 +16,15 @@ namewidth = 0
 famwidth = 0
 
 charsets = {
-        'base':'Base (0x00 - 0x3F)',
-        'lower':'Lower (0x40 - 0x7F)',
-        'mid':'Mid (0x80 - 0xBF)',
-        'upper':'Upper (0xC0 - 0xFF)',
-        'extended':'Extended (0x100 - 0xFFF)',
-        'full':'All (0x00 - 0xFFF)',
+        'base':'base (0x00 - 0x3F)',
+        'lower':'lower (0x40 - 0x7F)',
+        'mid':'mid (0x80 - 0xBF)',
+        'upper':'upper (0xC0 - 0xFF)',
+        'extended':'extended (0x100 - 0xFFF)',
+        'full':'full (0x00 - 0xFFF)',
         }
+csets = charsets.keys()
+foundsets = []
 
 # Find our font files
 sources = os.scandir(sourceDir)
@@ -37,8 +39,8 @@ for family in sources:
             if cset.name not in charsets.keys():
                 print('unknown: set "{}" in {}'.format(cset.name, famname))
                 continue
-            if cset.name not in csets:
-                csets.append(cset.name)
+            if cset.name not in foundsets:
+                foundsets.append(cset.name)
             for font in os.scandir(cset):
                 if font.name[:len(prefix)] != prefix:
                     continue
@@ -52,9 +54,18 @@ for family in sources:
 heights.sort()
 families.sort()
 
+if len(foundsets) == 0:
+    # nothing found; simply exit
+    exit()
+
+print('Micropython font module tree for: {}\n'.format(dirname))
+print('   Size{:>{}}    {:^{}}{}\n'.format('Family', famwidth, 'Name', namewidth, '(weight)'))
+
 # Show us the money
 for cset in csets:
-    h = 'character set: {}'.format(charsets[cset].capitalize())
+    if cset not in foundsets:
+        continue
+    h = '{} character set'.format(charsets[cset].capitalize())
     print('{}\n{}'.format(h,'-' * len(h)))
     for height in heights:
         # scan matching fonts at this height)
@@ -64,7 +75,7 @@ for cset in csets:
                 fontlist.append(font)
         if len(fontlist) == 0:
             continue
-        print('  {:3d}px :'.format(height))
+        print('  {:3d}px:'.format(height))
         for font in fontlist:
             famstr = font.split('_')[2:-1]
             if 'B' in famstr[0]:

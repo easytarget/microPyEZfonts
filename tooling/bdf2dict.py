@@ -76,6 +76,7 @@ font_below = int(font.props['font_descent'])
 
 # Defaults
 matches = 0
+withdata = 0
 
 # glyph line limits
 first = {}
@@ -173,6 +174,8 @@ for fchar in font.glyphs.keys():
     if last[fchar] == 0:
         # empty char (eg space): set to a single entry @ baseline
         last[fchar] = first[fchar] = font_baseline
+    else:
+        withdata += 1
     if debug:
         print('Char: {} ({})'.format(fchar, glyph_name[fchar]))
         print(g.meta)
@@ -183,8 +186,8 @@ for fchar in font.glyphs.keys():
         print()
 
 # No matching characters, exit.
-if matches == 0:
-    print('No matches for this charset, skipping')
+if matches == 0 or withdata == 0:
+    print('No valid matches for this charset, skipping')
     exit(1)
 
 # Scan the matched glyphs to find true top and height of charset

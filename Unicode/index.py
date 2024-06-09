@@ -7,7 +7,8 @@ import re
 '''
 sourceDir = '.'
 prefix = 'ezFBfont_'
-#prefix = 'mPyEZfont_u8g2_'
+dirname = os.getcwd().split('/')[-1]
+
 families = []
 heights = []
 outmap = {}
@@ -46,11 +47,18 @@ for family in sources:
 heights.sort()
 families.sort()
 
+if len(foundsets) == 0:
+    # nothing found; simply exit
+    exit()
+
+print('Micropython font module tree for: {}\n'.format(dirname))
+print('   Size{:>{}}    {:^{}}{}\n'.format('Family', famwidth, 'Name', namewidth, '(weight)'))
+
 # Show us the money
 for cset in csets:
     if cset not in foundsets:
         continue
-    h = 'character set: {}'.format(cset.capitalize())
+    h = '{}'.format(cset.capitalize().replace('-',' '))
     print('{}\n{}'.format(h,'-' * len(h)))
     for height in heights:
         # scan matching fonts at this height)
@@ -60,7 +68,7 @@ for cset in csets:
                 fontlist.append(font)
         if len(fontlist) == 0:
             continue
-        print('  {:3d}px :'.format(height))
+        print('  {:3d}px:'.format(height))
         for font in fontlist:
             famstr = font.split('_')[2:-1]
             if 'B' in famstr[0]:
@@ -71,5 +79,5 @@ for cset in csets:
                 style = ' (bold)'
             else:
                 style = ''
-            print('       {:>{}}{:.>{}}{}'.format(outmap[font]['family'], famwidth, font, namewidth + 1, style))
+            print('       {:>{}}{:.>{}}{}'.format(outmap[font]['family'], famwidth, font, namewidth + 2, style))
     print()
