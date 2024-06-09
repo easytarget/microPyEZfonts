@@ -24,11 +24,10 @@ The unicode standard defines standard 'blocks' for character sets in different s
 
 For a good description of the blocks structure  and the characters they contain I recommend the Wikipedia [Unicode Blocks](https://en.m.wikipedia.org/wiki/Unicode_block) page.
 
-Pay attention to the file sizes; the full sets (especially the '`latin`' set) can get large.
-
-For a detailed font file description and preview look at the corresponding `.map` file in the 'maps' sub-folder.
-
-* This contains an ascii-art glyph for all characters in the font file; showing the name, size, bitmap and baseline.
+* Pay attention to the file sizes; the full sets (especially the '`latin`' set) can get large.
+* For a detailed font file description and preview look at the corresponding `.map` file in the 'maps' sub-folder.
+  * This contains an ascii-art glyph for all characters in the font file; showing the name, size, bitmap and baseline.
+* The `basic latin' and 'latin-1 supplement' blocks are not included here; these are provided in the main [Latin][/Latin] sets.
 
 For usage see the `ezFBfont.py` documentation in the main `README`.
 
@@ -393,15 +392,13 @@ F0000..FFFFF; Supplementary Private Use Area-A
 
 # EOF
 '''
-
+# Generate dict{} entries for character sets based on Unicode blocks.
 import re
-#charsets = {}
 pattern = re.compile(r'([0-9A-F]+)\.\.([0-9A-F]+);\ (\S.*\S)')
 for line in _Blocks.splitlines():
     m = pattern.match(line)
     if m:
         start, end, n = m.groups()
         name = n.lower().replace(' ','-')
-        #charsets[name] = 'range(0x{}, 0x{}),'.format(start, end)
         print("        '{}' : list(range(0x{}, 0x{})),".format(name, start, end))
 ```

@@ -24,16 +24,16 @@ The symbol character sets are organised into logical blocks based on the ordinal
 
 * **base** : `0x00` through `0x39`
 * **lower** : `0x40` through `0x80`
-* **mid** : `0x80` through `0xc0`
-* **upper** : `0xc0` through `0x100`
-* **extended** : `0x100` through `0xfff`
-* **full** : `0x00` through `0xfff`
+* **mid** : `0x80` through `0xC0`
+* **upper** : `0xC0` through `0x100`
+* **extended** : `0x100` through `0xFFF`
+* **full** : `0x00` through `0xFFF`
 
-Pay attention to the file sizes; the `extended` and `all` sets can get large, and will consume more ram on your target device.
+These are essentially blocks of 64 characters covering the first 256 character values. Plus an extended range since several symbol fonts extend beyond `0xFF`.
 
-For a detailed font file description and preview look at the corresponding `.map` file in the 'maps' sub-folder.
-
-* This contains an ascii-art glyph for all characters in the font file; showing the name, size, bitmap and baseline.
+* Pay attention to the file sizes; the `extended` and `all` sets can get large, and will consume more ram on your target device.
+* For a detailed font file description and preview look at the corresponding `.map` file in the 'maps' sub-folder.
+  * This contains an ascii-art glyph for all characters in the font file; showing the name, size, bitmap and baseline.
 
 For usage see the `ezFBfont.py` documentation in the main `README`.
 

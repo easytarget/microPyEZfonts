@@ -36,19 +36,17 @@ Nb: Most charsets begin with `0x32`, the space character.
 These can loosely be described as:
 * **Time** : numbers and seperators for clocks and timers.
 * **Num**eric : numbers, seperators and related symbols for displaying values.
-* **Upper**case : ascii charset up to `0x5f`, lower memory, useful for symbols etc.
-* **Ascii** : full ascii charset up to `0x7f`.
-* **Supp**lemental : characters from `0xa0` to `0xff`.
-* **Latin** : all the *printable* chars in the font up to `0xff`.
-* **Full** : every character in the font pack up to `0xff`, even if not *printable*.
+* **Upper**case : ascii charset up to `0x5F`, lower memory, useful for symbols etc.
+* **Ascii** : full ascii charset up to `0x7F`.
+* **Supp**lemental : characters from `0xA0` to `0xFF`.
+* **Latin** : all the *printable* chars in the font up to `0xFF`.
+* **Full** : every character in the font pack up to `0xFF`, even if not *printable*.
 
-Only 'Basic Latin' and 'Latin Supplemental' characters are covered by these sets. If you want Latin characters from the Unicode 'Latin Extended ..' or 'IPA Extensions' blocks these can be found in the [Unicode](/unicode) folder.
+Only 'Basic Latin' and 'Latin Supplemental' characters are covered by these sets. If you want Latin characters from the Unicode 'Latin Extended ..' or 'IPA Extensions' blocks these can be found in the [Unicode](/Unicode) folder.
 
-Pay attention to the file sizes; the full sets (especially the '`latin`' set) can get large.
-
-For a detailed font file description and preview look at the corresponding `.map` file in the 'maps' sub-folder.
-
-* This contains an ascii-art glyph for all characters in the font file; showing the name, size, bitmap and baseline.
+* Pay attention to the file sizes; the full sets (especially the '`latin`' set) can get large.
+* For a detailed font file description and preview look at the corresponding `.map` file in the 'maps' sub-folder.
+  * This contains an ascii-art glyph for all characters in the font file; showing the name, size, bitmap and baseline.
 
 For usage see the `ezFBfont.py` documentation in the main `README`.
 
