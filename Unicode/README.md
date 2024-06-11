@@ -2,17 +2,21 @@
 
 This folder contains instructions and examples for producing custom Unicode font files suitable for use with `ezFBfont` and Peter Hinches `writer` class.
 
-There are many thousands of characters and glyphs in the Unicode character set, it is impossible to pre-prepare font files that contain usable/useful character sets and are small enough to fit on a micropython device.
+There are many thousands of characters and glyphs in the Unicode character set, it is impractical to pre-prepare font files that contain usable & useful character sets, yet are small enough to fit on a micropython device.
 
-Instead; this is a guide, with examples, to producing a custom font pack with the characters and symbols you need for you project and nothing more.
+Instead; this is a guide to producing a custom font pack with just the characters and symbols *you* need for *your* project.
 
-# WORK IN PROGRESS
+# A WORK IN PROGRESS
 I am currently finalising the tooling and preparing examples.
 
-# COPYRIGHT
-Please read the copyright notices in the font files themselves; all the fonts here were sourced from the [u8g2](https://github.com/olikraus/u8g2/blob/master/LICENSE) project fonts; a curated repository of freely redistributable + open-source fonts.
+## Fonts from:
+[efont](http://openlab.ring.gr.jp/efont/dist/unicode-bdf/)
 
-All fonts retain copyright info in the `.py` include file for the font; some are very simple, especially the fonts created for the U8G2 project itself. Some are more general open-source type licences, all are redistributable as is.
+## Requirements
+A working python3.7+ install, and this repository.
+
+# COPYRIGHT
+Please read the copyright notices in the efont folder; and ensure you follow any restrictions and requirements there if you redistribute fonts based on this set.
 
 # Block List
 (for reference, from: https://www.unicode.org/Public/UCD/latest/ucd/Blocks.txt):
