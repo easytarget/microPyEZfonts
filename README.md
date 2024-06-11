@@ -25,7 +25,7 @@ The selection provided here covers the default U8G2 fonts, a lot of common X11 f
 
 They are all derived from **112** open and redistributable *.bdf* font definition files covering 11 font families. These have been packed into *.py* font modules based on the character set(s) they contain.
 * Fonts are generated and stored by font family, then character set and vertical size.
-  * 569 **Latin-1** font modules cover the basic latin character sets in groups of related characters.
+  * 560 **Latin-1** font modules cover the basic latin character sets in groups of related characters.
   * 144 **Symbol** modules cover specialist symbol fonts (battery, 7 segment, etc) and the Open Iconic icon sets.
 
   * **Unicode** font modules need to made on demand using the `bdf2dict` tool, see the Unicode [README](/Unicode/README.md) for details.

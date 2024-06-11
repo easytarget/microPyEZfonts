@@ -1,0 +1,130 @@
+Font: 6x9 (Latin-1-bdf-sources/6x9.bdf)
+Declared name: -Misc-Fixed-Medium-R-Normal--9-90-75-75-C-60-ISO10646-1
+Declared family: fixed
+Declared weight: medium
+Declared size: 9
+Matching characters: 15
+Height: 6
+Baseline: 6
+Max width: 6
+Fixed width: True
+
+Char: 32 (space), width: 6
+  .      .
+  .      .
+  .      .
+  .      .
+  .      .
+  _      _
+
+Char: 43 (plus), width: 6
+  .      .
+  .  #   .
+  .  #   .
+  .##### .
+  .  #   .
+  _  #   _
+
+Char: 45 (hyphen), width: 6
+  .      .
+  .      .
+  .      .
+  .##### .
+  .      .
+  _      _
+
+Char: 46 (period), width: 6
+  .      .
+  .      .
+  .      .
+  .      .
+  .  ##  .
+  _  ##  _
+
+Char: 48 (zero), width: 6
+  .  ##  .
+  . #  # .
+  . #  # .
+  . #  # .
+  . #  # .
+  _  ##  _
+
+Char: 49 (one), width: 6
+  .  #   .
+  . ##   .
+  .  #   .
+  .  #   .
+  .  #   .
+  _ ###  _
+
+Char: 50 (two), width: 6
+  .  ##  .
+  . #  # .
+  .    # .
+  .   #  .
+  .  #   .
+  _ #### _
+
+Char: 51 (three), width: 6
+  . #### .
+  .   #  .
+  .  ##  .
+  .    # .
+  .    # .
+  _ ###  _
+
+Char: 52 (four), width: 6
+  .   #  .
+  .  ##  .
+  . # #  .
+  .#  #  .
+  .##### .
+  _   #  _
+
+Char: 53 (five), width: 6
+  . #### .
+  . #    .
+  . ###  .
+  .    # .
+  .    # .
+  _ ###  _
+
+Char: 54 (six), width: 6
+  .  ##  .
+  . #    .
+  . ###  .
+  . #  # .
+  . #  # .
+  _  ##  _
+
+Char: 55 (seven), width: 6
+  . #### .
+  .    # .
+  .    # .
+  .   #  .
+  .  #   .
+  _  #   _
+
+Char: 56 (eight), width: 6
+  .  ##  .
+  . #  # .
+  .  ##  .
+  . #  # .
+  . #  # .
+  _  ##  _
+
+Char: 57 (nine), width: 6
+  .  ##  .
+  . #  # .
+  . #  # .
+  .  ### .
+  .    # .
+  _  ##  _
+
+Char: 58 (colon), width: 6
+  .      .
+  .  ##  .
+  .  ##  .
+  .      .
+  .  ##  .
+  _  ##  _

@@ -43,9 +43,8 @@ For usage see the `ezFBfont.py` documentation in the main `README`.
 
 # The list
 
-----------------------
-
 Fonts as of 11 June 2024 organised by charset/family/height.
+
 ```
 Base (0x00 - 0x3f) character set
 --------------------------------
