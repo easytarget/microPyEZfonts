@@ -274,7 +274,7 @@ with open(name + '.set','w') as setfile:
 # Report unmatched characters
 unmatched = []
 for cchar in cset:
-    if ord(cchar) not in glyph_dict.keys():
+    if (ord(cchar) not in glyph_dict.keys()) and cchar.isprintable():
         unmatched.append(cchar)
 if unmatched:
     print('Requested characters not matched in the source font:\n{}'.format(unmatched))
