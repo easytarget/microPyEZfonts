@@ -1,0 +1,330 @@
+Font: open_iconic_text_1x (Symbols-bdf-sources/open_iconic_text_1x.bdf)
+Declared name: "open_iconic_text_1x"
+Declared family: None
+Declared weight: None
+Declared size: None
+Matching characters: 32
+Height: 8
+Baseline: 8
+Max width: 8
+Fixed width: True
+
+Char: 64 (/home/kraus/git/open-iconic/png/align-center.png), width: 8
+  .########.
+  .        .
+  . ###### .
+  .        .
+  .########.
+  .        .
+  . ###### .
+  _        _
+
+Char: 65 (/home/kraus/git/open-iconic/png/align-left.png), width: 8
+  .########.
+  .        .
+  .######  .
+  .        .
+  .########.
+  .        .
+  .######  .
+  _        _
+
+Char: 66 (/home/kraus/git/open-iconic/png/align-right.png), width: 8
+  .########.
+  .        .
+  .  ######.
+  .        .
+  .########.
+  .        .
+  .  ######.
+  _        _
+
+Char: 67 (/home/kraus/git/open-iconic/png/bold.png), width: 8
+  .######  .
+  . ##  ## .
+  . ##  ## .
+  . ###### .
+  . ##   ##.
+  . ##   ##.
+  . ##   ##.
+  _####### _
+
+Char: 68 (/home/kraus/git/open-iconic/png/code.png), width: 8
+  .        .
+  .     #  .
+  . #  # # .
+  .#   #  #.
+  .#  #   #.
+  . # #  # .
+  .  #     .
+  _        _
+
+Char: 69 (/home/kraus/git/open-iconic/png/command.png), width: 8
+  .### ### .
+  .# # # # .
+  .####### .
+  .  # #   .
+  .####### .
+  .# # # # .
+  .### ### .
+  _        _
+
+Char: 70 (/home/kraus/git/open-iconic/png/comment-square.png), width: 8
+  .########.
+  .########.
+  .########.
+  .########.
+  .########.
+  .########.
+  .       #.
+  _        _
+
+Char: 71 (/home/kraus/git/open-iconic/png/copywriting.png), width: 8
+  .########.
+  .        .
+  .#####   .
+  .        .
+  .        .
+  .########.
+  .        .
+  _###### #_
+
+Char: 72 (/home/kraus/git/open-iconic/png/delete.png), width: 8
+  .        .
+  .  ######.
+  . ## ## #.
+  .####  ##.
+  .####  ##.
+  . ## ## #.
+  .  ######.
+  _        _
+
+Char: 73 (/home/kraus/git/open-iconic/png/double-quote-sans-left.png), width: 8
+  .        .
+  .###  ###.
+  .###  ###.
+  .###  ###.
+  .##   ## .
+  .#    #  .
+  .        .
+  _        _
+
+Char: 74 (/home/kraus/git/open-iconic/png/double-quote-sans-right.png), width: 8
+  .        .
+  .        .
+  .  #    #.
+  . ##   ##.
+  .###  ###.
+  .###  ###.
+  .###  ###.
+  _        _
+
+Char: 75 (/home/kraus/git/open-iconic/png/double-quote-serif-left.png), width: 8
+  .        .
+  . ##   ##.
+  .##   ## .
+  .#    #  .
+  .###  ###.
+  .###  ###.
+  .###  ###.
+  _        _
+
+Char: 76 (/home/kraus/git/open-iconic/png/double-quote-serif-right.png), width: 8
+  .        .
+  .###  ###.
+  .###  ###.
+  .###  ###.
+  .  #    #.
+  . ##   ##.
+  .##   ## .
+  _        _
+
+Char: 77 (/home/kraus/git/open-iconic/png/ellipses.png), width: 8
+  .        .
+  .        .
+  .        .
+  .## ## ##.
+  .## ## ##.
+  .        .
+  .        .
+  _        _
+
+Char: 78 (/home/kraus/git/open-iconic/png/excerpt.png), width: 8
+  .####### .
+  .        .
+  .#####   .
+  .        .
+  .########.
+  .        .
+  .# # #   .
+  _        _
+
+Char: 79 (/home/kraus/git/open-iconic/png/header.png), width: 8
+  .### ### .
+  . #   #  .
+  . #   #  .
+  . #####  .
+  . #   #  .
+  . #   #  .
+  .### ### .
+  _        _
+
+Char: 80 (/home/kraus/git/open-iconic/png/infinity.png), width: 8
+  .        .
+  .        .
+  . ##  ## .
+  .#  ##  #.
+  .#  ##  #.
+  . ##  ## .
+  .        .
+  _        _
+
+Char: 81 (/home/kraus/git/open-iconic/png/info.png), width: 8
+  .    ##  .
+  .    ##  .
+  .        .
+  .  ###   .
+  .    #   .
+  .   #    .
+  .   #    .
+  _   ###  _
+
+Char: 82 (/home/kraus/git/open-iconic/png/italic.png), width: 8
+  .  ##### .
+  .   ###  .
+  .   ##   .
+  .   ##   .
+  .  ##    .
+  .  ##    .
+  . ###    .
+  _#####   _
+
+Char: 83 (/home/kraus/git/open-iconic/png/justify-center.png), width: 8
+  .########.
+  .        .
+  .########.
+  .        .
+  .########.
+  .        .
+  . ###### .
+  _        _
+
+Char: 84 (/home/kraus/git/open-iconic/png/justify-left.png), width: 8
+  .########.
+  .        .
+  .########.
+  .        .
+  .########.
+  .        .
+  .######  .
+  _        _
+
+Char: 85 (/home/kraus/git/open-iconic/png/justify-right.png), width: 8
+  .########.
+  .        .
+  .########.
+  .        .
+  .########.
+  .        .
+  .  ######.
+  _        _
+
+Char: 86 (/home/kraus/git/open-iconic/png/medical-cross.png), width: 8
+  .  ####  .
+  .  ####  .
+  .########.
+  .########.
+  .########.
+  .########.
+  .  ####  .
+  _  ####  _
+
+Char: 87 (/home/kraus/git/open-iconic/png/minus.png), width: 8
+  .        .
+  .        .
+  .        .
+  .########.
+  .########.
+  .        .
+  .        .
+  _        _
+
+Char: 88 (/home/kraus/git/open-iconic/png/plus.png), width: 8
+  .   ##   .
+  .   ##   .
+  .   ##   .
+  .########.
+  .########.
+  .   ##   .
+  .   ##   .
+  _   ##   _
+
+Char: 89 (/home/kraus/git/open-iconic/png/question-mark.png), width: 8
+  .   ###  .
+  .  #   # .
+  .      # .
+  .     #  .
+  .    ##  .
+  .    #   .
+  .        .
+  _    #   _
+
+Char: 90 (/home/kraus/git/open-iconic/png/terminal.png), width: 8
+  .########.
+  .# ######.
+  .## #####.
+  .# ##   #.
+  .########.
+  .########.
+  .########.
+  _########_
+
+Char: 91 (/home/kraus/git/open-iconic/png/text.png), width: 8
+  .########.
+  .#  ##  #.
+  .   ##   .
+  .   ##   .
+  .   ##   .
+  .   ##   .
+  .   ##   .
+  _  ####  _
+
+Char: 92 (/home/kraus/git/open-iconic/png/underline.png), width: 8
+  . ##  #  .
+  . ##  #  .
+  . ##  #  .
+  . ##  #  .
+  . ##  #  .
+  .  ###   .
+  .        .
+  _####### _
+
+Char: 93 (/home/kraus/git/open-iconic/png/vertical-align-bottom.png), width: 8
+  .##    ##.
+  .##    ##.
+  .## ## ##.
+  .## ## ##.
+  .## ## ##.
+  .        .
+  .########.
+  _        _
+
+Char: 94 (/home/kraus/git/open-iconic/png/vertical-align-center.png), width: 8
+  .##    ##.
+  .## ## ##.
+  .        .
+  .########.
+  .        .
+  .## ## ##.
+  .##    ##.
+  _        _
+
+Char: 95 (/home/kraus/git/open-iconic/png/vertical-align-top.png), width: 8
+  .########.
+  .        .
+  .## ## ##.
+  .## ## ##.
+  .## ## ##.
+  .##    ##.
+  .##    ##.
+  _        _

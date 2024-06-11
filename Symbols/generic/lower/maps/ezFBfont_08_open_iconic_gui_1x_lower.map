@@ -1,0 +1,310 @@
+Font: open_iconic_gui_1x (Symbols-bdf-sources/open_iconic_gui_1x.bdf)
+Declared name: "open_iconic_gui_1x"
+Declared family: None
+Declared weight: None
+Declared size: None
+Matching characters: 30
+Height: 8
+Baseline: 8
+Max width: 8
+Fixed width: True
+
+Char: 64 (/home/kraus/git/open-iconic/png/account-login.png), width: 8
+  .   #####.
+  .       #.
+  .    #  #.
+  .###### #.
+  .    #  #.
+  .       #.
+  .   #####.
+  _        _
+
+Char: 65 (/home/kraus/git/open-iconic/png/account-logout.png), width: 8
+  .   #####.
+  .       #.
+  . #     #.
+  .###### #.
+  . #     #.
+  .       #.
+  .   #####.
+  _        _
+
+Char: 66 (/home/kraus/git/open-iconic/png/action-redo.png), width: 8
+  .        .
+  .  ###   .
+  .    ##  .
+  .     ## .
+  .     ## .
+  .     ## .
+  .        .
+  _        _
+
+Char: 67 (/home/kraus/git/open-iconic/png/action-undo.png), width: 8
+  .        .
+  .   ###  .
+  .  ##    .
+  . ##     .
+  . ##     .
+  . ##     .
+  .        .
+  _        _
+
+Char: 68 (/home/kraus/git/open-iconic/png/collapse-down.png), width: 8
+  .########.
+  .########.
+  .        .
+  .   ##   .
+  .        .
+  .        .
+  .        .
+  _########_
+
+Char: 69 (/home/kraus/git/open-iconic/png/collapse-left.png), width: 8
+  .#     ##.
+  .#     ##.
+  .#     ##.
+  .#   # ##.
+  .#   # ##.
+  .#     ##.
+  .#     ##.
+  _#     ##_
+
+Char: 70 (/home/kraus/git/open-iconic/png/collapse-right.png), width: 8
+  .##     #.
+  .##     #.
+  .##     #.
+  .## #   #.
+  .## #   #.
+  .##     #.
+  .##     #.
+  _##     #_
+
+Char: 71 (/home/kraus/git/open-iconic/png/collapse-up.png), width: 8
+  .########.
+  .        .
+  .        .
+  .        .
+  .   ##   .
+  .        .
+  .########.
+  _########_
+
+Char: 72 (/home/kraus/git/open-iconic/png/crop.png), width: 8
+  . #     #.
+  .####### .
+  . #   ## .
+  . #  # # .
+  . # #  # .
+  . ##   # .
+  . #######.
+  _      # _
+
+Char: 73 (/home/kraus/git/open-iconic/png/dashboard.png), width: 8
+  .  ####  .
+  . #    # .
+  .#      #.
+  .# #  # #.
+  .#  ##  #.
+  .#  ##  #.
+  . #    # .
+  _  ####  _
+
+Char: 74 (/home/kraus/git/open-iconic/png/elevator.png), width: 8
+  .        .
+  .   ##   .
+  .  ####  .
+  .        .
+  .        .
+  .  ####  .
+  .   ##   .
+  _        _
+
+Char: 75 (/home/kraus/git/open-iconic/png/expand-down.png), width: 8
+  .########.
+  .        .
+  .   ##   .
+  .        .
+  .        .
+  .        .
+  .########.
+  _########_
+
+Char: 76 (/home/kraus/git/open-iconic/png/expand-left.png), width: 8
+  .#     ##.
+  .#     ##.
+  .#     ##.
+  .# #   ##.
+  .# #   ##.
+  .#     ##.
+  .#     ##.
+  _#     ##_
+
+Char: 77 (/home/kraus/git/open-iconic/png/expand-right.png), width: 8
+  .##     #.
+  .##     #.
+  .##     #.
+  .##   # #.
+  .##   # #.
+  .##     #.
+  .##     #.
+  _##     #_
+
+Char: 78 (/home/kraus/git/open-iconic/png/expand-up.png), width: 8
+  .########.
+  .########.
+  .        .
+  .        .
+  .        .
+  .   ##   .
+  .        .
+  _########_
+
+Char: 79 (/home/kraus/git/open-iconic/png/fullscreen-enter.png), width: 8
+  .###     .
+  .###     .
+  .###     .
+  .        .
+  .        .
+  .     ###.
+  .     ###.
+  _     ###_
+
+Char: 80 (/home/kraus/git/open-iconic/png/fullscreen-exit.png), width: 8
+  .        .
+  . ###    .
+  . ###    .
+  . ###    .
+  .    ### .
+  .    ### .
+  .    ### .
+  _        _
+
+Char: 81 (/home/kraus/git/open-iconic/png/layers.png), width: 8
+  .####    .
+  .####    .
+  .#### #  .
+  .#### #  .
+  .     # #.
+  .  #### #.
+  .       #.
+  _    ####_
+
+Char: 82 (/home/kraus/git/open-iconic/png/list.png), width: 8
+  .# ######.
+  .        .
+  .# ######.
+  .        .
+  .# ######.
+  .        .
+  .# ######.
+  _        _
+
+Char: 83 (/home/kraus/git/open-iconic/png/list-rich.png), width: 8
+  .### ####.
+  .###     .
+  .### ### .
+  .        .
+  .### ####.
+  .###     .
+  .### ### .
+  _        _
+
+Char: 84 (/home/kraus/git/open-iconic/png/menu.png), width: 8
+  .        .
+  .########.
+  .        .
+  .        .
+  .########.
+  .        .
+  .        .
+  _########_
+
+Char: 85 (/home/kraus/git/open-iconic/png/move.png), width: 8
+  .   #    .
+  .   #    .
+  .   #    .
+  .####### .
+  .   #    .
+  .   #    .
+  .   #    .
+  _        _
+
+Char: 86 (/home/kraus/git/open-iconic/png/print.png), width: 8
+  .  ####  .
+  .  ####  .
+  .        .
+  .########.
+  .#      #.
+  .# #### #.
+  .  ####  .
+  _  ####  _
+
+Char: 87 (/home/kraus/git/open-iconic/png/resize-both.png), width: 8
+  .     ###.
+  .     ###.
+  .     ###.
+  .    #   .
+  .#  #    .
+  .###     .
+  .###     .
+  _###     _
+
+Char: 88 (/home/kraus/git/open-iconic/png/resize-height.png), width: 8
+  .   #    .
+  .  ###   .
+  . #####  .
+  .   #    .
+  .   #    .
+  . #####  .
+  .  ###   .
+  _   #    _
+
+Char: 89 (/home/kraus/git/open-iconic/png/resize-width.png), width: 8
+  .        .
+  .  #  #  .
+  . ##  ## .
+  .########.
+  . ##  ## .
+  .  #  #  .
+  .        .
+  _        _
+
+Char: 90 (/home/kraus/git/open-iconic/png/sort-ascending.png), width: 8
+  .  # ##  .
+  .  #     .
+  .  # ### .
+  .  #     .
+  .  # ####.
+  .  #     .
+  . ###    .
+  _  #     _
+
+Char: 91 (/home/kraus/git/open-iconic/png/sort-descending.png), width: 8
+  .  # ####.
+  .  #     .
+  .  # ### .
+  .  #     .
+  .  # ##  .
+  .  #     .
+  . ###    .
+  _  #     _
+
+Char: 92 (/home/kraus/git/open-iconic/png/zoom-in.png), width: 8
+  .  ###   .
+  . #   #  .
+  .#  #  # .
+  .# ### # .
+  .#  #  # .
+  . #   ## .
+  .  ######.
+  _      ##_
+
+Char: 93 (/home/kraus/git/open-iconic/png/zoom-out.png), width: 8
+  .  ###   .
+  . #   #  .
+  .#     # .
+  .# ### # .
+  .#     # .
+  . #   ## .
+  .  ######.
+  _      ##_

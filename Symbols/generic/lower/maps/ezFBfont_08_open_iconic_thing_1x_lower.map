@@ -1,0 +1,200 @@
+Font: open_iconic_thing_1x (Symbols-bdf-sources/open_iconic_thing_1x.bdf)
+Declared name: "open_iconic_thing_1x"
+Declared family: None
+Declared weight: None
+Declared size: None
+Matching characters: 19
+Height: 8
+Baseline: 8
+Max width: 8
+Fixed width: True
+
+Char: 64 (/home/kraus/git/open-iconic/png/basket.png), width: 8
+  .   ##   .
+  .   ##   .
+  .  #  #  .
+  .########.
+  . ###### .
+  . # ## # .
+  . # ## # .
+  _ ###### _
+
+Char: 65 (/home/kraus/git/open-iconic/png/briefcase.png), width: 8
+  .  ####  .
+  .  #  #  .
+  .########.
+  .########.
+  .########.
+  .        .
+  .########.
+  _########_
+
+Char: 66 (/home/kraus/git/open-iconic/png/credit-card.png), width: 8
+  .        .
+  .########.
+  .        .
+  .########.
+  .########.
+  .# # ####.
+  .########.
+  _        _
+
+Char: 67 (/home/kraus/git/open-iconic/png/key.png), width: 8
+  .    ### .
+  .   ##  #.
+  .   ##  #.
+  .  ######.
+  . ###### .
+  . ####   .
+  .###     .
+  _###     _
+
+Char: 68 (/home/kraus/git/open-iconic/png/lock-unlocked.png), width: 8
+  .   ##   .
+  .  #  #  .
+  .     #  .
+  .     #  .
+  . ###### .
+  . ###### .
+  . ###### .
+  _ ###### _
+
+Char: 69 (/home/kraus/git/open-iconic/png/paperclip.png), width: 8
+  .    ##  .
+  .   #  # .
+  .  #   # .
+  . #   #  .
+  .# # #   .
+  .# ##    .
+  .##  #   .
+  _ ###    _
+
+Char: 70 (/home/kraus/git/open-iconic/png/puzzle-piece.png), width: 8
+  .  ##    .
+  .  ##    .
+  .######  .
+  .######  .
+  .########.
+  .########.
+  .##  ##  .
+  _##  ##  _
+
+Char: 71 (/home/kraus/git/open-iconic/png/brush.png), width: 8
+  .       #.
+  .     ## .
+  .    ### .
+  .    ##  .
+  .  ##    .
+  . ###    .
+  . ###    .
+  _###     _
+
+Char: 72 (/home/kraus/git/open-iconic/png/droplet.png), width: 8
+  .        .
+  .   ##   .
+  .  ####  .
+  . ###### .
+  . ###### .
+  . # #### .
+  . ## ### .
+  _  ####  _
+
+Char: 73 (/home/kraus/git/open-iconic/png/laptop.png), width: 8
+  .        .
+  . ###### .
+  . #    # .
+  . #    # .
+  . #    # .
+  .###  ###.
+  .########.
+  _        _
+
+Char: 74 (/home/kraus/git/open-iconic/png/magnifying-glass.png), width: 8
+  .  ###   .
+  . #   #  .
+  .#     # .
+  .#     # .
+  .#     # .
+  . #   ## .
+  .  ######.
+  _      ##_
+
+Char: 75 (/home/kraus/git/open-iconic/png/phone.png), width: 8
+  . #####  .
+  . #   #  .
+  . #   #  .
+  . #   #  .
+  . #   #  .
+  . #   #  .
+  . #####  .
+  _ #####  _
+
+Char: 76 (/home/kraus/git/open-iconic/png/signpost.png), width: 8
+  .   #    .
+  . ###    .
+  . #####  .
+  .   ###  .
+  .   #    .
+  .   #    .
+  .   #    .
+  _   #    _
+
+Char: 77 (/home/kraus/git/open-iconic/png/bug.png), width: 8
+  .   #    .
+  .  ###   .
+  .####### .
+  . #####  .
+  .### ### .
+  . ## ##  .
+  .### ### .
+  _        _
+
+Char: 78 (/home/kraus/git/open-iconic/png/fire.png), width: 8
+  .  #     .
+  .  ##    .
+  . ###    .
+  . ### #  .
+  .###  ## .
+  .### ### .
+  .##  ### .
+  _ # #### _
+
+Char: 79 (/home/kraus/git/open-iconic/png/lock-locked.png), width: 8
+  .   ##   .
+  .  #  #  .
+  .  #  #  .
+  . ###### .
+  . ###### .
+  . ###### .
+  . ###### .
+  _        _
+
+Char: 80 (/home/kraus/git/open-iconic/png/monitor.png), width: 8
+  .########.
+  .#      #.
+  .#      #.
+  .#      #.
+  .#      #.
+  .########.
+  .   ##   .
+  _ ###### _
+
+Char: 81 (/home/kraus/git/open-iconic/png/pin.png), width: 8
+  . #####  .
+  .  ###   .
+  .  ###   .
+  .####### .
+  .   #    .
+  .   #    .
+  .   #    .
+  _        _
+
+Char: 82 (/home/kraus/git/open-iconic/png/tablet.png), width: 8
+  .####### .
+  .#     # .
+  .#     # .
+  .#     # .
+  .#     # .
+  .#     # .
+  .####### .
+  _####### _

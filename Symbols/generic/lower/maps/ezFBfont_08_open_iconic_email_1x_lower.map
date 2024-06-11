@@ -1,0 +1,60 @@
+Font: open_iconic_email_1x (Symbols-bdf-sources/open_iconic_email_1x.bdf)
+Declared name: "open_iconic_email_1x"
+Declared family: None
+Declared weight: None
+Declared size: None
+Matching characters: 5
+Height: 8
+Baseline: 8
+Max width: 8
+Fixed width: True
+
+Char: 64 (/home/kraus/git/open-iconic/png/envelope-closed.png), width: 8
+  .        .
+  .########.
+  . ###### .
+  .#  ##  #.
+  .###  ###.
+  .########.
+  .########.
+  _        _
+
+Char: 65 (/home/kraus/git/open-iconic/png/envelope-open.png), width: 8
+  .   ##   .
+  . ##  ## .
+  .#      #.
+  .# #### #.
+  .#  ##  #.
+  .###  ###.
+  .########.
+  _########_
+
+Char: 66 (/home/kraus/git/open-iconic/png/inbox.png), width: 8
+  .########.
+  .########.
+  .#      #.
+  .#      #.
+  .#      #.
+  .##    ##.
+  .########.
+  _########_
+
+Char: 67 (/home/kraus/git/open-iconic/png/tag.png), width: 8
+  .###     .
+  .#  #    .
+  .#  ##   .
+  . #####  .
+  .  ##### .
+  .   #### .
+  .    ##  .
+  _        _
+
+Char: 68 (/home/kraus/git/open-iconic/png/tags.png), width: 8
+  .        .
+  .##  #   .
+  .# #  #  .
+  . ###  # .
+  .  ##  # .
+  .        .
+  .        .
+  _        _

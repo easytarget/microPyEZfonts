@@ -1,0 +1,650 @@
+Font: open_iconic_all_1x (Symbols-bdf-sources/open_iconic_all_1x.bdf)
+Declared name: "open_iconic_all_1x"
+Declared family: None
+Declared weight: None
+Declared size: None
+Matching characters: 64
+Height: 8
+Baseline: 8
+Max width: 8
+Fixed width: True
+
+Char: 64 (/home/kraus/git/open-iconic/png/account-login.png), width: 8
+  .   #####.
+  .       #.
+  .    #  #.
+  .###### #.
+  .    #  #.
+  .       #.
+  .   #####.
+  _        _
+
+Char: 65 (/home/kraus/git/open-iconic/png/account-logout.png), width: 8
+  .   #####.
+  .       #.
+  . #     #.
+  .###### #.
+  . #     #.
+  .       #.
+  .   #####.
+  _        _
+
+Char: 66 (/home/kraus/git/open-iconic/png/action-redo.png), width: 8
+  .        .
+  .  ###   .
+  .    ##  .
+  .     ## .
+  .     ## .
+  .     ## .
+  .        .
+  _        _
+
+Char: 67 (/home/kraus/git/open-iconic/png/action-undo.png), width: 8
+  .        .
+  .   ###  .
+  .  ##    .
+  . ##     .
+  . ##     .
+  . ##     .
+  .        .
+  _        _
+
+Char: 68 (/home/kraus/git/open-iconic/png/align-center.png), width: 8
+  .########.
+  .        .
+  . ###### .
+  .        .
+  .########.
+  .        .
+  . ###### .
+  _        _
+
+Char: 69 (/home/kraus/git/open-iconic/png/align-left.png), width: 8
+  .########.
+  .        .
+  .######  .
+  .        .
+  .########.
+  .        .
+  .######  .
+  _        _
+
+Char: 70 (/home/kraus/git/open-iconic/png/align-right.png), width: 8
+  .########.
+  .        .
+  .  ######.
+  .        .
+  .########.
+  .        .
+  .  ######.
+  _        _
+
+Char: 71 (/home/kraus/git/open-iconic/png/aperture.png), width: 8
+  .   ###  .
+  . # ###  .
+  .###   ##.
+  .##    ##.
+  .      ##.
+  . #      .
+  . ## ### .
+  _  # ##  _
+
+Char: 72 (/home/kraus/git/open-iconic/png/arrow-bottom.png), width: 8
+  .   #    .
+  .   #    .
+  .   #    .
+  .   #    .
+  .   #    .
+  . #####  .
+  .  ###   .
+  _   #    _
+
+Char: 73 (/home/kraus/git/open-iconic/png/arrow-circle-bottom.png), width: 8
+  .  ####  .
+  . ##  ## .
+  .###  ###.
+  .###  ###.
+  .#      #.
+  .##    ##.
+  . ##  ## .
+  _  ####  _
+
+Char: 74 (/home/kraus/git/open-iconic/png/arrow-circle-left.png), width: 8
+  .  ####  .
+  . ## ### .
+  .##  ####.
+  .#      #.
+  .#      #.
+  .##  ####.
+  . ## ### .
+  _  ####  _
+
+Char: 75 (/home/kraus/git/open-iconic/png/arrow-circle-right.png), width: 8
+  .  ####  .
+  . ### ## .
+  .####  ##.
+  .#      #.
+  .#      #.
+  .####  ##.
+  . ### ## .
+  _  ####  _
+
+Char: 76 (/home/kraus/git/open-iconic/png/arrow-circle-top.png), width: 8
+  .  ####  .
+  . ##  ## .
+  .##    ##.
+  .#      #.
+  .###  ###.
+  .###  ###.
+  . ##  ## .
+  _  ####  _
+
+Char: 77 (/home/kraus/git/open-iconic/png/arrow-left.png), width: 8
+  .        .
+  .  #     .
+  . ##     .
+  .########.
+  . ##     .
+  .  #     .
+  .        .
+  _        _
+
+Char: 78 (/home/kraus/git/open-iconic/png/arrow-right.png), width: 8
+  .        .
+  .     #  .
+  .     ## .
+  .########.
+  .     ## .
+  .     #  .
+  .        .
+  _        _
+
+Char: 79 (/home/kraus/git/open-iconic/png/arrow-thick-bottom.png), width: 8
+  .   ##   .
+  .   ##   .
+  .   ##   .
+  .   ##   .
+  .   ##   .
+  .  ####  .
+  .   ##   .
+  _    #   _
+
+Char: 80 (/home/kraus/git/open-iconic/png/arrow-thick-left.png), width: 8
+  .        .
+  .        .
+  .  #     .
+  . #######.
+  .########.
+  .  #     .
+  .        .
+  _        _
+
+Char: 81 (/home/kraus/git/open-iconic/png/arrow-thick-right.png), width: 8
+  .        .
+  .        .
+  .     ## .
+  .########.
+  .####### .
+  .     #  .
+  .        .
+  _        _
+
+Char: 82 (/home/kraus/git/open-iconic/png/arrow-thick-top.png), width: 8
+  .   #    .
+  .  ###   .
+  .  ####  .
+  .   ##   .
+  .   ##   .
+  .   ##   .
+  .   ##   .
+  _   ##   _
+
+Char: 83 (/home/kraus/git/open-iconic/png/arrow-top.png), width: 8
+  .   #    .
+  .  ###   .
+  . #####  .
+  .   #    .
+  .   #    .
+  .   #    .
+  .   #    .
+  _   #    _
+
+Char: 84 (/home/kraus/git/open-iconic/png/audio.png), width: 8
+  .        .
+  . #    # .
+  .#      #.
+  .# #  # #.
+  .# #  # #.
+  .##    ##.
+  .        .
+  _        _
+
+Char: 85 (/home/kraus/git/open-iconic/png/audio-spectrum.png), width: 8
+  .    #   .
+  .  # #   .
+  .  # # # .
+  .# # # # .
+  .# # # # .
+  .  # # # .
+  .  # #   .
+  _    #   _
+
+Char: 86 (/home/kraus/git/open-iconic/png/badge.png), width: 8
+  .   ##   .
+  .  ####  .
+  .  ####  .
+  .   ##   .
+  .        .
+  .   ##   .
+  .   ##   .
+  _        _
+
+Char: 87 (/home/kraus/git/open-iconic/png/ban.png), width: 8
+  .  ####  .
+  . #   ## .
+  .#    ###.
+  .#   #  #.
+  .#  #   #.
+  .###    #.
+  . ##   # .
+  _  ####  _
+
+Char: 88 (/home/kraus/git/open-iconic/png/bar-chart.png), width: 8
+  .#    ## .
+  .#    ## .
+  .# ## ## .
+  .# ## ## .
+  .# ## ## .
+  .#       .
+  .########.
+  _        _
+
+Char: 89 (/home/kraus/git/open-iconic/png/basket.png), width: 8
+  .   ##   .
+  .   ##   .
+  .  #  #  .
+  .########.
+  . ###### .
+  . # ## # .
+  . # ## # .
+  _ ###### _
+
+Char: 90 (/home/kraus/git/open-iconic/png/battery-empty.png), width: 8
+  .        .
+  .####### .
+  .#     # .
+  .#     ##.
+  .#     ##.
+  .#     # .
+  .####### .
+  _        _
+
+Char: 91 (/home/kraus/git/open-iconic/png/battery-full.png), width: 8
+  .        .
+  .####### .
+  .####### .
+  .########.
+  .########.
+  .####### .
+  .####### .
+  _        _
+
+Char: 92 (/home/kraus/git/open-iconic/png/beaker.png), width: 8
+  . ###### .
+  .  #  #  .
+  .  #  #  .
+  . ##  ## .
+  . #    # .
+  .########.
+  .########.
+  _########_
+
+Char: 93 (/home/kraus/git/open-iconic/png/bell.png), width: 8
+  .   ##   .
+  .  ####  .
+  .  ####  .
+  .  ####  .
+  . ###### .
+  .########.
+  .        .
+  _   ##   _
+
+Char: 94 (/home/kraus/git/open-iconic/png/bluetooth.png), width: 8
+  .   #    .
+  .   ##   .
+  . ##  #  .
+  .  ###   .
+  .  ###   .
+  . ##  #  .
+  .   ##   .
+  _   #    _
+
+Char: 95 (/home/kraus/git/open-iconic/png/bold.png), width: 8
+  .######  .
+  . ##  ## .
+  . ##  ## .
+  . ###### .
+  . ##   ##.
+  . ##   ##.
+  . ##   ##.
+  _####### _
+
+Char: 96 (/home/kraus/git/open-iconic/png/bolt.png), width: 8
+  .        .
+  .   #    .
+  .   #    .
+  .  ####  .
+  . ####   .
+  .   #    .
+  .   #    .
+  _        _
+
+Char: 97 (/home/kraus/git/open-iconic/png/book.png), width: 8
+  .####  # .
+  .####  # .
+  .####  # .
+  .####### .
+  .####### .
+  .####### .
+  .#       .
+  _####### _
+
+Char: 98 (/home/kraus/git/open-iconic/png/bookmark.png), width: 8
+  .  ####  .
+  .  ####  .
+  .  ####  .
+  .  ####  .
+  .  ####  .
+  .  ####  .
+  .  #  #  .
+  _        _
+
+Char: 99 (/home/kraus/git/open-iconic/png/box.png), width: 8
+  .########.
+  .        .
+  .###  ###.
+  .########.
+  .########.
+  .########.
+  .########.
+  _########_
+
+Char: 100 (/home/kraus/git/open-iconic/png/briefcase.png), width: 8
+  .  ####  .
+  .  #  #  .
+  .########.
+  .########.
+  .########.
+  .        .
+  .########.
+  _########_
+
+Char: 101 (/home/kraus/git/open-iconic/png/british-pound.png), width: 8
+  .   ##   .
+  .  #  #  .
+  .  #     .
+  .  #     .
+  . ####   .
+  .  #     .
+  . #      .
+  _ ###### _
+
+Char: 102 (/home/kraus/git/open-iconic/png/browser.png), width: 8
+  .########.
+  .# #    #.
+  .########.
+  .#      #.
+  .#      #.
+  .#      #.
+  .#      #.
+  _########_
+
+Char: 103 (/home/kraus/git/open-iconic/png/brush.png), width: 8
+  .       #.
+  .     ## .
+  .    ### .
+  .    ##  .
+  .  ##    .
+  . ###    .
+  . ###    .
+  _###     _
+
+Char: 104 (/home/kraus/git/open-iconic/png/bug.png), width: 8
+  .   #    .
+  .  ###   .
+  .####### .
+  . #####  .
+  .### ### .
+  . ## ##  .
+  .### ### .
+  _        _
+
+Char: 105 (/home/kraus/git/open-iconic/png/bullhorn.png), width: 8
+  .      # .
+  .   ## # .
+  .##### # .
+  .##### # .
+  . #### # .
+  .  #   # .
+  .  #     .
+  _        _
+
+Char: 106 (/home/kraus/git/open-iconic/png/calculator.png), width: 8
+  .####### .
+  .#     # .
+  .#     # .
+  .####### .
+  .# # # # .
+  .##### # .
+  .# # # # .
+  _####### _
+
+Char: 107 (/home/kraus/git/open-iconic/png/calendar.png), width: 8
+  .####### .
+  .####### .
+  .        .
+  .####### .
+  .# # # # .
+  .####### .
+  .# # ### .
+  _####### _
+
+Char: 108 (/home/kraus/git/open-iconic/png/camera-slr.png), width: 8
+  .    ##  .
+  .   #### .
+  .########.
+  .# ##  ##.
+  .### ## #.
+  .### ## #.
+  .####  ##.
+  _########_
+
+Char: 109 (/home/kraus/git/open-iconic/png/caret-bottom.png), width: 8
+  .        .
+  .        .
+  . ###### .
+  .  ####  .
+  .   ##   .
+  .        .
+  .        .
+  _        _
+
+Char: 110 (/home/kraus/git/open-iconic/png/caret-left.png), width: 8
+  .        .
+  .     #  .
+  .    ##  .
+  .   ###  .
+  .   ###  .
+  .    ##  .
+  .     #  .
+  _        _
+
+Char: 111 (/home/kraus/git/open-iconic/png/caret-right.png), width: 8
+  .        .
+  .  #     .
+  .  ##    .
+  .  ###   .
+  .  ###   .
+  .  ##    .
+  .  #     .
+  _        _
+
+Char: 112 (/home/kraus/git/open-iconic/png/caret-top.png), width: 8
+  .        .
+  .        .
+  .        .
+  .   ##   .
+  .  ####  .
+  . ###### .
+  .        .
+  _        _
+
+Char: 113 (/home/kraus/git/open-iconic/png/cart.png), width: 8
+  .        .
+  .###     .
+  .  ######.
+  .   #### .
+  .   #### .
+  .        .
+  .   #  # .
+  _        _
+
+Char: 114 (/home/kraus/git/open-iconic/png/chat.png), width: 8
+  .#####   .
+  .##      .
+  .## #####.
+  .## #####.
+  .   #####.
+  .   #####.
+  .        .
+  _        _
+
+Char: 115 (/home/kraus/git/open-iconic/png/check.png), width: 8
+  .        .
+  .      # .
+  .     ###.
+  . #  ### .
+  .######  .
+  . ####   .
+  .  ##    .
+  _        _
+
+Char: 116 (/home/kraus/git/open-iconic/png/chevron-bottom.png), width: 8
+  .        .
+  . #    # .
+  .###  ###.
+  . ###### .
+  .  ####  .
+  .   ##   .
+  .        .
+  _        _
+
+Char: 117 (/home/kraus/git/open-iconic/png/chevron-left.png), width: 8
+  .        .
+  .    ##  .
+  .   ##   .
+  .  ##    .
+  .  ##    .
+  .   ##   .
+  .    ##  .
+  _        _
+
+Char: 118 (/home/kraus/git/open-iconic/png/chevron-right.png), width: 8
+  .  #     .
+  . ###    .
+  .  ###   .
+  .   ###  .
+  .   ###  .
+  .  ###   .
+  . ###    .
+  _  #     _
+
+Char: 119 (/home/kraus/git/open-iconic/png/chevron-top.png), width: 8
+  .        .
+  .        .
+  .   ##   .
+  .  ####  .
+  . ##  ## .
+  . #    # .
+  .        .
+  _        _
+
+Char: 120 (/home/kraus/git/open-iconic/png/circle-check.png), width: 8
+  .  ####  .
+  . ###### .
+  .##### ##.
+  .####  ##.
+  .##   ###.
+  .########.
+  . ###### .
+  _  ####  _
+
+Char: 121 (/home/kraus/git/open-iconic/png/circle-x.png), width: 8
+  .  ####  .
+  . ###### .
+  .## ## ##.
+  .###  ###.
+  .###  ###.
+  .## ## ##.
+  . ###### .
+  _  ####  _
+
+Char: 122 (/home/kraus/git/open-iconic/png/clipboard.png), width: 8
+  .   #    .
+  .# ### # .
+  .#     # .
+  .####### .
+  .####### .
+  .####### .
+  .####### .
+  _####### _
+
+Char: 123 (/home/kraus/git/open-iconic/png/clock.png), width: 8
+  .  ####  .
+  . #    # .
+  .#      #.
+  .#      #.
+  .#   #  #.
+  .#      #.
+  . #    # .
+  _  ####  _
+
+Char: 124 (/home/kraus/git/open-iconic/png/cloud.png), width: 8
+  .        .
+  .   ###  .
+  .  ##### .
+  . ###### .
+  .########.
+  .########.
+  . #######.
+  _        _
+
+Char: 125 (/home/kraus/git/open-iconic/png/cloud-download.png), width: 8
+  .   ###  .
+  .  ##### .
+  . ###### .
+  .###   ##.
+  .### # ##.
+  .    #   .
+  .   ###  .
+  _    #   _
+
+Char: 126 (/home/kraus/git/open-iconic/png/cloud-upload.png), width: 8
+  .   ###  .
+  .  ##### .
+  . ###### .
+  .#### ###.
+  .###   ##.
+  .    #   .
+  .   ###  .
+  _    #   _
+
+Char: 127 (/home/kraus/git/open-iconic/png/cloudy.png), width: 8
+  . ###    .
+  .###     .
+  .## ###  .
+  .  ##### .
+  . ###### .
+  .########.
+  .########.
+  _ #######_

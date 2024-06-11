@@ -1,7 +1,7 @@
 import os
 import re
 '''
-    Indexer for Latin-1 font packs.
+    Indexer for Symbol font packs.
     surprisingly badly documented for one of my scripts.. sorry.
     - it is 'documented in code', I suppose.
 '''
@@ -29,7 +29,7 @@ foundsets = []
 # Find our font files
 sources = os.scandir(sourceDir)
 for family in sources:
-    if family.is_dir() and (family.name != '__pycache__'):
+    if family.is_dir() and (family.name != '__pycache__') and family.name[0].islower():
         famname = family.name.replace('new-century-','').replace('-extended','')
         if famname not in families:
             families.append(famname)
@@ -59,14 +59,14 @@ if len(foundsets) == 0:
     exit()
 
 print('Micropython font module tree for: {}\n'.format(dirname))
-print('   Size{:>{}}    {:^{}}{}\n'.format('Family', famwidth, 'Name', namewidth, '(weight)'))
+cols = 'Size:  {:>{}}  {:>{}}'.format('Family', famwidth, 'Name', namewidth)
 
 # Show us the money
 for cset in csets:
     if cset not in foundsets:
         continue
     h = '{} character set'.format(charsets[cset].capitalize())
-    print('{}\n{}'.format(h,'-' * len(h)))
+    print('{}\n{}\n{}'.format(h, '-' * len(h), cols))
     for height in heights:
         # scan matching fonts at this height)
         fontlist = []
@@ -86,5 +86,5 @@ for cset in csets:
                 style = ' (bold)'
             else:
                 style = ''
-            print('       {:>{}}{:.>{}}{}'.format(outmap[font]['family'], famwidth, font, namewidth + 2, style))
+            print('       {:>{}}  {:.>{}}{}'.format(outmap[font]['family'], famwidth, font, namewidth, style))
     print()
