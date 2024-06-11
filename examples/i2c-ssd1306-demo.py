@@ -6,11 +6,11 @@ from time import sleep_ms
 from gc import collect, mem_free
 
 # fonts
-path.append('fonts')
-import ezFBfont_spleen_12x24_r
-import ezFBfont_spleen_16x32_n
-import ezFBfont_6x12_r
-import ezFBfont_symb18_e
+path.append('nfonts')
+import ezFBfont_23_spleen_12x24_ascii
+import ezFBfont_26_spleen_16x32_num
+import ezFBfont_10_6x12_ascii
+import ezFBfont_24_symb18_lower
 
 '''
 A demo of using ezMPfont to splat a load of fonts onto
@@ -45,10 +45,10 @@ d0.rotate(0)      # as needed
 d0.contrast(128)  # as needed
 
 # Font Init
-font1 = ezFBfont(d0, ezFBfont_spleen_12x24_r, tkey=0, verbose=True)
-font2 = ezFBfont(d0, ezFBfont_spleen_16x32_n, verbose=True)
-font3 = ezFBfont(d0, ezFBfont_6x12_r, verbose=True)
-font4 = ezFBfont(d0, ezFBfont_symb18_e, verbose=True)
+font1 = ezFBfont(d0, ezFBfont_23_spleen_12x24_ascii, tkey=0, verbose=True)
+font2 = ezFBfont(d0, ezFBfont_26_spleen_16x32_num, verbose=True)
+font3 = ezFBfont(d0, ezFBfont_10_6x12_ascii, verbose=True)
+font4 = ezFBfont(d0, ezFBfont_24_symb18_lower, verbose=True)
 
 # multiline demo stuff
 font3.set_default(halign='center', valign='baseline')
@@ -65,7 +65,7 @@ d0.show()
 font1.write('Test', 0, 0)
 font2.write('1.23', 63, 0, fg=0, bg=1)
 font3.write(text, tx, ty)
-font4.write('bB1!%Z', 44, 32)
+font4.write('^ezdemo', 44, 32)
 d0.show()
 
 while True:  # rect() demo

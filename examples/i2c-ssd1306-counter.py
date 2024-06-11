@@ -1,14 +1,15 @@
 from machine import Pin, I2C, SoftI2C
 from ssd1306 import SSD1306_I2C
 from ezFBfont import ezFBfont
-from sys import path
+from sys import path, stdin
 from time import sleep_ms,ticks_ms
+import select
 
 # fonts
-path.append('fonts')
-import ezFBfont_spleen_12x24_r
-import ezFBfont_spleen_16x32_n
-import ezFBfont_helvR14_r
+path.append('nfonts')
+import ezFBfont_18_helvR14_ascii
+import ezFBfont_37_7_Seg_41x21_base
+import ezFBfont_29_7_Seg_33x19_base
 
 '''
 A demo of using ezMPfont to do a simple uptime counter.
@@ -39,24 +40,25 @@ d0.rotate(0)      # as needed
 d0.contrast(128)  # as needed
 
 # Font Init
-heading = ezFBfont(d0, ezFBfont_helvR14_r)
-minutes = ezFBfont(d0, ezFBfont_spleen_16x32_n, halign='right', valign='baseline')
-seconds = ezFBfont(d0, ezFBfont_spleen_12x24_r, valign='baseline')
+heading = ezFBfont(d0, ezFBfont_18_helvR14_ascii)
+lcdm = ezFBfont(d0, ezFBfont_37_7_Seg_41x21_base, halign='right', valign='baseline')
+lcds = ezFBfont(d0, ezFBfont_29_7_Seg_33x19_base, valign='baseline')
 
 # frame
-d0.rect(0, 24, 127, 38, 1)
-heading.write('UpTime:', 0, 2)
-d0.show()
+def clean():
+    d0.fill(0)
+    heading.write('UpTime:', 0, 0)
+    d0.show()
 
-x = 86
-y = 53
+d = True
 # loop
+clean()
 while True:
     upsecs = int(ticks_ms() / 1000)
     secs = upsecs % 60
     mins = int(upsecs / 60) % 60
     hrs = int(upsecs / 3600) % 24
-    minutes.write('%d:%02.d' % (hrs, mins), x, y)
-    seconds.write('.%02.d' % secs, x, y)
+    lcdm.write('{:d}:{:02d}'.format(hrs, mins), 84, 58)
+    lcds.write('.{:02d}'.format(secs), 84, 58)
     d0.show()
 # fin
