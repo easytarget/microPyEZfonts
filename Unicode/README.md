@@ -1,66 +1,29 @@
 # Unicode Font files
 
-This folder contains font files suitable for use with `ezFBfont` and Peter Hinches `writer` class.
+This folder contains instructions and examples for producing custom Unicode font files suitable for use with `ezFBfont` and Peter Hinches `writer` class.
 
-They are organised by font family, character set and vertical size.
-* See below for a discussion of the available character sets.
-* The font family is that declared in the source font file, or `Generic` if unknown.
-* The 'height' of each font set is the *true height*; the height of the tallest character in that set.
-* This can vary from the height declared in the font name!
-* The same fonts may appear listed as different heights depending which character set is being provided.
+There are many thousands of characters and glyphs in the Unicode character set, it is impossible to pre-prepare font files that contain usable/useful character sets and are small enough to fit on a micropython device.
 
-There is a mixture of proportional width and monospaced fonts in the collection; the font name will typically note the size for monospaced fonts. The proportional (X11) fonts also mostly come in regular and bold weights.
+Instead; this is a guide, with examples, to producing a custom font pack with the characters and symbols you need for you project and nothing more.
+
+# WORK IN PROGRESS
+I am currently finalising the tooling and preparing examples.
 
 # COPYRIGHT
 Please read the copyright notices in the font files themselves; all the fonts here were sourced from the [u8g2](https://github.com/olikraus/u8g2/blob/master/LICENSE) project fonts; a curated repository of freely redistributable + open-source fonts.
 
 All fonts retain copyright info in the `.py` include file for the font; some are very simple, especially the fonts created for the U8G2 project itself. Some are more general open-source type licences, all are redistributable as is.
 
-If using the X11 fonts (COUR, HELV, NCEN, TIM, SYMB) you should include the Adobe/Digital boilerplate licence in your distributed codes main licence, see the example in this repositories [LICENSE](/LICENSE) file.
-
-# Collections (character sets)
-
-The unicode standard defines standard 'blocks' for character sets in different scripts. The character sets here reflect this block structure.
-
-For a good description of the blocks structure  and the characters they contain I recommend the Wikipedia [Unicode Blocks](https://en.m.wikipedia.org/wiki/Unicode_block) page.
-
-* Pay attention to the file sizes; the full sets (especially the '`latin`' set) can get large.
-* For a detailed font file description and preview look at the corresponding `.map` file in the 'maps' sub-folder.
-  * This contains an ascii-art glyph for all characters in the font file; showing the name, size, bitmap and baseline.
-* The `basic latin' and 'latin-1 supplement' blocks are not included here; these are provided in the main [Latin][/Latin] sets.
-
-For usage see the `ezFBfont.py` documentation in the main `README`.
-
-# The list
-
-----------------------
-
-Fonts as of 9 June 2024 organised by charset/family/height.
+# Block List
+(for reference, from: https://www.unicode.org/Public/UCD/latest/ucd/Blocks.txt):
 ```
-```
-
----------------------
-
-## Converter script
-The font structure is created by the 'convert.py' script in the `tooling` folder, see the README there for more.
-
-The `sets.py` file in this folder contains the character definitions and source font filters.
-
-# Block List Generator:
-The following python script was used to generate the block dictionary in the `sets.py` file:
-```
-# Owen, 20240606:
-# This script was adapted from one at https://stackoverflow.com/questions/243831/unicode-block-of-a-character-in-python
-# Block list originally retrieved from http://unicode.org/Public/UNIDATA/Blocks.txt
-
-_Blocks = '''
-# Blocks-12.0.0.txt
-# Date: 2018-07-30, 19:40:00 GMT [KW]
-# © 2018 Unicode®, Inc.
-# For terms of use, see http://www.unicode.org/terms_of_use.html
+# Blocks-15.1.0.txt
+# Date: 2023-07-28, 15:47:20 GMT
+# © 2023 Unicode®, Inc.
+# For terms of use, see https://www.unicode.org/terms_of_use.html
 #
 # Unicode Character Database
-# For documentation, see http://www.unicode.org/reports/tr44/
+# For documentation, see https://www.unicode.org/reports/tr44/
 #
 # Format:
 # Start Code..End Code; Block Name
@@ -71,7 +34,7 @@ _Blocks = '''
 #         and underbars are ignored.
 #         For example, "Latin Extended-A" and "latin extended a" are equivalent.
 #         For more information on the comparison of property values,
-#            see UAX #44: http://www.unicode.org/reports/tr44/
+#            see UAX #44: https://www.unicode.org/reports/tr44/
 #
 #  All block ranges start with a value where (cp MOD 16) = 0,
 #  and end with a value where (cp MOD 16) = 15. In other words,
@@ -84,7 +47,7 @@ _Blocks = '''
 #  All code points not explicitly listed for Block
 #  have the value No_Block.
 
-# Property: Block
+# Property:	Block
 #
 # @missing: 0000..10FFFF; No_Block
 
@@ -108,6 +71,7 @@ _Blocks = '''
 0800..083F; Samaritan
 0840..085F; Mandaic
 0860..086F; Syriac Supplement
+0870..089F; Arabic Extended-B
 08A0..08FF; Arabic Extended-A
 0900..097F; Devanagari
 0980..09FF; Bengali
@@ -271,7 +235,9 @@ FFF0..FFFF; Specials
 104B0..104FF; Osage
 10500..1052F; Elbasan
 10530..1056F; Caucasian Albanian
+10570..105BF; Vithkuqi
 10600..1077F; Linear A
+10780..107BF; Latin Extended-F
 10800..1083F; Cypriot Syllabary
 10840..1085F; Imperial Aramaic
 10860..1087F; Palmyrene
@@ -293,8 +259,12 @@ FFF0..FFFF; Specials
 10C80..10CFF; Old Hungarian
 10D00..10D3F; Hanifi Rohingya
 10E60..10E7F; Rumi Numeral Symbols
+10E80..10EBF; Yezidi
+10EC0..10EFF; Arabic Extended-C
 10F00..10F2F; Old Sogdian
 10F30..10F6F; Sogdian
+10F70..10FAF; Old Uyghur
+10FB0..10FDF; Chorasmian
 10FE0..10FFF; Elymaic
 11000..1107F; Brahmi
 11080..110CF; Kaithi
@@ -313,27 +283,34 @@ FFF0..FFFF; Specials
 11600..1165F; Modi
 11660..1167F; Mongolian Supplement
 11680..116CF; Takri
-11700..1173F; Ahom
+11700..1174F; Ahom
 11800..1184F; Dogra
 118A0..118FF; Warang Citi
+11900..1195F; Dives Akuru
 119A0..119FF; Nandinagari
 11A00..11A4F; Zanabazar Square
 11A50..11AAF; Soyombo
+11AB0..11ABF; Unified Canadian Aboriginal Syllabics Extended-A
 11AC0..11AFF; Pau Cin Hau
+11B00..11B5F; Devanagari Extended-A
 11C00..11C6F; Bhaiksuki
 11C70..11CBF; Marchen
 11D00..11D5F; Masaram Gondi
 11D60..11DAF; Gunjala Gondi
 11EE0..11EFF; Makasar
+11F00..11F5F; Kawi
+11FB0..11FBF; Lisu Supplement
 11FC0..11FFF; Tamil Supplement
 12000..123FF; Cuneiform
 12400..1247F; Cuneiform Numbers and Punctuation
 12480..1254F; Early Dynastic Cuneiform
+12F90..12FFF; Cypro-Minoan
 13000..1342F; Egyptian Hieroglyphs
-13430..1343F; Egyptian Hieroglyph Format Controls
+13430..1345F; Egyptian Hieroglyph Format Controls
 14400..1467F; Anatolian Hieroglyphs
 16800..16A3F; Bamum Supplement
 16A40..16A6F; Mro
+16A70..16ACF; Tangsa
 16AD0..16AFF; Bassa Vah
 16B00..16B8F; Pahawh Hmong
 16E40..16E9F; Medefaidrin
@@ -341,23 +318,33 @@ FFF0..FFFF; Specials
 16FE0..16FFF; Ideographic Symbols and Punctuation
 17000..187FF; Tangut
 18800..18AFF; Tangut Components
+18B00..18CFF; Khitan Small Script
+18D00..18D7F; Tangut Supplement
+1AFF0..1AFFF; Kana Extended-B
 1B000..1B0FF; Kana Supplement
 1B100..1B12F; Kana Extended-A
 1B130..1B16F; Small Kana Extension
 1B170..1B2FF; Nushu
 1BC00..1BC9F; Duployan
 1BCA0..1BCAF; Shorthand Format Controls
+1CF00..1CFCF; Znamenny Musical Notation
 1D000..1D0FF; Byzantine Musical Symbols
 1D100..1D1FF; Musical Symbols
 1D200..1D24F; Ancient Greek Musical Notation
+1D2C0..1D2DF; Kaktovik Numerals
 1D2E0..1D2FF; Mayan Numerals
 1D300..1D35F; Tai Xuan Jing Symbols
 1D360..1D37F; Counting Rod Numerals
 1D400..1D7FF; Mathematical Alphanumeric Symbols
 1D800..1DAAF; Sutton SignWriting
+1DF00..1DFFF; Latin Extended-G
 1E000..1E02F; Glagolitic Supplement
+1E030..1E08F; Cyrillic Extended-D
 1E100..1E14F; Nyiakeng Puachue Hmong
+1E290..1E2BF; Toto
 1E2C0..1E2FF; Wancho
+1E4D0..1E4FF; Nag Mundari
+1E7E0..1E7FF; Ethiopic Extended-B
 1E800..1E8DF; Mende Kikakui
 1E900..1E95F; Adlam
 1EC70..1ECBF; Indic Siyaq Numbers
@@ -378,26 +365,20 @@ FFF0..FFFF; Specials
 1F900..1F9FF; Supplemental Symbols and Pictographs
 1FA00..1FA6F; Chess Symbols
 1FA70..1FAFF; Symbols and Pictographs Extended-A
+1FB00..1FBFF; Symbols for Legacy Computing
 20000..2A6DF; CJK Unified Ideographs Extension B
 2A700..2B73F; CJK Unified Ideographs Extension C
 2B740..2B81F; CJK Unified Ideographs Extension D
 2B820..2CEAF; CJK Unified Ideographs Extension E
 2CEB0..2EBEF; CJK Unified Ideographs Extension F
+2EBF0..2EE5F; CJK Unified Ideographs Extension I
 2F800..2FA1F; CJK Compatibility Ideographs Supplement
+30000..3134F; CJK Unified Ideographs Extension G
+31350..323AF; CJK Unified Ideographs Extension H
 E0000..E007F; Tags
 E0100..E01EF; Variation Selectors Supplement
 F0000..FFFFF; Supplementary Private Use Area-A
 100000..10FFFF; Supplementary Private Use Area-B
 
 # EOF
-'''
-# Generate dict{} entries for character sets based on Unicode blocks.
-import re
-pattern = re.compile(r'([0-9A-F]+)\.\.([0-9A-F]+);\ (\S.*\S)')
-for line in _Blocks.splitlines():
-    m = pattern.match(line)
-    if m:
-        start, end, n = m.groups()
-        name = n.lower().replace(' ','-')
-        print("        '{}' : list(range(0x{}, 0x{})),".format(name, start, end))
 ```
