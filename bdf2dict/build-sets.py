@@ -37,9 +37,10 @@ badFontFiles = []
 generated = 0
 
 
-def doFont(base, cset, bodycount):
+def doFont(base, cset):
     charset = outDir + '/' + cset + '-char.set'
     infile = sets.sourceDir + '/' + base + '.bdf'
+    files = []
     cmd = 'python {}/bdf2dict.py {} {} True'.format(tooldir, infile, charset)
     if debug:
         cmd += ' True'
@@ -52,38 +53,47 @@ def doFont(base, cset, bodycount):
         return True  # a softfail
 
     response = run.stdout.decode('latin-1')
-    files = response.split('===============================================\n')
-    if len(files) != 2:
-        #print('{} - Bad response from bdf2py'.format(cset))
-        # Just skip... ignore fails here
+    if not os.path.isfile(base + '.py'):
+        print('{}'.format(response))
+        # ignore fails here
         return True
+
+    # examine the map file for basic info
     fontheight = 0
     fontfamily = ''
-    for line in files[0].split('\n'):
-        if re.match('^Declared family:',line):
-            fam = line[16:].strip().replace(' ','-')
-            fam = '' if fam == 'None' else fam
-            fontfamily = fam if len(fam) > 0 else 'generic'
-        if re.match('^Height',line):
-            fontheight = int(line.split(' ')[1])
+    with open(base + '.map','r') as ffile:
+        for line in ffile.read().split('\n'):
+            if re.match('^Declared family:',line):
+                fam = line[16:].strip().replace(' ','-')
+                fam = '' if fam == 'None' else fam
+                fontfamily = fam if len(fam) > 0 else 'generic'
+            elif re.match('^Height',line):
+                fontheight = int(line.split(' ')[1])
+            elif re.match('^Char',line):
+                # no point scanning whole file..
+                break
+
     if fontheight == 0:
-        print(files[0])
         print(' {} (bad font return)'.format(cset), end='')
         return True
     print(' ' + cset, end='', flush=True)
     outname = '{}_{:02d}_{}_{}'.format(prefix, fontheight, base.replace('-','_'), cset)
-    packageInfo(base, infile, outname, cset, fontheight, fontfamily, files)
+    packageInfo(base, infile, outname, cset, fontheight, fontfamily)
+    os.remove(base + '.py')
+    os.remove(base + '.map')
+    os.remove(base + '.set')
     return True
 
-def packageInfo(base, infile, outfile, cset, fontheight, fontfamily, files):
+def packageInfo(base, infile, outfile, cset, fontheight, fontfamily):
     global generated
-    body = files[1].split('\n')[7:]
-    for bod in bodycount:
-        if body == bod:
+    with open(base + '.set', 'r') as thisset:
+        contains = thisset.read()
+    for previous in priorsets:
+        if contains == previous:
             # already covered by a previous charset, skip
             print('-', end='', flush=True)
             return
-    bodycount.append(body)
+    priorsets.append(contains)
     print('+', end='', flush=True)
     generated += 1
     copyrightTxt = []
@@ -105,8 +115,9 @@ def packageInfo(base, infile, outfile, cset, fontheight, fontfamily, files):
         os.remove(outSubDir + '/' + outfile)
     if debug:
         print('PostProcessing:', outfile)
-    with open(outMapDir + '/' + outfile + '.map','w') as i:
-        i.write(files[0])
+    with open(base + '.map', 'r') as m:
+        with open(outMapDir + '/' + outfile + '.map','w') as i:
+            i.write(m.read())
     with open(outSubDir + '/' + outfile + '.py','w') as f:
         f.write("'''\n")
         f.write('    ' + outfile + ' : generated as part of the microPyEZfonts repository\n')
@@ -130,8 +141,8 @@ def packageInfo(base, infile, outfile, cset, fontheight, fontfamily, files):
         else:
             f.write('    None found\n')
         f.write("'''\n")
-        for line in files[1]:
-            f.write(line)
+        with open(base + '.py', 'r') as s:
+            f.write(s.read())
 
 '''
     init
@@ -151,16 +162,16 @@ for s in sets.charsets.keys():
     main loop
 '''
 sources.sort()
-print('Font File: valid charsets (+:generated, -:duplicate, skipped')
+print('Font File: valid charsets (+:generated, -:duplicate skipped')
 for file in sources:
     if file[-4:] != '.bdf':
         #print('Not BDF:',file)
         continue
     baseName = file[:-4]
     print(file,end=' :', flush=True)
-    bodycount = []
+    priorsets = []
     for ch in sets.charsets.keys():
-        if not doFont(baseName, ch, bodycount):
+        if not doFont(baseName, ch):
             # HardFail here == bad .bdf file/format, skip to next font
             break
     print()
@@ -168,6 +179,13 @@ for file in sources:
 '''
     Wrap up and summary
 '''
+
+# clean up sets files
+for s in sets.charsets.keys():
+    if sets.charsets[s] is None:
+        continue
+    cfile = outDir + '/' + s + '-char.set'
+    os.remove(cfile)
 
 print('\nProcessed ' + str(generated) + ' font files that match and have compatible .bdf format')
 if generated == 0:
