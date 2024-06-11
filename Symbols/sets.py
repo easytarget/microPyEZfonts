@@ -2,6 +2,8 @@
     defines the source files and glyph sets to produce for this font type
 '''
 
+sourceDir = 'Symbols-bdf-sources'
+
 fonts = [
     '^symb',
     '^emoticons',

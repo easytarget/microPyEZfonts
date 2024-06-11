@@ -1,13 +1,9 @@
 '''
-    bsd2dict, takes two arguments; a .bdf font file and a binary file with a UTF-8
+    bsd2dict, takes two arguments; a .bdf font file and a file with a UTF-8
     encoded list of characters in it.
 
-    It returns a text output with the corresponding micropython font class.
-
-    There are two optional arguments; appending 'True' will ialso return a
-    human-readable summary and ascii-art glyph maps for the font pack.
-    Adding a second 'True' enables debug; displaying a lot more info, including
-    raw data structures from the font, and extended data in the glyph maps.
+    It returns a .py file with the corresponding micropython font class
+    and a .map file giving more details and ascii glyph representations.
 
     This is a /terrible/ script as far as structure goes.. my apologies.
     Basically it starts at the top and runs to the end, no real use of functions,
@@ -15,40 +11,66 @@
     However, it gets the job done well enough to be useful ;-)
 '''
 from datetime import datetime
-from sys import argv, stderr
+from sys import argv, stderr, stdin
 from pathlib import Path
 
 try:
     from bdfparser import Font
 except ImportError:
-    print('"bdfparser" needs to be installed! exiting.\n(hint: Use a venv then "pip install bdfparser", see README.md for more)')
+    print('"bdfparser" needs to be available! exiting.\n(hint: Use a venv then "pip install bdfparser", see README.md for more)')
     exit()
 
-if len(argv) < 3:
-    print('Two arguments, the font and charset file paths, are required')
+if len(argv) < 2:
+    print('\nUsage: {} <font-file>.bdf [charset]\n'.format(argv[0]))
+    print('Generates a python font module from the supplied .bdf file',end='')
+    print(' containing all matching glyphs for the characters in [charset]\n')
+    print('If [charset] is a valid file path this will be read',end='')
+    print(' and used as the character set.')
+    print("If [charset] is 'FULL' the entire font file will be converted.")
+    print('Otherwise the charset will be read from stdin.\n')
+    print("Outputs two files in cwd; 'font.py' and 'font.map'")
     exit(1)
 
 font_file = argv[1]
-charset = argv[2]
-# You can add 'True' as a extra argument to turn glyph output on
-show_glyph = argv[3] if len(argv) > 3 else False
-# You can add another 'True' to turn debug on
-debug = argv[4] if len(argv) > 4 else False
+if not Path(font_file).is_file():
+    print('{}: Error; font file: {} not found.'.format(argv[0], font_file))
+    exit(1)
+
+if len(argv) > 2:
+    if Path(argv[2]).is_file():
+        print('Reading charset from file: {}'.format(argv[2]))
+        with open(argv[2], 'r') as setfile:
+            cset = setfile.read()
+    elif argv[2] == 'FULL':
+        print('Generating for all glyphs in font')
+        cset = None
+    elif argv[2] == '-':
+        # wait for stdin + eof
+        print('Reading charset from stdin: ', end='', flush=True)
+        with stdin as sin:
+            cset = sin.read()
+        print()
+    else:
+        print('Reading charset from arguments')
+        cset = argv[2]
+else:
+    cset = input('Enter charset: ')
+
+# make cset a sorted unique list of chars
+cset = sorted(set(cset))
+
+# Enable debug here...
+debug = False
 
 # extract font file name
 name = Path(font_file).stem
 
-# import the charset
-with open(charset,'r') as setfile:
-    cset = setfile.read()
-
 # import font
-font = Font(argv[1])
+font = Font(font_file)
 if 'fontname' not in font.headers.keys():
     stderr.write('ERROR: {}: font has no headers, nothing to output\n'.format(argv[1]))
     exit(1)
-if debug:
-    print('\nProcessing: {} with charset {}\n'.format(font_file, charset))
+print('Processing: {}'.format(font_file))
 
 # Gather basic font data
 font_name = font.headers['fontname']
@@ -68,11 +90,9 @@ font_box_off_y = int(font.headers['fbbyoff'])
 if font_box_off_y > 0:
     print(font_file, ":: BAD FONT BOX Y POSITION")
     exit()
+
 # Find the baseline
 font_baseline = font_box_height + font_box_off_y
-# declared variation from baseline. (unreliable?)
-font_above = int(font.props['font_ascent'])
-font_below = int(font.props['font_descent'])
 
 # Defaults
 matches = 0
@@ -93,8 +113,8 @@ for fchar in font.glyphs.keys():
     # check ordinal value is in UTF range
     if fchar not in range(0,0x110000):
         continue
-    # Compare to the byte array of valid chars and skip if not present
-    if chr(fchar) not in cset:
+    # Compare to the valid chars and skip if not present
+    if cset and chr(fchar) not in cset:
         continue
     # Valid character, see if it has a glyph.
     g = font.glyphbycp(fchar)
@@ -187,7 +207,7 @@ for fchar in font.glyphs.keys():
 
 # No matching characters, exit.
 if matches == 0 or withdata == 0:
-    print('No valid matches for this charset, skipping')
+    print('No valid matches for this charset')
     exit(1)
 
 # Scan the matched glyphs to find true top and height of charset
@@ -218,18 +238,19 @@ for fchar in glyph_dict.keys():
         glyph_dict_string += ",b'{}'],\n".format(glyph_px[fchar])
 glyph_dict_string += '}'
 
-if show_glyph or debug:
+# generate the map file
+with open(name + '.map','w') as mapfile:
     # output font summary
-    print('Font: {} ({})'.format(name, font_file))
-    print('Declared name: {}'.format(font_name))
-    print('Declared family: {}'.format(font_family))
-    print('Declared weight: {}'.format(font_weight))
-    print('Declared size: {}'.format(font_size))
-    print('Matching characters: {}'.format(matches))
-    print('Height: {}'.format(font_height))
-    print('Baseline: {}'.format(font_baseline))
-    print('Max width: {}'.format(glyph_widest))
-    print('Fixed width: {}'.format(fixed_width))
+    mapfile.write('Font: {} ({})\n'.format(name, font_file))
+    mapfile.write('Declared name: {}\n'.format(font_name))
+    mapfile.write('Declared family: {}\n'.format(font_family))
+    mapfile.write('Declared weight: {}\n'.format(font_weight))
+    mapfile.write('Declared size: {}\n'.format(font_size))
+    mapfile.write('Matching characters: {}\n'.format(matches))
+    mapfile.write('Height: {}\n'.format(font_height))
+    mapfile.write('Baseline: {}\n'.format(font_baseline))
+    mapfile.write('Max width: {}\n'.format(glyph_widest))
+    mapfile.write('Fixed width: {}\n'.format(fixed_width))
     if debug:
         print('Headers:\n', font.headers)
         print('Props:\n', font.props)
@@ -238,55 +259,66 @@ if show_glyph or debug:
         for fchar in glyph_dict.keys():
             wide = glyph_widest if fixed_width else glyph_px[fchar]
             hwide = ((glyph_px[fchar] - 1) // 8 + 1) * 2
-            print('\nChar: {} ({}), width: {}'.format(fchar, glyph_name[fchar], wide))
+            mapfile.write('\nChar: {} ({}), width: {}\n'.format(fchar, glyph_name[fchar], wide))
             for l in range(0, len(glyph_dict[fchar]), hwide):
                 bs = '{:0{}b}'.format(int(glyph_dict[fchar][l:l+hwide], 16), hwide * 4)
                 bt = bs.replace('0',' ').replace('1','#')[0:wide]
                 bl = '_' if l  == ((font_baseline - 1) * hwide)  else '.'
-                print('  {1}{0}{1}'.format(bt, bl))
+                mapfile.write('  {1}{0}{1}\n'.format(bt, bl))
 
-    print('\n===============================================')
+# Generate a .set file
+with open(name + '.set','w') as setfile:
+    for fchar in glyph_dict.keys():
+        setfile.write(chr(fchar))
 
-# Generate the Output:
+# Report unmatched characters
+unmatched = []
+for cchar in cset:
+    if ord(cchar) not in glyph_dict.keys():
+        unmatched.append(cchar)
+if unmatched:
+    print('Requested characters not matched in the source font:\n{}'.format(unmatched))
 
-# add preamble, static properties and methods
 
-cmdname = argv[0].split('/')[-1]
-prelude = ('''# Code generated by bdf2dict.py
+# Generate the output .py file
+with open(name + '.py','w') as pyfile:
+    # add preamble, static properties and methods
+    cmdname = argv[0].split('/')[-1]
+    prelude = ('''# Code generated by bdf2dict.py
 # Font: {}
 # Cmd: [{}], {}
 # Date: {}
-''').format(name, cmdname, argv[1:], datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
-print(prelude)
+\n''').format(name, cmdname, argv[1:], datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+    pyfile.write(prelude)
 
-static = ('''version = '0.33'
+    static = ('''version = '0.33'
 name = '{}'
 family = '{}'
 weight = '{}'
 size = {}
-''').format(font_name, font_family, font_weight, font_size)
-print(static)
+\n''').format(font_name, font_family, font_weight, font_size)
+    pyfile.write(static)
 
-def method(n,v):
-    print('def {}():\n    return {}\n'.format(n,v))
-method('height', font_height)
-method('baseline', font_baseline)
-method('max_width', glyph_widest)
-method('hmap', True)
-method('reverse', False)
-method('monospaced', fixed_width)
-method('min_ch', list(glyph_dict.keys())[0])
-method('max_ch', list(glyph_dict.keys())[-1])
+    def method(n,v):
+        pyfile.write('def {}():\n    return {}\n\n'.format(n,v))
+    method('height', font_height)
+    method('baseline', font_baseline)
+    method('max_width', glyph_widest)
+    method('hmap', True)
+    method('reverse', False)
+    method('monospaced', fixed_width)
+    method('min_ch', list(glyph_dict.keys())[0])
+    method('max_ch', list(glyph_dict.keys())[-1])
 
-# This is the glyph data
-print('_g = {}'.format(glyph_dict_string))
+    # This is the glyph data
+    pyfile.write('_g = {}\n'.format(glyph_dict_string))
 
-# Now the get_ch() method:
-func = '''
+    # Now the get_ch() method:
+    func = '''
 def get_ch(ch):
     c = ord(ch)
     if c not in _g.keys():
         return None, 0, 0
     return memoryview(_g[c][0]), {}, {}
-'''.format(font_height, glyph_widest if fixed_width else 'int(_g[c][1])')
-print(func)
+\n'''.format(font_height, glyph_widest if fixed_width else 'int(_g[c][1])')
+    pyfile.write(func)

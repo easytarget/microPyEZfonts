@@ -1,6 +1,14 @@
 '''
-    defines the source files and glyph sets to produce for this font type
+    DO NOT USE!
+    - this will produce .py font modules for all the Unicode blocks definmed below.
+    This will take an hour, and produces files that are of limited value.
+    The really interesting CJK sets are far to big to be of use in micropython!
+    Many other sets are far to small to be used alone.
+    I decided to abandon this and focus on making the font generator tool easy to use
+    for those who know which characters they will need.
 '''
+
+sourceDir = 'Unicode-bdf-sources'
 
 fonts = [
         '^cour',

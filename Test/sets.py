@@ -2,23 +2,9 @@
     defines the source files and glyph sets to produce for this font type
 '''
 
-sourceDir = 'Latin-1-bdf-sources'
-
 fonts = [
-        '^cour',
         '^helv',
-        '^ncen',
-        '^tim',
-        '^font_tiny',
-        '^tom-thumb',
         '^spleen',
-        '^amstrad',
-        '^etl',
-        '^b\\d+', # --> has been known to overheat my laptop!
-        '^freedoom',
-        '^unifont',
-        '^\\d+x\\d+$',  # X11 fonts
-        '^micro',
         ]
 
 charsets = {

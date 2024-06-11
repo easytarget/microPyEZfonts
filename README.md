@@ -25,11 +25,15 @@ The selection provided here covers the default U8G2 fonts, a lot of common X11 f
 
 They are all derived from **112** open and redistributable *.bdf* font definition files covering 11 font families. These have been packed into *.py* font modules based on the character set(s) they contain.
 * Fonts are generated and stored by font family, then character set and vertical size.
-  * 570 **Latin-1** font modules cover the basic latin character sets in groups of related characters.
-  * 1576 **Unicode** font modules are packaged by Unicode block, many languages and speciality typefaces are available.
-  * 114 **Symbol** modules cover specialist symbol fonts (battery, 7 segment, etc); there are also some symbol fonts available in the Unicode packs (dingbats, emoticons, mathmatics symbols and so on.)
+  * 569 **Latin-1** font modules cover the basic latin character sets in groups of related characters.
+  * 144 **Symbol** modules cover specialist symbol fonts (battery, 7 segment, etc) and the Open Iconic icon sets.
 
-All font modules contain and retain the original copyright notices of the source files, most are very 'free', but the proportional X11 derived fonts need extra consideration. See the documentation on the font index pages for more.
+  * **Unicode** font modules need to made on demand using the `bdf2dict` tool, see the Unicode [README](/Unicode/README.md) for details.
+    * There is no sensible way of grouping Unicode fonts into packs that are small enought to be useful on micropython devices. The most popular blocks have thousands of characters in them and the resulting files are too large to use sensibly.
+    * The `bdf2dict` tool is designed to be easy to install and use, just requiring Python3.7 or higher.
+    * You can specify your own charset when prompted (or via a file/argument/stdin on the command line), and a font file (the XXXXXTODOXXXXX ones are provided already). The script will output a python font module containing only the characters requested.
+
+All provided font modules contain and retain the original copyright notices of the source files, most are very 'free', but the proportional X11 derived fonts need extra consideration. See the documentation on the font index pages for more.
 
 ## Drivers
 The font writer should work with any display that has a MicroPython framebuffer compatible driver.
@@ -163,5 +167,5 @@ Some ideas; see the issue list for status/planning.
 * `Flip`, `Mirror`, `Turn`: these will allow all text directions and effects etc.
 * Padding : both removal and addition.
 
-### Wanted:
+## Wanted:
 a python library to rotate `MONO_VLSB` and `MONO_HMSB` framebuffers by 90 degrees.

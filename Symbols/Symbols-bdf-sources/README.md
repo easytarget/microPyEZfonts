@@ -1,4 +1,4 @@
-# Source `.bdf` files for the font packs.
+# Source `.bdf` files for the Symbols font packs.
 
 These files originated from the U8G2 project's font tooling here:
 https://github.com/olikraus/u8g2/tree/master/tools/font/bdf

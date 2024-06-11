@@ -5,11 +5,12 @@ import sys
 import importlib
 
 '''
-    converter
+    Utility to build font sets based on a local 'sets.py' file that
+    defines source fonts and charsets.
+
     surprisingly badly documented for one of my scripts.. sorry.
     - it is 'documented in code', I suppose.
 '''
-sourceDir = '../tooling/bdf-sources'
 outDir = '.'
 prefix = 'ezFBfont'
 
@@ -28,8 +29,8 @@ if not os.path.isfile(tooldir + '/bdf2dict.py'):
     print('Cannot find "bdf2dict.py" in:', tooldir)
     exit()
 
-sources = os.listdir(sourceDir)
-#sources = os.listdir(sourceDir)[0:10] # good for test and debug
+sources = os.listdir(sets.sourceDir)
+#sources = os.listdir(sets.sourceDir)[0:10] # good for test and debug
 
 
 badFontFiles = []
@@ -38,7 +39,7 @@ generated = 0
 
 def doFont(base, cset, bodycount):
     charset = outDir + '/' + cset + '-char.set'
-    infile = sourceDir + '/' + base + '.bdf'
+    infile = sets.sourceDir + '/' + base + '.bdf'
     cmd = 'python {}/bdf2dict.py {} {} True'.format(tooldir, infile, charset)
     if debug:
         cmd += ' True'
