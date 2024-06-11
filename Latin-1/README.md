@@ -57,11 +57,8 @@ For usage see the `ezFBfont.py` documentation in the main `README`.
 Fonts as of ???????????????? Jun 2024 organised by charset/height/family.
 ```
 ```
-
 ---------------------
-
 ## Converter script
-The font structure is created by the 'convert.py' script in the `tooling` folder, see the README there for more.
+The font structure is created by the 'build-sets.py' script in the `bdf2dict` folder, see the README there for more.
 
-The `sets.py` file in this folder contains the character definitions and source font filters.
-```
+The `sets.py` file in this folder contains the character definitions and font source.

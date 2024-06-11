@@ -7,7 +7,7 @@ They will work with **`EZ FrameBuffer Font Writer`** (see [below](#easy-font-use
 
 And will also work with Peter Hinches comprehensive [writer](https://github.com/peterhinch/micropython-font-to-py/tree/master/writer) class.
 
-The fonts presented here were processed using the tools and font sources provided in the [`tooling`](tooling) folder.
+The fonts presented here were processed using the tools and font sources provided in the [`bdf2dict`](bdf2dict) folder.
 
 ## Status
 The fonts and libraries have been tested on a `ssd1306` OLED display, and a `st7567` LCD module, both using I2C.
