@@ -62,7 +62,7 @@ def doFont(base, cset, bodycount):
     for line in files[0].split('\n'):
         if re.match('^Declared family:',line):
             fam = line[16:].strip().replace(' ','-')
-            fam = 'generic' if fam == 'None' else fam
+            fam = '' if fam == 'None' else fam
             fontfamily = fam if len(fam) > 0 else 'generic'
         if re.match('^Height',line):
             fontheight = int(line.split(' ')[1])
@@ -151,21 +151,19 @@ for s in sets.charsets.keys():
     main loop
 '''
 sources.sort()
-print('Font File: charsets')
+print('Font File: valid charsets (+:generated, -:duplicate, skipped')
 for file in sources:
     if file[-4:] != '.bdf':
         #print('Not BDF:',file)
         continue
     baseName = file[:-4]
-    for matchfonts in sets.fonts:
-        if re.match(matchfonts, baseName):
-            print(file,end=' :', flush=True)
-            bodycount = []
-            for ch in sets.charsets.keys():
-                if not doFont(baseName, ch, bodycount):
-                    # HardFail here == bad .bdf file/format, skip to next font
-                    break
-            print()
+    print(file,end=' :', flush=True)
+    bodycount = []
+    for ch in sets.charsets.keys():
+        if not doFont(baseName, ch, bodycount):
+            # HardFail here == bad .bdf file/format, skip to next font
+            break
+    print()
 
 '''
     Wrap up and summary

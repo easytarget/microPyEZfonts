@@ -4,19 +4,6 @@
 
 sourceDir = 'Symbols-bdf-sources'
 
-fonts = [
-    '^symb',
-    '^emoticons',
-    '^battery',
-    '^freedoom',
-    '^7Segments',
-    '^7_Seg',
-    '^m2icon',
-    '^cursor',
-    '^open_iconic',
-    '^u8g2_percent_circle',
-]
-
 charsets = {
     'base':list(range(0x00, 0x40)),
     'lower':list(range(0x40, 0x80)),

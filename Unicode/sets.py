@@ -10,23 +10,6 @@
 
 sourceDir = 'Unicode-bdf-sources'
 
-fonts = [
-        '^cour',
-        '^helv',
-        '^ncen',
-        '^tim',
-        '^font_tiny',
-        '^tom-thumb',
-        '^spleen',
-        '^amstrad',
-        '^etl',
-        '^b\\d+', # --> has been known to overheat my laptop!
-        '^freedoom',
-        '^unifont',
-        '^\\d+x\\d+$',  # X11 fonts
-        '^micro',
-        ]
-
 charsets = {
         # First two blocks covered by the Latin-1 font packs
         #'basic-latin' : list(range(0x0000, 0x007F)),

@@ -13,8 +13,6 @@ fonts = [
         '^tom-thumb',
         '^spleen',
         '^amstrad',
-        '^etl',
-        '^b\\d+', # --> has been known to overheat my laptop!
         '^freedoom',
         '^unifont',
         '^\\d+x\\d+$',  # X11 fonts
