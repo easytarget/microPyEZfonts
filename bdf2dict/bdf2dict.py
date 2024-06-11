@@ -254,17 +254,16 @@ with open(name + '.map','w') as mapfile:
     if debug:
         print('Headers:\n', font.headers)
         print('Props:\n', font.props)
-    else:
-        # A human-readable ascii-art glyph map
-        for fchar in glyph_dict.keys():
-            wide = glyph_widest if fixed_width else glyph_px[fchar]
-            hwide = ((glyph_px[fchar] - 1) // 8 + 1) * 2
-            mapfile.write('\nChar: {} ({}), width: {}\n'.format(fchar, glyph_name[fchar], wide))
-            for l in range(0, len(glyph_dict[fchar]), hwide):
-                bs = '{:0{}b}'.format(int(glyph_dict[fchar][l:l+hwide], 16), hwide * 4)
-                bt = bs.replace('0',' ').replace('1','#')[0:wide]
-                bl = '_' if l  == ((font_baseline - 1) * hwide)  else '.'
-                mapfile.write('  {1}{0}{1}\n'.format(bt, bl))
+    # A human-readable ascii-art glyph map
+    for fchar in glyph_dict.keys():
+        wide = glyph_widest if fixed_width else glyph_px[fchar]
+        hwide = ((glyph_px[fchar] - 1) // 8 + 1) * 2
+        mapfile.write('\nChar: {} ({}), width: {}\n'.format(fchar, glyph_name[fchar], wide))
+        for l in range(0, len(glyph_dict[fchar]), hwide):
+            bs = '{:0{}b}'.format(int(glyph_dict[fchar][l:l+hwide], 16), hwide * 4)
+            bt = bs.replace('0',' ').replace('1','#')[0:wide]
+            bl = '_' if l  == ((font_baseline - 1) * hwide)  else '.'
+            mapfile.write('  {1}{0}{1}\n'.format(bt, bl))
 
 # Generate a .set file
 with open(name + '.set','w') as setfile:
