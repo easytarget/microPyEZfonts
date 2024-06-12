@@ -1,4 +1,4 @@
-Font: helvB10 (Latin-1-bdf-sources/helvB10.bdf)
+Font: _helvB10 (Latin-1-bdf-sources/helvB10.bdf)
 Declared name: -Adobe-Helvetica-Bold-R-Normal--14-100-100-100-P-82-ISO10646-1
 Declared family: helvetica
 Declared weight: bold
@@ -58,8 +58,8 @@ Char: 46 (period), width: 4
   .    .
   .    .
   .    .
-  . ## .
-  _ ## _
+  .##  .
+  _##  _
 
 Char: 48 (zero), width: 8
   .  ###   .
@@ -75,17 +75,17 @@ Char: 48 (zero), width: 8
   _  ###   _
 
 Char: 49 (one), width: 8
-  .    ##  .
-  .  ####  .
-  .    ##  .
-  .    ##  .
-  .    ##  .
-  .    ##  .
-  .    ##  .
-  .    ##  .
-  .    ##  .
-  .    ##  .
-  _    ##  _
+  .  ##    .
+  .####    .
+  .  ##    .
+  .  ##    .
+  .  ##    .
+  .  ##    .
+  .  ##    .
+  .  ##    .
+  .  ##    .
+  .  ##    .
+  _  ##    _
 
 Char: 50 (two), width: 8
   . #####  .
@@ -195,11 +195,11 @@ Char: 58 (colon), width: 5
   .     .
   .     .
   .     .
-  . ##  .
-  . ##  .
+  .##   .
+  .##   .
   .     .
   .     .
   .     .
   .     .
-  . ##  .
-  _ ##  _
+  .##   .
+  _##   _

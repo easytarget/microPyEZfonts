@@ -1,4 +1,4 @@
-Font: helvB08_gps (Latin-1-bdf-sources/helvB08_gps.bdf)
+Font: _helvB08_gps (Latin-1-bdf-sources/helvB08_gps.bdf)
 Declared name: -Adobe-Helvetica-Bold-R-Normal--11-80-100-100-P-60-ISO10646-1
 Declared family: helvetica
 Declared weight: bold
@@ -142,14 +142,14 @@ Char: 48 (zero), width: 6
   .      .
 
 Char: 49 (one), width: 6
-  .  ##  .
-  . ###  .
-  .  ##  .
-  .  ##  .
-  .  ##  .
-  .  ##  .
-  .  ##  .
-  _  ##  _
+  . ##   .
+  .###   .
+  . ##   .
+  . ##   .
+  . ##   .
+  . ##   .
+  . ##   .
+  _ ##   _
   .      .
   .      .
 

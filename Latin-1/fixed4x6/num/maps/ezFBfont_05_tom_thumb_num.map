@@ -1,4 +1,4 @@
-Font: tom-thumb (Latin-1-bdf-sources/tom-thumb.bdf)
+Font: _tom_thumb (Latin-1-bdf-sources/tom-thumb.bdf)
 Declared name: -Raccoon-Fixed4x6-Medium-R-Normal--6-60-75-75-P-40-ISO10646-1
 Declared family: fixed4x6
 Declared weight: medium
@@ -24,11 +24,11 @@ Char: 37 (percent), width: 4
   _  # _
 
 Char: 40 (parenleft), width: 4
-  .  # .
   . #  .
-  . #  .
-  . #  .
-  _  # _
+  .#   .
+  .#   .
+  .#   .
+  _ #  _
 
 Char: 41 (parenright), width: 4
   .#   .
@@ -70,7 +70,7 @@ Char: 46 (period), width: 4
   .    .
   .    .
   .    .
-  _ #  _
+  _#   _
 
 Char: 47 (slash), width: 4
   .  # .
@@ -151,9 +151,9 @@ Char: 57 (nine), width: 4
 
 Char: 58 (colon), width: 4
   .    .
-  . #  .
+  .#   .
   .    .
-  . #  .
+  .#   .
   _    _
 
 Char: 176 (degree), width: 4

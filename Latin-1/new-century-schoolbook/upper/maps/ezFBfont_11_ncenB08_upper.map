@@ -1,4 +1,4 @@
-Font: ncenB08 (Latin-1-bdf-sources/ncenB08.bdf)
+Font: _ncenB08 (Latin-1-bdf-sources/ncenB08.bdf)
 Declared name: -Adobe-New Century Schoolbook-Bold-R-Normal--11-80-100-100-P-66-ISO10646-1
 Declared family: new century schoolbook
 Declared weight: bold
@@ -37,9 +37,9 @@ Char: 33 (exclam), width: 3
 
 Char: 34 (quotedbl), width: 6
   .      .
-  . # #  .
-  . # #  .
-  . # #  .
+  .# #   .
+  .# #   .
+  .# #   .
   .      .
   .      .
   .      .
@@ -102,9 +102,9 @@ Char: 38 (ampersand), width: 9
 
 Char: 39 (quotesingle), width: 4
   .    .
-  . #  .
-  . #  .
-  . #  .
+  .#   .
+  .#   .
+  .#   .
   .    .
   .    .
   .    .
@@ -232,14 +232,14 @@ Char: 48 (zero), width: 6
 
 Char: 49 (one), width: 6
   .      .
-  .  ##  .
-  . ###  .
-  .  ##  .
-  .  ##  .
-  .  ##  .
-  .  ##  .
-  .  ##  .
-  _ #### _
+  . ##   .
+  .###   .
+  . ##   .
+  . ##   .
+  . ##   .
+  . ##   .
+  . ##   .
+  _####  _
   .      .
   .      .
 
@@ -310,14 +310,14 @@ Char: 54 (six), width: 6
 
 Char: 55 (seven), width: 6
   .      .
-  . #### .
-  . #### .
-  .    # .
+  .####  .
+  .####  .
   .   #  .
-  .   #  .
-  .  ##  .
-  .  ##  .
-  _  ##  _
+  .  #   .
+  .  #   .
+  . ##   .
+  . ##   .
+  _ ##   _
   .      .
   .      .
 
@@ -438,18 +438,18 @@ Char: 64 (at), width: 10
   .   ####   .
   .          .
 
-Char: 65 (A), width: 9
-  .         .
-  .    #    .
-  .   ###   .
-  .   ###   .
-  .  #  ##  .
-  .  #  ##  .
-  . ####### .
-  . #    ## .
-  _###  ####_
-  .         .
-  .         .
+Char: 65 (A), width: 8
+  .        .
+  .    #   .
+  .   ###  .
+  .   ###  .
+  .  #  ## .
+  .  #  ## .
+  . #######.
+  . #    ##.
+  _###  ###_
+  .        .
+  .        .
 
 Char: 66 (B), width: 8
   .        .

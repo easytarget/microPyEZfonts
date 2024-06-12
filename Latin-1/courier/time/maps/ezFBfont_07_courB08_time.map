@@ -1,4 +1,4 @@
-Font: courB08 (Latin-1-bdf-sources/courB08.bdf)
+Font: _courB08 (Latin-1-bdf-sources/courB08.bdf)
 Declared name: -Adobe-Courier-Bold-R-Normal--11-80-100-100-M-60-ISO10646-1
 Declared family: courier
 Declared weight: bold
@@ -43,7 +43,7 @@ Char: 46 (period), width: 6
   .      .
   .      .
   .      .
-  _  ##  _
+  _##    _
 
 Char: 48 (zero), width: 6
   . ###  .
@@ -139,7 +139,7 @@ Char: 58 (colon), width: 6
   .      .
   .      .
   .      .
-  .  ##  .
+  .##    .
   .      .
   .      .
-  _  ##  _
+  _##    _

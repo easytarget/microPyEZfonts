@@ -1,4 +1,4 @@
-Font: helvB08_gps (Latin-1-bdf-sources/helvB08_gps.bdf)
+Font: _helvB08_gps (Latin-1-bdf-sources/helvB08_gps.bdf)
 Declared name: -Adobe-Helvetica-Bold-R-Normal--11-80-100-100-P-60-ISO10646-1
 Declared family: helvetica
 Declared weight: bold
@@ -24,22 +24,22 @@ Char: 32 (space), width: 3
 
 Char: 33 (exclam), width: 4
   .    .
-  . ## .
-  . ## .
-  . ## .
-  . ## .
-  . #  .
-  . #  .
+  .##  .
+  .##  .
+  .##  .
+  .##  .
+  .#   .
+  .#   .
   .    .
-  _ ## _
+  _##  _
   .    .
   .    .
 
 Char: 34 (quotedbl), width: 5
   .     .
-  . # # .
-  . # # .
-  . # # .
+  .# #  .
+  .# #  .
+  .# #  .
   .     .
   .     .
   .     .
@@ -48,18 +48,18 @@ Char: 34 (quotedbl), width: 5
   .     .
   .     .
 
-Char: 35 (numbersign), width: 7
-  .       .
-  .       .
-  .  # #  .
-  .  # #  .
-  . ######.
-  .  # #  .
-  .###### .
-  . # #   .
-  _ # #   _
-  .       .
-  .       .
+Char: 35 (numbersign), width: 6
+  .      .
+  .      .
+  .  # # .
+  .  # # .
+  . #####.
+  .  # # .
+  .######.
+  . # #  .
+  _ # #  _
+  .      .
+  .      .
 
 Char: 36 (dollar), width: 6
   .  #   .
@@ -102,9 +102,9 @@ Char: 38 (ampersand), width: 8
 
 Char: 39 (quotesingle), width: 3
   .   .
-  . # .
-  . # .
-  . # .
+  .#  .
+  .#  .
+  .#  .
   .   .
   .   .
   .   .
@@ -232,14 +232,14 @@ Char: 48 (zero), width: 6
 
 Char: 49 (one), width: 6
   .      .
-  .  ##  .
-  . ###  .
-  .  ##  .
-  .  ##  .
-  .  ##  .
-  .  ##  .
-  .  ##  .
-  _  ##  _
+  . ##   .
+  .###   .
+  . ##   .
+  . ##   .
+  . ##   .
+  . ##   .
+  . ##   .
+  _ ##   _
   .      .
   .      .
 
@@ -919,18 +919,18 @@ Char: 101 (e), width: 6
   .      .
   .      .
 
-Char: 102 (f), width: 5
-  .     .
-  .  ###.
-  . ##  .
-  .#### .
-  . ##  .
-  . ##  .
-  . ##  .
-  . ##  .
-  _ ##  _
-  .     .
-  .     .
+Char: 102 (f), width: 4
+  .    .
+  .  ##.
+  . ## .
+  .####.
+  . ## .
+  . ## .
+  . ## .
+  . ## .
+  _ ## _
+  .    .
+  .    .
 
 Char: 103 (g), width: 6
   .      .
@@ -1207,16 +1207,16 @@ Char: 123 (braceleft), width: 5
 
 Char: 124 (bar), width: 3
   .   .
-  . # .
-  . # .
-  . # .
-  . # .
-  . # .
-  . # .
-  . # .
-  _ # _
-  . # .
-  . # .
+  .#  .
+  .#  .
+  .#  .
+  .#  .
+  .#  .
+  .#  .
+  .#  .
+  _#  _
+  .#  .
+  .#  .
 
 Char: 125 (braceright), width: 5
   .     .

@@ -1,4 +1,4 @@
-Font: timR12 (Latin-1-bdf-sources/timR12.bdf)
+Font: _timR12 (Latin-1-bdf-sources/timR12.bdf)
 Declared name: -Adobe-Times-Medium-R-Normal--17-120-100-100-P-84-ISO10646-1
 Declared family: times
 Declared weight: medium
@@ -26,13 +26,13 @@ Char: 43 (plus), width: 9
   .         .
   .         .
   .         .
-  .    #    .
-  .    #    .
-  .    #    .
-  . ####### .
-  .    #    .
-  .    #    .
-  .    #    .
+  .   #     .
+  .   #     .
+  .   #     .
+  .#######  .
+  .   #     .
+  .   #     .
+  .   #     .
   _         _
 
 Char: 45 (hyphen), width: 5
@@ -58,8 +58,8 @@ Char: 46 (period), width: 4
   .    .
   .    .
   .    .
-  . #  .
-  _ #  _
+  .#   .
+  _#   _
 
 Char: 48 (zero), width: 8
   .  ###   .
@@ -75,17 +75,17 @@ Char: 48 (zero), width: 8
   _  ###   _
 
 Char: 49 (one), width: 8
-  .    #   .
-  .   ##   .
-  .  # #   .
-  .    #   .
-  .    #   .
-  .    #   .
-  .    #   .
-  .    #   .
-  .    #   .
-  .    #   .
-  _   ###  _
+  .  #     .
+  . ##     .
+  .# #     .
+  .  #     .
+  .  #     .
+  .  #     .
+  .  #     .
+  .  #     .
+  .  #     .
+  .  #     .
+  _ ###    _
 
 Char: 50 (two), width: 8
   .  ###   .
@@ -166,17 +166,17 @@ Char: 55 (seven), width: 8
   _  #     _
 
 Char: 56 (eight), width: 8
-  .   ##   .
-  .  #  #  .
-  . #    # .
-  . #    # .
-  .  #  #  .
-  .   ##   .
-  .  #  #  .
-  . #    # .
-  . #    # .
-  .  #  #  .
-  _   ##   _
+  .  ##    .
+  . #  #   .
+  .#    #  .
+  .#    #  .
+  . #  #   .
+  .  ##    .
+  . #  #   .
+  .#    #  .
+  .#    #  .
+  . #  #   .
+  _  ##    _
 
 Char: 57 (nine), width: 8
   .  ###   .
@@ -195,11 +195,11 @@ Char: 58 (colon), width: 4
   .    .
   .    .
   .    .
-  . #  .
-  . #  .
+  .#   .
+  .#   .
   .    .
   .    .
   .    .
   .    .
-  . #  .
-  _ #  _
+  .#   .
+  _#   _

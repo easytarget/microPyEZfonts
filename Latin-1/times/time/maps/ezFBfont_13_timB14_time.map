@@ -1,4 +1,4 @@
-Font: timB14 (Latin-1-bdf-sources/timB14.bdf)
+Font: _timB14 (Latin-1-bdf-sources/timB14.bdf)
 Declared name: -Adobe-Times-Bold-R-Normal--20-140-100-100-P-100-ISO10646-1
 Declared family: times
 Declared weight: bold
@@ -65,9 +65,9 @@ Char: 46 (period), width: 5
   .     .
   .     .
   .     .
-  . ### .
-  . ### .
-  _ ### _
+  .###  .
+  .###  .
+  _###  _
 
 Char: 48 (zero), width: 9
   .  ####   .
@@ -224,12 +224,12 @@ Char: 58 (colon), width: 5
   .     .
   .     .
   .     .
-  . ### .
-  . ### .
-  . ### .
+  .###  .
+  .###  .
+  .###  .
   .     .
   .     .
   .     .
-  . ### .
-  . ### .
-  _ ### _
+  .###  .
+  .###  .
+  _###  _

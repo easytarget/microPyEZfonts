@@ -1,4 +1,4 @@
-Font: ncenR08 (Latin-1-bdf-sources/ncenR08.bdf)
+Font: _ncenR08 (Latin-1-bdf-sources/ncenR08.bdf)
 Declared name: -Adobe-New Century Schoolbook-Medium-R-Normal--11-80-100-100-P-60-ISO10646-1
 Declared family: new century schoolbook
 Declared weight: medium
@@ -24,22 +24,22 @@ Char: 32 (space), width: 3
 
 Char: 33 (exclam), width: 4
   .    .
-  . #  .
-  . #  .
-  . #  .
-  . #  .
-  . #  .
+  .#   .
+  .#   .
+  .#   .
+  .#   .
+  .#   .
   .    .
-  . #  .
-  _ #  _
+  .#   .
+  _#   _
   .    .
   .    .
 
 Char: 34 (quotedbl), width: 6
   .      .
-  . # #  .
-  . # #  .
-  . # #  .
+  .# #   .
+  .# #   .
+  .# #   .
   .      .
   .      .
   .      .
@@ -102,9 +102,9 @@ Char: 38 (ampersand), width: 10
 
 Char: 39 (quotesingle), width: 4
   .    .
-  . #  .
-  . #  .
-  . #  .
+  .#   .
+  .#   .
+  .#   .
   .    .
   .    .
   .    .
@@ -199,8 +199,8 @@ Char: 46 (period), width: 4
   .    .
   .    .
   .    .
-  . #  .
-  _ #  _
+  .#   .
+  _#   _
   .    .
   .    .
 
@@ -232,14 +232,14 @@ Char: 48 (zero), width: 5
 
 Char: 49 (one), width: 5
   .     .
-  .  #  .
-  . ##  .
-  .  #  .
-  .  #  .
-  .  #  .
-  .  #  .
-  .  #  .
-  _ ### _
+  . #   .
+  .##   .
+  . #   .
+  . #   .
+  . #   .
+  . #   .
+  . #   .
+  _###  _
   .     .
   .     .
 
@@ -352,11 +352,11 @@ Char: 58 (colon), width: 4
   .    .
   .    .
   .    .
-  . #  .
-  . #  .
+  .#   .
+  .#   .
   .    .
-  . #  .
-  _ #  _
+  .#   .
+  _#   _
   .    .
   .    .
 
@@ -365,12 +365,12 @@ Char: 59 (semicolon), width: 4
   .    .
   .    .
   .    .
-  .  # .
-  .  # .
-  .    .
-  .  # .
-  _  # _
   . #  .
+  . #  .
+  .    .
+  . #  .
+  _ #  _
+  .#   .
   .    .
 
 Char: 60 (less), width: 7
@@ -974,15 +974,15 @@ Char: 105 (i), width: 4
 Char: 106 (j), width: 4
   .    .
   .    .
-  .  # .
-  .    .
-  . ## .
-  .  # .
-  .  # .
-  .  # .
-  _  # _
-  .  # .
   . #  .
+  .    .
+  .##  .
+  . #  .
+  . #  .
+  . #  .
+  _ #  _
+  . #  .
+  .#   .
 
 Char: 107 (k), width: 7
   .       .
@@ -1207,14 +1207,14 @@ Char: 123 (braceleft), width: 4
 
 Char: 124 (bar), width: 6
   .      .
-  .  #   .
-  .  #   .
-  .  #   .
-  .  #   .
-  .  #   .
-  .  #   .
-  .  #   .
-  _  #   _
+  .#     .
+  .#     .
+  .#     .
+  .#     .
+  .#     .
+  .#     .
+  .#     .
+  _#     _
   .      .
   .      .
 

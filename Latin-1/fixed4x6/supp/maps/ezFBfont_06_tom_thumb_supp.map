@@ -1,4 +1,4 @@
-Font: tom-thumb (Latin-1-bdf-sources/tom-thumb.bdf)
+Font: _tom_thumb (Latin-1-bdf-sources/tom-thumb.bdf)
 Declared name: -Raccoon-Fixed4x6-Medium-R-Normal--6-60-75-75-P-40-ISO10646-1
 Declared family: fixed4x6
 Declared weight: medium
@@ -10,11 +10,11 @@ Max width: 4
 Fixed width: True
 
 Char: 161 (exclamdown), width: 4
-  . #  .
+  .#   .
   .    .
-  . #  .
-  . #  .
-  _ #  _
+  .#   .
+  .#   .
+  _#   _
   .    .
 
 Char: 162 (cent), width: 4
@@ -50,11 +50,11 @@ Char: 165 (yen), width: 4
   .    .
 
 Char: 166 (brokenbar), width: 4
-  . #  .
-  . #  .
+  .#   .
+  .#   .
   .    .
-  . #  .
-  _ #  _
+  .#   .
+  _#   _
   .    .
 
 Char: 167 (section), width: 4
@@ -162,8 +162,8 @@ Char: 179 (threesuperior), width: 4
   .    .
 
 Char: 180 (acute), width: 4
-  .  # .
   . #  .
+  .#   .
   .    .
   .    .
   _    _
@@ -202,9 +202,9 @@ Char: 184 (cedilla), width: 4
   .    .
 
 Char: 185 (onesuperior), width: 4
-  . #  .
-  . #  .
-  . #  .
+  .#   .
+  .#   .
+  .#   .
   .    .
   _    _
   .    .
@@ -218,9 +218,9 @@ Char: 186 (ordmasculine), width: 4
   .    .
 
 Char: 187 (guillemotright), width: 4
+  .#   .
   . #  .
-  .  # .
-  . #  .
+  .#   .
   .    .
   _    _
   .    .
@@ -610,11 +610,11 @@ Char: 235 (edieresis), width: 4
   .    .
 
 Char: 236 (igrave), width: 4
+  .#   .
   . #  .
-  .  # .
-  . #  .
-  . #  .
-  _ #  _
+  .#   .
+  .#   .
+  _#   _
   .    .
 
 Char: 237 (iacute), width: 4

@@ -1,4 +1,4 @@
-Font: ncenR08 (Latin-1-bdf-sources/ncenR08.bdf)
+Font: _ncenR08 (Latin-1-bdf-sources/ncenR08.bdf)
 Declared name: -Adobe-New Century Schoolbook-Medium-R-Normal--11-80-100-100-P-60-ISO10646-1
 Declared family: new century schoolbook
 Declared weight: medium
@@ -30,14 +30,14 @@ Char: 161 (exclamdown), width: 4
   .    .
   .    .
   .    .
-  . #  .
-  . #  .
+  .#   .
+  .#   .
   .    .
-  . #  .
-  . #  .
-  _ #  _
-  . #  .
-  . #  .
+  .#   .
+  .#   .
+  _#   _
+  .#   .
+  .#   .
 
 Char: 162 (cent), width: 6
   .      .
@@ -103,14 +103,14 @@ Char: 166 (brokenbar), width: 6
   .      .
   .      .
   .      .
-  .  #   .
-  .  #   .
-  .  #   .
+  .#     .
+  .#     .
+  .#     .
   .      .
   .      .
-  .  #   .
-  .  #   .
-  _  #   _
+  .#     .
+  .#     .
+  _#     _
   .      .
   .      .
 
@@ -362,8 +362,8 @@ Char: 183 (periodcentered), width: 4
   .    .
   .    .
   .    .
-  . #  .
-  . #  .
+  .#   .
+  .#   .
   .    .
   _    _
   .    .
