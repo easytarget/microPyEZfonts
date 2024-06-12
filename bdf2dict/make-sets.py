@@ -32,16 +32,14 @@ if not os.path.isfile(tooldir + '/bdf2dict.py'):
 sources = os.listdir(sets.sourceDir)
 #sources = os.listdir(sets.sourceDir)[0:10] # good for test and debug
 
-
 badFontFiles = []
 generated = 0
 
 
-def doFont(base, cset):
+def doFont(base, infile, cset):
     charset = outDir + '/' + cset + '-char.set'
-    infile = sets.sourceDir + '/' + base + '.bdf'
     files = []
-    cmd = 'python {}/bdf2dict.py {} {} True'.format(tooldir, infile, charset)
+    cmd = 'python {}/bdf2dict.py {} _ {}'.format(tooldir, infile, charset)
     if debug:
         cmd += ' True'
     run = subprocess.run(cmd, shell=True, capture_output=True)
@@ -53,7 +51,7 @@ def doFont(base, cset):
         return True  # a softfail
 
     response = run.stdout.decode('latin-1')
-    if not os.path.isfile(base + '.py'):
+    if not os.path.isfile('_' + base + '.py'):
         print('{}'.format(response))
         # ignore fails here
         return True
@@ -61,7 +59,7 @@ def doFont(base, cset):
     # examine the map file for basic info
     fontheight = 0
     fontfamily = ''
-    with open(base + '.map','r') as ffile:
+    with open('_' + base + '.map','r') as ffile:
         for line in ffile.read().split('\n'):
             if re.match('^Declared family:',line):
                 fam = line[16:].strip().replace(' ','-')
@@ -79,14 +77,14 @@ def doFont(base, cset):
     print(' ' + cset, end='', flush=True)
     outname = '{}_{:02d}_{}_{}'.format(prefix, fontheight, base.replace('-','_'), cset)
     packageInfo(base, infile, outname, cset, fontheight, fontfamily)
-    os.remove(base + '.py')
-    os.remove(base + '.map')
-    os.remove(base + '.set')
+    os.remove('_' + base + '.py')
+    os.remove('_' + base + '.map')
+    os.remove('_' + base + '.set')
     return True
 
 def packageInfo(base, infile, outfile, cset, fontheight, fontfamily):
     global generated
-    with open(base + '.set', 'r') as thisset:
+    with open('_' + base + '.set', 'r') as thisset:
         contains = thisset.read()
     for previous in priorsets:
         if contains == previous:
@@ -115,9 +113,9 @@ def packageInfo(base, infile, outfile, cset, fontheight, fontfamily):
         os.remove(outSubDir + '/' + outfile)
     if debug:
         print('PostProcessing:', outfile)
-    with open(base + '.map', 'r') as m:
-        with open(outMapDir + '/' + outfile + '.map','w') as i:
-            i.write(m.read())
+    with open('_' + base + '.map', 'r') as m:
+        with open(outMapDir + '/' + outfile + '.map','w') as o:
+            o.write(m.read())
     with open(outSubDir + '/' + outfile + '.py','w') as f:
         f.write("'''\n")
         f.write('    ' + outfile + ' : generated as part of the microPyEZfonts repository\n')
@@ -141,15 +139,19 @@ def packageInfo(base, infile, outfile, cset, fontheight, fontfamily):
         else:
             f.write('    None found\n')
         f.write("'''\n")
-        with open(base + '.py', 'r') as s:
+        with open('_' + base + '.py', 'r') as s:
             f.write(s.read())
 
-'''
-    init
-'''
+def safe_module_name(name):
+    for s in "!@#$%^&*()+-={}[]:;'<>?,.~":
+        name = name.replace(s, '_')
+    return name
+
+# init
+
 os.makedirs(outDir,exist_ok=True)
 
-# (re)create our charset files:
+# create our charset files:
 for s in sets.charsets.keys():
     if sets.charsets[s] is None:
         continue
@@ -158,27 +160,21 @@ for s in sets.charsets.keys():
         for c in sets.charsets[s]:
             f.write(chr(c).encode("utf-8", "replace"))
 
-'''
-    main loop
-'''
+# loop the font files
 sources.sort()
 print('Font File: valid charsets (+:generated, -:duplicate skipped')
 for file in sources:
     if file[-4:] != '.bdf':
         #print('Not BDF:',file)
         continue
-    baseName = file[:-4]
-    print(file,end=' :', flush=True)
+    baseName = safe_module_name(file[:-4])
+    print(file, end=' :', flush=True)
     priorsets = []
     for ch in sets.charsets.keys():
-        if not doFont(baseName, ch):
+        if not doFont(baseName, sets.sourceDir + '/' + file, ch):
             # HardFail here == bad .bdf file/format, skip to next font
             break
     print()
-
-'''
-    Wrap up and summary
-'''
 
 # clean up sets files
 for s in sets.charsets.keys():
@@ -187,6 +183,7 @@ for s in sets.charsets.keys():
     cfile = outDir + '/' + s + '-char.set'
     os.remove(cfile)
 
+# Wrap up and summary
 print('\nProcessed ' + str(generated) + ' font files that match and have compatible .bdf format')
 if generated == 0:
     print('None! (check settings and errors, try changing debug to True)')
