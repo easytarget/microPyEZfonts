@@ -6,10 +6,11 @@ from time import sleep_ms,ticks_ms
 import select
 
 # fonts
-path.append('nfonts')
-import ezFBfont_18_helvR14_ascii
+path.append('fonts')
+import ezFBfont_17_helvR12_ascii
 import ezFBfont_37_7_Seg_41x21_base
 import ezFBfont_29_7_Seg_33x19_base
+import ezFBfont_16_open_iconic_human_2x_lower
 
 '''
 A demo of using ezMPfont to do a simple uptime counter.
@@ -40,9 +41,10 @@ d0.rotate(0)      # as needed
 d0.contrast(128)  # as needed
 
 # Font Init
-heading = ezFBfont(d0, ezFBfont_18_helvR14_ascii)
+heading = ezFBfont(d0, ezFBfont_17_helvR12_ascii)
 lcdm = ezFBfont(d0, ezFBfont_37_7_Seg_41x21_base, halign='right', valign='baseline')
 lcds = ezFBfont(d0, ezFBfont_29_7_Seg_33x19_base, valign='baseline')
+icon = ezFBfont(d0, ezFBfont_16_open_iconic_human_2x_lower, halign='center', valign='center')
 
 # frame
 def clean():
@@ -58,7 +60,10 @@ while True:
     secs = upsecs % 60
     mins = int(upsecs / 60) % 60
     hrs = int(upsecs / 3600) % 24
-    lcdm.write('{:d}:{:02d}'.format(hrs, mins), 84, 58)
-    lcds.write('.{:02d}'.format(secs), 84, 58)
+    lcdm.write('{:d}:{:02d}'.format(hrs, mins), 84, 57)
+    lcds.write(':{:02d}'.format(secs), 84, 57)
+    beat = int(ticks_ms() / 333) % 2
+    icon.write(chr(66), 118, 7, fg=beat)
     d0.show()
 # fin
+

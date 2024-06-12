@@ -6,7 +6,7 @@ from time import sleep_ms
 from gc import collect, mem_free
 
 # fonts
-path.append('nfonts')
+path.append('fonts')
 import ezFBfont_23_spleen_12x24_ascii
 import ezFBfont_26_spleen_16x32_num
 import ezFBfont_10_6x12_ascii
