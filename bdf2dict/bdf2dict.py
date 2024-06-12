@@ -73,10 +73,11 @@ else:
     cset = input('Enter charset: ')
 
 # make cset a sorted unique list of chars
-cset = sorted(set(cset))
+if cset:
+    cset = sorted(set(cset))
 
 # Enable debug here...
-debug = False
+debug = not False
 
 # import font
 font = Font(font_file)
@@ -149,19 +150,14 @@ for fchar in font.glyphs.keys():
     glyph_box_off_x = int(g.meta['bbxoff'])
 
     # define the width of glyph.
-    if glyph_box_width < glyph_bit_width:
-        wide = glyph_bit_width
-        cent = (wide - glyph_box_width) // 2
-    else:
-        wide = glyph_box_width
-        cent = 0
+    wide = glyph_bit_width
 
     # calculate the left edge
-    start = -font_box_off_x + glyph_box_off_x - cent
+    start = glyph_box_off_x - font_box_off_x
     end = start + wide
     if start < 0:
         stderr.write('WARNING: Bad glyph box for char# {}\n'.format(fchar))
-        start = 0
+        exit()
 
     # store width in dict, and note byte width and max width
     glyph_px[fchar] = wide
@@ -197,8 +193,10 @@ for fchar in font.glyphs.keys():
         if int(dict_entry, 16) > 0:
             first[fchar] = min(first[fchar], line)
             last[fchar] = max(last[fchar], line)
+
         # dump the glyph data
-        glyph_map += '{}{}{:<2d} {} {}\n'.format(
+        glyph_map += '{}{}{}:{:>2d} {} {}\n'.format(
+                        ' ' * start,
                         line_string,
                         ' ' * xbits,
                         line,
@@ -211,11 +209,11 @@ for fchar in font.glyphs.keys():
         withdata += 1
     if debug:
         print('Char: {} ({})'.format(fchar, glyph_name[fchar]))
-        print(g.meta)
-        print(glyph_map,end='')
+        print('  {}\n'.format(g.meta))
+        print(glyph_map)
         high = last[fchar] - first[fchar] + 1
-        print('Width: {}, Lines: {}, first line: {}, last line: {}'.format(wide, high, first[fchar], last[fchar]))
-        print('dict entry: {} ({} chars)'.format(glyph_dict[fchar], len(glyph_dict[fchar])))
+        print('  Width: {}, Lines: {}, first line: {}, last line: {}'.format(wide, high, first[fchar], last[fchar]))
+        print('  Dict entry: {} ({} chars)'.format(glyph_dict[fchar], len(glyph_dict[fchar])))
         print()
 
 # No matching characters, exit.
@@ -284,12 +282,13 @@ with open(name + '.set','w') as setfile:
         setfile.write(chr(fchar))
 
 # Report unmatched characters
-unmatched = []
-for cchar in cset:
-    if (ord(cchar) not in glyph_dict.keys()) and cchar.isprintable():
-        unmatched.append(cchar)
-if unmatched:
-    print('Requested characters not matched in the source font:\n{}'.format(unmatched))
+if cset:
+    unmatched = []
+    for cchar in cset:
+        if (ord(cchar) not in glyph_dict.keys()) and cchar.isprintable():
+            unmatched.append(cchar)
+    if unmatched:
+        print('Characters not matched in the source font:\n{}'.format(unmatched))
 
 # Generate the output .py file
 with open(name + '.py','w') as pyfile:
