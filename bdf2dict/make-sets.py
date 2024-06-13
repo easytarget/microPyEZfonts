@@ -94,16 +94,6 @@ def packageInfo(base, infile, outfile, cset, fontheight, fontfamily):
     priorsets.append(contains)
     print('+', end='', flush=True)
     generated += 1
-    copyrightTxt = []
-    commentTxt = []
-    with open(infile,'r') as f:
-        for line in f:
-            if re.match('^ *COPYRIGHT',line):
-                copyrightTxt.append(line)
-            if re.match('^ *NOTICE',line):
-                commentTxt.append(line)
-            if re.match('^ *COMMENT',line):
-                commentTxt.append(line)
     outSubDir = '{}/{}/{}'.format(outDir, fontfamily, cset)
     os.makedirs(outSubDir, exist_ok=True)
     outMapDir = '{}/maps'.format(outSubDir)
@@ -125,19 +115,6 @@ def packageInfo(base, infile, outfile, cset, fontheight, fontfamily):
         f.write('      font-to-py tool: https://github.com/peterhinch/micropython-font-to-py\n\n')
         f.write('    Original ' + base + '.bdf font file was sourced from the U8G2 project:\n')
         f.write('      https://github.com/olikraus/u8g2\n\n')
-        f.write('    Original Copyright information from source:\n')
-        if len(copyrightTxt) > 0:
-            for line in copyrightTxt:
-                f.write('    ' + line)
-        else:
-            f.write('    None found\n')
-        f.write('\n    Original Comments and Notices from source:\n')
-        f.write('    (may include copyright and trademark info):\n')
-        if len(commentTxt) > 0:
-            for line in commentTxt:
-                f.write('    ' + line)
-        else:
-            f.write('    None found\n')
         f.write("'''\n")
         with open('_' + base + '.py', 'r') as s:
             f.write(s.read())
