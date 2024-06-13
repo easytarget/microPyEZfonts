@@ -1,4 +1,4 @@
-Font: symb08 (Symbols-bdf-sources/symb08.bdf)
+Font: _symb08 (Symbols-bdf-sources/symb08.bdf)
 Declared name: -Adobe-Symbol-Medium-R-Normal--11-80-100-100-P-61-Adobe-FontSpecific
 Declared family: symbol
 Declared weight: medium
@@ -435,11 +435,11 @@ Char: 92 (therefore), width: 7
   .       .
   .       .
   .       .
-  .   #   .
+  .  #    .
   .       .
   .       .
   .       .
-  _ #   # _
+  _#   #  _
   .       .
   .       .
   .       .
@@ -463,13 +463,13 @@ Char: 94 (perpendicular), width: 7
   .       .
   .       .
   .       .
-  .   #   .
-  .   #   .
-  .   #   .
-  .   #   .
-  .   #   .
-  .   #   .
-  _ ##### _
+  .  #    .
+  .  #    .
+  .  #    .
+  .  #    .
+  .  #    .
+  .  #    .
+  _#####  _
   .       .
   .       .
   .       .
@@ -489,20 +489,20 @@ Char: 95 (underscore), width: 5
   .#####.
   .     .
 
-Char: 96 (radicalex), width: 6
-  .######.
-  .      .
-  .      .
-  .      .
-  .      .
-  .      .
-  .      .
-  .      .
-  .      .
-  _      _
-  .      .
-  .      .
-  .      .
+Char: 96 (radicalex), width: 5
+  .#####.
+  .     .
+  .     .
+  .     .
+  .     .
+  .     .
+  .     .
+  .     .
+  .     .
+  _     _
+  .     .
+  .     .
+  .     .
 
 Char: 97 (alpha), width: 7
   .       .
@@ -898,15 +898,15 @@ Char: 123 (braceleft), width: 5
   .     .
   .     .
   .     .
-  .   # .
-  .  #  .
-  .  #  .
   .  #  .
   . #   .
+  . #   .
+  . #   .
+  .#    .
+  . #   .
+  _ #   _
+  . #   .
   .  #  .
-  _  #  _
-  .  #  .
-  .   # .
   .     .
 
 Char: 124 (bar), width: 2
@@ -928,15 +928,15 @@ Char: 125 (braceright), width: 5
   .     .
   .     .
   .     .
+  .#    .
+  . #   .
+  . #   .
   . #   .
   .  #  .
-  .  #  .
-  .  #  .
-  .   # .
-  .  #  .
-  _  #  _
-  .  #  .
   . #   .
+  _ #   _
+  . #   .
+  .#    .
   .     .
 
 Char: 126 (similar), width: 6

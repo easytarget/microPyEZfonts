@@ -1,4 +1,4 @@
-Font: symb08 (Symbols-bdf-sources/symb08.bdf)
+Font: _symb08 (Symbols-bdf-sources/symb08.bdf)
 Declared name: -Adobe-Symbol-Medium-R-Normal--11-80-100-100-P-61-Adobe-FontSpecific
 Declared family: symbol
 Declared weight: medium
@@ -21,13 +21,13 @@ Char: 32 (space), width: 3
   .   .
 
 Char: 33 (exclam), width: 3
-  . # .
-  . # .
-  . # .
-  . # .
-  . # .
+  .#  .
+  .#  .
+  .#  .
+  .#  .
+  .#  .
   .   .
-  _ # _
+  _#  _
   .   .
   .   .
 
@@ -122,9 +122,9 @@ Char: 41 (parenright), width: 4
 Char: 42 (asteriskmath), width: 5
   .     .
   .     .
-  . # # .
-  .  #  .
-  . # # .
+  .# #  .
+  . #   .
+  .# #  .
   .     .
   _     _
   .     .
@@ -197,13 +197,13 @@ Char: 48 (zero), width: 5
   .     .
 
 Char: 49 (one), width: 5
-  .  #  .
-  . ##  .
-  .  #  .
-  .  #  .
-  .  #  .
-  .  #  .
-  _ ### _
+  . #   .
+  .##   .
+  . #   .
+  . #   .
+  . #   .
+  . #   .
+  _###  _
   .     .
   .     .
 
@@ -351,12 +351,12 @@ Char: 62 (greater), width: 6
   .      .
 
 Char: 63 (question), width: 5
+  . #   .
+  .# #  .
   .  #  .
-  . # # .
-  .   # .
-  .  #  .
-  .  #  .
+  . #   .
+  . #   .
   .     .
-  _  #  _
+  _ #   _
   .     .
   .     .

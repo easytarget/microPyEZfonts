@@ -1,4 +1,4 @@
-Font: m2icon_9 (Symbols-bdf-sources/m2icon_9.bdf)
+Font: _m2icon_9 (Symbols-bdf-sources/m2icon_9.bdf)
 Declared name: m2icon_9
 Declared family: 
 Declared weight: medium
@@ -6,7 +6,7 @@ Declared size: None
 Matching characters: 24
 Height: 11
 Baseline: 9
-Max width: 13
+Max width: 12
 Fixed width: False
 
 Char: 65 (C101), width: 11
@@ -282,18 +282,18 @@ Char: 98 (C142), width: 9
   .         .
   .         .
 
-Char: 102 (C146), width: 13
-  .             .
-  .    #####    .
-  .##########   .
-  .#        #   .
-  .#        #   .
-  .#  ##########.
-  .# #        # .
-  .##        #  .
-  _##########   _
-  .             .
-  .             .
+Char: 102 (C146), width: 11
+  .           .
+  .    #####  .
+  .########## .
+  .#        # .
+  .#        # .
+  .#  ########.
+  .# #        .
+  .##        #.
+  _########## _
+  .           .
+  .           .
 
 Char: 103 (C147), width: 2
   .# .
