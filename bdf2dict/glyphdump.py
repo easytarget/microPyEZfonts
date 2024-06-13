@@ -12,10 +12,10 @@ from os import path, remove, getcwd
 
 # Do some minimal checking to catch obvious errors
 if len(argv) != 2:
-    print(argv[0], ': please supply a path to one font file')
+    print(argv[0], ': please provide the path to a font file')
     exit()
 if argv[1][-3:] != '.py':
-    print(argv[0], ': file must be a python font file')
+    print(argv[0], ': must be a python font file, ending in .py')
     exit()
 if not path.isfile(argv[1]):
     print(argv[0], ': file not found:', argv[1])
