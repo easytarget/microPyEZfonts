@@ -1,10 +1,14 @@
 '''
     Dump out a (micro) python font as ascii-art glyphs.
     Takes a single argument, the name of the font file.
+
+    Does a really crude trick to load the python module
+    by copying to the cwd and importing as normal.
+    - I found importlib too cunning to understand ;-)
 '''
-import importlib
-from sys import argv
-from os import path
+from shutil import copy2
+from sys import argv, stderr, path as pypath
+from os import path, remove, getcwd
 
 # Do some minimal checking to catch obvious errors
 if len(argv) != 2:
@@ -18,7 +22,18 @@ if not path.isfile(argv[1]):
     exit()
 
 # import as 'font'
-font = importlib.import_module(argv[1][:-3], package=None)
+pypath.append(getcwd())
+tmpname = '_glyphdict_fontfile.py'
+try:
+    copy2(argv[1], tmpname)
+except Exception as e:
+    print('{} Error:'.format(argv[0]))
+    print('Cannot copy font file {} to {}/{}.'.format(argv[1], path.relpath(getcwd()), tmpname))
+    print('- please ensure the working directory exists and is writable.')
+    print(e, end='\n', file=stderr)
+    exit(1)
+import _glyphdict_fontfile as font
+remove(tmpname)
 
 print('name: {}, file: {}'.format(font.__name__, argv[1]))
 print('height: {}px, baseline: {}, max width: {}px'.format(font.height(), font.baseline(), font.max_width()))
