@@ -138,7 +138,7 @@ for fchar in font.glyphs.keys():
         continue
     # Valid character, see if it has a glyph.
     g = font.glyphbycp(fchar)
-    if len(g.meta['hexdata']) == 0:
+    if (len(g.meta['hexdata']) == 0) or (g.meta['dwx0'] <= 0):
         continue
 
     # If we got here, we have a glyph to process
@@ -158,8 +158,8 @@ for fchar in font.glyphs.keys():
     # define the width of glyph.
     wide = glyph_bit_width
 
-    # calculate the left edge
-    start = glyph_box_off_x - font_box_off_x
+    # calculate the left and right edges
+    start = - font_box_off_x
     end = start + wide
     if start < 0:
         stderr.write('WARNING: Bad glyph box for char# {}\n'.format(fchar))
@@ -230,23 +230,27 @@ if matches == 0 or withdata == 0:
     print('No valid matches for this charset')
     exit(1)
 
-# Scan the matched glyphs to find true top and height of charset
-font_first = font_baseline
-font_last = 0
+# Find true height and position of charset
+font_first = min(first.values())
+font_last = max(last.values())
+font_height = font_last - font_first + 1
+
+# Scan to determine if this charset is fixed width
 fixed_width = True
 for fchar in glyph_dict.keys():
-    font_first = min(font_first, first[fchar])
-    font_last = max(font_last, last[fchar])
     if glyph_px[fchar] != glyph_widest:
         fixed_width = False
-font_height = font_last - font_first + 1
 
 # Remove all empty lines from top and bottom of glyph
 for fchar in glyph_dict.keys():
     hwide = ((glyph_px[fchar] - 1) // 8 + 1) * 2
     glyph_dict[fchar] = glyph_dict[fchar][(font_first - 1) * hwide : font_last * hwide]
-# adjust baseline too
+
+# adjust baseline to match any lines removed above
 font_baseline = font_baseline - font_first + 1
+
+# make sure baseline is within the box (a few .bdf's set it weirdly)
+font_baseline =  max(min(font_baseline, font_height), 1)
 
 # Construct the output glyph dictionary
 glyph_dict_string = '{\n'
