@@ -139,12 +139,13 @@ for glyph in glyph_data:
     output_bytes = ((device_wide - 1) // 8) + 1
     extra_bits = (output_bytes * 8) - device_wide
     # Now process the lines
-    glyph_data[glyph]['bin'] = []
+    glyph_data[glyph]['hex'] = []
     for line in rawhex:
-        glyph_data[glyph]['bin'].append(line_hex(glyph, line, device_wide,
+        glyph_data[glyph]['hex'].append(line_hex(glyph, line, device_wide,
                                                  box_wide, box_xoff,
                                                  rawhex_bits, extra_bits,
                                                  report))
+    del glyph_data[glyph]['rawhex']
 
 # Output..
 print('name  :', font_name)
