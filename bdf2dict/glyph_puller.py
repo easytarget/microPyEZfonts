@@ -5,19 +5,83 @@
         If glyph box has a negative offset this is supposed to print char to left of current pos, again we do not handle this, so the glyph is left aligned and it's device width set to the glyph box width
 '''
 
-from sys import argv
+#from datetime import datetime
+from sys import argv, stderr, stdin
+from pathlib import Path
+#from re import match
 
-# Start stuff here
-debug = True if len(argv) > 2 else False
+# Arguments
+scriptname = Path(argv[0]).name
 
-# Main data structs
+# append 'debug' to arguments to enable debug
+if argv[-1] == 'debug':
+    debug = True
+    argv.pop()
+else:
+    debug = False
+
+if len(argv) not in [3, 4]:
+    print("\nUsage: {} <font>.bdf <prefix> [charset]\n".format(scriptname))
+    print("Generates a python font module from the supplied .bdf file",end='')
+    print(" containing all matching glyphs for the characters in [charset]\n")
+    print("If [charset] is a valid file path this will be read",end='')
+    print(" and used as the character set.")
+    print("If [charset] is 'FULL' the entire font file will be converted.")
+    print("If [charset] is '-' the charset will be read from stdin.")
+    print("Otherwise the user will be prompted to enter the charset.\n")
+    print("The output file names will begin with the supplied prefix.")
+    print("Spaces, hyphens and dots in the prefix and font name will be",end='')
+    print(" mapped to an underscore '_' since the generated .py filename",end='')
+    print(" needs to conform to the python module naming standard.\n")
+    print("Outputs three files in cwd; '<prefix><font>.py', '<prefix><font>.map' ")
+    print("and '<prefix><font>.set'.")
+    exit(1)
+
+def safe_module_name(name):
+    for s in "!@#$%^&*()+-={}[]:;'<>?,.~":
+        name = name.replace(s, '_')
+    return name
+
+font_file = argv[1]
+if not Path(font_file).is_file():
+    print('{}: Error; font file: {} not found.'.format(argv[0], font_file))
+    exit(1)
+
+prefix = safe_module_name(argv[2])
+stem = safe_module_name(Path(font_file).stem)
+name = '{}{}'.format(prefix, stem)
+
+if len(argv) == 4:
+    if Path(argv[3]).is_file():
+        print('Reading charset from file: {}'.format(argv[3]))
+        with open(argv[3], 'r') as setfile:
+            cset = setfile.read()
+    elif argv[3] == 'FULL':
+        print('Generating for all glyphs in font')
+        cset = None
+    elif argv[3] == '-':
+        # wait for stdin + eof
+        print('Reading charset from stdin: ', end='', flush=True)
+        with stdin as sin:
+            cset = sin.read()
+        print()
+    else:
+        print('Reading charset from arguments')
+        cset = argv[3]
+else:
+    cset = input('Enter charset: ')
+
+# make cset a sorted unique list of chars
+if cset:
+    cset = sorted(set(cset))
+
+# data
 glyph_data = {}
 report = {}
 
-# Functions
-
-# Get a named value from a set of input file lines
+# functions
 def get_val(block,value):
+    # Get a named value from a set of input file lines
     for line in block:
         if line.startswith(value):
             return line[len(value):].strip()
@@ -29,7 +93,7 @@ def pull_glyph(glyph_block):
     header, bitmap = glyph_block.split('BITMAP')
     header = header.strip().split('\n')
     bitmap = bitmap.strip().split('\n')
-    # we he the EOF, ignore and treat as 'just another glyph'
+    # EOF marker, ignore and treat as 'just another glyph'
     if bitmap[-1] == 'ENDFONT':
         bitmap.pop()
     # Check we have a complete char defined.
@@ -37,11 +101,12 @@ def pull_glyph(glyph_block):
         print('BAD CHAR!', header)
         return None, None
     bitmap.pop()
+    print(bitmap,len(bitmap))
     # Gather basics for glyph
     name = header[0]
     ordinal = int(get_val(header,'ENCODING'))
     if ordinal < 0:
-        # todo, should we handle chars specified as chr(-1) etc.
+        # todo, how should we handle chars specified as chr(-1) etc.?
         return None, None
     box = [eval(i) for i in get_val(header,'BBX').split(' ')]
     width = int(get_val(header,'DWIDTH').split(' ')[0])
@@ -74,7 +139,7 @@ def line_hex(glyph, line, device_wide, box_wide, xoff, hex_bits, extra_bits, rep
 # Main Code
 
 # Open and ingest the source
-with open(argv[1],'r') as readlines:
+with open(font_file,'r') as readlines:
     bdf = readlines.read().split('STARTCHAR')
 startblock = bdf.pop(0).split('\n')
 
@@ -85,13 +150,15 @@ font_family = get_val(startblock, 'FAMILY_NAME').strip('"')
 
 print('startblock lines: {}, glyph entries {}'.format(len(startblock),len(bdf)))
 
+print('\n{}: processing {} as {}'.format(scriptname, font_file, name))
+print(cset)
+
 # walk all the glyph blocks in the .bdf and save matching glyphs
 for block in bdf:
     ordinal, entry = pull_glyph(block)
     if ordinal is None:
         continue
-    # todo: replace with user supplied charset
-    if debug and (chr(ordinal) not in ' -/(*0129aAbBpPZ'):
+    if cset and (chr(ordinal) not in cset):
         continue
     # collect any reports about adjustments and errors for the glyph
     rep = []
