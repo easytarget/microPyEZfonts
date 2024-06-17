@@ -101,7 +101,9 @@ def pull_glyph(glyph_block):
         print('BAD CHAR!', header)
         return None, None
     bitmap.pop()
-    print(bitmap,len(bitmap))
+    if len(bitmap) == 0:
+        print('EMPTY CHAR!', header)
+        return None, None
     # Gather basics for glyph
     name = header[0]
     ordinal = int(get_val(header,'ENCODING'))
@@ -148,10 +150,13 @@ font_name = get_val(startblock, 'FONT')
 font_box = [eval(i) for i in get_val(startblock, 'FONTBOUNDINGBOX').split(' ')]
 font_family = get_val(startblock, 'FAMILY_NAME').strip('"')
 
-print('startblock lines: {}, glyph entries {}'.format(len(startblock),len(bdf)))
-
-print('\n{}: processing {} as {}'.format(scriptname, font_file, name))
-print(cset)
+if debug:
+    print('startblock lines: {}, glyph entries {}'.format(len(startblock),len(bdf)))
+    print('{}: processing {} as {}'.format(scriptname, font_file, name))
+    if cset is not None:
+        print('requested charset: {}'.format(cset))
+    else:
+        print('requested charset: FULL')
 
 # walk all the glyph blocks in the .bdf and save matching glyphs
 for block in bdf:
@@ -179,12 +184,9 @@ for block in bdf:
         rep.append(r.format(entry['width'], font_box[0]))
         entry['width'] = font_box[0]
     # Sanity check vertical box + baseline, note start/stop lines
-    # ToDo
-    # Add any reports for the glyph..
-    if len(rep) > 0:
-        report[ordinal] = rep
     # Save the glyph
     glyph_data[ordinal] = entry
+    report[ordinal] = rep
 
 # We now have dict with all the desired and matching glyphs and metadata
 # Compute the bytearray for each.
@@ -215,13 +217,14 @@ for glyph in glyph_data:
     del glyph_data[glyph]['rawhex']
 
 # Output..
+print('\nOUT:')
 print('name  :', font_name)
 print('family:', font_family)
 print('box   :',font_box)
-for g in list(glyph_data.keys()):
-    print('{:>4d}:{}'.format(g, glyph_data[g]))
+for glyph in glyph_data:
+    print('{:>4d}:{}'.format(glyph, glyph_data[glyph]))
 
-if report:
-    #report.sort(key=lambda x: x[0])
-    for line in report:
+#report.sort(key=lambda x: x[0])
+for line in report:
+    if report[line]:
         print(line, report[line])
