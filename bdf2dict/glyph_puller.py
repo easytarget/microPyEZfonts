@@ -53,20 +53,20 @@ name = '{}{}'.format(prefix, stem)
 
 if len(argv) == 4:
     if Path(argv[3]).is_file():
-        print('Reading charset from file: {}'.format(argv[3]))
+        #print('Reading charset from file: {}'.format(argv[3]))
         with open(argv[3], 'r') as setfile:
             cset = setfile.read()
     elif argv[3] == 'FULL':
-        print('Generating for all glyphs in font')
+        #print('Generating for all glyphs in font')
         cset = None
     elif argv[3] == '-':
         # wait for stdin + eof
-        print('Reading charset from stdin: ', end='', flush=True)
+        #print('Reading charset from stdin: ', end='', flush=True)
         with stdin as sin:
             cset = sin.read()
         print()
     else:
-        print('Reading charset from arguments')
+        #print('Reading charset from arguments')
         cset = argv[3]
 else:
     cset = input('Enter charset: ')
@@ -93,7 +93,7 @@ def pull_glyph(glyph_block):
     header, bitmap = glyph_block.split('BITMAP')
     header = header.strip().split('\n')
     bitmap = bitmap.strip().split('\n')
-    # EOF marker, ignore and treat as 'just another glyph'
+    # if we meet the EOF marker (after last glyph) remove it
     if bitmap[-1] == 'ENDFONT':
         bitmap.pop()
     # Check we have a complete char defined.
@@ -136,7 +136,7 @@ def line_hex(glyph, line, device_wide, box_wide, xoff, hex_bits, extra_bits, rep
         print('{}{}| {} {}'.format(boxline.replace('0',' '),
                                    ' ' * width_pad, byteline,
                                    hexline))
-    return hexline
+    return hexline, boxline.replace('0',' ').replace('1','#')
 
 # Main Code
 
@@ -157,6 +157,9 @@ if debug:
         print('requested charset: {}'.format(cset))
     else:
         print('requested charset: FULL')
+    print('font name   : {}'.format(font_name))
+    print('font family : {}'.format(font_family))
+    print('font box    : {}'.format(font_box))
 
 # walk all the glyph blocks in the .bdf and save matching glyphs
 for block in bdf:
@@ -169,24 +172,52 @@ for block in bdf:
     rep = []
     # Sanity check glyph and box widths
     if entry['width'] < entry['box'][0]:
-        r = 'box width ({}) is greater than device width ({}), widening'
+        r = 'box width ({}) is greater than device width ({}), adjusting width'
         rep.append(r.format(entry['box'][0], entry['width']))
         entry['width'] = entry['box'][0]
     if entry['box'][2] < 0:
         r = 'negative horizontal padding ({}), left aligning'.format(entry['box'][2])
         entry['box'][2] = 0
-        if entry['width'] > entry['box'][0]:
-            r += ' and reducing device width ({}) to box width ({})'.format(entry['width'], entry['box'][0])
-            entry['width'] = entry['box'][0]
+        # debug: is this needed..
+        #if entry['width'] > entry['box'][0]:
+        #    r += ' and reducing device width ({}) to box width ({})'.format(entry['width'], entry['box'][0])
+        #    entry['width'] = entry['box'][0]
         rep.append(r)
     if entry['width'] > font_box[0]:
-        r = 'width ({}) is wider than overall font box width ({}), clipping'
+        r = 'width ({}) is wider than overall font box width ({}), adjusting width'
         rep.append(r.format(entry['width'], font_box[0]))
         entry['width'] = font_box[0]
     # Sanity check vertical box + baseline, note start/stop lines
+    if entry['box'][1] != len(entry['rawhex']):
+        r = 'bitmap height ({}) differs from box height ({}), adjusting box'
+        rep.append(r.format(len(entry['rawhex']), font_box[1]))
+        entry['box'][1] = len(entry['rawhex'])
+    entry['top'] = entry['box'][3] + entry['box'][1] 
+    entry['bottom'] = entry['box'][3]
+    # Should we strip empty (00) lines from top and bottom of bitmap? lets see if an issue.
+    # - if so, adjust top and bottom accordingly too.
     # Save the glyph
     glyph_data[ordinal] = entry
     report[ordinal] = rep
+
+# Find the first and last lines of bitmap in our chars
+top = max([glyph_data[d]['top'] for d in glyph_data])
+bottom = min([glyph_data[d]['bottom'] for d in glyph_data])
+height = top - bottom
+# baseline; constrained within font height
+baseline = min(max(0, -bottom), height)
+
+# Pad glyph raw hex as needed to the overall height from above
+if debug:
+    print('\nheight: {}, baseline {}'.format(height, baseline))
+for glyph in glyph_data:
+    pad_top = top - glyph_data[glyph]['top']
+    pad_bottom = glyph_data[glyph]['bottom'] - bottom
+    if debug:
+        hm = '{}{}{}'.format('+' * pad_top, '#' * len(glyph_data[glyph]['rawhex']), '-' * pad_bottom)
+        print('{:>5d} {}|{}'.format(glyph, hm[:-baseline], hm[-baseline:]))
+    glyph_data[glyph]['padhex'] = ['0'] * pad_top + glyph_data[glyph]['rawhex'] + ['0'] * pad_bottom
+    del glyph_data[glyph]['rawhex']
 
 # We now have dict with all the desired and matching glyphs and metadata
 # Compute the bytearray for each.
@@ -194,37 +225,51 @@ for glyph in glyph_data:
     device_wide = glyph_data[glyph]['width']
     box_wide =  glyph_data[glyph]['box'][0]
     box_xoff =  glyph_data[glyph]['box'][2]
-    rawhex = glyph_data[glyph]['rawhex']
+    box_high = glyph_data[glyph]['box'][1]
+    box_yoff = glyph_data[glyph]['box'][3]
+    padhex = glyph_data[glyph]['padhex']
     if debug:
-        p = '\nChar: {} ({}), device width {}, box width {}, box offset {}'
-        print(p.format(glyph, glyph_data[glyph]['name'], device_wide, box_wide, box_xoff))
+        p = '\nChar: {} ({})'
+        print(p.format(glyph, glyph_data[glyph]['name']), end='')
+        p = ', device width {}, box width {}, box Xoff {}'
+        print(p.format(device_wide, box_wide, box_xoff), end='')
+        p = ', box height  {}, box Yoff {}'
+        print(p.format(box_high, box_yoff))
+        print(padhex)
         print('{}{}'.format(' ' * box_xoff, '.' * box_wide))
         print('{}'.format('-' * device_wide))
     # work out how many bits of data are in the bdf bitmap lines
-    rawhex_bits = 0
-    for line in rawhex:
-        rawhex_bits = max(rawhex_bits, len(line) * 4)
+    padhex_bits = 0
+    for line in padhex:
+        padhex_bits = max(padhex_bits, len(line) * 4)
     # work out how many bytes wide we need to be and calculate bit padding
     output_bytes = ((device_wide - 1) // 8) + 1
     extra_bits = (output_bytes * 8) - device_wide
     # Now process the lines
     glyph_data[glyph]['hex'] = []
-    for line in rawhex:
-        glyph_data[glyph]['hex'].append(line_hex(glyph, line, device_wide,
-                                                 box_wide, box_xoff,
-                                                 rawhex_bits, extra_bits,
-                                                 report))
-    del glyph_data[glyph]['rawhex']
+    glyph_data[glyph]['map'] = []
+    for line in padhex:
+        bytehex, human = line_hex(glyph, line, device_wide,
+                                  box_wide, box_xoff,
+                                  padhex_bits, extra_bits,
+                                  report)
+        glyph_data[glyph]['hex'].append(bytehex)
+        glyph_data[glyph]['map'].append(human)
+    del glyph_data[glyph]['padhex']
 
 # Output..
-print('\nOUT:')
-print('name  :', font_name)
-print('family:', font_family)
-print('box   :',font_box)
+print('\nMAP OUT:')
+print('file     : {}.py'.format(name))
+print('name     : {}'.format(font_name))
+print('family   : {}'.format(font_family))
+print('height   : {}'.format(height))
+print('baseline : {}'.format(baseline))
 for glyph in glyph_data:
-    print('{:>4d}:{}'.format(glyph, glyph_data[glyph]))
+    print('\n{}, ({}), width {}'.format(glyph, glyph_data[glyph]['name'],glyph_data[glyph]['width']))
+    for l in glyph_data[glyph]['map']:
+        print('  {1}{0}{1}'.format(l,'.'))
 
-#report.sort(key=lambda x: x[0])
+print('\nReports:')
 for line in report:
     if report[line]:
         print(line, report[line])
