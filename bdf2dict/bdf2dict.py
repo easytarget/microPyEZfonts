@@ -93,8 +93,6 @@ py_file = Path(outdir).joinpath(name + '.py')
 map_file = Path(outdir).joinpath(name + '.map')
 set_file = Path(outdir).joinpath(name + '.set')
 
-print(name, py_file)
-
 # Determine charset
 if len(argv) == 4:
     if Path(argv[3]).is_file():
@@ -193,14 +191,17 @@ with open(font_file,'r') as readlines:
 startblock = bdf.pop(0).split('\n')
 
 # get basics
-font_name = get_val(startblock, 'FONT').strip('"')
+font_name = get_val(startblock, 'FONT').strip('"').lower()
 font_box = [eval(i) for i in get_val(startblock, 'FONTBOUNDINGBOX').split(' ')]
-font_family = get_val(startblock, 'FAMILY_NAME').strip('"')
-font_weight = get_val(startblock, 'WEIGHT_NAME').strip('"')
+font_family = get_val(startblock, 'FAMILY_NAME').strip('"').lower()
+font_weight = get_val(startblock, 'WEIGHT_NAME').strip('"').lower()
 font_size = get_val(startblock, 'PIXEL_SIZE').strip('"')
 comment_text = get_meta(startblock, 'COPYRIGHT')
 copyright_text = get_meta(startblock, 'COMMENT')
 notice_text = get_meta(startblock, 'NOTICE')
+
+if font_family == 'none':
+    font_family = 'generic'
 
 # let the user know we are working on things
 print('{}: processing {}'.format(scriptname, font_file))
@@ -363,7 +364,7 @@ try:
         pyfile.write("name = '{}'\n".format(font_name))
         pyfile.write("family = '{}'\n".format(font_family))
         pyfile.write("weight = '{}'\n".format(font_weight))
-        pyfile.write("size = {}\n".format(font_size))
+        pyfile.write("size = {}\n\n".format(font_size))
         # Font methods
         def method(n,v):
             pyfile.write("def {}():\n    return {}\n\n".format(n,v))

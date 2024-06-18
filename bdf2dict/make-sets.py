@@ -52,9 +52,9 @@ def doFont(base, infile, cset):
 
     response = run.stdout.decode('latin-1')
     if not os.path.isfile('_' + base + '.py'):
-        print('{}'.format(response))
-        # ignore fails here
-        return True
+        if debug:
+            print('\nFail: {}'.format(response), end="")
+        return True  # a softfail
 
     # examine the map file for basic info
     fontheight = 0
@@ -67,7 +67,7 @@ def doFont(base, infile, cset):
                 fontfamily = fam if len(fam) > 0 else 'generic'
             elif re.match('^Height',line):
                 fontheight = int(line.split(' ')[1])
-            elif re.match('^Char',line):
+            elif re.match('^Char ',line):
                 # no point scanning whole file..
                 break
 
