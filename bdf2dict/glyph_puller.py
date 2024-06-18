@@ -224,7 +224,7 @@ top = max([glyph_data[d]['top'] for d in glyph_data])
 bottom = min([glyph_data[d]['bottom'] for d in glyph_data])
 height = top - bottom
 # baseline; constrained within font height
-baseline = min(max(0, -bottom), height)
+baseline = min(max(0, height+bottom), height)
 
 # Pad glyph raw hex as needed to the overall height from above
 if debug:
@@ -317,6 +317,8 @@ for glyph in glyph_data:
     glyph_dict_entry = ''
     for line in glyph_data[glyph]['hex']:
         glyph_dict_entry += line
+    if not fixed:
+        glyph_dict_entry += '{:02x}'.format(glyph_data[glyph]['width'])
     glyph_dict_string += '  {}:{},\n'.format(glyph, bytes.fromhex(glyph_dict_entry))
 glyph_dict_string += '}'
 
@@ -378,7 +380,7 @@ def get_ch(ch):
     if c not in _g.keys():
         return None, 0, 0
     return memoryview(_g[c]), {}, {}
-\n'''.format(height, widest if fixed else 'int(_g[c][1])'))
+\n'''.format(height, widest if fixed else 'int(_g[c][-1])'))
 
 # Wrap up
 print('{} Matching characters rendered to {}.py'.format(matches, name))
