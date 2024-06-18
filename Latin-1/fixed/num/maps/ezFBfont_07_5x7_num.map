@@ -1,208 +1,208 @@
-Font: _5x7 (Latin-1-bdf-sources/5x7.bdf)
-Declared name: -Misc-Fixed-Medium-R-Normal--7-70-75-75-C-50-ISO10646-1
+Font: 5x7 (Latin-1-bdf-sources/5x7.bdf)
+Declared name: -misc-fixed-medium-r-normal--7-70-75-75-c-50-iso10646-1
 Declared family: fixed
 Declared weight: medium
 Declared size: 7
-Matching characters: 22
+Characters: 22
 Height: 7
 Baseline: 6
 Max width: 5
 Fixed width: True
 
-Char: 32 (space), width: 5
-  .     .
-  .     .
-  .     .
-  .     .
-  .     .
-  _     _
-  .     .
+Char 32 (space), width 5
+ __     __
+  .     . 
+  .     . 
+  .     . 
+  .     . 
+  .     . 
+  .     . 
 
-Char: 37 (percent), width: 5
-  .#    .
-  .#  # .
-  .  #  .
-  . #   .
-  .#  # .
-  _   # _
-  .     .
+Char 37 (percent), width 5
+ __#    __
+  .#  # . 
+  .  #  . 
+  . #   . 
+  .#  # . 
+  .   # . 
+  .     . 
 
-Char: 40 (parenleft), width: 5
-  .  #  .
-  . #   .
-  . #   .
-  . #   .
-  . #   .
-  _  #  _
-  .     .
+Char 40 (parenleft), width 5
+ __  #  __
+  . #   . 
+  . #   . 
+  . #   . 
+  . #   . 
+  .  #  . 
+  .     . 
 
-Char: 41 (parenright), width: 5
-  . #   .
-  .  #  .
-  .  #  .
-  .  #  .
-  .  #  .
-  _ #   _
-  .     .
+Char 41 (parenright), width 5
+ __ #   __
+  .  #  . 
+  .  #  . 
+  .  #  . 
+  .  #  . 
+  . #   . 
+  .     . 
 
-Char: 42 (asterisk), width: 5
-  .     .
-  . # # .
-  .  #  .
-  . ### .
-  .  #  .
-  _ # # _
-  .     .
+Char 42 (asterisk), width 5
+ __     __
+  . # # . 
+  .  #  . 
+  . ### . 
+  .  #  . 
+  . # # . 
+  .     . 
 
-Char: 43 (plus), width: 5
-  .     .
-  .  #  .
-  .  #  .
-  .#####.
-  .  #  .
-  _  #  _
-  .     .
+Char 43 (plus), width 5
+ __     __
+  .  #  . 
+  .  #  . 
+  .#####. 
+  .  #  . 
+  .  #  . 
+  .     . 
 
-Char: 44 (comma), width: 5
-  .     .
-  .     .
-  .     .
-  .     .
-  .  ## .
-  _  #  _
-  . #   .
+Char 44 (comma), width 5
+ __     __
+  .     . 
+  .     . 
+  .     . 
+  .  ## . 
+  .  #  . 
+  . #   . 
 
-Char: 45 (hyphen), width: 5
-  .     .
-  .     .
-  .     .
-  .#### .
-  .     .
-  _     _
-  .     .
+Char 45 (hyphen), width 5
+ __     __
+  .     . 
+  .     . 
+  .#### . 
+  .     . 
+  .     . 
+  .     . 
 
-Char: 46 (period), width: 5
-  .     .
-  .     .
-  .     .
-  .     .
-  . ##  .
-  _ ##  _
-  .     .
+Char 46 (period), width 5
+ __     __
+  .     . 
+  .     . 
+  .     . 
+  . ##  . 
+  . ##  . 
+  .     . 
 
-Char: 47 (slash), width: 5
-  .     .
-  .   # .
-  .  #  .
-  . #   .
-  .#    .
-  _     _
-  .     .
+Char 47 (slash), width 5
+ __     __
+  .   # . 
+  .  #  . 
+  . #   . 
+  .#    . 
+  .     . 
+  .     . 
 
-Char: 48 (zero), width: 5
-  .  #  .
-  . # # .
-  . # # .
-  . # # .
-  . # # .
-  _  #  _
-  .     .
+Char 48 (zero), width 5
+ __  #  __
+  . # # . 
+  . # # . 
+  . # # . 
+  . # # . 
+  .  #  . 
+  .     . 
 
-Char: 49 (one), width: 5
-  .  #  .
-  . ##  .
-  .  #  .
-  .  #  .
-  .  #  .
-  _ ### _
-  .     .
+Char 49 (one), width 5
+ __  #  __
+  . ##  . 
+  .  #  . 
+  .  #  . 
+  .  #  . 
+  . ### . 
+  .     . 
 
-Char: 50 (two), width: 5
-  . ##  .
-  .#  # .
-  .   # .
-  .  #  .
-  . #   .
-  _#### _
-  .     .
+Char 50 (two), width 5
+ __ ##  __
+  .#  # . 
+  .   # . 
+  .  #  . 
+  . #   . 
+  .#### . 
+  .     . 
 
-Char: 51 (three), width: 5
-  .#### .
-  .   # .
-  . ##  .
-  .   # .
-  .#  # .
-  _ ##  _
-  .     .
+Char 51 (three), width 5
+ __#### __
+  .   # . 
+  . ##  . 
+  .   # . 
+  .#  # . 
+  . ##  . 
+  .     . 
 
-Char: 52 (four), width: 5
-  .  #  .
-  . ##  .
-  .# #  .
-  .#### .
-  .  #  .
-  _  #  _
-  .     .
+Char 52 (four), width 5
+ __  #  __
+  . ##  . 
+  .# #  . 
+  .#### . 
+  .  #  . 
+  .  #  . 
+  .     . 
 
-Char: 53 (five), width: 5
-  .#### .
-  .#    .
-  .###  .
-  .   # .
-  .#  # .
-  _ ##  _
-  .     .
+Char 53 (five), width 5
+ __#### __
+  .#    . 
+  .###  . 
+  .   # . 
+  .#  # . 
+  . ##  . 
+  .     . 
 
-Char: 54 (six), width: 5
-  . ##  .
-  .#    .
-  .###  .
-  .#  # .
-  .#  # .
-  _ ##  _
-  .     .
+Char 54 (six), width 5
+ __ ##  __
+  .#    . 
+  .###  . 
+  .#  # . 
+  .#  # . 
+  . ##  . 
+  .     . 
 
-Char: 55 (seven), width: 5
-  .#### .
-  .   # .
-  .  #  .
-  .  #  .
-  . #   .
-  _ #   _
-  .     .
+Char 55 (seven), width 5
+ __#### __
+  .   # . 
+  .  #  . 
+  .  #  . 
+  . #   . 
+  . #   . 
+  .     . 
 
-Char: 56 (eight), width: 5
-  . ##  .
-  .#  # .
-  . ##  .
-  .#  # .
-  .#  # .
-  _ ##  _
-  .     .
+Char 56 (eight), width 5
+ __ ##  __
+  .#  # . 
+  . ##  . 
+  .#  # . 
+  .#  # . 
+  . ##  . 
+  .     . 
 
-Char: 57 (nine), width: 5
-  . ##  .
-  .#  # .
-  .#  # .
-  . ### .
-  .   # .
-  _ ##  _
-  .     .
+Char 57 (nine), width 5
+ __ ##  __
+  .#  # . 
+  .#  # . 
+  . ### . 
+  .   # . 
+  . ##  . 
+  .     . 
 
-Char: 58 (colon), width: 5
-  .     .
-  . ##  .
-  . ##  .
-  .     .
-  . ##  .
-  _ ##  _
-  .     .
+Char 58 (colon), width 5
+ __     __
+  . ##  . 
+  . ##  . 
+  .     . 
+  . ##  . 
+  . ##  . 
+  .     . 
 
-Char: 176 (degree), width: 5
-  .  #  .
-  . # # .
-  .  #  .
-  .     .
-  .     .
-  _     _
-  .     .
+Char 176 (degree), width 5
+ __  #  __
+  . # # . 
+  .  #  . 
+  .     . 
+  .     . 
+  .     . 
+  .     . 

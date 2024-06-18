@@ -1,0 +1,210 @@
+Font: open_iconic_www_1x (Symbols-bdf-sources/open_iconic_www_1x.bdf)
+Declared name: open_iconic_www_1x
+Declared family: iconic
+Declared weight: none
+Declared size: None
+Characters: 20
+Height: 8
+Baseline: 8
+Max width: 8
+Fixed width: True
+
+Char 64 (/home/kraus/git/open-iconic/png/badge.png), width 8
+  .   ##   . 
+  .  ####  . 
+  .  ####  . 
+  .   ##   . 
+  .        . 
+  .   ##   . 
+  .   ##   . 
+  .        . 
+
+Char 65 (/home/kraus/git/open-iconic/png/bookmark.png), width 8
+  .  ####  . 
+  .  ####  . 
+  .  ####  . 
+  .  ####  . 
+  .  ####  . 
+  .  ####  . 
+  .  #  #  . 
+  .        . 
+
+Char 66 (/home/kraus/git/open-iconic/png/cart.png), width 8
+  .        . 
+  .###     . 
+  .  ######. 
+  .   #### . 
+  .   #### . 
+  .        . 
+  .   #  # . 
+  .        . 
+
+Char 67 (/home/kraus/git/open-iconic/png/cloud-upload.png), width 8
+  .   ###  . 
+  .  ##### . 
+  . ###### . 
+  .#### ###. 
+  .###   ##. 
+  .    #   . 
+  .   ###  . 
+  .    #   . 
+
+Char 68 (/home/kraus/git/open-iconic/png/flag.png), width 8
+  .# ###   . 
+  .# ##### . 
+  .# ####  . 
+  .# ####  . 
+  .#   ### . 
+  .#       . 
+  .#       . 
+  .#       . 
+
+Char 69 (/home/kraus/git/open-iconic/png/link-broken.png), width 8
+  .  #  ## . 
+  . ## #  #. 
+  .       #. 
+  .  #   # . 
+  . #   #  . 
+  .#       . 
+  .#  # ## . 
+  . ##  #  . 
+
+Char 70 (/home/kraus/git/open-iconic/png/location.png), width 8
+  .        . 
+  .     ## . 
+  .   #### . 
+  . #####  . 
+  .  ####  . 
+  .   ##   . 
+  .    #   . 
+  .        . 
+
+Char 71 (/home/kraus/git/open-iconic/png/map-marker.png), width 8
+  .  ####  . 
+  . ##  ## . 
+  . #    # . 
+  . #    # . 
+  . ##  ## . 
+  .  ####  . 
+  .   ##   . 
+  .        . 
+
+Char 72 (/home/kraus/git/open-iconic/png/rss-alt.png), width 8
+  .###     . 
+  .#####   . 
+  .  ####  . 
+  .##  ### . 
+  .#### ## . 
+  .  ## ###. 
+  .#  ## ##. 
+  .## ## ##. 
+
+Char 73 (/home/kraus/git/open-iconic/png/thumb-up.png), width 8
+  .    #   . 
+  .   ##   . 
+  .   ##   . 
+  .# ##### . 
+  .# ##### . 
+  .# ####  . 
+  .# ####  . 
+  .        . 
+
+Char 74 (/home/kraus/git/open-iconic/png/ban.png), width 8
+  .  ####  . 
+  . #   ## . 
+  .#    ###. 
+  .#   #  #. 
+  .#  #   #. 
+  .###    #. 
+  . ##   # . 
+  .  ####  . 
+
+Char 75 (/home/kraus/git/open-iconic/png/browser.png), width 8
+  .########. 
+  .# #    #. 
+  .########. 
+  .#      #. 
+  .#      #. 
+  .#      #. 
+  .#      #. 
+  .########. 
+
+Char 76 (/home/kraus/git/open-iconic/png/cloud-download.png), width 8
+  .   ###  . 
+  .  ##### . 
+  . ###### . 
+  .###   ##. 
+  .### # ##. 
+  .    #   . 
+  .   ###  . 
+  .    #   . 
+
+Char 77 (/home/kraus/git/open-iconic/png/external-link.png), width 8
+  .##   ###. 
+  .#    ###. 
+  .#    ###. 
+  .#   #   . 
+  .#       . 
+  .#       . 
+  .#      #. 
+  .########. 
+
+Char 78 (/home/kraus/git/open-iconic/png/globe.png), width 8
+  .  ####  . 
+  . ##  ## . 
+  .##   ###. 
+  .#    ###. 
+  .#   ####. 
+  .##    ##. 
+  . ##   # . 
+  .  ####  . 
+
+Char 79 (/home/kraus/git/open-iconic/png/link-intact.png), width 8
+  .     ## . 
+  .       #. 
+  .   ##  #. 
+  .  #   # . 
+  . #   #  . 
+  .#  ##   . 
+  .#       . 
+  . ##     . 
+
+Char 80 (/home/kraus/git/open-iconic/png/map.png), width 8
+  .########. 
+  .#      #. 
+  .# ###  #. 
+  .# # #  #. 
+  .# ###  #. 
+  .#  # ###. 
+  .#      #. 
+  .########. 
+
+Char 81 (/home/kraus/git/open-iconic/png/rss.png), width 8
+  . ###    . 
+  .   ##   . 
+  . ##  #  . 
+  .   ## # . 
+  . ## # ##. 
+  .  ## # #. 
+  .## # # #. 
+  .##      . 
+
+Char 82 (/home/kraus/git/open-iconic/png/thumb-down.png), width 8
+  .# ####  . 
+  .# ####  . 
+  .# ##### . 
+  .# ##### . 
+  .   ##   . 
+  .   ##   . 
+  .    #   . 
+  .        . 
+
+Char 83 (/home/kraus/git/open-iconic/png/transfer.png), width 8
+  .      # . 
+  .########. 
+  .      # . 
+  .        . 
+  . #      . 
+  .########. 
+  . #      . 
+  .        . 

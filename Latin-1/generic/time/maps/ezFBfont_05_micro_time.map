@@ -1,115 +1,115 @@
-Font: _micro (Latin-1-bdf-sources/micro.bdf)
+Font: micro (Latin-1-bdf-sources/micro.bdf)
 Declared name: micro
-Declared family: None
-Declared weight: None
+Declared family: generic
+Declared weight: none
 Declared size: None
-Matching characters: 15
+Characters: 15
 Height: 5
 Baseline: 5
 Max width: 4
 Fixed width: True
 
-Char: 32 (C040), width: 4
-  .    .
-  .    .
-  .    .
-  .    .
-  _    _
+Char 32 (C040), width 4
+  .    . 
+  .    . 
+  .    . 
+  .    . 
+  .    . 
 
-Char: 43 (+), width: 4
-  .    .
-  . #  .
-  .### .
-  . #  .
-  _    _
+Char 43 (+), width 4
+  .    . 
+  . #  . 
+  .### . 
+  . #  . 
+  .    . 
 
-Char: 45 (-), width: 4
-  .    .
-  .    .
-  .### .
-  .    .
-  _    _
+Char 45 (-), width 4
+  .    . 
+  .    . 
+  .### . 
+  .    . 
+  .    . 
 
-Char: 46 (.), width: 4
-  .    .
-  .    .
-  .    .
-  .##  .
-  _##  _
+Char 46 (.), width 4
+  .    . 
+  .    . 
+  .    . 
+  .##  . 
+  .##  . 
 
-Char: 48 (0), width: 4
-  . #  .
-  .# # .
-  .# # .
-  .# # .
-  _ #  _
+Char 48 (0), width 4
+  . #  . 
+  .# # . 
+  .# # . 
+  .# # . 
+  . #  . 
 
-Char: 49 (1), width: 4
-  . #  .
-  .##  .
-  . #  .
-  . #  .
-  _ #  _
+Char 49 (1), width 4
+  . #  . 
+  .##  . 
+  . #  . 
+  . #  . 
+  . #  . 
 
-Char: 50 (2), width: 4
-  .##  .
-  .  # .
-  . #  .
-  .#   .
-  _### _
+Char 50 (2), width 4
+  .##  . 
+  .  # . 
+  . #  . 
+  .#   . 
+  .### . 
 
-Char: 51 (3), width: 4
-  .##  .
-  .  # .
-  . ## .
-  .  # .
-  _### _
+Char 51 (3), width 4
+  .##  . 
+  .  # . 
+  . ## . 
+  .  # . 
+  .### . 
 
-Char: 52 (4), width: 4
-  .# # .
-  .# # .
-  .# # .
-  .### .
-  _  # _
+Char 52 (4), width 4
+  .# # . 
+  .# # . 
+  .# # . 
+  .### . 
+  .  # . 
 
-Char: 53 (5), width: 4
-  .### .
-  .#   .
-  .##  .
-  .  # .
-  _##  _
+Char 53 (5), width 4
+  .### . 
+  .#   . 
+  .##  . 
+  .  # . 
+  .##  . 
 
-Char: 54 (6), width: 4
-  . ## .
-  .#   .
-  .### .
-  .# # .
-  _### _
+Char 54 (6), width 4
+  . ## . 
+  .#   . 
+  .### . 
+  .# # . 
+  .### . 
 
-Char: 55 (7), width: 4
-  .### .
-  .  # .
-  .  # .
-  . #  .
-  _ #  _
+Char 55 (7), width 4
+  .### . 
+  .  # . 
+  .  # . 
+  . #  . 
+  . #  . 
 
-Char: 56 (8), width: 4
-  .### .
-  .# # .
-  .### .
-  .# # .
-  _### _
+Char 56 (8), width 4
+  .### . 
+  .# # . 
+  .### . 
+  .# # . 
+  .### . 
 
-Char: 57 (9), width: 4
-  .### .
-  .# # .
-  .### .
-  .  # .
-  _##  _
+Char 57 (9), width 4
+  .### . 
+  .# # . 
+  .### . 
+  .  # . 
+  .##  . 
 
-Char: 58 (:), width: 4
-  .##  .
-  .##  .
-  .    .
-  .##  .
-  _##  _
+Char 58 (:), width 4
+  .##  . 
+  .##  . 
+  .    . 
+  .##  . 
+  .##  . 

@@ -1,145 +1,145 @@
-Font: _courB08 (Latin-1-bdf-sources/courB08.bdf)
-Declared name: -Adobe-Courier-Bold-R-Normal--11-80-100-100-M-60-ISO10646-1
+Font: courB08 (Latin-1-bdf-sources/courB08.bdf)
+Declared name: -adobe-courier-bold-r-normal--11-80-100-100-m-60-iso10646-1
 Declared family: courier
 Declared weight: bold
 Declared size: 11
-Matching characters: 15
+Characters: 15
 Height: 7
 Baseline: 7
 Max width: 6
 Fixed width: True
 
-Char: 32 (space), width: 6
-  .      .
-  .      .
-  .      .
-  .      .
-  .      .
-  .      .
-  _      _
+Char 32 (space), width 6
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
 
-Char: 43 (plus), width: 6
-  .      .
-  .  #   .
-  .  #   .
-  .##### .
-  .  #   .
-  .  #   .
-  _      _
+Char 43 (plus), width 6
+  .      . 
+  .  #   . 
+  .  #   . 
+  .##### . 
+  .  #   . 
+  .  #   . 
+  .      . 
 
-Char: 45 (hyphen), width: 6
-  .      .
-  .      .
-  .      .
-  .##### .
-  .      .
-  .      .
-  _      _
+Char 45 (hyphen), width 6
+  .      . 
+  .      . 
+  .      . 
+  .##### . 
+  .      . 
+  .      . 
+  .      . 
 
-Char: 46 (period), width: 6
-  .      .
-  .      .
-  .      .
-  .      .
-  .      .
-  .      .
-  _##    _
+Char 46 (period), width 6
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  . ##   . 
 
-Char: 48 (zero), width: 6
-  . ###  .
-  .## ## .
-  .## ## .
-  .## ## .
-  .## ## .
-  .## ## .
-  _ ###  _
+Char 48 (zero), width 6
+  . ###  . 
+  .## ## . 
+  .## ## . 
+  .## ## . 
+  .## ## . 
+  .## ## . 
+  . ###  . 
 
-Char: 49 (one), width: 6
-  .  ##  .
-  .####  .
-  .  ##  .
-  .  ##  .
-  .  ##  .
-  .  ##  .
-  _######_
+Char 49 (one), width 6
+  .  ##  . 
+  .####  . 
+  .  ##  . 
+  .  ##  . 
+  .  ##  . 
+  .  ##  . 
+  .######. 
 
-Char: 50 (two), width: 6
-  . ###  .
-  .## ## .
-  .   ## .
-  .  ##  .
-  . ##   .
-  .## ## .
-  _##### _
+Char 50 (two), width 6
+  . ###  . 
+  .## ## . 
+  .   ## . 
+  .  ##  . 
+  . ##   . 
+  .## ## . 
+  .##### . 
 
-Char: 51 (three), width: 6
-  . ###  .
-  .## ## .
-  .   ## .
-  . ###  .
-  .   ## .
-  .## ## .
-  _ ###  _
+Char 51 (three), width 6
+  . ###  . 
+  .## ## . 
+  .   ## . 
+  . ###  . 
+  .   ## . 
+  .## ## . 
+  . ###  . 
 
-Char: 52 (four), width: 6
-  .   ## .
-  .  ### .
-  . # ## .
-  .## ## .
-  .######.
-  .   ## .
-  _   ## _
+Char 52 (four), width 6
+  .   ## . 
+  .  ### . 
+  . # ## . 
+  .## ## . 
+  .######. 
+  .   ## . 
+  .   ## . 
 
-Char: 53 (five), width: 6
-  .##### .
-  .##    .
-  .####  .
-  .## ## .
-  .   ## .
-  .#  ## .
-  _####  _
+Char 53 (five), width 6
+  .##### . 
+  .##    . 
+  .####  . 
+  .## ## . 
+  .   ## . 
+  .#  ## . 
+  .####  . 
 
-Char: 54 (six), width: 6
-  . ###  .
-  .## ## .
-  .##    .
-  .####  .
-  .## ## .
-  .## ## .
-  _ ###  _
+Char 54 (six), width 6
+  . ###  . 
+  .## ## . 
+  .##    . 
+  .####  . 
+  .## ## . 
+  .## ## . 
+  . ###  . 
 
-Char: 55 (seven), width: 6
-  .##### .
-  .## ## .
-  .   ## .
-  .  ##  .
-  .  ##  .
-  . ##   .
-  _ ##   _
+Char 55 (seven), width 6
+  .##### . 
+  .## ## . 
+  .   ## . 
+  .  ##  . 
+  .  ##  . 
+  . ##   . 
+  . ##   . 
 
-Char: 56 (eight), width: 6
-  . ###  .
-  .## ## .
-  .## ## .
-  . ###  .
-  .## ## .
-  .## ## .
-  _ ###  _
+Char 56 (eight), width 6
+  . ###  . 
+  .## ## . 
+  .## ## . 
+  . ###  . 
+  .## ## . 
+  .## ## . 
+  . ###  . 
 
-Char: 57 (nine), width: 6
-  . ###  .
-  .## ## .
-  .## ## .
-  . #### .
-  .   ## .
-  .## ## .
-  _ ###  _
+Char 57 (nine), width 6
+  . ###  . 
+  .## ## . 
+  .## ## . 
+  . #### . 
+  .   ## . 
+  .## ## . 
+  . ###  . 
 
-Char: 58 (colon), width: 6
-  .      .
-  .      .
-  .      .
-  .##    .
-  .      .
-  .      .
-  _##    _
+Char 58 (colon), width 6
+  .      . 
+  .      . 
+  .      . 
+  . ##   . 
+  .      . 
+  .      . 
+  . ##   . 

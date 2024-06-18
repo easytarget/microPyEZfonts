@@ -1,0 +1,60 @@
+Font: open_iconic_check_1x (Symbols-bdf-sources/open_iconic_check_1x.bdf)
+Declared name: open_iconic_check_1x
+Declared family: iconic
+Declared weight: none
+Declared size: None
+Characters: 5
+Height: 8
+Baseline: 8
+Max width: 8
+Fixed width: True
+
+Char 64 (/home/kraus/git/open-iconic/png/check.png), width 8
+  .        . 
+  .      # . 
+  .     ###. 
+  . #  ### . 
+  .######  . 
+  . ####   . 
+  .  ##    . 
+  .        . 
+
+Char 65 (/home/kraus/git/open-iconic/png/circle-check.png), width 8
+  .  ####  . 
+  . ###### . 
+  .##### ##. 
+  .####  ##. 
+  .##   ###. 
+  .########. 
+  . ###### . 
+  .  ####  . 
+
+Char 66 (/home/kraus/git/open-iconic/png/circle-x.png), width 8
+  .  ####  . 
+  . ###### . 
+  .## ## ##. 
+  .###  ###. 
+  .###  ###. 
+  .## ## ##. 
+  . ###### . 
+  .  ####  . 
+
+Char 67 (/home/kraus/git/open-iconic/png/task.png), width 8
+  .#####   . 
+  .#     # . 
+  .#    #  . 
+  .#  ##   . 
+  .#     # . 
+  .#     # . 
+  .####### . 
+  .        . 
+
+Char 68 (/home/kraus/git/open-iconic/png/x.png), width 8
+  . #    # . 
+  .###  ###. 
+  . ###### . 
+  .  ####  . 
+  .  ####  . 
+  . ###### . 
+  .###  ###. 
+  . #    # . 

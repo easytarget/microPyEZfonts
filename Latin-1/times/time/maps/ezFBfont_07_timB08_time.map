@@ -1,145 +1,145 @@
-Font: _timB08 (Latin-1-bdf-sources/timB08.bdf)
-Declared name: -Adobe-Times-Bold-R-Normal--11-80-100-100-P-57-ISO10646-1
+Font: timB08 (Latin-1-bdf-sources/timB08.bdf)
+Declared name: -adobe-times-bold-r-normal--11-80-100-100-p-57-iso10646-1
 Declared family: times
 Declared weight: bold
 Declared size: 11
-Matching characters: 15
+Characters: 15
 Height: 7
 Baseline: 7
 Max width: 6
 Fixed width: False
 
-Char: 32 (space), width: 2
-  .  .
-  .  .
-  .  .
-  .  .
-  .  .
-  .  .
-  _  _
+Char 32 (space), width 2
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+  .  . 
 
-Char: 43 (plus), width: 6
-  .      .
-  .      .
-  .  #   .
-  .  #   .
-  .##### .
-  .  #   .
-  _  #   _
+Char 43 (plus), width 6
+  .      . 
+  .      . 
+  .  #   . 
+  .  #   . 
+  .##### . 
+  .  #   . 
+  .  #   . 
 
-Char: 45 (hyphen), width: 3
-  .   .
-  .   .
-  .   .
-  .   .
-  .###.
-  .   .
-  _   _
+Char 45 (hyphen), width 3
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .###. 
+  .   . 
+  .   . 
 
-Char: 46 (period), width: 3
-  .   .
-  .   .
-  .   .
-  .   .
-  .   .
-  .## .
-  _## _
+Char 46 (period), width 3
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .## . 
+  .## . 
 
-Char: 48 (zero), width: 5
-  . ##  .
-  .## # .
-  .## # .
-  .## # .
-  .## # .
-  .## # .
-  _ ##  _
+Char 48 (zero), width 5
+  . ##  . 
+  .## # . 
+  .## # . 
+  .## # . 
+  .## # . 
+  .## # . 
+  . ##  . 
 
-Char: 49 (one), width: 5
-  . ##  .
-  .###  .
-  . ##  .
-  . ##  .
-  . ##  .
-  . ##  .
-  _#### _
+Char 49 (one), width 5
+  . ##  . 
+  .###  . 
+  . ##  . 
+  . ##  . 
+  . ##  . 
+  . ##  . 
+  .#### . 
 
-Char: 50 (two), width: 5
-  . ##  .
-  .#### .
-  .  ## .
-  .  #  .
-  . #   .
-  .#### .
-  _#### _
+Char 50 (two), width 5
+  . ##  . 
+  .#### . 
+  .  ## . 
+  .  #  . 
+  . #   . 
+  .#### . 
+  .#### . 
 
-Char: 51 (three), width: 5
-  . ##  .
-  .# ## .
-  .  ## .
-  . ##  .
-  .  ## .
-  .# ## .
-  _###  _
+Char 51 (three), width 5
+  . ##  . 
+  .# ## . 
+  .  ## . 
+  . ##  . 
+  .  ## . 
+  .# ## . 
+  .###  . 
 
-Char: 52 (four), width: 5
-  .   # .
-  .  ## .
-  . # # .
-  .#  # .
-  .#####.
-  .  ## .
-  _  ## _
+Char 52 (four), width 5
+  .   # . 
+  .  ## . 
+  . # # . 
+  .#  # . 
+  .#####. 
+  .  ## . 
+  .  ## . 
 
-Char: 53 (five), width: 5
-  .###  .
-  .###  .
-  .#    .
-  .###  .
-  .  ## .
-  .# ## .
-  _###  _
+Char 53 (five), width 5
+  .###  . 
+  .###  . 
+  .#    . 
+  .###  . 
+  .  ## . 
+  .# ## . 
+  .###  . 
 
-Char: 54 (six), width: 5
-  .  ## .
-  . ##  .
-  .##   .
-  .#### .
-  .## # .
-  .## # .
-  _ ##  _
+Char 54 (six), width 5
+  .  ## . 
+  . ##  . 
+  .##   . 
+  .#### . 
+  .## # . 
+  .## # . 
+  . ##  . 
 
-Char: 55 (seven), width: 5
-  . ####.
-  .#### .
-  .#  # .
-  .  ## .
-  .  #  .
-  . ##  .
-  _ ##  _
+Char 55 (seven), width 5
+  . ####. 
+  .#### . 
+  .#  # . 
+  .  ## . 
+  .  #  . 
+  . ##  . 
+  . ##  . 
 
-Char: 56 (eight), width: 5
-  . ##  .
-  .## # .
-  .## # .
-  . ##  .
-  .# ## .
-  .# ## .
-  _ ##  _
+Char 56 (eight), width 5
+  . ##  . 
+  .## # . 
+  .## # . 
+  . ##  . 
+  .# ## . 
+  .# ## . 
+  . ##  . 
 
-Char: 57 (nine), width: 5
-  . ##  .
-  .# ## .
-  .# ## .
-  .# ## .
-  . ### .
-  .  ## .
-  _###  _
+Char 57 (nine), width 5
+  . ##  . 
+  .# ## . 
+  .# ## . 
+  .# ## . 
+  . ### . 
+  .  ## . 
+  .###  . 
 
-Char: 58 (colon), width: 4
-  .    .
-  .    .
-  .##  .
-  .##  .
-  .    .
-  .##  .
-  _##  _
+Char 58 (colon), width 4
+  .    . 
+  .    . 
+  . ## . 
+  . ## . 
+  .    . 
+  . ## . 
+  . ## . 
