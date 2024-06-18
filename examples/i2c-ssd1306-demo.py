@@ -51,7 +51,7 @@ font3 = ezFBfont(d0, ezFBfont_10_6x12_ascii, verbose=True)
 font4 = ezFBfont(d0, ezFBfont_24_symb18_lower, verbose=True)
 
 # multiline demo stuff
-font3.set_default(halign='center', valign='baseline')
+font3.set_default(tkey=0, halign='center', valign='baseline', vgap=-1)
 text = 'Hello!\nmy\nWorld'
 tx = 24
 ty = 32
