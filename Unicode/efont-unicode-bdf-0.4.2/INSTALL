@@ -1,0 +1,62 @@
+REQUIREMENT:
+
+  bdfresize (version 1.4 or later)
+  http://openlab.ring.gr.jp/efont/dist/tools/bdfresize/
+
+1) Configure the tools and Makefile.
+
+	(NOTE: you can specify the target font directory with
+	'--with-fontdir=DIR' flag.)
+
+		$ ./configure
+
+	(If you want to merge naga10 fonts,
+
+		get converted naga10 archive at
+		http://openlab.ring.gr.jp/efont/unicode/naga10.tar.bz2
+
+		extract the archive in this directory.
+
+		run 'configure' with '--enable-naga10' option.
+
+	Please do not redistribute 10 px fonts if you merge naga10
+	fonts.)
+
+2) Making PCF fonts
+
+	To make all font files (i.e. normal, bold, italic, and bolditalic)
+
+		$ make
+
+	To make BDF font files only
+
+		$ make bdf
+
+	To make normal font files only
+
+		$ make normal
+
+	To make normal and bold font files only
+
+		$ make normal bold
+
+3) Installing PCF fonts.
+
+	After making PCF fonts, Copy the files by 
+
+		$ cp *.pcf.gz FONTDIR
+
+	Update 'fonts.dir'
+
+		$ mkfontdir FONTDIR
+
+	If font path contains FONTDIR then 
+	
+		$ xset fp rehash
+
+	or, you can add FONTDIR to font path by type as below.
+
+		$ xset +fp FONTDIR
+		$ xset fp rehash
+
+4) Enjoy! :-)

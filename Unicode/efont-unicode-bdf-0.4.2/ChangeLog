@@ -1,0 +1,339 @@
+2002-08-27  Kazuhiko  <kazuhiko@fdiary.net>
+
+	* Makefile.in (BDFFILES): Make full-width fonts (Thanks to Mike
+	Fabian <mfabian@suse.de>).
+
+2002-02-17  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* K14-1_uni.hex (Update): 0.99b.
+	* K14-2_uni.hex: Ditto.
+
+2001-11-03  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* 5x7.hex: New file.
+	* 5x8.hex: Ditto.
+	* 6x12.hex: Update to 2001-07-18 version.
+	* 7x14.hex: Ditto.
+	* 8x13.hex: Ditto.
+
+	* Makefile.diff (BDFFILES): Add 10px fonts.
+	(ADDFILES): Add johab24.hex.
+
+2001-11-02  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* configure.in: Support 10px font. But including naga10 is not
+	enabled by default.
+
+	* Makefile.in: remove K12-1_uni.hex and K12-2_uni.hex targets.
+	Support 10px font.
+
+	* K12-1_uni.hex (Update): 0.15.
+	* K12-2_uni.hex: Ditto.
+
+2001-08-17  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* K12-1_uni.hex (Update): 0.14.
+	* K12-2_uni.hex: Ditto.
+
+	* shinonome12_uni.hex (Update): 0.9.5.
+	* shinonome14_uni.hex: Ditto.
+	* shinonome16_uni.hex: Ditto.
+
+2001-07-10  Kenzi Cano  <kc@furukawa.ch.kagu.sut.ac.jp>
+
+	* COPYRIGHT: Added "2001" to copyright holder notice.
+
+2001-06-18  SHINYAMA Yusuke <euske@cl.cs.titech.ac.jp>
+
+	* tools/mkitalic.in: perl version.
+	
+2001-06-17  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* shinonome16_uni.hex (Update): 0.9.3.
+
+2001-06-10  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* Makefile.in: Add configure related targets. Modify realclean
+	target.
+
+	* README.k14goth: Remove.
+	* README.shinonome12: Ditto.
+	* README.shinonome16: Ditto.
+
+2001-05-23  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* Makefile.in (source): Compress with bzip2 instead of gzip.
+	(dist): Ditto.
+	(ARCHIVEEXTRA): Remove List.html.
+	(dist): Add List.html
+
+2001-05-21  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* Makefile.in (list): New target.
+
+	* Blocks.list: New file.
+
+	* Makefile.in (H16SOURCES): Add 8x13.hex
+
+	* 8x13.hex: New source.
+
+2001-05-20  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* Makefile.in (f24_source.hex): Add hangul24.hex that is made from
+	johab24.hex automatically.
+
+	* johab24.hex: New source.
+
+2001-05-19  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* README (License): Add information of 24px sources.
+
+	* mappings/KSC5601.1987-0.map: New file.
+	* taipei24_uni.hex: New source.
+	* gb24st_uni.hex: Ditto.
+	* hanglm24_uni.hex: Ditto.
+	* jiskan24_uni.hex: Ditto.
+	* etl24-unicode.hex: Ditto.
+
+2001-05-18  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* Makefile.in: Add 24px entries.
+
+2001-05-10  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* configure.in: Fix typo.
+
+	* README (License): Revise.
+
+	* Makefile.in: Merge f<n>.bdf and h<n>.bdf into b<n>.bdf.
+	(K12-1_uni.hex): Remove bdfresize entry.
+	(K12-2_uni.hex): Ditto.
+	(F12SOURCES): Add K12-1_uni.hex and K12-2_uni.hex.
+
+	* K12-1_uni.hex: New source. version 0.13.
+	* K12-2_uni.hex: Ditto.
+
+	* K14-1_uni.hex (Update): 0.99a.
+	* K14-2_uni.hex (Update): 0.99a.
+
+	* shinonome14_uni.hex: New source. Replace k14goth_uni.hex.
+	* k14goth_uni.hex: Remove.
+
+	* shinonome12_uni.hex (Update): /efont/ version.
+	* shinonome16_uni.hex (Update): Ditto.
+
+2001-01-24  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* Makefile.in (f12_source.hex): Add bdfresize'd K14-1.bdf and
+	K14-2.bdf.
+
+	* K14-1_uni.hex (Update): Version 0.95 (00A2, 00A3, 00A5, 00AC,
+	2016, 203E, 2212, 301C, 7328, 7457, 7A03, 9370, 93DF, 9C00, 9EAF,
+	9EB4, FF01, FF02, FF03, FF04, FF05, FF06, FF07, FF08, FF09, FF0A,
+	FF0B, FF0C, FF0D, FF0E, FF0F, FF10, FF11, FF12, FF13, FF14, FF15,
+	FF16, FF17, FF18, FF19, FF1A, FF1B, FF1C, FF1D, FF1E, FF1F, FF20,
+	FF21, FF22, FF23, FF24, FF25, FF26, FF27, FF28, FF29, FF2A, FF2B,
+	FF2C, FF2D, FF2E, FF2F, FF30, FF31, FF32, FF33, FF34, FF35, FF36,
+	FF37, FF38, FF39, FF3A, FF3B, FF3C, FF3D, FF3E, FF3F, FF40, FF41,
+	FF42, FF43, FF44, FF45, FF46, FF47, FF48, FF49, FF4A, FF4B, FF4C,
+	FF4D, FF4E, FF4F, FF50, FF51, FF52, FF53, FF54, FF55, FF56, FF57,
+	FF58, FF59, FF5A, FF5B, FF5C, FF5D, FF5E are changed).
+
+	* K14-2_uni.hex (Update): Version 0.95 (No glyph is changed).
+
+	* jiskan16-2000-1.hex (Update): Version 1.03 (00A2, 00A3, 00A5,
+	00AC, 2013, 2016, 2026, 203E, 2212, 301C, 5041, 5315, 5C04, 691B,
+	7CC0, 85ED, 8A1B, 8EAC, 8EAF, 8EB0, 8EB1, 8EBE, 8EC0, 8EC5, 8EC6,
+	8EC8, 98E7, FF01, FF02, FF03, FF04, FF05, FF06, FF07, FF08, FF09,
+	FF0A, FF0B, FF0C, FF0D, FF0E, FF0F, FF10, FF11, FF12, FF13, FF14,
+	FF15, FF16, FF17, FF18, FF19, FF1A, FF1B, FF1C, FF1D, FF1E, FF1F,
+	FF20, FF21, FF22, FF23, FF24, FF25, FF26, FF27, FF28, FF29, FF2A,
+	FF2B, FF2C, FF2D, FF2E, FF2F, FF30, FF31, FF32, FF33, FF34, FF35,
+	FF36, FF37, FF38, FF39, FF3A, FF3B, FF3C, FF3D, FF3E, FF3F, FF40,
+	FF41, FF42, FF43, FF44, FF45, FF46, FF47, FF48, FF49, FF4A, FF4B,
+	FF4C, FF4D, FF4E, FF4F, FF50, FF51, FF52, FF53, FF54, FF55, FF56,
+	FF57, FF58, FF59, FF5A, FF5B, FF5C, FF5D, FF5E are changed).
+
+	* jiskan16-2000-2.hex (Update): Version 1.03 (533E, 5561, 588D,
+	61A8, 6FC8, 7D86, 8EAE, 8EB3, 8EB5, 8EBB, 98E1, 98F1, 9D62, 9E9B
+	are changed).
+
+2001-01-15  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* f12.hex (Update): shinonome12-1.0.8 (No glyph is changed).
+
+	* f14.hex (Update): k14goth-1.6.9 (00A2, 00A3, 03A6, 0401, 0410,
+	0411, 0412, 0413, 0414, 0415, 0416, 0417, 0418, 0419, 041A, 041B,
+	041C, 041D, 041E, 041F, 0420, 0421, 0422, 0423, 0424, 0425, 0426,
+	0427, 0428, 0429, 042A, 042B, 042C, 042D, 042E, 042F, 0430, 0431,
+	0432, 0433, 0434, 0435, 0436, 0437, 0438, 0439, 043A, 043B, 043C,
+	043D, 043E, 043F, 0440, 0441, 0442, 0443, 0444, 0445, 0446, 0447,
+	0448, 0449, 044A, 044B, 044C, 044D, 044E, 044F, 0451, 2103, 212B,
+	4E21, 4E31, 4F7F, 4FAD, 4FE1, 512A, 51F9, 53F0, 5404, 5408, 5410,
+	544A, 5451, 546A, 54C9, 54E9, 552F, 5631, 56F3, 57F4, 5854, 5858,
+	5897, 59CB, 59D1, 5B98, 5BAE, 5BB9, 5BDB, 5DFB, 5E2B, 5E45, 5EFC,
+	6055, 618E, 61A7, 62CD, 6307, 642D, 649E, 64EF, 6697, 66C1, 67CF,
+	67D1, 6816, 683C, 6D3B, 6D44, 6EB6, 7199, 7363, 751F, 753B, 7554,
+	75F4, 7709, 7825, 7832, 786F, 7887, 7A32, 7B54, 7BB1, 7CB3, 7D00,
+	7D76, 7DBA, 80E1, 80F4, 814E, 83C5, 8431, 84BC, 854E, 8557, 85AF,
+	85F7, 862D, 865C, 897F, 89A7, 8A00, 8A02, 8A18, 8A2A, 8A2D, 8A31,
+	8A33, 8A3C, 8A6B, 8A71, 8A73, 8A9E, 8AB9, 8AD6, 8AF8, 8B90, 8CC2,
+	8E44, 9162, 963F, 96F6, 97F5, 9C15, 9C48, 9F3B, 9F6A, 9F76, 9F77,
+	FF04, FF06, FF43 and FFE5 are changed).
+
+	* f16.hex (Update): shinonome16-1.0.3 (4EEE, 58EE, 6043, 6CBF and
+	6D45 are changed).
+
+2000-12-02  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* Makefile (all): Change default to build all pcf font files.
+	(F14SOURCES): Remove hangul14.hex
+	(f14_source.hex): Add hangul14.hex
+
+2000-11-27  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* f16.hex (Update) jiskan16-2000-[12].bdf 1.02 - Modified character
+	is not currently mapped to Unicode. So any glyph is not changed.
+
+	* f14.hex (Update) K14-[12].bdf 0.94 - Modified character is not
+	currently mapped to Unicode. So any glyph is not changed.
+
+2000-11-19  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* f16.hex (Import) dotum16_uni.hex.
+
+2000-11-17  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* johab16.hex Removed because its license is uncertain.
+
+2000-11-10  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* johab14.hex (Modify) 0002, 0003, 000B, 003A, 004E, 006B, 006C,
+	0098, 0099, 00A2, 00A4, 00AC, 013A, 013B, 013E, 0141, 0142, 016A,
+	016B, 016D, 016E, 0174, 0175, 0178-017A, 01A9-01AC, 01CD-01D0,
+	01FD, 01FE, 0200
+
+2000-11-04  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* f14.hex (Import) johabg14.hex
+	(Modify) FF01, FF05
+	(New) FF02, FF07
+
+	* f16.hex (Modify) 0901, 0903, 090D-0910, 0931, 0934, 0939, 093C,
+	0941-0944, 094D, 0952, 095D, 095F-0963, 0967
+	(New) 0953, 0954
+
+	* h16.hex (Modify) 0022, 0027, 2127, 2504-2506, 250A, 250D, 2511,
+	2515, 2519, 251D-251F, 2521, 2522, 2525-2527, 2529, 252A,
+	252D-252F, 2531, 2535-2537, 253D-2541, 2544-2549, 256D-2573,
+	2589-258B, 258D-258F, 2591
+	(New) 0000, 254C-254F, 2574-257F, 2800-28FF
+
+2000-11-01  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* h16.hex (Modify) 2543
+
+	* h14.hex (New) 21BA, 21BB, 21E0-21E3, 234E, 2440-244A
+
+2000-10-31  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* h14.hex (Import) 6x12.bdf 2000-09-03 again; replace 107 chars
+	which belonged to mkhalf-ed f14
+	(Shift) most 6x12.bdf chars 1 pixel right
+	(Import) thai14.bdf intlfonts-1.2; update 87 chars
+	(Shift) thai14.bdf chars so as to fit in 7x14
+	(Import) lao14-mule.bdf intlfonts-1.2; update 66 chars
+	(Shift) lao14-mule.bdf chars so as to fit in 7x14
+	(Modify) 0022, 0027, 0361, 05BE, 2196-2199, 228A, 228B, 2603,
+	2756, FFFD
+	(New) 02DF, 02EA-02EE, 0360, 0362
+
+2000-10-30  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* f14.hex (Import) k14goth.bdf 1.6.8; update 359 chars
+
+	* h14.hex (Modify) 2100-2105, 2113, 2116, 2120-2122, 2127, 212B,
+	2135, 2227-222E, 226A-226B, 2282-2285, 2288-2289, 2295, 2299,
+	22DA-22DB, 261E, 2639, 2641
+	(New) 2106, 2234-223B, 2264, 2267-2269, 2278-2279, 261C
+
+	* h12.hex (Import) shnm6x12r.bdf 1.0.7; half-width Katakana only
+
+2000-10-29  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* h10.hex (Import) 5x8.bdf
+
+	* h12.hex (Import) 6x12.bdf 2000-09-03
+	(Modify) 00A7
+
+	* h14.hex (Import) 7x14.bdf 2000-09-03
+	(Modify) 2020, 2025, 2039, 203A, 203F, 2042, 2048, 2049, 20A3,
+	20AF, 2206-2209, 220B, 220C, 2252, 2318, 2460-2473
+	(New) 2027, 203D, 2031, 2040, 2041, 2045-2047, 204A-204D, 20AD,
+	20AE, 220A, 220D, 220E, 221D, 221E, 222C, 2253
+
+2000-10-26  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* h14.hex (Modify) 2600-2602, 2605, 2606, 2660-266F
+
+2000-10-25  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* h14.hex (Add) 2800-28FF
+
+2000-10-24  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* f12.hex (Import) shinonome12-1.0.7; update 3203 chars
+
+	* h12.hex (Import) shinonome12-1.0.7 with mkhalf; update 136 chars
+	(Modify) 20DF
+
+2000-10-22  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* f16.hex (Import) jiskan16-2000-[12].bdf 1.01
+	(Modify) 3099, 309A, FF5E, FFE0, FFE1, FFE4, FFE6
+
+	* h16.hex (Modify) 2516, 2528, 2556
+	(Add) FFA0-FFBE, FFC2-FFC7, FFCA-FFCF, FFD2-FFD7, FFDA-FFDC
+
+	* f14.hex (Import) K14-[12].bdf 0.93
+	(Add) 3099, 309A, FFE6
+
+	* h14.hex (Modify) 25B1-25B3, 25BC, 25BD, 25C6, 25C7, 25CA, 25CB,
+	25CE-25D5, 25D9, 25EF
+	(Add) 2500-257F except some chars, 2581-2584, 2585-2587,
+	2589-258B, 258D-258F, 2594, 2595, 25BE, 25BF, 25C8, 25CC, 25CD,
+	25D6, 25D7, 25B0
+
+2000-10-21  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* h16.hex (Modify) 0009-000D, 0085, 0483-0486, 0591-05A1,
+	05A3-05B9, 05BB-05BD, 05BF, 05C1, 05C2, 05C4, 2000-200B, 2028,
+	2029, 20D0-20E3, 237B, 2449, FB1E, FE20-FE23, FFFD
+	(Add) 0488, 0489, 048C-048F, 04EC, 04ED, 058A, 2028, 2029, 202F,
+	2048-204D, 20AE, 20AF, 2139, 213A, 2183, 21EB-21F3, 2301,
+	237D-237F, 2425, 2426, 2619, 2670, 2671, FB1D, FFF9-FFFC
+	(Remove) 2047
+
+2000-10-09  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* h16.hex (Modify) 00D7, 00DF, 010F, 0127, 0132-0133, 013D-013E,
+	0195, 01C4-01C6, 01F8-01F9, 021E-021F, 025A, 025D, 02BB-02BF,
+	02C7-02CB, 02D0, 02DC-02DD, 0300-0345, 0360-0361, 03DA, 03E0,
+	25A0-25A9, 25E6-25EB, 25ED-25EE,
+	(Add) 01F6-01F7, 021C-021D, 0222-0233,02A9-02AD, 02DF, 02EA-02EE,
+	0346-034E, 0362, 03D7, 03DB, 03DD, 03DF, 03E1, 25F0-25F7
+
+2000-10-08  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* h16.hex (Modify) 2216, 224C
+	(Add) 066B, 066C
+
+2000-10-07  Kazuhiko  <kazuhiko@ring.gr.jp>
+
+	* f16.hex (Import) jiskan90-16.
+
+	* h16.hex (Import) f16.hex with mkhalf; 973 chars which are
+	originally designed as full width but classified as neither 'W'
+	nor 'F'
+
+	* h16_add.list Its list.

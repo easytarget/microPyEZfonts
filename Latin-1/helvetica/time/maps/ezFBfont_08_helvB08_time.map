@@ -1,0 +1,160 @@
+Font: helvB08 (Latin-1-bdf-sources/helvB08.bdf)
+Declared name: -adobe-helvetica-bold-r-normal--11-80-100-100-p-60-iso10646-1
+Declared family: helvetica
+Declared weight: bold
+Declared size: 11
+Characters: 15
+Height: 8
+Baseline: 8
+Max width: 6
+Fixed width: False
+
+Char 32 (space), width 3
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+
+Char 43 (plus), width 6
+  .      . 
+  .      . 
+  .  ##  . 
+  .  ##  . 
+  .######. 
+  .  ##  . 
+  .  ##  . 
+  .      . 
+
+Char 45 (hyphen), width 5
+  .     . 
+  .     . 
+  .     . 
+  .     . 
+  .#### . 
+  .     . 
+  .     . 
+  .     . 
+
+Char 46 (period), width 3
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .## . 
+  .## . 
+
+Char 48 (zero), width 6
+  . ###  . 
+  .## ## . 
+  .## ## . 
+  .## ## . 
+  .## ## . 
+  .## ## . 
+  .## ## . 
+  . ###  . 
+
+Char 49 (one), width 6
+  .  ##  . 
+  . ###  . 
+  .  ##  . 
+  .  ##  . 
+  .  ##  . 
+  .  ##  . 
+  .  ##  . 
+  .  ##  . 
+
+Char 50 (two), width 6
+  . ###  . 
+  .## ## . 
+  .   ## . 
+  .   ## . 
+  .  ##  . 
+  . ##   . 
+  .##    . 
+  .##### . 
+
+Char 51 (three), width 6
+  . ###  . 
+  .## ## . 
+  .   ## . 
+  .  ##  . 
+  .   ## . 
+  .   ## . 
+  .## ## . 
+  . ###  . 
+
+Char 52 (four), width 6
+  .    # . 
+  .   ## . 
+  .  ### . 
+  . # ## . 
+  .#  ## . 
+  .######. 
+  .   ## . 
+  .   ## . 
+
+Char 53 (five), width 6
+  .##### . 
+  .##    . 
+  .##    . 
+  .####  . 
+  .   ## . 
+  .#  ## . 
+  .## ## . 
+  . ###  . 
+
+Char 54 (six), width 6
+  . ###  . 
+  .## ## . 
+  .##    . 
+  .####  . 
+  .## ## . 
+  .## ## . 
+  .## ## . 
+  . ###  . 
+
+Char 55 (seven), width 6
+  .##### . 
+  .   ## . 
+  .   ## . 
+  .  ##  . 
+  .  ##  . 
+  . ##   . 
+  . ##   . 
+  . ##   . 
+
+Char 56 (eight), width 6
+  . ###  . 
+  .## ## . 
+  .## ## . 
+  . ###  . 
+  .## ## . 
+  .## ## . 
+  .## ## . 
+  . ###  . 
+
+Char 57 (nine), width 6
+  . ###  . 
+  .## ## . 
+  .## ## . 
+  .## ## . 
+  . #### . 
+  .   ## . 
+  .## ## . 
+  . ###  . 
+
+Char 58 (colon), width 3
+  .   . 
+  .   . 
+  .## . 
+  .## . 
+  .   . 
+  .   . 
+  .## . 
+  .## . 

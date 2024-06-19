@@ -1,0 +1,160 @@
+Font: cursorr (Symbols-bdf-sources/cursorr.bdf)
+Declared name: cursor
+Declared family: generic
+Declared weight: none
+Declared size: None
+Characters: 6
+Height: 21
+Baseline: 6
+Max width: 17
+Fixed width: True
+
+Char 68 (left_ptr), width 17
+  .                 . 
+  .                 . 
+  .                 . 
+  .                 . 
+  .                 . 
+  .                 . 
+  .#                . 
+  .##               . 
+  .###              . 
+  .####             . 
+  .#####            . 
+  .######           . 
+  .#######          . 
+  .########         . 
+ __#####            __
+  .## ##            . 
+  .#   ##           . 
+  .    ##           . 
+  .     ##          . 
+  .     ##          . 
+  .                 . 
+
+Char 69 (left_ptr_mask), width 17
+  .                 . 
+  .                 . 
+  .                 . 
+  .                 . 
+  .                 . 
+  .##               . 
+  .###              . 
+  .####             . 
+  .#####            . 
+  .######           . 
+  .#######          . 
+  .########         . 
+  .#########        . 
+  .##########       . 
+ __##########       __
+  .#######          . 
+  .### ####         . 
+  .##  ####         . 
+  .     ####        . 
+  .     ####        . 
+  .      ##         . 
+
+Char 90 (plus), width 17
+  .                 . 
+  .    ##           . 
+  .    ##           . 
+  .    ##           . 
+  .    ##           . 
+  .##########       . 
+  .##########       . 
+  .    ##           . 
+  .    ##           . 
+  .    ##           . 
+  .    ##           . 
+  .                 . 
+  .                 . 
+  .                 . 
+ __                 __
+  .                 . 
+  .                 . 
+  .                 . 
+  .                 . 
+  .                 . 
+  .                 . 
+
+Char 91 (plus_mask), width 17
+  .    ####         . 
+  .    ####         . 
+  .    ####         . 
+  .    ####         . 
+  .############     . 
+  .############     . 
+  .############     . 
+  .############     . 
+  .    ####         . 
+  .    ####         . 
+  .    ####         . 
+  .    ####         . 
+  .                 . 
+  .                 . 
+ __                 __
+  .                 . 
+  .                 . 
+  .                 . 
+  .                 . 
+  .                 . 
+  .                 . 
+
+Char 94 (right_ptr), width 17
+  .                 . 
+  .                 . 
+  .                 . 
+  .                 . 
+  .                 . 
+  .                 . 
+  .       #         . 
+  .      ##         . 
+  .     ###         . 
+  .    ####         . 
+  .   #####         . 
+  .  ######         . 
+  . #######         . 
+  .########         . 
+ __   #####         __
+  .   ## ##         . 
+  .  ##   #         . 
+  .  ##             . 
+  . ##              . 
+  . ##              . 
+  .                 . 
+
+Char 95 (right_ptr_mask), width 17
+  .                 . 
+  .                 . 
+  .                 . 
+  .                 . 
+  .                 . 
+  .        ##       . 
+  .       ###       . 
+  .      ####       . 
+  .     #####       . 
+  .    ######       . 
+  .   #######       . 
+  .  ########       . 
+  . #########       . 
+  .##########       . 
+ __##########       __
+  .   #######       . 
+  .  #### ###       . 
+  .  ####  ##       . 
+  . ####            . 
+  . ####            . 
+  .  ##             . 
+
+Font rendering notes:
+Char 69:
+  Negative horizontal padding (-1), zeroing.
+Char 90:
+  Negative horizontal padding (-4), zeroing.
+Char 91:
+  Negative horizontal padding (-5), zeroing.
+Char 94:
+  Negative horizontal padding (-7), zeroing.
+Char 95:
+  Negative horizontal padding (-8), zeroing.

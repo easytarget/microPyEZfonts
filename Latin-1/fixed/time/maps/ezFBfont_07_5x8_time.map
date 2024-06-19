@@ -1,0 +1,145 @@
+Font: 5x8 (Latin-1-bdf-sources/5x8.bdf)
+Declared name: -misc-fixed-medium-r-normal--8-80-75-75-c-50-iso10646-1
+Declared family: fixed
+Declared weight: medium
+Declared size: 8
+Characters: 15
+Height: 7
+Baseline: 6
+Max width: 5
+Fixed width: True
+
+Char 32 (space), width 5
+ __     __
+  .     . 
+  .     . 
+  .     . 
+  .     . 
+  .     . 
+  .     . 
+
+Char 43 (plus), width 5
+ __     __
+  .  #  . 
+  .  #  . 
+  .#####. 
+  .  #  . 
+  .  #  . 
+  .     . 
+
+Char 45 (hyphen), width 5
+ __     __
+  .     . 
+  .     . 
+  .#### . 
+  .     . 
+  .     . 
+  .     . 
+
+Char 46 (period), width 5
+ __     __
+  .     . 
+  .     . 
+  .     . 
+  .  #  . 
+  . ### . 
+  .  #  . 
+
+Char 48 (zero), width 5
+ __  #  __
+  . # # . 
+  . # # . 
+  . # # . 
+  . # # . 
+  .  #  . 
+  .     . 
+
+Char 49 (one), width 5
+ __  #  __
+  . ##  . 
+  .  #  . 
+  .  #  . 
+  .  #  . 
+  . ### . 
+  .     . 
+
+Char 50 (two), width 5
+ __ ##  __
+  .#  # . 
+  .   # . 
+  . ##  . 
+  .#    . 
+  .#### . 
+  .     . 
+
+Char 51 (three), width 5
+ __#### __
+  .  #  . 
+  . ##  . 
+  .   # . 
+  .#  # . 
+  . ##  . 
+  .     . 
+
+Char 52 (four), width 5
+ __  #  __
+  . ##  . 
+  .# #  . 
+  .#### . 
+  .  #  . 
+  .  #  . 
+  .     . 
+
+Char 53 (five), width 5
+ __#### __
+  .#    . 
+  .###  . 
+  .   # . 
+  .#  # . 
+  . ##  . 
+  .     . 
+
+Char 54 (six), width 5
+ __ ##  __
+  .#    . 
+  .###  . 
+  .#  # . 
+  .#  # . 
+  . ##  . 
+  .     . 
+
+Char 55 (seven), width 5
+ __#### __
+  .   # . 
+  .  #  . 
+  .  #  . 
+  . #   . 
+  . #   . 
+  .     . 
+
+Char 56 (eight), width 5
+ __ ##  __
+  .#  # . 
+  . ##  . 
+  .#  # . 
+  .#  # . 
+  . ##  . 
+  .     . 
+
+Char 57 (nine), width 5
+ __ ##  __
+  .#  # . 
+  .#  # . 
+  . ### . 
+  .   # . 
+  . ##  . 
+  .     . 
+
+Char 58 (colon), width 5
+ __     __
+  . ##  . 
+  . ##  . 
+  .     . 
+  . ##  . 
+  . ##  . 
+  .     . 

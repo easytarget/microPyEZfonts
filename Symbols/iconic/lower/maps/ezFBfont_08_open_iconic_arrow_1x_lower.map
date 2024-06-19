@@ -1,0 +1,290 @@
+Font: open_iconic_arrow_1x (Symbols-bdf-sources/open_iconic_arrow_1x.bdf)
+Declared name: open_iconic_arrow_1x
+Declared family: iconic
+Declared weight: none
+Declared size: None
+Characters: 28
+Height: 8
+Baseline: 8
+Max width: 8
+Fixed width: True
+
+Char 64 (/home/kraus/git/open-iconic/png/arrow-bottom.png), width 8
+  .   #    . 
+  .   #    . 
+  .   #    . 
+  .   #    . 
+  .   #    . 
+  . #####  . 
+  .  ###   . 
+  .   #    . 
+
+Char 65 (/home/kraus/git/open-iconic/png/arrow-left.png), width 8
+  .        . 
+  .  #     . 
+  . ##     . 
+  .########. 
+  . ##     . 
+  .  #     . 
+  .        . 
+  .        . 
+
+Char 66 (/home/kraus/git/open-iconic/png/arrow-right.png), width 8
+  .        . 
+  .     #  . 
+  .     ## . 
+  .########. 
+  .     ## . 
+  .     #  . 
+  .        . 
+  .        . 
+
+Char 67 (/home/kraus/git/open-iconic/png/arrow-top.png), width 8
+  .   #    . 
+  .  ###   . 
+  . #####  . 
+  .   #    . 
+  .   #    . 
+  .   #    . 
+  .   #    . 
+  .   #    . 
+
+Char 68 (/home/kraus/git/open-iconic/png/arrow-circle-bottom.png), width 8
+  .  ####  . 
+  . ##  ## . 
+  .###  ###. 
+  .###  ###. 
+  .#      #. 
+  .##    ##. 
+  . ##  ## . 
+  .  ####  . 
+
+Char 69 (/home/kraus/git/open-iconic/png/arrow-circle-left.png), width 8
+  .  ####  . 
+  . ## ### . 
+  .##  ####. 
+  .#      #. 
+  .#      #. 
+  .##  ####. 
+  . ## ### . 
+  .  ####  . 
+
+Char 70 (/home/kraus/git/open-iconic/png/arrow-circle-right.png), width 8
+  .  ####  . 
+  . ### ## . 
+  .####  ##. 
+  .#      #. 
+  .#      #. 
+  .####  ##. 
+  . ### ## . 
+  .  ####  . 
+
+Char 71 (/home/kraus/git/open-iconic/png/arrow-circle-top.png), width 8
+  .  ####  . 
+  . ##  ## . 
+  .##    ##. 
+  .#      #. 
+  .###  ###. 
+  .###  ###. 
+  . ##  ## . 
+  .  ####  . 
+
+Char 72 (/home/kraus/git/open-iconic/png/arrow-thick-bottom.png), width 8
+  .   ##   . 
+  .   ##   . 
+  .   ##   . 
+  .   ##   . 
+  .   ##   . 
+  .  ####  . 
+  .   ##   . 
+  .    #   . 
+
+Char 73 (/home/kraus/git/open-iconic/png/arrow-thick-left.png), width 8
+  .        . 
+  .        . 
+  .  #     . 
+  . #######. 
+  .########. 
+  .  #     . 
+  .        . 
+  .        . 
+
+Char 74 (/home/kraus/git/open-iconic/png/arrow-thick-right.png), width 8
+  .        . 
+  .        . 
+  .     ## . 
+  .########. 
+  .####### . 
+  .     #  . 
+  .        . 
+  .        . 
+
+Char 75 (/home/kraus/git/open-iconic/png/arrow-thick-top.png), width 8
+  .   #    . 
+  .  ###   . 
+  .  ####  . 
+  .   ##   . 
+  .   ##   . 
+  .   ##   . 
+  .   ##   . 
+  .   ##   . 
+
+Char 76 (/home/kraus/git/open-iconic/png/caret-bottom.png), width 8
+  .        . 
+  .        . 
+  . ###### . 
+  .  ####  . 
+  .   ##   . 
+  .        . 
+  .        . 
+  .        . 
+
+Char 77 (/home/kraus/git/open-iconic/png/caret-left.png), width 8
+  .        . 
+  .     #  . 
+  .    ##  . 
+  .   ###  . 
+  .   ###  . 
+  .    ##  . 
+  .     #  . 
+  .        . 
+
+Char 78 (/home/kraus/git/open-iconic/png/caret-right.png), width 8
+  .        . 
+  .  #     . 
+  .  ##    . 
+  .  ###   . 
+  .  ###   . 
+  .  ##    . 
+  .  #     . 
+  .        . 
+
+Char 79 (/home/kraus/git/open-iconic/png/caret-top.png), width 8
+  .        . 
+  .        . 
+  .        . 
+  .   ##   . 
+  .  ####  . 
+  . ###### . 
+  .        . 
+  .        . 
+
+Char 80 (/home/kraus/git/open-iconic/png/chevron-bottom.png), width 8
+  .        . 
+  . #    # . 
+  .###  ###. 
+  . ###### . 
+  .  ####  . 
+  .   ##   . 
+  .        . 
+  .        . 
+
+Char 81 (/home/kraus/git/open-iconic/png/chevron-left.png), width 8
+  .        . 
+  .    ##  . 
+  .   ##   . 
+  .  ##    . 
+  .  ##    . 
+  .   ##   . 
+  .    ##  . 
+  .        . 
+
+Char 82 (/home/kraus/git/open-iconic/png/chevron-right.png), width 8
+  .  #     . 
+  . ###    . 
+  .  ###   . 
+  .   ###  . 
+  .   ###  . 
+  .  ###   . 
+  . ###    . 
+  .  #     . 
+
+Char 83 (/home/kraus/git/open-iconic/png/chevron-top.png), width 8
+  .        . 
+  .        . 
+  .   ##   . 
+  .  ####  . 
+  . ##  ## . 
+  . #    # . 
+  .        . 
+  .        . 
+
+Char 84 (/home/kraus/git/open-iconic/png/data-transfer-download.png), width 8
+  .   ##   . 
+  .   ##   . 
+  .   ##   . 
+  .  ####  . 
+  .   ##   . 
+  .        . 
+  .        . 
+  .########. 
+
+Char 85 (/home/kraus/git/open-iconic/png/data-transfer-upload.png), width 8
+  .########. 
+  .        . 
+  .        . 
+  .   ##   . 
+  .  ####  . 
+  .   ##   . 
+  .   ##   . 
+  .   ##   . 
+
+Char 86 (/home/kraus/git/open-iconic/png/loop.png), width 8
+  .      # . 
+  .########. 
+  .#     # . 
+  .        . 
+  . #     #. 
+  .########. 
+  . #      . 
+  .        . 
+
+Char 87 (/home/kraus/git/open-iconic/png/loop-circular.png), width 8
+  .        . 
+  .  ##    . 
+  . ##   # . 
+  . #   ###. 
+  .###   # . 
+  . #   ## . 
+  .    ##  . 
+  .        . 
+
+Char 88 (/home/kraus/git/open-iconic/png/loop-square.png), width 8
+  . ###### . 
+  . #    # . 
+  .      # . 
+  . #   ###. 
+  .###   # . 
+  . #      . 
+  . #    # . 
+  . ###### . 
+
+Char 89 (/home/kraus/git/open-iconic/png/random.png), width 8
+  .      # . 
+  .##   ###. 
+  . ## # # . 
+  .  ##    . 
+  .  ##    . 
+  . ## # # . 
+  .##   ###. 
+  .      # . 
+
+Char 90 (/home/kraus/git/open-iconic/png/share.png), width 8
+  .     #  . 
+  .     ## . 
+  .  ######. 
+  . ###### . 
+  .##   #  . 
+  .#       . 
+  .        . 
+  .        . 
+
+Char 91 (/home/kraus/git/open-iconic/png/share-boxed.png), width 8
+  .###     . 
+  .#   ####. 
+  .#  #### . 
+  .#       . 
+  .#       . 
+  .#    #  . 
+  .######  . 
+  .        . 

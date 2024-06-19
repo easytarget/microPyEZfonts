@@ -1,0 +1,274 @@
+Font: spleen_6x12 (Latin-1-bdf-sources/spleen-6x12.bdf)
+Declared name: -misc-spleen-medium-r-normal--12-120-72-72-c-60-iso10646-1
+Declared family: spleen
+Declared weight: medium
+Declared size: 12
+Characters: 22
+Height: 10
+Baseline: 9
+Max width: 6
+Fixed width: True
+
+Char 32 (SPACE), width 6
+ __      __
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+
+Char 37 (PERCENT SIGN), width 6
+ __      __
+  .    # . 
+  . #  # . 
+  . # #  . 
+  .   #  . 
+  .  #   . 
+  .  # # . 
+  . #  # . 
+  . #    . 
+  .      . 
+
+Char 40 (LEFT PARENTHESIS), width 6
+ __   ## __
+  .  #   . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  .  #   . 
+  .   ## . 
+
+Char 41 (RIGHT PARENTHESIS), width 6
+ __ ##   __
+  .   #  . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .   #  . 
+  . ##   . 
+
+Char 42 (ASTERISK), width 6
+ __      __
+  .      . 
+  .      . 
+  . #  # . 
+  .  ##  . 
+  .######. 
+  .  ##  . 
+  . #  # . 
+  .      . 
+  .      . 
+
+Char 43 (PLUS SIGN), width 6
+ __      __
+  .      . 
+  .      . 
+  .  #   . 
+  .  #   . 
+  .##### . 
+  .  #   . 
+  .  #   . 
+  .      . 
+  .      . 
+
+Char 44 (COMMA), width 6
+ __      __
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .  #   . 
+  .  #   . 
+  . #    . 
+
+Char 45 (HYPHEN-MINUS), width 6
+ __      __
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .##### . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+
+Char 46 (FULL STOP), width 6
+ __      __
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .  #   . 
+  .      . 
+
+Char 47 (SOLIDUS), width 6
+ __    # __
+  .    # . 
+  .   #  . 
+  .   #  . 
+  .  #   . 
+  .  #   . 
+  . #    . 
+  . #    . 
+  .#     . 
+  .#     . 
+
+Char 48 (DIGIT ZERO), width 6
+ __      __
+  . ###  . 
+  .#   # . 
+  .#  ## . 
+  .# # # . 
+  .##  # . 
+  .#   # . 
+  .#   # . 
+  . ###  . 
+  .      . 
+
+Char 49 (DIGIT ONE), width 6
+ __      __
+  .  #   . 
+  . ##   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  . ###  . 
+  .      . 
+
+Char 50 (DIGIT TWO), width 6
+ __      __
+  . ###  . 
+  .#   # . 
+  .    # . 
+  .    # . 
+  . ###  . 
+  .#     . 
+  .#     . 
+  .##### . 
+  .      . 
+
+Char 51 (DIGIT THREE), width 6
+ __      __
+  . ###  . 
+  .#   # . 
+  .    # . 
+  .  ##  . 
+  .    # . 
+  .    # . 
+  .#   # . 
+  . ###  . 
+  .      . 
+
+Char 52 (DIGIT FOUR), width 6
+ __      __
+  .#     . 
+  .#     . 
+  .#  #  . 
+  .#  #  . 
+  .#  #  . 
+  .##### . 
+  .   #  . 
+  .   #  . 
+  .      . 
+
+Char 53 (DIGIT FIVE), width 6
+ __      __
+  .##### . 
+  .#     . 
+  .#     . 
+  .####  . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .####  . 
+  .      . 
+
+Char 54 (DIGIT SIX), width 6
+ __      __
+  . ###  . 
+  .#     . 
+  .#     . 
+  .####  . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+  . ###  . 
+  .      . 
+
+Char 55 (DIGIT SEVEN), width 6
+ __      __
+  .##### . 
+  .#   # . 
+  .    # . 
+  .   #  . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .      . 
+
+Char 56 (DIGIT EIGHT), width 6
+ __      __
+  . ###  . 
+  .#   # . 
+  .#   # . 
+  . ###  . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+  . ###  . 
+  .      . 
+
+Char 57 (DIGIT NINE), width 6
+ __      __
+  . ###  . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+  . #### . 
+  .    # . 
+  .    # . 
+  . ###  . 
+  .      . 
+
+Char 58 (COLON), width 6
+ __      __
+  .      . 
+  .      . 
+  .      . 
+  .  #   . 
+  .      . 
+  .      . 
+  .      . 
+  .  #   . 
+  .      . 
+
+Char 176 (DEGREE SIGN), width 6
+ __      __
+  .  ##  . 
+  . #  # . 
+  . #  # . 
+  .  ##  . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 

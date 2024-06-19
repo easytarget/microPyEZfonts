@@ -1,0 +1,962 @@
+Font: tom_thumb (Latin-1-bdf-sources/tom-thumb.bdf)
+Declared name: -raccoon-fixed4x6-medium-r-normal--6-60-75-75-p-40-iso10646-1
+Declared family: fixed4x6
+Declared weight: medium
+Declared size: 6
+Characters: 95
+Height: 6
+Baseline: 5
+Max width: 3
+Fixed width: True
+
+Char 161 (exclamdown), width 3
+ __ # __
+  .   . 
+  . # . 
+  . # . 
+  . # . 
+  .   . 
+
+Char 162 (cent), width 3
+ __ # __
+  .###. 
+  .#  . 
+  .###. 
+  . # . 
+  .   . 
+
+Char 163 (sterling), width 3
+ __ ##__
+  . # . 
+  .###. 
+  . # . 
+  .###. 
+  .   . 
+
+Char 164 (currency), width 3
+ __# #__
+  . # . 
+  .###. 
+  . # . 
+  .# #. 
+  .   . 
+
+Char 165 (yen), width 3
+ __# #__
+  .# #. 
+  . # . 
+  .###. 
+  . # . 
+  .   . 
+
+Char 166 (brokenbar), width 3
+ __ # __
+  . # . 
+  .   . 
+  . # . 
+  . # . 
+  .   . 
+
+Char 167 (section), width 3
+ __ ##__
+  . # . 
+  .# #. 
+  . # . 
+  .## . 
+  .   . 
+
+Char 168 (dieresis), width 3
+ __# #__
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+
+Char 169 (copyright), width 3
+ __ ##__
+  .#  . 
+  . ##. 
+  .   . 
+  .   . 
+  .   . 
+
+Char 170 (ordfeminine), width 3
+ __ ##__
+  .# #. 
+  .###. 
+  .   . 
+  .###. 
+  .   . 
+
+Char 171 (guillemotleft), width 3
+ __ # __
+  .#  . 
+  . # . 
+  .   . 
+  .   . 
+  .   . 
+
+Char 172 (logicalnot), width 3
+ __   __
+  .###. 
+  .  #. 
+  .   . 
+  .   . 
+  .   . 
+
+Char 173 (softhyphen), width 3
+ __   __
+  .   . 
+  .## . 
+  .   . 
+  .   . 
+  .   . 
+
+Char 174 (registered), width 3
+ __## __
+  .## . 
+  .# #. 
+  .   . 
+  .   . 
+  .   . 
+
+Char 175 (macron), width 3
+ __###__
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+
+Char 176 (degree), width 3
+ __ # __
+  .# #. 
+  . # . 
+  .   . 
+  .   . 
+  .   . 
+
+Char 177 (plusminus), width 3
+ __ # __
+  .###. 
+  . # . 
+  .   . 
+  .###. 
+  .   . 
+
+Char 178 (twosuperior), width 3
+ __## __
+  . # . 
+  . ##. 
+  .   . 
+  .   . 
+  .   . 
+
+Char 179 (threesuperior), width 3
+ __###__
+  . ##. 
+  .###. 
+  .   . 
+  .   . 
+  .   . 
+
+Char 180 (acute), width 3
+ __  #__
+  . # . 
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+
+Char 181 (mu), width 3
+ __# #__
+  .# #. 
+  .# #. 
+  .## . 
+  .#  . 
+  .   . 
+
+Char 182 (paragraph), width 3
+ __ ##__
+  .# #. 
+  . ##. 
+  . ##. 
+  . ##. 
+  .   . 
+
+Char 183 (periodcentered), width 3
+ __   __
+  .###. 
+  .###. 
+  .###. 
+  .   . 
+  .   . 
+
+Char 184 (cedilla), width 3
+ __   __
+  .   . 
+  . # . 
+  .  #. 
+  .## . 
+  .   . 
+
+Char 185 (onesuperior), width 3
+ __ # __
+  . # . 
+  . # . 
+  .   . 
+  .   . 
+  .   . 
+
+Char 186 (ordmasculine), width 3
+ __ # __
+  .# #. 
+  . # . 
+  .   . 
+  .###. 
+  .   . 
+
+Char 187 (guillemotright), width 3
+ __ # __
+  .  #. 
+  . # . 
+  .   . 
+  .   . 
+  .   . 
+
+Char 188 (onequarter), width 3
+ __#  __
+  .#  . 
+  .   . 
+  . ##. 
+  .  #. 
+  .   . 
+
+Char 189 (onehalf), width 3
+ __#  __
+  .#  . 
+  .   . 
+  .## . 
+  . ##. 
+  .   . 
+
+Char 190 (threequarters), width 3
+ __## __
+  .## . 
+  .   . 
+  . ##. 
+  .  #. 
+  .   . 
+
+Char 191 (questiondown), width 3
+ __ # __
+  .   . 
+  . # . 
+  .#  . 
+  .###. 
+  .   . 
+
+Char 192 (Agrave), width 3
+ __ # __
+  .  #. 
+  . # . 
+  .###. 
+  .# #. 
+  .   . 
+
+Char 193 (Aacute), width 3
+ __ # __
+  .#  . 
+  . # . 
+  .###. 
+  .# #. 
+  .   . 
+
+Char 194 (Acircumflex), width 3
+ __###__
+  .   . 
+  . # . 
+  .###. 
+  .# #. 
+  .   . 
+
+Char 195 (Atilde), width 3
+ __ ##__
+  .## . 
+  . # . 
+  .###. 
+  .# #. 
+  .   . 
+
+Char 196 (Adieresis), width 3
+ __# #__
+  . # . 
+  .# #. 
+  .###. 
+  .# #. 
+  .   . 
+
+Char 197 (Aring), width 3
+ __## __
+  .## . 
+  .# #. 
+  .###. 
+  .# #. 
+  .   . 
+
+Char 198 (AE), width 3
+ __ ##__
+  .## . 
+  .###. 
+  .## . 
+  .###. 
+  .   . 
+
+Char 199 (Ccedilla), width 3
+ __ ##__
+  .#  . 
+  .#  . 
+  . ##. 
+  .  #. 
+  . # . 
+
+Char 200 (Egrave), width 3
+ __ # __
+  .  #. 
+  .###. 
+  .## . 
+  .###. 
+  .   . 
+
+Char 201 (Eacute), width 3
+ __ # __
+  .#  . 
+  .###. 
+  .## . 
+  .###. 
+  .   . 
+
+Char 202 (Ecircumflex), width 3
+ __###__
+  .   . 
+  .###. 
+  .## . 
+  .###. 
+  .   . 
+
+Char 203 (Edieresis), width 3
+ __# #__
+  .   . 
+  .###. 
+  .## . 
+  .###. 
+  .   . 
+
+Char 204 (Igrave), width 3
+ __ # __
+  .  #. 
+  .###. 
+  . # . 
+  .###. 
+  .   . 
+
+Char 205 (Iacute), width 3
+ __ # __
+  .#  . 
+  .###. 
+  . # . 
+  .###. 
+  .   . 
+
+Char 206 (Icircumflex), width 3
+ __###__
+  .   . 
+  .###. 
+  . # . 
+  .###. 
+  .   . 
+
+Char 207 (Idieresis), width 3
+ __# #__
+  .   . 
+  .###. 
+  . # . 
+  .###. 
+  .   . 
+
+Char 208 (Eth), width 3
+ __## __
+  .# #. 
+  .###. 
+  .# #. 
+  .## . 
+  .   . 
+
+Char 209 (Ntilde), width 3
+ __## __
+  . ##. 
+  .# #. 
+  .###. 
+  .# #. 
+  .   . 
+
+Char 210 (Ograve), width 3
+ __ # __
+  .  #. 
+  .###. 
+  .# #. 
+  .###. 
+  .   . 
+
+Char 211 (Oacute), width 3
+ __ # __
+  .#  . 
+  .###. 
+  .# #. 
+  .###. 
+  .   . 
+
+Char 212 (Ocircumflex), width 3
+ __###__
+  .   . 
+  .###. 
+  .# #. 
+  .###. 
+  .   . 
+
+Char 213 (Otilde), width 3
+ __## __
+  . ##. 
+  .###. 
+  .# #. 
+  .###. 
+  .   . 
+
+Char 214 (Odieresis), width 3
+ __# #__
+  .   . 
+  .###. 
+  .# #. 
+  .###. 
+  .   . 
+
+Char 215 (multiply), width 3
+ __   __
+  .# #. 
+  . # . 
+  .# #. 
+  .   . 
+  .   . 
+
+Char 216 (Oslash), width 3
+ __ ##__
+  .# #. 
+  .###. 
+  .# #. 
+  .## . 
+  .   . 
+
+Char 217 (Ugrave), width 3
+ __#  __
+  . # . 
+  .# #. 
+  .# #. 
+  .###. 
+  .   . 
+
+Char 218 (Uacute), width 3
+ __  #__
+  . # . 
+  .# #. 
+  .# #. 
+  .###. 
+  .   . 
+
+Char 219 (Ucircumflex), width 3
+ __###__
+  .   . 
+  .# #. 
+  .# #. 
+  .###. 
+  .   . 
+
+Char 220 (Udieresis), width 3
+ __# #__
+  .   . 
+  .# #. 
+  .# #. 
+  .###. 
+  .   . 
+
+Char 221 (Yacute), width 3
+ __  #__
+  . # . 
+  .# #. 
+  .###. 
+  . # . 
+  .   . 
+
+Char 222 (Thorn), width 3
+ __#  __
+  .###. 
+  .# #. 
+  .###. 
+  .#  . 
+  .   . 
+
+Char 223 (germandbls), width 3
+ __ ##__
+  .# #. 
+  .## . 
+  .# #. 
+  .## . 
+  .#  . 
+
+Char 224 (agrave), width 3
+ __ # __
+  .  #. 
+  . ##. 
+  .# #. 
+  .###. 
+  .   . 
+
+Char 225 (aacute), width 3
+ __ # __
+  .#  . 
+  . ##. 
+  .# #. 
+  .###. 
+  .   . 
+
+Char 226 (acircumflex), width 3
+ __###__
+  .   . 
+  . ##. 
+  .# #. 
+  .###. 
+  .   . 
+
+Char 227 (atilde), width 3
+ __ ##__
+  .## . 
+  . ##. 
+  .# #. 
+  .###. 
+  .   . 
+
+Char 228 (adieresis), width 3
+ __# #__
+  .   . 
+  . ##. 
+  .# #. 
+  .###. 
+  .   . 
+
+Char 229 (aring), width 3
+ __ ##__
+  . ##. 
+  . ##. 
+  .# #. 
+  .###. 
+  .   . 
+
+Char 230 (ae), width 3
+ __   __
+  . ##. 
+  .###. 
+  .###. 
+  .## . 
+  .   . 
+
+Char 231 (ccedilla), width 3
+ __   __
+  . ##. 
+  .#  . 
+  . ##. 
+  .  #. 
+  . # . 
+
+Char 232 (egrave), width 3
+ __ # __
+  .  #. 
+  . ##. 
+  .###. 
+  . ##. 
+  .   . 
+
+Char 233 (eacute), width 3
+ __ # __
+  .#  . 
+  . ##. 
+  .###. 
+  . ##. 
+  .   . 
+
+Char 234 (ecircumflex), width 3
+ __###__
+  .   . 
+  . ##. 
+  .###. 
+  . ##. 
+  .   . 
+
+Char 235 (edieresis), width 3
+ __# #__
+  .   . 
+  . ##. 
+  .###. 
+  . ##. 
+  .   . 
+
+Char 236 (igrave), width 3
+ __ # __
+  .  #. 
+  . # . 
+  . # . 
+  . # . 
+  .   . 
+
+Char 237 (iacute), width 3
+ __ # __
+  .#  . 
+  . # . 
+  . # . 
+  . # . 
+  .   . 
+
+Char 238 (icircumflex), width 3
+ __###__
+  .   . 
+  . # . 
+  . # . 
+  . # . 
+  .   . 
+
+Char 239 (idieresis), width 3
+ __# #__
+  .   . 
+  . # . 
+  . # . 
+  . # . 
+  .   . 
+
+Char 240 (eth), width 3
+ __ ##__
+  .## . 
+  . ##. 
+  .# #. 
+  . ##. 
+  .   . 
+
+Char 241 (ntilde), width 3
+ __## __
+  . ##. 
+  .## . 
+  .# #. 
+  .# #. 
+  .   . 
+
+Char 242 (ograve), width 3
+ __ # __
+  .  #. 
+  . # . 
+  .# #. 
+  . # . 
+  .   . 
+
+Char 243 (oacute), width 3
+ __ # __
+  .#  . 
+  . # . 
+  .# #. 
+  . # . 
+  .   . 
+
+Char 244 (ocircumflex), width 3
+ __###__
+  .   . 
+  . # . 
+  .# #. 
+  . # . 
+  .   . 
+
+Char 245 (otilde), width 3
+ __## __
+  . ##. 
+  . # . 
+  .# #. 
+  . # . 
+  .   . 
+
+Char 246 (odieresis), width 3
+ __# #__
+  .   . 
+  . # . 
+  .# #. 
+  . # . 
+  .   . 
+
+Char 247 (divide), width 3
+ __ # __
+  .   . 
+  .###. 
+  .   . 
+  . # . 
+  .   . 
+
+Char 248 (oslash), width 3
+ __   __
+  . ##. 
+  .###. 
+  .# #. 
+  .## . 
+  .   . 
+
+Char 249 (ugrave), width 3
+ __#  __
+  . # . 
+  .# #. 
+  .# #. 
+  . ##. 
+  .   . 
+
+Char 250 (uacute), width 3
+ __  #__
+  . # . 
+  .# #. 
+  .# #. 
+  . ##. 
+  .   . 
+
+Char 251 (ucircumflex), width 3
+ __###__
+  .   . 
+  .# #. 
+  .# #. 
+  . ##. 
+  .   . 
+
+Char 252 (udieresis), width 3
+ __# #__
+  .   . 
+  .# #. 
+  .# #. 
+  . ##. 
+  .   . 
+
+Char 253 (yacute), width 3
+ __  #__
+  . # . 
+  .# #. 
+  . ##. 
+  .  #. 
+  . # . 
+
+Char 254 (thorn), width 3
+ __   __
+  .#  . 
+  .## . 
+  .# #. 
+  .## . 
+  .#  . 
+
+Char 255 (ydieresis), width 3
+ __# #__
+  .   . 
+  .# #. 
+  . ##. 
+  .  #. 
+  . # . 
+
+Font rendering notes:
+Char 161:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 162:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 163:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 164:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 165:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 166:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 167:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 168:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 169:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 170:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 171:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 172:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 173:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 174:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 175:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 176:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 177:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 178:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 179:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 180:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 181:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 182:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 183:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 184:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 185:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 186:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 187:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 188:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 189:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 190:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 191:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 192:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 193:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 194:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 195:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 196:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 197:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 198:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 199:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 200:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 201:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 202:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 203:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 204:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 205:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 206:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 207:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 208:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 209:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 210:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 211:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 212:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 213:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 214:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 215:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 216:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 217:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 218:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 219:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 220:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 221:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 222:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 223:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 224:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 225:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 226:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 227:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 228:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 229:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 230:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 231:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 232:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 233:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 234:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 235:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 236:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 237:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 238:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 239:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 240:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 241:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 242:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 243:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 244:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 245:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 246:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 247:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 248:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 249:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 250:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 251:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 252:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 253:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 254:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 255:
+  Device width (4) is wider than overall font box width (3), reducing device width.
