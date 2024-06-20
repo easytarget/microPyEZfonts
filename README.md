@@ -94,7 +94,7 @@ import mPyEZFont_myfont
 You then create a font instance for each imported font:
 
 ```python
-myfont = ezFBfont(device, fontName, fg=None, bg=None ,tkey=None, halign=None, valign=None, colors=None)
+myfont = ezFBfont(device, fontName, fg=1, bg=0 ,tkey=-1, halign='left', valign='top', hgap=0, vgap=0, colors=2, verbose=False)
 ```
 Positional Arguments:
 * *device* : The framebuffer device to write to.
@@ -102,26 +102,29 @@ Positional Arguments:
 
 Optional Arguments:
 * *fg*, *bg*, *tkey*: (integers) foreground and background colors, plus transparency key.
-  * foreground and background will default to *max-color* and *min-color* respectively (see below).
+  * foreground will default to the value of *colors* -1, for mono displays this will be `1`
   * transparent key is -1 by default (none), otherwise it defines a font color that should be rendered transparent, currently we only support mono fonts so is limited to `-1`, `0` or `1`.
 * *halign*: (string) `left|right|center` : how to align on the X axis.
   * Defaults to `left`.
   * This also works as justification, and is applied on a per-line basis.
 * *valign*: (string) `top|center|baseline|bottom` : how to align on Y axis.
   * Defaults to `top`.
-  * The `baseline` setting is applied for the first line of multi-line strings.
-
-Device dependent: May need to be supplied if your display device driver does not report it's settings properly.
+  * The `baseline` setting is applied at the first line with multi-line strings.
+* *hgap* and *vgap*: add (or remove) spacing between characters and lines
+  * Defaults to 0, is only applied between individual characters and between lines, negative values are allowed.
+  * This is a gap, not padding; no background is drawn in the space created.
 * *colors*: (integer) the total number of colors or greyscales we support, 2 for mono, up to 65536 for 16 bit color.
-  * The *max-color* used above will always be `total colors - 1`, *min-color* is always 0.
   * This defaults to `2` (mono displays) if not supplied and not determined automatically.
+    * If the display driver reports a 'format' property this is used to determine the color map.
+  * The default foreground color will be `total colors - 1`, default background is always 0.
+* *verbose*: Enables verbose feedback on init, default changes and missing characters, default off.
 
 ## Methods:
 (After writing your data do not forget to do a `device.show()` to see the results :wink:)
 
 #### write()
 ```python
-myfont.write(string, X, Y, fg=None, bg=None, tkey=None, halign=None, valign=None)
+myfont.write(string, X, Y, fg=None, bg=None, tkey=None, halign=None, valign=None, hgap=None, vgap=None)
 ```
 Positional Arguments:
 * *string* : The text to be written to the framebuffer
@@ -134,20 +137,20 @@ Returns `False` if any characters failed to be written (not present in the font)
 
 #### size()
 ```python
-x, y = myfont.size(str)
+x, y = myfont.size(str, hgap=None, vgap=None)
 ```
 Returns the pixel width and height of the string.
 
 #### rect()
 ```python
-xmin, xmax, width, height = myfont.rect(str, x, y, halign=None, valign=None)
+xmin, xmax, width, height = myfont.rect(str, x, y, halign=None, valign=None, hgap=None, vgap=None)
 ```
 Returns the exact area that the string would be written to with `myfont.write()`.
 * The return is suitable for passing directly to `display.rect()`.
 
 #### set_default()
 ```python
-myfont.set_default(fg=None, bg=None, tkey=None, halign=None, valign=None)
+myfont.set_default(fg=None, bg=None, tkey=None, halign=None, valign=None, hgap=None, vgap=None, verbose=None)
 ```
 Changes the default value of the supplied argument(s).
 
@@ -165,7 +168,3 @@ myfont.colors : total number of available colors
 ### Thoughts:
 Some ideas; see the issue list for status/planning.
 * `Flip`, `Mirror`, `Turn`: these will allow all text directions and effects etc.
-* Padding : both removal and addition.
-
-## Wanted:
-a python library to rotate `MONO_VLSB` and `MONO_HMSB` framebuffers by 90 degrees.

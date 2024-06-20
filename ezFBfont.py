@@ -19,16 +19,18 @@ colorspaces = {
                 framebuf.GS8 : 256,
                 }
 
-# Basic string printing class
+# Basic string writing class
 class ezFBfont():
 
     def __init__(self, device,
                  font,
                  fg = None,
-                 bg = None,
-                 tkey = None,
-                 halign = None,
-                 valign = None,
+                 bg = 0,
+                 tkey = -1,
+                 halign = 'left',
+                 valign = 'top',
+                 vgap = 0,
+                 hgap = 0,
                  colors = None,
                  verbose = False):
 
@@ -48,62 +50,47 @@ class ezFBfont():
                 format = device.format  # does driver supply framebuffer format?
             except Exception as e:
                 if self._verbose:
-                    print(self.name, errtxt, '\nassuming a 2 color (mono) display')
+                    print('{}: {}\nAssuming a 2 color (mono) display'.format(self.name, errtxt))
                 format = framebuf.MONO_VLSB
             try:
                 self.colors = colorspaces[format]
             except KeyError:
-                raise ValueError(errtxt + 'Unknown format: ' + str(format))
+                raise ValueError('{}: {}\nUnknown format: {}'.format(self.name, errtxt, format))
         else:
             self.colors = colors
-        # default color scheme
         self.fg = self.colors - 1
-        self.bg = 0
-        self.tkey = -1
-        # default alignment
-        self.halign = 'left'
-        self.valign = 'top'
-        # apply color and alignment overrides from init
-        self.set_default(fg, bg, tkey, halign, valign)
+        # apply init color and alignment as default
+        self.set_default(fg, bg, tkey, halign, valign, hgap, vgap)
 
-    def _color_range(self, color):
-        # forces colors into correct range (0...max)
-        if color < 0:
-            color = 0
-        if color >= self.colors:
-            color = self.colors -1
-        return color
+    def _color_range(self, c):
+        return min(max(0, c), self.colors -1)
 
-    def _tkey_range(self, tkey):
-        # forces tkey into correct range (0...max)
-        if tkey < -1:
-            tkey = 0
-        if tkey >= self._font_colors:
-            tkey = self._font_colors -1
-        return tkey
+    def _tkey_range(self, t):
+        return min(max(-1, t), self._font_colors -1)
 
-    def _check_halign(self, halign):
-        if halign not in ('left','center','right'):
-            raise ValueError('Unknown horizontal alignment: ' + halign)
-        return halign
+    def _check_halign(self, h):
+        if h not in ('left','center','right'):
+            raise ValueError('Unknown horizontal alignment: ' + h)
+        return h
 
-    def _check_valign(self, valign):
-        if valign not in ('top','center','baseline','bottom'):
-            raise ValueError('Unknown vertical alignment: ' + valign)
-        return valign
+    def _check_valign(self, v):
+        if v not in ('top','center','baseline','bottom'):
+            raise ValueError('Unknown vertical alignment: ' + v)
+        return v
 
-    def _line_size(self, string):
+    def _line_size(self, string, hgap):
         x = 0
         for char in string:
             _, _, char_width = self._font.get_ch(char)
-            x += char_width
+            x += char_width + hgap if char_width > 0 else 0
+        x = x - hgap if x != 0 else x   # remove any trailing hgap
         return x, self._font.height()
 
     def _put_char(self, char, x, y, fg, bg, tkey):
         # fetch the glyph
         glyph, char_height, char_width = self._font.get_ch(char)
         if glyph is None:
-            return 0, 0  # Nothing to print. skip.
+            return None, None  # Nothing to write
         # buffers
         palette_buf = bytearray(self._font_colors * 2)
         buf = bytearray(glyph)
@@ -116,7 +103,8 @@ class ezFBfont():
         self._device.blit(charbuf, x, y, tkey, palette)
         return char_width, char_height
 
-    def set_default(self, fg=None, bg=None, tkey=None, halign=None, valign=None):
+    def set_default(self, fg=None, bg=None, tkey=None,
+                    halign=None, valign=None, hgap=None, vgap=None, verbose=None):
         # Sets the default value for all supplied arguments
         self.fg = self.fg if fg is None else self._color_range(fg)
         self.bg = self.bg if bg is None else self._color_range(bg)
@@ -124,83 +112,94 @@ class ezFBfont():
         self.fg = self.fg if fg is None else self._color_range(fg)
         self.halign = self.halign if halign is None else self._check_halign(halign)
         self.valign = self.valign if valign is None else self._check_valign(valign)
+        self.hgap = self.hgap if hgap is None else hgap
+        self.vgap = self.vgap if vgap is None else vgap
+        self._verbose = self._verbose if verbose is None else verbose
         if self._verbose:
-            fstr = '{} = colors: {}, fg: {}, bg: {}, tr: {}, halign: {}, valign: {}'
+            fstr = '{} = colors: {}, fg: {}, bg: {}, tr: {}, halign: {}, valign: {}, hgap: {}, vgap: {}'
             print(fstr.format(self.name, self.colors, self.fg, self.bg, self.tkey,
-                              self.halign, self.valign))
+                              self.halign, self.valign, self.hgap, self.vgap))
 
-    def size(self, string):
+    def size(self, string, hgap=None, vgap=None):
         if len(string) == 0:
             return 0, 0
+        hgap = self.hgap if hgap is None else hgap
+        vgap = self.vgap if vgap is None else vgap
         lines = string.split('\n')
-        w = h = 0
+        w = 0
         for line in lines:
-            x, y = self._line_size(line)
-            if x > w:  # record the widest line
-                w = x
-            h = h + y  # total the height
+            x, _ = self._line_size(line, hgap)
+            w = max(w, x)  # record the widest line
+        h = (len(lines) * (self._font.height() + vgap)) - vgap
         return w, h
 
-    def rect(self, string, x, y, halign=None, valign=None):
+    def rect(self, string, x, y, halign=None, valign=None, hgap=None, vgap=None):
         if len(string) == 0:
             return x, y, 0, 0
         # apply alignment overrides
         halign = self.halign if halign is None else self._check_halign(halign)
         valign = self.valign if valign is None else self._check_valign(valign)
+        hgap = self.hgap if hgap is None else hgap
+        vgap = self.vgap if vgap is None else vgap
         # get the x,y size of the rendered string
-        wide, high = self.size(string)
+        wide, high = self.size(string, vgap, hgap)
         # apply alignment
         xmin = x
-        if halign is 'center':
+        if halign == 'center':
             xmin = int(x - (wide / 2))
-        elif halign is 'right':
+        elif halign == 'right':
             xmin = x - wide
         ymin = y
-        if valign is 'baseline':
+        if valign == 'baseline':
             ymin = y - self._font.baseline()
-        elif valign is 'center':
+        elif valign == 'center':
             ymin = int(y - (high / 2))
-        elif valign is 'bottom':
+        elif valign == 'bottom':
             ymin = y - high
         # return the result
         return xmin,ymin,wide,high
 
-    def write(self, string, x, y, fg=None, bg=None, tkey=None, halign=None, valign=None):
+    def write(self, string, x, y, fg=None, bg=None, tkey=None,
+              halign=None, valign=None, hgap=None, vgap=None):
         if len(string) == 0:
             return True
-        all_good = True
+        lines = string.split('\n')
+        all_chars = True
         # Argument overrides
         fg = self.fg if fg is None else self._color_range(fg)
         bg = self.bg if bg is None else self._color_range(bg)
         tkey = self.tkey if tkey is None else self._tkey_range(tkey)
         halign = self.halign if halign is None else self._check_halign(halign)
         valign = self.valign if valign is None else self._check_valign(valign)
-        lines = string.split('\n')
+        hgap = self.hgap if hgap is None else hgap
+        vgap = self.vgap if vgap is None else vgap
         # vertical alignment
-        high = len(lines) * self._font.height()
+        high = (len(lines) * (self._font.height() + vgap)) - vgap
         ypos = y
-        if valign is 'baseline':
+        if valign == 'baseline':
             ypos = y - self._font.baseline()
-        elif valign is 'center':
+        elif valign == 'center':
             ypos = int(y - (high / 2))
-        elif valign is 'bottom':
+        elif valign == 'bottom':
             ypos = y - high
         for line in lines:
             # horizontal alignment
-            wide, _ = self._line_size(line)
-            xpos = x
-            if halign is 'center':
-                xpos = int(x - (wide / 2))
-            elif halign is 'right':
-                xpos = x - wide
+            if halign == 'left':
+                xpos = x
+            else:
+                wide, y = self._line_size(line, vgap)
+                if halign == 'right':
+                    xpos = x - wide
+                else:
+                    xpos = int(x - (wide / 2))
             # write the line
             for char in line:
-                if ord(char) in range(self._font.min_ch(), self._font.max_ch() + 1):
-                    cx, _ = self._put_char(char, xpos, ypos, fg, bg, tkey)
-                    # needs mods for orientation
-                    xpos = xpos + cx
+                cx, _ = self._put_char(char, xpos, ypos, fg, bg, tkey)
+                if cx is None:
+                    if self._verbose:
+                        print('{}: missing char: "{}" ({})'.format(self.name, char, ord(char)))
+                    all_chars = False
                 else:
-                    print('unprintable char: "' + char + '" (' + str(ord(char)) + ')')
-                    all_good = False
-            ypos = ypos + self._font.height()
-        return all_good
+                    xpos = xpos + cx
+            ypos += y + vgap
+        return all_chars
