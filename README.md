@@ -13,7 +13,7 @@ The fonts presented here were created using my own `bdf2dict` font module creato
 ## Status
 The fonts and libraries have been tested on a `ssd1306` OLED display, and a `st7567` LCD module, both using I2C.
 
-![OLED (Note. this display has dead lines at the bottom, this is a hardware issue and not  my drivers fault..)](doc/demo-OLED.jpg)![LCD](doc/demo-LCD.jpg)
+![OLED (Note. this display has dead lines at the bottom, this is a hardware issue and not  my drivers fault..)](/examples/doc/demo-OLED.jpg)![LCD](/examples/doc/demo-LCD.jpg)
 
 The above is showing demo programs from the [examples](examples); with various fonts, alignments and colors.
 

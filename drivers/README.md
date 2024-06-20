@@ -2,8 +2,8 @@
 Drivers here have been tested and where necesscary modified for use with `ezFBfont`, they are provided for convenience.
 
 # Useful sources of framebuffer drivers for micropython:
-https://github.com/bdbarnett/mpdisplay
-https://github.com/peterhinch/micropython-nano-gui/tree/master/drivers
+* https://github.com/bdbarnett/mpdisplay
+* https://github.com/peterhinch/micropython-nano-gui/tree/master/drivers
 
 ## Using other drivers
 *ezFBfont* should work with any 3rd party driver that is compatible with the inbuilt microPython framebuffer.

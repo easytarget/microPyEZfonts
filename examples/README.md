@@ -10,4 +10,4 @@ See comments for pin assignments etc.
 ## These have been tested on displays connected to an ESP32 and to a RP2040
 clipping, colors, transparency, alignment all work.
 
-![a taste of what it does](../doc/uptime-LCD.jpg)
+![a taste of what it does](/examples/doc/uptime-LCD.jpg)
