@@ -2,13 +2,17 @@ from machine import Pin, I2C, SoftI2C
 from st7567_i2c import ST7567
 from ezFBfont import ezFBfont
 from sys import path
-from time import sleep_ms,ticks_ms
+from time import ticks_ms
 
 # fonts
 path.append('fonts')
-import ezFBfont_spleen_12x24_r
-import ezFBfont_spleen_16x32_n
-import ezFBfont_helvR14_r
+import ezFBfont_17_helvB12_ascii as header
+import ezFBfont_37_7_Seg_41x21_base as digits
+import ezFBfont_29_7_Seg_33x19_base as decimals
+# Replace the digits and decimals to try a conventional font
+#import ezFBfont_26_spleen_16x32_num as digits
+#import ezFBfont_23_spleen_12x24_ascii as decimals
+import ezFBfont_16_open_iconic_human_2x_lower as icons
 
 '''
 A demo of using ezMPfont to do a simple uptime counter.
@@ -33,29 +37,34 @@ I2C0_SCL_PIN = 22  # default esp32
 i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
 
 # Display
-# Display
 display = ST7567(128, 64, i2c0, addr=0x3f)
 display.set_contrast(31)  # as needed (max 63)
 
 # Font Init
-heading = ezFBfont(display, ezFBfont_helvR14_r)
-minutes = ezFBfont(display, ezFBfont_spleen_16x32_n, halign='right', valign='baseline')
-seconds = ezFBfont(display, ezFBfont_spleen_12x24_r, valign='baseline')
+heading = ezFBfont(display, header)
+lcdm = ezFBfont(display, digits, halign='right', valign='baseline')
+lcds = ezFBfont(display, decimals, valign='baseline')
+icon = ezFBfont(display, icons, halign='center', valign='center')
+
+numline = 60
 
 # frame
-display.rect(0, 24, 127, 38, 1)
-heading.write('UpTime:', 0, 2)
-display.show()
+def clean():
+    display.fill(0)
+    heading.write('UpTime:', 0, 0)
+    display.show()
 
-x = 86
-y = 53
+d = True
 # loop
+clean()
 while True:
     upsecs = int(ticks_ms() / 1000)
     secs = upsecs % 60
     mins = int(upsecs / 60) % 60
     hrs = int(upsecs / 3600) % 24
-    minutes.write('%d:%02.d' % (hrs, mins), x, y)
-    seconds.write('.%02.d' % secs, x, y)
+    beat = int(ticks_ms() / 333) % 2
+    lcdm.write('{:d}:{:02d}'.format(hrs, mins), 84, numline)
+    lcds.write(':{:02d}'.format(secs), 84, numline)
+    icon.write(chr(66), 118, 7, fg=beat)
     display.show()
 # fin

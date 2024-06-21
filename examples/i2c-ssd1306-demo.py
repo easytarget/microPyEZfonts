@@ -52,13 +52,13 @@ font4 = ezFBfont(display, ezFBfont_24_symb18_lower, verbose=True)
 
 # multiline demo stuff
 font3.set_default(tkey=0, halign='center', valign='baseline', vgap=-1)
-text = 'Hello!\nmy\nWorld'
+text = 'Hello!\nMPy\nWorld'
 tx = 24
 ty = 32
 a,b,c,d = font3.rect(text, tx, ty)
 
 # frame
-display.rect(0, 0, 127, 62, 1)
+display.rect(0, 0, 128, 64, 1)
 display.show()
 
 # write

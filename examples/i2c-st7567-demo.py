@@ -7,10 +7,10 @@ from gc import collect, mem_free
 
 # fonts
 path.append('fonts')
-import ezFBfont_spleen_12x24_r
-import ezFBfont_spleen_16x32_n
-import ezFBfont_6x12_r
-import ezFBfont_symb18_e
+import ezFBfont_23_spleen_12x24_ascii
+import ezFBfont_26_spleen_16x32_num
+import ezFBfont_10_6x12_ascii
+import ezFBfont_24_symb18_lower
 
 '''
 A demo of using ezMPfont to splat a load of fonts onto
@@ -43,27 +43,27 @@ display = ST7567(128, 64, i2c0, addr=0x3f)
 display.set_contrast(31)  # as needed (max 63)
 
 # Font Init
-font1 = ezFBfont(display, ezFBfont_spleen_12x24_r, tkey=0, verbose=True)
-font2 = ezFBfont(display, ezFBfont_spleen_16x32_n, verbose=True)
-font3 = ezFBfont(display, ezFBfont_6x12_r, verbose=True)
-font4 = ezFBfont(display, ezFBfont_symb18_e, verbose=True)
+font1 = ezFBfont(display, ezFBfont_23_spleen_12x24_ascii, tkey=0, verbose=True)
+font2 = ezFBfont(display, ezFBfont_26_spleen_16x32_num, verbose=True)
+font3 = ezFBfont(display, ezFBfont_10_6x12_ascii, verbose=True)
+font4 = ezFBfont(display, ezFBfont_24_symb18_lower, verbose=True)
 
 # multiline demo stuff
-font3.set_default(halign='center', valign='baseline')
-text = 'Hello!\nPy\nWorld'
+font3.set_default(tkey=0, halign='center', valign='baseline', vgap=-1)
+text = 'Hello!\nMPy\nWorld'
 tx = 24
 ty = 32
 a,b,c,d = font3.rect(text, tx, ty)
 
 # frame
-display.rect(0, 0, 127, 62, 1)
+display.rect(0, 0, 128, 64, 1)
 display.show()
 
 # write
 font1.write('Test', 0, 0)
 font2.write('1.23', 63, 0, fg=0, bg=1)
 font3.write(text, tx, ty)
-font4.write('bB1!%Z', 44, 32)
+font4.write('^ezdemo', 44, 32)
 display.show()
 
 while True:  # rect() demo

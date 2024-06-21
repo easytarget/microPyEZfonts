@@ -9,6 +9,9 @@ path.append('fonts')
 import ezFBfont_17_helvB12_ascii as header
 import ezFBfont_37_7_Seg_41x21_base as digits
 import ezFBfont_29_7_Seg_33x19_base as decimals
+# Replace the digits and decimals to try a conventional font
+#import ezFBfont_26_spleen_16x32_num as digits
+#import ezFBfont_23_spleen_12x24_ascii as decimals
 import ezFBfont_16_open_iconic_human_2x_lower as icons
 
 '''
@@ -45,6 +48,8 @@ lcdm = ezFBfont(display, digits, halign='right', valign='baseline')
 lcds = ezFBfont(display, decimals, valign='baseline')
 icon = ezFBfont(display, icons, halign='center', valign='center')
 
+numline = 60
+
 # frame
 def clean():
     display.fill(0)
@@ -59,9 +64,9 @@ while True:
     secs = upsecs % 60
     mins = int(upsecs / 60) % 60
     hrs = int(upsecs / 3600) % 24
-    lcdm.write('{:d}:{:02d}'.format(hrs, mins), 84, 56)
-    lcds.write(':{:02d}'.format(secs), 84, 56)
     beat = int(ticks_ms() / 333) % 2
+    lcdm.write('{:d}:{:02d}'.format(hrs, mins), 84, numline)
+    lcds.write(':{:02d}'.format(secs), 84, numline)
     icon.write(chr(66), 118, 7, fg=beat)
     display.show()
 # fin

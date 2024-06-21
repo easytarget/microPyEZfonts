@@ -74,4 +74,3 @@ if boxes:
     display.show()
 
 # fin
-
