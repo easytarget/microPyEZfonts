@@ -34,18 +34,18 @@ i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
 
 # Display
 # Display
-d0 = ST7567(128, 64, i2c0, addr=0x3f)
-d0.set_contrast(31)  # as needed (max 63)
+display = ST7567(128, 64, i2c0, addr=0x3f)
+display.set_contrast(31)  # as needed (max 63)
 
 # Font Init
-heading = ezFBfont(d0, ezFBfont_helvR14_r)
-minutes = ezFBfont(d0, ezFBfont_spleen_16x32_n, halign='right', valign='baseline')
-seconds = ezFBfont(d0, ezFBfont_spleen_12x24_r, valign='baseline')
+heading = ezFBfont(display, ezFBfont_helvR14_r)
+minutes = ezFBfont(display, ezFBfont_spleen_16x32_n, halign='right', valign='baseline')
+seconds = ezFBfont(display, ezFBfont_spleen_12x24_r, valign='baseline')
 
 # frame
-d0.rect(0, 24, 127, 38, 1)
+display.rect(0, 24, 127, 38, 1)
 heading.write('UpTime:', 0, 2)
-d0.show()
+display.show()
 
 x = 86
 y = 53
@@ -57,5 +57,5 @@ while True:
     hrs = int(upsecs / 3600) % 24
     minutes.write('%d:%02.d' % (hrs, mins), x, y)
     seconds.write('.%02.d' % secs, x, y)
-    d0.show()
+    display.show()
 # fin

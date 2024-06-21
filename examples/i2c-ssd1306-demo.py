@@ -39,16 +39,16 @@ I2C0_SCL_PIN = 22  # default esp32
 i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
 
 # Display
-d0 = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
-d0.invert(False)  # as needed
-d0.rotate(0)      # as needed
-d0.contrast(128)  # as needed
+display = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
+display.invert(False)  # as needed
+display.rotate(0)      # as needed
+display.contrast(128)  # as needed
 
 # Font Init
-font1 = ezFBfont(d0, ezFBfont_23_spleen_12x24_ascii, tkey=0, verbose=True)
-font2 = ezFBfont(d0, ezFBfont_26_spleen_16x32_num, verbose=True)
-font3 = ezFBfont(d0, ezFBfont_10_6x12_ascii, verbose=True)
-font4 = ezFBfont(d0, ezFBfont_24_symb18_lower, verbose=True)
+font1 = ezFBfont(display, ezFBfont_23_spleen_12x24_ascii, tkey=0, verbose=True)
+font2 = ezFBfont(display, ezFBfont_26_spleen_16x32_num, verbose=True)
+font3 = ezFBfont(display, ezFBfont_10_6x12_ascii, verbose=True)
+font4 = ezFBfont(display, ezFBfont_24_symb18_lower, verbose=True)
 
 # multiline demo stuff
 font3.set_default(tkey=0, halign='center', valign='baseline', vgap=-1)
@@ -58,21 +58,21 @@ ty = 32
 a,b,c,d = font3.rect(text, tx, ty)
 
 # frame
-d0.rect(0, 0, 127, 62, 1)
-d0.show()
+display.rect(0, 0, 127, 62, 1)
+display.show()
 
 # write
 font1.write('Test', 0, 0)
 font2.write('1.23', 63, 0, fg=0, bg=1)
 font3.write(text, tx, ty)
 font4.write('^ezdemo', 44, 32)
-d0.show()
+display.show()
 
 while True:  # rect() demo
     sleep_ms(1000)
-    d0.rect(a,b,c,d,0,True)
-    d0.show()
+    display.rect(a,b,c,d,0,True)
+    display.show()
     sleep_ms(1000)
     font3.write(text, tx, ty)
-    d0.show()
+    display.show()
 # fin

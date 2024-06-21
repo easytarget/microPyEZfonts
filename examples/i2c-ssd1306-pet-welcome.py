@@ -29,14 +29,15 @@ I2C0_SCL_PIN = 22  # default esp32
 i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
 
 # Display
-screen = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
-screen.invert(False)  # as needed
-screen.rotate(0)      # as needed
-screen.contrast(128)  # as needed
+display = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
+display.invert(False)  # as needed
+display.rotate(0)      # as needed
+display.contrast(128)  # as needed
 
 # Font Init
-crt = ezFBfont(screen, crtfont, verbose=True)
+crt = ezFBfont(display, crtfont, verbose=True)
 
+# Display in stages, as if machine is starting up
 text1 = '*** COMMODORE BASIC ***\n\n 3066 BYTES FREE\n'
 text2 = 'READY.'
 blink = 330
@@ -44,18 +45,19 @@ blink = 330
 crt.write(text1, 0, 0)
 _, v1 = crt.size(text1)
 
-screen.show()
+display.show()
 sleep_ms(blink*2)
 
 crt.write(text2, 0, v1)
 _, v2 = crt.size(text2)
 sleep_ms(blink)
 
+# Position a cursor and blink it..
 v = v1 + v2
 b = 0
 while True:
     crt.write(' ', 0, v, bg=b)
     b = 0 if b == 1 else 1
-    screen.show()
+    display.show()
     sleep_ms(blink)
 # fin

@@ -5,7 +5,11 @@ from sys import path
 
 # fonts
 path.append('fonts')
-import ezFBfont_07_font_tiny5_ascii as thisfont
+# Choose a font below.
+#import ezFBfont_05_micro_ascii as thefont
+#import ezFBfont_07_font_tiny5_ascii as thefont
+import ezFBfont_10_6x12_ascii as thefont
+#import ezFBfont_17_helvB12_ascii as thefont
 
 '''
 A demo of using ezMPfont to splat a load of fonts onto
@@ -29,13 +33,13 @@ I2C0_SCL_PIN = 22  # default esp32
 i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
 
 # Display
-d0 = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
-d0.invert(False)  # as needed
-d0.rotate(0)      # as needed
-d0.contrast(128)  # as needed
+display = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
+display.invert(False)  # as needed
+display.rotate(0)      # as needed
+display.contrast(128)  # as needed
 
 # Font Init
-font = ezFBfont(d0, thisfont, vgap=0, verbose=True)
+font = ezFBfont(display, thefont, vgap=0, verbose=True)
 
 # Some text
 source = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, \
@@ -58,22 +62,19 @@ text = ''
 # the screen, and ending once the bottom is reached.
 for word in wordlist:
     w, h = font.size(line + word)
-    if w >= wide:
+    if w > wide:
         vertical += h + font.vgap
-        if vertical >= high:
-            break
+        if vertical > high:
+            break  # we now have a screenful of text
         else:
             text += line + '\n'
             line = ''
-    line += word + ' '
+    line += word + ' ' 
 
 print('Quote:\n{}'.format(text))
 
-# frame
-#d0.rect(0, 0, 127, 62, 1)
-
 # write
 font.write(text, 0, 0)
-d0.show()
+display.show()
 
 # fin

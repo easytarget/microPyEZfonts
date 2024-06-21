@@ -1,9 +1,8 @@
 from machine import Pin, I2C, SoftI2C
 from ssd1306 import SSD1306_I2C
 from ezFBfont import ezFBfont
-from sys import path, stdin
-from time import sleep_ms,ticks_ms
-import select
+from sys import path
+from time import ticks_ms
 
 # fonts
 path.append('fonts')
@@ -35,22 +34,22 @@ I2C0_SCL_PIN = 22  # default esp32
 i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
 
 # Display
-d0 = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
-d0.invert(False)  # as needed
-d0.rotate(0)      # as needed
-d0.contrast(128)  # as needed
+display = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
+display.invert(False)  # as needed
+display.rotate(0)      # as needed
+display.contrast(128)  # as needed
 
 # Font Init
-heading = ezFBfont(d0, header)
-lcdm = ezFBfont(d0, digits, halign='right', valign='baseline')
-lcds = ezFBfont(d0, decimals, valign='baseline')
-icon = ezFBfont(d0, icons, halign='center', valign='center')
+heading = ezFBfont(display, header)
+lcdm = ezFBfont(display, digits, halign='right', valign='baseline')
+lcds = ezFBfont(display, decimals, valign='baseline')
+icon = ezFBfont(display, icons, halign='center', valign='center')
 
 # frame
 def clean():
-    d0.fill(0)
+    display.fill(0)
     heading.write('UpTime:', 0, 0)
-    d0.show()
+    display.show()
 
 d = True
 # loop
@@ -64,5 +63,5 @@ while True:
     lcds.write(':{:02d}'.format(secs), 84, 56)
     beat = int(ticks_ms() / 333) % 2
     icon.write(chr(66), 118, 7, fg=beat)
-    d0.show()
+    display.show()
 # fin
