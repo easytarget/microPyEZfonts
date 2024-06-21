@@ -142,7 +142,7 @@ class ezFBfont():
         hgap = self.hgap if hgap is None else hgap
         vgap = self.vgap if vgap is None else vgap
         # get the x,y size of the rendered string
-        wide, high = self.size(string, vgap, hgap)
+        wide, high = self.size(string, hgap, vgap)
         # apply alignment
         xmin = x
         if halign == 'center':
@@ -183,15 +183,14 @@ class ezFBfont():
         elif valign == 'bottom':
             ypos = y - high
         for line in lines:
+            wide, high = self._line_size(line, hgap)
             # horizontal alignment
             if halign == 'left':
                 xpos = x
+            elif halign == 'right':
+                xpos = x - wide
             else:
-                wide, y = self._line_size(line, vgap)
-                if halign == 'right':
-                    xpos = x - wide
-                else:
-                    xpos = int(x - (wide / 2))
+                xpos = int(x - (wide / 2))
             # write the line
             for char in line:
                 cx, _ = self._put_char(char, xpos, ypos, fg, bg, tkey)
@@ -200,6 +199,6 @@ class ezFBfont():
                         print('{}: missing char: "{}" ({})'.format(self.name, char, ord(char)))
                     all_chars = False
                 else:
-                    xpos = xpos + cx
-            ypos += y + vgap
+                    xpos += cx + hgap
+            ypos += high + vgap
         return all_chars
