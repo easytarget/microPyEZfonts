@@ -1,15 +1,15 @@
-# Fremebuffer 'disply' driver for REPL console
+# Fremebuffer 'display' driver for REPL console
 # 
 # Emulates the interface of the 'classic' ssd1306.py display driver from:
 #   https://github.com/stlehmann/micropython-ssd1306
 # Provides a log output of all operations to the REPL console,
 # Displays a ascii-art dump of the framebuffer when show() is called
-# Allows debugging of display operations when running micropython on 
+# Allows debugging of display operations when running micropython on
 #  desktop systems without needing an attached device (eg with thonny)
 #
 # Init requires just two options: width, height
 # The screen will only be ascii dumped when it has changed
-# Three optional arguments are: 'clear=True' which will send a clean screen 
+# Three optional arguments are: 'clear=True' which will send a clean screen
 # sequence to the console before displaying the ascii 'display'.
 #  'txt=False' will suppress the ascii-art output completely.
 #  'zero=<char>' will replace the ascii character (.) that represents zero.
@@ -76,4 +76,3 @@ class REPL_1306(framebuf.FrameBuffer):
                 print('show: ',end='')  # stop show() operations scrolling the screen when clear is set
             else:
                 print('{}: show (framebuffer has not changed)'.format(self._name))
-        
