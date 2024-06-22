@@ -15,7 +15,7 @@ Char 32 (space), width 6
   .      . 
   .      . 
   .      . 
-  .      . 
+ __      __
 
 Char 43 (plus), width 6
   .      . 
@@ -23,7 +23,7 @@ Char 43 (plus), width 6
   .  #   . 
   .##### . 
   .  #   . 
-  .  #   . 
+ __  #   __
 
 Char 45 (hyphen), width 6
   .      . 
@@ -31,7 +31,7 @@ Char 45 (hyphen), width 6
   .      . 
   .##### . 
   .      . 
-  .      . 
+ __      __
 
 Char 46 (period), width 6
   .      . 
@@ -39,7 +39,7 @@ Char 46 (period), width 6
   .      . 
   .      . 
   .  ##  . 
-  .  ##  . 
+ __  ##  __
 
 Char 48 (zero), width 6
   .  ##  . 
@@ -47,7 +47,7 @@ Char 48 (zero), width 6
   . #  # . 
   . #  # . 
   . #  # . 
-  .  ##  . 
+ __  ##  __
 
 Char 49 (one), width 6
   .  #   . 
@@ -55,7 +55,7 @@ Char 49 (one), width 6
   .  #   . 
   .  #   . 
   .  #   . 
-  . ###  . 
+ __ ###  __
 
 Char 50 (two), width 6
   .  ##  . 
@@ -63,7 +63,7 @@ Char 50 (two), width 6
   .    # . 
   .   #  . 
   .  #   . 
-  . #### . 
+ __ #### __
 
 Char 51 (three), width 6
   . #### . 
@@ -71,7 +71,7 @@ Char 51 (three), width 6
   .  ##  . 
   .    # . 
   .    # . 
-  . ###  . 
+ __ ###  __
 
 Char 52 (four), width 6
   .   #  . 
@@ -79,7 +79,7 @@ Char 52 (four), width 6
   . # #  . 
   .#  #  . 
   .##### . 
-  .   #  . 
+ __   #  __
 
 Char 53 (five), width 6
   . #### . 
@@ -87,7 +87,7 @@ Char 53 (five), width 6
   . ###  . 
   .    # . 
   .    # . 
-  . ###  . 
+ __ ###  __
 
 Char 54 (six), width 6
   .  ##  . 
@@ -95,7 +95,7 @@ Char 54 (six), width 6
   . ###  . 
   . #  # . 
   . #  # . 
-  .  ##  . 
+ __  ##  __
 
 Char 55 (seven), width 6
   . #### . 
@@ -103,7 +103,7 @@ Char 55 (seven), width 6
   .    # . 
   .   #  . 
   .  #   . 
-  .  #   . 
+ __  #   __
 
 Char 56 (eight), width 6
   .  ##  . 
@@ -111,7 +111,7 @@ Char 56 (eight), width 6
   .  ##  . 
   . #  # . 
   . #  # . 
-  .  ##  . 
+ __  ##  __
 
 Char 57 (nine), width 6
   .  ##  . 
@@ -119,7 +119,7 @@ Char 57 (nine), width 6
   . #  # . 
   .  ### . 
   .    # . 
-  .  ##  . 
+ __  ##  __
 
 Char 58 (colon), width 6
   .      . 
@@ -127,4 +127,4 @@ Char 58 (colon), width 6
   .  ##  . 
   .      . 
   .  ##  . 
-  .  ##  . 
+ __  ##  __

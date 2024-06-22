@@ -22,7 +22,7 @@ Char 32 (space), width 5
   .     . 
   .     . 
   .     . 
-  .     . 
+ __     __
 
 Char 43 (plus), width 10
   .          . 
@@ -37,7 +37,7 @@ Char 43 (plus), width 10
   .    ##    . 
   .    ##    . 
   .    ##    . 
-  .          . 
+ __          __
 
 Char 45 (hyphen), width 6
   .      . 
@@ -52,7 +52,7 @@ Char 45 (hyphen), width 6
   .##### . 
   .      . 
   .      . 
-  .      . 
+ __      __
 
 Char 46 (period), width 4
   .    . 
@@ -67,7 +67,7 @@ Char 46 (period), width 4
   .    . 
   .    . 
   . ## . 
-  . ## . 
+ __ ## __
 
 Char 48 (zero), width 9
   .   ####  . 
@@ -82,7 +82,7 @@ Char 48 (zero), width 9
   . ##    ##. 
   .  ##  ## . 
   .  ##  ## . 
-  .   ####  . 
+ __   ####  __
 
 Char 49 (one), width 9
   .    ##   . 
@@ -97,7 +97,7 @@ Char 49 (one), width 9
   .    ##   . 
   .    ##   . 
   .   ####  . 
-  .  ###### . 
+ __  ###### __
 
 Char 50 (two), width 9
   .   ####  . 
@@ -112,7 +112,7 @@ Char 50 (two), width 9
   .   ##    . 
   .  ##   # . 
   . ####### . 
-  . ####### . 
+ __ ####### __
 
 Char 51 (three), width 9
   .  #####  . 
@@ -127,7 +127,7 @@ Char 51 (three), width 9
   .      ## . 
   .      ## . 
   . ##  ##  . 
-  . #####   . 
+ __ #####   __
 
 Char 52 (four), width 9
   .      #  . 
@@ -142,7 +142,7 @@ Char 52 (four), width 9
   .######## . 
   .     ##  . 
   .     ##  . 
-  .     ##  . 
+ __     ##  __
 
 Char 53 (five), width 9
   .  ###### . 
@@ -157,7 +157,7 @@ Char 53 (five), width 9
   .      ## . 
   .     ##  . 
   . ## ###  . 
-  . ####    . 
+ __ ####    __
 
 Char 54 (six), width 9
   .      ###. 
@@ -172,7 +172,7 @@ Char 54 (six), width 9
   . ##    ##. 
   . ###   ##. 
   .  ### ## . 
-  .   ####  . 
+ __   ####  __
 
 Char 55 (seven), width 9
   .  #######. 
@@ -187,7 +187,7 @@ Char 55 (seven), width 9
   .    ##   . 
   .    #    . 
   .   ##    . 
-  .   ##    . 
+ __   ##    __
 
 Char 56 (eight), width 9
   .   ####  . 
@@ -202,7 +202,7 @@ Char 56 (eight), width 9
   . ##    ##. 
   . ##    ##. 
   .  ##  ## . 
-  .   ####  . 
+ __   ####  __
 
 Char 57 (nine), width 9
   .   ####  . 
@@ -217,7 +217,7 @@ Char 57 (nine), width 9
   .      ## . 
   .     ##  . 
   .   ###   . 
-  . ###     . 
+ __ ###     __
 
 Char 58 (colon), width 5
   .     . 
@@ -232,4 +232,4 @@ Char 58 (colon), width 5
   .     . 
   .     . 
   . ##  . 
-  . ##  . 
+ __ ##  __

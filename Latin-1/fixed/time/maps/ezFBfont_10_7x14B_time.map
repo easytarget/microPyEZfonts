@@ -19,7 +19,7 @@ Char 32 (space), width 7
   .       . 
   .       . 
   .       . 
-  .       . 
+ __       __
 
 Char 43 (plus), width 7
   .       . 
@@ -31,7 +31,7 @@ Char 43 (plus), width 7
   .  ##   . 
   .  ##   . 
   .  ##   . 
-  .       . 
+ __       __
 
 Char 45 (hyphen), width 7
   .       . 
@@ -43,7 +43,7 @@ Char 45 (hyphen), width 7
   .       . 
   .       . 
   .       . 
-  .       . 
+ __       __
 
 Char 46 (period), width 7
   .       . 
@@ -55,7 +55,7 @@ Char 46 (period), width 7
   .       . 
   .       . 
   .  ##   . 
-  .  ##   . 
+ __  ##   __
 
 Char 48 (zero), width 7
   . ####  . 
@@ -67,7 +67,7 @@ Char 48 (zero), width 7
   .##  ## . 
   .##  ## . 
   .##  ## . 
-  . ####  . 
+ __ ####  __
 
 Char 49 (one), width 7
   .  ##   . 
@@ -79,7 +79,7 @@ Char 49 (one), width 7
   .  ##   . 
   .  ##   . 
   .  ##   . 
-  .###### . 
+ __###### __
 
 Char 50 (two), width 7
   . ####  . 
@@ -91,7 +91,7 @@ Char 50 (two), width 7
   .  ##   . 
   . ##    . 
   .##     . 
-  .###### . 
+ __###### __
 
 Char 51 (three), width 7
   . ####  . 
@@ -103,7 +103,7 @@ Char 51 (three), width 7
   .    ## . 
   .##  ## . 
   .##  ## . 
-  . ####  . 
+ __ ####  __
 
 Char 52 (four), width 7
   .    #  . 
@@ -115,7 +115,7 @@ Char 52 (four), width 7
   .## ##  . 
   .###### . 
   .   ##  . 
-  .   ##  . 
+ __   ##  __
 
 Char 53 (five), width 7
   .###### . 
@@ -127,7 +127,7 @@ Char 53 (five), width 7
   .    ## . 
   .##  ## . 
   .##  ## . 
-  . ####  . 
+ __ ####  __
 
 Char 54 (six), width 7
   .  ###  . 
@@ -139,7 +139,7 @@ Char 54 (six), width 7
   .##  ## . 
   .##  ## . 
   .##  ## . 
-  . ####  . 
+ __ ####  __
 
 Char 55 (seven), width 7
   .###### . 
@@ -151,7 +151,7 @@ Char 55 (seven), width 7
   .  ##   . 
   .  ##   . 
   .  ##   . 
-  .  ##   . 
+ __  ##   __
 
 Char 56 (eight), width 7
   . ####  . 
@@ -163,7 +163,7 @@ Char 56 (eight), width 7
   .##  ## . 
   .##  ## . 
   .##  ## . 
-  . ####  . 
+ __ ####  __
 
 Char 57 (nine), width 7
   . ####  . 
@@ -175,7 +175,7 @@ Char 57 (nine), width 7
   .    ## . 
   .##  ## . 
   .## ##  . 
-  . ###   . 
+ __ ###   __
 
 Char 58 (colon), width 7
   .       . 
@@ -187,4 +187,4 @@ Char 58 (colon), width 7
   .       . 
   .  ##   . 
   .  ##   . 
-  .       . 
+ __       __

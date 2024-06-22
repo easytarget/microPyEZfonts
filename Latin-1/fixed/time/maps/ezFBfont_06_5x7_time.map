@@ -15,7 +15,7 @@ Char 32 (space), width 5
   .     . 
   .     . 
   .     . 
-  .     . 
+ __     __
 
 Char 43 (plus), width 5
   .     . 
@@ -23,7 +23,7 @@ Char 43 (plus), width 5
   .  #  . 
   .#####. 
   .  #  . 
-  .  #  . 
+ __  #  __
 
 Char 45 (hyphen), width 5
   .     . 
@@ -31,7 +31,7 @@ Char 45 (hyphen), width 5
   .     . 
   .#### . 
   .     . 
-  .     . 
+ __     __
 
 Char 46 (period), width 5
   .     . 
@@ -39,7 +39,7 @@ Char 46 (period), width 5
   .     . 
   .     . 
   . ##  . 
-  . ##  . 
+ __ ##  __
 
 Char 48 (zero), width 5
   .  #  . 
@@ -47,7 +47,7 @@ Char 48 (zero), width 5
   . # # . 
   . # # . 
   . # # . 
-  .  #  . 
+ __  #  __
 
 Char 49 (one), width 5
   .  #  . 
@@ -55,7 +55,7 @@ Char 49 (one), width 5
   .  #  . 
   .  #  . 
   .  #  . 
-  . ### . 
+ __ ### __
 
 Char 50 (two), width 5
   . ##  . 
@@ -63,7 +63,7 @@ Char 50 (two), width 5
   .   # . 
   .  #  . 
   . #   . 
-  .#### . 
+ __#### __
 
 Char 51 (three), width 5
   .#### . 
@@ -71,7 +71,7 @@ Char 51 (three), width 5
   . ##  . 
   .   # . 
   .#  # . 
-  . ##  . 
+ __ ##  __
 
 Char 52 (four), width 5
   .  #  . 
@@ -79,7 +79,7 @@ Char 52 (four), width 5
   .# #  . 
   .#### . 
   .  #  . 
-  .  #  . 
+ __  #  __
 
 Char 53 (five), width 5
   .#### . 
@@ -87,7 +87,7 @@ Char 53 (five), width 5
   .###  . 
   .   # . 
   .#  # . 
-  . ##  . 
+ __ ##  __
 
 Char 54 (six), width 5
   . ##  . 
@@ -95,7 +95,7 @@ Char 54 (six), width 5
   .###  . 
   .#  # . 
   .#  # . 
-  . ##  . 
+ __ ##  __
 
 Char 55 (seven), width 5
   .#### . 
@@ -103,7 +103,7 @@ Char 55 (seven), width 5
   .  #  . 
   .  #  . 
   . #   . 
-  . #   . 
+ __ #   __
 
 Char 56 (eight), width 5
   . ##  . 
@@ -111,7 +111,7 @@ Char 56 (eight), width 5
   . ##  . 
   .#  # . 
   .#  # . 
-  . ##  . 
+ __ ##  __
 
 Char 57 (nine), width 5
   . ##  . 
@@ -119,7 +119,7 @@ Char 57 (nine), width 5
   .#  # . 
   . ### . 
   .   # . 
-  . ##  . 
+ __ ##  __
 
 Char 58 (colon), width 5
   .     . 
@@ -127,4 +127,4 @@ Char 58 (colon), width 5
   . ##  . 
   .     . 
   . ##  . 
-  . ##  . 
+ __ ##  __

@@ -12,18 +12,18 @@ Fixed width: False
 Char 160 (space), width 4
   .    . 
   .    . 
+  .    . 
+  .    . 
+  .    . 
+  .    . 
+  .    . 
+  .    . 
+  .    . 
+  .    . 
+  .    . 
+  .    . 
+  .    . 
  __    __
-  .    . 
-  .    . 
-  .    . 
-  .    . 
-  .    . 
-  .    . 
-  .    . 
-  .    . 
-  .    . 
-  .    . 
-  .    . 
   .    . 
   .    . 
   .    . 
@@ -31,10 +31,10 @@ Char 160 (space), width 4
 Char 161 (exclamdown), width 4
   .    . 
   .    . 
- __    __
   .    . 
   .    . 
   .    . 
+  .    . 
   . #  . 
   . #  . 
   .    . 
@@ -42,7 +42,7 @@ Char 161 (exclamdown), width 4
   . #  . 
   . #  . 
   . #  . 
-  . #  . 
+ __ #  __
   . #  . 
   . #  . 
   . #  . 
@@ -50,7 +50,7 @@ Char 161 (exclamdown), width 4
 Char 162 (cent), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .        . 
   .        . 
   .      # . 
@@ -61,7 +61,7 @@ Char 162 (cent), width 8
   . # #    . 
   . # #  # . 
   . ##  ## . 
-  .  ####  . 
+ __  ####  __
   . #      . 
   .        . 
   .        . 
@@ -69,7 +69,7 @@ Char 162 (cent), width 8
 Char 163 (sterling), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .  ###   . 
   . #   #  . 
   . #      . 
@@ -80,7 +80,7 @@ Char 163 (sterling), width 8
   .  #     . 
   . #      . 
   . ##   # . 
-  .## ###  . 
+ __## ###  __
   .        . 
   .        . 
   .        . 
@@ -88,18 +88,18 @@ Char 163 (sterling), width 8
 Char 164 (currency), width 8
   .        . 
   .        . 
+  .        . 
+  .        . 
+  .        . 
+  .        . 
+  . #    # . 
+  .  ####  . 
+  .  #  #  . 
+  .  #  #  . 
+  .  ####  . 
+  . #    # . 
+  .        . 
  __        __
-  .        . 
-  .        . 
-  .        . 
-  . #    # . 
-  .  ####  . 
-  .  #  #  . 
-  .  #  #  . 
-  .  ####  . 
-  . #    # . 
-  .        . 
-  .        . 
   .        . 
   .        . 
   .        . 
@@ -107,7 +107,7 @@ Char 164 (currency), width 8
 Char 165 (yen), width 7
   .       . 
   .       . 
- __       __
+  .       . 
   .#     #. 
   .#     #. 
   .#     #. 
@@ -118,7 +118,7 @@ Char 165 (yen), width 7
   .   #   . 
   .#######. 
   .   #   . 
-  .   #   . 
+ __   #   __
   .       . 
   .       . 
   .       . 
@@ -126,7 +126,7 @@ Char 165 (yen), width 7
 Char 166 (brokenbar), width 3
   .   . 
   .   . 
- __   __
+  .   . 
   . # . 
   . # . 
   . # . 
@@ -137,7 +137,7 @@ Char 166 (brokenbar), width 3
   .   . 
   . # . 
   . # . 
-  . # . 
+ __ # __
   . # . 
   . # . 
   . # . 
@@ -145,7 +145,7 @@ Char 166 (brokenbar), width 3
 Char 167 (section), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .   ###  . 
   .  ## ## . 
   .  #   # . 
@@ -156,7 +156,7 @@ Char 167 (section), width 8
   .  #   # . 
   .  ##  # . 
   .   ###  . 
-  .     ## . 
+ __     ## __
   .  #   # . 
   .  ## ## . 
   .   ###  . 
@@ -164,7 +164,7 @@ Char 167 (section), width 8
 Char 168 (dieresis), width 5
   .     . 
   .     . 
- __     __
+  .     . 
   .     . 
   .## ##. 
   .     . 
@@ -175,7 +175,7 @@ Char 168 (dieresis), width 5
   .     . 
   .     . 
   .     . 
-  .     . 
+ __     __
   .     . 
   .     . 
   .     . 
@@ -183,7 +183,7 @@ Char 168 (dieresis), width 5
 Char 169 (copyright), width 12
   .            . 
   .            . 
- __            __
+  .            . 
   .    ####    . 
   .  ##    ##  . 
   .  # ###  #  . 
@@ -194,7 +194,7 @@ Char 169 (copyright), width 12
   . #  ###   # . 
   .  #      #  . 
   .  ##    ##  . 
-  .    ####    . 
+ __    ####    __
   .            . 
   .            . 
   .            . 
@@ -202,7 +202,7 @@ Char 169 (copyright), width 12
 Char 170 (ordfeminine), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   . ###  . 
   .    # . 
   .  ### . 
@@ -213,7 +213,7 @@ Char 170 (ordfeminine), width 6
   .      . 
   .      . 
   .      . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -221,7 +221,7 @@ Char 170 (ordfeminine), width 6
 Char 171 (guillemotleft), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .        . 
   .        . 
   .        . 
@@ -232,7 +232,7 @@ Char 171 (guillemotleft), width 8
   .  #  #  . 
   .   #  # . 
   .        . 
-  .        . 
+ __        __
   .        . 
   .        . 
   .        . 
@@ -240,7 +240,7 @@ Char 171 (guillemotleft), width 8
 Char 172 (logicalnot), width 9
   .         . 
   .         . 
- __         __
+  .         . 
   .         . 
   .         . 
   .         . 
@@ -251,7 +251,7 @@ Char 172 (logicalnot), width 9
   .       # . 
   .       # . 
   .         . 
-  .         . 
+ __         __
   .         . 
   .         . 
   .         . 
@@ -259,7 +259,7 @@ Char 172 (logicalnot), width 9
 Char 173 (hyphen), width 4
   .    . 
   .    . 
- __    __
+  .    . 
   .    . 
   .    . 
   .    . 
@@ -270,7 +270,7 @@ Char 173 (hyphen), width 4
   .    . 
   .    . 
   .    . 
-  .    . 
+ __    __
   .    . 
   .    . 
   .    . 
@@ -278,7 +278,7 @@ Char 173 (hyphen), width 4
 Char 174 (registered), width 12
   .            . 
   .            . 
- __            __
+  .            . 
   .    ####    . 
   .  ##    ##  . 
   .  # ###  #  . 
@@ -289,7 +289,7 @@ Char 174 (registered), width 12
   . #  #  #  # . 
   .  #      #  . 
   .  ##    ##  . 
-  .    ####    . 
+ __    ####    __
   .            . 
   .            . 
   .            . 
@@ -297,7 +297,7 @@ Char 174 (registered), width 12
 Char 175 (macron), width 4
   .    . 
   .    . 
- __    __
+  .    . 
   .    . 
   .####. 
   .    . 
@@ -308,7 +308,7 @@ Char 175 (macron), width 4
   .    . 
   .    . 
   .    . 
-  .    . 
+ __    __
   .    . 
   .    . 
   .    . 
@@ -316,18 +316,18 @@ Char 175 (macron), width 4
 Char 176 (degree), width 6
   .      . 
   .      . 
+  .      . 
+  .  ##  . 
+  . #  # . 
+  . #  # . 
+  .  ##  . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
  __      __
-  .  ##  . 
-  . #  # . 
-  . #  # . 
-  .  ##  . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
   .      . 
   .      . 
   .      . 
@@ -335,7 +335,7 @@ Char 176 (degree), width 6
 Char 177 (plusminus), width 9
   .         . 
   .         . 
- __         __
+  .         . 
   .         . 
   .         . 
   .    #    . 
@@ -346,7 +346,7 @@ Char 177 (plusminus), width 9
   .    #    . 
   .    #    . 
   .         . 
-  . ####### . 
+ __ ####### __
   .         . 
   .         . 
   .         . 
@@ -354,7 +354,7 @@ Char 177 (plusminus), width 9
 Char 178 (twosuperior), width 5
   .     . 
   .     . 
- __     __
+  .     . 
   . ##  . 
   .#  # . 
   .   # . 
@@ -365,7 +365,7 @@ Char 178 (twosuperior), width 5
   .     . 
   .     . 
   .     . 
-  .     . 
+ __     __
   .     . 
   .     . 
   .     . 
@@ -373,7 +373,7 @@ Char 178 (twosuperior), width 5
 Char 179 (threesuperior), width 5
   .     . 
   .     . 
- __     __
+  .     . 
   . ##  . 
   .#  # . 
   .  #  . 
@@ -384,7 +384,7 @@ Char 179 (threesuperior), width 5
   .     . 
   .     . 
   .     . 
-  .     . 
+ __     __
   .     . 
   .     . 
   .     . 
@@ -392,7 +392,7 @@ Char 179 (threesuperior), width 5
 Char 180 (acute), width 5
   .     . 
   .     . 
- __     __
+  .     . 
   .   # . 
   .  #  . 
   .     . 
@@ -403,7 +403,7 @@ Char 180 (acute), width 5
   .     . 
   .     . 
   .     . 
-  .     . 
+ __     __
   .     . 
   .     . 
   .     . 
@@ -411,7 +411,7 @@ Char 180 (acute), width 5
 Char 181 (mu), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .        . 
   .        . 
   .        . 
@@ -422,7 +422,7 @@ Char 181 (mu), width 8
   . #    # . 
   . #    # . 
   . ##  ## . 
-  . # ## # . 
+ __ # ## # __
   . #      . 
   . #      . 
   . #      . 
@@ -430,7 +430,7 @@ Char 181 (mu), width 8
 Char 182 (paragraph), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .  ##### . 
   . ### #  . 
   .#### #  . 
@@ -441,7 +441,7 @@ Char 182 (paragraph), width 8
   .   # #  . 
   .   # #  . 
   .   # #  . 
-  .   # #  . 
+ __   # #  __
   .   # #  . 
   .   # #  . 
   .   # #  . 
@@ -449,7 +449,7 @@ Char 182 (paragraph), width 8
 Char 183 (periodcentered), width 4
   .    . 
   .    . 
- __    __
+  .    . 
   .    . 
   .    . 
   .    . 
@@ -460,7 +460,7 @@ Char 183 (periodcentered), width 4
   .    . 
   .    . 
   .    . 
-  .    . 
+ __    __
   .    . 
   .    . 
   .    . 
@@ -468,18 +468,18 @@ Char 183 (periodcentered), width 4
 Char 184 (cedilla), width 5
   .     . 
   .     . 
+  .     . 
+  .     . 
+  .     . 
+  .     . 
+  .     . 
+  .     . 
+  .     . 
+  .     . 
+  .     . 
+  .     . 
+  .     . 
  __     __
-  .     . 
-  .     . 
-  .     . 
-  .     . 
-  .     . 
-  .     . 
-  .     . 
-  .     . 
-  .     . 
-  .     . 
-  .     . 
   .  #  . 
   .#  # . 
   . ##  . 
@@ -487,7 +487,7 @@ Char 184 (cedilla), width 5
 Char 185 (onesuperior), width 5
   .     . 
   .     . 
- __     __
+  .     . 
   .  #  . 
   . ##  . 
   .  #  . 
@@ -498,7 +498,7 @@ Char 185 (onesuperior), width 5
   .     . 
   .     . 
   .     . 
-  .     . 
+ __     __
   .     . 
   .     . 
   .     . 
@@ -506,7 +506,7 @@ Char 185 (onesuperior), width 5
 Char 186 (ordmasculine), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .  ##  . 
   . #  # . 
   . #  # . 
@@ -517,7 +517,7 @@ Char 186 (ordmasculine), width 6
   .      . 
   .      . 
   .      . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -525,7 +525,7 @@ Char 186 (ordmasculine), width 6
 Char 187 (guillemotright), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .        . 
   .        . 
   .        . 
@@ -536,7 +536,7 @@ Char 187 (guillemotright), width 8
   .  #  #  . 
   . #  #   . 
   .        . 
-  .        . 
+ __        __
   .        . 
   .        . 
   .        . 
@@ -544,7 +544,7 @@ Char 187 (guillemotright), width 8
 Char 188 (onequarter), width 12
   .            . 
   .            . 
- __            __
+  .            . 
   .  #    #    . 
   . ##    #    . 
   .  #   #     . 
@@ -555,7 +555,7 @@ Char 188 (onequarter), width 12
   .    #  # #  . 
   .    # #  #  . 
   .   #  ##### . 
-  .   #     #  . 
+ __   #     #  __
   .            . 
   .            . 
   .            . 
@@ -563,7 +563,7 @@ Char 188 (onequarter), width 12
 Char 189 (onehalf), width 12
   .            . 
   .            . 
- __            __
+  .            . 
   .  #    #    . 
   . ##    #    . 
   .  #   #     . 
@@ -574,7 +574,7 @@ Char 189 (onehalf), width 12
   .    #    #  . 
   .    #   #   . 
   .   #   #    . 
-  .   #  ####  . 
+ __   #  ####  __
   .            . 
   .            . 
   .            . 
@@ -582,7 +582,7 @@ Char 189 (onehalf), width 12
 Char 190 (threequarters), width 12
   .            . 
   .            . 
- __            __
+  .            . 
   . ##    #    . 
   .#  #   #    . 
   .  #   #     . 
@@ -593,7 +593,7 @@ Char 190 (threequarters), width 12
   .    #  # #  . 
   .    # #  #  . 
   .   #  ##### . 
-  .   #     #  . 
+ __   #     #  __
   .            . 
   .            . 
   .            . 
@@ -601,7 +601,7 @@ Char 190 (threequarters), width 12
 Char 191 (questiondown), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .        . 
   .        . 
   .        . 
@@ -612,7 +612,7 @@ Char 191 (questiondown), width 8
   .   #    . 
   .  #     . 
   . #      . 
-  . #    # . 
+ __ #    # __
   . #    # . 
   . ##  ## . 
   .   ##   . 
@@ -620,7 +620,7 @@ Char 191 (questiondown), width 8
 Char 192 (Agrave), width 9
   .   #     . 
   .    #    . 
- __         __
+  .         . 
   .    #    . 
   .   ###   . 
   .   # #   . 
@@ -631,7 +631,7 @@ Char 192 (Agrave), width 9
   . ####### . 
   . #     # . 
   .#       #. 
-  .#       #. 
+ __#       #__
   .         . 
   .         . 
   .         . 
@@ -639,7 +639,7 @@ Char 192 (Agrave), width 9
 Char 193 (Aacute), width 9
   .     #   . 
   .    #    . 
- __         __
+  .         . 
   .    #    . 
   .   ###   . 
   .   # #   . 
@@ -650,7 +650,7 @@ Char 193 (Aacute), width 9
   . ####### . 
   . #     # . 
   .#       #. 
-  .#       #. 
+ __#       #__
   .         . 
   .         . 
   .         . 
@@ -658,7 +658,7 @@ Char 193 (Aacute), width 9
 Char 194 (Acircumflex), width 9
   .    ##   . 
   .   #  #  . 
- __         __
+  .         . 
   .    #    . 
   .   ###   . 
   .   # #   . 
@@ -669,7 +669,7 @@ Char 194 (Acircumflex), width 9
   . ####### . 
   . #     # . 
   .#       #. 
-  .#       #. 
+ __#       #__
   .         . 
   .         . 
   .         . 
@@ -677,7 +677,7 @@ Char 194 (Acircumflex), width 9
 Char 195 (Atilde), width 9
   .   ## #  . 
   .  # ##   . 
- __         __
+  .         . 
   .    #    . 
   .   ###   . 
   .   # #   . 
@@ -688,7 +688,7 @@ Char 195 (Atilde), width 9
   . ####### . 
   . #     # . 
   .#       #. 
-  .#       #. 
+ __#       #__
   .         . 
   .         . 
   .         . 
@@ -696,7 +696,7 @@ Char 195 (Atilde), width 9
 Char 196 (Adieresis), width 9
   .         . 
   .  ## ##  . 
- __         __
+  .         . 
   .    #    . 
   .   ###   . 
   .   # #   . 
@@ -707,7 +707,7 @@ Char 196 (Adieresis), width 9
   . ####### . 
   . #     # . 
   .#       #. 
-  .#       #. 
+ __#       #__
   .         . 
   .         . 
   .         . 
@@ -715,7 +715,7 @@ Char 196 (Adieresis), width 9
 Char 197 (Aring), width 9
   .    ##   . 
   .   #  #  . 
- __   #  #  __
+  .   #  #  . 
   .    ##   . 
   .    ##   . 
   .   # #   . 
@@ -726,7 +726,7 @@ Char 197 (Aring), width 9
   . ####### . 
   . #     # . 
   .#       #. 
-  .#       #. 
+ __#       #__
   .         . 
   .         . 
   .         . 
@@ -734,7 +734,7 @@ Char 197 (Aring), width 9
 Char 198 (AE), width 14
   .              . 
   .              . 
- __              __
+  .              . 
   .    ######### . 
   .    #  #      . 
   .    #  #      . 
@@ -745,7 +745,7 @@ Char 198 (AE), width 14
   .  #    #      . 
   .  #    #      . 
   . #     #      . 
-  . #     ###### . 
+ __ #     ###### __
   .              . 
   .              . 
   .              . 
@@ -753,7 +753,7 @@ Char 198 (AE), width 14
 Char 199 (Ccedilla), width 10
   .          . 
   .          . 
- __          __
+  .          . 
   .    ###   . 
   .  ##   ## . 
   .  #     # . 
@@ -764,7 +764,7 @@ Char 199 (Ccedilla), width 10
   . #        . 
   .  #     # . 
   .  ##   ## . 
-  .    ###   . 
+ __    ###   __
   .     #    . 
   .   #  #   . 
   .    ##    . 
@@ -772,7 +772,7 @@ Char 199 (Ccedilla), width 10
 Char 200 (Egrave), width 9
   .   #     . 
   .    #    . 
- __         __
+  .         . 
   . ####### . 
   . #       . 
   . #       . 
@@ -783,7 +783,7 @@ Char 200 (Egrave), width 9
   . #       . 
   . #       . 
   . #       . 
-  . ####### . 
+ __ ####### __
   .         . 
   .         . 
   .         . 
@@ -791,7 +791,7 @@ Char 200 (Egrave), width 9
 Char 201 (Eacute), width 9
   .     #   . 
   .    #    . 
- __         __
+  .         . 
   . ####### . 
   . #       . 
   . #       . 
@@ -802,7 +802,7 @@ Char 201 (Eacute), width 9
   . #       . 
   . #       . 
   . #       . 
-  . ####### . 
+ __ ####### __
   .         . 
   .         . 
   .         . 
@@ -810,7 +810,7 @@ Char 201 (Eacute), width 9
 Char 202 (Ecircumflex), width 9
   .    ##   . 
   .   #  #  . 
- __         __
+  .         . 
   . ####### . 
   . #       . 
   . #       . 
@@ -821,7 +821,7 @@ Char 202 (Ecircumflex), width 9
   . #       . 
   . #       . 
   . #       . 
-  . ####### . 
+ __ ####### __
   .         . 
   .         . 
   .         . 
@@ -829,7 +829,7 @@ Char 202 (Ecircumflex), width 9
 Char 203 (Edieresis), width 9
   .         . 
   .  ## ##  . 
- __         __
+  .         . 
   . ####### . 
   . #       . 
   . #       . 
@@ -840,7 +840,7 @@ Char 203 (Edieresis), width 9
   . #       . 
   . #       . 
   . #       . 
-  . ####### . 
+ __ ####### __
   .         . 
   .         . 
   .         . 
@@ -848,7 +848,7 @@ Char 203 (Edieresis), width 9
 Char 204 (Igrave), width 4
   . #  . 
   .  # . 
- __    __
+  .    . 
   .  # . 
   .  # . 
   .  # . 
@@ -859,7 +859,7 @@ Char 204 (Igrave), width 4
   .  # . 
   .  # . 
   .  # . 
-  .  # . 
+ __  # __
   .    . 
   .    . 
   .    . 
@@ -867,7 +867,7 @@ Char 204 (Igrave), width 4
 Char 205 (Iacute), width 4
   .   #. 
   .  # . 
- __    __
+  .    . 
   .  # . 
   .  # . 
   .  # . 
@@ -878,7 +878,7 @@ Char 205 (Iacute), width 4
   .  # . 
   .  # . 
   .  # . 
-  .  # . 
+ __  # __
   .    . 
   .    . 
   .    . 
@@ -886,7 +886,7 @@ Char 205 (Iacute), width 4
 Char 206 (Icircumflex), width 4
   .  ## . 
   . #  #. 
- __     __
+  .     . 
   .  #  . 
   .  #  . 
   .  #  . 
@@ -897,7 +897,7 @@ Char 206 (Icircumflex), width 4
   .  #  . 
   .  #  . 
   .  #  . 
-  .  #  . 
+ __  #  __
   .     . 
   .     . 
   .     . 
@@ -905,7 +905,7 @@ Char 206 (Icircumflex), width 4
 Char 207 (Idieresis), width 5
   .     . 
   .## ##. 
- __     __
+  .     . 
   .  #  . 
   .  #  . 
   .  #  . 
@@ -916,7 +916,7 @@ Char 207 (Idieresis), width 5
   .  #  . 
   .  #  . 
   .  #  . 
-  .  #  . 
+ __  #  __
   .     . 
   .     . 
   .     . 
@@ -924,7 +924,7 @@ Char 207 (Idieresis), width 5
 Char 208 (Eth), width 10
   .          . 
   .          . 
- __          __
+  .          . 
   . #####    . 
   . #    ##  . 
   . #     #  . 
@@ -935,7 +935,7 @@ Char 208 (Eth), width 10
   . #      # . 
   . #     #  . 
   . #    ##  . 
-  . #####    . 
+ __ #####    __
   .          . 
   .          . 
   .          . 
@@ -943,7 +943,7 @@ Char 208 (Eth), width 10
 Char 209 (Ntilde), width 10
   .    ## #  . 
   .   # ##   . 
- __          __
+  .          . 
   . ##     # . 
   . # #    # . 
   . # #    # . 
@@ -954,7 +954,7 @@ Char 209 (Ntilde), width 10
   . #    # # . 
   . #    # # . 
   . #     ## . 
-  . #     ## . 
+ __ #     ## __
   .          . 
   .          . 
   .          . 
@@ -962,7 +962,7 @@ Char 209 (Ntilde), width 10
 Char 210 (Ograve), width 11
   .    #      . 
   .     #     . 
- __           __
+  .           . 
   .    ###    . 
   .  ##   ##  . 
   .  #     #  . 
@@ -973,7 +973,7 @@ Char 210 (Ograve), width 11
   . #       # . 
   .  #     #  . 
   .  ##   ##  . 
-  .    ###    . 
+ __    ###    __
   .           . 
   .           . 
   .           . 
@@ -981,7 +981,7 @@ Char 210 (Ograve), width 11
 Char 211 (Oacute), width 11
   .      #    . 
   .     #     . 
- __           __
+  .           . 
   .    ###    . 
   .  ##   ##  . 
   .  #     #  . 
@@ -992,7 +992,7 @@ Char 211 (Oacute), width 11
   . #       # . 
   .  #     #  . 
   .  ##   ##  . 
-  .    ###    . 
+ __    ###    __
   .           . 
   .           . 
   .           . 
@@ -1000,7 +1000,7 @@ Char 211 (Oacute), width 11
 Char 212 (Ocircumflex), width 11
   .     ##    . 
   .    #  #   . 
- __           __
+  .           . 
   .    ###    . 
   .  ##   ##  . 
   .  #     #  . 
@@ -1011,7 +1011,7 @@ Char 212 (Ocircumflex), width 11
   . #       # . 
   .  #     #  . 
   .  ##   ##  . 
-  .    ###    . 
+ __    ###    __
   .           . 
   .           . 
   .           . 
@@ -1019,7 +1019,7 @@ Char 212 (Ocircumflex), width 11
 Char 213 (Otilde), width 11
   .    ## #   . 
   .   # ##    . 
- __           __
+  .           . 
   .    ###    . 
   .  ##   ##  . 
   .  #     #  . 
@@ -1030,7 +1030,7 @@ Char 213 (Otilde), width 11
   . #       # . 
   .  #     #  . 
   .  ##   ##  . 
-  .    ###    . 
+ __    ###    __
   .           . 
   .           . 
   .           . 
@@ -1038,7 +1038,7 @@ Char 213 (Otilde), width 11
 Char 214 (Odieresis), width 11
   .           . 
   .   ##  ##  . 
- __           __
+  .           . 
   .    ###    . 
   .  ##   ##  . 
   .  #     #  . 
@@ -1049,7 +1049,7 @@ Char 214 (Odieresis), width 11
   . #       # . 
   .  #     #  . 
   .  ##   ##  . 
-  .    ###    . 
+ __    ###    __
   .           . 
   .           . 
   .           . 
@@ -1057,7 +1057,7 @@ Char 214 (Odieresis), width 11
 Char 215 (multiply), width 9
   .         . 
   .         . 
- __         __
+  .         . 
   .         . 
   .         . 
   .         . 
@@ -1068,7 +1068,7 @@ Char 215 (multiply), width 9
   .   # #   . 
   .  #   #  . 
   . #     # . 
-  .         . 
+ __         __
   .         . 
   .         . 
   .         . 
@@ -1076,7 +1076,7 @@ Char 215 (multiply), width 9
 Char 216 (Oslash), width 11
   .           . 
   .           . 
- __           __
+  .           . 
   .    ###   #. 
   .  ##   ### . 
   .  #     #  . 
@@ -1087,7 +1087,7 @@ Char 216 (Oslash), width 11
   . # #     # . 
   .  #     #  . 
   . ###   ##  . 
-  .#   ###    . 
+ __#   ###    __
   .           . 
   .           . 
   .           . 
@@ -1095,7 +1095,7 @@ Char 216 (Oslash), width 11
 Char 217 (Ugrave), width 10
   .    #     . 
   .     #    . 
- __          __
+  .          . 
   . #      # . 
   . #      # . 
   . #      # . 
@@ -1106,7 +1106,7 @@ Char 217 (Ugrave), width 10
   . #      # . 
   . #      # . 
   .  #    #  . 
-  .   ####   . 
+ __   ####   __
   .          . 
   .          . 
   .          . 
@@ -1114,7 +1114,7 @@ Char 217 (Ugrave), width 10
 Char 218 (Uacute), width 10
   .      #   . 
   .     #    . 
- __          __
+  .          . 
   . #      # . 
   . #      # . 
   . #      # . 
@@ -1125,7 +1125,7 @@ Char 218 (Uacute), width 10
   . #      # . 
   . #      # . 
   .  #    #  . 
-  .   ####   . 
+ __   ####   __
   .          . 
   .          . 
   .          . 
@@ -1133,7 +1133,7 @@ Char 218 (Uacute), width 10
 Char 219 (Ucircumflex), width 10
   .    ##    . 
   .   #  #   . 
- __          __
+  .          . 
   . #      # . 
   . #      # . 
   . #      # . 
@@ -1144,7 +1144,7 @@ Char 219 (Ucircumflex), width 10
   . #      # . 
   . #      # . 
   .  #    #  . 
-  .   ####   . 
+ __   ####   __
   .          . 
   .          . 
   .          . 
@@ -1152,7 +1152,7 @@ Char 219 (Ucircumflex), width 10
 Char 220 (Udieresis), width 10
   .          . 
   .  ##  ##  . 
- __          __
+  .          . 
   . #      # . 
   . #      # . 
   . #      # . 
@@ -1163,7 +1163,7 @@ Char 220 (Udieresis), width 10
   . #      # . 
   . #      # . 
   .  #    #  . 
-  .   ####   . 
+ __   ####   __
   .          . 
   .          . 
   .          . 
@@ -1171,7 +1171,7 @@ Char 220 (Udieresis), width 10
 Char 221 (Yacute), width 9
   .     #   . 
   .    #    . 
- __         __
+  .         . 
   .#       #. 
   .##     ##. 
   . #     # . 
@@ -1182,7 +1182,7 @@ Char 221 (Yacute), width 9
   .    #    . 
   .    #    . 
   .    #    . 
-  .    #    . 
+ __    #    __
   .         . 
   .         . 
   .         . 
@@ -1190,7 +1190,7 @@ Char 221 (Yacute), width 9
 Char 222 (Thorn), width 9
   .         . 
   .         . 
- __         __
+  .         . 
   . #       . 
   . #       . 
   . ######  . 
@@ -1201,7 +1201,7 @@ Char 222 (Thorn), width 9
   . ######  . 
   . #       . 
   . #       . 
-  . #       . 
+ __ #       __
   .         . 
   .         . 
   .         . 
@@ -1209,7 +1209,7 @@ Char 222 (Thorn), width 9
 Char 223 (germandbls), width 7
   .       . 
   .       . 
- __       __
+  .       . 
   .  ###  . 
   . #   # . 
   . #   # . 
@@ -1220,7 +1220,7 @@ Char 223 (germandbls), width 7
   . #   # . 
   . #   # . 
   . #   # . 
-  . # ##  . 
+ __ # ##  __
   .       . 
   .       . 
   .       . 
@@ -1228,7 +1228,7 @@ Char 223 (germandbls), width 7
 Char 224 (agrave), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .   #    . 
   .    #   . 
   .        . 
@@ -1239,7 +1239,7 @@ Char 224 (agrave), width 8
   . ##   # . 
   . #    # . 
   . ##  ## . 
-  .  ### ##. 
+ __  ### ##__
   .        . 
   .        . 
   .        . 
@@ -1247,7 +1247,7 @@ Char 224 (agrave), width 8
 Char 225 (aacute), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .    #   . 
   .   #    . 
   .        . 
@@ -1258,7 +1258,7 @@ Char 225 (aacute), width 8
   . ##   # . 
   . #    # . 
   . ##  ## . 
-  .  ### ##. 
+ __  ### ##__
   .        . 
   .        . 
   .        . 
@@ -1266,7 +1266,7 @@ Char 225 (aacute), width 8
 Char 226 (acircumflex), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .   ##   . 
   .  #  #  . 
   .        . 
@@ -1277,7 +1277,7 @@ Char 226 (acircumflex), width 8
   . ##   # . 
   . #    # . 
   . ##  ## . 
-  .  ### ##. 
+ __  ### ##__
   .        . 
   .        . 
   .        . 
@@ -1285,7 +1285,7 @@ Char 226 (acircumflex), width 8
 Char 227 (atilde), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .   ## # . 
   .  # ##  . 
   .        . 
@@ -1296,7 +1296,7 @@ Char 227 (atilde), width 8
   . ##   # . 
   . #    # . 
   . ##  ## . 
-  .  ### ##. 
+ __  ### ##__
   .        . 
   .        . 
   .        . 
@@ -1304,7 +1304,7 @@ Char 227 (atilde), width 8
 Char 228 (adieresis), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .  #  #  . 
   .  #  #  . 
   .        . 
@@ -1315,7 +1315,7 @@ Char 228 (adieresis), width 8
   . ##   # . 
   . #    # . 
   . ##  ## . 
-  .  ### ##. 
+ __  ### ##__
   .        . 
   .        . 
   .        . 
@@ -1323,7 +1323,7 @@ Char 228 (adieresis), width 8
 Char 229 (aring), width 8
   .        . 
   .        . 
- __   ##   __
+  .   ##   . 
   .  #  #  . 
   .   ##   . 
   .        . 
@@ -1334,7 +1334,7 @@ Char 229 (aring), width 8
   . ##   # . 
   . #    # . 
   . ##  ## . 
-  .  ### ##. 
+ __  ### ##__
   .        . 
   .        . 
   .        . 
@@ -1342,7 +1342,7 @@ Char 229 (aring), width 8
 Char 230 (ae), width 13
   .             . 
   .             . 
- __             __
+  .             . 
   .             . 
   .             . 
   .             . 
@@ -1353,7 +1353,7 @@ Char 230 (ae), width 13
   . ##   #      . 
   . #    #      . 
   . ##  ###  ## . 
-  .  #### ####  . 
+ __  #### ####  __
   .             . 
   .             . 
   .             . 
@@ -1361,7 +1361,7 @@ Char 230 (ae), width 13
 Char 231 (ccedilla), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .        . 
   .        . 
   .        . 
@@ -1372,7 +1372,7 @@ Char 231 (ccedilla), width 8
   . #      . 
   . #    # . 
   . ##  ## . 
-  .  ####  . 
+ __  ####  __
   .    #   . 
   .  #  #  . 
   .   ##   . 
@@ -1380,7 +1380,7 @@ Char 231 (ccedilla), width 8
 Char 232 (egrave), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .   #    . 
   .    #   . 
   .        . 
@@ -1391,7 +1391,7 @@ Char 232 (egrave), width 8
   . #      . 
   . #      . 
   . ##  ## . 
-  .  ####  . 
+ __  ####  __
   .        . 
   .        . 
   .        . 
@@ -1399,7 +1399,7 @@ Char 232 (egrave), width 8
 Char 233 (eacute), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .    #   . 
   .   #    . 
   .        . 
@@ -1410,7 +1410,7 @@ Char 233 (eacute), width 8
   . #      . 
   . #      . 
   . ##  ## . 
-  .  ####  . 
+ __  ####  __
   .        . 
   .        . 
   .        . 
@@ -1418,7 +1418,7 @@ Char 233 (eacute), width 8
 Char 234 (ecircumflex), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .   ##   . 
   .  #  #  . 
   .        . 
@@ -1429,7 +1429,7 @@ Char 234 (ecircumflex), width 8
   . #      . 
   . #      . 
   . ##  ## . 
-  .  ####  . 
+ __  ####  __
   .        . 
   .        . 
   .        . 
@@ -1437,7 +1437,7 @@ Char 234 (ecircumflex), width 8
 Char 235 (edieresis), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .  #  #  . 
   .  #  #  . 
   .        . 
@@ -1448,7 +1448,7 @@ Char 235 (edieresis), width 8
   . #      . 
   . #      . 
   . ##  ## . 
-  .  ####  . 
+ __  ####  __
   .        . 
   .        . 
   .        . 
@@ -1456,7 +1456,7 @@ Char 235 (edieresis), width 8
 Char 236 (igrave), width 3
   .   . 
   .   . 
- __   __
+  .   . 
   . # . 
   .  #. 
   .   . 
@@ -1467,7 +1467,7 @@ Char 236 (igrave), width 3
   . # . 
   . # . 
   . # . 
-  . # . 
+ __ # __
   .   . 
   .   . 
   .   . 
@@ -1475,7 +1475,7 @@ Char 236 (igrave), width 3
 Char 237 (iacute), width 3
   .   . 
   .   . 
- __   __
+  .   . 
   .  #. 
   . # . 
   .   . 
@@ -1486,7 +1486,7 @@ Char 237 (iacute), width 3
   . # . 
   . # . 
   . # . 
-  . # . 
+ __ # __
   .   . 
   .   . 
   .   . 
@@ -1494,7 +1494,7 @@ Char 237 (iacute), width 3
 Char 238 (icircumflex), width 4
   .    . 
   .    . 
- __    __
+  .    . 
   . ## . 
   .#  #. 
   .    . 
@@ -1505,7 +1505,7 @@ Char 238 (icircumflex), width 4
   . #  . 
   . #  . 
   . #  . 
-  . #  . 
+ __ #  __
   .    . 
   .    . 
   .    . 
@@ -1513,7 +1513,7 @@ Char 238 (icircumflex), width 4
 Char 239 (idieresis), width 3
   .   . 
   .   . 
- __   __
+  .   . 
   .# #. 
   .# #. 
   .   . 
@@ -1524,7 +1524,7 @@ Char 239 (idieresis), width 3
   . # . 
   . # . 
   . # . 
-  . # . 
+ __ # __
   .   . 
   .   . 
   .   . 
@@ -1532,7 +1532,7 @@ Char 239 (idieresis), width 3
 Char 240 (eth), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   . ## ##  . 
   .  ###   . 
   . #  #   . 
@@ -1543,7 +1543,7 @@ Char 240 (eth), width 8
   . #    # . 
   . #    # . 
   . ##  ## . 
-  .  ####  . 
+ __  ####  __
   .        . 
   .        . 
   .        . 
@@ -1551,7 +1551,7 @@ Char 240 (eth), width 8
 Char 241 (ntilde), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .  ## #  . 
   . # ##   . 
   .        . 
@@ -1562,7 +1562,7 @@ Char 241 (ntilde), width 8
   . #    # . 
   . #    # . 
   . #    # . 
-  . #    # . 
+ __ #    # __
   .        . 
   .        . 
   .        . 
@@ -1570,7 +1570,7 @@ Char 241 (ntilde), width 8
 Char 242 (ograve), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .   #    . 
   .    #   . 
   .        . 
@@ -1581,7 +1581,7 @@ Char 242 (ograve), width 8
   . #    # . 
   . #    # . 
   . ##  ## . 
-  .  ####  . 
+ __  ####  __
   .        . 
   .        . 
   .        . 
@@ -1589,7 +1589,7 @@ Char 242 (ograve), width 8
 Char 243 (oacute), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .    #   . 
   .   #    . 
   .        . 
@@ -1600,7 +1600,7 @@ Char 243 (oacute), width 8
   . #    # . 
   . #    # . 
   . ##  ## . 
-  .  ####  . 
+ __  ####  __
   .        . 
   .        . 
   .        . 
@@ -1608,7 +1608,7 @@ Char 243 (oacute), width 8
 Char 244 (ocircumflex), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .   ##   . 
   .  #  #  . 
   .        . 
@@ -1619,7 +1619,7 @@ Char 244 (ocircumflex), width 8
   . #    # . 
   . #    # . 
   . ##  ## . 
-  .  ####  . 
+ __  ####  __
   .        . 
   .        . 
   .        . 
@@ -1627,7 +1627,7 @@ Char 244 (ocircumflex), width 8
 Char 245 (otilde), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .  ## #  . 
   . # ##   . 
   .        . 
@@ -1638,7 +1638,7 @@ Char 245 (otilde), width 8
   . #    # . 
   . #    # . 
   . ##  ## . 
-  .  ####  . 
+ __  ####  __
   .        . 
   .        . 
   .        . 
@@ -1646,7 +1646,7 @@ Char 245 (otilde), width 8
 Char 246 (odieresis), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .  #  #  . 
   .  #  #  . 
   .        . 
@@ -1657,7 +1657,7 @@ Char 246 (odieresis), width 8
   . #    # . 
   . #    # . 
   . ##  ## . 
-  .  ####  . 
+ __  ####  __
   .        . 
   .        . 
   .        . 
@@ -1665,7 +1665,7 @@ Char 246 (odieresis), width 8
 Char 247 (divide), width 9
   .         . 
   .         . 
- __         __
+  .         . 
   .         . 
   .         . 
   .         . 
@@ -1676,7 +1676,7 @@ Char 247 (divide), width 9
   .         . 
   .    #    . 
   .    #    . 
-  .         . 
+ __         __
   .         . 
   .         . 
   .         . 
@@ -1684,7 +1684,7 @@ Char 247 (divide), width 9
 Char 248 (oslash), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .        . 
   .        . 
   .        . 
@@ -1695,7 +1695,7 @@ Char 248 (oslash), width 8
   . # #  # . 
   . ##   # . 
   . #   ## . 
-  .# ####  . 
+ __# ####  __
   .        . 
   .        . 
   .        . 
@@ -1703,7 +1703,7 @@ Char 248 (oslash), width 8
 Char 249 (ugrave), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .   #    . 
   .    #   . 
   .        . 
@@ -1714,7 +1714,7 @@ Char 249 (ugrave), width 8
   . #    # . 
   . #    # . 
   . ##  ## . 
-  .  ### # . 
+ __  ### # __
   .        . 
   .        . 
   .        . 
@@ -1722,7 +1722,7 @@ Char 249 (ugrave), width 8
 Char 250 (uacute), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .    #   . 
   .   #    . 
   .        . 
@@ -1733,7 +1733,7 @@ Char 250 (uacute), width 8
   . #    # . 
   . #    # . 
   . ##  ## . 
-  .  ### # . 
+ __  ### # __
   .        . 
   .        . 
   .        . 
@@ -1741,7 +1741,7 @@ Char 250 (uacute), width 8
 Char 251 (ucircumflex), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .   ##   . 
   .  #  #  . 
   .        . 
@@ -1752,7 +1752,7 @@ Char 251 (ucircumflex), width 8
   . #    # . 
   . #    # . 
   . ##  ## . 
-  .  ### # . 
+ __  ### # __
   .        . 
   .        . 
   .        . 
@@ -1760,7 +1760,7 @@ Char 251 (ucircumflex), width 8
 Char 252 (udieresis), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .  #  #  . 
   .  #  #  . 
   .        . 
@@ -1771,7 +1771,7 @@ Char 252 (udieresis), width 8
   . #    # . 
   . #    # . 
   . ##  ## . 
-  .  ### # . 
+ __  ### # __
   .        . 
   .        . 
   .        . 
@@ -1779,7 +1779,7 @@ Char 252 (udieresis), width 8
 Char 253 (yacute), width 7
   .       . 
   .       . 
- __       __
+  .       . 
   .    #  . 
   .   #   . 
   .       . 
@@ -1790,7 +1790,7 @@ Char 253 (yacute), width 7
   .  #  # . 
   .  # #  . 
   .   ##  . 
-  .   #   . 
+ __   #   __
   .   #   . 
   .  ##   . 
   . ##    . 
@@ -1798,7 +1798,7 @@ Char 253 (yacute), width 7
 Char 254 (thorn), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   . #      . 
   . #      . 
   . #      . 
@@ -1809,7 +1809,7 @@ Char 254 (thorn), width 8
   . #    # . 
   . #    # . 
   . ##  ## . 
-  . # ###  . 
+ __ # ###  __
   . #      . 
   . #      . 
   . #      . 
@@ -1817,7 +1817,7 @@ Char 254 (thorn), width 8
 Char 255 (ydieresis), width 7
   .       . 
   .       . 
- __       __
+  .       . 
   .  #  # . 
   .  #  # . 
   .       . 
@@ -1828,7 +1828,7 @@ Char 255 (ydieresis), width 7
   .  #  # . 
   .  # #  . 
   .   ##  . 
-  .   #   . 
+ __   #   __
   .   #   . 
   .  ##   . 
   . ##    . 

@@ -14,102 +14,102 @@ Char 32 (space), width 4
   .    . 
   .    . 
   .    . 
-  .    . 
+ __    __
 
 Char 43 (plus), width 4
   . #  . 
   . #  . 
   .### . 
   . #  . 
-  . #  . 
+ __ #  __
 
 Char 45 (hyphen), width 4
   .    . 
   .    . 
   .### . 
   .    . 
-  .    . 
+ __    __
 
 Char 46 (period), width 4
   .    . 
   .    . 
   .    . 
   .    . 
-  . #  . 
+ __ #  __
 
 Char 48 (zero), width 4
   . #  . 
   .# # . 
   .### . 
   .# # . 
-  . #  . 
+ __ #  __
 
 Char 49 (one), width 4
   . #  . 
   .##  . 
   . #  . 
   . #  . 
-  .### . 
+ __### __
 
 Char 50 (two), width 4
   . #  . 
   .# # . 
   .  # . 
   . #  . 
-  .### . 
+ __### __
 
 Char 51 (three), width 4
   .### . 
   .  # . 
   . #  . 
   .  # . 
-  .##  . 
+ __##  __
 
 Char 52 (four), width 4
   .# # . 
   .# # . 
   .### . 
   .  # . 
-  .  # . 
+ __  # __
 
 Char 53 (five), width 4
   .### . 
   .#   . 
   .##  . 
   .  # . 
-  .##  . 
+ __##  __
 
 Char 54 (six), width 4
   . ## . 
   .#   . 
   .##  . 
   .# # . 
-  . #  . 
+ __ #  __
 
 Char 55 (seven), width 4
   .### . 
   .  # . 
   . #  . 
   .#   . 
-  .#   . 
+ __#   __
 
 Char 56 (eight), width 4
   . ## . 
   .# # . 
   . #  . 
   .# # . 
-  .##  . 
+ __##  __
 
 Char 57 (nine), width 4
   . #  . 
   .# # . 
   . ## . 
   .  # . 
-  .##  . 
+ __##  __
 
 Char 58 (colon), width 4
   .    . 
   . #  . 
   .    . 
   .    . 
-  . #  . 
+ __ #  __

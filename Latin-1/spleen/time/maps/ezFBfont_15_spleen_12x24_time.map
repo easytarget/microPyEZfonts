@@ -24,7 +24,7 @@ Char 32 (SPACE), width 12
   .            . 
   .            . 
   .            . 
-  .            . 
+ __            __
 
 Char 43 (PLUS SIGN), width 12
   .            . 
@@ -41,7 +41,7 @@ Char 43 (PLUS SIGN), width 12
   .     ##     . 
   .            . 
   .            . 
-  .            . 
+ __            __
 
 Char 45 (HYPHEN-MINUS), width 12
   .            . 
@@ -58,7 +58,7 @@ Char 45 (HYPHEN-MINUS), width 12
   .            . 
   .            . 
   .            . 
-  .            . 
+ __            __
 
 Char 46 (FULL STOP), width 12
   .            . 
@@ -75,7 +75,7 @@ Char 46 (FULL STOP), width 12
   .            . 
   .            . 
   .     ##     . 
-  .     ##     . 
+ __     ##     __
 
 Char 48 (DIGIT ZERO), width 12
   .   ######   . 
@@ -92,7 +92,7 @@ Char 48 (DIGIT ZERO), width 12
   . ##      ## . 
   . ##      ## . 
   .  ##    ##  . 
-  .   ######   . 
+ __   ######   __
 
 Char 49 (DIGIT ONE), width 12
   .    ###     . 
@@ -109,7 +109,7 @@ Char 49 (DIGIT ONE), width 12
   .     ##     . 
   .     ##     . 
   .     ##     . 
-  .  ########  . 
+ __  ########  __
 
 Char 50 (DIGIT TWO), width 12
   .   ######   . 
@@ -126,7 +126,7 @@ Char 50 (DIGIT TWO), width 12
   .   ##       . 
   .  ##        . 
   . ##      ## . 
-  . ########## . 
+ __ ########## __
 
 Char 51 (DIGIT THREE), width 12
   .   ######   . 
@@ -143,7 +143,7 @@ Char 51 (DIGIT THREE), width 12
   .         ## . 
   . ##      ## . 
   .  ##    ##  . 
-  .   ######   . 
+ __   ######   __
 
 Char 52 (DIGIT FOUR), width 12
   . ##         . 
@@ -160,7 +160,7 @@ Char 52 (DIGIT FOUR), width 12
   .       ##   . 
   .       ##   . 
   .       ##   . 
-  .       ##   . 
+ __       ##   __
 
 Char 53 (DIGIT FIVE), width 12
   . ########## . 
@@ -177,7 +177,7 @@ Char 53 (DIGIT FIVE), width 12
   .         ## . 
   . ##      ## . 
   .  ##    ##  . 
-  .   ######   . 
+ __   ######   __
 
 Char 54 (DIGIT SIX), width 12
   .   #######  . 
@@ -194,7 +194,7 @@ Char 54 (DIGIT SIX), width 12
   . ##      ## . 
   . ##      ## . 
   .  ##    ##  . 
-  .   ######   . 
+ __   ######   __
 
 Char 55 (DIGIT SEVEN), width 12
   . ########## . 
@@ -211,7 +211,7 @@ Char 55 (DIGIT SEVEN), width 12
   .    ##      . 
   .    ##      . 
   .    ##      . 
-  .    ##      . 
+ __    ##      __
 
 Char 56 (DIGIT EIGHT), width 12
   .   ######   . 
@@ -228,7 +228,7 @@ Char 56 (DIGIT EIGHT), width 12
   . ##      ## . 
   . ##      ## . 
   .  ##    ##  . 
-  .   ######   . 
+ __   ######   __
 
 Char 57 (DIGIT NINE), width 12
   .   ######   . 
@@ -245,7 +245,7 @@ Char 57 (DIGIT NINE), width 12
   .         ## . 
   .         ## . 
   . ##     ##  . 
-  .  #######   . 
+ __  #######   __
 
 Char 58 (COLON), width 12
   .            . 
@@ -262,4 +262,4 @@ Char 58 (COLON), width 12
   .            . 
   .            . 
   .     ##     . 
-  .     ##     . 
+ __     ##     __

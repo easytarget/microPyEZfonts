@@ -12,13 +12,13 @@ Fixed width: True
 Char 32 (SPACE), width 6
   .      . 
   .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
  __      __
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
   .      . 
   .      . 
   .      . 
@@ -26,13 +26,13 @@ Char 32 (SPACE), width 6
 Char 33 (EXCLAMATION MARK), width 6
   .      . 
   .  #   . 
- __  #   __
+  .  #   . 
   .  #   . 
   .  #   . 
   .  #   . 
   .  #   . 
   .      . 
-  .  #   . 
+ __  #   __
   .      . 
   .      . 
   .      . 
@@ -40,13 +40,13 @@ Char 33 (EXCLAMATION MARK), width 6
 Char 34 (QUOTATION MARK), width 6
   .      . 
   . # #  . 
- __ # #  __
+  . # #  . 
   . # #  . 
   .      . 
   .      . 
   .      . 
   .      . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -54,13 +54,13 @@ Char 34 (QUOTATION MARK), width 6
 Char 35 (NUMBER SIGN), width 6
   .      . 
   .      . 
+  . # #  . 
+  .##### . 
+  . # #  . 
+  . # #  . 
+  . # #  . 
+  .##### . 
  __ # #  __
-  .##### . 
-  . # #  . 
-  . # #  . 
-  . # #  . 
-  .##### . 
-  . # #  . 
   .      . 
   .      . 
   .      . 
@@ -68,13 +68,13 @@ Char 35 (NUMBER SIGN), width 6
 Char 36 (DOLLAR SIGN), width 6
   .  #   . 
   . #### . 
- __# #   __
+  .# #   . 
   .# #   . 
   . ###  . 
   .  # # . 
   .  # # . 
   .  # # . 
-  .####  . 
+ __####  __
   .  #   . 
   .      . 
   .      . 
@@ -82,13 +82,13 @@ Char 36 (DOLLAR SIGN), width 6
 Char 37 (PERCENT SIGN), width 6
   .      . 
   .    # . 
- __ #  # __
+  . #  # . 
   . # #  . 
   .   #  . 
   .  #   . 
   .  # # . 
   . #  # . 
-  . #    . 
+ __ #    __
   .      . 
   .      . 
   .      . 
@@ -96,13 +96,13 @@ Char 37 (PERCENT SIGN), width 6
 Char 38 (AMPERSAND), width 6
   .      . 
   .  ##  . 
- __ #  # __
+  . #  # . 
   . #  # . 
   .  ##  . 
   . ##   . 
   .#  # #. 
   .#   # . 
-  . ### #. 
+ __ ### #__
   .      . 
   .      . 
   .      . 
@@ -110,13 +110,13 @@ Char 38 (AMPERSAND), width 6
 Char 39 (APOSTROPHE), width 6
   .      . 
   .  #   . 
- __  #   __
+  .  #   . 
   .  #   . 
   .      . 
   .      . 
   .      . 
   .      . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -124,13 +124,13 @@ Char 39 (APOSTROPHE), width 6
 Char 40 (LEFT PARENTHESIS), width 6
   .   ## . 
   .  #   . 
- __ #    __
   . #    . 
   . #    . 
   . #    . 
   . #    . 
   . #    . 
-  .  #   . 
+  . #    . 
+ __  #   __
   .   ## . 
   .      . 
   .      . 
@@ -138,13 +138,13 @@ Char 40 (LEFT PARENTHESIS), width 6
 Char 41 (RIGHT PARENTHESIS), width 6
   . ##   . 
   .   #  . 
- __    # __
   .    # . 
   .    # . 
   .    # . 
   .    # . 
   .    # . 
-  .   #  . 
+  .    # . 
+ __   #  __
   . ##   . 
   .      . 
   .      . 
@@ -152,13 +152,13 @@ Char 41 (RIGHT PARENTHESIS), width 6
 Char 42 (ASTERISK), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   . #  # . 
   .  ##  . 
   .######. 
   .  ##  . 
   . #  # . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -166,13 +166,13 @@ Char 42 (ASTERISK), width 6
 Char 43 (PLUS SIGN), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .  #   . 
   .  #   . 
   .##### . 
   .  #   . 
   .  #   . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -180,13 +180,13 @@ Char 43 (PLUS SIGN), width 6
 Char 44 (COMMA), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .      . 
   .      . 
   .      . 
   .      . 
   .  #   . 
-  .  #   . 
+ __  #   __
   . #    . 
   .      . 
   .      . 
@@ -194,13 +194,13 @@ Char 44 (COMMA), width 6
 Char 45 (HYPHEN-MINUS), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .      . 
   .      . 
   .##### . 
   .      . 
   .      . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -208,13 +208,13 @@ Char 45 (HYPHEN-MINUS), width 6
 Char 46 (FULL STOP), width 6
   .      . 
   .      . 
- __      __
   .      . 
   .      . 
   .      . 
   .      . 
   .      . 
-  .  #   . 
+  .      . 
+ __  #   __
   .      . 
   .      . 
   .      . 
@@ -222,13 +222,13 @@ Char 46 (FULL STOP), width 6
 Char 47 (SOLIDUS), width 6
   .    # . 
   .    # . 
- __   #  __
+  .   #  . 
   .   #  . 
   .  #   . 
   .  #   . 
   . #    . 
   . #    . 
-  .#     . 
+ __#     __
   .#     . 
   .      . 
   .      . 
@@ -236,13 +236,13 @@ Char 47 (SOLIDUS), width 6
 Char 48 (DIGIT ZERO), width 6
   .      . 
   . ###  . 
- __#   # __
+  .#   # . 
   .#  ## . 
   .# # # . 
   .##  # . 
   .#   # . 
   .#   # . 
-  . ###  . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -250,13 +250,13 @@ Char 48 (DIGIT ZERO), width 6
 Char 49 (DIGIT ONE), width 6
   .      . 
   .  #   . 
- __ ##   __
+  . ##   . 
   .  #   . 
   .  #   . 
   .  #   . 
   .  #   . 
   .  #   . 
-  . ###  . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -264,13 +264,13 @@ Char 49 (DIGIT ONE), width 6
 Char 50 (DIGIT TWO), width 6
   .      . 
   . ###  . 
- __#   # __
+  .#   # . 
   .    # . 
   .    # . 
   . ###  . 
   .#     . 
   .#     . 
-  .##### . 
+ __##### __
   .      . 
   .      . 
   .      . 
@@ -278,13 +278,13 @@ Char 50 (DIGIT TWO), width 6
 Char 51 (DIGIT THREE), width 6
   .      . 
   . ###  . 
- __#   # __
+  .#   # . 
   .    # . 
   .  ##  . 
   .    # . 
   .    # . 
   .#   # . 
-  . ###  . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -292,13 +292,13 @@ Char 51 (DIGIT THREE), width 6
 Char 52 (DIGIT FOUR), width 6
   .      . 
   .#     . 
- __#     __
+  .#     . 
   .#  #  . 
   .#  #  . 
   .#  #  . 
   .##### . 
   .   #  . 
-  .   #  . 
+ __   #  __
   .      . 
   .      . 
   .      . 
@@ -306,13 +306,13 @@ Char 52 (DIGIT FOUR), width 6
 Char 53 (DIGIT FIVE), width 6
   .      . 
   .##### . 
- __#     __
+  .#     . 
   .#     . 
   .####  . 
   .    # . 
   .    # . 
   .    # . 
-  .####  . 
+ __####  __
   .      . 
   .      . 
   .      . 
@@ -320,13 +320,13 @@ Char 53 (DIGIT FIVE), width 6
 Char 54 (DIGIT SIX), width 6
   .      . 
   . ###  . 
- __#     __
+  .#     . 
   .#     . 
   .####  . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . ###  . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -334,13 +334,13 @@ Char 54 (DIGIT SIX), width 6
 Char 55 (DIGIT SEVEN), width 6
   .      . 
   .##### . 
- __#   # __
+  .#   # . 
   .    # . 
   .   #  . 
   .  #   . 
   .  #   . 
   .  #   . 
-  .  #   . 
+ __  #   __
   .      . 
   .      . 
   .      . 
@@ -348,13 +348,13 @@ Char 55 (DIGIT SEVEN), width 6
 Char 56 (DIGIT EIGHT), width 6
   .      . 
   . ###  . 
- __#   # __
-  .#   # . 
-  . ###  . 
-  .#   # . 
   .#   # . 
   .#   # . 
   . ###  . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -362,13 +362,13 @@ Char 56 (DIGIT EIGHT), width 6
 Char 57 (DIGIT NINE), width 6
   .      . 
   . ###  . 
- __#   # __
+  .#   # . 
   .#   # . 
   .#   # . 
   . #### . 
   .    # . 
   .    # . 
-  . ###  . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -376,13 +376,13 @@ Char 57 (DIGIT NINE), width 6
 Char 58 (COLON), width 6
   .      . 
   .      . 
- __      __
-  .      . 
-  .  #   . 
-  .      . 
   .      . 
   .      . 
   .  #   . 
+  .      . 
+  .      . 
+  .      . 
+ __  #   __
   .      . 
   .      . 
   .      . 
@@ -390,13 +390,13 @@ Char 58 (COLON), width 6
 Char 59 (SEMICOLON), width 6
   .      . 
   .      . 
- __      __
-  .      . 
-  .  #   . 
   .      . 
   .      . 
   .  #   . 
+  .      . 
+  .      . 
   .  #   . 
+ __  #   __
   . #    . 
   .      . 
   .      . 
@@ -404,13 +404,13 @@ Char 59 (SEMICOLON), width 6
 Char 60 (LESS-THAN SIGN), width 6
   .      . 
   .    # . 
- __   #  __
+  .   #  . 
   .  #   . 
   . #    . 
   . #    . 
   .  #   . 
   .   #  . 
-  .    # . 
+ __    # __
   .      . 
   .      . 
   .      . 
@@ -418,13 +418,13 @@ Char 60 (LESS-THAN SIGN), width 6
 Char 61 (EQUALS SIGN), width 6
   .      . 
   .      . 
+  .      . 
+  .      . 
+  .##### . 
+  .      . 
+  .##### . 
+  .      . 
  __      __
-  .      . 
-  .##### . 
-  .      . 
-  .##### . 
-  .      . 
-  .      . 
   .      . 
   .      . 
   .      . 
@@ -432,13 +432,13 @@ Char 61 (EQUALS SIGN), width 6
 Char 62 (GREATER-THAN SIGN), width 6
   .      . 
   . #    . 
- __  #   __
+  .  #   . 
   .   #  . 
   .    # . 
   .    # . 
   .   #  . 
   .  #   . 
-  . #    . 
+ __ #    __
   .      . 
   .      . 
   .      . 
@@ -446,13 +446,13 @@ Char 62 (GREATER-THAN SIGN), width 6
 Char 63 (QUESTION MARK), width 6
   .      . 
   . ###  . 
- __#   # __
+  .#   # . 
   .    # . 
   .   #  . 
   .  #   . 
   .  #   . 
   .      . 
-  .  #   . 
+ __  #   __
   .      . 
   .      . 
   .      . 
@@ -460,13 +460,13 @@ Char 63 (QUESTION MARK), width 6
 Char 64 (COMMERCIAL AT), width 6
   .      . 
   . ###  . 
- __#   # __
+  .#   # . 
   .#   # . 
   .# ### . 
   .# ### . 
   .# ### . 
   .#     . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -474,13 +474,13 @@ Char 64 (COMMERCIAL AT), width 6
 Char 65 (LATIN CAPITAL LETTER A), width 6
   .      . 
   . ###  . 
- __#   # __
+  .#   # . 
   .#   # . 
   .#   # . 
   .##### . 
   .#   # . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -488,13 +488,13 @@ Char 65 (LATIN CAPITAL LETTER A), width 6
 Char 66 (LATIN CAPITAL LETTER B), width 6
   .      . 
   .####  . 
- __#   # __
-  .#   # . 
-  .####  . 
-  .#   # . 
   .#   # . 
   .#   # . 
   .####  . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+ __####  __
   .      . 
   .      . 
   .      . 
@@ -502,13 +502,13 @@ Char 66 (LATIN CAPITAL LETTER B), width 6
 Char 67 (LATIN CAPITAL LETTER C), width 6
   .      . 
   . #### . 
- __#     __
   .#     . 
   .#     . 
   .#     . 
   .#     . 
   .#     . 
-  . #### . 
+  .#     . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -516,13 +516,13 @@ Char 67 (LATIN CAPITAL LETTER C), width 6
 Char 68 (LATIN CAPITAL LETTER D), width 6
   .      . 
   .####  . 
- __#   # __
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  .####  . 
+  .#   # . 
+ __####  __
   .      . 
   .      . 
   .      . 
@@ -530,13 +530,13 @@ Char 68 (LATIN CAPITAL LETTER D), width 6
 Char 69 (LATIN CAPITAL LETTER E), width 6
   .      . 
   . #### . 
- __#     __
+  .#     . 
   .#     . 
   .####  . 
   .#     . 
   .#     . 
   .#     . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -544,13 +544,13 @@ Char 69 (LATIN CAPITAL LETTER E), width 6
 Char 70 (LATIN CAPITAL LETTER F), width 6
   .      . 
   . #### . 
- __#     __
+  .#     . 
   .#     . 
   .####  . 
   .#     . 
   .#     . 
   .#     . 
-  .#     . 
+ __#     __
   .      . 
   .      . 
   .      . 
@@ -558,13 +558,13 @@ Char 70 (LATIN CAPITAL LETTER F), width 6
 Char 71 (LATIN CAPITAL LETTER G), width 6
   .      . 
   . #### . 
- __#     __
+  .#     . 
   .#     . 
   .# ### . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -572,13 +572,13 @@ Char 71 (LATIN CAPITAL LETTER G), width 6
 Char 72 (LATIN CAPITAL LETTER H), width 6
   .      . 
   .#   # . 
- __#   # __
+  .#   # . 
   .#   # . 
   .##### . 
   .#   # . 
   .#   # . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -586,13 +586,13 @@ Char 72 (LATIN CAPITAL LETTER H), width 6
 Char 73 (LATIN CAPITAL LETTER I), width 6
   .      . 
   . ###  . 
- __  #   __
   .  #   . 
   .  #   . 
   .  #   . 
   .  #   . 
   .  #   . 
-  . ###  . 
+  .  #   . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -600,13 +600,13 @@ Char 73 (LATIN CAPITAL LETTER I), width 6
 Char 74 (LATIN CAPITAL LETTER J), width 6
   .      . 
   . ###  . 
- __  #   __
   .  #   . 
   .  #   . 
   .  #   . 
   .  #   . 
   .  #   . 
-  .##    . 
+  .  #   . 
+ __##    __
   .      . 
   .      . 
   .      . 
@@ -614,13 +614,13 @@ Char 74 (LATIN CAPITAL LETTER J), width 6
 Char 75 (LATIN CAPITAL LETTER K), width 6
   .      . 
   .#   # . 
- __#   # __
+  .#   # . 
   .#  #  . 
   .###   . 
   .#  #  . 
   .#   # . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -628,13 +628,13 @@ Char 75 (LATIN CAPITAL LETTER K), width 6
 Char 76 (LATIN CAPITAL LETTER L), width 6
   .      . 
   .#     . 
- __#     __
   .#     . 
   .#     . 
   .#     . 
   .#     . 
   .#     . 
-  . #### . 
+  .#     . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -642,13 +642,13 @@ Char 76 (LATIN CAPITAL LETTER L), width 6
 Char 77 (LATIN CAPITAL LETTER M), width 6
   .      . 
   .#   # . 
- __## ## __
+  .## ## . 
   .##### . 
   .# # # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -656,13 +656,13 @@ Char 77 (LATIN CAPITAL LETTER M), width 6
 Char 78 (LATIN CAPITAL LETTER N), width 6
   .      . 
   .#   # . 
- __##  # __
+  .##  # . 
   .##  # . 
   .# # # . 
   .# # # . 
   .#  ## . 
   .#  ## . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -670,13 +670,13 @@ Char 78 (LATIN CAPITAL LETTER N), width 6
 Char 79 (LATIN CAPITAL LETTER O), width 6
   .      . 
   . ###  . 
- __#   # __
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . ###  . 
+  .#   # . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -684,13 +684,13 @@ Char 79 (LATIN CAPITAL LETTER O), width 6
 Char 80 (LATIN CAPITAL LETTER P), width 6
   .      . 
   .####  . 
- __#   # __
+  .#   # . 
   .#   # . 
   .#   # . 
   .####  . 
   .#     . 
   .#     . 
-  .#     . 
+ __#     __
   .      . 
   .      . 
   .      . 
@@ -698,13 +698,13 @@ Char 80 (LATIN CAPITAL LETTER P), width 6
 Char 81 (LATIN CAPITAL LETTER Q), width 6
   .      . 
   . ###  . 
- __#   # __
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . ###  . 
+  .#   # . 
+ __ ###  __
   .   ## . 
   .      . 
   .      . 
@@ -712,13 +712,13 @@ Char 81 (LATIN CAPITAL LETTER Q), width 6
 Char 82 (LATIN CAPITAL LETTER R), width 6
   .      . 
   .####  . 
- __#   # __
+  .#   # . 
   .#   # . 
   .#   # . 
   .####  . 
   .#   # . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -726,13 +726,13 @@ Char 82 (LATIN CAPITAL LETTER R), width 6
 Char 83 (LATIN CAPITAL LETTER S), width 6
   .      . 
   . #### . 
- __#     __
+  .#     . 
   .#     . 
   . ###  . 
   .    # . 
   .    # . 
   .    # . 
-  .####  . 
+ __####  __
   .      . 
   .      . 
   .      . 
@@ -740,13 +740,13 @@ Char 83 (LATIN CAPITAL LETTER S), width 6
 Char 84 (LATIN CAPITAL LETTER T), width 6
   .      . 
   .##### . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
  __  #   __
-  .  #   . 
-  .  #   . 
-  .  #   . 
-  .  #   . 
-  .  #   . 
-  .  #   . 
   .      . 
   .      . 
   .      . 
@@ -754,13 +754,13 @@ Char 84 (LATIN CAPITAL LETTER T), width 6
 Char 85 (LATIN CAPITAL LETTER U), width 6
   .      . 
   .#   # . 
- __#   # __
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . #### . 
+  .#   # . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -768,13 +768,13 @@ Char 85 (LATIN CAPITAL LETTER U), width 6
 Char 86 (LATIN CAPITAL LETTER V), width 6
   .      . 
   .#   # . 
- __#   # __
+  .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   . ###  . 
-  . ###  . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -782,13 +782,13 @@ Char 86 (LATIN CAPITAL LETTER V), width 6
 Char 87 (LATIN CAPITAL LETTER W), width 6
   .      . 
   .#   # . 
- __#   # __
+  .#   # . 
   .#   # . 
   .#   # . 
   .# # # . 
   .##### . 
   .## ## . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -796,13 +796,13 @@ Char 87 (LATIN CAPITAL LETTER W), width 6
 Char 88 (LATIN CAPITAL LETTER X), width 6
   .      . 
   .#   # . 
- __#   # __
+  .#   # . 
   . # #  . 
   .  #   . 
   . # #  . 
   .#   # . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -810,13 +810,13 @@ Char 88 (LATIN CAPITAL LETTER X), width 6
 Char 89 (LATIN CAPITAL LETTER Y), width 6
   .      . 
   .#   # . 
- __#   # __
+  .#   # . 
   .#   # . 
   .#   # . 
   . #### . 
   .    # . 
   .    # . 
-  .####  . 
+ __####  __
   .      . 
   .      . 
   .      . 
@@ -824,13 +824,13 @@ Char 89 (LATIN CAPITAL LETTER Y), width 6
 Char 90 (LATIN CAPITAL LETTER Z), width 6
   .      . 
   .##### . 
- __    # __
+  .    # . 
   .   #  . 
   .  #   . 
   . #    . 
   .#     . 
   .#     . 
-  .##### . 
+ __##### __
   .      . 
   .      . 
   .      . 
@@ -838,13 +838,13 @@ Char 90 (LATIN CAPITAL LETTER Z), width 6
 Char 91 (LEFT SQUARE BRACKET), width 6
   . #### . 
   . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
  __ #    __
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
   . #### . 
   .      . 
   .      . 
@@ -852,13 +852,13 @@ Char 91 (LEFT SQUARE BRACKET), width 6
 Char 92 (REVERSE SOLIDUS), width 6
   .#     . 
   .#     . 
- __ #    __
+  . #    . 
   . #    . 
   .  #   . 
   .  #   . 
   .   #  . 
   .   #  . 
-  .    # . 
+ __    # __
   .    # . 
   .      . 
   .      . 
@@ -866,13 +866,13 @@ Char 92 (REVERSE SOLIDUS), width 6
 Char 93 (RIGHT SQUARE BRACKET), width 6
   . #### . 
   .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
  __    # __
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
   . #### . 
   .      . 
   .      . 
@@ -880,13 +880,13 @@ Char 93 (RIGHT SQUARE BRACKET), width 6
 Char 94 (CIRCUMFLEX ACCENT), width 6
   .      . 
   .  #   . 
- __ # #  __
+  . # #  . 
   .#   # . 
   .      . 
   .      . 
   .      . 
   .      . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -894,13 +894,13 @@ Char 94 (CIRCUMFLEX ACCENT), width 6
 Char 95 (LOW LINE), width 6
   .      . 
   .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
  __      __
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
   .##### . 
   .      . 
   .      . 
@@ -908,13 +908,13 @@ Char 95 (LOW LINE), width 6
 Char 96 (GRAVE ACCENT), width 6
   .      . 
   . #    . 
- __  #   __
+  .  #   . 
   .   #  . 
   .      . 
   .      . 
   .      . 
   .      . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -922,13 +922,13 @@ Char 96 (GRAVE ACCENT), width 6
 Char 97 (LATIN SMALL LETTER A), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   . ###  . 
   .    # . 
   . #### . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -936,13 +936,13 @@ Char 97 (LATIN SMALL LETTER A), width 6
 Char 98 (LATIN SMALL LETTER B), width 6
   .      . 
   .#     . 
- __#     __
+  .#     . 
   .####  . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  .####  . 
+ __####  __
   .      . 
   .      . 
   .      . 
@@ -950,13 +950,13 @@ Char 98 (LATIN SMALL LETTER B), width 6
 Char 99 (LATIN SMALL LETTER C), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   . #### . 
   .#     . 
   .#     . 
   .#     . 
   .#     . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -964,13 +964,13 @@ Char 99 (LATIN SMALL LETTER C), width 6
 Char 100 (LATIN SMALL LETTER D), width 6
   .      . 
   .    # . 
- __    # __
+  .    # . 
   . #### . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -978,13 +978,13 @@ Char 100 (LATIN SMALL LETTER D), width 6
 Char 101 (LATIN SMALL LETTER E), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   . #### . 
   .#   # . 
   .#   # . 
   .##### . 
   .#     . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -992,13 +992,13 @@ Char 101 (LATIN SMALL LETTER E), width 6
 Char 102 (LATIN SMALL LETTER F), width 6
   .      . 
   .  ### . 
- __ #    __
+  . #    . 
   . #    . 
   .####  . 
   . #    . 
   . #    . 
   . #    . 
-  . #    . 
+ __ #    __
   .      . 
   .      . 
   .      . 
@@ -1006,13 +1006,13 @@ Char 102 (LATIN SMALL LETTER F), width 6
 Char 103 (LATIN SMALL LETTER G), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   . #### . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . ###  . 
+ __ ###  __
   .    # . 
   .####  . 
   .      . 
@@ -1020,13 +1020,13 @@ Char 103 (LATIN SMALL LETTER G), width 6
 Char 104 (LATIN SMALL LETTER H), width 6
   .      . 
   .#     . 
- __#     __
+  .#     . 
   .####  . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -1034,13 +1034,13 @@ Char 104 (LATIN SMALL LETTER H), width 6
 Char 105 (LATIN SMALL LETTER I), width 6
   .      . 
   .  #   . 
- __      __
+  .      . 
   . ##   . 
   .  #   . 
   .  #   . 
   .  #   . 
   .  #   . 
-  .  ##  . 
+ __  ##  __
   .      . 
   .      . 
   .      . 
@@ -1048,13 +1048,13 @@ Char 105 (LATIN SMALL LETTER I), width 6
 Char 106 (LATIN SMALL LETTER J), width 6
   .      . 
   .   #  . 
- __      __
+  .      . 
   .   #  . 
   .   #  . 
   .   #  . 
   .   #  . 
   .   #  . 
-  .   #  . 
+ __   #  __
   . ##   . 
   .      . 
   .      . 
@@ -1062,13 +1062,13 @@ Char 106 (LATIN SMALL LETTER J), width 6
 Char 107 (LATIN SMALL LETTER K), width 6
   .      . 
   .#     . 
- __#     __
+  .#     . 
   .#  #  . 
   .# #   . 
   .##    . 
   .# #   . 
   .#  #  . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -1076,13 +1076,13 @@ Char 107 (LATIN SMALL LETTER K), width 6
 Char 108 (LATIN SMALL LETTER L), width 6
   .      . 
   . #    . 
- __ #    __
   . #    . 
   . #    . 
   . #    . 
   . #    . 
   . #    . 
-  .  ##  . 
+  . #    . 
+ __  ##  __
   .      . 
   .      . 
   .      . 
@@ -1090,13 +1090,13 @@ Char 108 (LATIN SMALL LETTER L), width 6
 Char 109 (LATIN SMALL LETTER M), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .####  . 
   .# # # . 
   .# # # . 
   .# # # . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -1104,13 +1104,13 @@ Char 109 (LATIN SMALL LETTER M), width 6
 Char 110 (LATIN SMALL LETTER N), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .####  . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -1118,13 +1118,13 @@ Char 110 (LATIN SMALL LETTER N), width 6
 Char 111 (LATIN SMALL LETTER O), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   . ###  . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . ###  . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -1132,13 +1132,13 @@ Char 111 (LATIN SMALL LETTER O), width 6
 Char 112 (LATIN SMALL LETTER P), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .####  . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  .####  . 
+ __####  __
   .#     . 
   .#     . 
   .#     . 
@@ -1146,13 +1146,13 @@ Char 112 (LATIN SMALL LETTER P), width 6
 Char 113 (LATIN SMALL LETTER Q), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   . #### . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .    # . 
   .    # . 
   .    # . 
@@ -1160,13 +1160,13 @@ Char 113 (LATIN SMALL LETTER Q), width 6
 Char 114 (LATIN SMALL LETTER R), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   . #### . 
   .#   # . 
   .#     . 
   .#     . 
   .#     . 
-  .#     . 
+ __#     __
   .      . 
   .      . 
   .      . 
@@ -1174,13 +1174,13 @@ Char 114 (LATIN SMALL LETTER R), width 6
 Char 115 (LATIN SMALL LETTER S), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   . #### . 
   .#     . 
   . ###  . 
   .    # . 
   .    # . 
-  .####  . 
+ __####  __
   .      . 
   .      . 
   .      . 
@@ -1188,13 +1188,13 @@ Char 115 (LATIN SMALL LETTER S), width 6
 Char 116 (LATIN SMALL LETTER T), width 6
   .      . 
   . #    . 
- __ #    __
+  . #    . 
   .###   . 
   . #    . 
   . #    . 
   . #    . 
   . #    . 
-  .  ##  . 
+ __  ##  __
   .      . 
   .      . 
   .      . 
@@ -1202,13 +1202,13 @@ Char 116 (LATIN SMALL LETTER T), width 6
 Char 117 (LATIN SMALL LETTER U), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -1216,13 +1216,13 @@ Char 117 (LATIN SMALL LETTER U), width 6
 Char 118 (LATIN SMALL LETTER V), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   . # #  . 
-  .  #   . 
+ __  #   __
   .      . 
   .      . 
   .      . 
@@ -1230,13 +1230,13 @@ Char 118 (LATIN SMALL LETTER V), width 6
 Char 119 (LATIN SMALL LETTER W), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .#   # . 
   .#   # . 
   .# # # . 
   .##### . 
   .## ## . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -1244,13 +1244,13 @@ Char 119 (LATIN SMALL LETTER W), width 6
 Char 120 (LATIN SMALL LETTER X), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .#   # . 
   .#   # . 
   . ###  . 
   . ###  . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -1258,13 +1258,13 @@ Char 120 (LATIN SMALL LETTER X), width 6
 Char 121 (LATIN SMALL LETTER Y), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .    # . 
   .    # . 
   .####  . 
@@ -1272,13 +1272,13 @@ Char 121 (LATIN SMALL LETTER Y), width 6
 Char 122 (LATIN SMALL LETTER Z), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .##### . 
   .    # . 
   .   #  . 
   .  #   . 
   . #    . 
-  .##### . 
+ __##### __
   .      . 
   .      . 
   .      . 
@@ -1286,13 +1286,13 @@ Char 122 (LATIN SMALL LETTER Z), width 6
 Char 123 (LEFT CURLY BRACKET), width 6
   .   ## . 
   .  #   . 
+  .  #   . 
+  .  #   . 
+  .##    . 
+  .##    . 
+  .  #   . 
+  .  #   . 
  __  #   __
-  .  #   . 
-  .##    . 
-  .##    . 
-  .  #   . 
-  .  #   . 
-  .  #   . 
   .   ## . 
   .      . 
   .      . 
@@ -1300,13 +1300,13 @@ Char 123 (LEFT CURLY BRACKET), width 6
 Char 124 (VERTICAL LINE), width 6
   .  #   . 
   .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
  __  #   __
-  .  #   . 
-  .  #   . 
-  .  #   . 
-  .  #   . 
-  .  #   . 
-  .  #   . 
   .  #   . 
   .      . 
   .      . 
@@ -1314,13 +1314,13 @@ Char 124 (VERTICAL LINE), width 6
 Char 125 (RIGHT CURLY BRACKET), width 6
   . ##   . 
   .   #  . 
+  .   #  . 
+  .   #  . 
+  .    ##. 
+  .    ##. 
+  .   #  . 
+  .   #  . 
  __   #  __
-  .   #  . 
-  .    ##. 
-  .    ##. 
-  .   #  . 
-  .   #  . 
-  .   #  . 
   . ##   . 
   .      . 
   .      . 
@@ -1328,13 +1328,13 @@ Char 125 (RIGHT CURLY BRACKET), width 6
 Char 126 (TILDE), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .      . 
   .      . 
   . #  # . 
   .# ##  . 
   .      . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -1342,13 +1342,13 @@ Char 126 (TILDE), width 6
 Char 127 (<control>), width 6
   .      . 
   .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
  __      __
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
   .      . 
   .      . 
   .      . 
@@ -1356,13 +1356,13 @@ Char 127 (<control>), width 6
 Char 160 (NO-BREAK SPACE), width 6
   .      . 
   .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
  __      __
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
   .      . 
   .      . 
   .      . 
@@ -1370,13 +1370,13 @@ Char 160 (NO-BREAK SPACE), width 6
 Char 161 (INVERTED EXCLAMATION MARK), width 6
   .      . 
   .  #   . 
- __      __
+  .      . 
   .  #   . 
   .  #   . 
   .  #   . 
   .  #   . 
   .  #   . 
-  .  #   . 
+ __  #   __
   .      . 
   .      . 
   .      . 
@@ -1384,13 +1384,13 @@ Char 161 (INVERTED EXCLAMATION MARK), width 6
 Char 162 (CENT SIGN), width 6
   .      . 
   .      . 
- __  #   __
+  .  #   . 
   . #### . 
   .# #   . 
   .# #   . 
   .# #   . 
   .# #   . 
-  . #### . 
+ __ #### __
   .  #   . 
   .      . 
   .      . 
@@ -1398,13 +1398,13 @@ Char 162 (CENT SIGN), width 6
 Char 163 (POUND SIGN), width 6
   .      . 
   .  ##  . 
- __ #  # __
+  . #  # . 
   . #    . 
   . #    . 
   .####  . 
   . #    . 
   .#     . 
-  .##### . 
+ __##### __
   .      . 
   .      . 
   .      . 
@@ -1412,13 +1412,13 @@ Char 163 (POUND SIGN), width 6
 Char 164 (CURRENCY SIGN), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   . #  # . 
   .  ##  . 
   . #  # . 
   . #  # . 
   .  ##  . 
-  . #  # . 
+ __ #  # __
   .      . 
   .      . 
   .      . 
@@ -1426,13 +1426,13 @@ Char 164 (CURRENCY SIGN), width 6
 Char 165 (YEN SIGN), width 6
   .      . 
   .#   # . 
- __ # #  __
+  . # #  . 
   .  #   . 
   . ###  . 
   .  #   . 
   . ###  . 
   .  #   . 
-  .  #   . 
+ __  #   __
   .      . 
   .      . 
   .      . 
@@ -1440,13 +1440,13 @@ Char 165 (YEN SIGN), width 6
 Char 166 (BROKEN BAR), width 6
   .  #   . 
   .  #   . 
+  .  #   . 
+  .  #   . 
+  .      . 
+  .      . 
+  .  #   . 
+  .  #   . 
  __  #   __
-  .  #   . 
-  .      . 
-  .      . 
-  .  #   . 
-  .  #   . 
-  .  #   . 
   .  #   . 
   .      . 
   .      . 
@@ -1454,13 +1454,13 @@ Char 166 (BROKEN BAR), width 6
 Char 167 (SECTION SIGN), width 6
   .      . 
   .  ##  . 
- __ #  # __
+  . #  # . 
   .  #   . 
   .  ##  . 
   . #  # . 
   . #  # . 
   . #  # . 
-  .  ##  . 
+ __  ##  __
   .   #  . 
   . #  # . 
   .  ##  . 
@@ -1468,13 +1468,13 @@ Char 167 (SECTION SIGN), width 6
 Char 168 (DIAERESIS), width 6
   .      . 
   . # #  . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
  __      __
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
   .      . 
   .      . 
   .      . 
@@ -1482,13 +1482,13 @@ Char 168 (DIAERESIS), width 6
 Char 169 (COPYRIGHT SIGN), width 6
   .      . 
   . #### . 
- __#    #__
+  .#    #. 
   .#  # #. 
   .# #  #. 
   .# #  #. 
   .# ## #. 
   .#    #. 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -1496,13 +1496,13 @@ Char 169 (COPYRIGHT SIGN), width 6
 Char 170 (FEMININE ORDINAL INDICATOR), width 6
   .      . 
   .  ##  . 
- __    # __
+  .    # . 
   .  ### . 
   . #  # . 
   .  ### . 
   .      . 
   . #### . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -1510,13 +1510,13 @@ Char 170 (FEMININE ORDINAL INDICATOR), width 6
 Char 171 (LEFT-POINTING DOUBLE ANGLE QUOTATION MARK), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .  #  #. 
   . #  # . 
   .#  #  . 
   .#  #  . 
   . #  # . 
-  .  #  #. 
+ __  #  #__
   .      . 
   .      . 
   .      . 
@@ -1524,13 +1524,13 @@ Char 171 (LEFT-POINTING DOUBLE ANGLE QUOTATION MARK), width 6
 Char 172 (NOT SIGN), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .      . 
   .      . 
   .##### . 
   .    # . 
   .    # . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -1538,13 +1538,13 @@ Char 172 (NOT SIGN), width 6
 Char 173 (SOFT HYPHEN), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .      . 
   .      . 
   . ###  . 
   .      . 
   .      . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -1552,13 +1552,13 @@ Char 173 (SOFT HYPHEN), width 6
 Char 174 (REGISTERED SIGN), width 6
   .      . 
   . #### . 
- __#    #__
+  .#    #. 
   .# ## #. 
   .# # ##. 
   .# ## #. 
   .# # ##. 
   .#    #. 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -1566,13 +1566,13 @@ Char 174 (REGISTERED SIGN), width 6
 Char 175 (MACRON), width 6
   .      . 
   . ###  . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
  __      __
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
   .      . 
   .      . 
   .      . 
@@ -1580,13 +1580,13 @@ Char 175 (MACRON), width 6
 Char 176 (DEGREE SIGN), width 6
   .      . 
   .  ##  . 
- __ #  # __
+  . #  # . 
   . #  # . 
   .  ##  . 
   .      . 
   .      . 
   .      . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -1594,13 +1594,13 @@ Char 176 (DEGREE SIGN), width 6
 Char 177 (PLUS-MINUS SIGN), width 6
   .      . 
   .      . 
- __  #   __
+  .  #   . 
   .  #   . 
   .##### . 
   .  #   . 
   .  #   . 
   .      . 
-  .##### . 
+ __##### __
   .      . 
   .      . 
   .      . 
@@ -1608,13 +1608,13 @@ Char 177 (PLUS-MINUS SIGN), width 6
 Char 178 (SUPERSCRIPT TWO), width 6
   .      . 
   .  ##  . 
- __ #  # __
+  . #  # . 
   .    # . 
   .   #  . 
   .  #   . 
   . #### . 
   .      . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -1622,13 +1622,13 @@ Char 178 (SUPERSCRIPT TWO), width 6
 Char 179 (SUPERSCRIPT THREE), width 6
   .      . 
   .  ##  . 
- __ #  # __
+  . #  # . 
   .   #  . 
   .    # . 
   . #  # . 
   .  ##  . 
   .      . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -1636,13 +1636,13 @@ Char 179 (SUPERSCRIPT THREE), width 6
 Char 180 (ACUTE ACCENT), width 6
   .      . 
   .   #  . 
- __  #   __
+  .  #   . 
   . #    . 
   .      . 
   .      . 
   .      . 
   .      . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -1650,13 +1650,13 @@ Char 180 (ACUTE ACCENT), width 6
 Char 181 (MICRO SIGN), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .#  #  . 
   .#  #  . 
   .#  #  . 
   .#  #  . 
   .#  #  . 
-  .### # . 
+ __### # __
   .#     . 
   .#     . 
   .      . 
@@ -1664,13 +1664,13 @@ Char 181 (MICRO SIGN), width 6
 Char 182 (PILCROW SIGN), width 6
   .      . 
   . #### . 
- __# # # __
+  .# # # . 
   .# # # . 
   . ## # . 
   .  # # . 
   .  # # . 
   .  # # . 
-  .  # # . 
+ __  # # __
   .      . 
   .      . 
   .      . 
@@ -1678,13 +1678,13 @@ Char 182 (PILCROW SIGN), width 6
 Char 183 (MIDDLE DOT), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .      . 
   .      . 
   .  #   . 
   .      . 
   .      . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -1692,13 +1692,13 @@ Char 183 (MIDDLE DOT), width 6
 Char 184 (CEDILLA), width 6
   .      . 
   .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
+  .      . 
  __      __
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
-  .      . 
   .  #   . 
   .  #   . 
   . #    . 
@@ -1706,13 +1706,13 @@ Char 184 (CEDILLA), width 6
 Char 185 (SUPERSCRIPT ONE), width 6
   .      . 
   .  #   . 
- __ ##   __
+  . ##   . 
   .  #   . 
   .  #   . 
   .  #   . 
   . ###  . 
   .      . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -1720,13 +1720,13 @@ Char 185 (SUPERSCRIPT ONE), width 6
 Char 186 (MASCULINE ORDINAL INDICATOR), width 6
   .      . 
   .  ##  . 
- __ #  # __
+  . #  # . 
   . #  # . 
   . #  # . 
   .  ##  . 
   .      . 
   . #### . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -1734,13 +1734,13 @@ Char 186 (MASCULINE ORDINAL INDICATOR), width 6
 Char 187 (RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .#  #  . 
   . #  # . 
   .  #  #. 
   .  #  #. 
   . #  # . 
-  .#  #  . 
+ __#  #  __
   .      . 
   .      . 
   .      . 
@@ -1748,13 +1748,13 @@ Char 187 (RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK), width 6
 Char 188 (VULGAR FRACTION ONE QUARTER), width 6
   . #    . 
   .##    . 
- __ #    __
+  . #    . 
   . #   #. 
   . #  # . 
   .   #  . 
   .  #   . 
   . ##   . 
-  .# # # . 
+ __# # # __
   .  ####. 
   .    # . 
   .    # . 
@@ -1762,13 +1762,13 @@ Char 188 (VULGAR FRACTION ONE QUARTER), width 6
 Char 189 (VULGAR FRACTION ONE HALF), width 6
   . #    . 
   .##    . 
- __ #    __
+  . #    . 
   . #   #. 
   . #  # . 
   .   #  . 
   .  #   . 
   . # ## . 
-  .# #  #. 
+ __# #  #__
   .    # . 
   .   #  . 
   .  ####. 
@@ -1776,13 +1776,13 @@ Char 189 (VULGAR FRACTION ONE HALF), width 6
 Char 190 (VULGAR FRACTION THREE QUARTERS), width 6
   . ##   . 
   .#  #  . 
- __  #   __
+  .  #   . 
   .   # #. 
   .#  ## . 
   . ###  . 
   .  #   . 
   . ##   . 
-  .# # # . 
+ __# # # __
   .  ####. 
   .    # . 
   .    # . 
@@ -1790,13 +1790,13 @@ Char 190 (VULGAR FRACTION THREE QUARTERS), width 6
 Char 191 (INVERTED QUESTION MARK), width 6
   .      . 
   .  #   . 
- __      __
+  .      . 
   .  #   . 
   .  #   . 
   . #    . 
   .#     . 
   .#   # . 
-  . ###  . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -1804,13 +1804,13 @@ Char 191 (INVERTED QUESTION MARK), width 6
 Char 192 (LATIN CAPITAL LETTER A WITH GRAVE), width 6
   . #    . 
   .  #   . 
- __ ###  __
+  . ###  . 
   .#   # . 
   .#   # . 
   .##### . 
   .#   # . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -1818,13 +1818,13 @@ Char 192 (LATIN CAPITAL LETTER A WITH GRAVE), width 6
 Char 193 (LATIN CAPITAL LETTER A WITH ACUTE), width 6
   .   #  . 
   .  #   . 
- __ ###  __
+  . ###  . 
   .#   # . 
   .#   # . 
   .##### . 
   .#   # . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -1832,13 +1832,13 @@ Char 193 (LATIN CAPITAL LETTER A WITH ACUTE), width 6
 Char 194 (LATIN CAPITAL LETTER A WITH CIRCUMFLEX), width 6
   .  #   . 
   . # #  . 
- __ ###  __
+  . ###  . 
   .#   # . 
   .#   # . 
   .##### . 
   .#   # . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -1846,13 +1846,13 @@ Char 194 (LATIN CAPITAL LETTER A WITH CIRCUMFLEX), width 6
 Char 195 (LATIN CAPITAL LETTER A WITH TILDE), width 6
   . #  # . 
   .# ##  . 
- __ ###  __
+  . ###  . 
   .#   # . 
   .#   # . 
   .##### . 
   .#   # . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -1860,13 +1860,13 @@ Char 195 (LATIN CAPITAL LETTER A WITH TILDE), width 6
 Char 196 (LATIN CAPITAL LETTER A WITH DIAERESIS), width 6
   . # #  . 
   .      . 
- __ ###  __
+  . ###  . 
   .#   # . 
   .#   # . 
   .##### . 
   .#   # . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -1874,13 +1874,13 @@ Char 196 (LATIN CAPITAL LETTER A WITH DIAERESIS), width 6
 Char 197 (LATIN CAPITAL LETTER A WITH RING ABOVE), width 6
   .  #   . 
   . # #  . 
- __ ###  __
+  . ###  . 
   .#   # . 
   .#   # . 
   .##### . 
   .#   # . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -1888,13 +1888,13 @@ Char 197 (LATIN CAPITAL LETTER A WITH RING ABOVE), width 6
 Char 198 (LATIN CAPITAL LETTER AE), width 6
   .      . 
   . #### . 
- __# #   __
+  .# #   . 
   .# #   . 
   .# #   . 
   .##### . 
   .# #   . 
   .# #   . 
-  .# ### . 
+ __# ### __
   .      . 
   .      . 
   .      . 
@@ -1902,13 +1902,13 @@ Char 198 (LATIN CAPITAL LETTER AE), width 6
 Char 199 (LATIN CAPITAL LETTER C WITH CEDILLA), width 6
   .      . 
   . #### . 
- __#     __
   .#     . 
   .#     . 
   .#     . 
   .#     . 
   .#     . 
-  . #### . 
+  .#     . 
+ __ #### __
   .  #   . 
   .  #   . 
   . #    . 
@@ -1916,13 +1916,13 @@ Char 199 (LATIN CAPITAL LETTER C WITH CEDILLA), width 6
 Char 200 (LATIN CAPITAL LETTER E WITH GRAVE), width 6
   . #    . 
   .  #   . 
- __ #### __
+  . #### . 
   .#     . 
   .#     . 
   .####  . 
   .#     . 
   .#     . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -1930,13 +1930,13 @@ Char 200 (LATIN CAPITAL LETTER E WITH GRAVE), width 6
 Char 201 (LATIN CAPITAL LETTER E WITH ACUTE), width 6
   .   #  . 
   .  #   . 
- __ #### __
+  . #### . 
   .#     . 
   .#     . 
   .####  . 
   .#     . 
   .#     . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -1944,13 +1944,13 @@ Char 201 (LATIN CAPITAL LETTER E WITH ACUTE), width 6
 Char 202 (LATIN CAPITAL LETTER E WITH CIRCUMFLEX), width 6
   .  #   . 
   . # #  . 
- __ #### __
+  . #### . 
   .#     . 
   .#     . 
   .####  . 
   .#     . 
   .#     . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -1958,13 +1958,13 @@ Char 202 (LATIN CAPITAL LETTER E WITH CIRCUMFLEX), width 6
 Char 203 (LATIN CAPITAL LETTER E WITH DIAERESIS), width 6
   . # #  . 
   .      . 
- __ #### __
+  . #### . 
   .#     . 
   .#     . 
   .####  . 
   .#     . 
   .#     . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -1972,13 +1972,13 @@ Char 203 (LATIN CAPITAL LETTER E WITH DIAERESIS), width 6
 Char 204 (LATIN CAPITAL LETTER I WITH GRAVE), width 6
   . #    . 
   .  #   . 
- __ ###  __
-  .  #   . 
-  .  #   . 
-  .  #   . 
-  .  #   . 
-  .  #   . 
   . ###  . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -1986,13 +1986,13 @@ Char 204 (LATIN CAPITAL LETTER I WITH GRAVE), width 6
 Char 205 (LATIN CAPITAL LETTER I WITH ACUTE), width 6
   .   #  . 
   .  #   . 
- __ ###  __
-  .  #   . 
-  .  #   . 
-  .  #   . 
-  .  #   . 
-  .  #   . 
   . ###  . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -2000,13 +2000,13 @@ Char 205 (LATIN CAPITAL LETTER I WITH ACUTE), width 6
 Char 206 (LATIN CAPITAL LETTER I WITH CIRCUMFLEX), width 6
   .  #   . 
   . # #  . 
- __ ###  __
-  .  #   . 
-  .  #   . 
-  .  #   . 
-  .  #   . 
-  .  #   . 
   . ###  . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -2014,13 +2014,13 @@ Char 206 (LATIN CAPITAL LETTER I WITH CIRCUMFLEX), width 6
 Char 207 (LATIN CAPITAL LETTER I WITH DIAERESIS), width 6
   . # #  . 
   .      . 
- __ ###  __
-  .  #   . 
-  .  #   . 
-  .  #   . 
-  .  #   . 
-  .  #   . 
   . ###  . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+  .  #   . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -2028,13 +2028,13 @@ Char 207 (LATIN CAPITAL LETTER I WITH DIAERESIS), width 6
 Char 208 (LATIN CAPITAL LETTER ETH), width 6
   .      . 
   . ###  . 
- __ #  # __
+  . #  # . 
   . #  # . 
   .### # . 
   . #  # . 
   . #  # . 
   . #  # . 
-  . ###  . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -2042,13 +2042,13 @@ Char 208 (LATIN CAPITAL LETTER ETH), width 6
 Char 209 (LATIN CAPITAL LETTER N WITH TILDE), width 6
   . #  # . 
   .# ##  . 
- __#   # __
+  .#   # . 
   .##  # . 
   .##  # . 
   .# # # . 
   .# # # . 
   .#  ## . 
-  .#  ## . 
+ __#  ## __
   .      . 
   .      . 
   .      . 
@@ -2056,13 +2056,13 @@ Char 209 (LATIN CAPITAL LETTER N WITH TILDE), width 6
 Char 210 (LATIN CAPITAL LETTER O WITH GRAVE), width 6
   . #    . 
   .  #   . 
- __ ###  __
-  .#   # . 
-  .#   # . 
-  .#   # . 
-  .#   # . 
-  .#   # . 
   . ###  . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -2070,13 +2070,13 @@ Char 210 (LATIN CAPITAL LETTER O WITH GRAVE), width 6
 Char 211 (LATIN CAPITAL LETTER O WITH ACUTE), width 6
   .   #  . 
   .  #   . 
- __ ###  __
-  .#   # . 
-  .#   # . 
-  .#   # . 
-  .#   # . 
-  .#   # . 
   . ###  . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -2084,13 +2084,13 @@ Char 211 (LATIN CAPITAL LETTER O WITH ACUTE), width 6
 Char 212 (LATIN CAPITAL LETTER O WITH CIRCUMFLEX), width 6
   .  #   . 
   . # #  . 
- __ ###  __
-  .#   # . 
-  .#   # . 
-  .#   # . 
-  .#   # . 
-  .#   # . 
   . ###  . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -2098,13 +2098,13 @@ Char 212 (LATIN CAPITAL LETTER O WITH CIRCUMFLEX), width 6
 Char 213 (LATIN CAPITAL LETTER O WITH TILDE), width 6
   . #  # . 
   .# ##  . 
- __ ###  __
-  .#   # . 
-  .#   # . 
-  .#   # . 
-  .#   # . 
-  .#   # . 
   . ###  . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -2112,13 +2112,13 @@ Char 213 (LATIN CAPITAL LETTER O WITH TILDE), width 6
 Char 214 (LATIN CAPITAL LETTER O WITH DIAERESIS), width 6
   . # #  . 
   .      . 
- __ ###  __
-  .#   # . 
-  .#   # . 
-  .#   # . 
-  .#   # . 
-  .#   # . 
   . ###  . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+  .#   # . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -2126,13 +2126,13 @@ Char 214 (LATIN CAPITAL LETTER O WITH DIAERESIS), width 6
 Char 215 (MULTIPLICATION SIGN), width 6
   .      . 
   .      . 
+  .      . 
+  . #  # . 
+  .  ##  . 
+  .  ##  . 
+  . #  # . 
+  .      . 
  __      __
-  . #  # . 
-  .  ##  . 
-  .  ##  . 
-  . #  # . 
-  .      . 
-  .      . 
   .      . 
   .      . 
   .      . 
@@ -2140,13 +2140,13 @@ Char 215 (MULTIPLICATION SIGN), width 6
 Char 216 (LATIN CAPITAL LETTER O WITH STROKE), width 6
   .    # . 
   . ###  . 
- __#   # __
+  .#   # . 
   .#  ## . 
   .# # # . 
   .# # # . 
   .##  # . 
   .#   # . 
-  . ###  . 
+ __ ###  __
   .#     . 
   .      . 
   .      . 
@@ -2154,13 +2154,13 @@ Char 216 (LATIN CAPITAL LETTER O WITH STROKE), width 6
 Char 217 (LATIN CAPITAL LETTER U WITH GRAVE), width 6
   . #    . 
   .  #   . 
- __#   # __
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . #### . 
+  .#   # . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2168,13 +2168,13 @@ Char 217 (LATIN CAPITAL LETTER U WITH GRAVE), width 6
 Char 218 (LATIN CAPITAL LETTER U WITH ACUTE), width 6
   .   #  . 
   .  #   . 
- __#   # __
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . #### . 
+  .#   # . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2182,13 +2182,13 @@ Char 218 (LATIN CAPITAL LETTER U WITH ACUTE), width 6
 Char 219 (LATIN CAPITAL LETTER U WITH CIRCUMFLEX), width 6
   .  #   . 
   . # #  . 
- __#   # __
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . #### . 
+  .#   # . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2196,13 +2196,13 @@ Char 219 (LATIN CAPITAL LETTER U WITH CIRCUMFLEX), width 6
 Char 220 (LATIN CAPITAL LETTER U WITH DIAERESIS), width 6
   . # #  . 
   .      . 
- __#   # __
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . #### . 
+  .#   # . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2210,13 +2210,13 @@ Char 220 (LATIN CAPITAL LETTER U WITH DIAERESIS), width 6
 Char 221 (LATIN CAPITAL LETTER Y WITH ACUTE), width 6
   .   #  . 
   .  #   . 
- __#   # __
+  .#   # . 
   .#   # . 
   .#   # . 
   . #### . 
   .    # . 
   .    # . 
-  .####  . 
+ __####  __
   .      . 
   .      . 
   .      . 
@@ -2224,13 +2224,13 @@ Char 221 (LATIN CAPITAL LETTER Y WITH ACUTE), width 6
 Char 222 (LATIN CAPITAL LETTER THORN), width 6
   .      . 
   .      . 
- __#     __
+  .#     . 
   .####  . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  .####  . 
+ __####  __
   .#     . 
   .      . 
   .      . 
@@ -2238,13 +2238,13 @@ Char 222 (LATIN CAPITAL LETTER THORN), width 6
 Char 223 (LATIN SMALL LETTER SHARP S), width 6
   .      . 
   . ##   . 
- __#  #  __
+  .#  #  . 
   .#  #  . 
   .# #   . 
   .#  #  . 
   .#   # . 
   .##  # . 
-  .# ##  . 
+ __# ##  __
   .      . 
   .      . 
   .      . 
@@ -2252,13 +2252,13 @@ Char 223 (LATIN SMALL LETTER SHARP S), width 6
 Char 224 (LATIN SMALL LETTER A WITH GRAVE), width 6
   .  #   . 
   .   #  . 
- __      __
+  .      . 
   . ###  . 
   .    # . 
   . #### . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2266,13 +2266,13 @@ Char 224 (LATIN SMALL LETTER A WITH GRAVE), width 6
 Char 225 (LATIN SMALL LETTER A WITH ACUTE), width 6
   .   #  . 
   .  #   . 
- __      __
+  .      . 
   . ###  . 
   .    # . 
   . #### . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2280,13 +2280,13 @@ Char 225 (LATIN SMALL LETTER A WITH ACUTE), width 6
 Char 226 (LATIN SMALL LETTER A WITH CIRCUMFLEX), width 6
   .  #   . 
   . # #  . 
- __      __
+  .      . 
   . ###  . 
   .    # . 
   . #### . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2294,13 +2294,13 @@ Char 226 (LATIN SMALL LETTER A WITH CIRCUMFLEX), width 6
 Char 227 (LATIN SMALL LETTER A WITH TILDE), width 6
   . #  # . 
   .# ##  . 
- __      __
+  .      . 
   . ###  . 
   .    # . 
   . #### . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2308,13 +2308,13 @@ Char 227 (LATIN SMALL LETTER A WITH TILDE), width 6
 Char 228 (LATIN SMALL LETTER A WITH DIAERESIS), width 6
   .      . 
   . # #  . 
- __      __
+  .      . 
   . ###  . 
   .    # . 
   . #### . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2322,13 +2322,13 @@ Char 228 (LATIN SMALL LETTER A WITH DIAERESIS), width 6
 Char 229 (LATIN SMALL LETTER A WITH RING ABOVE), width 6
   .  #   . 
   . # #  . 
- __  #   __
+  .  #   . 
   . ###  . 
   .    # . 
   . #### . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2336,13 +2336,13 @@ Char 229 (LATIN SMALL LETTER A WITH RING ABOVE), width 6
 Char 230 (LATIN SMALL LETTER AE), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .## ## . 
   .  # # . 
   . ## # . 
   .# ### . 
   .# #   . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2350,13 +2350,13 @@ Char 230 (LATIN SMALL LETTER AE), width 6
 Char 231 (LATIN SMALL LETTER C WITH CEDILLA), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   . #### . 
   .#     . 
   .#     . 
   .#     . 
   .#     . 
-  . #### . 
+ __ #### __
   .  #   . 
   .  #   . 
   . #    . 
@@ -2364,13 +2364,13 @@ Char 231 (LATIN SMALL LETTER C WITH CEDILLA), width 6
 Char 232 (LATIN SMALL LETTER E WITH GRAVE), width 6
   .  #   . 
   .   #  . 
- __      __
+  .      . 
   . #### . 
   .#   # . 
   .#   # . 
   .##### . 
   .#     . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2378,13 +2378,13 @@ Char 232 (LATIN SMALL LETTER E WITH GRAVE), width 6
 Char 233 (LATIN SMALL LETTER E WITH ACUTE), width 6
   .   #  . 
   .  #   . 
- __      __
+  .      . 
   . #### . 
   .#   # . 
   .#   # . 
   .##### . 
   .#     . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2392,13 +2392,13 @@ Char 233 (LATIN SMALL LETTER E WITH ACUTE), width 6
 Char 234 (LATIN SMALL LETTER E WITH CIRCUMFLEX), width 6
   .  #   . 
   . # #  . 
- __      __
+  .      . 
   . #### . 
   .#   # . 
   .#   # . 
   .##### . 
   .#     . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2406,13 +2406,13 @@ Char 234 (LATIN SMALL LETTER E WITH CIRCUMFLEX), width 6
 Char 235 (LATIN SMALL LETTER E WITH DIAERESIS), width 6
   .      . 
   . # #  . 
- __      __
+  .      . 
   . #### . 
   .#   # . 
   .#   # . 
   .##### . 
   .#     . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2420,13 +2420,13 @@ Char 235 (LATIN SMALL LETTER E WITH DIAERESIS), width 6
 Char 236 (LATIN SMALL LETTER I WITH GRAVE), width 6
   .  #   . 
   .   #  . 
- __      __
+  .      . 
   . ##   . 
   .  #   . 
   .  #   . 
   .  #   . 
   .  #   . 
-  .  ##  . 
+ __  ##  __
   .      . 
   .      . 
   .      . 
@@ -2434,13 +2434,13 @@ Char 236 (LATIN SMALL LETTER I WITH GRAVE), width 6
 Char 237 (LATIN SMALL LETTER I WITH ACUTE), width 6
   .   #  . 
   .  #   . 
- __      __
+  .      . 
   . ##   . 
   .  #   . 
   .  #   . 
   .  #   . 
   .  #   . 
-  .  ##  . 
+ __  ##  __
   .      . 
   .      . 
   .      . 
@@ -2448,13 +2448,13 @@ Char 237 (LATIN SMALL LETTER I WITH ACUTE), width 6
 Char 238 (LATIN SMALL LETTER I WITH CIRCUMFLEX), width 6
   .  #   . 
   . # #  . 
- __      __
+  .      . 
   . ##   . 
   .  #   . 
   .  #   . 
   .  #   . 
   .  #   . 
-  .  ##  . 
+ __  ##  __
   .      . 
   .      . 
   .      . 
@@ -2462,13 +2462,13 @@ Char 238 (LATIN SMALL LETTER I WITH CIRCUMFLEX), width 6
 Char 239 (LATIN SMALL LETTER I WITH DIAERESIS), width 6
   .      . 
   . # #  . 
- __      __
+  .      . 
   . ##   . 
   .  #   . 
   .  #   . 
   .  #   . 
   .  #   . 
-  .  ##  . 
+ __  ##  __
   .      . 
   .      . 
   .      . 
@@ -2476,13 +2476,13 @@ Char 239 (LATIN SMALL LETTER I WITH DIAERESIS), width 6
 Char 240 (LATIN SMALL LETTER ETH), width 6
   .# #   . 
   . #    . 
- __# #   __
+  .# #   . 
   . ###  . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . ###  . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -2490,13 +2490,13 @@ Char 240 (LATIN SMALL LETTER ETH), width 6
 Char 241 (LATIN SMALL LETTER N WITH TILDE), width 6
   . #  # . 
   .# ##  . 
- __      __
+  .      . 
   .####  . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  .#   # . 
+ __#   # __
   .      . 
   .      . 
   .      . 
@@ -2504,13 +2504,13 @@ Char 241 (LATIN SMALL LETTER N WITH TILDE), width 6
 Char 242 (LATIN SMALL LETTER O WITH GRAVE), width 6
   .  #   . 
   .   #  . 
- __      __
+  .      . 
   . ###  . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . ###  . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -2518,13 +2518,13 @@ Char 242 (LATIN SMALL LETTER O WITH GRAVE), width 6
 Char 243 (LATIN SMALL LETTER O WITH ACUTE), width 6
   .   #  . 
   .  #   . 
- __      __
+  .      . 
   . ###  . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . ###  . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -2532,13 +2532,13 @@ Char 243 (LATIN SMALL LETTER O WITH ACUTE), width 6
 Char 244 (LATIN SMALL LETTER O WITH CIRCUMFLEX), width 6
   .  #   . 
   . # #  . 
- __      __
+  .      . 
   . ###  . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . ###  . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -2546,13 +2546,13 @@ Char 244 (LATIN SMALL LETTER O WITH CIRCUMFLEX), width 6
 Char 245 (LATIN SMALL LETTER O WITH TILDE), width 6
   . #  # . 
   .# ##  . 
- __      __
+  .      . 
   . ###  . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . ###  . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -2560,13 +2560,13 @@ Char 245 (LATIN SMALL LETTER O WITH TILDE), width 6
 Char 246 (LATIN SMALL LETTER O WITH DIAERESIS), width 6
   .      . 
   . # #  . 
- __      __
+  .      . 
   . ###  . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . ###  . 
+ __ ###  __
   .      . 
   .      . 
   .      . 
@@ -2574,13 +2574,13 @@ Char 246 (LATIN SMALL LETTER O WITH DIAERESIS), width 6
 Char 247 (DIVISION SIGN), width 6
   .      . 
   .      . 
- __      __
+  .      . 
   .  #   . 
   .      . 
   .##### . 
   .      . 
   .  #   . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -2588,13 +2588,13 @@ Char 247 (DIVISION SIGN), width 6
 Char 248 (LATIN SMALL LETTER O WITH STROKE), width 6
   .      . 
   .      . 
- __    # __
+  .    # . 
   . ###  . 
   .#  ## . 
   .# # # . 
   .##  # . 
   .#   # . 
-  . ###  . 
+ __ ###  __
   .#     . 
   .      . 
   .      . 
@@ -2602,13 +2602,13 @@ Char 248 (LATIN SMALL LETTER O WITH STROKE), width 6
 Char 249 (LATIN SMALL LETTER U WITH GRAVE), width 6
   .  #   . 
   .   #  . 
- __      __
+  .      . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2616,13 +2616,13 @@ Char 249 (LATIN SMALL LETTER U WITH GRAVE), width 6
 Char 250 (LATIN SMALL LETTER U WITH ACUTE), width 6
   .   #  . 
   .  #   . 
- __      __
+  .      . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2630,13 +2630,13 @@ Char 250 (LATIN SMALL LETTER U WITH ACUTE), width 6
 Char 251 (LATIN SMALL LETTER U WITH CIRCUMFLEX), width 6
   .  #   . 
   . # #  . 
- __      __
+  .      . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2644,13 +2644,13 @@ Char 251 (LATIN SMALL LETTER U WITH CIRCUMFLEX), width 6
 Char 252 (LATIN SMALL LETTER U WITH DIAERESIS), width 6
   .      . 
   . # #  . 
- __      __
+  .      . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .      . 
   .      . 
   .      . 
@@ -2658,13 +2658,13 @@ Char 252 (LATIN SMALL LETTER U WITH DIAERESIS), width 6
 Char 253 (LATIN SMALL LETTER Y WITH ACUTE), width 6
   .   #  . 
   .  #   . 
- __      __
+  .      . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .    # . 
   .    # . 
   .####  . 
@@ -2672,13 +2672,13 @@ Char 253 (LATIN SMALL LETTER Y WITH ACUTE), width 6
 Char 254 (LATIN SMALL LETTER THORN), width 6
   .      . 
   .#     . 
- __#     __
+  .#     . 
   .####  . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  .####  . 
+ __####  __
   .#     . 
   .#     . 
   .      . 
@@ -2686,13 +2686,13 @@ Char 254 (LATIN SMALL LETTER THORN), width 6
 Char 255 (LATIN SMALL LETTER Y WITH DIAERESIS), width 6
   .      . 
   . # #  . 
- __      __
+  .      . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
   .#   # . 
-  . #### . 
+ __ #### __
   .    # . 
   .    # . 
   .####  . 
