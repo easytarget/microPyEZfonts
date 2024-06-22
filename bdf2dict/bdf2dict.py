@@ -280,7 +280,7 @@ for glyph in glyph_data:
     pad_bottom = glyph_data[glyph]['bottom'] - bottom
     if debug:
         hm = '{}{}{}'.format('+' * pad_top, '#' * len(glyph_data[glyph]['rawhex']), '-' * pad_bottom)
-        print('{:>5d} {}|{}'.format(glyph, hm[:-baseline], hm[-baseline:]))
+        print('{:>5d} {}|{}'.format(glyph, hm[:baseline], hm[baseline:]))
     glyph_data[glyph]['padhex'] = ['0'] * pad_top + glyph_data[glyph]['rawhex'] + ['0'] * pad_bottom
     # clean up as we go.
     del glyph_data[glyph]['rawhex']
@@ -406,7 +406,7 @@ with open(map_file, 'w') as mapfile:
     for glyph in glyph_data:
         mapfile.write('\nChar {} ({}), width {}\n'.format(glyph, glyph_data[glyph]['name'],glyph_data[glyph]['width']))
         for l in range(len(glyph_data[glyph]['map'])):
-            border = '__' if (height - l - 1) == baseline else '.'
+            border = '__' if l == baseline - 1 else '.'
             mapfile.write(' {1:>2}{0}{1:<2}\n'.format(glyph_data[glyph]['map'][l], border))
     # Show position and box adjustment reports as needed
     if len(report) > 0:
