@@ -18,3 +18,9 @@ Drivers here have been tested and where necesscary modified for use with `ezFBfo
 * `st7567_i2c.py`
   * for I2C connected displays based on the ST7567 chip (and compatibles)
   * based on the driver from [@mcGeorge](https://forum.micropython.org/viewtopic.php?t=12747), modified to return the format as a property
+
+### Bonus
+* `repl_1306.py`
+  * A drop in replacement for *ssd1306.py* (but *does not* take the SPI/I2C options!)
+  * Displays an ascii representation of the framebuffer to the repl console, useful when debugging on a desktop machine and for checking positions/alignments
+  * A couple of [examples](/examples) for this are provided.
