@@ -51,7 +51,7 @@ class REPL_1306(framebuf.FrameBuffer):
         print('{}: contrast {}'.format(self._name, contrast))
 
     def invert(self, invert):
-        print('{}: invert'.format(self._name))
+        print('{}: invert {}'.format(self._name, invert))
 
     def rotate(self, rotate):
         print('{}: rotate {}'.format(self._name, rotate))
