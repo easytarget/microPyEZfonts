@@ -73,7 +73,7 @@ Char 64 (/home/kraus/git/open-iconic/png/bolt-8x.png), width 64
   .                        ##                                      . 
   .                        #                                       . 
   .                        #                                       . 
-  .                                                                . 
+ __                                                                __
 
 Char 65 (/home/kraus/git/open-iconic/png/dial-8x.png), width 64
   .                                                                . 
@@ -139,7 +139,7 @@ Char 65 (/home/kraus/git/open-iconic/png/dial-8x.png), width 64
   .                                                                . 
   .                                                                . 
   .                                                                . 
-  .                                                                . 
+ __                                                                __
 
 Char 66 (/home/kraus/git/open-iconic/png/fork-8x.png), width 64
   .         ######                          ######                 . 
@@ -205,7 +205,7 @@ Char 66 (/home/kraus/git/open-iconic/png/fork-8x.png), width 64
   .   ##################                                           . 
   .     ##############                                             . 
   .      ############                                              . 
-  .        ########                                                . 
+ __        ########                                                __
 
 Char 67 (/home/kraus/git/open-iconic/png/grid-four-up-8x.png), width 64
   .########        ########        ########        ########        . 
@@ -271,7 +271,7 @@ Char 67 (/home/kraus/git/open-iconic/png/grid-four-up-8x.png), width 64
   .                                                                . 
   .                                                                . 
   .                                                                . 
-  .                                                                . 
+ __                                                                __
 
 Char 68 (/home/kraus/git/open-iconic/png/grid-three-up-8x.png), width 64
   .################        ################        ################. 
@@ -337,7 +337,7 @@ Char 68 (/home/kraus/git/open-iconic/png/grid-three-up-8x.png), width 64
   .################        ################        ################. 
   .################        ################        ################. 
   .################        ################        ################. 
-  .################        ################        ################. 
+ __################        ################        ################__
 
 Char 69 (/home/kraus/git/open-iconic/png/grid-two-up-8x.png), width 64
   .########################                ########################. 
@@ -403,7 +403,7 @@ Char 69 (/home/kraus/git/open-iconic/png/grid-two-up-8x.png), width 64
   .########################                ########################. 
   .########################                ########################. 
   .########################                ########################. 
-  .########################                ########################. 
+ __########################                ########################__
 
 Char 70 (/home/kraus/git/open-iconic/png/signal-8x.png), width 64
   .                                                ########        . 
@@ -469,7 +469,7 @@ Char 70 (/home/kraus/git/open-iconic/png/signal-8x.png), width 64
   .########        ########        ########        ########        . 
   .########        ########        ########        ########        . 
   .########        ########        ########        ########        . 
-  .########        ########        ########        ########        . 
+ __########        ########        ########        ########        __
 
 Char 71 (/home/kraus/git/open-iconic/png/target-8x.png), width 64
   .                          ############                          . 
@@ -535,4 +535,4 @@ Char 71 (/home/kraus/git/open-iconic/png/target-8x.png), width 64
   .                  ############################                  . 
   .                    ########################                    . 
   .                      ####################                      . 
-  .                          ############                          . 
+ __                          ############                          __

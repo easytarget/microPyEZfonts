@@ -17,7 +17,7 @@ Char 64 (/home/kraus/git/open-iconic/png/check.png), width 8
   .######  . 
   . ####   . 
   .  ##    . 
-  .        . 
+ __        __
 
 Char 65 (/home/kraus/git/open-iconic/png/circle-check.png), width 8
   .  ####  . 
@@ -27,7 +27,7 @@ Char 65 (/home/kraus/git/open-iconic/png/circle-check.png), width 8
   .##   ###. 
   .########. 
   . ###### . 
-  .  ####  . 
+ __  ####  __
 
 Char 66 (/home/kraus/git/open-iconic/png/circle-x.png), width 8
   .  ####  . 
@@ -37,7 +37,7 @@ Char 66 (/home/kraus/git/open-iconic/png/circle-x.png), width 8
   .###  ###. 
   .## ## ##. 
   . ###### . 
-  .  ####  . 
+ __  ####  __
 
 Char 67 (/home/kraus/git/open-iconic/png/task.png), width 8
   .#####   . 
@@ -47,7 +47,7 @@ Char 67 (/home/kraus/git/open-iconic/png/task.png), width 8
   .#     # . 
   .#     # . 
   .####### . 
-  .        . 
+ __        __
 
 Char 68 (/home/kraus/git/open-iconic/png/x.png), width 8
   . #    # . 
@@ -57,4 +57,4 @@ Char 68 (/home/kraus/git/open-iconic/png/x.png), width 8
   .  ####  . 
   . ###### . 
   .###  ###. 
-  . #    # . 
+ __ #    # __

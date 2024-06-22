@@ -57,7 +57,7 @@ Char 64 (/home/kraus/git/open-iconic/png/bolt-6x.png), width 48
   .                  ##                            . 
   .                  #                             . 
   .                  #                             . 
-  .                                                . 
+ __                                                __
 
 Char 65 (/home/kraus/git/open-iconic/png/dial-6x.png), width 48
   .                                                . 
@@ -107,7 +107,7 @@ Char 65 (/home/kraus/git/open-iconic/png/dial-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 66 (/home/kraus/git/open-iconic/png/fork-6x.png), width 48
   .      ######                  ######            . 
@@ -157,7 +157,7 @@ Char 66 (/home/kraus/git/open-iconic/png/fork-6x.png), width 48
   .  ##############                                . 
   .   ############                                 . 
   .    ##########                                  . 
-  .      ######                                    . 
+ __      ######                                    __
 
 Char 67 (/home/kraus/git/open-iconic/png/grid-four-up-6x.png), width 48
   .######      ######      ######      ######      . 
@@ -207,7 +207,7 @@ Char 67 (/home/kraus/git/open-iconic/png/grid-four-up-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 68 (/home/kraus/git/open-iconic/png/grid-three-up-6x.png), width 48
   .############      ############      ############. 
@@ -257,7 +257,7 @@ Char 68 (/home/kraus/git/open-iconic/png/grid-three-up-6x.png), width 48
   .############      ############      ############. 
   .############      ############      ############. 
   .############      ############      ############. 
-  .############      ############      ############. 
+ __############      ############      ############__
 
 Char 69 (/home/kraus/git/open-iconic/png/grid-two-up-6x.png), width 48
   .##################            ##################. 
@@ -307,7 +307,7 @@ Char 69 (/home/kraus/git/open-iconic/png/grid-two-up-6x.png), width 48
   .##################            ##################. 
   .##################            ##################. 
   .##################            ##################. 
-  .##################            ##################. 
+ __##################            ##################__
 
 Char 70 (/home/kraus/git/open-iconic/png/signal-6x.png), width 48
   .                                    ######      . 
@@ -357,7 +357,7 @@ Char 70 (/home/kraus/git/open-iconic/png/signal-6x.png), width 48
   .######      ######      ######      ######      . 
   .######      ######      ######      ######      . 
   .######      ######      ######      ######      . 
-  .######      ######      ######      ######      . 
+ __######      ######      ######      ######      __
 
 Char 71 (/home/kraus/git/open-iconic/png/target-6x.png), width 48
   .                   ##########                   . 
@@ -407,4 +407,4 @@ Char 71 (/home/kraus/git/open-iconic/png/target-6x.png), width 48
   .            ########################            . 
   .             ######################             . 
   .                ################                . 
-  .                   ##########                   . 
+ __                   ##########                   __

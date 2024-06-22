@@ -12,7 +12,7 @@ Fixed width: False
 Char 161 (Upsilon1), width 9
   .         . 
   .         . 
- __##   ##  __
+  .##   ##  . 
   . ## #  # . 
   .  # # ## . 
   .   #     . 
@@ -21,7 +21,7 @@ Char 161 (Upsilon1), width 9
   .   #     . 
   .   #     . 
   .   #     . 
-  .  ###    . 
+ __  ###    __
   .         . 
   .         . 
   .         . 
@@ -29,7 +29,7 @@ Char 161 (Upsilon1), width 9
 Char 162 (minute), width 4
   .    . 
   .    . 
- __  ##__
+  .  ##. 
   . ## . 
   .#   . 
   .    . 
@@ -38,7 +38,7 @@ Char 162 (minute), width 4
   .    . 
   .    . 
   .    . 
-  .    . 
+ __    __
   .    . 
   .    . 
   .    . 
@@ -46,7 +46,7 @@ Char 162 (minute), width 4
 Char 163 (lessequal), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .      # . 
   .    ##  . 
   .  ##    . 
@@ -55,7 +55,7 @@ Char 163 (lessequal), width 8
   .    ##  . 
   .      # . 
   .        . 
-  .####### . 
+ __####### __
   .        . 
   .        . 
   .        . 
@@ -63,7 +63,7 @@ Char 163 (lessequal), width 8
 Char 164 (fraction), width 5
   .     . 
   .     . 
- __    #__
+  .    #. 
   .    #. 
   .   # . 
   .   # . 
@@ -72,7 +72,7 @@ Char 164 (fraction), width 5
   . #   . 
   . #   . 
   .#    . 
-  .#    . 
+ __#    __
   .     . 
   .     . 
   .     . 
@@ -80,7 +80,7 @@ Char 164 (fraction), width 5
 Char 165 (infinity), width 10
   .          . 
   .          . 
- __          __
+  .          . 
   .          . 
   .          . 
   .          . 
@@ -89,7 +89,7 @@ Char 165 (infinity), width 10
   .#   ##  # . 
   . ### ###  . 
   .          . 
-  .          . 
+ __          __
   .          . 
   .          . 
   .          . 
@@ -97,7 +97,7 @@ Char 165 (infinity), width 10
 Char 166 (florin), width 7
   .       . 
   .       . 
- __     ##__
+  .     ##. 
   .    # #. 
   .    #  . 
   .    #  . 
@@ -106,7 +106,7 @@ Char 166 (florin), width 7
   .   #   . 
   .   #   . 
   .  #    . 
-  .  #    . 
+ __  #    __
   .  #    . 
   .# #    . 
   .##     . 
@@ -114,7 +114,7 @@ Char 166 (florin), width 7
 Char 167 (club), width 11
   .           . 
   .           . 
- __           __
+  .           . 
   .           . 
   .           . 
   .    ###    . 
@@ -123,7 +123,7 @@ Char 167 (club), width 11
   . ### # ### . 
   . ######### . 
   . ### # ### . 
-  .     #     . 
+ __     #     __
   .           . 
   .           . 
   .           . 
@@ -131,7 +131,7 @@ Char 167 (club), width 11
 Char 168 (diamond), width 11
   .           . 
   .           . 
- __           __
+  .           . 
   .           . 
   .           . 
   .     #     . 
@@ -140,7 +140,7 @@ Char 168 (diamond), width 11
   .  #######  . 
   .   #####   . 
   .    ###    . 
-  .     #     . 
+ __     #     __
   .           . 
   .           . 
   .           . 
@@ -148,7 +148,7 @@ Char 168 (diamond), width 11
 Char 169 (heart), width 11
   .           . 
   .           . 
- __           __
+  .           . 
   .           . 
   .           . 
   .   ## ##   . 
@@ -157,7 +157,7 @@ Char 169 (heart), width 11
   .  #######  . 
   .   #####   . 
   .    ###    . 
-  .     #     . 
+ __     #     __
   .           . 
   .           . 
   .           . 
@@ -165,7 +165,7 @@ Char 169 (heart), width 11
 Char 170 (spade), width 11
   .           . 
   .           . 
- __           __
+  .           . 
   .           . 
   .           . 
   .     #     . 
@@ -174,7 +174,7 @@ Char 170 (spade), width 11
   .  #######  . 
   . ######### . 
   .  ## # ##  . 
-  .     #     . 
+ __     #     __
   .           . 
   .           . 
   .           . 
@@ -182,7 +182,7 @@ Char 170 (spade), width 11
 Char 171 (arrowboth), width 15
   .               . 
   .               . 
- __               __
+  .               . 
   .               . 
   .               . 
   .    #     #    . 
@@ -191,7 +191,7 @@ Char 171 (arrowboth), width 15
   . ############# . 
   .  #         #  . 
   .   #       #   . 
-  .    #     #    . 
+ __    #     #    __
   .               . 
   .               . 
   .               . 
@@ -199,7 +199,7 @@ Char 171 (arrowboth), width 15
 Char 172 (arrowleft), width 14
   .              . 
   .              . 
- __              __
+  .              . 
   .              . 
   .              . 
   .   #          . 
@@ -208,7 +208,7 @@ Char 172 (arrowleft), width 14
   .##############. 
   . #            . 
   .  #           . 
-  .   #          . 
+ __   #          __
   .              . 
   .              . 
   .              . 
@@ -216,7 +216,7 @@ Char 172 (arrowleft), width 14
 Char 173 (arrowup), width 9
   .    #    . 
   .   ###   . 
- __  # # #  __
+  .  # # #  . 
   . #  #  # . 
   .    #    . 
   .    #    . 
@@ -225,7 +225,7 @@ Char 173 (arrowup), width 9
   .    #    . 
   .    #    . 
   .    #    . 
-  .    #    . 
+ __    #    __
   .    #    . 
   .    #    . 
   .    #    . 
@@ -233,7 +233,7 @@ Char 173 (arrowup), width 9
 Char 174 (arrowright), width 14
   .              . 
   .              . 
- __              __
+  .              . 
   .              . 
   .              . 
   .          #   . 
@@ -242,7 +242,7 @@ Char 174 (arrowright), width 14
   .##############. 
   .            # . 
   .           #  . 
-  .          #   . 
+ __          #   __
   .              . 
   .              . 
   .              . 
@@ -250,7 +250,6 @@ Char 174 (arrowright), width 14
 Char 175 (arrowdown), width 9
   .    #    . 
   .    #    . 
- __    #    __
   .    #    . 
   .    #    . 
   .    #    . 
@@ -259,7 +258,8 @@ Char 175 (arrowdown), width 9
   .    #    . 
   .    #    . 
   .    #    . 
-  . #  #  # . 
+  .    #    . 
+ __ #  #  # __
   .  # # #  . 
   .   ###   . 
   .    #    . 
@@ -267,7 +267,7 @@ Char 175 (arrowdown), width 9
 Char 176 (degree), width 6
   .      . 
   .      . 
- __  ##  __
+  .  ##  . 
   . #  # . 
   . #  # . 
   .  ##  . 
@@ -276,7 +276,7 @@ Char 176 (degree), width 6
   .      . 
   .      . 
   .      . 
-  .      . 
+ __      __
   .      . 
   .      . 
   .      . 
@@ -284,7 +284,7 @@ Char 176 (degree), width 6
 Char 177 (plusminus), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .   #    . 
   .   #    . 
   .   #    . 
@@ -293,7 +293,7 @@ Char 177 (plusminus), width 8
   .   #    . 
   .   #    . 
   .        . 
-  .####### . 
+ __####### __
   .        . 
   .        . 
   .        . 
@@ -301,7 +301,7 @@ Char 177 (plusminus), width 8
 Char 178 (second), width 7
   .       . 
   .       . 
- __  ## ##__
+  .  ## ##. 
   . ## ## . 
   .#  #   . 
   .       . 
@@ -310,7 +310,7 @@ Char 178 (second), width 7
   .       . 
   .       . 
   .       . 
-  .       . 
+ __       __
   .       . 
   .       . 
   .       . 
@@ -318,7 +318,7 @@ Char 178 (second), width 7
 Char 179 (greaterequal), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .#       . 
   . ##     . 
   .   ##   . 
@@ -327,7 +327,7 @@ Char 179 (greaterequal), width 8
   . ##     . 
   .#       . 
   .        . 
-  .####### . 
+ __####### __
   .        . 
   .        . 
   .        . 
@@ -335,7 +335,7 @@ Char 179 (greaterequal), width 8
 Char 180 (multiply), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .        . 
   .        . 
   .#     # . 
@@ -344,7 +344,7 @@ Char 180 (multiply), width 8
   .   #    . 
   .  # #   . 
   . #   #  . 
-  .#     # . 
+ __#     # __
   .        . 
   .        . 
   .        . 
@@ -352,16 +352,16 @@ Char 180 (multiply), width 8
 Char 181 (proportional), width 10
   .          . 
   .          . 
+  .          . 
+  .          . 
+  .          . 
+  .          . 
+  . ### ###  . 
+  .#   #     . 
+  .#   #     . 
+  . ### ###  . 
+  .          . 
  __          __
-  .          . 
-  .          . 
-  .          . 
-  . ### ###  . 
-  .#   #     . 
-  .#   #     . 
-  . ### ###  . 
-  .          . 
-  .          . 
   .          . 
   .          . 
   .          . 
@@ -369,7 +369,7 @@ Char 181 (proportional), width 10
 Char 182 (partialdiff), width 7
   .       . 
   . ###   . 
- __#   #  __
+  .#   #  . 
   .     # . 
   .     # . 
   .     # . 
@@ -378,7 +378,7 @@ Char 182 (partialdiff), width 7
   .#    # . 
   .#    # . 
   .##  #  . 
-  . ###   . 
+ __ ###   __
   .       . 
   .       . 
   .       . 
@@ -386,16 +386,16 @@ Char 182 (partialdiff), width 7
 Char 183 (bullet), width 7
   .       . 
   .       . 
+  .       . 
+  .       . 
+  .       . 
+  .       . 
+  .  ###  . 
+  . ##### . 
+  . ##### . 
+  . ##### . 
+  .  ###  . 
  __       __
-  .       . 
-  .       . 
-  .       . 
-  .  ###  . 
-  . ##### . 
-  . ##### . 
-  . ##### . 
-  .  ###  . 
-  .       . 
   .       . 
   .       . 
   .       . 
@@ -403,7 +403,7 @@ Char 183 (bullet), width 7
 Char 184 (divide), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .        . 
   .        . 
   .   #    . 
@@ -412,7 +412,7 @@ Char 184 (divide), width 8
   .####### . 
   .        . 
   .   #    . 
-  .   #    . 
+ __   #    __
   .        . 
   .        . 
   .        . 
@@ -420,7 +420,7 @@ Char 184 (divide), width 8
 Char 185 (notequal), width 8
   .        . 
   .        . 
- __        __
+  .        . 
   .        . 
   .        . 
   .     #  . 
@@ -429,7 +429,7 @@ Char 185 (notequal), width 8
   .   #    . 
   .####### . 
   .  #     . 
-  . #      . 
+ __ #      __
   .        . 
   .        . 
   .        . 
@@ -437,16 +437,16 @@ Char 185 (notequal), width 8
 Char 186 (equivalence), width 8
   .        . 
   .        . 
+  .        . 
+  .        . 
+  .        . 
+  .        . 
+  .####### . 
+  .        . 
+  .####### . 
+  .        . 
+  .####### . 
  __        __
-  .        . 
-  .        . 
-  .        . 
-  .####### . 
-  .        . 
-  .####### . 
-  .        . 
-  .####### . 
-  .        . 
   .        . 
   .        . 
   .        . 
@@ -454,16 +454,16 @@ Char 186 (equivalence), width 8
 Char 187 (approxequal), width 8
   .        . 
   .        . 
+  .        . 
+  .        . 
+  .        . 
+  . ###  # . 
+  .#  ###  . 
+  .        . 
+  . ###  # . 
+  .#  ###  . 
+  .        . 
  __        __
-  .        . 
-  .        . 
-  . ###  # . 
-  .#  ###  . 
-  .        . 
-  . ###  # . 
-  .#  ###  . 
-  .        . 
-  .        . 
   .        . 
   .        . 
   .        . 
@@ -471,7 +471,7 @@ Char 187 (approxequal), width 8
 Char 188 (ellipsis), width 15
   .               . 
   .               . 
- __               __
+  .               . 
   .               . 
   .               . 
   .               . 
@@ -480,7 +480,7 @@ Char 188 (ellipsis), width 15
   .               . 
   .               . 
   .  #    #    #  . 
-  .  #    #    #  . 
+ __  #    #    #  __
   .               . 
   .               . 
   .               . 
@@ -488,16 +488,16 @@ Char 188 (ellipsis), width 15
 Char 189 (arrowvertex), width 9
   .    #    . 
   .    #    . 
+  .    #    . 
+  .    #    . 
+  .    #    . 
+  .    #    . 
+  .    #    . 
+  .    #    . 
+  .    #    . 
+  .    #    . 
+  .    #    . 
  __    #    __
-  .    #    . 
-  .    #    . 
-  .    #    . 
-  .    #    . 
-  .    #    . 
-  .    #    . 
-  .    #    . 
-  .    #    . 
-  .    #    . 
   .    #    . 
   .    #    . 
   .    #    . 
@@ -505,7 +505,7 @@ Char 189 (arrowvertex), width 9
 Char 190 (arrowhorizex), width 15
   .               . 
   .               . 
- __               __
+  .               . 
   .               . 
   .               . 
   .               . 
@@ -514,7 +514,7 @@ Char 190 (arrowhorizex), width 15
   .###############. 
   .               . 
   .               . 
-  .               . 
+ __               __
   .               . 
   .               . 
   .               . 
@@ -522,7 +522,7 @@ Char 190 (arrowhorizex), width 15
 Char 191 (carriagereturn), width 10
   .          . 
   .          . 
- __          __
+  .          . 
   .       #  . 
   .       #  . 
   .       #  . 
@@ -531,7 +531,7 @@ Char 191 (carriagereturn), width 10
   .       #  . 
   . #     #  . 
   .########  . 
-  . #        . 
+ __ #        __
   .          . 
   .          . 
   .          . 

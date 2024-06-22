@@ -41,7 +41,7 @@ Char 64 (/home/kraus/git/open-iconic/png/cloud-4x.png), width 32
   .                                . 
   .                                . 
   .                                . 
-  .                                . 
+ __                                __
 
 Char 65 (/home/kraus/git/open-iconic/png/cloudy-4x.png), width 32
   .       ######                   . 
@@ -75,7 +75,7 @@ Char 65 (/home/kraus/git/open-iconic/png/cloudy-4x.png), width 32
   . ############################## . 
   .  ############################# . 
   .   ###########################  . 
-  .     #######################    . 
+ __     #######################    __
 
 Char 66 (/home/kraus/git/open-iconic/png/moon-4x.png), width 32
   .          #                     . 
@@ -109,7 +109,7 @@ Char 66 (/home/kraus/git/open-iconic/png/moon-4x.png), width 32
   .       ##################       . 
   .         ##############         . 
   .            ########            . 
-  .                                . 
+ __                                __
 
 Char 67 (/home/kraus/git/open-iconic/png/rain-4x.png), width 32
   .               ######           . 
@@ -143,7 +143,7 @@ Char 67 (/home/kraus/git/open-iconic/png/rain-4x.png), width 32
   .    ####    ####    ####        . 
   .    ####    ####    ####        . 
   .    ####    ####    ####        . 
-  .     ##      ##      ##         . 
+ __     ##      ##      ##         __
 
 Char 68 (/home/kraus/git/open-iconic/png/star-4x.png), width 32
   .                                . 
@@ -177,7 +177,7 @@ Char 68 (/home/kraus/git/open-iconic/png/star-4x.png), width 32
   .       ###            ###       . 
   .       ##              ##       . 
   .       #                #       . 
-  .                                . 
+ __                                __
 
 Char 69 (/home/kraus/git/open-iconic/png/sun-4x.png), width 32
   .               ##               . 
@@ -211,4 +211,4 @@ Char 69 (/home/kraus/git/open-iconic/png/sun-4x.png), width 32
   .               ##               . 
   .              ####              . 
   .              ####              . 
-  .               ##               . 
+ __               ##               __

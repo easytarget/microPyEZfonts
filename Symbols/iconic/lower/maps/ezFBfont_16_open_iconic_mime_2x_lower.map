@@ -25,7 +25,7 @@ Char 64 (/home/kraus/git/open-iconic/png/audio-2x.png), width 16
   .  #          #  . 
   .                . 
   .                . 
-  .                . 
+ __                __
 
 Char 65 (/home/kraus/git/open-iconic/png/book-2x.png), width 16
   . #######    ##  . 
@@ -43,7 +43,7 @@ Char 65 (/home/kraus/git/open-iconic/png/book-2x.png), width 16
   .##              . 
   .##              . 
   .##############  . 
-  . #############  . 
+ __ #############  __
 
 Char 66 (/home/kraus/git/open-iconic/png/document-2x.png), width 16
   .######          . 
@@ -61,7 +61,7 @@ Char 66 (/home/kraus/git/open-iconic/png/document-2x.png), width 16
   .##        ####  . 
   .##        ####  . 
   .##############  . 
-  .##############  . 
+ __##############  __
 
 Char 67 (/home/kraus/git/open-iconic/png/folder-2x.png), width 16
   .######          . 
@@ -79,7 +79,7 @@ Char 67 (/home/kraus/git/open-iconic/png/folder-2x.png), width 16
   .################. 
   .################. 
   .################. 
-  .################. 
+ __################__
 
 Char 68 (/home/kraus/git/open-iconic/png/image-2x.png), width 16
   .################. 
@@ -97,7 +97,7 @@ Char 68 (/home/kraus/git/open-iconic/png/image-2x.png), width 16
   .##########    ##. 
   .###########   ##. 
   .################. 
-  .################. 
+ __################__
 
 Char 69 (/home/kraus/git/open-iconic/png/project-2x.png), width 16
   .##            ##. 
@@ -115,7 +115,7 @@ Char 69 (/home/kraus/git/open-iconic/png/project-2x.png), width 16
   .##            ##. 
   .##            ##. 
   .                . 
-  .                . 
+ __                __
 
 Char 70 (/home/kraus/git/open-iconic/png/spreadsheet-2x.png), width 16
   .################. 
@@ -133,7 +133,7 @@ Char 70 (/home/kraus/git/open-iconic/png/spreadsheet-2x.png), width 16
   .################. 
   .################. 
   .                . 
-  .                . 
+ __                __
 
 Char 71 (/home/kraus/git/open-iconic/png/video-2x.png), width 16
   .                . 
@@ -151,7 +151,7 @@ Char 71 (/home/kraus/git/open-iconic/png/video-2x.png), width 16
   .                . 
   .                . 
   .                . 
-  .                . 
+ __                __
 
 Char 72 (/home/kraus/git/open-iconic/png/clipboard-2x.png), width 16
   .      ##        . 
@@ -169,7 +169,7 @@ Char 72 (/home/kraus/git/open-iconic/png/clipboard-2x.png), width 16
   .##############  . 
   .##############  . 
   .##############  . 
-  .##############  . 
+ __##############  __
 
 Char 73 (/home/kraus/git/open-iconic/png/file-2x.png), width 16
   .######          . 
@@ -187,7 +187,7 @@ Char 73 (/home/kraus/git/open-iconic/png/file-2x.png), width 16
   .##############  . 
   .##############  . 
   .##############  . 
-  .##############  . 
+ __##############  __
 
 Char 74 (/home/kraus/git/open-iconic/png/graph-2x.png), width 16
   .              # . 
@@ -205,7 +205,7 @@ Char 74 (/home/kraus/git/open-iconic/png/graph-2x.png), width 16
   .                . 
   .                . 
   .################. 
-  .################. 
+ __################__
 
 Char 75 (/home/kraus/git/open-iconic/png/pie-chart-2x.png), width 16
   .    ####        . 
@@ -223,7 +223,7 @@ Char 75 (/home/kraus/git/open-iconic/png/pie-chart-2x.png), width 16
   . ##   ######### . 
   .     #########  . 
   .     ########   . 
-  .      ######    . 
+ __      ######    __
 
 Char 76 (/home/kraus/git/open-iconic/png/script-2x.png), width 16
   .     ########## . 
@@ -241,7 +241,7 @@ Char 76 (/home/kraus/git/open-iconic/png/script-2x.png), width 16
   .##  ##########  . 
   .##  ##########  . 
   .##############  . 
-  . ############   . 
+ __ ############   __
 
 Char 77 (/home/kraus/git/open-iconic/png/trash-2x.png), width 16
   .     ####       . 
@@ -259,4 +259,4 @@ Char 77 (/home/kraus/git/open-iconic/png/trash-2x.png), width 16
   .  ##  ##  ##    . 
   .  ##  ##  ##    . 
   .  ##########    . 
-  .  ##########    . 
+ __  ##########    __

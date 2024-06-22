@@ -41,7 +41,7 @@ Char 64 (/home/kraus/git/open-iconic/png/battery-empty-4x.png), width 32
   .                                . 
   .                                . 
   .                                . 
-  .                                . 
+ __                                __
 
 Char 65 (/home/kraus/git/open-iconic/png/bell-4x.png), width 32
   .             ######             . 
@@ -75,7 +75,7 @@ Char 65 (/home/kraus/git/open-iconic/png/bell-4x.png), width 32
   .            ########            . 
   .            ########            . 
   .             ######             . 
-  .              ####              . 
+ __              ####              __
 
 Char 66 (/home/kraus/git/open-iconic/png/cog-4x.png), width 32
   .              ####              . 
@@ -109,7 +109,7 @@ Char 66 (/home/kraus/git/open-iconic/png/cog-4x.png), width 32
   .      #      ######      #      . 
   .             ######             . 
   .             ######             . 
-  .              ####              . 
+ __              ####              __
 
 Char 67 (/home/kraus/git/open-iconic/png/flash-4x.png), width 32
   .              ######            . 
@@ -143,7 +143,7 @@ Char 67 (/home/kraus/git/open-iconic/png/flash-4x.png), width 32
   .           ####                 . 
   .           ###                  . 
   .           ##                   . 
-  .                                . 
+ __                                __
 
 Char 68 (/home/kraus/git/open-iconic/png/home-4x.png), width 32
   .               ##               . 
@@ -177,7 +177,7 @@ Char 68 (/home/kraus/git/open-iconic/png/home-4x.png), width 32
   .                                . 
   .                                . 
   .                                . 
-  .                                . 
+ __                                __
 
 Char 69 (/home/kraus/git/open-iconic/png/pencil-4x.png), width 32
   .                                . 
@@ -211,7 +211,7 @@ Char 69 (/home/kraus/git/open-iconic/png/pencil-4x.png), width 32
   .###########                     . 
   .##########                      . 
   .#########                       . 
-  .########                        . 
+ __########                        __
 
 Char 70 (/home/kraus/git/open-iconic/png/pulse-4x.png), width 32
   .                                . 
@@ -245,7 +245,7 @@ Char 70 (/home/kraus/git/open-iconic/png/pulse-4x.png), width 32
   .                                . 
   .                                . 
   .                                . 
-  .                                . 
+ __                                __
 
 Char 71 (/home/kraus/git/open-iconic/png/warning-4x.png), width 32
   .            ####                . 
@@ -279,7 +279,7 @@ Char 71 (/home/kraus/git/open-iconic/png/warning-4x.png), width 32
   .############################    . 
   .############################    . 
   .############################    . 
-  .############################    . 
+ __############################    __
 
 Char 72 (/home/kraus/git/open-iconic/png/wrench-4x.png), width 32
   .                   ####         . 
@@ -313,7 +313,7 @@ Char 72 (/home/kraus/git/open-iconic/png/wrench-4x.png), width 32
   .##    ###                       . 
   .###  ###                        . 
   . ######                         . 
-  .  ####                          . 
+ __  ####                          __
 
 Char 73 (/home/kraus/git/open-iconic/png/battery-full-4x.png), width 32
   .                                . 
@@ -347,7 +347,7 @@ Char 73 (/home/kraus/git/open-iconic/png/battery-full-4x.png), width 32
   .                                . 
   .                                . 
   .                                . 
-  .                                . 
+ __                                __
 
 Char 74 (/home/kraus/git/open-iconic/png/bluetooth-4x.png), width 32
   .          ###                   . 
@@ -381,7 +381,7 @@ Char 74 (/home/kraus/git/open-iconic/png/bluetooth-4x.png), width 32
   .          #######               . 
   .          #####                 . 
   .          ####                  . 
-  .          ###                   . 
+ __          ###                   __
 
 Char 75 (/home/kraus/git/open-iconic/png/contrast-4x.png), width 32
   .            ########            . 
@@ -415,7 +415,7 @@ Char 75 (/home/kraus/git/open-iconic/png/contrast-4x.png), width 32
   .      ####################      . 
   .       ##################       . 
   .         ##############         . 
-  .            ########            . 
+ __            ########            __
 
 Char 76 (/home/kraus/git/open-iconic/png/hard-drive-4x.png), width 32
   .############################    . 
@@ -449,7 +449,7 @@ Char 76 (/home/kraus/git/open-iconic/png/hard-drive-4x.png), width 32
   .############################    . 
   .############################    . 
   .############################    . 
-  .############################    . 
+ __############################    __
 
 Char 77 (/home/kraus/git/open-iconic/png/lightbulb-4x.png), width 32
   .                 ##             . 
@@ -483,7 +483,7 @@ Char 77 (/home/kraus/git/open-iconic/png/lightbulb-4x.png), width 32
   .          #######               . 
   .          ########              . 
   .          ########              . 
-  .          #######               . 
+ __          #######               __
 
 Char 78 (/home/kraus/git/open-iconic/png/power-standby-4x.png), width 32
   .            ####                . 
@@ -517,7 +517,7 @@ Char 78 (/home/kraus/git/open-iconic/png/power-standby-4x.png), width 32
   .     ##################         . 
   .      ################          . 
   .        ############            . 
-  .          ########              . 
+ __          ########              __
 
 Char 79 (/home/kraus/git/open-iconic/png/reload-4x.png), width 32
   .            ########            . 
@@ -551,7 +551,7 @@ Char 79 (/home/kraus/git/open-iconic/png/reload-4x.png), width 32
   .      ####################      . 
   .       ##################       . 
   .         ##############         . 
-  .            ########            . 
+ __            ########            __
 
 Char 80 (/home/kraus/git/open-iconic/png/wifi-4x.png), width 32
   .          ##########            . 
@@ -585,4 +585,4 @@ Char 80 (/home/kraus/git/open-iconic/png/wifi-4x.png), width 32
   .           ########             . 
   .           ########             . 
   .            ######              . 
-  .             ####               . 
+ __             ####               __

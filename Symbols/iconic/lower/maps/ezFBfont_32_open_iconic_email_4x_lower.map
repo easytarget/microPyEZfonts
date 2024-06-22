@@ -41,7 +41,7 @@ Char 64 (/home/kraus/git/open-iconic/png/envelope-closed-4x.png), width 32
   .                                . 
   .                                . 
   .                                . 
-  .                                . 
+ __                                __
 
 Char 65 (/home/kraus/git/open-iconic/png/envelope-open-4x.png), width 32
   .               ##               . 
@@ -75,7 +75,7 @@ Char 65 (/home/kraus/git/open-iconic/png/envelope-open-4x.png), width 32
   .################################. 
   .################################. 
   .################################. 
-  .################################. 
+ __################################__
 
 Char 66 (/home/kraus/git/open-iconic/png/inbox-4x.png), width 32
   .################################. 
@@ -109,7 +109,7 @@ Char 66 (/home/kraus/git/open-iconic/png/inbox-4x.png), width 32
   .################################. 
   .################################. 
   .################################. 
-  .################################. 
+ __################################__
 
 Char 67 (/home/kraus/git/open-iconic/png/tag-4x.png), width 32
   .############                    . 
@@ -143,7 +143,7 @@ Char 67 (/home/kraus/git/open-iconic/png/tag-4x.png), width 32
   .                 ######         . 
   .                  ####          . 
   .                   ##           . 
-  .                                . 
+ __                                __
 
 Char 68 (/home/kraus/git/open-iconic/png/tags-4x.png), width 32
   .                                . 
@@ -177,4 +177,4 @@ Char 68 (/home/kraus/git/open-iconic/png/tags-4x.png), width 32
   .                                . 
   .                                . 
   .                                . 
-  .                                . 
+ __                                __

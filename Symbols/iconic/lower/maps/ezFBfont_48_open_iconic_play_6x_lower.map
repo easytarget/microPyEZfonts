@@ -57,7 +57,7 @@ Char 64 (/home/kraus/git/open-iconic/png/audio-spectrum-6x.png), width 48
   .                        ######                  . 
   .                        ######                  . 
   .                        ######                  . 
-  .                        ######                  . 
+ __                        ######                  __
 
 Char 65 (/home/kraus/git/open-iconic/png/bullhorn-6x.png), width 48
   .                                    ######      . 
@@ -107,7 +107,7 @@ Char 65 (/home/kraus/git/open-iconic/png/bullhorn-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 66 (/home/kraus/git/open-iconic/png/eject-6x.png), width 48
   .                                                . 
@@ -157,7 +157,7 @@ Char 66 (/home/kraus/git/open-iconic/png/eject-6x.png), width 48
   .################################################. 
   .################################################. 
   .################################################. 
-  .################################################. 
+ __################################################__
 
 Char 67 (/home/kraus/git/open-iconic/png/headphones-6x.png), width 48
   .                    ########                    . 
@@ -207,7 +207,7 @@ Char 67 (/home/kraus/git/open-iconic/png/headphones-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 68 (/home/kraus/git/open-iconic/png/media-pause-6x.png), width 48
   .                                                . 
@@ -257,7 +257,7 @@ Char 68 (/home/kraus/git/open-iconic/png/media-pause-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 69 (/home/kraus/git/open-iconic/png/media-play-6x.png), width 48
   .                                                . 
@@ -307,7 +307,7 @@ Char 69 (/home/kraus/git/open-iconic/png/media-play-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 70 (/home/kraus/git/open-iconic/png/media-record-6x.png), width 48
   .                                                . 
@@ -357,7 +357,7 @@ Char 70 (/home/kraus/git/open-iconic/png/media-record-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 71 (/home/kraus/git/open-iconic/png/media-skip-backward-6x.png), width 48
   .                                                . 
@@ -407,7 +407,7 @@ Char 71 (/home/kraus/git/open-iconic/png/media-skip-backward-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 72 (/home/kraus/git/open-iconic/png/media-skip-forward-6x.png), width 48
   .                                                . 
@@ -457,7 +457,7 @@ Char 72 (/home/kraus/git/open-iconic/png/media-skip-forward-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 73 (/home/kraus/git/open-iconic/png/media-step-backward-6x.png), width 48
   .                                                . 
@@ -507,7 +507,7 @@ Char 73 (/home/kraus/git/open-iconic/png/media-step-backward-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 74 (/home/kraus/git/open-iconic/png/media-step-forward-6x.png), width 48
   .                                                . 
@@ -557,7 +557,7 @@ Char 74 (/home/kraus/git/open-iconic/png/media-step-forward-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 75 (/home/kraus/git/open-iconic/png/media-stop-6x.png), width 48
   .                                                . 
@@ -607,7 +607,7 @@ Char 75 (/home/kraus/git/open-iconic/png/media-stop-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 76 (/home/kraus/git/open-iconic/png/microphone-6x.png), width 48
   .                     ######                     . 
@@ -657,7 +657,7 @@ Char 76 (/home/kraus/git/open-iconic/png/microphone-6x.png), width 48
   .             ######################             . 
   .             #######################            . 
   .            ########################            . 
-  .            ########################            . 
+ __            ########################            __
 
 Char 77 (/home/kraus/git/open-iconic/png/musical-note-6x.png), width 48
   .                                  ##############. 
@@ -707,7 +707,7 @@ Char 77 (/home/kraus/git/open-iconic/png/musical-note-6x.png), width 48
   .  ##############                                . 
   .   ############                                 . 
   .    ##########                                  . 
-  .      ######                                    . 
+ __      ######                                    __
 
 Char 78 (/home/kraus/git/open-iconic/png/play-circle-6x.png), width 48
   .                   ##########                   . 
@@ -757,7 +757,7 @@ Char 78 (/home/kraus/git/open-iconic/png/play-circle-6x.png), width 48
   .            ########################            . 
   .             ######################             . 
   .                ################                . 
-  .                   ##########                   . 
+ __                   ##########                   __
 
 Char 79 (/home/kraus/git/open-iconic/png/volume-high-6x.png), width 48
   .                    ####                        . 
@@ -807,7 +807,7 @@ Char 79 (/home/kraus/git/open-iconic/png/volume-high-6x.png), width 48
   .                  ######                        . 
   .                  ######                        . 
   .                   #####                        . 
-  .                    ####                        . 
+ __                    ####                        __
 
 Char 80 (/home/kraus/git/open-iconic/png/volume-low-6x.png), width 48
   .                          ####                  . 
@@ -857,7 +857,7 @@ Char 80 (/home/kraus/git/open-iconic/png/volume-low-6x.png), width 48
   .                        ######                  . 
   .                        ######                  . 
   .                         #####                  . 
-  .                          ####                  . 
+ __                          ####                  __
 
 Char 81 (/home/kraus/git/open-iconic/png/volume-off-6x.png), width 48
   .                                ####            . 
@@ -907,4 +907,4 @@ Char 81 (/home/kraus/git/open-iconic/png/volume-off-6x.png), width 48
   .                              ######            . 
   .                              ######            . 
   .                               #####            . 
-  .                                ####            . 
+ __                                ####            __

@@ -57,7 +57,7 @@ Char 64 (/home/kraus/git/open-iconic/png/check-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 65 (/home/kraus/git/open-iconic/png/circle-check-6x.png), width 48
   .                   ##########                   . 
@@ -107,7 +107,7 @@ Char 65 (/home/kraus/git/open-iconic/png/circle-check-6x.png), width 48
   .            ########################            . 
   .             ######################             . 
   .                ################                . 
-  .                   ##########                   . 
+ __                   ##########                   __
 
 Char 66 (/home/kraus/git/open-iconic/png/circle-x-6x.png), width 48
   .                   ##########                   . 
@@ -157,7 +157,7 @@ Char 66 (/home/kraus/git/open-iconic/png/circle-x-6x.png), width 48
   .            ########################            . 
   .             ######################             . 
   .                ################                . 
-  .                   ##########                   . 
+ __                   ##########                   __
 
 Char 67 (/home/kraus/git/open-iconic/png/task-6x.png), width 48
   .#################################               . 
@@ -207,7 +207,7 @@ Char 67 (/home/kraus/git/open-iconic/png/task-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 68 (/home/kraus/git/open-iconic/png/x-6x.png), width 48
   .        #                             #         . 
@@ -257,4 +257,4 @@ Char 68 (/home/kraus/git/open-iconic/png/x-6x.png), width 48
   .      #####                         #####       . 
   .       ###                           ###        . 
   .        #                             #         . 
-  .                                                . 
+ __                                                __

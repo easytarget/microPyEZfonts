@@ -41,7 +41,7 @@ Char 64 (/home/kraus/git/open-iconic/png/bolt-4x.png), width 32
   .            ##                  . 
   .            #                   . 
   .            #                   . 
-  .                                . 
+ __                                __
 
 Char 65 (/home/kraus/git/open-iconic/png/dial-4x.png), width 32
   .                                . 
@@ -75,7 +75,7 @@ Char 65 (/home/kraus/git/open-iconic/png/dial-4x.png), width 32
   .                                . 
   .                                . 
   .                                . 
-  .                                . 
+ __                                __
 
 Char 66 (/home/kraus/git/open-iconic/png/fork-4x.png), width 32
   .    ####            ####        . 
@@ -109,7 +109,7 @@ Char 66 (/home/kraus/git/open-iconic/png/fork-4x.png), width 32
   . ##########                     . 
   . ##########                     . 
   .  ########                      . 
-  .    ####                        . 
+ __    ####                        __
 
 Char 67 (/home/kraus/git/open-iconic/png/grid-four-up-4x.png), width 32
   .####    ####    ####    ####    . 
@@ -143,7 +143,7 @@ Char 67 (/home/kraus/git/open-iconic/png/grid-four-up-4x.png), width 32
   .                                . 
   .                                . 
   .                                . 
-  .                                . 
+ __                                __
 
 Char 68 (/home/kraus/git/open-iconic/png/grid-three-up-4x.png), width 32
   .########    ########    ########. 
@@ -177,7 +177,7 @@ Char 68 (/home/kraus/git/open-iconic/png/grid-three-up-4x.png), width 32
   .########    ########    ########. 
   .########    ########    ########. 
   .########    ########    ########. 
-  .########    ########    ########. 
+ __########    ########    ########__
 
 Char 69 (/home/kraus/git/open-iconic/png/grid-two-up-4x.png), width 32
   .############        ############. 
@@ -211,7 +211,7 @@ Char 69 (/home/kraus/git/open-iconic/png/grid-two-up-4x.png), width 32
   .############        ############. 
   .############        ############. 
   .############        ############. 
-  .############        ############. 
+ __############        ############__
 
 Char 70 (/home/kraus/git/open-iconic/png/signal-4x.png), width 32
   .                        ####    . 
@@ -245,7 +245,7 @@ Char 70 (/home/kraus/git/open-iconic/png/signal-4x.png), width 32
   .####    ####    ####    ####    . 
   .####    ####    ####    ####    . 
   .####    ####    ####    ####    . 
-  .####    ####    ####    ####    . 
+ __####    ####    ####    ####    __
 
 Char 71 (/home/kraus/git/open-iconic/png/target-4x.png), width 32
   .            ########            . 
@@ -279,4 +279,4 @@ Char 71 (/home/kraus/git/open-iconic/png/target-4x.png), width 32
   .      ####################      . 
   .       ##################       . 
   .         ##############         . 
-  .            ########            . 
+ __            ########            __

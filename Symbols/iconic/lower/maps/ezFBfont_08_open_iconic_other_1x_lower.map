@@ -17,7 +17,7 @@ Char 64 (/home/kraus/git/open-iconic/png/bolt.png), width 8
   . ####   . 
   .   #    . 
   .   #    . 
-  .        . 
+ __        __
 
 Char 65 (/home/kraus/git/open-iconic/png/dial.png), width 8
   .        . 
@@ -27,7 +27,7 @@ Char 65 (/home/kraus/git/open-iconic/png/dial.png), width 8
   .# #### #. 
   .  ####  . 
   .   ##   . 
-  .        . 
+ __        __
 
 Char 66 (/home/kraus/git/open-iconic/png/fork.png), width 8
   .### ### . 
@@ -37,7 +37,7 @@ Char 66 (/home/kraus/git/open-iconic/png/fork.png), width 8
   . #####  . 
   .###     . 
   .###     . 
-  .###     . 
+ __###     __
 
 Char 67 (/home/kraus/git/open-iconic/png/grid-four-up.png), width 8
   .# # # # . 
@@ -47,7 +47,7 @@ Char 67 (/home/kraus/git/open-iconic/png/grid-four-up.png), width 8
   .# # # # . 
   .        . 
   .# # # # . 
-  .        . 
+ __        __
 
 Char 68 (/home/kraus/git/open-iconic/png/grid-three-up.png), width 8
   .## ## ##. 
@@ -57,7 +57,7 @@ Char 68 (/home/kraus/git/open-iconic/png/grid-three-up.png), width 8
   .## ## ##. 
   .        . 
   .## ## ##. 
-  .## ## ##. 
+ __## ## ##__
 
 Char 69 (/home/kraus/git/open-iconic/png/grid-two-up.png), width 8
   .###  ###. 
@@ -67,7 +67,7 @@ Char 69 (/home/kraus/git/open-iconic/png/grid-two-up.png), width 8
   .        . 
   .###  ###. 
   .###  ###. 
-  .###  ###. 
+ __###  ###__
 
 Char 70 (/home/kraus/git/open-iconic/png/signal.png), width 8
   .      # . 
@@ -77,7 +77,7 @@ Char 70 (/home/kraus/git/open-iconic/png/signal.png), width 8
   .  # # # . 
   .# # # # . 
   .# # # # . 
-  .# # # # . 
+ __# # # # __
 
 Char 71 (/home/kraus/git/open-iconic/png/target.png), width 8
   .  ####  . 
@@ -87,4 +87,4 @@ Char 71 (/home/kraus/git/open-iconic/png/target.png), width 8
   .# #  # #. 
   .#  ##  #. 
   . #    # . 
-  .  ####  . 
+ __  ####  __

@@ -17,7 +17,7 @@ Char 64 (/home/kraus/git/open-iconic/png/cloud.png), width 8
   .########. 
   .########. 
   . #######. 
-  .        . 
+ __        __
 
 Char 65 (/home/kraus/git/open-iconic/png/cloudy.png), width 8
   . ###    . 
@@ -27,7 +27,7 @@ Char 65 (/home/kraus/git/open-iconic/png/cloudy.png), width 8
   . ###### . 
   .########. 
   .########. 
-  . #######. 
+ __ #######__
 
 Char 66 (/home/kraus/git/open-iconic/png/moon.png), width 8
   .        . 
@@ -37,7 +37,7 @@ Char 66 (/home/kraus/git/open-iconic/png/moon.png), width 8
   .####    . 
   .####### . 
   . ###### . 
-  .   ##   . 
+ __   ##   __
 
 Char 67 (/home/kraus/git/open-iconic/png/rain.png), width 8
   .   ###  . 
@@ -47,7 +47,7 @@ Char 67 (/home/kraus/git/open-iconic/png/rain.png), width 8
   .##   ###. 
   .   #   #. 
   . # # #  . 
-  . # # #  . 
+ __ # # #  __
 
 Char 68 (/home/kraus/git/open-iconic/png/star.png), width 8
   .        . 
@@ -57,7 +57,7 @@ Char 68 (/home/kraus/git/open-iconic/png/star.png), width 8
   .  ####  . 
   .  ####  . 
   .  #  #  . 
-  .        . 
+ __        __
 
 Char 69 (/home/kraus/git/open-iconic/png/sun.png), width 8
   .        . 
@@ -67,4 +67,4 @@ Char 69 (/home/kraus/git/open-iconic/png/sun.png), width 8
   .  ####  . 
   .   ##   . 
   . #    # . 
-  .        . 
+ __        __

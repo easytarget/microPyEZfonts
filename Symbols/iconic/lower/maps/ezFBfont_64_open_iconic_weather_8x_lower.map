@@ -73,7 +73,7 @@ Char 64 (/home/kraus/git/open-iconic/png/cloud-8x.png), width 64
   .                                                                . 
   .                                                                . 
   .                                                                . 
-  .                                                                . 
+ __                                                                __
 
 Char 65 (/home/kraus/git/open-iconic/png/cloudy-8x.png), width 64
   .                ########                                        . 
@@ -139,7 +139,7 @@ Char 65 (/home/kraus/git/open-iconic/png/cloudy-8x.png), width 64
   .      ######################################################    . 
   .       ####################################################     . 
   .         #################################################      . 
-  .            ###########################################         . 
+ __            ###########################################         __
 
 Char 66 (/home/kraus/git/open-iconic/png/moon-8x.png), width 64
   .                    #                                           . 
@@ -205,7 +205,7 @@ Char 66 (/home/kraus/git/open-iconic/png/moon-8x.png), width 64
   .                      ####################                      . 
   .                         ##############                         . 
   .                                                                . 
-  .                                                                . 
+ __                                                                __
 
 Char 67 (/home/kraus/git/open-iconic/png/rain-8x.png), width 64
   .                                ########                        . 
@@ -271,7 +271,7 @@ Char 67 (/home/kraus/git/open-iconic/png/rain-8x.png), width 64
   .        ########        ########        ########                . 
   .        ########        ########        ########                . 
   .         ######          ######          ######                 . 
-  .          ####            ####            ####                  . 
+ __          ####            ####            ####                  __
 
 Char 68 (/home/kraus/git/open-iconic/png/star-8x.png), width 64
   .                                                                . 
@@ -337,7 +337,7 @@ Char 68 (/home/kraus/git/open-iconic/png/star-8x.png), width 64
   .             ###                                ###             . 
   .             ##                                  ##             . 
   .             #                                    #             . 
-  .                                                                . 
+ __                                                                __
 
 Char 69 (/home/kraus/git/open-iconic/png/sun-8x.png), width 64
   .                              ####                              . 
@@ -403,4 +403,4 @@ Char 69 (/home/kraus/git/open-iconic/png/sun-8x.png), width 64
   .                            ########                            . 
   .                            ########                            . 
   .                             ######                             . 
-  .                              ####                              . 
+ __                              ####                              __

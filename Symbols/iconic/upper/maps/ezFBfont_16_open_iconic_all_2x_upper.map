@@ -25,7 +25,7 @@ Char 192 (/home/kraus/git/open-iconic/png/justify-right-2x.png), width 16
   .    ############. 
   .    ############. 
   .                . 
-  .                . 
+ __                __
 
 Char 193 (/home/kraus/git/open-iconic/png/key-2x.png), width 16
   .         ####   . 
@@ -43,7 +43,7 @@ Char 193 (/home/kraus/git/open-iconic/png/key-2x.png), width 16
   .######          . 
   .######          . 
   .######          . 
-  .######          . 
+ __######          __
 
 Char 194 (/home/kraus/git/open-iconic/png/laptop-2x.png), width 16
   .                . 
@@ -61,7 +61,7 @@ Char 194 (/home/kraus/git/open-iconic/png/laptop-2x.png), width 16
   .################. 
   .################. 
   .                . 
-  .                . 
+ __                __
 
 Char 195 (/home/kraus/git/open-iconic/png/layers-2x.png), width 16
   .########        . 
@@ -79,7 +79,7 @@ Char 195 (/home/kraus/git/open-iconic/png/layers-2x.png), width 16
   .              ##. 
   .              ##. 
   .        ########. 
-  .        ########. 
+ __        ########__
 
 Char 196 (/home/kraus/git/open-iconic/png/lightbulb-2x.png), width 16
   .        ##      . 
@@ -97,7 +97,7 @@ Char 196 (/home/kraus/git/open-iconic/png/lightbulb-2x.png), width 16
   .                . 
   .                . 
   .     ####       . 
-  .     ####       . 
+ __     ####       __
 
 Char 197 (/home/kraus/git/open-iconic/png/link-broken-2x.png), width 16
   .    ##    ####  . 
@@ -115,7 +115,7 @@ Char 197 (/home/kraus/git/open-iconic/png/link-broken-2x.png), width 16
   .##    ##  ####  . 
   .###  ###  ####  . 
   . ######   ##    . 
-  .  ####    ##    . 
+ __  ####    ##    __
 
 Char 198 (/home/kraus/git/open-iconic/png/link-intact-2x.png), width 16
   .          ####  . 
@@ -133,7 +133,7 @@ Char 198 (/home/kraus/git/open-iconic/png/link-intact-2x.png), width 16
   .##              . 
   .###  ##         . 
   . ######         . 
-  .  ####          . 
+ __  ####          __
 
 Char 199 (/home/kraus/git/open-iconic/png/list-2x.png), width 16
   .##  ############. 
@@ -151,7 +151,7 @@ Char 199 (/home/kraus/git/open-iconic/png/list-2x.png), width 16
   .##  ############. 
   .##  ############. 
   .                . 
-  .                . 
+ __                __
 
 Char 200 (/home/kraus/git/open-iconic/png/list-rich-2x.png), width 16
   .######  ########. 
@@ -169,7 +169,7 @@ Char 200 (/home/kraus/git/open-iconic/png/list-rich-2x.png), width 16
   .######  ######  . 
   .######  ######  . 
   .                . 
-  .                . 
+ __                __
 
 Char 201 (/home/kraus/git/open-iconic/png/location-2x.png), width 16
   .                . 
@@ -187,7 +187,7 @@ Char 201 (/home/kraus/git/open-iconic/png/location-2x.png), width 16
   .       ###      . 
   .       ##       . 
   .        #       . 
-  .                . 
+ __                __
 
 Char 202 (/home/kraus/git/open-iconic/png/lock-locked-2x.png), width 16
   .      ####      . 
@@ -205,7 +205,7 @@ Char 202 (/home/kraus/git/open-iconic/png/lock-locked-2x.png), width 16
   .  ############  . 
   .  ############  . 
   .                . 
-  .                . 
+ __                __
 
 Char 203 (/home/kraus/git/open-iconic/png/lock-unlocked-2x.png), width 16
   .      ####      . 
@@ -223,7 +223,7 @@ Char 203 (/home/kraus/git/open-iconic/png/lock-unlocked-2x.png), width 16
   .  ############  . 
   .  ############  . 
   .  ############  . 
-  .  ############  . 
+ __  ############  __
 
 Char 204 (/home/kraus/git/open-iconic/png/loop-2x.png), width 16
   .            #   . 
@@ -241,7 +241,7 @@ Char 204 (/home/kraus/git/open-iconic/png/loop-2x.png), width 16
   .  ##            . 
   .   #            . 
   .                . 
-  .                . 
+ __                __
 
 Char 205 (/home/kraus/git/open-iconic/png/loop-circular-2x.png), width 16
   .                . 
@@ -259,7 +259,7 @@ Char 205 (/home/kraus/git/open-iconic/png/loop-circular-2x.png), width 16
   .        ####    . 
   .        ##      . 
   .                . 
-  .                . 
+ __                __
 
 Char 206 (/home/kraus/git/open-iconic/png/loop-square-2x.png), width 16
   .  ############  . 
@@ -277,7 +277,7 @@ Char 206 (/home/kraus/git/open-iconic/png/loop-square-2x.png), width 16
   .  ##        ##  . 
   .  ##        ##  . 
   .  ############  . 
-  .  ############  . 
+ __  ############  __
 
 Char 207 (/home/kraus/git/open-iconic/png/magnifying-glass-2x.png), width 16
   .    ######      . 
@@ -295,7 +295,7 @@ Char 207 (/home/kraus/git/open-iconic/png/magnifying-glass-2x.png), width 16
   .   ############ . 
   .    ###### #####. 
   .            ####. 
-  .             ## . 
+ __             ## __
 
 Char 208 (/home/kraus/git/open-iconic/png/map-2x.png), width 16
   .################. 
@@ -313,7 +313,7 @@ Char 208 (/home/kraus/git/open-iconic/png/map-2x.png), width 16
   .##            ##. 
   .##            ##. 
   .################. 
-  .################. 
+ __################__
 
 Char 209 (/home/kraus/git/open-iconic/png/map-marker-2x.png), width 16
   .      ####      . 
@@ -331,7 +331,7 @@ Char 209 (/home/kraus/git/open-iconic/png/map-marker-2x.png), width 16
   .     ######     . 
   .      ####      . 
   .       ##       . 
-  .                . 
+ __                __
 
 Char 210 (/home/kraus/git/open-iconic/png/media-pause-2x.png), width 16
   .                . 
@@ -349,7 +349,7 @@ Char 210 (/home/kraus/git/open-iconic/png/media-pause-2x.png), width 16
   .  ####    ####  . 
   .  ####    ####  . 
   .                . 
-  .                . 
+ __                __
 
 Char 211 (/home/kraus/git/open-iconic/png/media-play-2x.png), width 16
   .                . 
@@ -367,7 +367,7 @@ Char 211 (/home/kraus/git/open-iconic/png/media-play-2x.png), width 16
   .  ###           . 
   .  #             . 
   .                . 
-  .                . 
+ __                __
 
 Char 212 (/home/kraus/git/open-iconic/png/media-record-2x.png), width 16
   .                . 
@@ -385,7 +385,7 @@ Char 212 (/home/kraus/git/open-iconic/png/media-record-2x.png), width 16
   .    ########    . 
   .      ####      . 
   .                . 
-  .                . 
+ __                __
 
 Char 213 (/home/kraus/git/open-iconic/png/media-skip-backward-2x.png), width 16
   .                . 
@@ -403,7 +403,7 @@ Char 213 (/home/kraus/git/open-iconic/png/media-skip-backward-2x.png), width 16
   .      ##      ##. 
   .       #       #. 
   .                . 
-  .                . 
+ __                __
 
 Char 214 (/home/kraus/git/open-iconic/png/media-skip-forward-2x.png), width 16
   .                . 
@@ -421,7 +421,7 @@ Char 214 (/home/kraus/git/open-iconic/png/media-skip-forward-2x.png), width 16
   .##      ##      . 
   .#       #       . 
   .                . 
-  .                . 
+ __                __
 
 Char 215 (/home/kraus/git/open-iconic/png/media-step-backward-2x.png), width 16
   .                . 
@@ -439,7 +439,7 @@ Char 215 (/home/kraus/git/open-iconic/png/media-step-backward-2x.png), width 16
   .####        ##  . 
   .####         #  . 
   .                . 
-  .                . 
+ __                __
 
 Char 216 (/home/kraus/git/open-iconic/png/media-step-forward-2x.png), width 16
   .                . 
@@ -457,7 +457,7 @@ Char 216 (/home/kraus/git/open-iconic/png/media-step-forward-2x.png), width 16
   .##        ####  . 
   .#         ####  . 
   .                . 
-  .                . 
+ __                __
 
 Char 217 (/home/kraus/git/open-iconic/png/media-stop-2x.png), width 16
   .                . 
@@ -475,7 +475,7 @@ Char 217 (/home/kraus/git/open-iconic/png/media-stop-2x.png), width 16
   .  ############  . 
   .  ############  . 
   .                . 
-  .                . 
+ __                __
 
 Char 218 (/home/kraus/git/open-iconic/png/medical-cross-2x.png), width 16
   .    ########    . 
@@ -493,7 +493,7 @@ Char 218 (/home/kraus/git/open-iconic/png/medical-cross-2x.png), width 16
   .    ########    . 
   .    ########    . 
   .    ########    . 
-  .    ########    . 
+ __    ########    __
 
 Char 219 (/home/kraus/git/open-iconic/png/menu-2x.png), width 16
   .                . 
@@ -511,7 +511,7 @@ Char 219 (/home/kraus/git/open-iconic/png/menu-2x.png), width 16
   .                . 
   .                . 
   .################. 
-  .################. 
+ __################__
 
 Char 220 (/home/kraus/git/open-iconic/png/microphone-2x.png), width 16
   .       ##       . 
@@ -529,7 +529,7 @@ Char 220 (/home/kraus/git/open-iconic/png/microphone-2x.png), width 16
   .       ##       . 
   .       ##       . 
   .     ######     . 
-  .    ########    . 
+ __    ########    __
 
 Char 221 (/home/kraus/git/open-iconic/png/minus-2x.png), width 16
   .                . 
@@ -547,7 +547,7 @@ Char 221 (/home/kraus/git/open-iconic/png/minus-2x.png), width 16
   .                . 
   .                . 
   .                . 
-  .                . 
+ __                __
 
 Char 222 (/home/kraus/git/open-iconic/png/monitor-2x.png), width 16
   .################. 
@@ -565,7 +565,7 @@ Char 222 (/home/kraus/git/open-iconic/png/monitor-2x.png), width 16
   .      ####      . 
   .      ####      . 
   .   ##########   . 
-  .  ############  . 
+ __  ############  __
 
 Char 223 (/home/kraus/git/open-iconic/png/moon-2x.png), width 16
   .    #           . 
@@ -583,7 +583,7 @@ Char 223 (/home/kraus/git/open-iconic/png/moon-2x.png), width 16
   .  ############  . 
   .   ##########   . 
   .    ########    . 
-  .       ##       . 
+ __       ##       __
 
 Char 224 (/home/kraus/git/open-iconic/png/move-2x.png), width 16
   .                . 
@@ -601,7 +601,7 @@ Char 224 (/home/kraus/git/open-iconic/png/move-2x.png), width 16
   .      ##        . 
   .                . 
   .                . 
-  .                . 
+ __                __
 
 Char 225 (/home/kraus/git/open-iconic/png/musical-note-2x.png), width 16
   .         #######. 
@@ -619,7 +619,7 @@ Char 225 (/home/kraus/git/open-iconic/png/musical-note-2x.png), width 16
   .######    ######. 
   .######     #### . 
   .######          . 
-  . ####           . 
+ __ ####           __
 
 Char 226 (/home/kraus/git/open-iconic/png/paperclip-2x.png), width 16
   .        ####    . 
@@ -637,7 +637,7 @@ Char 226 (/home/kraus/git/open-iconic/png/paperclip-2x.png), width 16
   .###     ###     . 
   . ###   ###      . 
   .  #######       . 
-  .   #####        . 
+ __   #####        __
 
 Char 227 (/home/kraus/git/open-iconic/png/pencil-2x.png), width 16
   .                . 
@@ -655,7 +655,7 @@ Char 227 (/home/kraus/git/open-iconic/png/pencil-2x.png), width 16
   .#######         . 
   .######          . 
   .#####           . 
-  .####            . 
+ __####            __
 
 Char 228 (/home/kraus/git/open-iconic/png/people-2x.png), width 16
   .          ##    . 
@@ -673,7 +673,7 @@ Char 228 (/home/kraus/git/open-iconic/png/people-2x.png), width 16
   .##########  ####. 
   .##########  ####. 
   .##########      . 
-  .##########      . 
+ __##########      __
 
 Char 229 (/home/kraus/git/open-iconic/png/person-2x.png), width 16
   .      ####      . 
@@ -691,7 +691,7 @@ Char 229 (/home/kraus/git/open-iconic/png/person-2x.png), width 16
   .################. 
   .################. 
   .################. 
-  .################. 
+ __################__
 
 Char 230 (/home/kraus/git/open-iconic/png/phone-2x.png), width 16
   .  ##########    . 
@@ -709,7 +709,7 @@ Char 230 (/home/kraus/git/open-iconic/png/phone-2x.png), width 16
   .  ##########    . 
   .  ####  ####    . 
   .  ####  ####    . 
-  .  ##########    . 
+ __  ##########    __
 
 Char 231 (/home/kraus/git/open-iconic/png/pie-chart-2x.png), width 16
   .    ####        . 
@@ -727,7 +727,7 @@ Char 231 (/home/kraus/git/open-iconic/png/pie-chart-2x.png), width 16
   . ##   ######### . 
   .     #########  . 
   .     ########   . 
-  .      ######    . 
+ __      ######    __
 
 Char 232 (/home/kraus/git/open-iconic/png/pin-2x.png), width 16
   .  ##########    . 
@@ -745,7 +745,7 @@ Char 232 (/home/kraus/git/open-iconic/png/pin-2x.png), width 16
   .      ##        . 
   .      ##        . 
   .      ##        . 
-  .                . 
+ __                __
 
 Char 233 (/home/kraus/git/open-iconic/png/play-circle-2x.png), width 16
   .     ######     . 
@@ -763,7 +763,7 @@ Char 233 (/home/kraus/git/open-iconic/png/play-circle-2x.png), width 16
   . ############## . 
   .  ############  . 
   .   ##########   . 
-  .     ######     . 
+ __     ######     __
 
 Char 234 (/home/kraus/git/open-iconic/png/plus-2x.png), width 16
   .      ####      . 
@@ -781,7 +781,7 @@ Char 234 (/home/kraus/git/open-iconic/png/plus-2x.png), width 16
   .      ####      . 
   .      ####      . 
   .      ####      . 
-  .      ####      . 
+ __      ####      __
 
 Char 235 (/home/kraus/git/open-iconic/png/power-standby-2x.png), width 16
   .      ##        . 
@@ -799,7 +799,7 @@ Char 235 (/home/kraus/git/open-iconic/png/power-standby-2x.png), width 16
   . ##        ##   . 
   .  ###    ###    . 
   .   ########     . 
-  .    ######      . 
+ __    ######      __
 
 Char 236 (/home/kraus/git/open-iconic/png/print-2x.png), width 16
   .    ########    . 
@@ -817,7 +817,7 @@ Char 236 (/home/kraus/git/open-iconic/png/print-2x.png), width 16
   .    ########    . 
   .    ########    . 
   .    ########    . 
-  .    ########    . 
+ __    ########    __
 
 Char 237 (/home/kraus/git/open-iconic/png/project-2x.png), width 16
   .##            ##. 
@@ -835,7 +835,7 @@ Char 237 (/home/kraus/git/open-iconic/png/project-2x.png), width 16
   .##            ##. 
   .##            ##. 
   .                . 
-  .                . 
+ __                __
 
 Char 238 (/home/kraus/git/open-iconic/png/pulse-2x.png), width 16
   .                . 
@@ -853,7 +853,7 @@ Char 238 (/home/kraus/git/open-iconic/png/pulse-2x.png), width 16
   .   ##   ##      . 
   .                . 
   .                . 
-  .                . 
+ __                __
 
 Char 239 (/home/kraus/git/open-iconic/png/puzzle-piece-2x.png), width 16
   .     ##         . 
@@ -871,7 +871,7 @@ Char 239 (/home/kraus/git/open-iconic/png/puzzle-piece-2x.png), width 16
   .#####  #####    . 
   .####    ####    . 
   .####    ####    . 
-  .#####  #####    . 
+ __#####  #####    __
 
 Char 240 (/home/kraus/git/open-iconic/png/question-mark-2x.png), width 16
   .      ######    . 
@@ -889,7 +889,7 @@ Char 240 (/home/kraus/git/open-iconic/png/question-mark-2x.png), width 16
   .                . 
   .                . 
   .        ##      . 
-  .        ##      . 
+ __        ##      __
 
 Char 241 (/home/kraus/git/open-iconic/png/rain-2x.png), width 16
   .       ####     . 
@@ -907,7 +907,7 @@ Char 241 (/home/kraus/git/open-iconic/png/rain-2x.png), width 16
   .  ##  ##  ##    . 
   .  ##  ##  ##    . 
   .  ##  ##  ##    . 
-  .  ##  ##  ##    . 
+ __  ##  ##  ##    __
 
 Char 242 (/home/kraus/git/open-iconic/png/random-2x.png), width 16
   .            #   . 
@@ -925,7 +925,7 @@ Char 242 (/home/kraus/git/open-iconic/png/random-2x.png), width 16
   .####     ###### . 
   .###       ##### . 
   .            ##  . 
-  .            #   . 
+ __            #   __
 
 Char 243 (/home/kraus/git/open-iconic/png/reload-2x.png), width 16
   .     ######     . 
@@ -943,7 +943,7 @@ Char 243 (/home/kraus/git/open-iconic/png/reload-2x.png), width 16
   . ###            . 
   .  ####    ###   . 
   .   ##########   . 
-  .     ######     . 
+ __     ######     __
 
 Char 244 (/home/kraus/git/open-iconic/png/resize-both-2x.png), width 16
   .         #######. 
@@ -961,7 +961,7 @@ Char 244 (/home/kraus/git/open-iconic/png/resize-both-2x.png), width 16
   .#####           . 
   .#####           . 
   .######          . 
-  .#######         . 
+ __#######         __
 
 Char 245 (/home/kraus/git/open-iconic/png/resize-height-2x.png), width 16
   .                . 
@@ -979,7 +979,7 @@ Char 245 (/home/kraus/git/open-iconic/png/resize-height-2x.png), width 16
   .    ######      . 
   .     ####       . 
   .      ##        . 
-  .                . 
+ __                __
 
 Char 246 (/home/kraus/git/open-iconic/png/resize-width-2x.png), width 16
   .                . 
@@ -997,7 +997,7 @@ Char 246 (/home/kraus/git/open-iconic/png/resize-width-2x.png), width 16
   .                . 
   .                . 
   .                . 
-  .                . 
+ __                __
 
 Char 247 (/home/kraus/git/open-iconic/png/rss-2x.png), width 16
   .  ####          . 
@@ -1015,7 +1015,7 @@ Char 247 (/home/kraus/git/open-iconic/png/rss-2x.png), width 16
   . ##   ##  ##  ##. 
   .####  ##  ##  ##. 
   .####            . 
-  . ##             . 
+ __ ##             __
 
 Char 248 (/home/kraus/git/open-iconic/png/rss-alt-2x.png), width 16
   .####            . 
@@ -1033,7 +1033,7 @@ Char 248 (/home/kraus/git/open-iconic/png/rss-alt-2x.png), width 16
   .##   ####  #####. 
   .###  #####  ####. 
   .####  ####  ####. 
-  .####  ####  ####. 
+ __####  ####  ####__
 
 Char 249 (/home/kraus/git/open-iconic/png/script-2x.png), width 16
   .     ########## . 
@@ -1051,7 +1051,7 @@ Char 249 (/home/kraus/git/open-iconic/png/script-2x.png), width 16
   .##  ##########  . 
   .##  ##########  . 
   .##############  . 
-  . ############   . 
+ __ ############   __
 
 Char 250 (/home/kraus/git/open-iconic/png/share-2x.png), width 16
   .          #     . 
@@ -1069,7 +1069,7 @@ Char 250 (/home/kraus/git/open-iconic/png/share-2x.png), width 16
   .                . 
   .                . 
   .                . 
-  .                . 
+ __                __
 
 Char 251 (/home/kraus/git/open-iconic/png/share-boxed-2x.png), width 16
   .######          . 
@@ -1087,7 +1087,7 @@ Char 251 (/home/kraus/git/open-iconic/png/share-boxed-2x.png), width 16
   .############    . 
   .############    . 
   .                . 
-  .                . 
+ __                __
 
 Char 252 (/home/kraus/git/open-iconic/png/shield-2x.png), width 16
   .       ##       . 
@@ -1105,7 +1105,7 @@ Char 252 (/home/kraus/git/open-iconic/png/shield-2x.png), width 16
   .   ###  #####   . 
   .    ### ####    . 
   .     ######     . 
-  .      ####      . 
+ __      ####      __
 
 Char 253 (/home/kraus/git/open-iconic/png/signal-2x.png), width 16
   .            ##  . 
@@ -1123,7 +1123,7 @@ Char 253 (/home/kraus/git/open-iconic/png/signal-2x.png), width 16
   .##  ##  ##  ##  . 
   .##  ##  ##  ##  . 
   .##  ##  ##  ##  . 
-  .##  ##  ##  ##  . 
+ __##  ##  ##  ##  __
 
 Char 254 (/home/kraus/git/open-iconic/png/signpost-2x.png), width 16
   .      ##        . 
@@ -1141,7 +1141,7 @@ Char 254 (/home/kraus/git/open-iconic/png/signpost-2x.png), width 16
   .      ##        . 
   .      ##        . 
   .      ##        . 
-  .      ##        . 
+ __      ##        __
 
 Char 255 (/home/kraus/git/open-iconic/png/sort-ascending-2x.png), width 16
   .    ##  ####    . 
@@ -1159,4 +1159,4 @@ Char 255 (/home/kraus/git/open-iconic/png/sort-ascending-2x.png), width 16
   . ########       . 
   .  ######        . 
   .   ####         . 
-  .    ##          . 
+ __    ##          __

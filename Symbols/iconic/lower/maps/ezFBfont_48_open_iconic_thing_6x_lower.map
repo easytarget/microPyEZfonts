@@ -57,7 +57,7 @@ Char 64 (/home/kraus/git/open-iconic/png/basket-6x.png), width 48
   .      ####################################      . 
   .      ####################################      . 
   .      ####################################      . 
-  .       ##################################       . 
+ __       ##################################       __
 
 Char 65 (/home/kraus/git/open-iconic/png/briefcase-6x.png), width 48
   .                ################                . 
@@ -107,7 +107,7 @@ Char 65 (/home/kraus/git/open-iconic/png/briefcase-6x.png), width 48
   .################################################. 
   .################################################. 
   .################################################. 
-  .################################################. 
+ __################################################__
 
 Char 66 (/home/kraus/git/open-iconic/png/credit-card-6x.png), width 48
   .                                                . 
@@ -157,7 +157,7 @@ Char 66 (/home/kraus/git/open-iconic/png/credit-card-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 67 (/home/kraus/git/open-iconic/png/key-6x.png), width 48
   .                             ########           . 
@@ -207,7 +207,7 @@ Char 67 (/home/kraus/git/open-iconic/png/key-6x.png), width 48
   .##################                              . 
   .##################                              . 
   .##################                              . 
-  .##################                              . 
+ __##################                              __
 
 Char 68 (/home/kraus/git/open-iconic/png/lock-unlocked-6x.png), width 48
   .                     ######                     . 
@@ -257,7 +257,7 @@ Char 68 (/home/kraus/git/open-iconic/png/lock-unlocked-6x.png), width 48
   .      ####################################      . 
   .      ####################################      . 
   .      ####################################      . 
-  .      ####################################      . 
+ __      ####################################      __
 
 Char 69 (/home/kraus/git/open-iconic/png/paperclip-6x.png), width 48
   .                           ######               . 
@@ -307,7 +307,7 @@ Char 69 (/home/kraus/git/open-iconic/png/paperclip-6x.png), width 48
   .      #####################                     . 
   .        #################                       . 
   .          #############                         . 
-  .             #######                            . 
+ __             #######                            __
 
 Char 70 (/home/kraus/git/open-iconic/png/puzzle-piece-6x.png), width 48
   .               ######                           . 
@@ -357,7 +357,7 @@ Char 70 (/home/kraus/git/open-iconic/png/puzzle-piece-6x.png), width 48
   .#############          #############            . 
   .#############          #############            . 
   .##############        ##############            . 
-  .##############        ##############            . 
+ __##############        ##############            __
 
 Char 71 (/home/kraus/git/open-iconic/png/brush-6x.png), width 48
   .                                            #   . 
@@ -407,7 +407,7 @@ Char 71 (/home/kraus/git/open-iconic/png/brush-6x.png), width 48
   .  ################                              . 
   . ################                               . 
   . ##############                                 . 
-  .    ########                                    . 
+ __    ########                                    __
 
 Char 72 (/home/kraus/git/open-iconic/png/droplet-6x.png), width 48
   .                                                . 
@@ -457,7 +457,7 @@ Char 72 (/home/kraus/git/open-iconic/png/droplet-6x.png), width 48
   .            ########################            . 
   .             ######################             . 
   .              ####################              . 
-  .                ################                . 
+ __                ################                __
 
 Char 73 (/home/kraus/git/open-iconic/png/laptop-6x.png), width 48
   .                                                . 
@@ -507,7 +507,7 @@ Char 73 (/home/kraus/git/open-iconic/png/laptop-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 74 (/home/kraus/git/open-iconic/png/magnifying-glass-6x.png), width 48
   .                ##########                      . 
@@ -557,7 +557,7 @@ Char 74 (/home/kraus/git/open-iconic/png/magnifying-glass-6x.png), width 48
   .                                    ############. 
   .                                     ########## . 
   .                                      ######### . 
-  .                                       ######   . 
+ __                                       ######   __
 
 Char 75 (/home/kraus/git/open-iconic/png/phone-6x.png), width 48
   .      ##############################            . 
@@ -607,7 +607,7 @@ Char 75 (/home/kraus/git/open-iconic/png/phone-6x.png), width 48
   .      #############    #############            . 
   .      ##############################            . 
   .      ##############################            . 
-  .      ##############################            . 
+ __      ##############################            __
 
 Char 76 (/home/kraus/git/open-iconic/png/signpost-6x.png), width 48
   .                  ######                        . 
@@ -657,7 +657,7 @@ Char 76 (/home/kraus/git/open-iconic/png/signpost-6x.png), width 48
   .                  ######                        . 
   .                  ######                        . 
   .                  ######                        . 
-  .                  ######                        . 
+ __                  ######                        __
 
 Char 77 (/home/kraus/git/open-iconic/png/bug-6x.png), width 48
   .                  ######                        . 
@@ -707,7 +707,7 @@ Char 77 (/home/kraus/git/open-iconic/png/bug-6x.png), width 48
   .            #####        #####                  . 
   .             ###           ##                   . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 78 (/home/kraus/git/open-iconic/png/fire-6x.png), width 48
   .            #                                   . 
@@ -757,7 +757,7 @@ Char 78 (/home/kraus/git/open-iconic/png/fire-6x.png), width 48
   .       ####        #####################        . 
   .        ###       ######################        . 
   .          #       #####################         . 
-  .           #      ####################          . 
+ __           #      ####################          __
 
 Char 79 (/home/kraus/git/open-iconic/png/lock-locked-6x.png), width 48
   .                     ######                     . 
@@ -807,7 +807,7 @@ Char 79 (/home/kraus/git/open-iconic/png/lock-locked-6x.png), width 48
   .                                                . 
   .                                                . 
   .                                                . 
-  .                                                . 
+ __                                                __
 
 Char 80 (/home/kraus/git/open-iconic/png/monitor-6x.png), width 48
   . ############################################## . 
@@ -857,7 +857,7 @@ Char 80 (/home/kraus/git/open-iconic/png/monitor-6x.png), width 48
   .       ##################################       . 
   .       ##################################       . 
   .      ####################################      . 
-  .      ####################################      . 
+ __      ####################################      __
 
 Char 81 (/home/kraus/git/open-iconic/png/pin-6x.png), width 48
   .       ############################             . 
@@ -907,7 +907,7 @@ Char 81 (/home/kraus/git/open-iconic/png/pin-6x.png), width 48
   .                   ####                         . 
   .                    ##                          . 
   .                    #                           . 
-  .                                                . 
+ __                                                __
 
 Char 82 (/home/kraus/git/open-iconic/png/tablet-6x.png), width 48
   . ########################################       . 
@@ -957,4 +957,4 @@ Char 82 (/home/kraus/git/open-iconic/png/tablet-6x.png), width 48
   .###################    ###################      . 
   .##########################################      . 
   .##########################################      . 
-  . ########################################       . 
+ __ ########################################       __

@@ -41,7 +41,7 @@ Char 64 (/home/kraus/git/open-iconic/png/aperture-4x.png), width 32
   .      ######    ##########      . 
   .       #####     #######        . 
   .         ####    ######         . 
-  .            #    ###            . 
+ __            #    ###            __
 
 Char 65 (/home/kraus/git/open-iconic/png/calculator-4x.png), width 32
   .############################    . 
@@ -75,7 +75,7 @@ Char 65 (/home/kraus/git/open-iconic/png/calculator-4x.png), width 32
   .############################    . 
   .############################    . 
   .############################    . 
-  .############################    . 
+ __############################    __
 
 Char 66 (/home/kraus/git/open-iconic/png/calendar-4x.png), width 32
   .############################    . 
@@ -109,7 +109,7 @@ Char 66 (/home/kraus/git/open-iconic/png/calendar-4x.png), width 32
   .############################    . 
   .############################    . 
   .############################    . 
-  .############################    . 
+ __############################    __
 
 Char 67 (/home/kraus/git/open-iconic/png/camera-slr-4x.png), width 32
   .                ########        . 
@@ -143,7 +143,7 @@ Char 67 (/home/kraus/git/open-iconic/png/camera-slr-4x.png), width 32
   .################################. 
   .################################. 
   .################################. 
-  .################################. 
+ __################################__
 
 Char 68 (/home/kraus/git/open-iconic/png/chat-4x.png), width 32
   .####################            . 
@@ -177,7 +177,7 @@ Char 68 (/home/kraus/git/open-iconic/png/chat-4x.png), width 32
   .                                . 
   .                                . 
   .                                . 
-  .                                . 
+ __                                __
 
 Char 69 (/home/kraus/git/open-iconic/png/clock-4x.png), width 32
   .            ########            . 
@@ -211,7 +211,7 @@ Char 69 (/home/kraus/git/open-iconic/png/clock-4x.png), width 32
   .      ####################      . 
   .       ##################       . 
   .         ##############         . 
-  .            ########            . 
+ __            ########            __
 
 Char 70 (/home/kraus/git/open-iconic/png/compass-4x.png), width 32
   .            ########            . 
@@ -245,7 +245,7 @@ Char 70 (/home/kraus/git/open-iconic/png/compass-4x.png), width 32
   .      ####################      . 
   .       ##################       . 
   .         ##############         . 
-  .            ########            . 
+ __            ########            __
 
 Char 71 (/home/kraus/git/open-iconic/png/shield-4x.png), width 32
   .               ##               . 
@@ -279,7 +279,7 @@ Char 71 (/home/kraus/git/open-iconic/png/shield-4x.png), width 32
   .         ##############         . 
   .          ############          . 
   .            ########            . 
-  .              ####              . 
+ __              ####              __
 
 Char 72 (/home/kraus/git/open-iconic/png/timer-4x.png), width 32
   .        ############            . 
@@ -313,4 +313,4 @@ Char 72 (/home/kraus/git/open-iconic/png/timer-4x.png), width 32
   .     ##################         . 
   .      ################          . 
   .        ############            . 
-  .          ########              . 
+ __          ########              __

@@ -12,7 +12,7 @@ Fixed width: False
 Char 192 (aleph), width 12
   .            . 
   .            . 
- __  #   #     __
+  .  #   #     . 
   .  ##  ###   . 
   .   ##  ##   . 
   .    #  #    . 
@@ -21,7 +21,7 @@ Char 192 (aleph), width 12
   .  #   ##    . 
   .   #   ##   . 
   .   ##   ##  . 
-  .  ###    #  . 
+ __  ###    #  __
   .            . 
   .            . 
   .            . 
@@ -29,7 +29,7 @@ Char 192 (aleph), width 12
 Char 193 (Ifraktur), width 10
   .          . 
   .   ###### . 
- __  ##    # __
+  .  ##    # . 
   .  #    #  . 
   .  #   ##  . 
   .   #  #   . 
@@ -38,7 +38,7 @@ Char 193 (Ifraktur), width 10
   .        # . 
   .  ##    # . 
   . ####   # . 
-  .    ## #  . 
+ __    ## #  __
   .     ##   . 
   .          . 
   .          . 
@@ -46,7 +46,7 @@ Char 193 (Ifraktur), width 10
 Char 194 (Rfraktur), width 12
   .            . 
   .  ###  ##   . 
- __ #  ### ##  __
+  . #  ### ##  . 
   . #   #  ##  . 
   . #   # ##   . 
   . ##  ###    . 
@@ -55,7 +55,7 @@ Char 194 (Rfraktur), width 12
   .     #  #   . 
   .     #  #   . 
   .  ## #  #   . 
-  . # ##    ## . 
+ __ # ##    ## __
   .            . 
   .            . 
   .            . 
@@ -63,7 +63,7 @@ Char 194 (Rfraktur), width 12
 Char 195 (weierstrass), width 12
   .            . 
   .            . 
- __            __
+  .            . 
   .    #       . 
   .   #   ##   . 
   .  #   # ##  . 
@@ -72,7 +72,7 @@ Char 195 (weierstrass), width 12
   . ## # #  #  . 
   .  ## #  #   . 
   .  ## # ##   . 
-  . # ## ##    . 
+ __ # ## ##    __
   . #  #       . 
   . #  #       . 
   .  ##        . 
@@ -80,7 +80,7 @@ Char 195 (weierstrass), width 12
 Char 196 (circlemultiply), width 11
   .           . 
   .           . 
- __           __
+  .           . 
   .    ###    . 
   .  ##   ##  . 
   .  ##   ##  . 
@@ -89,7 +89,7 @@ Char 196 (circlemultiply), width 11
   . #  # #  # . 
   .  ##   ##  . 
   .  ##   ##  . 
-  .    ###    . 
+ __    ###    __
   .           . 
   .           . 
   .           . 
@@ -97,7 +97,7 @@ Char 196 (circlemultiply), width 11
 Char 197 (circleplus), width 11
   .           . 
   .           . 
- __           __
+  .           . 
   .    ###    . 
   .  ##   ##  . 
   .  #  #  #  . 
@@ -106,7 +106,7 @@ Char 197 (circleplus), width 11
   . #   #   # . 
   .  #  #  #  . 
   .  ##   ##  . 
-  .    ###    . 
+ __    ###    __
   .           . 
   .           . 
   .           . 
@@ -114,7 +114,7 @@ Char 197 (circleplus), width 11
 Char 198 (emptyset), width 12
   .            . 
   .   #####  # . 
- __ ##     ##  __
+  . ##     ##  . 
   . #      ##  . 
   .#      #  # . 
   .#     #   # . 
@@ -123,7 +123,7 @@ Char 198 (emptyset), width 12
   .#  #      # . 
   . ##      #  . 
   . ##     ##  . 
-  .#  #####    . 
+ __#  #####    __
   .            . 
   .            . 
   .            . 
@@ -131,7 +131,7 @@ Char 198 (emptyset), width 12
 Char 199 (intersection), width 10
   .          . 
   .          . 
- __          __
+  .          . 
   .          . 
   .          . 
   .   ####   . 
@@ -140,7 +140,7 @@ Char 199 (intersection), width 10
   .#        #. 
   .#        #. 
   .#        #. 
-  .#        #. 
+ __#        #__
   .          . 
   .          . 
   .          . 
@@ -148,7 +148,7 @@ Char 199 (intersection), width 10
 Char 200 (union), width 10
   .          . 
   .          . 
- __          __
+  .          . 
   .          . 
   .          . 
   .#        #. 
@@ -157,7 +157,7 @@ Char 200 (union), width 10
   .#        #. 
   . #      # . 
   . ##    ## . 
-  .   ####   . 
+ __   ####   __
   .          . 
   .          . 
   .          . 
@@ -165,7 +165,7 @@ Char 200 (union), width 10
 Char 201 (propersuperset), width 10
   .          . 
   .          . 
- __          __
+  .          . 
   .          . 
   .          . 
   .#######   . 
@@ -174,7 +174,7 @@ Char 201 (propersuperset), width 10
   .        # . 
   .        # . 
   .       #  . 
-  .#######   . 
+ __#######   __
   .          . 
   .          . 
   .          . 
@@ -182,7 +182,7 @@ Char 201 (propersuperset), width 10
 Char 202 (reflexsuperset), width 10
   .          . 
   .          . 
- __          __
+  .          . 
   .          . 
   .          . 
   . #######  . 
@@ -191,7 +191,7 @@ Char 202 (reflexsuperset), width 10
   .         #. 
   .         #. 
   .        # . 
-  . #######  . 
+ __ #######  __
   .          . 
   . #########. 
   .          . 
@@ -199,7 +199,7 @@ Char 202 (reflexsuperset), width 10
 Char 203 (notsubset), width 10
   .          . 
   .          . 
- __          __
+  .          . 
   .          . 
   .       #  . 
   .  ####### . 
@@ -208,7 +208,7 @@ Char 203 (notsubset), width 10
   .#    #    . 
   .#    #    . 
   . #  #     . 
-  .  ####### . 
+ __  ####### __
   .   #      . 
   .          . 
   .          . 
@@ -216,7 +216,7 @@ Char 203 (notsubset), width 10
 Char 204 (propersubset), width 10
   .          . 
   .          . 
- __          __
+  .          . 
   .          . 
   .          . 
   .   #######. 
@@ -225,7 +225,7 @@ Char 204 (propersubset), width 10
   . #        . 
   . #        . 
   .  #       . 
-  .   #######. 
+ __   #######__
   .          . 
   .          . 
   .          . 
@@ -233,7 +233,7 @@ Char 204 (propersubset), width 10
 Char 205 (reflexsubset), width 10
   .          . 
   .          . 
- __          __
+  .          . 
   .          . 
   .          . 
   .  ####### . 
@@ -242,7 +242,7 @@ Char 205 (reflexsubset), width 10
   .#         . 
   .#         . 
   . #        . 
-  .  ####### . 
+ __  ####### __
   .          . 
   .######### . 
   .          . 
@@ -250,7 +250,7 @@ Char 205 (reflexsubset), width 10
 Char 206 (element), width 10
   .          . 
   .          . 
- __          __
+  .          . 
   .          . 
   .          . 
   .   #####  . 
@@ -259,7 +259,7 @@ Char 206 (element), width 10
   . #######  . 
   . #        . 
   .  #       . 
-  .   #####  . 
+ __   #####  __
   .          . 
   .          . 
   .          . 
@@ -267,7 +267,7 @@ Char 206 (element), width 10
 Char 207 (notelement), width 10
   .          . 
   .          . 
- __          __
+  .          . 
   .          . 
   .     #    . 
   .  #####   . 
@@ -276,7 +276,7 @@ Char 207 (notelement), width 10
   .#######   . 
   .#  #      . 
   . ##       . 
-  .  #####   . 
+ __  #####   __
   . #        . 
   .          . 
   .          . 
@@ -284,7 +284,7 @@ Char 207 (notelement), width 10
 Char 208 (angle), width 11
   .           . 
   .           . 
- __         # __
+  .         # . 
   .        #  . 
   .       #   . 
   .      #    . 
@@ -293,7 +293,7 @@ Char 208 (angle), width 11
   .   #       . 
   .  #        . 
   . #         . 
-  .###########. 
+ __###########__
   .           . 
   .           . 
   .           . 
@@ -301,7 +301,7 @@ Char 208 (angle), width 11
 Char 209 (gradient), width 10
   .          . 
   .######### . 
- __#       # __
+  .#       # . 
   . #     #  . 
   . #     #  . 
   .  #   #   . 
@@ -310,7 +310,7 @@ Char 209 (gradient), width 10
   .   # #    . 
   .   # #    . 
   .    #     . 
-  .    #     . 
+ __    #     __
   .          . 
   .          . 
   .          . 
@@ -318,7 +318,7 @@ Char 209 (gradient), width 10
 Char 210 (registerserif), width 12
   .            . 
   .            . 
- __    ####    __
+  .    ####    . 
   .   #    #   . 
   .  #####  #  . 
   . #  #  #  # . 
@@ -327,7 +327,7 @@ Char 210 (registerserif), width 12
   . #  #  #  # . 
   .  ####  ##  . 
   .   #    #   . 
-  .    ####    . 
+ __    ####    __
   .            . 
   .            . 
   .            . 
@@ -335,7 +335,7 @@ Char 210 (registerserif), width 12
 Char 211 (copyrightserif), width 12
   .            . 
   .            . 
- __    ####    __
+  .    ####    . 
   .   #    #   . 
   .  #  ### #  . 
   . #  #  #  # . 
@@ -344,7 +344,7 @@ Char 211 (copyrightserif), width 12
   . #  #  #  # . 
   .  #  ##  #  . 
   .   #    #   . 
-  .    ####    . 
+ __    ####    __
   .            . 
   .            . 
   .            . 
@@ -352,7 +352,7 @@ Char 211 (copyrightserif), width 12
 Char 212 (trademarkserif), width 11
   .           . 
   .           . 
- __##### # #  __
+  .##### # #  . 
   .# # # # #  . 
   .  #  ## ## . 
   .  #  # # # . 
@@ -361,7 +361,7 @@ Char 212 (trademarkserif), width 11
   .           . 
   .           . 
   .           . 
-  .           . 
+ __           __
   .           . 
   .           . 
   .           . 
@@ -369,16 +369,16 @@ Char 212 (trademarkserif), width 11
 Char 213 (product), width 12
   .            . 
   . ########## . 
+  .  #      #  . 
+  .  #      #  . 
+  .  #      #  . 
+  .  #      #  . 
+  .  #      #  . 
+  .  #      #  . 
+  .  #      #  . 
+  .  #      #  . 
+  .  #      #  . 
  __  #      #  __
-  .  #      #  . 
-  .  #      #  . 
-  .  #      #  . 
-  .  #      #  . 
-  .  #      #  . 
-  .  #      #  . 
-  .  #      #  . 
-  .  #      #  . 
-  .  #      #  . 
   . ###    ### . 
   .            . 
   .            . 
@@ -386,7 +386,7 @@ Char 213 (product), width 12
 Char 214 (radical), width 8
   .       #. 
   .       #. 
- __       #__
+  .       #. 
   .      # . 
   .      # . 
   . ##   # . 
@@ -395,7 +395,7 @@ Char 214 (radical), width 8
   .   # #  . 
   .   # #  . 
   .    #   . 
-  .    #   . 
+ __    #   __
   .        . 
   .        . 
   .        . 
@@ -403,16 +403,16 @@ Char 214 (radical), width 8
 Char 215 (dotmath), width 4
   .    . 
   .    . 
+  .    . 
+  .    . 
+  .    . 
+  .    . 
+  .    . 
+  . #  . 
+  . #  . 
+  .    . 
+  .    . 
  __    __
-  .    . 
-  .    . 
-  .    . 
-  .    . 
-  . #  . 
-  . #  . 
-  .    . 
-  .    . 
-  .    . 
   .    . 
   .    . 
   .    . 
@@ -420,7 +420,7 @@ Char 215 (dotmath), width 4
 Char 216 (logicalnot), width 10
   .          . 
   .          . 
- __          __
+  .          . 
   .          . 
   .          . 
   .          . 
@@ -429,7 +429,7 @@ Char 216 (logicalnot), width 10
   .        # . 
   .        # . 
   .        # . 
-  .        # . 
+ __        # __
   .          . 
   .          . 
   .          . 
@@ -437,7 +437,7 @@ Char 216 (logicalnot), width 10
 Char 217 (logicaland), width 9
   .         . 
   .         . 
- __         __
+  .         . 
   .         . 
   .         . 
   .   ##    . 
@@ -446,7 +446,7 @@ Char 217 (logicaland), width 9
   .  #  #   . 
   . #    #  . 
   . #    #  . 
-  .#      # . 
+ __#      # __
   .         . 
   .         . 
   .         . 
@@ -454,7 +454,7 @@ Char 217 (logicaland), width 9
 Char 218 (logicalor), width 9
   .         . 
   .         . 
- __         __
+  .         . 
   .         . 
   .         . 
   .#      # . 
@@ -463,7 +463,7 @@ Char 218 (logicalor), width 9
   .  #  #   . 
   .  #  #   . 
   .   ##    . 
-  .   ##    . 
+ __   ##    __
   .         . 
   .         . 
   .         . 
@@ -471,7 +471,7 @@ Char 218 (logicalor), width 9
 Char 219 (arrowdblboth), width 15
   .               . 
   .               . 
- __               __
+  .               . 
   .               . 
   .               . 
   .    #     #    . 
@@ -480,7 +480,7 @@ Char 219 (arrowdblboth), width 15
   . ##         ## . 
   .  ###########  . 
   .   #       #   . 
-  .    #     #    . 
+ __    #     #    __
   .               . 
   .               . 
   .               . 
@@ -488,7 +488,7 @@ Char 219 (arrowdblboth), width 15
 Char 220 (arrowdblleft), width 14
   .              . 
   .              . 
- __              __
+  .              . 
   .              . 
   .              . 
   .   #          . 
@@ -497,7 +497,7 @@ Char 220 (arrowdblleft), width 14
   .##            . 
   . ############ . 
   .  #           . 
-  .   #          . 
+ __   #          __
   .              . 
   .              . 
   .              . 
@@ -505,7 +505,7 @@ Char 220 (arrowdblleft), width 14
 Char 221 (arrowdblup), width 9
   .    #    . 
   .   ###   . 
- __  ## ##  __
+  .  ## ##  . 
   . # # # # . 
   .   # #   . 
   .   # #   . 
@@ -514,7 +514,7 @@ Char 221 (arrowdblup), width 9
   .   # #   . 
   .   # #   . 
   .   # #   . 
-  .   # #   . 
+ __   # #   __
   .         . 
   .         . 
   .         . 
@@ -522,7 +522,7 @@ Char 221 (arrowdblup), width 9
 Char 222 (arrowdblright), width 14
   .              . 
   .              . 
- __              __
+  .              . 
   .              . 
   .              . 
   .          #   . 
@@ -531,7 +531,7 @@ Char 222 (arrowdblright), width 14
   .            ##. 
   . ############ . 
   .           #  . 
-  .          #   . 
+ __          #   __
   .              . 
   .              . 
   .              . 
@@ -539,7 +539,7 @@ Char 222 (arrowdblright), width 14
 Char 223 (arrowdbldown), width 9
   .   # #   . 
   .   # #   . 
- __   # #   __
+  .   # #   . 
   .   # #   . 
   .   # #   . 
   .   # #   . 
@@ -548,7 +548,7 @@ Char 223 (arrowdbldown), width 9
   . # # # # . 
   .  ## ##  . 
   .   ###   . 
-  .    #    . 
+ __    #    __
   .         . 
   .         . 
   .         . 
@@ -556,7 +556,7 @@ Char 223 (arrowdbldown), width 9
 Char 224 (lozenge), width 7
   .       . 
   .   #   . 
- __  # #  __
+  .  # #  . 
   .  # #  . 
   . #   # . 
   . #   # . 
@@ -565,7 +565,7 @@ Char 224 (lozenge), width 7
   . #   # . 
   .  # #  . 
   .  # #  . 
-  .   #   . 
+ __   #   __
   .       . 
   .       . 
   .       . 
@@ -573,7 +573,7 @@ Char 224 (lozenge), width 7
 Char 225 (angleleft), width 5
   .   # . 
   .  #  . 
- __  #  __
+  .  #  . 
   . #   . 
   . #   . 
   . #   . 
@@ -582,7 +582,7 @@ Char 225 (angleleft), width 5
   .#    . 
   . #   . 
   . #   . 
-  . #   . 
+ __ #   __
   .  #  . 
   .  #  . 
   .   # . 
@@ -590,7 +590,7 @@ Char 225 (angleleft), width 5
 Char 226 (registersans), width 12
   .            . 
   .            . 
- __    ####    __
+  .    ####    . 
   .   #    #   . 
   .  # ###  #  . 
   . #  #  #  # . 
@@ -599,7 +599,7 @@ Char 226 (registersans), width 12
   . #  #  #  # . 
   .  # #  # #  . 
   .   #    #   . 
-  .    ####    . 
+ __    ####    __
   .            . 
   .            . 
   .            . 
@@ -607,16 +607,16 @@ Char 226 (registersans), width 12
 Char 227 (copyrightsans), width 12
   .            . 
   .            . 
- __    ####    __
-  .   #    #   . 
-  .  #  ##  #  . 
-  . #  #  #  # . 
-  . #  #     # . 
-  . #  #     # . 
-  . #  #  #  # . 
-  .  #  ##  #  . 
-  .   #    #   . 
   .    ####    . 
+  .   #    #   . 
+  .  #  ##  #  . 
+  . #  #  #  # . 
+  . #  #     # . 
+  . #  #     # . 
+  . #  #  #  # . 
+  .  #  ##  #  . 
+  .   #    #   . 
+ __    ####    __
   .            . 
   .            . 
   .            . 
@@ -624,7 +624,7 @@ Char 227 (copyrightsans), width 12
 Char 228 (trademarksans), width 11
   .           . 
   .           . 
- __##### # #  __
+  .##### # #  . 
   .  #   # #  . 
   .  #  ## ## . 
   .  #  # # # . 
@@ -633,7 +633,7 @@ Char 228 (trademarksans), width 11
   .           . 
   .           . 
   .           . 
-  .           . 
+ __           __
   .           . 
   .           . 
   .           . 
@@ -641,7 +641,7 @@ Char 228 (trademarksans), width 11
 Char 229 (summation), width 10
   .          . 
   .########  . 
- __#      #  __
+  .#      #  . 
   . #        . 
   .  #       . 
   .   #      . 
@@ -650,7 +650,7 @@ Char 229 (summation), width 10
   .   #      . 
   .  #       . 
   . #        . 
-  .#       # . 
+ __#       # __
   .######### . 
   .          . 
   .          . 
@@ -658,7 +658,7 @@ Char 229 (summation), width 10
 Char 230 (parenlefttp), width 6
   .    # . 
   .   #  . 
- __  #   __
+  .  #   . 
   .  #   . 
   . #    . 
   . #    . 
@@ -667,7 +667,7 @@ Char 230 (parenlefttp), width 6
   . #    . 
   . #    . 
   . #    . 
-  . #    . 
+ __ #    __
   . #    . 
   . #    . 
   . #    . 
@@ -675,16 +675,16 @@ Char 230 (parenlefttp), width 6
 Char 231 (parenleftex), width 6
   . #    . 
   . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
  __ #    __
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
   . #    . 
   . #    . 
   . #    . 
@@ -692,7 +692,6 @@ Char 231 (parenleftex), width 6
 Char 232 (parenleftbt), width 6
   . #    . 
   . #    . 
- __ #    __
   . #    . 
   . #    . 
   . #    . 
@@ -701,7 +700,8 @@ Char 232 (parenleftbt), width 6
   . #    . 
   . #    . 
   . #    . 
-  .  #   . 
+  . #    . 
+ __  #   __
   .  #   . 
   .   #  . 
   .    # . 
@@ -709,16 +709,16 @@ Char 232 (parenleftbt), width 6
 Char 233 (bracketlefttp), width 6
   . #### . 
   . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
  __ #    __
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
   . #    . 
   . #    . 
   . #    . 
@@ -726,16 +726,16 @@ Char 233 (bracketlefttp), width 6
 Char 234 (bracketleftex), width 6
   . #    . 
   . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
  __ #    __
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
   . #    . 
   . #    . 
   . #    . 
@@ -743,16 +743,16 @@ Char 234 (bracketleftex), width 6
 Char 235 (bracketleftbt), width 6
   . #    . 
   . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
+  . #    . 
  __ #    __
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
-  . #    . 
   . #    . 
   . #    . 
   . #### . 
@@ -760,16 +760,16 @@ Char 235 (bracketleftbt), width 6
 Char 236 (bracelefttp), width 7
   .     ##. 
   .    #  . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
  __   #   __
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
   .   #   . 
   .   #   . 
   .   #   . 
@@ -777,7 +777,7 @@ Char 236 (bracelefttp), width 7
 Char 237 (braceleftmid), width 7
   .   #   . 
   .   #   . 
- __   #   __
+  .   #   . 
   .   #   . 
   .   #   . 
   .   #   . 
@@ -786,7 +786,7 @@ Char 237 (braceleftmid), width 7
   .  #    . 
   .   #   . 
   .   #   . 
-  .   #   . 
+ __   #   __
   .   #   . 
   .   #   . 
   .   #   . 
@@ -794,16 +794,16 @@ Char 237 (braceleftmid), width 7
 Char 238 (braceleftbt), width 7
   .   #   . 
   .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
  __   #   __
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
   .   #   . 
   .    #  . 
   .     ##. 
@@ -811,16 +811,16 @@ Char 238 (braceleftbt), width 7
 Char 239 (braceex), width 7
   .   #   . 
   .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
  __   #   __
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
   .   #   . 
   .   #   . 
   .   #   . 
@@ -828,7 +828,7 @@ Char 239 (braceex), width 7
 Char 241 (angleright), width 5
   . #   . 
   .  #  . 
- __  #  __
+  .  #  . 
   .   # . 
   .   # . 
   .   # . 
@@ -837,7 +837,7 @@ Char 241 (angleright), width 5
   .    #. 
   .   # . 
   .   # . 
-  .   # . 
+ __   # __
   .  #  . 
   .  #  . 
   . #   . 
@@ -845,7 +845,6 @@ Char 241 (angleright), width 5
 Char 242 (integral), width 5
   .   ##. 
   .  # #. 
- __  #  __
   .  #  . 
   .  #  . 
   .  #  . 
@@ -854,7 +853,8 @@ Char 242 (integral), width 5
   .  #  . 
   .  #  . 
   .  #  . 
-  .# #  . 
+  .  #  . 
+ __# #  __
   .##   . 
   .     . 
   .     . 
@@ -862,7 +862,7 @@ Char 242 (integral), width 5
 Char 243 (integraltp), width 10
   .       ###. 
   .      # ##. 
- __      #   __
+  .      #   . 
   .     #    . 
   .     #    . 
   .     #    . 
@@ -871,7 +871,7 @@ Char 243 (integraltp), width 10
   .     #    . 
   .     #    . 
   .     #    . 
-  .     #    . 
+ __     #    __
   .     #    . 
   .     #    . 
   .     #    . 
@@ -879,16 +879,16 @@ Char 243 (integraltp), width 10
 Char 244 (integralex), width 10
   .     #    . 
   .     #    . 
+  .     #    . 
+  .     #    . 
+  .     #    . 
+  .     #    . 
+  .     #    . 
+  .     #    . 
+  .     #    . 
+  .     #    . 
+  .     #    . 
  __     #    __
-  .     #    . 
-  .     #    . 
-  .     #    . 
-  .     #    . 
-  .     #    . 
-  .     #    . 
-  .     #    . 
-  .     #    . 
-  .     #    . 
   .     #    . 
   .     #    . 
   .     #    . 
@@ -896,16 +896,16 @@ Char 244 (integralex), width 10
 Char 245 (integralbt), width 10
   .     #    . 
   .     #    . 
+  .     #    . 
+  .     #    . 
+  .     #    . 
+  .     #    . 
+  .     #    . 
+  .     #    . 
+  .     #    . 
+  .     #    . 
+  .     #    . 
  __     #    __
-  .     #    . 
-  .     #    . 
-  .     #    . 
-  .     #    . 
-  .     #    . 
-  .     #    . 
-  .     #    . 
-  .     #    . 
-  .     #    . 
   .    #     . 
   . ## #     . 
   . ###      . 
@@ -913,7 +913,7 @@ Char 245 (integralbt), width 10
 Char 246 (parenrighttp), width 6
   . #    . 
   .  #   . 
- __   #  __
+  .   #  . 
   .   #  . 
   .    # . 
   .    # . 
@@ -922,7 +922,7 @@ Char 246 (parenrighttp), width 6
   .    # . 
   .    # . 
   .    # . 
-  .    # . 
+ __    # __
   .    # . 
   .    # . 
   .    # . 
@@ -930,16 +930,16 @@ Char 246 (parenrighttp), width 6
 Char 247 (parenrightex), width 6
   .    # . 
   .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
  __    # __
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
   .    # . 
   .    # . 
   .    # . 
@@ -947,7 +947,6 @@ Char 247 (parenrightex), width 6
 Char 248 (parenrightbt), width 6
   .    # . 
   .    # . 
- __    # __
   .    # . 
   .    # . 
   .    # . 
@@ -956,7 +955,8 @@ Char 248 (parenrightbt), width 6
   .    # . 
   .    # . 
   .    # . 
-  .   #  . 
+  .    # . 
+ __   #  __
   .   #  . 
   .  #   . 
   . #    . 
@@ -964,16 +964,16 @@ Char 248 (parenrightbt), width 6
 Char 249 (bracketrighttp), width 6
   . #### . 
   .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
  __    # __
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
   .    # . 
   .    # . 
   .    # . 
@@ -981,16 +981,16 @@ Char 249 (bracketrighttp), width 6
 Char 250 (bracketrightex), width 6
   .    # . 
   .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
  __    # __
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
   .    # . 
   .    # . 
   .    # . 
@@ -998,16 +998,16 @@ Char 250 (bracketrightex), width 6
 Char 251 (bracketrightbt), width 6
   .    # . 
   .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
+  .    # . 
  __    # __
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
-  .    # . 
   .    # . 
   .    # . 
   . #### . 
@@ -1015,16 +1015,16 @@ Char 251 (bracketrightbt), width 6
 Char 252 (bracerighttp), width 7
   .##     . 
   .  #    . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
  __   #   __
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
   .   #   . 
   .   #   . 
   .   #   . 
@@ -1032,7 +1032,7 @@ Char 252 (bracerighttp), width 7
 Char 253 (bracerightmid), width 7
   .   #   . 
   .   #   . 
- __   #   __
+  .   #   . 
   .   #   . 
   .   #   . 
   .   #   . 
@@ -1041,7 +1041,7 @@ Char 253 (bracerightmid), width 7
   .    #  . 
   .   #   . 
   .   #   . 
-  .   #   . 
+ __   #   __
   .   #   . 
   .   #   . 
   .   #   . 
@@ -1049,16 +1049,16 @@ Char 253 (bracerightmid), width 7
 Char 254 (bracerightbt), width 7
   .   #   . 
   .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
+  .   #   . 
  __   #   __
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
-  .   #   . 
   .   #   . 
   .  #    . 
   .##     . 
@@ -1066,7 +1066,7 @@ Char 254 (bracerightbt), width 7
 Char 255 (apple), width 12
   .       ##   . 
   .      ###   . 
- __      ##    __
+  .      ##    . 
   .  ### # ##  . 
   . ########## . 
   . ########   . 
@@ -1075,7 +1075,7 @@ Char 255 (apple), width 12
   . ########## . 
   .  ######### . 
   .   #######  . 
-  .    ## ##   . 
+ __    ## ##   __
   .            . 
   .            . 
   .            . 
