@@ -1,6 +1,8 @@
 # Fonts and Font Writer for the MicroPython framebuffer
 
-A collection of fonts sourced from the [u8g2](https://github.com/olikraus/u8g2) project and packaged for use on small devices, with small displays, running [MicroPython](https://micropython.org/).
+A collection of fonts and a writer for them, sourced from the [u8g2](https://github.com/olikraus/u8g2) project and packaged for use on small devices, with small displays, running [MicroPython](https://micropython.org/).
+
+![Demo Examples on two different displays](examples/doc/demo-collage1.thumb.jpg)
 
 They will work with **`EZ FrameBuffer Font Writer`** (see [below](#easy-font-use-via-ezfbfontpy)).
 * This is optimised for ease of installation and use; especially for small 'info panel' type projects and will work with *any* display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html).
@@ -13,7 +15,7 @@ The fonts presented here were created using my own `bdf2dict` font module creato
 ## Status
 The fonts and libraries have been tested on a `ssd1306` OLED display, and a `st7567` LCD module, both using I2C.
 
-![OLED (Note. this display has dead lines at the bottom, this is a hardware issue and not  my drivers fault..)](/examples/doc/demo-OLED.jpg)![LCD](/examples/doc/demo-LCD.jpg)
+
 
 The above is showing demo programs from the [examples](examples); with various fonts, alignments and colors.
 
