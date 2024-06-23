@@ -64,6 +64,10 @@ Another great resource, especially for display drivers, is at:
 And finally; for people building fast GUI's on color displays and who are willing to deal with more complex installs; there is [LVGL](https://lvgl.io/):
 * https://docs.lvgl.io/7.11/get-started/micropython.html
 
+# In Practice
+I created exFBfont, the font packs and tooling to support a [project](https://github.com/easytarget/PrintPy2040) that I am currently working on, and several others I have planned.
+![PrintPy, still under development..](examples/doc/IMG_20240623_091840~2.jpg)
+
 -----------------
 # Easy font use via `ezFBfont.py`
 *easyFBfont* is a python class that is initiated against a framebuffer device, and a font.
