@@ -66,7 +66,7 @@ And finally; for people building fast GUI's on color displays and who are willin
 
 # In Practice
 I created exFBfont, the font packs and tooling to support a [project](https://github.com/easytarget/PrintPy2040) that I am currently working on, and several others I have planned.
-![PrintPy, still under development..](examples/doc/printpy.jpg)
+[![PrintPy, still under development..](examples/doc/printpy.thumb.jpg)](examples/doc/printpy.jpg)
 
 -----------------
 # Easy font use via `ezFBfont.py`
