@@ -65,7 +65,8 @@ And finally; for people building fast GUI's on color displays and who are willin
 * https://docs.lvgl.io/7.11/get-started/micropython.html
 
 # In Practice
-I created exFBfont, the font packs and tooling to support a [project](https://github.com/easytarget/PrintPy2040) that I am currently working on, and several others I have planned.
+I created ezFBfont, the font packs and tooling to support a [project](https://github.com/easytarget/PrintPy2040) that I am currently working on, and several others I have planned.
+
 [![PrintPy, still under development..](examples/doc/printpy.thumb.jpg)](examples/doc/printpy.jpg)
 
 -----------------
