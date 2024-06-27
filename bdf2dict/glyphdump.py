@@ -35,7 +35,10 @@ except Exception as e:
 import _glyphdict_fontfile as font
 remove(tmpname)
 
-print('name: {}, file: {}'.format(font.name, argv[1]))
+try:
+    print('name: {}, file: {}'.format(font.name, argv[1]))
+except:
+    print('name: <unknown>, file: {}'.format(argv[1]))
 print('height: {}px, baseline: {}, max width: {}px'.format(font.height(), font.baseline(), font.max_width()))
 print('chars from: {} to {}\n'.format(font.min_ch(), font.max_ch()))
 
