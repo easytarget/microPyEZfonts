@@ -22,13 +22,14 @@ from micropython import const
 import framebuf
 
 class REPL_1306(framebuf.FrameBuffer):
-    def __init__(self, width, height, txt=True, clear=False, zero='.'):
+    def __init__(self, width, height, txt=True, clear=False, zero='.', one='#'):
         self.width = width
         self.height = height
         self.txt = txt
         self.clr = clear
         self.zero = zero
-        self.bytes = self.width // 8
+        self.one = one
+        self.bytes = ((self.width - 1) // 8 ) + 1
         self.buffer = bytearray(self.bytes * self.height)
         self.lastbuf = ''
         self.format = framebuf.MONO_HLSB
@@ -39,7 +40,7 @@ class REPL_1306(framebuf.FrameBuffer):
     def init_display(self):
         print('{}: init {}x{}'.format(self._name, self.width, self.height))
         self.fill(0)
-        self.show()
+        # self.show()
 
     def poweroff(self):
         print('{}: poweroff'.format(self._name))
@@ -69,7 +70,7 @@ class REPL_1306(framebuf.FrameBuffer):
                 t = ''
                 for p in range(0,self.bytes):
                     t += ('{:08b}'.format(self.buffer[(l*self.bytes)+p]))
-                print(t.replace('0',self.zero).replace('1','#'))
+                print(t[:self.width].replace('0',self.zero).replace('1',self.one))
             self.lastbuf = self.buffer.hex()
         else:
             if self.clr:
