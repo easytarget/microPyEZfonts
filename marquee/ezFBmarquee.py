@@ -3,8 +3,6 @@
 # - Copyright (c) Owen Carter
 
 import framebuf
-# Use repl_1306 instead of framebuffer for dev.
-from repl_1306 import REPL_1306
 
 # Basic marquee class
 class ezFBmarquee():
@@ -54,7 +52,7 @@ class ezFBmarquee():
         # padding size between repeats, in px
         self._padding = int(self._width * self._seperation)
         # Give info as needed
-        if verbose:
+        if self._verbose:
             print('{}:\n  string: {}'.format(self.name, self._string))
             print('  y: {}, height: {}'.format(self._y, self._height))
             print('  fg: {}, bg: {}, hgap: {}'.format(self._fg, self._bg, self._hgap), end='')
@@ -63,7 +61,7 @@ class ezFBmarquee():
         # determine if we need to animate at all (static marquee always re-drawn on step())
         if self._stringwidth <= self._width:
             self._stepping = False
-            if verbose:
+            if self._verbose:
                 p = '{}: string width ({}) is smaller than screen width ({}), not animating'
                 print(p.format(self.name, self._stringwidth, self._width))
         # Make the framebuffer that we scroll
@@ -115,7 +113,7 @@ class ezFBmarquee():
         return char_width
 
     def pause(self, pause=None):
-        if pause:
+        if pause is not None:
             self._pause = max(pause, -1)
             if self._verbose:
                 print('pause added: {}'.format(self._pause))
@@ -137,8 +135,11 @@ class ezFBmarquee():
         self._pause = self._pause - 1 if self._pause > 0 else self._pause
         return roll
 
-    def stop(self):
+    def stop(self, clean=True):
         # cleanup and delete buffers etc
+        if clean:
+            self._device.rect(0, self._y, self._width, self._height, self._bg, True)
+        del self._scrollframe, self._scrollbuf
         return
 
     # Owen: TEST:
