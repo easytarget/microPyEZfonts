@@ -14,8 +14,8 @@ speed = float(argv[1]) if len(argv) == 2 else 1
 message = 'This_is-a.long*message! [with ~{:d} chars]'
 message = message.format(len(message))
 
-w = 120
-h = 32
+w = 100
+h = 30
 
 display = REPL_1306(w, h, zero='.', one ='█', clear=True)
 display.rect(0,0,w,h,1)

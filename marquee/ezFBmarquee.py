@@ -51,11 +51,15 @@ class ezFBmarquee():
  
     def _line_size(self, string):
         x = 0
-        # TODO: report unprintables..
+        missing = self._missing = []
         for char in string:
-            _, _, char_width = self._font.get_ch(char)
+            glyph, _, char_width = self._font.get_ch(char)
+            if glyph is None:
+                missing.append(char)
             x += char_width + self._hgap if char_width > 0 else 0
         x = x - self._hgap if x != 0 else x   # remove any trailing hgap
+        if len(missing) > 0:
+            self._missing = sorted(set(missing))
         return x, self._font.height()
 
     def _makescroll(self):
@@ -66,9 +70,13 @@ class ezFBmarquee():
         self._padding = int(self._width * self._seperation)
         # Give info as needed
         if self._verbose:
-            print('{}:\n  string: {}\n  string width: {}'.format(self.name, self._string, self._stringwidth))
-            print('  seperation: {}\n  pause: {}'.format(self._padding, self._pause))
+            print('{}:\n  string: {}'.format(self.name, self._string))
+            print('  string width: {}px,  seperation: {}px'.format(self._stringwidth, self._padding))
             print('  fg: {}, bg: {}, hgap: {}'.format(self._fg, self._bg, self._hgap))
+            print('  pause: {}'.format(self._padding, self._pause))
+            if len(self._missing) > 0:
+                m = '  The following requested characters could not be found in the font:\n{}'
+                print(m.format(self.name, self._missing))
         # determine if we need to animate at all (static marquee always re-drawn on step())
         if self._stringwidth <= self._width:
             self._stepping = False
@@ -98,13 +106,13 @@ class ezFBmarquee():
         glyph, char_height, char_width = self._font.get_ch(char)
         if glyph is None:
             return 0  # Nothing to write
-        # blit the glyph, make the background transparent..
+        # blit the glyph with the background transparent
         buf = bytearray(glyph)
         charbuf = framebuf.FrameBuffer(buf, char_width, char_height, self._font_format)
         self._scrollframe.blit(charbuf, x, 0, 0)
         return char_width
 
-    def _stop(self, clean=True):
+    def _stop(self):
         self._string = None
         self._scrollcount = 0
         self._stepping = False
@@ -112,8 +120,8 @@ class ezFBmarquee():
         self._padding = 0
         self._sbwide = 0
         del self._scrollframe, self._scrollbuf
-        if clean:
-            self._device.rect(self._x, self._y, self._width, self._height, self._bg, True)
+        # blank; fill the output area with current background
+        self._device.rect(self._x, self._y, self._width, self._height, self._bg, True)
 
     def set(self, string, seperation=0.5, pause=0, hgap=None, fg=None, bg=None):
         # start marquee with string, returns false if not animated
@@ -126,9 +134,8 @@ class ezFBmarquee():
         # only take the first line of the string
         self._string = string.split('\n')[0]
         self._seperation = max(seperation,0)
+        self._pause = max(0,int(pause))
         self._hgap = self._hgap if hgap is None else hgap
-        # Initial pause
-        self.pause(pause)
         # set color map
         self._palette.pixel(0, 0, self._bg)
         self._palette.pixel(self._font_colors -1, 0, self._fg)
@@ -143,7 +150,7 @@ class ezFBmarquee():
         # do nothing if we are not active
         if self._string is None:
             return False
-        # do animation step
+        # do animation step, note if we rollover
         roll = False
         if self._stepping and (self._pause == 0) and (step > 0):
             self._scrollcount += step
@@ -155,12 +162,11 @@ class ezFBmarquee():
         # blit the output framebuffer to screen, we rely on the blit() for cropping
         # this is where colors are applied (via palette), no transparency
         self._device.blit(self._outframe, self._x, self._y, -1, self._palette)
+        # decrease the pause count if necesscary
         self._pause = max(0, self._pause - 1)
         return roll
 
-    def pause(self, pause=None):
-        if pause is not None:
-            self._pause = max(pause, -1)
-            if self._verbose:
-                print('pause: {}'.format(self._pause))
-        return self._pause
+    def pause(self, pause):
+        self._pause = max(0, int(pause))
+        if self._verbose:
+            print('pause: {}'.format(self._pause))
