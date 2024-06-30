@@ -20,16 +20,18 @@ display = REPL_1306(w, h, zero='.', one ='█', clear=True)
 
 marquee = ezFBmarquee(display, font, verbose=True)
 
-marquee.start(message, pause=100)
+marquee.show(message, pause=20)
 
 i = True
 while True:
     sleep(speed)
     if marquee.step(1):
         if i:
-            marquee.start('This is not so long', fg=1, bg=0, pause=50)
+            marquee.show('This is not so long ', fg=0, bg=1)
         else:
-            marquee.start('Short', fg=0, bg=1)
+            # Hang here since will never rollover..
+            marquee.show(None, fg=1, bg=0)
         i = not i
+        marquee.pause(10)
     display.show()
 

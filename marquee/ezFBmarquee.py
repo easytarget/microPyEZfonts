@@ -7,7 +7,7 @@ import framebuf
 # Basic marquee class
 class ezFBmarquee():
 
-    def __init__(self, display, font, y=0, hgap=0, fg=1, bg=0, verbose = False):
+    def __init__(self, display, font, y=0, hgap=0, fg=1, bg=0, width=None, verbose=False):
 
         self._device = display
         self._font = font
@@ -18,6 +18,7 @@ class ezFBmarquee():
         self._verbose = verbose
 
         self.name = 'marquee_' + self._font.__name__
+        self._string = None
 
         # font details; only monochrome HLSB fonts are supported
         self._font_format = framebuf.MONO_HLSB
@@ -31,8 +32,12 @@ class ezFBmarquee():
         # Get width of marquee (full device width)
         try:
             self._width = self._device.width
-        except:
-            raise ValueError('{} does not appear to be a framebuffer'.format(self._device))
+        except: 
+            if width is None:
+                r = "{}: Cannot determine display width; use 'width=<n>' in init()"
+                raise ValueError(r.format(self.name))
+            else:
+                self._width = width
         # Give info as needed
         if self._verbose:
             print('{}:'.format(self.name))
@@ -70,7 +75,6 @@ class ezFBmarquee():
         self._scrollbuf =  bytearray(sbbytes * self._height)
         self._scrollframe = framebuf.FrameBuffer(self._scrollbuf, self._sbwide, self._height, self._font_format)
 
-
     def _fillscroll(self):
         # clean the scrollbuffer
         self._stepcount = 0
@@ -81,7 +85,7 @@ class ezFBmarquee():
             xpos += self._put_char(c, xpos) + self._hgap
         xpos = xpos - self._hgap if xpos != 0 else xpos   # remove any trailing hgap
         if not self._stepping:
-            return  # skip rollover space and chars if not animating
+            return  # skip rollover space and chars
         xpos += self._padding
         for c in self._string:
             if xpos >= self._sbwide:
@@ -100,7 +104,7 @@ class ezFBmarquee():
         return char_width
 
     def _stop(self, clean=True):
-        self._string = ''
+        self._string = None
         self._stepcount = 0
         self._stepping = False
         self._stringwidth = 0
@@ -110,16 +114,18 @@ class ezFBmarquee():
         if clean:
             self._device.rect(0, self._y, self._width, self._height, self._bg, True)
 
-    def start(self, string, seperation=0.5, pause=0, hgap=None, fg=None, bg=None):
-        # start marquee with string, returns false if no need to animate.
-        self._string = self._string if string is None else string.split('\n')[0]
-        self._seperation = max(seperation,0)
-        self._hgap = self._hgap if hgap is None else hgap
+    def show(self, string, seperation=0.5, pause=0, hgap=None, fg=None, bg=None):
+        # start marquee with string, returns false if not animated
         self._fg = self._fg if fg is None else fg
         self._bg = self._bg if bg is None else bg
-        if len(self._string) == 0:
+        # stop when string is None (but still set fg/bg)
+        if string is None:
             self._stop()
             return False
+        # only take the first line of the string
+        self._string = string.split('\n')[0]
+        self._seperation = max(seperation,0)
+        self._hgap = self._hgap if hgap is None else hgap
         # Initial pause
         self.pause(pause)
         # set color map
@@ -134,13 +140,13 @@ class ezFBmarquee():
         return self._stepping
 
     def step(self, step=1):
-        if len(self._string) == 0:
+        # skip if we are not active
+        if self._string is None:
             return False
         # do animation step
         roll = False
-        if self._stepping and (self._pause == 0):
-            if step > 0:
-                self._scrollframe.scroll(-step, 0)
+        if self._stepping and (self._pause == 0) and (step > 0):
+            self._scrollframe.scroll(-step, 0)
             self._stepcount += step
             if self._stepcount >= self._stringwidth + self._padding:
                 self._fillscroll()
@@ -148,7 +154,7 @@ class ezFBmarquee():
         # blit the output framebuffer to screen, we rely on the blit() for cropping
         # this is where colors are applied (via palette)
         self._device.blit(self._scrollframe, 0, self._y, -1, self._palette)
-        self._pause = self._pause - 1 if self._pause > 0 else self._pause
+        self._pause = max(0, self._pause - 1)
         return roll
 
     def pause(self, pause=None):
