@@ -7,10 +7,11 @@ import framebuf
 # Basic marquee class
 class ezFBmarquee():
 
-    def __init__(self, display, font, y=0, hgap=0, fg=1, bg=0, width=None, verbose=False):
+    def __init__(self, display, font, x=0, y=0, width=None, hgap=0, fg=1, bg=0, verbose=False):
 
         self._device = display
         self._font = font
+        self._x = x
         self._y = y
         self._hgap = hgap
         self._fg = fg
@@ -30,22 +31,27 @@ class ezFBmarquee():
         # Get height of marquee
         self._height = self._font.height()
         # Get width of marquee (full device width)
-        try:
-            self._width = self._device.width
-        except: 
-            if width is None:
+        if width is None:
+            try:
+                self._width = self._device.width - self._x
+            except: 
                 r = "{}: Cannot determine display width; use 'width=<n>' in init()"
                 raise ValueError(r.format(self.name))
-            else:
-                self._width = width
+        else:
+            self._width = width
+        # output framebuffer
+        outbytes = ((self._width - 1) // 8 ) + 1
+        self._outbuf = bytearray(outbytes * self._height)
+        self._outframe = framebuf.FrameBuffer(self._outbuf, self._width, self._height, self._font_format)
         # Give info as needed
         if self._verbose:
             print('{}:'.format(self.name))
-            print('  y: {}, height: {}, width: {}'.format(self._y, self._height, self._width))
+            print('  x: {}, y: {}, height: {}, width: {}'.format(self._x, self._y, self._height, self._width))
             print('  fg: {}, bg: {}, hgap: {}'.format(self._fg, self._bg, self._hgap))
  
     def _line_size(self, string):
         x = 0
+        # TODO: report unprintables..
         for char in string:
             _, _, char_width = self._font.get_ch(char)
             x += char_width + self._hgap if char_width > 0 else 0
@@ -69,16 +75,11 @@ class ezFBmarquee():
             if self._verbose:
                 p = '{}: string width ({}) is smaller than screen width ({}), not animating'
                 print(p.format(self.name, self._stringwidth, self._width))
-        # Make the framebuffer that we scroll
+        # Make the framebuffer that we scroll the output framebuffer over
         self._sbwide = self._stringwidth + self._padding + self._width
         sbbytes = ((self._sbwide - 1) // 8 ) + 1
         self._scrollbuf =  bytearray(sbbytes * self._height)
         self._scrollframe = framebuf.FrameBuffer(self._scrollbuf, self._sbwide, self._height, self._font_format)
-
-    def _fillscroll(self):
-        # clean the scrollbuffer
-        self._stepcount = 0
-        self._scrollframe.fill(0)
         # write our string, add the seperator, then start the string again
         xpos = 0
         for c in self._string:
@@ -105,16 +106,16 @@ class ezFBmarquee():
 
     def _stop(self, clean=True):
         self._string = None
-        self._stepcount = 0
+        self._scrollcount = 0
         self._stepping = False
         self._stringwidth = 0
         self._padding = 0
         self._sbwide = 0
         del self._scrollframe, self._scrollbuf
         if clean:
-            self._device.rect(0, self._y, self._width, self._height, self._bg, True)
+            self._device.rect(self._x, self._y, self._width, self._height, self._bg, True)
 
-    def show(self, string, seperation=0.5, pause=0, hgap=None, fg=None, bg=None):
+    def set(self, string, seperation=0.5, pause=0, hgap=None, fg=None, bg=None):
         # start marquee with string, returns false if not animated
         self._fg = self._fg if fg is None else fg
         self._bg = self._bg if bg is None else bg
@@ -131,29 +132,29 @@ class ezFBmarquee():
         # set color map
         self._palette.pixel(0, 0, self._bg)
         self._palette.pixel(self._font_colors -1, 0, self._fg)
-        # Create the scroll buffer
+        # Create and fill the scroll buffer
         self._makescroll()
-        # Fill for the first time
-        self._fillscroll()
+        self._scrollcount = 0
         # Show the initial output
         self.step(0) 
         return self._stepping
 
     def step(self, step=1):
-        # skip if we are not active
+        # do nothing if we are not active
         if self._string is None:
             return False
         # do animation step
         roll = False
         if self._stepping and (self._pause == 0) and (step > 0):
-            self._scrollframe.scroll(-step, 0)
-            self._stepcount += step
-            if self._stepcount >= self._stringwidth + self._padding:
-                self._fillscroll()
+            self._scrollcount += step
+            if self._scrollcount >= self._stringwidth + self._padding:
+                self._scrollcount = 0
                 roll = True
+        # blit the scrollbuffer over outbuffer offset by scroll value
+        self._outframe.blit(self._scrollframe, -self._scrollcount, 0)
         # blit the output framebuffer to screen, we rely on the blit() for cropping
-        # this is where colors are applied (via palette)
-        self._device.blit(self._scrollframe, 0, self._y, -1, self._palette)
+        # this is where colors are applied (via palette), no transparency
+        self._device.blit(self._outframe, self._x, self._y, -1, self._palette)
         self._pause = max(0, self._pause - 1)
         return roll
 
