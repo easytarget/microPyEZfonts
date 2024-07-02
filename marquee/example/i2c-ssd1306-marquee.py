@@ -58,7 +58,7 @@ def mstep(t):
     if marquee1.step(2):
         marquee1.pause(20)
     # Stop marquee2 when complete
-    if marquee2.step(1):
+    if marquee2.step(4):
         marquee2.stop()
     # Display results
     display.show()
@@ -68,7 +68,7 @@ tim0 = Timer(0)
 tim0.init(period=100, mode=Timer.PERIODIC, callback=mstep)
 
 # Start the main marquee
-message = 'This is a a long & boring informational message! [with ~{:d} chars]'
+message = 'Info: This is a a long & boring informational message! [with ~{:d} chars]'
 marquee1.start(message.format(len(message)), pause=20)
 
 # A box around the uptime count
@@ -76,11 +76,14 @@ display.rect(41,21,46,14,1)
 
 # Loop forever, starting the second marquee at set times
 while True:
+    # Uptime counter
     secs = int(ticks_ms()/1000 % 60)
     mins = int(ticks_ms()/60000 % 60)
     display.rect(44,24,40,8,0,True)
     display.text('{:02d}:{:02d}'.format(mins,secs),44,24)
-    if secs == 0 and marquee2._string is None:
+    
+    # start scrollpast marquee on time based events
+    if secs == 0 and not marquee2.active():
         marquee2.start('Hello World')
-    if secs == 30 and marquee2._string is None:
+    if secs == 30 and not marquee2.active():
         marquee2.start('Goodbye World')

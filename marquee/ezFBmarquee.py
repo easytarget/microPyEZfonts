@@ -85,7 +85,7 @@ class ezFBmarquee():
             self._end = max(self._width, self._stringwidth + self._padding)
         elif mode == 'scroller':
             self._padding = self._width
-            self._sbwide = self._stringwidth
+            self._sbwide = self._stringwidth + self._width
             self._start = - self._padding
             self._end = self._stringwidth
         sbbytes = ((self._sbwide - 1) // 8 ) + 1
@@ -197,3 +197,7 @@ class ezFBmarquee():
         self._pause = max(0, int(pause))
         if self._verbose:
             print('{}: pause: {}'.format(self.name, self._pause))
+            
+    def active(self):
+        # Return true if active
+        return False if self._string is None else True
