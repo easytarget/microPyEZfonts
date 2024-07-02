@@ -50,7 +50,7 @@ display.contrast(128)  # as needed
 
 # two marquees
 marquee1 = ezFBmarquee(display, font1, verbose=True)
-marquee2 = ezFBmarquee(display, font2, x=32, y=35, width=64, mode='scroller', hgap=-1, verbose=True)
+marquee2 = ezFBmarquee(display, font2, x=32, y=35, width=64, mode='scroller', hgap=0, verbose=True)
 
 # Timer interrupt to step both marquees
 def mstep(t):
@@ -74,7 +74,7 @@ marquee1.start(message.format(len(message)), pause=20)
 # A box around the uptime count
 display.rect(41,21,46,14,1)
 
-# Loop forever, starting the second marquee at set times
+# Loop forever, starting the lower marquee at set times
 tens = {0:'zero', 10:'ten', 20:'twenty', 30:'thirty', 40:'fourty', 50:'fifty'}
 while True:
     # Uptime counter

@@ -7,7 +7,13 @@ import framebuf
 # Basic marquee class
 class ezFBmarquee():
 
-    def __init__(self, display, font, x=0, y=0, width=None, mode='marquee', pad=0.33, pause=0, hgap=0, fg=1, bg=0, verbose=False):
+    def __init__(self, display, font,
+                 x=0, y=0,
+                 width=None,
+                 mode='marquee',
+                 pad=0.33, pause=0, hgap=0,
+                 fg=1, bg=0,
+                 verbose=False):
 
         self._device = display
         self._font = font
@@ -15,7 +21,7 @@ class ezFBmarquee():
         self._y = y
         self._mode = self._checkmode(mode)
         self._pad = max(pad,0)
-        self._dpause = self._pause = max(0,int(pause))
+        self._dpause = self._pause = max(-1,int(pause))
         self._hgap = int(hgap)
         self._fg = fg
         self._bg = bg
@@ -142,7 +148,7 @@ class ezFBmarquee():
         # only take the first line of the string
         string = string.split('\n')[0]
         mode = self._mode if mode is None else self._checkmode(mode)
-        self._pause = self._dpause if pause is None else max(0,int(pause))
+        self._pause = self._dpause if pause is None else max(-1,int(pause))
         pad = self._pad if pad is None else max(pad,0)
         hgap = self._hgap if hgap is None else int(hgap)
         fg = self._fg if fg is None else fg
@@ -188,13 +194,13 @@ class ezFBmarquee():
         # Blit the output frame to screen, with colors are applied via palette
         self._device.blit(self._outframe, self._x, self._y, -1, self._palette)
         # Decrease the pause count towards zero
-        self._pause = max(0, self._pause - 1)
+        self._pause = -1 if self._pause == -1 else max(0, self._pause - 1)
         # return rollover status
         return res
 
     def pause(self, pause):
         # Pause for the next 'pause' steps
-        self._pause = max(0, int(pause))
+        self._pause = max(-1, int(pause))
         if self._verbose:
             print('{}: pause: {}'.format(self.name, self._pause))
             
