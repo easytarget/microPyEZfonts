@@ -13,6 +13,7 @@ from micropython import schedule
 # fonts
 path.append('fonts')
 import ezFBfont_15_helvR10_ascii as font1
+#import ezFBfont_16_open_iconic_all_2x_full as font1
 import ezFBfont_23_spleen_12x24_ascii as font2
 
 '''

@@ -56,16 +56,16 @@ class ezFBmarquee():
     def _line_size(self, string, hgap):
         # Find the pixel size of a string with hgap applied
         x = 0
-        missing = self._missing = []
+        self._missing = []
         for char in string:
             glyph, _, char_width = self._font.get_ch(char)
             if glyph is None:
-                missing.append(char)
+                self._missing.append(char)
                 continue
             x += char_width + hgap
         x = x - hgap if x != 0 else x   # remove any trailing hgap
-        if len(missing) > 0:
-            self._missing = sorted(set(missing))
+        if len(self._missing) > 0:
+            self._missing = sorted(set(self._missing))
         return x
 
     def _checkmode(self, mode):
