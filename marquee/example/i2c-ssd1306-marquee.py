@@ -40,39 +40,27 @@ I2C0_SCL_PIN = 22  # default esp32
 #i2c0=SoftI2C(sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN),  freq=200000, timeout=100000)
 i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
 
+# Display
 w = 128
 h = 64
-
-# Display
-display = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
+display = SSD1306_I2C(w, h, i2c0, addr=0x3c)
 display.invert(False)  # as needed
 display.rotate(0)      # as needed
 display.contrast(128)  # as needed
 
-speed = 0.1
-
-message = 'This is a a long & boring informational message! [with ~{:d} chars]'
-message = message.format(len(message))
-
+# two marquees
 marquee1 = ezFBmarquee(display, font1, verbose=True)
-marquee2 = ezFBmarquee(display, font2, x=32, y=35, pre=1, pad=1, hgap=-1, width=64, verbose=True)
-
-# splash
-marquee2.text('Splash!', pre=0.2, pad=0.2, hgap=2)
-display.show()
-sleep(0.25)
-while not marquee2.step(2, event='endpad'):
-    display.show()
-sleep(0.25)
-marquee2.text(None)
-display.show()
-
+marquee2 = ezFBmarquee(display, font2, x=32, y=35, width=64, mode='scroller', hgap=-1, verbose=True)
 
 # Timer interrupt to step both marquees
 def mstep(t):
-    marquee1.step(2)
-    if marquee2.step(1, event='endstr'):
-        marquee2.text(None)
+    # Add a pause whenever marquee1 rolls over
+    if marquee1.step(2):
+        marquee1.pause(20)
+    # Stop marquee2 when complete
+    if marquee2.step(1):
+        marquee2.stop()
+    # Display results
     display.show()
 
 # Start the timer
@@ -80,9 +68,10 @@ tim0 = Timer(0)
 tim0.init(period=100, mode=Timer.PERIODIC, callback=mstep)
 
 # Start the main marquee
-marquee1.text(message, pause=20)
+message = 'This is a a long & boring informational message! [with ~{:d} chars]'
+marquee1.start(message.format(len(message)), pause=20)
 
-# A box for the uptime count
+# A box around the uptime count
 display.rect(41,21,46,14,1)
 
 # Loop forever, starting the second marquee at set times
@@ -92,6 +81,6 @@ while True:
     display.rect(44,24,40,8,0,True)
     display.text('{:02d}:{:02d}'.format(mins,secs),44,24)
     if secs == 0 and marquee2._string is None:
-        marquee2.text('Hello World')
+        marquee2.start('Hello World')
     if secs == 30 and marquee2._string is None:
-        marquee2.text('Goodbye World')
+        marquee2.start('Goodbye World')

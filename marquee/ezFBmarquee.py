@@ -7,13 +7,13 @@ import framebuf
 # Basic marquee class
 class ezFBmarquee():
 
-    def __init__(self, display, font, x=0, y=0, width=None, pre=0, pad=0.33, pause=0, hgap=0, fg=1, bg=0, verbose=False):
+    def __init__(self, display, font, x=0, y=0, width=None, mode='marquee', pad=0.33, pause=0, hgap=0, fg=1, bg=0, verbose=False):
 
         self._device = display
         self._font = font
         self._x = x
         self._y = y
-        self._pre = max(pre,0)
+        self._mode = self._checkmode(mode)
         self._pad = max(pad,0)
         self._dpause = self._pause = max(0,int(pause))
         self._hgap = int(hgap)
@@ -48,7 +48,7 @@ class ezFBmarquee():
         self._outframe = framebuf.FrameBuffer(self._outbuf, self._width, self._height, self._font_format)
         # Give info as needed
         if self._verbose:
-            print('{}: init()'.format(self.name))
+            print('{}: init()\n  mode: {}'.format(self.name, self._mode))
             print('  x: {}, y: {}, height: {}, width: {}'.format(self._x, self._y, self._height, self._width))
             print('  pad: {}, default pause: {}, hgap: {}'.format(self._pad, self._dpause, self._hgap))
             print('  fg: {}, bg: {}'.format(self._fg, self._bg))
@@ -67,6 +67,11 @@ class ezFBmarquee():
         if len(missing) > 0:
             self._missing = sorted(set(missing))
         return x
+
+    def _checkmode(self, mode):
+        if mode not in ['marquee', 'scroller']:
+            raise ValueError("{}: unknown mode '{}'".format(self.name, mode))
+        return mode
 
     def _makescroll(self, string, mode, hgap, pad):
         # Make the framebuffer that we 'scroll' across the output buffer
@@ -131,14 +136,12 @@ class ezFBmarquee():
         if self._verbose:
             print('{}: stop()'.format(self.name))
 
-    def start(self, string, mode='marquee', pause=None, pad=None, hgap=None, fg=None, bg=None):
+    def start(self, string, mode=None, pause=None, pad=None, hgap=None, fg=None, bg=None):
         if self._string is not None:
             self.stop()
         # only take the first line of the string
         string = string.split('\n')[0]
-        if mode not in ['marquee', 'scroller']:
-            raise ValueError("{}: unknown mode '{}'".format(self.name, mode))
-        self._mode = mode
+        mode = self._mode if mode is None else self._checkmode(mode)
         self._pause = self._dpause if pause is None else max(0,int(pause))
         pad = self._pad if pad is None else max(pad,0)
         hgap = self._hgap if hgap is None else int(hgap)
@@ -151,11 +154,11 @@ class ezFBmarquee():
         self._makescroll(string, mode, hgap, pad)
         # Give info as needed
         if self._verbose:
-            print('{}: start()\n  {}: {}'.format(self.name, self._mode, self._string))
+            print('{}: start()\n  {}: {}'.format(self.name, mode, string))
             print('  string width: {}px,  pad: {}px'.format(self._stringwidth, self._padding))
             print('  fg: {}, bg: {}, hgap: {}'.format(fg, bg, hgap))
             print('  pad: {}, pause: {}'.format(pad, self._pause))
-            if self._stepping:
+            if not self._stepping:
                 print('  marquee string is shorter than output width, not animating')
             if len(self._missing) > 0:
                 m = '  The following requested characters could not be found in the font:\n  {}'
