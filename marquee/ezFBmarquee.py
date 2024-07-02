@@ -68,21 +68,21 @@ class ezFBmarquee():
             self._missing = sorted(set(missing))
         return x
 
-    def _makescroll(self, string, hgap, pad):
+    def _makescroll(self, string, mode, hgap, pad):
         # Make the framebuffer that we 'scroll' across the output buffer
-        self._stepping = True
         # Work out how long our string will be once rendered
-        self._stringwidth = self._line_size(string, hgap)
-        # padding size between repeats, in px
-        self._padding = int(self._width * pad)
-        # determine if we need to animate
-        if self._stringwidth <= self._width:
-            self._stepping = False
-            if self._verbose:
-                p = '{}: string width ({}) is smaller than screen width ({}), not animating'
-                print(p.format(self.name, self._stringwidth, self._width))
+        self._stringwidth = max(self._line_size(string, hgap), 1)
         # Make the framebuffer that we scroll the output framebuffer over
-        self._sbwide = self._stringwidth + self._padding + self._width
+        if mode == 'marquee':
+            self._padding = int(self._width * pad)
+            self._sbwide = self._stringwidth + self._padding + self._width
+            self._start = 0
+            self._end = max(self._width, self._stringwidth + self._padding)
+        elif mode == 'scroller':
+            self._padding = self._width
+            self._sbwide = self._stringwidth
+            self._start = - self._padding
+            self._end = self._stringwidth
         sbbytes = ((self._sbwide - 1) // 8 ) + 1
         self._scrollbuf =  bytearray(sbbytes * self._height)
         self._scrollframe = framebuf.FrameBuffer(self._scrollbuf, self._sbwide, self._height, self._font_format)
@@ -91,13 +91,18 @@ class ezFBmarquee():
         for c in string:
             xpos += self._put_char(c, xpos, hgap)
         xpos = xpos - hgap if xpos != 0 else xpos   # remove any trailing hgap
-        if not self._stepping:
-            return  # skip rollover space and chars
-        xpos += self._padding
-        for c in string:
-            if xpos >= self._sbwide:
-                break
-            xpos += self._put_char(c, xpos, hgap)
+        if (xpos >= self._width) and (mode == 'marquee'):
+            xpos += self._padding
+            for c in string:
+                if xpos >= self._sbwide:
+                    break
+                xpos += self._put_char(c, xpos, hgap)
+        # determine if we need to animate
+        self._stepping = True
+        if (self._stringwidth <= self._width) and (mode == 'marquee'):
+            self._stepping = False
+        # fill the outframe with the first frame
+        self._outframe.blit(self._scrollframe, -self._start, 0)
 
     def _put_char(self, char, x, hgap):
         # fetch the glyph
@@ -110,101 +115,82 @@ class ezFBmarquee():
         self._scrollframe.blit(charbuf, x, 0, 0)
         return char_width + hgap
 
-    def _stop(self):
+    def stop(self):
         self._string = None
-        self._scrollcount = 0
+        self._count = 0
         self._stepping = False
         self._stringwidth = 0
         self._padding = 0
         self._sbwide = 0
+        # delete the scroll buffer and frame
         del self._scrollframe, self._scrollbuf
+        # clean the output framebuffer
+        self._outframe.fill(0)
         # Fill the output area with current background
         self._device.rect(self._x, self._y, self._width, self._height, self._bg, True)
         if self._verbose:
             print('{}: stop()'.format(self.name))
 
-    def text(self, string, pre=None, pad=None, pause=None, hgap=None, fg=None, bg=None):
-        self._string = None   # stop ISR step() calls
-        # start marquee with string, returns false if not animated
-        # always do defaults
-        pre = self._pre if pre is None else max(pre,0)
-        pad = self._pad if pad is None else max(pad,0)
+    def start(self, string, mode='marquee', pause=None, pad=None, hgap=None, fg=None, bg=None):
+        if self._string is not None:
+            self.stop()
+        # only take the first line of the string
+        string = string.split('\n')[0]
+        if mode not in ['marquee', 'scroller']:
+            raise ValueError("{}: unknown mode '{}'".format(self.name, mode))
+        self._mode = mode
         self._pause = self._dpause if pause is None else max(0,int(pause))
+        pad = self._pad if pad is None else max(pad,0)
         hgap = self._hgap if hgap is None else int(hgap)
         fg = self._fg if fg is None else fg
         bg = self._bg if bg is None else bg
         # set color map
         self._palette.pixel(0, 0, bg)
         self._palette.pixel(self._font_colors -1, 0, fg)
-        # stop when string is None
-        if string is None:
-            self._stop()
-            return False
-        # only take the first line of the string
-        string = string.split('\n')[0]
-        # Create and fill the scroll buffer
-        self._makescroll(string, hgap, pad)
-        self._scrollcount = -int(self._width * pre)
+        # Create and fill the scroll buffer and attributes
+        self._makescroll(string, mode, hgap, pad)
         # Give info as needed
         if self._verbose:
-            print('{}: start()\n  string: {}'.format(self.name, string))
+            print('{}: start()\n  {}: {}'.format(self.name, self._mode, self._string))
             print('  string width: {}px,  pad: {}px'.format(self._stringwidth, self._padding))
             print('  fg: {}, bg: {}, hgap: {}'.format(fg, bg, hgap))
             print('  pad: {}, pause: {}'.format(pad, self._pause))
+            if self._stepping:
+                print('  marquee string is shorter than output width, not animating')
             if len(self._missing) > 0:
                 m = '  The following requested characters could not be found in the font:\n  {}'
                 print(m.format(self._missing))
         # Set active and show the initial output
-        self._outframe.fill(0)
         self._string = string
+        self._count = self._start
         self.step(0) 
-        return self._stepping
 
-    def step(self, step=1, event='rollover'):
+    def step(self, step=1):
         # Step the marquee as necesscary
-        if event not in ['rollover', 'endstr', 'endpad', 'endchr']:
-            raise ValueError('{}: step(), Unknown event {}'.format(self.name, event))
-        # do nothing if we are not active
         if self._string is None:
             return False
-        # do animation step, note if we hit an event
+        # Do animation step
         res = False
-        if self._stepping and (self._pause == 0) and (step > 0):
-            self._scrollcount += step
-            if (self._scrollcount >= (self._stringwidth - self._width)) and event == 'endchr':
-                # the last character of the string just became visible
-                self._scrollcount = 0
+        if (self._pause == 0) and (step > 0):
+            self._count += step
+            # Blit the scrollbuffer over outbuffer offset by scroll value
+            if self._stepping:
+                self._outframe.blit(self._scrollframe, -self._count, 0)
+            # Catch rollover
+            if self._count >= self._end:
+                self._count = self._start
                 res = True
                 if self._verbose:
-                    print('{}: last character'.format(self.name))
-            if (self._scrollcount >= (self._stringwidth + self._padding - self._width)) and event == 'endpad':
-                # the full end padding of the string just became visible
-                self._scrollcount = 0
-                res = True
-                if self._verbose:
-                    print('{}: last character'.format(self.name))
-            elif (self._scrollcount >= self._stringwidth) and event == 'endstr':
-                # the last character of the string has been scrolled off
-                self._scrollcount = 0
-                res = True
-                if self._verbose:
-                    print('{}: padding end'.format(self.name))
-            elif (self._scrollcount >= (self._stringwidth + self._padding)) and event == 'rollover':
-                # the string has wrapped around to the beginning
-                self._scrollcount = 0
-                res = True
-                if self._verbose:
-                    print('{}: rollover to start'.format(self.name))
-        # blit the scrollbuffer over outbuffer offset by scroll value
-        self._outframe.blit(self._scrollframe, -self._scrollcount, 0)
-        # blit the output framebuffer to screen, we rely on the blit() for cropping
-        # this is where colors are applied (via palette), no transparency
+                    print('{}: rollover'.format(self.name))
+        # Blit the output frame to screen, with colors are applied via palette
         self._device.blit(self._outframe, self._x, self._y, -1, self._palette)
-        # decrease the pause count if necesscary
+        # Decrease the pause count towards zero
         self._pause = max(0, self._pause - 1)
+        # return rollover status
         return res
 
     def pause(self, pause):
+        # Pause for the next 'pause' steps
         self._pause = max(0, int(pause))
         if self._verbose:
             print('{}: pause: {}'.format(self.name, self._pause))
