@@ -13,7 +13,6 @@ from micropython import schedule
 # fonts
 path.append('fonts')
 import ezFBfont_15_helvR10_ascii as font1
-#import ezFBfont_16_open_iconic_all_2x_full as font1
 import ezFBfont_23_spleen_12x24_ascii as font2
 
 '''
@@ -76,6 +75,7 @@ marquee1.start(message.format(len(message)), pause=20)
 display.rect(41,21,46,14,1)
 
 # Loop forever, starting the second marquee at set times
+tens = {0:'zero', 10:'ten', 20:'twenty', 30:'thirty', 40:'fourty', 50:'fifty'}
 while True:
     # Uptime counter
     secs = int(ticks_ms()/1000 % 60)
@@ -83,8 +83,6 @@ while True:
     display.rect(44,24,40,8,0,True)
     display.text('{:02d}:{:02d}'.format(mins,secs),44,24)
     
-    # start scrollpast marquee on time based events
-    if secs == 0 and not marquee2.active():
-        marquee2.start('Hello World')
-    if secs == 30 and not marquee2.active():
-        marquee2.start('Goodbye World')
+    # start scrollbox on time based events
+    if secs in tens.keys() and not marquee2.active():
+        marquee2.start(tens[secs])
