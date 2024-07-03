@@ -1,8 +1,8 @@
 # `bdf2dict.py`
-## a `.bdf` font file to python font file utility
+## a `.bdf` font file to python font file conversion utility
 
 ## Setup
-This is a **CPython 3.7+** tool (not micropython..)
+This is a **CPython 3.7+** tool intended to be run from the commandline on a desk/laptop system, it can use a *lot* of memory when fed a huge font file and charset.
 
 Otherwise there are no further requirements, the tooling is self-contained, simply copy `bdf2dict.py` where needed or run from in the repo.
 
@@ -34,16 +34,16 @@ A text file with a font data summary and an ascii-art rendition of every glyph p
 
 * `<prefix><font_name>.set`
 
-A simple unicode 'text' file with each character from the output in it. This can be discarded; but is useful for reference, copy/paste, etc..
+A simple unicode 'text' file with all characters from the output font file in it. This can typically be discarded; but can be useful for reference, copy/paste, etc..
 
 ## Font module format
 In contrast to the `micropython-font-to-py` tool I use a simpler format based on a python `dict{}` structure.
 
 Font glyphs are stored as [`bytes`](https://docs.python.org/3.5/library/functions.html#bytes) objectt in the dict, with the integer ordinal value of the character as the key.
 
-If the font is variable-width the width of the character is appended to the bytearray.
+If the font is variable-width a byte with the width of the character is appended to the bytearray.
 
-The `get_ch()` function then becomes very simple; look up the glyph and return 'None' if not found. Otherwise return a memoryview object pointing the the *bytes* of the glyph and return that along with the (fixed) font height and width of the glyph (or a fixed value for fixed width fonts)
+The `get_ch()` function then becomes very simple; it looks up the glyph and returns 'None' if not found. Otherwise it returns a memoryview object pointing the the *bytes* of the glyph along with the (fixed) font height and width of the glyph (or a fixed value for fixed width fonts).
 
 ## Note: *easy* fonts
 
