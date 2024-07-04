@@ -7,9 +7,9 @@ A collection of fonts and a writer for them, sourced from the [u8g2](https://git
 They will work with **`EZ FrameBuffer Font Writer`** (see below).
 * This is optimised for ease of installation and use; especially for small 'info panel' type projects and will work with *any* display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html).
 
-And will also work with Peter Hinches comprehensive [writer](https://github.com/peterhinch/micropython-font-to-py/blob/master/writer/WRITER.md) class and [nano-gui](https://github.com/peterhinch/micropython-nano-gui/tree/master).
+And will also work with Peter Hinches comprehensive [writer](https://github.com/peterhinch/micropython-font-to-py/blob/master/writer/WRITER.md) class and [nano-gui](https://github.com/peterhinch/micropython-nano-gui/tree/master). And with the `EZFont` class from Brad Barnett's [mpdisplay](https://github.com/bdbarnett/mpdisplay)
 
-The fonts presented here were created using my own `bdf2dict` font module creator, see below.
+The font packs presented here were created using my own `bdf2dict` font module creator, see below.
 
 -----------------
 

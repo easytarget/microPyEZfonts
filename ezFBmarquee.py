@@ -1,4 +1,5 @@
 # ezFBmarquee.py() : a simple marquee for the micropython framebuffer.
+# See WRITER.md for documentation
 
 # - Copyright (c) Owen Carter
 
