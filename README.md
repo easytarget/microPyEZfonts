@@ -13,12 +13,12 @@ The font packs presented here were created using my own `bdf2dict` font module c
 
 -----------------
 
-# Writer: `ezFBfont.py`
+# Writer: [`ezFBfont.py`](ezFBfont.py)
 The writer class `exFBfont.py` works with these fonts, it takes a string to write, plus X and Y position, and writes the string in that position in the selected font. There are color, transparency, spacing and positioning options, plus functions to give info about the written area and support for multi-line strings.
 
 For more see the documentation in [`WRITER.md`](WRITER.md), there are examples of using this in the [examples](examples) folder.
 
-# Marquee: `ezFBmarquee.py`
+# Marquee: [`ezFBmarquee.py`](ezFBmarquee.py)
 
 A simple marquee / scrolling banner display that uses the fonts from this repo. You can define an output 'box' and the string will be scrolled within that. Supports a couple of 'modes' for the scroll, adjustable character spacing and step rate.
 
@@ -45,7 +45,7 @@ Fonts are generated and stored by font family, then character set and vertical s
 
 All provided font modules contain and retain the original copyright notices from the source '.bdf' files, most are very 'free'; but the proportional X11 derived fonts need extra consideration. See the documentation on the font index pages for more.
 
-# Font creator: `bdf2dict.py`
+# Font creator: [`bdf2dict.py`](bdf2dict.py)
 
 All the fonts packs provided here were made with this tool, it is a simple to use CPythom (not microPython) script that can import and process a `.bdf` font file and extract just the characters you need into a `.py` font file. I is fully compatible with Unicode characters and fonts.
 
@@ -68,6 +68,8 @@ The fonts in this repo will work with Peter Hinches `writer` and `nano-gui` clas
   * This is a good class to use if you are driving a console type display since it has goodies like word-wrap, tab alignment, etc.
 * https://github.com/peterhinch/micropython-nano-gui/tree/master
   * A good alternative to the complexity of LVGL (below), and my fonts work with it.
+* Peter also has a `micropython-font-to-py` tool that makes fonts that will work with my writer and marquee classes!
+  * Fonts from this tool are better for advanced users since they use far less RAM when byte-compiled and frozen in firmware, see the bdf2dict readme for a discussion of this.
 
 From the same author are the display drivers here:
 * https://github.com/peterhinch/micropython-nano-gui/blob/master/DRIVERS.md
@@ -75,6 +77,7 @@ From the same author are the display drivers here:
 
 Another great resource, especially for display drivers, is at:
 * https://github.com/bdbarnett/mpdisplay
+* The EZFont class in his tooling (just one of several font classes it provides!) is compatible with my ezFBfont packs.
 
 And finally; for people building fast GUI's on color displays and who are willing to deal with more complex installs; there is [LVGL](https://lvgl.io/):
 * https://docs.lvgl.io/7.11/get-started/micropython.html
@@ -88,5 +91,8 @@ I created ezFBfont, the font packs and tooling to support a [project](https://gi
 [![PrintPy, still under development..](examples/doc/printpy.thumb.jpg)](examples/doc/printpy.jpg)
 
 This is a 3d printer status and progress display, driven by a Seeedstudio XIAO RP2040, and using my fonts + writer + marquee.
+* It also uses another specialised MicroPythn tool I wrote, [serialOM](https://github.com/easytarget/serialOM); a framework and class for fetching and synchronising the RepRapFirmware (a 3d printer/CNC/NC cutter control firmware) [ObjectModel](https://docs.duet3d.com/en/User_manual/RepRapFirmware/Object_Model) via any serial stream.
+  * The ObjectModel is a continually updated machine and job state data structure, served via JSON, and has a fiddly 'sequence' method to determine which bits to update.
+  * Also notable is that *serialOM* is cross-python code; designed to run under either MicroPython or CPython as necesscary.
 
-The fonts, writer and marquee  have been tested on a `ssd1306` OLED display, and a `st7567` LCD module, both using I2C, and driven by ESP32 *and*  RP2040 development boards.
+The fonts, writer and marquee have been tested using I2C on a `ssd1306` OLED display, and a `st7567` LCD module. Using both by ESP32 and RP2040 development boards.
