@@ -67,24 +67,24 @@ Required Arguments:
 * *fontName* : the name of the imported font module.
 
 Optional Arguments:
-* *x*, *y*: (integer, px) the top-left position of the output box.
+* *x*, *y*: (integer, px) : the top-left position of the output box.
   * Will default to zero if not specified.
-* *width*: (integer, px) the box width.
+* *width*: (integer, px) : the box width.
   * If 'None', the default, the width will go to the right-hand edge of the display (if it can be determined).
-* *mode*: (string) one of `'marquee'` or `'scroller'`
+* *mode*: (string) : one of `'marquee'` or `'scroller'`
   * Defaults to *marquee*, see above.
-* *pad*: (float) message end padding.
+* *pad*: (float) : message end padding.
   * Sets a fraction of the output box width that should be used as padding between repeats of the message in *marquee* mode.
   * Not used in *scroller* mode.
-* *pause*: (integer) an initial pause count to set when the font is started
+* *pause*: (integer) : an initial pause count to set when the font is started
   * The output will not begin to animate until this many steps have been called after starting.
-* *hgap*: (integer, px) add or remove spacing between characters.
+* *hgap*: (integer, px) : add or remove spacing between characters.
   * Defaults to `0`, and is only applied between individual characters.
   * Negative values are allowed, characters will render over each other as needed.
-* *fg*, *bg*: (integers) foreground and background colors.
+* *fg*, *bg*: (integers) : foreground and background colors.
   * Foreground will default to 1; for color displays this needs to be set appropriately.
   * The marquee cannot be displayed transparently the box will always fully overwrite the specified area.
-* *verbose*: Enables verbose feedback on init, default changes and missing characters, default `False`.
+* *verbose*: (bool) : enables verbose feedback on init, start, pause and stop.
 
 ### Methods:
 
