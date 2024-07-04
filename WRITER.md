@@ -57,9 +57,10 @@ Optional Arguments:
 * *valign*: (string) `top|center|baseline|bottom` : how to align on Y axis.
   * Defaults to `top`.
   * The `baseline` setting is applied at the first line with multi-line strings.
-* *hgap* and *vgap*: add (or remove) spacing between characters and lines
+* *hgap* and *vgap*: (integer) add or remove spacing between characters and lines
   * Defaults to `0`, and is only applied between individual characters and between lines, negative values are allowed.
   * This is a gap, not padding; no background is drawn in the space created.
+  * Negative values are allowed, if using them you should also use a transparent background (`tkey=0`) to stop character backgrounds 'clipping' the previous characters as they are drawn.
 * *colors*: (integer) the total number of colors or greyscales we support, 2 for mono, up to 65536 for 16 bit color.
   * This defaults to `2` (mono displays) if not supplied and not determined automatically.
     * If the display driver reports a 'format' property this is used to determine the color map.
