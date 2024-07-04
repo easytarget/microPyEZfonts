@@ -9,7 +9,9 @@ This will work with *any* display that has a driver for the built-in microPyton 
 Copy the `ezFBmarquee.py` file from this repository into the root (or path) of your MicroPython project, along with the relevant display driver and font files you want to use. There are no other requirements.
 
 ## quickstart
-*ezFBmarquee* is a python class that is initiated against a framebuffer device, and a font. You declare an output area during *init()* and then allocate messages to that with *start()*. A *step()* method needs to be called regularlly to advance th animation.
+*ezFBmarquee* is a python class that is initiated against a framebuffer device, and a font. 
+
+You declare an output area during *init()* and then allocate messages to that with *start()*. A *step()* method needs to be called regularlly to advance th animation.
 
 See the [`examples`](examples) folder for some working code that uses the features described below, and shows how to drive the animation via a Timer Interrupt.
 
@@ -39,6 +41,8 @@ The marquee has two **modes**:
   * If the message is *smaller* than the box width once rendered it is not scrolled.
 * `scroller` mode starts with the box empty, the message will scroll into view from the right as it is stepped and scroll accross the box, before dissappearing on the left. Once the message has fully scrolled out of the box the cycle begins again.
 
+(Do not forget to call *display.show()* after start() or step() to see your results)
+
 ### Create an instance for the font:
 
 The font class and the font(s) required need to be imported:
@@ -48,7 +52,7 @@ import mPyEZFont_myfont as fontName
 #...etc for all fonts
 ```
 
-You then create a font instance for each imported font:
+You then create a marquee instance for the imported font:
 ```python
 mymarquee = ezFBmarquee(device, fontName,
                         x=0, y=0,
@@ -66,7 +70,7 @@ Optional Arguments:
 * *x*, *y*: (integer, px) the top-left position of the output box.
   * Will default to zero if not specified.
 * *width*: (integer, px) the box width.
-  * If 'None' the width will go to the right-hand edge of the display (if it can be determined).
+  * If 'None', the default, the width will go to the right-hand edge of the display (if it can be determined).
 * *mode*: (string) one of `'marquee'` or `'scroller'`
   * Defaults to *marquee*, see above.
 * *pad*: (float) message end padding.
@@ -112,7 +116,11 @@ Moves the animation by *steps* (in px), the value of steps will be constrained b
 * If the *pause* counter is above zero no animation is done, and the pause counter is reduced by one instead.
 * The output is always re-drawn, even if paused or when steps=0.
 
-Returns `True` if the animation has 'rolled over' and restarted from the initial postion. This cna be used to add a *pause()* to marquees, or make a scroller only appear once.
+Returns `True` if the animation has 'rolled over' and restarted from the initial postion.
+* This can be used to add a *pause()* to marquees, or *stop()* a scroller after it has shown it's message.
+
+If a *marquee* mode message's width is smaller than the output box width the message is not animated.
+* But the internal step count still advances and a 'virtual' rollover will occur once the step count has exceeded the output box width.
 
 #### pause()
 ```python
@@ -128,6 +136,7 @@ Returns `True` if the marquee is active (displaying a message)
 
 -----------------------
 ### Thoughts:
-* Make the scroll direction reversible
-* Vertical marquee for multi-line strings, Vertical scroller
-* Allow changing text mid scroll, could be nice for time displays etc.
+None of these are planned, but due to the architecture of the marquee code they shuld be relative easy to implement.
+* Make the scroll direction reversible, eg allow negative step()s and set a step() default.
+* Vertical marquee (also for multi-line strings), Vertical scroller for the same.
+* Allow changing text mid scroll, this could be nice for time displays etc. 
