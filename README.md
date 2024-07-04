@@ -7,7 +7,7 @@ A collection of fonts and a writer for them, sourced from the [u8g2](https://git
 They will work with **`EZ FrameBuffer Font Writer`** (see below).
 * This is optimised for ease of installation and use; especially for small 'info panel' type projects and will work with *any* display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html).
 
-And will also work with Peter Hinches comprehensive [writer](https://github.com/peterhinch/micropython-font-to-py/blob/master/writer/WRITER.md) class and [nano-gui](https://github.com/peterhinch/micropython-nano-gui/tree/master). And with the `EZFont` class from Brad Barnett's [mpdisplay](https://github.com/bdbarnett/mpdisplay)
+And will also work with Peter Hinche's comprehensive [writer](https://github.com/peterhinch/micropython-font-to-py/blob/master/writer/WRITER.md) class and [nano-gui](https://github.com/peterhinch/micropython-nano-gui/tree/master). And with the `EZFont` class from Brad Barnett's [mpdisplay](https://github.com/bdbarnett/mpdisplay)
 
 The font packs presented here were created using my own `bdf2dict` font module creator, see below.
 
@@ -24,7 +24,7 @@ A simple marquee / scrolling banner display that uses the fonts from this repo. 
 
 Details are in [`MARQUEE.md`](MARQUEE.md), and examples of driving the animation with an IRQ timer loop are in the examples folder.
 
-# Font Packs
+# Latin-1 and Symbol Font Packs
 
 Font files are in the [`Latin-1`](Latin-1) and [`Symbols`](Symbols) folders as appropriate.
 * See the `README` in each for a description, a map of all the fonts and heights, and other considerations.
@@ -36,14 +36,15 @@ They are all derived from **112** open and redistributable *.bdf* font definitio
 Fonts are generated and stored by font family, then character set and vertical size.
 * 560 **Latin-1** font modules cover the basic latin character sets in groups of related characters.
 * 144 **Symbol** modules cover specialist symbol fonts (battery, 7 segment, etc) and the Open Iconic icon sets.
-* **Unicode** font modules need to made on demand using the `bdf2dict` tool, see the Unicode [README](/Unicode/README.md) for details.
-  * There is no sensible way of grouping Unicode fonts into packs that are small enought to be useful on micropython devices. The most popular blocks have thousands of characters in them and the resulting files are too large to use sensibly.
-  * The `bdf2dict` tool is designed to be easy to install and use, just requiring Python3.7 or higher.
-  * You can specify your own charset when prompted on the command line (or via a file/arguments/stdin).
-  * The script will output a python font module containing only the characters requested, plus an ascii-art map of the glyphs.
-  * The [efont](http://openlab.ring.gr.jp/efont/) unicode fonts are provided in the Unicode folder, but other fonts in the Latin-1 folder also provide unicode characters; these are noted in the README.
 
 All provided font modules contain and retain the original copyright notices from the source '.bdf' files, most are very 'free'; but the proportional X11 derived fonts need extra consideration. See the documentation on the font index pages for more.
+
+**Unicode** font modules need to made on demand using the `bdf2dict` tool, see the Unicode [README](/Unicode/README.md) for details.
+* There is no sensible way of grouping Unicode fonts into packs that are small enought to be useful on micropython devices. The most popular blocks have thousands of characters in them and the resulting files are too large to use sensibly.
+* The `bdf2dict` tool is designed to be easy to install and use, just requiring Python3.7 or higher.
+  * You can specify your own charset when prompted on the command line (or via a file/arguments/stdin).
+  * The script will output a python font module containing only the characters requested, plus an ascii-art map of the glyphs.
+  * The [efont](http://openlab.ring.gr.jp/efont/) unicode fonts are provided in the Unicode folder, but other fonts in the Latin-1 folder also provide unicode characters; these are noted in the Unicode README.
 
 # Font creator: [`bdf2dict.py`](bdf2dict.py)
 
