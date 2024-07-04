@@ -1,14 +1,17 @@
 # `ezFBfont.py`
 ## a Font Writer for the MicroPython framebuffer
 
-* This is optimised for ease of installation and use; especially for small 'info panel' type projects and will work with *any* display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html).
-*easyFBfont* is a python class that is initiated against a framebuffer device, and a font.
+A font system optimised for ease of installation and use; especially for small 'info panel' type projects.
+
+This will work with *any* display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html).
 
 ## install:
-Copy the `ezFBfont.py` file from this repository into the root (or path) of your MicroPython project, along with the relevant display driver and font files you want to use.
+Copy the `ezFBfont.py` file from this repository into the root (or path) of your MicroPython project, along with the relevant display driver and font files you want to use. There are no other requirements.
 
 ## quickstart
-See the [`examples`](examples) folder for some working code that uses all the features described below.
+*ezFBfont* is a python class that is initiated against a framebuffer device, and a font. You then write strings to the framebuffer using the *write()* method.
+
+See the [`examples`](examples) folder for some working code that uses the features described below.
 ```python
 from ezFBfont import ezFBfont
 import mPyEZFont_XYZ
@@ -29,13 +32,13 @@ device.show()
 The font class and the font(s) required need to be imported:
 ```python
 from ezFBfont import ezFBfont
-import mPyEZFont_myfont as font1
+import mPyEZFont_myfont as fontName
 #...etc for all fonts
 ```
 
 You then create a font instance for each imported font:
 ```python
-myfont = ezFBfont(device, font1,
+myfont = ezFBfont(device, fontName,
                   fg=1, bg=0 ,tkey=-1,
                   halign='left', valign='top', hgap=0, vgap=0,
                   colors=2, verbose=False)
@@ -70,6 +73,8 @@ Optional Arguments:
 ```python
 myfont.write(string, X, Y, fg=None, bg=None, tkey=None, halign=None, valign=None, hgap=None, vgap=None)
 ```
+Writes the supplied text to the framebuffer
+
 Positional Arguments:
 * *string* : The text to be written to the framebuffer
 * *x*, *y* : position (pixels), framebuffer top-left is 0, 0
@@ -84,6 +89,7 @@ Returns `False` if any characters failed to be written (not present in the font)
 x, y = myfont.size(str, hgap=None, vgap=None)
 ```
 Returns the pixel width and height of the string.
+* The gap options will override the current default.
 
 #### rect()
 ```python
@@ -91,6 +97,7 @@ xmin, xmax, width, height = myfont.rect(str, x, y, halign=None, valign=None, hga
 ```
 Returns the exact area that the string would be written to with `myfont.write()`.
 * The return is suitable for passing directly to `display.rect()`.
+* The alignment and gap options will override the current default.
 
 #### set_default()
 ```python
@@ -112,5 +119,4 @@ myfont.colors : total number of available colors
 ```
 
 ### Thoughts:
-See the issue list for status/planning.
 * `Flip`, `Mirror`, `Turn`: these will allow all text directions and effects etc.

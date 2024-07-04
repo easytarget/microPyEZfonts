@@ -175,14 +175,15 @@ class ezFBmarquee():
         self._count = self._start
         self.step(0) 
 
-    def step(self, step=1):
+    def step(self, steps=1):
         # Step the marquee as necesscary
+        steps = max(0,min(steps, self._width))
         if self._string is None:
             return False
         # Do animation step
         res = False
-        if (self._pause == 0) and (step > 0):
-            self._count += step
+        if (self._pause == 0) and (steps > 0):
+            self._count += steps
             # Blit the scrollbuffer over outbuffer offset by scroll value
             if self._stepping:
                 self._outframe.blit(self._scrollframe, -self._count, 0)
