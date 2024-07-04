@@ -59,9 +59,9 @@ The fonts, and the writer, target 'Ease of Use' (*) as a core ethos.
 
 These fonts have similar memory and ram consumption to the fonts from `micropython-font-to-py` when copied to the target device in an IDE and run on a default firmware for the device.
 
-However; if you are developing a memory critical application where you are freezing files as bytecode the 'micropython-font-to-py' generated fonts are able to keep their data in the Flash memory. the 'ezFBfonts' use a dictionary which, being mutable, is copied to ram even when the font file itself is frozen.
+However; if you are developing a memory critical application and freezing files as bytecode the 'micropython-font-to-py' generated fonts are able to keep their data in the Flash memory. The 'ezFBfonts' use a dictionary which, being mutable, is copied to ram even when the font file itself is frozen.
 
-If this wasteful use of memory when frozen is an issue then these fonts are not for you1 Although the font writer and marquee classes  (being compatible with both font creation systems) may be.
+If this wasteful use of memory when frozen is an issue then these fonts are not for you, Although the font writer and marquee classes (being compatible with both font creation systems) may still be of use.
 
 (*) *For a given value of 'Ease of Use'*
 

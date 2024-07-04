@@ -7,9 +7,9 @@ A collection of fonts and a writer for them, sourced from the [u8g2](https://git
 They will work with **`EZ FrameBuffer Font Writer`** (see below).
 * This is optimised for ease of installation and use; especially for small 'info panel' type projects and will work with *any* display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html).
 
-And will also work with Peter Hinches comprehensive [writer](https://github.com/peterhinch/micropython-font-to-py/tree/master/writer) class and [nano-gui](https://github.com/peterhinch/micropython-nano-gui/tree/master).
+And will also work with Peter Hinches comprehensive [writer](https://github.com/peterhinch/micropython-font-to-py/blob/master/writer/WRITER.md) class and [nano-gui](https://github.com/peterhinch/micropython-nano-gui/tree/master).
 
-The fonts presented here were created using my own `bdf2dict` font module creator. Details in the [`bdf2dict`](bdf2dict) folder.
+The fonts presented here were created using my own `bdf2dict` font module creator, see below.
 
 -----------------
 
@@ -24,12 +24,12 @@ A simple marquee / scrolling banner display that uses the fonts from this repo. 
 
 Details are in [`MARQUEE.md`](MARQUEE.md), and examples of driving the animation with an IRQ timer loop are in the examples folder.
 
-# Fonts
+# Font Packs
 
 Font files are in the [`Latin-1`](Latin-1) and [`Symbols`](Symbols) folders as appropriate.
 * See the `README` in each for a description, a map of all the fonts and heights, and other considerations.
 
-The selection provided here covers the default U8G2 fonts, a lot of common X11 fonts and the 'spleen' small font set. There are some symbol and icon fonts too.
+The selection provided here was derived from the default U8G2 fonts; it contains common X11 fonts, the 'spleen' small font set, OpenIconic icons, tiny fonts, and some symbol and other icon fonts too.
 
 They are all derived from **112** open and redistributable *.bdf* font definition files covering 11 font families. These have been packed into *.py* font modules based on the character set(s) they contain.
 
@@ -41,7 +41,7 @@ Fonts are generated and stored by font family, then character set and vertical s
   * The `bdf2dict` tool is designed to be easy to install and use, just requiring Python3.7 or higher.
   * You can specify your own charset when prompted on the command line (or via a file/arguments/stdin).
   * The script will output a python font module containing only the characters requested, plus an ascii-art map of the glyphs.
-  * The [efont](http://openlab.ring.gr.jp/efont/dist/unicode-bdf/) unicode fonts are provided in the Unicode folder, but other fonts in the Latin-1 folder also provide unicode characters; these are noted in the README.
+  * The [efont](http://openlab.ring.gr.jp/efont/) unicode fonts are provided in the Unicode folder, but other fonts in the Latin-1 folder also provide unicode characters; these are noted in the README.
 
 All provided font modules contain and retain the original copyright notices from the source '.bdf' files, most are very 'free'; but the proportional X11 derived fonts need extra consideration. See the documentation on the font index pages for more.
 
@@ -49,13 +49,13 @@ All provided font modules contain and retain the original copyright notices from
 
 All the fonts packs provided here were made with this tool, it is a simple to use CPythom (not microPython) script that can import and process a `.bdf` font file and extract just the characters you need into a `.py` font file. I is fully compatible with Unicode characters and fonts.
 
-See [`BDF2DICT.md`](BDF2DICT.py) for documentation and usage instructions, the [Unicode](unicode) README has a write-up and demonstration + example of using this to make a Unicode font for a project.
+See [`BDF2DICT.md`](BDF2DICT.md) for documentation and usage instructions, the [Unicode](Unicode) README has a write-up and demonstration + example of using this to make a Unicode font for a project.
 
 ## Drivers
 
 The font writer and marquee will work with **any** display that has a MicroPython **framebuffer** compatible driver.
 
-A couple of common 'good' drivers for popular ssd1306 and st7567 displaysare provided. Along with documentation on finding and using drivers for other displays in the [`drivers`](drivers) folder.
+A couple of common 'good' drivers for popular ssd1306 and st7567 displays are provided. Along with documentation on finding and using drivers for other displays in the [`drivers`](drivers) folder.
 
 If you find a driver that works and is not in the list there please let me know by submitting a issue!
 
