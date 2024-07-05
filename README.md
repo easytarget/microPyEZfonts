@@ -39,19 +39,19 @@ Fonts are generated and stored by font family, then character set and vertical s
 
 All provided font modules contain and retain the original copyright notices from the source '.bdf' files, most are very 'free'; but the proportional X11 derived fonts need extra consideration. See the documentation on the font index pages for more.
 
-**Unicode** font modules need to made on demand using the `bdf2dict` tool, see the Unicode [README](/Unicode/README.md) for examples.
-* There is no sensible way of grouping general Unicode fonts into packs that are small enought to be useful on micropython devices. The most popular blocks have thousands of characters in them and the resulting files are too large to use sensibly.
-* Instead; sources tooling and examples are provided to help you make a custom font pack with the glyphs and characters you need, and no excess.
-* The `bdf2dict` tool is designed to be easy to install and use, just requiring Python3.7 or higher.
+## Unicode font packs?
+There is no sensible way of grouping general Unicode fonts into packs that are small enought to be useful on micropython devices. The most popular blocks have thousands of characters in them and the resulting files are too large to use sensibly Instead; tooling and examples are provided to help you make a custom font pack with the glyphs and characters you need, and no excess.
+* The `bdf2dict` tool (below) is designed to be easy to install and use, just requiring Python3.7 or higher
+  * The [Unicode](unicode/README.md) page has an example and notes about unicode font sources.
   * You can specify your own charset when prompted on the command line (or via a file/arguments/stdin).
   * The script will output a python font module containing only the characters requested, plus an ascii-art map of the glyphs.
   * The [efont](http://openlab.ring.gr.jp/efont/) unicode fonts are provided in the Unicode folder, but other fonts in the Latin-1 folder also provide unicode characters; these are noted in the Unicode README.
 
 # Font creator: [`bdf2dict.py`](bdf2dict.py)
 
-All the fonts packs provided here were made with this tool, it is a simple to use CPythom (not microPython) script that can import and process a `.bdf` font file and extract just the characters you need into a `.py` font file. I is fully compatible with Unicode characters and fonts.
+All the fonts packs provided here were made with this tool, it is a simple to use CPythom (not microPython) script that can import and process a `.bdf` font file and extract just the characters you need into a `.py` font file. It is fully compatible with Unicode characters and fonts.
 
-See [`BDF2DICT.md`](BDF2DICT.md) for documentation and usage instructions, the [Unicode](Unicode) README has a write-up and demonstration + example of using this to make a Unicode font for a project.
+See [`BDF2DICT.md`](BDF2DICT.md) for further documentation and usage instructions, and the Unicode [readme](Unicode/README.md) 
 
 ## Drivers
 
@@ -93,6 +93,6 @@ I created ezFBfont, the font packs and tooling to support a [project](https://gi
 [![PrintPy, still under development..](examples/doc/printpy.thumb.jpg)](examples/doc/printpy.jpg)
 
 This is a 3d printer status and progress display, driven by a Seeedstudio XIAO RP2040, and using my fonts + writer + marquee.
-* It also uses another specialised MicroPythn tool I wrote, [serialOM](https://github.com/easytarget/serialOM); a framework and class for fetching and synchronising the RepRapFirmware [ObjectModel](https://docs.duet3d.com/en/User_manual/RepRapFirmware/Object_Model) via any serial stream. This is notable partly because it is a cross-python class; it works under both MicroPython and CPython
+* It also uses another specialised MicroPython tool I wrote, [serialOM](https://github.com/easytarget/serialOM); a framework and class for fetching and synchronising the RepRapFirmware [ObjectModel](https://docs.duet3d.com/en/User_manual/RepRapFirmware/Object_Model) via any serial stream. This is notable partly because it is a cross-python class; it works under both MicroPython and CPython
 
 The fonts, writer and marquee have been tested using I2C on a `ssd1306` OLED display, and a `st7567` LCD module. Using both by ESP32 and RP2040 development boards.
