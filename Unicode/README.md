@@ -26,6 +26,203 @@ Both Unicode fonts here are open source projects and have permissive licencing; 
 * Please read the copyright notices in the efont folder; and ensure you follow any restrictions and requirements there if you redistribute fonts based on this set.
 * The Unifont is dual licenced (SIL and GPL2 with font exceptions); see https://unifoundry.com/LICENSE.txt
 
+# Example
+Starting in a project folder, we first need to copy in the relevent libraries
+```
+user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/ezFBfont.py .
+user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/drivers/ssd1306.py .
+user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/drivers/repl_1306.py .
+```
+(the repl_1306 lib is optional, useful for debug in the console, see below)
+
+Next you will need a file with text you need to convert in it.
+
+For this example I am using 'Hello' in simplified chinese, and microPython with a 'µ'
+```
+user@pc:~/MPython/uniProj$ cat unicode.txt 
+你好
+µPython
+```
+
+Now we need to prepare our font file:
+
+```
+user@pc:~/MPython/uniProj$ python ../microPyEZfonts/bdf2dict.py ../microPyEZfonts/Unicode/unifont_15.1.05/unifont-15.1.05.bdf my_ unicode.txt 
+bdf2dict.py: processing ../microPyEZfonts/Unicode/unifont_15.1.05/unifont-15.1.05.bdf
+10 Matching characters rendered to my_unifont_15_1_05.py
+
+user@pc:~/MPython/uniProj$ ll
+total 48
+-rw-r--r--. 1 owen owen 8545 Jul  5 16:37 ezFBfont.py
+-rw-r--r--. 1 owen owen 3212 Jul  5 16:38 my_unifont_15_1_05.map
+-rw-r--r--. 1 owen owen 1854 Jul  5 16:38 my_unifont_15_1_05.py
+-rw-r--r--. 1 owen owen   15 Jul  5 16:38 my_unifont_15_1_05.set
+-rw-r--r--. 1 owen owen 3610 Jul  5 16:37 repl_1306.py
+-rw-r--r--. 1 owen owen 4784 Jul  5 16:37 ssd1306.py
+-rw-r--r--. 1 owen owen   16 Jul  5 16:16 unicode.txt
+-rw-r--r--. 1 owen owen  573 Jul  5 13:45 uniProj-i2c.py
+-rw-r--r--. 1 owen owen  433 Jul  5 16:28 uniProj-repl.py
+```
+
+We should be able to run our demo now:
+
+```
+user@pc:~/MPython/uniProj$ micropython uniProj-repl.py 
+repl_1306: init 81x37
+my_unifont_15_1_05 : initialised: height: 16, max width: 16, baseline: 14
+my_unifont_15_1_05 = fg: 1, bg: 0, tkey: -1, halign: center, valign: center, hgap: 1, vgap: 0
+repl_1306: show
+                          ▄   ▄           ▄                                      
+                          █   █           █    ▀▀▀▀▀█                            
+                         █   █▀▀▀▀▀▀█  ▄▄▄█▄▄     ▄▀                             
+                        ██ ▄▀   ▄  ▀     █  █    █                               
+                      ▄▀ █   ▄  █ ▄      █  █ ▀▀▀█▀▀▀▀                           
+                         █  ▄▀  █  █    ▀▄ █     █                               
+                         █ ▄▀   █   █    ▄▀▄     █                               
+                         █    ▄ █      ▄▀   █  ▄ █                               
+                         ▀     ▀                ▀                                
+                                                                                 
+                  ▄▄▄▄▄               ▄      █                                   
+         ▄    ▄   █    █   ▄    ▄     █      █ ▄▄▄     ▄▄▄▄    ▄ ▄▄▄             
+         █    █   █▄▄▄▄▀   █    █   ▀▀█▀▀    █▀   █   █    █   █▀   █            
+         █    █   █        █    █     █      █    █   █    █   █    █            
+         █▄  ▄█   █         ▀▄▄▀█     █      █    █   █    █   █    █            
+         █ ▀▀  ▀  ▀             █      ▀▀    ▀    ▀    ▀▀▀▀    ▀    ▀            
+        ▀                   ▀▀▀▀                                                 
+                                                                                 
+                                                                                 
+```
+The efont collection has bold and italic fonts, trying it is easy:
+```
+user@pc:~/MPython/uniProj$ python ../microPyEZfonts/bdf2dict.py ../microPyEZfonts/Unicode/efont-unicode-bdf-0.4.2/b16_b.bdf my_ unicode.txt 
+bdf2dict.py: processing ../microPyEZfonts/Unicode/efont-unicode-bdf-0.4.2/b16_b.bdf
+9 Matching characters rendered to my_b16_b.py
+
+user@pc:~/MPython/uniProj$ vi uniProj-repl.py 
+
+user@pc:~/MPython/uniProj$ micropython uniProj-repl.py 
+repl_1306: init 80x37
+my_b16_b : initialised: height: 16, max width: 16, baseline: 14
+my_b16_b = fg: 1, bg: 0, tkey: -1, halign: center, valign: center, hgap: 1, vgap: 0
+repl_1306: show
+                          ▄▄ ▄▄           ▄▄                                    
+                         ▄██ ██           ██   ▀▀▀▀▀██                          
+                        ▄██ ██▀▀██▀▀██ ▄▄▄██▄▄▄   ▄█▀                           
+                       ▄██ ▀▀▀  ██ ██▀   ██ ██   ▄█▀                            
+                      ██▀█   ▄▄ ██ ▄▄    ██ ██▀▀▀██▀▀▀▀                         
+                        ██   ██ ██ ██   ██▄▄█▀   ██                             
+                        ██  ██▀ ██ ▀██  ▀▀▄█▀█▄  ██                             
+                        ██      ██     ▄▄█▀      ██                             
+                        ▀▀    ▀▀▀▀              ▀▀▀                             
+                                                                                
+                 ▄▄▄▄▄▄              ▄▄     ██                                  
+                 ██   ██  ▄▄   ▄▄  ▄▄██▄▄   ██ ▄▄▄    ▄▄▄▄▄   ▄▄ ▄▄▄            
+         ▄▄  ▄▄  ██▄▄▄█▀  ██   ██    ██     ██▀  ██  ██   ██  ██▀  ██           
+         ██  ██  ██       ██   ██    ██     ██   ██  ██   ██  ██   ██           
+         ██▄ ██  ██        ▀█▄█▀█    ██     ██   ██  ██   ██  ██   ██           
+         ██ ▀ ▀  ▀▀            ██     ▀▀▀   ▀▀   ▀▀   ▀▀▀▀▀   ▀▀   ▀▀           
+         ▀▀                ▀▀▀▀▀                                                
+                                                                                
+```
+code:
+```                                                                             
+user@pc:~/MPython/uniProj$ cat uniProj-repl.py 
+from repl_1306 import REPL_1306
+from ezFBfont import ezFBfont
+
+import my_b16_b as unicode_font
+#import my_unifont_15_1_05 as unicode_font
+
+display = REPL_1306(80, 37)
+
+# Font Init
+font = ezFBfont(display, unicode_font,
+                halign='center', valign='center',
+                hgap=1,
+                verbose=True)
+
+# write
+with open('unicode.txt','r') as text:
+    font.write(text.read().strip('\n'), 39, 17)
+display.show()
+user@pc:~/MPython/uniProj$ 
+user@pc:~/MPython/uniProj$ 
+user@pc:~/MPython/uniProj$ cat uniProj-i2c.py 
+from machine import Pin, I2C, SoftI2C
+from ssd1306 import SSD1306_I2C
+from ezFBfont import ezFBfont
+
+import my_unifont_15_1_05 as unicode_font
+
+# HW
+I2C0_SDA_PIN = 21  # default esp32
+I2C0_SCL_PIN = 22  # default esp32
+i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
+
+# Display
+display = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
+
+# Init
+font = ezFBfont(display, unicode_font1,
+                halign='center', valign='center',
+                verbose=True)
+
+# Write
+with open('unicode.txt','r') as text:
+    font.write(text.read().strip('\n'), 63, 31)
+display.show()
+```
+and
+```
+user@pc:~/MPython/uniProj$ cat uniProj-repl.py 
+from repl_1306 import REPL_1306
+from ezFBfont import ezFBfont
+
+import my_b16_b as unicode_font
+#import my_unifont_15_1_05 as unicode_font
+
+display = REPL_1306(80, 37)
+
+# Font Init
+font = ezFBfont(display, unicode_font,
+                halign='center', valign='center',
+                hgap=1,
+                verbose=True)
+
+# Write
+with open('unicode.txt','r') as text:
+    font.write(text.read().strip('\n'), 39, 17)
+display.show()
+user@pc:~/MPython/uniProj$ 
+user@pc:~/MPython/uniProj$ cat uniProj-i2c.py 
+from machine import Pin, I2C, SoftI2C
+from ssd1306 import SSD1306_I2C
+from ezFBfont import ezFBfont
+
+import my_b16_b as unicode_font
+#import my_unifont_15_1_05 as unicode_font
+
+# HW
+I2C0_SDA_PIN = 21  # default esp32
+I2C0_SCL_PIN = 22  # default esp32
+i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
+
+# Display
+display = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
+
+# Font Init
+font = ezFBfont(display, unicode_font,
+                halign='center', valign='center',
+                hgap=1,
+                verbose=True)
+
+# Write
+with open('unicode.txt','r') as text:
+    font.write(text.read().strip('\n'), 63, 31)
+display.show()
+user@pc:~/MPython/uniProj$ 
+```
+
 # Block List
 (for reference, from: https://www.unicode.org/Public/UCD/latest/ucd/Blocks.txt):
 ```
