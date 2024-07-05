@@ -4,8 +4,8 @@ A collection of fonts and a writer for them, sourced from the [u8g2](https://git
 
 [![Demo Examples on two different displays](examples/doc/demo-collage1.thumb.jpg)](examples/doc/demo-collage1.jpg)
 
-They will work with **`EZ FrameBuffer Font Writer`** (see below).
-* This is optimised for ease of installation and use; especially for small 'info panel' type projects and will work with *any* display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html).
+The font packs here will work with **`EZ Font Writer`** and **`EZ marquee`** (see below).
+* These are optimised for ease of installation and use; especially for small 'info panel' type projects and will work with *any* display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html).
 
 And will also work with Peter Hinche's comprehensive [writer](https://github.com/peterhinch/micropython-font-to-py/blob/master/writer/WRITER.md) class and [nano-gui](https://github.com/peterhinch/micropython-nano-gui/tree/master). And with the `EZFont` class from Brad Barnett's [mpdisplay](https://github.com/bdbarnett/mpdisplay)
 
@@ -39,8 +39,9 @@ Fonts are generated and stored by font family, then character set and vertical s
 
 All provided font modules contain and retain the original copyright notices from the source '.bdf' files, most are very 'free'; but the proportional X11 derived fonts need extra consideration. See the documentation on the font index pages for more.
 
-**Unicode** font modules need to made on demand using the `bdf2dict` tool, see the Unicode [README](/Unicode/README.md) for details.
-* There is no sensible way of grouping Unicode fonts into packs that are small enought to be useful on micropython devices. The most popular blocks have thousands of characters in them and the resulting files are too large to use sensibly.
+**Unicode** font modules need to made on demand using the `bdf2dict` tool, see the Unicode [README](/Unicode/README.md) for examples.
+* There is no sensible way of grouping general Unicode fonts into packs that are small enought to be useful on micropython devices. The most popular blocks have thousands of characters in them and the resulting files are too large to use sensibly.
+* Instead; sources tooling and examples are provided to help you make a custom font pack with the glyphs and characters you need, and no excess.
 * The `bdf2dict` tool is designed to be easy to install and use, just requiring Python3.7 or higher.
   * You can specify your own charset when prompted on the command line (or via a file/arguments/stdin).
   * The script will output a python font module containing only the characters requested, plus an ascii-art map of the glyphs.
@@ -92,8 +93,6 @@ I created ezFBfont, the font packs and tooling to support a [project](https://gi
 [![PrintPy, still under development..](examples/doc/printpy.thumb.jpg)](examples/doc/printpy.jpg)
 
 This is a 3d printer status and progress display, driven by a Seeedstudio XIAO RP2040, and using my fonts + writer + marquee.
-* It also uses another specialised MicroPythn tool I wrote, [serialOM](https://github.com/easytarget/serialOM); a framework and class for fetching and synchronising the RepRapFirmware (a 3d printer/CNC/NC cutter control firmware) [ObjectModel](https://docs.duet3d.com/en/User_manual/RepRapFirmware/Object_Model) via any serial stream.
-  * The ObjectModel is a continually updated machine and job state data structure, served via JSON, and has a fiddly 'sequence' method to determine which bits to update.
-  * Also notable is that *serialOM* is cross-python code; designed to run under either MicroPython or CPython as necesscary.
+* It also uses another specialised MicroPythn tool I wrote, [serialOM](https://github.com/easytarget/serialOM); a framework and class for fetching and synchronising the RepRapFirmware [ObjectModel](https://docs.duet3d.com/en/User_manual/RepRapFirmware/Object_Model) via any serial stream. This is notable partly because it is a cross-python class; it works under both MicroPython and CPython
 
 The fonts, writer and marquee have been tested using I2C on a `ssd1306` OLED display, and a `st7567` LCD module. Using both by ESP32 and RP2040 development boards.
