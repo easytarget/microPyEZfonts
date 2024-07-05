@@ -10,13 +10,21 @@ Instead; this is a guide to producing a custom font pack with just the character
 I am currently finalising the tooling and preparing examples.
 
 ## Fonts from:
-[efont](http://openlab.ring.gr.jp/efont/dist/unicode-bdf/)
+Two very 'complete' unicode font sets are provided here.
+* [efont](http://openlab.ring.gr.jp/efont/dist/unicode-bdf/)
+  * These have multiple heights, and bold/italic variants.
+* [GNU unifont](https://savannah.gnu.org/projects/unifont) (downloads at [unifoundry](https://unifoundry.com/unifont/))
+  * Only available as 16px height.
+
+Additionally: The Fixed and X11 fonts in the [Latin-1](../Latin-1/Latin-1-bdf-sources) folder (Helvetica, Times, Courier, Schoolbook and the numeric named fonts) all have Unicode glyphs as part of the extended Latin-1 blocks.
 
 ## Requirements
 A working python3.7+ install, and this repository.
 
 # COPYRIGHT
-Please read the copyright notices in the efont folder; and ensure you follow any restrictions and requirements there if you redistribute fonts based on this set.
+Both Unicode fonts here are open source projects and have permissive licencing; but they **do** have licence terms and some restrictions:
+* Please read the copyright notices in the efont folder; and ensure you follow any restrictions and requirements there if you redistribute fonts based on this set.
+* The Unifont is dual licenced (SIL and GPL2 with font exceptions); see https://unifoundry.com/LICENSE.txt
 
 # Block List
 (for reference, from: https://www.unicode.org/Public/UCD/latest/ucd/Blocks.txt):
