@@ -21,11 +21,14 @@
 from micropython import const
 import framebuf
 
+blks = ' ▄▀█'
+
 class REPL_1306(framebuf.FrameBuffer):
-    def __init__(self, width, height, txt=True, clear=False, zero='.', one='#'):
+    def __init__(self, width, height, txt=True, blocks=True, clear=False, zero='.', one='#'):
         self.width = width
         self.height = height
         self.txt = txt
+        self._blocks = blocks
         self.clr = clear
         self.zero = zero
         self.one = one
@@ -66,12 +69,24 @@ class REPL_1306(framebuf.FrameBuffer):
                 print('\x1b[2J\x1b[H{}: show'.format(self._name))
             else:
                 print('{}: show'.format(self._name))
+            out = []
             for l in range(0,self.height):
                 t = ''
                 for p in range(0,self.bytes):
                     t += ('{:08b}'.format(self.buffer[(l*self.bytes)+p]))
-                print(t[:self.width].replace('0',self.zero).replace('1',self.one))
+                out.append(t[:self.width])
             self.lastbuf = self.buffer.hex()
+            if self._blocks:
+                if len(out) % 2 != 0:   # add a dummy height as needed
+                    out.append('0' * self.width)
+                for l in range(0,len(out),2):
+                    for b in range(0,len(out[l])):
+                        blk = out[l][b:b+1] + out[l+1][b:b+1]
+                        print(blks[int(blk,2)],end='')
+                    print()
+            else:
+                for l in out:
+                    print(l.replace('0',self.zero).replace('1',self.one))
         else:
             if self.clr:
                 print('show: ',end='')  # stop show() operations scrolling the screen when clear is set

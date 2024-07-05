@@ -1,6 +1,8 @@
+from sys import path
+path.append('..')
+path.append('../drivers')
 from repl_1306 import REPL_1306
 from ezFBfont import ezFBfont
-from sys import path
 from time import sleep_ms
 
 # fonts
