@@ -32,22 +32,26 @@ The following is a walkthrough of using `bdf2dict` to create a simple Unicode fo
 ## Requirements
 A desktop/laptop system with a working python3.7+ install, and this repository.
 
-Starting in a project folder, we first need an app to run
+## App
+Starting in a project folder.. we need an app to run.
 
 The following is a simple app for this example, it uses a ssd_1306 OLED display connected via I2C
 * adapt the diplay init for other displays
+* a 'more complete' version of this is in the examples folder
 
-Demo code example: `
-`cat uniProj-i2c.py`
+Demo code example:
+
+`$ cat uniProj-i2c.py`
 ```python
 from machine import Pin, I2C, SoftI2C
 from ssd1306 import SSD1306_I2C
 from ezFBfont import ezFBfont
 
-import my_b16_b as unicode_font
-#import my_unifont_15_1_05 as unicode_font
+import my_unifont_15_1_05 as unicode_font
 
 # HW
+#I2C0_SDA_PIN = 28  # default rp2040
+#I2C0_SCL_PIN = 29  # default rp2040
 I2C0_SDA_PIN = 21  # default esp32
 I2C0_SCL_PIN = 22  # default esp32
 i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
@@ -66,14 +70,11 @@ with open('unicode.txt','r') as text:
     font.write(text.read().strip('\n'), 63, 31)
 display.show()
 ```
-We need to copy in the relevent libraries
-```
-user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/ezFBfont.py .
-user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/drivers/ssd1306.py .
-```
-(the repl_1306 lib is optional, useful for debug in the console, see below)
+You need to copy the `ezFBfont.py` and `ssd1306.py` class libraries into the project via the file dialog in your IDE or whatever method you use.
 
 Next you will need a file with text you need to convert in it.
+
+Working in a folder on your PC; create a 'charset' file with the characters you want in it.
 
 For this example I am using 'Hello' in simplified chinese, and microPython with a 'µ'
 ```
@@ -82,7 +83,11 @@ user@pc:~/MPython/uniProj$ cat unicode.txt
 µPython
 ```
 
-Now we need to prepare our font file:
+Now we need to prepare our font file using `bdf2dict`.
+
+In this example I have cloned the *ezFBfont* repo alongside the project working folder on my PC.
+
+See the [`bdf2dict`](../BDF2DICT.md) page to understand the options used here.
 
 ```
 user@pc:~/MPython/uniProj$ python ../microPyEZfonts/bdf2dict.py ../microPyEZfonts/Unicode/unifont_15.1.05/unifont-15.1.05.bdf my_ unicode.txt 
@@ -91,31 +96,37 @@ bdf2dict.py: processing ../microPyEZfonts/Unicode/unifont_15.1.05/unifont-15.1.0
 
 user@pc:~/MPython/uniProj$ ll
 total 48
--rw-r--r--. 1 owen owen 8545 Jul  5 16:37 ezFBfont.py
 -rw-r--r--. 1 owen owen 3212 Jul  5 16:38 my_unifont_15_1_05.map
 -rw-r--r--. 1 owen owen 1854 Jul  5 16:38 my_unifont_15_1_05.py
 -rw-r--r--. 1 owen owen   15 Jul  5 16:38 my_unifont_15_1_05.set
--rw-r--r--. 1 owen owen 3610 Jul  5 16:37 repl_1306.py
--rw-r--r--. 1 owen owen 4784 Jul  5 16:37 ssd1306.py
 -rw-r--r--. 1 owen owen   16 Jul  5 16:16 unicode.txt
--rw-r--r--. 1 owen owen  573 Jul  5 13:45 uniProj-i2c.py
--rw-r--r--. 1 owen owen  433 Jul  5 16:28 uniProj-repl.py
 ```
 
-We should be able to run our demo now:
+We should be able to run our demo now: Copy the `my_unifont_15_1_05.py` font file and `unicode.txt` to your project and run!
 
 ## REPL
+
+It is possible to test using the console/repl framebuffer driver I created.
+
+This can be a good method for fast testing and developing without needing actual hardware.
+
+You need to have a commandline port of MicroPython available, on Linux (RH/Fedora/Ubuntu/Debian) install 'micropython' via the package manager, it can then be run from the commandline. There *is* a windows port of micropython but it is a work-in-progress, see the micropython documentation for more. 
+
+The following is tested on both Fedora40 and Ubuntu 24.04
 ```
+user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/ezFBfont.py .
+user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/drivers/ssd1306.py .
 user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/drivers/repl_1306.py .
 ```
 
-`cat uniProj-repl.py`
+The script is slightly different since it does not have a physical display.
+
+`$ cat uniProj-repl.py`
 ```
 from repl_1306 import REPL_1306
 from ezFBfont import ezFBfont
 
-import my_b16_b as unicode_font
-#import my_unifont_15_1_05 as unicode_font
+import my_unifont_15_1_05 as unicode_font
 
 display = REPL_1306(80, 37)
 
@@ -131,6 +142,8 @@ with open('unicode.txt','r') as text:
 display.show()
 ```
 run
+
+NOTE: *Some* web browsers (cough, Chrome on Android, cough) render the following badly since their 'monospaced' fonts are not very 'mono', just 'spaced'.
 ```
 user@pc:~/MPython/uniProj$ micropython uniProj-repl.py 
 repl_1306: init 81x37
