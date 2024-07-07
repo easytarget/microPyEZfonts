@@ -6,9 +6,6 @@ There are many thousands of characters and glyphs in the Unicode character set, 
 
 Instead; this is a guide to producing a custom font pack with just the characters and symbols *you* need for *your* project.
 
-# A WORK IN PROGRESS
-I am currently finalising the tooling and preparing examples.
-
 ## Unicode font sources:
 Two Unicode font sets are provided here:
 * [efont](https://openlab.ring.gr.jp/efont/)
@@ -43,7 +40,7 @@ Demo code example:
 
 `$ cat uniProj-i2c.py`
 ```python
-from machine import Pin, I2C, SoftI2C
+from machine import Pin, I2C
 from ssd1306 import SSD1306_I2C
 from ezFBfont import ezFBfont
 
@@ -65,7 +62,7 @@ font = ezFBfont(display, unicode_font,
                 hgap=1,
                 verbose=True)
 
-# Write
+# Write (stripping trailing newlines)
 with open('unicode.txt','r') as text:
     font.write(text.read().strip('\n'), 63, 31)
 display.show()
@@ -135,7 +132,7 @@ font = ezFBfont(display, unicode_font,
                 hgap=1,
                 verbose=True)
 
-# Write
+# Write (stripping trailing newlines)
 with open('unicode.txt','r') as text:
     font.write(text.read().strip('\n'), 39, 17)
 display.show()
@@ -205,7 +202,8 @@ repl_1306: show
          ██ ▀ ▀  ▀▀            ██     ▀▀▀   ▀▀   ▀▀   ▀▀▀▀▀   ▀▀   ▀▀           
          ▀▀                ▀▀▀▀▀                                                
 ```
-# Block List
+
+# Unicode Block List
 Unicode is divided into standard 'blocks' of related glyphs, this is an overview for reference.
 
 (from: https://www.unicode.org/Public/UCD/latest/ucd/Blocks.txt):
