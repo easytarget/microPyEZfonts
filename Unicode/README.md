@@ -35,7 +35,7 @@ A desktop/laptop system with a working python3.7+ install, and this repository.
 ## App
 Starting in a project folder.. we need an app to run.
 
-The following is a simple app for this example, it uses a ssd_1306 OLED display connected via I2C
+If you do not (yet) have your own app; the following is a simple app for this example, it uses a ssd_1306 OLED display connected via I2C
 * adapt the diplay init for other displays
 * a 'more complete' version of this is in the examples folder
 
@@ -106,7 +106,7 @@ We should be able to run our demo now: Copy the `my_unifont_15_1_05.py` font fil
 
 ## REPL
 
-It is possible to test using the console/repl framebuffer driver I created.
+It is possible to test using the [console/repl framebuffer driver](../drivers/repl1306.py).
 
 This can be a good method for fast testing and developing without needing actual hardware.
 
@@ -115,7 +115,6 @@ You need to have a commandline port of MicroPython available, on Linux (RH/Fedor
 The following is tested on both Fedora40 and Ubuntu 24.04
 ```
 user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/ezFBfont.py .
-user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/drivers/ssd1306.py .
 user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/drivers/repl_1306.py .
 ```
 
