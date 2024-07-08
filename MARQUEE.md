@@ -88,8 +88,6 @@ Optional Arguments:
 
 ### Methods:
 
-(After writing your data do not forget to do a `device.show()` or equivalent to see the results :wink:)
-
 #### start()
 ```python
 mymarquee.start(string, mode=None, pause=None, pad=None, hgap=None, fg=None, bg=None)
