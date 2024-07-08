@@ -1,4 +1,5 @@
 # ezFBfont.py() : a simple string writer for small mono displays and user selected fonts.
+# See MARQUEE.md for documentation
 
 # Extensively re-worked from the 'writer' class by
 # Peter Hinch:
@@ -59,6 +60,11 @@ class ezFBfont():
         else:
             self.colors = colors
         self.fg = self.colors - 1
+        if self._verbose:
+            fstr = '{} : initialised: height: {}, {} width: {}, baseline: {}'
+            print(fstr.format(self.name, self._font.height(),
+                              'fixed' if self._font.monospaced() else 'max',
+                              self._font.max_width(), self._font.baseline()))
         # apply init color and alignment as default
         self.set_default(fg, bg, tkey, halign, valign, hgap, vgap)
 
@@ -97,7 +103,7 @@ class ezFBfont():
         # assemble color map
         palette = framebuf.FrameBuffer(palette_buf, self._font_colors, 1, self._palette_format)
         palette.pixel(0, 0, bg)
-        palette.pixel(self.colors -1, 0, fg)
+        palette.pixel(self._font_colors -1, 0, fg)
         # fetch and blit the glyph
         charbuf = framebuf.FrameBuffer(buf, char_width, char_height, self._font_format)
         self._device.blit(charbuf, x, y, tkey, palette)
@@ -116,8 +122,8 @@ class ezFBfont():
         self.vgap = self.vgap if vgap is None else vgap
         self._verbose = self._verbose if verbose is None else verbose
         if self._verbose:
-            fstr = '{} = colors: {}, fg: {}, bg: {}, tr: {}, halign: {}, valign: {}, hgap: {}, vgap: {}'
-            print(fstr.format(self.name, self.colors, self.fg, self.bg, self.tkey,
+            fstr = '{} = fg: {}, bg: {}, tkey: {}, halign: {}, valign: {}, hgap: {}, vgap: {}'
+            print(fstr.format(self.name, self.fg, self.bg, self.tkey,
                               self.halign, self.valign, self.hgap, self.vgap))
 
     def size(self, string, hgap=None, vgap=None):
