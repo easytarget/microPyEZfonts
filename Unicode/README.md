@@ -108,7 +108,7 @@ We should be able to run our demo now: Copy the `my_unifont_15_1_05.py` font fil
 
 ## REPL
 
-It is possible to test using the [console/repl framebuffer driver](../drivers/repl1306.py).
+It is possible to test using the [console/repl framebuffer driver](../drivers/repl_1306.py).
 
 This can be a good method for fast testing and developing without needing actual hardware.
 
