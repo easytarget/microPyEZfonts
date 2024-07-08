@@ -114,7 +114,7 @@ This can be a good method for fast testing and developing without needing actual
 
 You need to have a commandline port of MicroPython available, on Linux (RH/Fedora/Ubuntu/Debian) install 'micropython' via the package manager, it can then be run from the commandline. There *is* a windows port of micropython but it is a work-in-progress, see the micropython documentation for more.
 
-The following is tested on both Fedora40 and Ubuntu 24.04
+The following has been tested with micopython 1.23 on Fedora40, Ubuntu24.04, FreeBSD14.1 and in the repl console of an ESP32 devboard.
 ```console
 user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/ezFBfont.py .
 user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/drivers/repl_1306.py .
