@@ -79,8 +79,9 @@ Optional Arguments:
 * *pad*: (float) : message end padding.
   * Sets a fraction of the output box width that should be used as padding between repeats of the message in *marquee* mode.
   * Not used in *scroller* mode.
-* *pause*: (integer) : an initial pause count to set when the font is started
+* *pause*: (integer) : an initial pause count to set when the font is started.
   * The output will not begin to animate until this many steps have been called after starting.
+  * Setting to `-1` pauses indefinately until reset to zero or higher.
 * *hgap*: (integer, px) : add or remove spacing between characters.
   * Defaults to `0`, and is only applied between individual characters.
   * Negative values are allowed, characters will render over each other as needed.
