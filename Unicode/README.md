@@ -1,4 +1,4 @@
-# Unicode Fonts
+# [Unicode Fonts](https://home.unicode.org/)
 
 This folder contains instructions and examples for producing custom Unicode font files suitable for use with `ezFBfont`.
 
@@ -19,7 +19,7 @@ Additionally: The Fixed and X11 fonts in the [Latin-1](../Latin-1/Latin-1-bdf-so
 
 # COPYRIGHT
 Both Unicode fonts here are open source projects and have permissive licencing; but they **do** have licence terms and some restrictions:
-* Please read the copyright notices in the efont folder; and ensure you follow any restrictions and requirements there if you redistribute fonts based on this set.
+* Please read the copyright notice in the efont folder; and ensure you follow any restrictions and requirements there if you redistribute fonts based on this set; see [efont-unicode-bdf-0.4.2/COPYRIGHT](efont-unicode-bdf-0.4.2/COPYRIGHT)
 * The Unifont is dual licenced (SIL and GPL2 with font exceptions); see https://unifoundry.com/LICENSE.txt
 
 # Example
@@ -30,15 +30,17 @@ The following is a walkthrough of using `bdf2dict` to create a simple Unicode fo
 A desktop/laptop system with a working python3.7+ install, and this repository.
 
 ## App
-Starting in a project folder.. we need an app to run.
+Starting in a project folder; we need an app to run.
 
-If you do not (yet) have your own app; the following is a simple app for this example, it uses a ssd_1306 OLED display connected via I2C
+If you do not (yet) have your own app; the following is a simple example, it uses a ssd_1306 OLED display connected via I2C
 * adapt the diplay init for other displays
 * a 'more complete' version of this is in the examples folder
 
 Demo code example:
 
-`$ cat uniProj-i2c.py`
+```console
+user@pc:~/MPython/uniProj$ cat uniProj-i2c.py
+```
 ```python
 from machine import Pin, I2C
 from ssd1306 import SSD1306_I2C
@@ -67,26 +69,28 @@ with open('unicode.txt','r') as text:
     font.write(text.read().strip('\n'), 63, 31)
 display.show()
 ```
+
 You need to copy the `ezFBfont.py` and `ssd1306.py` class libraries into the project via the file dialog in your IDE or whatever method you use.
 
-Next you will need a file with text you need to convert in it.
+Next you will need a list of characters to add to the font: the easiest way to do this is to create a 'charset' file with the characters you want in it.
 
-Working in a folder on your PC; create a 'charset' file with the characters you want in it.
+For this example I am using 'Hello' in simplified Chinese, and microPython with a 'µ':
 
-For this example I am using 'Hello' in simplified chinese, and microPython with a 'µ'
+```console
+user@pc:~/MPython/uniProj$ cat unicode.txt
 ```
-user@pc:~/MPython/uniProj$ cat unicode.txt 
+```
 你好
 µPython
 ```
 
 Now we need to prepare our font file using `bdf2dict`.
 
-In this example I have cloned the *ezFBfont* repo alongside the project working folder on my PC.
+In this example I have cloned the *ezFBfont* repo alongside a folder for my project on my PC, and used relative paths for the tool and font source. The font is generated in this project folder then copied to the target device via the IDE (or whatever method used).
 
-See the [`bdf2dict`](../BDF2DICT.md) page to understand the options used here.
+See the [`bdf2dict`](../BDF2DICT.md) page to understand the options used here; we are using the unifont, and prefixing our font files with `my_`.
 
-```
+```console
 user@pc:~/MPython/uniProj$ python ../microPyEZfonts/bdf2dict.py ../microPyEZfonts/Unicode/unifont_15.1.05/unifont-15.1.05.bdf my_ unicode.txt 
 bdf2dict.py: processing ../microPyEZfonts/Unicode/unifont_15.1.05/unifont-15.1.05.bdf
 10 Matching characters rendered to my_unifont_15_1_05.py
@@ -98,6 +102,7 @@ total 48
 -rw-r--r--. 1 owen owen   15 Jul  5 16:38 my_unifont_15_1_05.set
 -rw-r--r--. 1 owen owen   16 Jul  5 16:16 unicode.txt
 ```
+The font itself is in the `.py` file, the `.map` file has a summary of the glyphs and the `.set` file all the unique characters (the last two are just for reference, they do not belong in your project folder..)
 
 We should be able to run our demo now: Copy the `my_unifont_15_1_05.py` font file and `unicode.txt` to your project and run!
 
@@ -107,17 +112,19 @@ It is possible to test using the [console/repl framebuffer driver](../drivers/re
 
 This can be a good method for fast testing and developing without needing actual hardware.
 
-You need to have a commandline port of MicroPython available, on Linux (RH/Fedora/Ubuntu/Debian) install 'micropython' via the package manager, it can then be run from the commandline. There *is* a windows port of micropython but it is a work-in-progress, see the micropython documentation for more. 
+You need to have a commandline port of MicroPython available, on Linux (RH/Fedora/Ubuntu/Debian) install 'micropython' via the package manager, it can then be run from the commandline. There *is* a windows port of micropython but it is a work-in-progress, see the micropython documentation for more.
 
 The following is tested on both Fedora40 and Ubuntu 24.04
-```
+```console
 user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/ezFBfont.py .
 user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/drivers/repl_1306.py .
 ```
 
 The script is slightly different since it does not have a physical display.
 
-`$ cat uniProj-repl.py`
+```console
+user@pc:~/MPython/uniProj$ cat uniProj-repl.py
+```
 ```
 from repl_1306 import REPL_1306
 from ezFBfont import ezFBfont
@@ -137,10 +144,10 @@ with open('unicode.txt','r') as text:
     font.write(text.read().strip('\n'), 39, 17)
 display.show()
 ```
-run
+run the script:
 
 NOTE: *Some* web browsers (cough, Chrome on Android, cough) render the following badly since their 'monospaced' fonts are not very 'mono', just 'spaced'.
-```
+```console
 user@pc:~/MPython/uniProj$ micropython uniProj-repl.py 
 repl_1306: init 81x37
 my_unifont_15_1_05 : initialised: height: 16, max width: 16, baseline: 14
@@ -168,7 +175,7 @@ repl_1306: show
 ```
 ## Experiment!
 The efont collection has bold and italic fonts, trying it is easy:
-```
+```console
 user@pc:~/MPython/uniProj$ python ../microPyEZfonts/bdf2dict.py ../microPyEZfonts/Unicode/efont-unicode-bdf-0.4.2/b16_b.bdf my_ unicode.txt 
 bdf2dict.py: processing ../microPyEZfonts/Unicode/efont-unicode-bdf-0.4.2/b16_b.bdf
 9 Matching characters rendered to my_b16_b.py
@@ -178,7 +185,7 @@ edit the font line in your code to read:
 `import my_b16_b as unicode_font`
 
 and try it out:
-```
+```console
 user@pc:~/MPython/uniProj$ micropython uniProj-repl.py 
 repl_1306: init 80x37
 my_b16_b : initialised: height: 16, max width: 16, baseline: 14
@@ -202,6 +209,8 @@ repl_1306: show
          ██ ▀ ▀  ▀▀            ██     ▀▀▀   ▀▀   ▀▀   ▀▀▀▀▀   ▀▀   ▀▀           
          ▀▀                ▀▀▀▀▀                                                
 ```
+## Note:
+* If you look above you will see that the *unifont* has ten matching glyphs, but the *efont* only has nine! This is because there is a informational  glyph for the `\n` newline character in the unifont, but not in efont.
 
 # Unicode Block List
 Unicode is divided into standard 'blocks' of related glyphs, this is an overview for reference.
