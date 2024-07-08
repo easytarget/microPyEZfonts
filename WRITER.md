@@ -61,6 +61,7 @@ Optional Arguments:
   * Defaults to `0`, and is only applied between individual characters and between lines, negative values are allowed.
   * This is a gap, not padding; no background is drawn in the spaces created by positive values.
   * Negative values are allowed, if using them you should also use a transparent background (`tkey=0`) to stop character backgrounds 'clipping' the previous characters as they are drawn.
+* *split*: (chr/string) : the character(s) to split multi-line strings on, defaults to '\n' (0xA).
 * *colors*: (integer) : the total number of colors or greyscales we support, 2 for mono, up to 65536 for 16 bit color.
   * This defaults to `2` (mono displays) if not supplied and not determined automatically.
     * If the display driver reports a 'format' property this is used to determine the color map.
@@ -72,7 +73,7 @@ Optional Arguments:
 
 #### write()
 ```python
-myfont.write(string, X, Y, fg=None, bg=None, tkey=None, halign=None, valign=None, hgap=None, vgap=None)
+myfont.write(string, X, Y, fg=None, bg=None, tkey=None, halign=None, valign=None)
 ```
 Writes the supplied text to the framebuffer
 
@@ -87,22 +88,21 @@ Returns `False` if any characters failed to be written (not present in the font)
 
 #### size()
 ```python
-x, y = myfont.size(str, hgap=None, vgap=None)
+x, y = myfont.size(str)
 ```
 Returns the pixel width and height of the string.
-* The gap options will override the current default.
 
 #### rect()
 ```python
-xmin, xmax, width, height = myfont.rect(str, x, y, halign=None, valign=None, hgap=None, vgap=None)
+xmin, xmax, width, height = myfont.rect(str, x, y, halign=None, valign=None)
 ```
 Returns the exact area that the string would be written to with `myfont.write()`.
 * The return is suitable for passing directly to `display.rect()`.
-* The alignment and gap options will override the current default.
+* The alignment options will override the current default.
 
 #### set_default()
 ```python
-myfont.set_default(fg=None, bg=None, tkey=None, halign=None, valign=None, hgap=None, vgap=None, verbose=None)
+myfont.set_default(fg=None, bg=None, tkey=None, halign=None, valign=None, hgap=None, vgap=None, split=None, verbose=None)
 ```
 Changes the default value of the supplied argument(s).
 
@@ -116,6 +116,7 @@ myfont.halign : default horizontal alignment
 myfont.valign : default vertical alignment
 myfont.hgap   : default horizontal gap
 myfont.vgap   : default vertical gap
+myfont.split  : default split char/string
 myfont.colors : total number of available colors
 ```
 

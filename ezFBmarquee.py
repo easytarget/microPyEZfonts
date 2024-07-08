@@ -146,8 +146,6 @@ class ezFBmarquee():
     def start(self, string, mode=None, pause=None, pad=None, hgap=None, fg=None, bg=None):
         if self._string is not None:
             self.stop()
-        # only take the first line of the string
-        string = string.split('\n')[0]
         mode = self._mode if mode is None else self._checkmode(mode)
         self._pause = self._dpause if pause is None else max(-1,int(pause))
         pad = self._pad if pad is None else max(pad,0)
@@ -159,6 +157,10 @@ class ezFBmarquee():
         self._palette.pixel(self._font_colors -1, 0, fg)
         # Create and fill the scroll buffer and attributes
         self._makescroll(string, mode, hgap, pad)
+        # Set active and show the initial output
+        self._string = string
+        self._count = self._start
+        self.step(0) 
         # Give info as needed
         if self._verbose:
             print('{}: start()\n  {}: {}'.format(self.name, mode, string))
@@ -170,10 +172,6 @@ class ezFBmarquee():
             if len(self._missing) > 0:
                 m = '  The following requested characters could not be found in the font:\n  {}'
                 print(m.format(self._missing))
-        # Set active and show the initial output
-        self._string = string
-        self._count = self._start
-        self.step(0) 
 
     def step(self, steps=1):
         # Step the marquee as necesscary

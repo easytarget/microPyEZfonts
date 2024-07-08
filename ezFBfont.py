@@ -32,12 +32,12 @@ class ezFBfont():
                  valign = 'top',
                  vgap = 0,
                  hgap = 0,
+                 split = '\n',
                  colors = None,
                  verbose = False):
 
         self._device = device
         self._font = font
-        self._verbose = verbose
         self.name = self._font.__name__
 
         # font details; only monochrome HLSB fonts are supported
@@ -60,13 +60,13 @@ class ezFBfont():
         else:
             self.colors = colors
         self.fg = self.colors - 1
-        if self._verbose:
+        if verbose:
             fstr = '{} : initialised: height: {}, {} width: {}, baseline: {}'
             print(fstr.format(self.name, self._font.height(),
                               'fixed' if self._font.monospaced() else 'max',
                               self._font.max_width(), self._font.baseline()))
         # apply init color and alignment as default
-        self.set_default(fg, bg, tkey, halign, valign, hgap, vgap)
+        self.set_default(fg, bg, tkey, halign, valign, hgap, vgap, split, verbose)
 
     def _color_range(self, c):
         return min(max(0, c), self.colors -1)
@@ -84,12 +84,12 @@ class ezFBfont():
             raise ValueError('Unknown vertical alignment: ' + v)
         return v
 
-    def _line_size(self, string, hgap):
+    def _line_size(self, string):
         x = 0
         for char in string:
             _, _, char_width = self._font.get_ch(char)
-            x += char_width + hgap if char_width > 0 else 0
-        x = x - hgap if x != 0 else x   # remove any trailing hgap
+            x += char_width + self.hgap if char_width > 0 else 0
+        x = x - self.hgap if x != 0 else x   # remove any trailing hgap
         return x, self._font.height()
 
     def _put_char(self, char, x, y, fg, bg, tkey):
@@ -110,7 +110,7 @@ class ezFBfont():
         return char_width, char_height
 
     def set_default(self, fg=None, bg=None, tkey=None,
-                    halign=None, valign=None, hgap=None, vgap=None, verbose=None):
+                    halign=None, valign=None, hgap=None, vgap=None, split=None, verbose=None):
         # Sets the default value for all supplied arguments
         self.fg = self.fg if fg is None else self._color_range(fg)
         self.bg = self.bg if bg is None else self._color_range(bg)
@@ -120,35 +120,32 @@ class ezFBfont():
         self.valign = self.valign if valign is None else self._check_valign(valign)
         self.hgap = self.hgap if hgap is None else hgap
         self.vgap = self.vgap if vgap is None else vgap
+        self.split = self.split if split is None else split
         self._verbose = self._verbose if verbose is None else verbose
         if self._verbose:
-            fstr = '{} = fg: {}, bg: {}, tkey: {}, halign: {}, valign: {}, hgap: {}, vgap: {}'
+            fstr = '{} = fg: {}, bg: {}, tkey: {}, halign: {}, valign: {}, hgap: {}, vgap: {}, split: {}'
             print(fstr.format(self.name, self.fg, self.bg, self.tkey,
-                              self.halign, self.valign, self.hgap, self.vgap))
+                              self.halign, self.valign, self.hgap, self.vgap, repr(split)))
 
-    def size(self, string, hgap=None, vgap=None):
+    def size(self, string):
         if len(string) == 0:
             return 0, 0
-        hgap = self.hgap if hgap is None else hgap
-        vgap = self.vgap if vgap is None else vgap
-        lines = string.split('\n')
+        lines = string.split(self.split)
         w = 0
         for line in lines:
-            x, _ = self._line_size(line, hgap)
+            x, _ = self._line_size(line)
             w = max(w, x)  # record the widest line
-        h = (len(lines) * (self._font.height() + vgap)) - vgap
+        h = (len(lines) * (self._font.height() + self.vgap)) - self.vgap
         return w, h
 
-    def rect(self, string, x, y, halign=None, valign=None, hgap=None, vgap=None):
+    def rect(self, string, x, y, halign=None, valign=None):
         if len(string) == 0:
             return x, y, 0, 0
         # apply alignment overrides
         halign = self.halign if halign is None else self._check_halign(halign)
         valign = self.valign if valign is None else self._check_valign(valign)
-        hgap = self.hgap if hgap is None else hgap
-        vgap = self.vgap if vgap is None else vgap
         # get the x,y size of the rendered string
-        wide, high = self.size(string, hgap, vgap)
+        wide, high = self.size(string)
         # apply alignment
         xmin = x
         if halign == 'center':
@@ -166,10 +163,9 @@ class ezFBfont():
         return xmin,ymin,wide,high
 
     def write(self, string, x, y, fg=None, bg=None, tkey=None,
-              halign=None, valign=None, hgap=None, vgap=None):
+              halign=None, valign=None):
         if len(string) == 0:
             return True
-        lines = string.split('\n')
         all_chars = True
         # Argument overrides
         fg = self.fg if fg is None else self._color_range(fg)
@@ -177,10 +173,10 @@ class ezFBfont():
         tkey = self.tkey if tkey is None else self._tkey_range(tkey)
         halign = self.halign if halign is None else self._check_halign(halign)
         valign = self.valign if valign is None else self._check_valign(valign)
-        hgap = self.hgap if hgap is None else hgap
-        vgap = self.vgap if vgap is None else vgap
+        # Break the string into lines
+        lines = string.split(self.split)
         # vertical alignment
-        high = (len(lines) * (self._font.height() + vgap)) - vgap
+        high = (len(lines) * (self._font.height() + self.vgap)) - self.vgap
         ypos = y
         if valign == 'baseline':
             ypos = y - self._font.baseline()
@@ -189,7 +185,7 @@ class ezFBfont():
         elif valign == 'bottom':
             ypos = y - high
         for line in lines:
-            wide, high = self._line_size(line, hgap)
+            wide, high = self._line_size(line)
             # horizontal alignment
             if halign == 'left':
                 xpos = x
@@ -202,9 +198,9 @@ class ezFBfont():
                 cx, _ = self._put_char(char, xpos, ypos, fg, bg, tkey)
                 if cx is None:
                     if self._verbose:
-                        print('{}: missing char: "{}" ({})'.format(self.name, char, ord(char)))
+                        print('{}: missing char: {} (0x{:02X})'.format(self.name, repr(char), ord(char)))
                     all_chars = False
                 else:
-                    xpos += cx + hgap
-            ypos += high + vgap
+                    xpos += cx + self.hgap
+            ypos += high + self.vgap
         return all_chars
