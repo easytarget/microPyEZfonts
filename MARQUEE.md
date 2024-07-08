@@ -1,4 +1,7 @@
 # `ezFBmarquee.py`
+
+[![Marquee](https://img.youtube.com/vi/tW0iqCkWGVc/default.jpg)](https://www.youtube.com/watch?v=tW0iqCkWGVc)
+
 ## A simple marquee/scroller class for a line of text
 
 A marquee (scrolling info box) system optimised for ease of installation and use; especially for small 'info panel' type projects.
