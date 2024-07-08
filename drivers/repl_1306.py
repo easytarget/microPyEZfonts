@@ -9,12 +9,14 @@
 #
 # Init requires just two options: width, height
 # The screen will only be ascii dumped when it has changed
-# Three optional arguments are: 'clear=True' which will send a clean screen
-# sequence to the console before displaying the ascii 'display'.
-#  'txt=False' will suppress the ascii-art output completely.
-#  'zero=<char>' will replace the ascii character (.) that represents zero.
 #
-# O.Carter, June 2024.
+# Four optional arguments are:
+# 'blocks=True' : use unicode blocks to do the display, otherwise use 'pure' ascii'
+# 'clear=True'  : will send a clean screen sequence to the console before displaying.
+# 'txt=False' : will suppress the ascii-art output completely.
+# 'zero=<char>' and 'one=<char>' : will replace the ascii chars that represents zero and one.
+#
+# O.Carter, July 2024.
 # This code is released as-is.
 # The author disclaims any responsibility or liability arising from it's use.
 
