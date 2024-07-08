@@ -44,7 +44,7 @@ display.contrast(128)  # as needed
 
 # Font Init
 heading = ezFBfont(display, header)
-lcdm = ezFBfont(display, digits, halign='right', valign='baseline')
+lcdm = ezFBfont(display, digits, halign='right', hgap=-1, valign='baseline')
 lcds = ezFBfont(display, decimals, valign='baseline')
 icon = ezFBfont(display, icons, halign='center', valign='center')
 
