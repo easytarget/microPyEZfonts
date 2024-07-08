@@ -42,16 +42,16 @@ All provided font modules contain and retain the original copyright notices from
 ## Unicode font packs?
 There is no sensible way of grouping general Unicode fonts into packs that are small enought to be useful on micropython devices. The most popular blocks have thousands of characters in them and the resulting files are too large to use sensibly Instead; tooling and examples are provided to help you make a custom font pack with the glyphs and characters you need, and no excess.
 * The `bdf2dict` tool (below) is designed to be easy to install and use, just requiring Python3.7 or higher
-  * The [Unicode](unicode/README.md) page has an example and notes about unicode font sources.
+  * The [Unicode](Unicode/README.md) page has an example and notes about unicode font sources.
   * You can specify your own charset when prompted on the command line (or via a file/arguments/stdin).
   * The script will output a python font module containing only the characters requested, plus an ascii-art map of the glyphs.
-  * The [efont](http://openlab.ring.gr.jp/efont/) unicode fonts are provided in the Unicode folder, but other fonts in the Latin-1 folder also provide unicode characters; these are noted in the Unicode README.
+  * The [unifont](https://savannah.gnu.org/projects/unifont) and [efont](http://openlab.ring.gr.jp/efont/) unicode fonts are provided in the Unicode folder, but other fonts in the Latin-1 folder also provide unicode characters; as noted in the Unicode README.
 
 # Font creator: [`bdf2dict.py`](bdf2dict.py)
 
 All the fonts packs provided here were made with this tool, it is a simple to use CPythom (not microPython) script that can import and process a `.bdf` font file and extract just the characters you need into a `.py` font file. It is fully compatible with Unicode characters and fonts.
 
-See [`BDF2DICT.md`](BDF2DICT.md) for further documentation and usage instructions, and the Unicode [readme](Unicode/README.md) 
+See [`BDF2DICT.md`](BDF2DICT.md) for further documentation and usage instructions, and the Unicode [readme](Unicode/README.md).
 
 ## Drivers
 
