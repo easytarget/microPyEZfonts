@@ -16,7 +16,7 @@ Copy the `ezFBmarquee.py` file from this repository into the root (or path) of y
 
 You declare an output area during *init()* and then allocate messages to that with *start()*. A *step()* method needs to be called regularlly to advance th animation.
 
-See the [`examples`](examples) folder for some working code that uses the features described below, and shows how to drive the animation via a Timer Interrupt.
+See the [`examples`](examples) folder for some working code that uses the features described below, and shows how to drive the animation via a [Timer](https://docs.micropython.org/en/latest/library/machine.Timer.html) Interrupt.
 
 ```python
 from ezFBfont import ezFBmarquee
@@ -137,7 +137,7 @@ Returns `True` if the marquee is active (displaying a message)
 
 -----------------------
 ### Thoughts:
-None of these are planned, but due to the architecture of the marquee code they shuld be relative easy to implement.
+None of these are planned; but due to the architecture of the marquee code they should be relative easy to implement.
 * Make the scroll direction reversible, eg allow negative step()s and set a step() default.
 * Vertical marquee (also for multi-line strings), Vertical scroller for the same.
 * Allow changing text mid scroll, this could be nice for time displays etc. 
