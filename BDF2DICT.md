@@ -39,11 +39,11 @@ A simple unicode 'text' file with all characters from the output font file in it
 ## Font module format
 In contrast to the `micropython-font-to-py` tool I use a simpler format based on a python `dict{}` structure.
 
-Font glyphs are stored as [`bytes`](https://docs.python.org/3.5/library/functions.html#bytes) objectt in the dict, with the integer ordinal value of the character as the key.
+Font glyphs are stored as [`bytes`](https://docs.python.org/3.5/library/functions.html#bytes) object in the dict, with the integer ordinal value of the character as the key.
 
 If the font is variable-width a byte with the width of the character is appended to the bytearray.
 
-The `get_ch()` function then becomes very simple; it looks up the glyph and returns 'None' if not found. Otherwise it returns a memoryview object pointing the the *bytes* of the glyph along with the (fixed) font height and width of the glyph (or a fixed value for fixed width fonts).
+The `get_ch()` function then becomes very simple; it looks up the glyph and returns 'None' if not found. Otherwise it returns a memoryview object pointing the the *bytes* of the glyph along with the (fixed) font height, and width of the glyph.
 
 ## Note: *easy* fonts
 
@@ -51,17 +51,17 @@ These fonts are most suitable for devices with relatively large amounts of ram a
 
 The fonts, and the writer, target 'Ease of Use' (*) as a core ethos.
 * They are aimed at casual developers and educators.
+* They cover 'small device data display' scenarios very well.
 * You can get good looking results quickly and without excess complexity and learning curves.
 * My 'target' developer is someone working with Thonny or Viper IDE and simply drag-dropping the font files and classes onto the device.
-* They cover 'small device data display' scenarios very well.
 
 'Smaller' devices such as the **ESP8266** can use them but their more limited ram may make using 'full' font packs difficult. The *Number* and *Time* packs may, however, be quite useful since they are generally very small, even for big fonts.
 
 These fonts have similar memory and ram consumption to the fonts from `micropython-font-to-py` when copied to the target device in an IDE and run on a default firmware for the device.
 
-However; if you are developing a memory critical application and freezing files as bytecode the 'micropython-font-to-py' generated fonts are able to keep their data in the Flash memory. The 'ezFBfonts' use a dictionary which, being mutable, is copied to ram even when the font file itself is frozen.
-
-If this wasteful use of memory when frozen is an issue then these fonts are not for you, Although the font writer and marquee classes (being compatible with both font creation systems) may still be of use.
+However; if you are developing a memory critical application and freezing files as bytecode the 'micropython-font-to-py' generated fonts are able to keep their data in the Flash memory. The ezFBfonts cannot do this and still consume ram for glyph data.
+- If this wasteful use of memory when frozen is an issue then these fonts are not for you, 
+- The font writer and marquee classes (being compatible with both font creation systems) may still be of use.
 
 (*) *For a given value of 'Ease of Use'*
 
