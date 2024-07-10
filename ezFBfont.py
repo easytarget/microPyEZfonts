@@ -50,7 +50,7 @@ class ezFBfont():
             try:
                 format = device.format  # does driver supply framebuffer format?
             except Exception as e:
-                if self._verbose:
+                if verbose:
                     print('{}: {}\nAssuming a 2 color (mono) display'.format(self.name, errtxt))
                 format = framebuf.MONO_VLSB
             try:
