@@ -9,23 +9,12 @@
 
 import framebuf
 
-# a table to find color space from the framebuffer format
-colorspaces = {
-                framebuf.MONO_VLSB : 2,
-                framebuf.MONO_HLSB : 2,
-                framebuf.MONO_HMSB : 2,
-                framebuf.RGB565 : 65536,
-                framebuf.GS2_HMSB: 4,
-                framebuf.GS4_HMSB: 16,
-                framebuf.GS8 : 256,
-                }
-
 # Basic string writing class
 class ezFBfont():
 
     def __init__(self, device,
                  font,
-                 fg = None,
+                 fg = 1,
                  bg = 0,
                  tkey = -1,
                  halign = 'left',
@@ -33,7 +22,6 @@ class ezFBfont():
                  vgap = 0,
                  hgap = 0,
                  split = '\n',
-                 colors = None,
                  verbose = False):
 
         self._device = device
@@ -44,22 +32,7 @@ class ezFBfont():
         self._font_format = framebuf.MONO_HLSB
         self._font_colors = 2
         self._palette_format = framebuf.RGB565  # support up to 65536 colors when blitting
-        # display colors
-        if colors is None:
-            errtxt = 'Cannot determine number of colors from driver, supply with colors=N at init.'
-            try:
-                format = device.format  # does driver supply framebuffer format?
-            except Exception as e:
-                if verbose:
-                    print('{}: {}\nAssuming a 2 color (mono) display'.format(self.name, errtxt))
-                format = framebuf.MONO_VLSB
-            try:
-                self.colors = colorspaces[format]
-            except KeyError:
-                raise ValueError('{}: {}\nUnknown format: {}'.format(self.name, errtxt, format))
-        else:
-            self.colors = colors
-        self.fg = self.colors - 1
+        # inform
         if verbose:
             fstr = '{} : initialised: height: {}, {} width: {}, baseline: {}'
             print(fstr.format(self.name, self._font.height(),
@@ -67,12 +40,6 @@ class ezFBfont():
                               self._font.max_width(), self._font.baseline()))
         # apply init color and alignment as default
         self.set_default(fg, bg, tkey, halign, valign, hgap, vgap, split, verbose)
-
-    def _color_range(self, c):
-        return min(max(0, c), self.colors -1)
-
-    def _tkey_range(self, t):
-        return min(max(-1, t), self._font_colors -1)
 
     def _check_halign(self, h):
         if h not in ('left','center','right'):
@@ -112,10 +79,9 @@ class ezFBfont():
     def set_default(self, fg=None, bg=None, tkey=None,
                     halign=None, valign=None, hgap=None, vgap=None, split=None, verbose=None):
         # Sets the default value for all supplied arguments
-        self.fg = self.fg if fg is None else self._color_range(fg)
-        self.bg = self.bg if bg is None else self._color_range(bg)
-        self.tkey = self.tkey if tkey is None else self._tkey_range(tkey)
-        self.fg = self.fg if fg is None else self._color_range(fg)
+        self.fg = self.fg if fg is None else fg
+        self.bg = self.bg if bg is None else bg
+        self.tkey = self.tkey if tkey is None else tkey
         self.halign = self.halign if halign is None else self._check_halign(halign)
         self.valign = self.valign if valign is None else self._check_valign(valign)
         self.hgap = self.hgap if hgap is None else hgap
@@ -168,9 +134,9 @@ class ezFBfont():
             return True
         all_chars = True
         # Argument overrides
-        fg = self.fg if fg is None else self._color_range(fg)
-        bg = self.bg if bg is None else self._color_range(bg)
-        tkey = self.tkey if tkey is None else self._tkey_range(tkey)
+        fg = self.fg if fg is None else fg
+        bg = self.bg if bg is None else bg
+        tkey = self.tkey if tkey is None else tkey
         halign = self.halign if halign is None else self._check_halign(halign)
         valign = self.valign if valign is None else self._check_valign(valign)
         # Break the string into lines

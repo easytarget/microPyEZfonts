@@ -41,7 +41,7 @@ You then create a font instance for each imported font:
 myfont = ezFBfont(device, fontName,
                   fg=1, bg=0 ,tkey=-1,
                   halign='left', valign='top', hgap=0, vgap=0,
-                  colors=2, verbose=False)
+                  verbose=False)
 ```
 Required Arguments:
 * *device* : The framebuffer device to write to.
@@ -49,7 +49,8 @@ Required Arguments:
 
 Optional Arguments:
 * *fg*, *bg*, *tkey*: (integers) : foreground and background colors, plus transparency key.
-  * foreground will default to the value of *colors* -1; for mono displays this will be `1`
+  * foreground will default to 1 (mono) and will need to be set appropriately for color displays.
+  * background will default to 0.
   * transparent key is `-1` by default (none), otherwise the font color that should be rendered transparent; currently we only support mono fonts so is limited to `-1`, `0` or `1`.
 * *halign*: (string) `left|right|center` : how to align on the X axis.
   * Defaults to `left`.
@@ -62,10 +63,6 @@ Optional Arguments:
   * This is a gap, not padding; no background is drawn in the spaces created by positive values.
   * Negative values are allowed, if using them you should also use a transparent background (`tkey=0`) to stop character backgrounds 'clipping' the previous characters as they are drawn.
 * *split*: (chr/string) : the character(s) to split multi-line strings on, defaults to '\n' (0xA).
-* *colors*: (integer) : the total number of colors or greyscales we support, 2 for mono, up to 65536 for 16 bit color.
-  * This defaults to `2` (mono displays) if not supplied and not determined automatically.
-    * If the display driver reports a 'format' property this is used to determine the color map.
-  * The default foreground color will be `colors - 1`, default background is always `0`.
 * *verbose*: (bool) : Enables verbose feedback on init, default changes and missing characters, default `False`.
 
 ### Methods:
@@ -117,7 +114,6 @@ myfont.valign : default vertical alignment
 myfont.hgap   : default horizontal gap
 myfont.vgap   : default vertical gap
 myfont.split  : default split char/string
-myfont.colors : total number of available colors
 ```
 
 ### Thoughts:
