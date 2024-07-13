@@ -8,13 +8,6 @@ def test(p):
         print('{}: {}'.format(s,o), end=', ')
         return o
 
-    def h(t,s):
-        r = s.read(1000)
-        if len(r) > 0:
-            t.write(r)
-            return True
-        return False
-    
     print('{}:: '.format(p),end='')
     b = m('start')
     try:
