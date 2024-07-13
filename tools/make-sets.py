@@ -25,8 +25,9 @@ sys.path.append(os.getcwd())
 sets = importlib.import_module('sets', package=None)
 
 tooldir = os.path.dirname(os.path.realpath(__file__))
-if not os.path.isfile(tooldir + '/bdf2dict.py'):
-    print('Cannot find "bdf2dict.py" in:', tooldir)
+tool = tooldir + '/../bdf2dict.py'
+if not os.path.isfile(tool):
+    print('Cannot find "bdf2dict.py" in:', tooldir + '/..')
     exit()
 
 sources = os.listdir(sets.sourceDir)
@@ -39,9 +40,9 @@ generated = 0
 def doFont(base, infile, cset):
     charset = outDir + '/' + cset + '-char.set'
     files = []
-    cmd = 'python {}/bdf2dict.py {} _ {}'.format(tooldir, infile, charset)
+    cmd = 'python {} {} _ {}'.format(tool, infile, charset)
     if debug:
-        cmd += ' True'
+        cmd += ' debug'
     run = subprocess.run(cmd, shell=True, capture_output=True)
     if debug:
         print('\nsubprocess return::\n', run)

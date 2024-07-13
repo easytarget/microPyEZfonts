@@ -1,13 +1,773 @@
 Font: tom_thumb (Latin-1-bdf-sources/tom-thumb.bdf)
 Declared name: -raccoon-fixed4x6-medium-r-normal--6-60-75-75-p-40-iso10646-1
-Declared family: fixed4x6
+Declared family: fixed
 Declared weight: medium
 Declared size: 6
-Characters: 95
+Characters: 190
 Height: 6
 Baseline: 5
 Max width: 3
 Fixed width: True
+
+Char 32 (space), width 3
+  .    . 
+  .    . 
+  .    . 
+  .    . 
+ __    __
+  .    . 
+
+Char 33 (exclam), width 3
+  . # . 
+  . # . 
+  . # . 
+  .   . 
+ __ # __
+  .   . 
+
+Char 34 (quotedbl), width 3
+  .# #. 
+  .# #. 
+  .   . 
+  .   . 
+ __   __
+  .   . 
+
+Char 35 (numbersign), width 3
+  .# #. 
+  .###. 
+  .# #. 
+  .###. 
+ __# #__
+  .   . 
+
+Char 36 (dollar), width 3
+  . ##. 
+  .## . 
+  . ##. 
+  .## . 
+ __ # __
+  .   . 
+
+Char 37 (percent), width 3
+  .#  . 
+  .  #. 
+  . # . 
+  .#  . 
+ __  #__
+  .   . 
+
+Char 38 (ampersand), width 3
+  .## . 
+  .## . 
+  .###. 
+  .# #. 
+ __ ##__
+  .   . 
+
+Char 39 (quotesingle), width 3
+  . # . 
+  . # . 
+  .   . 
+  .   . 
+ __   __
+  .   . 
+
+Char 40 (parenleft), width 3
+  .  #. 
+  . # . 
+  . # . 
+  . # . 
+ __  #__
+  .   . 
+
+Char 41 (parenright), width 3
+  .#  . 
+  . # . 
+  . # . 
+  . # . 
+ __#  __
+  .   . 
+
+Char 42 (asterisk), width 3
+  .# #. 
+  . # . 
+  .# #. 
+  .   . 
+ __   __
+  .   . 
+
+Char 43 (plus), width 3
+  .   . 
+  . # . 
+  .###. 
+  . # . 
+ __   __
+  .   . 
+
+Char 44 (comma), width 3
+  .   . 
+  .   . 
+  .   . 
+  . # . 
+ __#  __
+  .   . 
+
+Char 45 (hyphen), width 3
+  .   . 
+  .   . 
+  .###. 
+  .   . 
+ __   __
+  .   . 
+
+Char 46 (period), width 3
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+ __ # __
+  .   . 
+
+Char 47 (slash), width 3
+  .  #. 
+  .  #. 
+  . # . 
+  .#  . 
+ __#  __
+  .   . 
+
+Char 48 (zero), width 3
+  . ##. 
+  .# #. 
+  .# #. 
+  .# #. 
+ __## __
+  .   . 
+
+Char 49 (one), width 3
+  . # . 
+  .## . 
+  . # . 
+  . # . 
+ __ # __
+  .   . 
+
+Char 50 (two), width 3
+  .## . 
+  .  #. 
+  . # . 
+  .#  . 
+ __###__
+  .   . 
+
+Char 51 (three), width 3
+  .## . 
+  .  #. 
+  . # . 
+  .  #. 
+ __## __
+  .   . 
+
+Char 52 (four), width 3
+  .# #. 
+  .# #. 
+  .###. 
+  .  #. 
+ __  #__
+  .   . 
+
+Char 53 (five), width 3
+  .###. 
+  .#  . 
+  .## . 
+  .  #. 
+ __## __
+  .   . 
+
+Char 54 (six), width 3
+  . ##. 
+  .#  . 
+  .###. 
+  .# #. 
+ __###__
+  .   . 
+
+Char 55 (seven), width 3
+  .###. 
+  .  #. 
+  . # . 
+  .#  . 
+ __#  __
+  .   . 
+
+Char 56 (eight), width 3
+  .###. 
+  .# #. 
+  .###. 
+  .# #. 
+ __###__
+  .   . 
+
+Char 57 (nine), width 3
+  .###. 
+  .# #. 
+  .###. 
+  .  #. 
+ __## __
+  .   . 
+
+Char 58 (colon), width 3
+  .   . 
+  . # . 
+  .   . 
+  . # . 
+ __   __
+  .   . 
+
+Char 59 (semicolon), width 3
+  .   . 
+  . # . 
+  .   . 
+  . # . 
+ __#  __
+  .   . 
+
+Char 60 (less), width 3
+  .  #. 
+  . # . 
+  .#  . 
+  . # . 
+ __  #__
+  .   . 
+
+Char 61 (equal), width 3
+  .   . 
+  .###. 
+  .   . 
+  .###. 
+ __   __
+  .   . 
+
+Char 62 (greater), width 3
+  .#  . 
+  . # . 
+  .  #. 
+  . # . 
+ __#  __
+  .   . 
+
+Char 63 (question), width 3
+  .###. 
+  .  #. 
+  . # . 
+  .   . 
+ __ # __
+  .   . 
+
+Char 64 (at), width 3
+  . # . 
+  .# #. 
+  .###. 
+  .#  . 
+ __ ##__
+  .   . 
+
+Char 65 (A), width 3
+  . # . 
+  .# #. 
+  .###. 
+  .# #. 
+ __# #__
+  .   . 
+
+Char 66 (B), width 3
+  .## . 
+  .# #. 
+  .## . 
+  .# #. 
+ __## __
+  .   . 
+
+Char 67 (C), width 3
+  . ##. 
+  .#  . 
+  .#  . 
+  .#  . 
+ __ ##__
+  .   . 
+
+Char 68 (D), width 3
+  .## . 
+  .# #. 
+  .# #. 
+  .# #. 
+ __## __
+  .   . 
+
+Char 69 (E), width 3
+  .###. 
+  .#  . 
+  .###. 
+  .#  . 
+ __###__
+  .   . 
+
+Char 70 (F), width 3
+  .###. 
+  .#  . 
+  .###. 
+  .#  . 
+ __#  __
+  .   . 
+
+Char 71 (G), width 3
+  . ##. 
+  .#  . 
+  .###. 
+  .# #. 
+ __ ##__
+  .   . 
+
+Char 72 (H), width 3
+  .# #. 
+  .# #. 
+  .###. 
+  .# #. 
+ __# #__
+  .   . 
+
+Char 73 (I), width 3
+  .###. 
+  . # . 
+  . # . 
+  . # . 
+ __###__
+  .   . 
+
+Char 74 (J), width 3
+  .  #. 
+  .  #. 
+  .  #. 
+  .# #. 
+ __ # __
+  .   . 
+
+Char 75 (K), width 3
+  .# #. 
+  .# #. 
+  .## . 
+  .# #. 
+ __# #__
+  .   . 
+
+Char 76 (L), width 3
+  .#  . 
+  .#  . 
+  .#  . 
+  .#  . 
+ __###__
+  .   . 
+
+Char 77 (M), width 3
+  .# #. 
+  .###. 
+  .###. 
+  .# #. 
+ __# #__
+  .   . 
+
+Char 78 (N), width 3
+  .# #. 
+  .###. 
+  .###. 
+  .###. 
+ __# #__
+  .   . 
+
+Char 79 (O), width 3
+  . # . 
+  .# #. 
+  .# #. 
+  .# #. 
+ __ # __
+  .   . 
+
+Char 80 (P), width 3
+  .## . 
+  .# #. 
+  .## . 
+  .#  . 
+ __#  __
+  .   . 
+
+Char 81 (Q), width 3
+  . # . 
+  .# #. 
+  .# #. 
+  .###. 
+ __ ##__
+  .   . 
+
+Char 82 (R), width 3
+  .## . 
+  .# #. 
+  .###. 
+  .## . 
+ __# #__
+  .   . 
+
+Char 83 (S), width 3
+  . ##. 
+  .#  . 
+  . # . 
+  .  #. 
+ __## __
+  .   . 
+
+Char 84 (T), width 3
+  .###. 
+  . # . 
+  . # . 
+  . # . 
+ __ # __
+  .   . 
+
+Char 85 (U), width 3
+  .# #. 
+  .# #. 
+  .# #. 
+  .# #. 
+ __ ##__
+  .   . 
+
+Char 86 (V), width 3
+  .# #. 
+  .# #. 
+  .# #. 
+  . # . 
+ __ # __
+  .   . 
+
+Char 87 (W), width 3
+  .# #. 
+  .# #. 
+  .###. 
+  .###. 
+ __# #__
+  .   . 
+
+Char 88 (X), width 3
+  .# #. 
+  .# #. 
+  . # . 
+  .# #. 
+ __# #__
+  .   . 
+
+Char 89 (Y), width 3
+  .# #. 
+  .# #. 
+  . # . 
+  . # . 
+ __ # __
+  .   . 
+
+Char 90 (Z), width 3
+  .###. 
+  .  #. 
+  . # . 
+  .#  . 
+ __###__
+  .   . 
+
+Char 91 (bracketleft), width 3
+  .###. 
+  .#  . 
+  .#  . 
+  .#  . 
+ __###__
+  .   . 
+
+Char 92 (backslash), width 3
+  .   . 
+  .#  . 
+  . # . 
+  .  #. 
+ __   __
+  .   . 
+
+Char 93 (bracketright), width 3
+  .###. 
+  .  #. 
+  .  #. 
+  .  #. 
+ __###__
+  .   . 
+
+Char 94 (asciicircum), width 3
+  . # . 
+  .# #. 
+  .   . 
+  .   . 
+ __   __
+  .   . 
+
+Char 95 (underscore), width 3
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+ __###__
+  .   . 
+
+Char 96 (grave), width 3
+  .#  . 
+  . # . 
+  .   . 
+  .   . 
+ __   __
+  .   . 
+
+Char 97 (a), width 3
+  .   . 
+  .## . 
+  . ##. 
+  .# #. 
+ __###__
+  .   . 
+
+Char 98 (b), width 3
+  .#  . 
+  .## . 
+  .# #. 
+  .# #. 
+ __## __
+  .   . 
+
+Char 99 (c), width 3
+  .   . 
+  . ##. 
+  .#  . 
+  .#  . 
+ __ ##__
+  .   . 
+
+Char 100 (d), width 3
+  .  #. 
+  . ##. 
+  .# #. 
+  .# #. 
+ __ ##__
+  .   . 
+
+Char 101 (e), width 3
+  .   . 
+  . ##. 
+  .# #. 
+  .## . 
+ __ ##__
+  .   . 
+
+Char 102 (f), width 3
+  .  #. 
+  . # . 
+  .###. 
+  . # . 
+ __ # __
+  .   . 
+
+Char 103 (g), width 3
+  .   . 
+  . ##. 
+  .# #. 
+  .###. 
+ __  #__
+  . # . 
+
+Char 104 (h), width 3
+  .#  . 
+  .## . 
+  .# #. 
+  .# #. 
+ __# #__
+  .   . 
+
+Char 105 (i), width 3
+  . # . 
+  .   . 
+  . # . 
+  . # . 
+ __ # __
+  .   . 
+
+Char 106 (j), width 3
+  .  #. 
+  .   . 
+  .  #. 
+  .  #. 
+ __# #__
+  . # . 
+
+Char 107 (k), width 3
+  .#  . 
+  .# #. 
+  .## . 
+  .## . 
+ __# #__
+  .   . 
+
+Char 108 (l), width 3
+  .## . 
+  . # . 
+  . # . 
+  . # . 
+ __###__
+  .   . 
+
+Char 109 (m), width 3
+  .   . 
+  .###. 
+  .###. 
+  .###. 
+ __# #__
+  .   . 
+
+Char 110 (n), width 3
+  .   . 
+  .## . 
+  .# #. 
+  .# #. 
+ __# #__
+  .   . 
+
+Char 111 (o), width 3
+  .   . 
+  . # . 
+  .# #. 
+  .# #. 
+ __ # __
+  .   . 
+
+Char 112 (p), width 3
+  .   . 
+  .## . 
+  .# #. 
+  .# #. 
+ __## __
+  .#  . 
+
+Char 113 (q), width 3
+  .   . 
+  . ##. 
+  .# #. 
+  .# #. 
+ __ ##__
+  .  #. 
+
+Char 114 (r), width 3
+  .   . 
+  . ##. 
+  .#  . 
+  .#  . 
+ __#  __
+  .   . 
+
+Char 115 (s), width 3
+  .   . 
+  . ##. 
+  .## . 
+  . ##. 
+ __## __
+  .   . 
+
+Char 116 (t), width 3
+  . # . 
+  .###. 
+  . # . 
+  . # . 
+ __ ##__
+  .   . 
+
+Char 117 (u), width 3
+  .   . 
+  .# #. 
+  .# #. 
+  .# #. 
+ __ ##__
+  .   . 
+
+Char 118 (v), width 3
+  .   . 
+  .# #. 
+  .# #. 
+  .###. 
+ __ # __
+  .   . 
+
+Char 119 (w), width 3
+  .   . 
+  .# #. 
+  .###. 
+  .###. 
+ __###__
+  .   . 
+
+Char 120 (x), width 3
+  .   . 
+  .# #. 
+  . # . 
+  . # . 
+ __# #__
+  .   . 
+
+Char 121 (y), width 3
+  .   . 
+  .# #. 
+  .# #. 
+  . ##. 
+ __  #__
+  . # . 
+
+Char 122 (z), width 3
+  .   . 
+  .###. 
+  . ##. 
+  .## . 
+ __###__
+  .   . 
+
+Char 123 (braceleft), width 3
+  . ##. 
+  . # . 
+  .#  . 
+  . # . 
+ __ ##__
+  .   . 
+
+Char 124 (bar), width 3
+  . # . 
+  . # . 
+  .   . 
+  . # . 
+ __ # __
+  .   . 
+
+Char 125 (braceright), width 3
+  .## . 
+  . # . 
+  .  #. 
+  . # . 
+ __## __
+  .   . 
+
+Char 126 (asciitilde), width 3
+  . ##. 
+  .## . 
+  .   . 
+  .   . 
+ __   __
+  .   . 
 
 Char 161 (exclamdown), width 3
   . # . 
@@ -770,6 +1530,196 @@ Char 255 (ydieresis), width 3
   . # . 
 
 Font rendering notes:
+Char 32:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 33:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 34:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 35:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 36:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 37:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 38:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 39:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 40:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 41:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 42:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 43:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 44:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 45:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 46:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 47:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 48:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 49:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 50:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 51:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 52:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 53:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 54:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 55:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 56:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 57:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 58:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 59:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 60:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 61:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 62:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 63:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 64:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 65:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 66:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 67:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 68:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 69:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 70:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 71:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 72:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 73:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 74:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 75:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 76:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 77:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 78:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 79:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 80:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 81:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 82:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 83:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 84:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 85:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 86:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 87:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 88:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 89:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 90:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 91:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 92:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 93:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 94:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 95:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 96:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 97:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 98:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 99:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 100:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 101:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 102:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 103:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 104:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 105:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 106:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 107:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 108:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 109:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 110:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 111:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 112:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 113:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 114:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 115:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 116:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 117:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 118:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 119:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 120:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 121:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 122:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 123:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 124:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 125:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 126:
+  Device width (4) is wider than overall font box width (3), reducing device width.
 Char 161:
   Device width (4) is wider than overall font box width (3), reducing device width.
 Char 162:

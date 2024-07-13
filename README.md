@@ -34,7 +34,7 @@ The selection provided here was derived from the default U8G2 fonts; it contains
 They are all derived from **112** open and redistributable *.bdf* font definition files covering 11 font families. These have been packed into *.py* font modules based on the character set(s) they contain.
 
 Fonts are generated and stored by font family, then character set and vertical size.
-* 560 **Latin-1** font modules cover the basic latin character sets in groups of related characters.
+* 561 **Latin-1** font modules cover the basic latin character sets in groups of related characters.
 * 144 **Symbol** modules cover specialist symbol fonts (battery, 7 segment, etc) and the Open Iconic icon sets.
 
 All provided font modules contain and retain the original copyright notices from the source '.bdf' files, most are very 'free'; but the proportional X11 derived fonts need extra consideration. See the documentation on the font index pages for more.

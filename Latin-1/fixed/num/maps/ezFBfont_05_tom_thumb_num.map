@@ -1,0 +1,210 @@
+Font: tom_thumb (Latin-1-bdf-sources/tom-thumb.bdf)
+Declared name: -raccoon-fixed4x6-medium-r-normal--6-60-75-75-p-40-iso10646-1
+Declared family: fixed
+Declared weight: medium
+Declared size: 6
+Characters: 22
+Height: 5
+Baseline: 5
+Max width: 3
+Fixed width: True
+
+Char 32 (space), width 3
+  .    . 
+  .    . 
+  .    . 
+  .    . 
+ __    __
+
+Char 37 (percent), width 3
+  .#  . 
+  .  #. 
+  . # . 
+  .#  . 
+ __  #__
+
+Char 40 (parenleft), width 3
+  .  #. 
+  . # . 
+  . # . 
+  . # . 
+ __  #__
+
+Char 41 (parenright), width 3
+  .#  . 
+  . # . 
+  . # . 
+  . # . 
+ __#  __
+
+Char 42 (asterisk), width 3
+  .# #. 
+  . # . 
+  .# #. 
+  .   . 
+ __   __
+
+Char 43 (plus), width 3
+  .   . 
+  . # . 
+  .###. 
+  . # . 
+ __   __
+
+Char 44 (comma), width 3
+  .   . 
+  .   . 
+  .   . 
+  . # . 
+ __#  __
+
+Char 45 (hyphen), width 3
+  .   . 
+  .   . 
+  .###. 
+  .   . 
+ __   __
+
+Char 46 (period), width 3
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+ __ # __
+
+Char 47 (slash), width 3
+  .  #. 
+  .  #. 
+  . # . 
+  .#  . 
+ __#  __
+
+Char 48 (zero), width 3
+  . ##. 
+  .# #. 
+  .# #. 
+  .# #. 
+ __## __
+
+Char 49 (one), width 3
+  . # . 
+  .## . 
+  . # . 
+  . # . 
+ __ # __
+
+Char 50 (two), width 3
+  .## . 
+  .  #. 
+  . # . 
+  .#  . 
+ __###__
+
+Char 51 (three), width 3
+  .## . 
+  .  #. 
+  . # . 
+  .  #. 
+ __## __
+
+Char 52 (four), width 3
+  .# #. 
+  .# #. 
+  .###. 
+  .  #. 
+ __  #__
+
+Char 53 (five), width 3
+  .###. 
+  .#  . 
+  .## . 
+  .  #. 
+ __## __
+
+Char 54 (six), width 3
+  . ##. 
+  .#  . 
+  .###. 
+  .# #. 
+ __###__
+
+Char 55 (seven), width 3
+  .###. 
+  .  #. 
+  . # . 
+  .#  . 
+ __#  __
+
+Char 56 (eight), width 3
+  .###. 
+  .# #. 
+  .###. 
+  .# #. 
+ __###__
+
+Char 57 (nine), width 3
+  .###. 
+  .# #. 
+  .###. 
+  .  #. 
+ __## __
+
+Char 58 (colon), width 3
+  .   . 
+  . # . 
+  .   . 
+  . # . 
+ __   __
+
+Char 176 (degree), width 3
+  . # . 
+  .# #. 
+  . # . 
+  .   . 
+ __   __
+
+Font rendering notes:
+Char 32:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 37:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 40:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 41:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 42:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 43:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 44:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 45:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 46:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 47:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 48:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 49:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 50:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 51:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 52:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 53:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 54:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 55:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 56:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 57:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 58:
+  Device width (4) is wider than overall font box width (3), reducing device width.
+Char 176:
+  Device width (4) is wider than overall font box width (3), reducing device width.
