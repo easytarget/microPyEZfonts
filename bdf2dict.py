@@ -56,8 +56,8 @@ if len(argv) not in [3, 4]:
     print(" containing all matching glyphs for the characters in [charset]\n")
     print("If [charset] is a valid file path this will be read",end='')
     print(" and used as the character set.")
-    print("If [charset] is 'FULL' the entire font file will be converted.")
-    print("If [charset] is '-' the charset will be read from stdin.")
+    print("If [charset] is empty ('') the entire font file will be converted.")
+    print("If [charset] is '--' the charset will be read from stdin.")
     print("Otherwise the user will be prompted to enter the charset.")
     print("Duplicate charset entries are ignored.\n")
     print("The output file names will begin with the supplied prefix.")
@@ -98,9 +98,9 @@ if len(argv) == 4:
     if Path(argv[3]).is_file():
         with open(argv[3], 'r') as setfile:
             cset = setfile.read()
-    elif argv[3] == 'FULL':
+    elif len(argv[3]) == 0:
         cset = None
-    elif argv[3] == '-':
+    elif argv[3] == '--':
         # wait for stdin + eof
         with stdin as sin:
             cset = sin.read()
@@ -242,10 +242,12 @@ for block in bdf:
         rep.append(r.format(len(entry['rawhex']), font_box[1]))
         entry['box'][1] = len(entry['rawhex'])
     # Strip empty (0) lines from top and bottom of bitmap and adjust box to match
-    while (int(entry['rawhex'][0], 16) == 0) and (len(entry['rawhex']) > -entry['box'][3] + 1):
+    while (len(entry['rawhex']) > -entry['box'][3] + 1) and (int(entry['rawhex'][0], 16) == 0):
         entry['rawhex'].pop(0)
         entry['box'][1] -= 1
-    while (int(entry['rawhex'][-1], 16) == 0) and (len(entry['rawhex']) > 1):
+        if len(entry['rawhex']) == 0:
+            break  # stops index errors if rawhex len is shorter than box height for space chars
+    while (len(entry['rawhex']) > 1) and (int(entry['rawhex'][-1], 16) == 0):
         entry['rawhex'].pop()
         entry['box'][1] -= 1
         entry['box'][3] += 1
