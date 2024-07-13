@@ -1,0 +1,21 @@
+bin/:
+total 184
+-rw-r--r--. 1 owen owen  6627 Jul 13 12:19 mPyEZfont_u8g2_4x6_r.py
+-rw-r--r--. 1 owen owen 47842 Jul 13 12:19 mPyEZfont_u8g2_courB14_e.py
+-rw-r--r--. 1 owen owen  7487 Jul 13 12:19 mPyEZfont_u8g2_courB14_n.py
+-rw-r--r--. 1 owen owen 21346 Jul 13 12:19 mPyEZfont_u8g2_courB14_r.py
+-rw-r--r--. 1 owen owen  5031 Jul 13 12:19 mPyEZfont_u8g2_courB14_t.py
+-rw-r--r--. 1 owen owen 27168 Jul 13 12:19 mPyEZfont_u8g2_spleen_12x24_r.py
+-rw-r--r--. 1 owen owen 13268 Jul 13 12:19 mPyEZfont_u8g2_timB10_r.py
+-rw-r--r--. 1 owen owen 42593 Jul 13 12:19 mPyEZfont_u8g2_timB24_r.py
+
+dict/:
+total 140
+-rw-r--r--. 1 owen owen  3971 Jul 13 13:51 ezFBfont_06_4x6_ascii.py
+-rw-r--r--. 1 owen owen  4238 Jul 13 13:49 ezFBfont_12_courB14_time.py
+-rw-r--r--. 1 owen owen  9504 Jul 13 15:42 ezFBfont_14_timB10_ascii.py
+-rw-r--r--. 1 owen owen  5614 Jul 13 13:48 ezFBfont_16_courB14_num.py
+-rw-r--r--. 1 owen owen 15962 Jul 13 13:49 ezFBfont_17_courB14_ascii.py
+-rw-r--r--. 1 owen owen 33876 Jul 13 13:47 ezFBfont_20_courB14_full.py
+-rw-r--r--. 1 owen owen 17010 Jul 13 13:52 ezFBfont_23_spleen_12x24_ascii.py
+-rw-r--r--. 1 owen owen 34031 Jul 13 13:53 ezFBfont_33_timB24_ascii.py
