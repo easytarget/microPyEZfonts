@@ -2,7 +2,7 @@
 ## a `.bdf` font file to python font file conversion utility
 
 ## Setup
-This is a **CPython 3.7+** tool intended to be run from the commandline on a desk/laptop system, it can use a *lot* of memory when fed a huge font file and charset.
+This is a **CPython 3.7+** tool intended to be run from the commandline on a desk/laptop system, it can use a *quite a bit* of memory when fed a huge font file and charset, but is also fast and robust.
 
 Otherwise there are no further requirements, the tooling is self-contained, simply copy `bdf2dict.py` where needed or run from in the repo.
 
@@ -17,7 +17,7 @@ python bdf2dict.py <font_file> <prefix> [<charset>] [debug]
 * `[<charset>]`: optional:
   * If not supplied the user will be prompted to enter the desired characters.
   * If a valid file path is supplied this will be read as ascii / unicode text and all unique chars in it added to the charset.
-  * If the keyword `FULL` is used the entire font will be converted (can get big..)
+  * If an empty string is passed (`''`) the entire font will be converted (can get big..)
   * A `-` tells the script to read it's charset from `stdin`.
   * The charset is always de-duplcated and sorted before processing.
 * `[debug]`: optional: append the key word *debug* to the arguments to switch on a (potentially very lengthy) comprehensive debug output
