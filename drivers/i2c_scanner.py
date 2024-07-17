@@ -21,7 +21,7 @@ from time import sleep
 #  freq=400000, timeout= 50000
 
 from machine import Pin, I2C, SoftI2C
-#i2c=SoftI2C(sda=Pin(SDA), scl=Pin(SCL))  # rp2040/esp32
+#i2c=SoftI2C(sda=Pin(SDA), scl=Pin(SCL))  # rp2040/esp32 (alt)
 #i2c=I2C(0,sda=Pin(SDA), scl=Pin(SCL))    # rp2040/esp32
 #i2c = I2C(sda=Pin(SDA), scl=Pin(SCL))    # esp8266  (No hardware I2c..)
 

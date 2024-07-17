@@ -24,7 +24,7 @@ different fonts used in the time display.
 '''
 
 # Display
-display = REPL_1306(128, 64, clear=True, zero=' ')
+display = REPL_1306(128, 64, clear=True)
 display.invert(False)  # as needed
 display.rotate(0)      # as needed
 display.contrast(128)  # as needed

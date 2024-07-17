@@ -1,6 +1,3 @@
-from machine import Pin, I2C, SoftI2C
-#from ssd1306 import SSD1306_I2C
-from sh1106 import SH1106_I2C
 from ezFBfont import ezFBfont
 from sys import path
 from time import sleep_ms
@@ -27,31 +24,24 @@ adding/removing options etc.
 # pins
 SDA = 4   # default esp8266 (D2 / gpio4)
 #SCL = 5   # default esp8266 (D1 / gpio5)
-SCL = 14  #(D5 / gpio14)
-#SDA = 21  # default esp32
-#SCL = 22  # default esp32
-#SDA = 28  # default rp2040
-#SCL = 29  # default rp2040
+SCL = 14  # mine (D5 / gpio14)
 
 # I2C
+from machine import Pin, I2C, SoftI2C
+# EXAMPLE: You need to uncomment one of the I2C entries below
 # Wiring is important, you need good connections and pullup resisitors on the lines.
 #  If you see continual 'OSError: with 'ENODEV' or 'ETIMEDOUT' you can try the SoftI2C
 #  function instead, it is more tolerant of timing errors.
 #  You can also play with frequency and timeout values, default:
 #  freq=400000, timeout= 50000
-#i2c=SoftI2C(sda=Pin(SDA), scl=Pin(SCL))  # rp2040/esp32
-#i2c=I2C(0,sda=Pin(SDA), scl=Pin(SCL))    # rp2040/esp32
 i2c = I2C(sda=Pin(SDA), scl=Pin(SCL))    # esp8266  (No hardware I2c..)
 
 # Display
-#display = SSD1306_I2C(128, 64, i2c, addr=0x3c)
+from sh1106 import SH1106_I2C
 display = SH1106_I2C(128, 64, i2c, addr=0x3c)
 display.sleep(False)
 display.fill(0)
 display.show()
-#display.invert(False)  # as needed
-#display.rotate(0)      # as needed
-#display.contrast(128)  # as needed
 
 # Font Init
 font1 = ezFBfont(display, ezFBfont_23_spleen_12x24_ascii, tkey=0, verbose=True)
