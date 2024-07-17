@@ -1,6 +1,3 @@
-from machine import Pin, I2C, SoftI2C
-from ssd1306 import SSD1306_I2C
-from sh1106 import SH1106_I2C
 from ezFBfont import ezFBfont
 from sys import path
 
@@ -19,10 +16,12 @@ defaults for a font.
 '''
 
 # pins
-#I2C0_SDA_PIN = 21  # default esp32
-#I2C0_SCL_PIN = 22  # default esp32
-#I2C0_SDA_PIN = 28  # default rp2040
-#I2C0_SCL_PIN = 29  # default rp2040
+#SDA = 4   # default esp8266 (D2 / gpio4)
+#SCL = 5   # default esp8266 (D1 / gpio5)
+#SDA = 21  # default esp32
+#SCL = 22  # default esp32
+#SDA = 28  # default rp2040
+#SCL = 29  # default rp2040
 
 # I2C
 # Wiring is important, you need good connections and pullup resisitors on the lines.
@@ -30,28 +29,38 @@ defaults for a font.
 #  function instead, it is more tolerant of timing errors.
 #  You can also play with frequency and timeout values, default:
 #  freq=400000, timeout= 50000
-#i2c0=SoftI2C(sda=5, scl=2)
-#i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
 
-# from machine import Pin, I2C
-# 
-#
-i2c = I2C(sda=Pin(4), scl=Pin(14), freq=400000)
-display = SH1106_I2C(128, 64, i2c, Pin(16), 0x3c)
-display.sleep(False)
-display.fill(0)
-display.text('Testing 1', 0, 0, 1)
-display.show()
-
+from machine import Pin, I2C, SoftI2C
+#i2c=SoftI2C(sda=Pin(SDA), scl=Pin(SCL))  # rp2040/esp32
+#i2c=I2C(0,sda=Pin(SDA), scl=Pin(SCL))    # rp2040/esp32
+#i2c = I2C(sda=Pin(SDA), scl=Pin(SCL))    # esp8266  (No hardware I2c..)
 
 # Display
-#display = SSD1306_I2C(128, 64, i2c0, addr=0x78)
+# You need to uncomment one of the entries below, as appropriate.
+
+# SSD 1306
+#from ssd1306 import SSD1306_I2C
+#display = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
 #display.invert(False)  # as needed
 #display.rotate(0)      # as needed
 #display.contrast(128)  # as needed
 
+# ST7567
+#from st7567_i2c import ST7567
+#display = ST7567(128, 64, i2c0, addr=0x3f)
+#display.set_contrast(31)  # as needed (max 63)
+
+# SH1106
+#from sh1106 import SH1106_I2C
+#display = SH1106_I2C(128, 64, i2c, addr=0x3c)
+#display.invert(1)  # as needed
+#display.flip()      # as needed
+#display.contrast(128)  # as needed
+#display.sleep(False)
+#display.fill(0)
+
 # Font Init
-font = ezFBfont(display, thefont, vgap=0, verbose=False)
+font = ezFBfont(display, thefont, vgap=0, verbose=True)
 
 # Some text
 source = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, \

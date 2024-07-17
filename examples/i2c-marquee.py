@@ -1,12 +1,7 @@
-# basics
+from ezFBmarquee import ezFBmarquee
 from sys import path, argv
 from time import sleep, ticks_ms
-# display hardware
-from machine import Pin, I2C, SoftI2C
-#from ssd1306 import SSD1306_I2C
-from sh1106 import SH1106_I2C
-# marquee
-from ezFBmarquee import ezFBmarquee
+
 # Interrupt timer
 from machine import Timer
 from micropython import schedule
@@ -27,10 +22,8 @@ adding/removing options etc.
 '''
 
 # pins
-# pins
-SDA = 4   # default esp8266 (D2 / gpio4)
+#SDA = 4   # default esp8266 (D2 / gpio4)
 #SCL = 5   # default esp8266 (D1 / gpio5)
-SCL = 14  #(D5 / gpio14)
 #SDA = 21  # default esp32
 #SCL = 22  # default esp32
 #SDA = 28  # default rp2040
@@ -42,21 +35,35 @@ SCL = 14  #(D5 / gpio14)
 #  function instead, it is more tolerant of timing errors.
 #  You can also play with frequency and timeout values, default:
 #  freq=400000, timeout= 50000
+
+from machine import Pin, I2C, SoftI2C
 #i2c=SoftI2C(sda=Pin(SDA), scl=Pin(SCL))  # rp2040/esp32
 #i2c=I2C(0,sda=Pin(SDA), scl=Pin(SCL))    # rp2040/esp32
-i2c = I2C(sda=Pin(SDA), scl=Pin(SCL))    # esp8266  (No hardware I2c..)
+#i2c = I2C(sda=Pin(SDA), scl=Pin(SCL))    # esp8266  (No hardware I2c..)
 
 # Display
-w = 128
-h = 64
-#display = SSD1306_I2C(w, h, i2c, addr=0x3c)
-display = SH1106_I2C(128, 64, i2c, addr=0x3c)
-display.sleep(False)
-display.fill(0)
-display.show()
+# You need to uncomment one of the entries below, as appropriate.
+
+# SSD 1306
+#from ssd1306 import SSD1306_I2C
+#display = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
 #display.invert(False)  # as needed
 #display.rotate(0)      # as needed
 #display.contrast(128)  # as needed
+
+# ST7567
+#from st7567_i2c import ST7567
+#display = ST7567(128, 64, i2c0, addr=0x3f)
+#display.set_contrast(31)  # as needed (max 63)
+
+# SH1106
+#from sh1106 import SH1106_I2C
+#display = SH1106_I2C(128, 64, i2c, addr=0x3c)
+#display.invert(1)  # as needed
+#display.flip()      # as needed
+#display.contrast(128)  # as needed
+#display.sleep(False)
+#display.fill(0)
 
 # two marquees
 marquee1 = ezFBmarquee(display, font1, verbose=True)
@@ -83,7 +90,7 @@ def mstep(t):
 
 # Start the timer
 tim0 = Timer(0)
-tim0.init(period=200, mode=Timer.PERIODIC, callback=mstep)
+tim0.init(period=100, mode=Timer.PERIODIC, callback=mstep)
 
 # Start the main marquee
 message = 'Info: This is a a long & boring informational message! [with ~{:d} chars]'
