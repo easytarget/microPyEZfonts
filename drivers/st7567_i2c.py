@@ -20,12 +20,6 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-# Imported and modified for use with ezFBfont by o.carter, Apr 2024
-# Original from @mcGeorge on micropython forum:
-#   https://forum.micropython.org/viewtopic.php?t=12747
-# - modified to support the `.format` property
-
-
 from micropython import const
 from time import sleep_ms
 import framebuf
@@ -74,8 +68,7 @@ class ST7567(framebuf.FrameBuffer):
         self.external_vcc = external_vcc
         self.pages        = self.height // 8
         self.buffer       = bytearray(self.pages * self.width)
-        self.format       = framebuf.MONO_VLSB
-        super().__init__( self.buffer, self.width, self.height, self.format)
+        super().__init__( self.buffer, self.width, self.height, framebuf.MONO_VLSB )
         self.display_init()
 
     def display_init(self):
@@ -118,3 +111,4 @@ class ST7567(framebuf.FrameBuffer):
     def write_data(self, buf):
         self.write_list[1] = buf
         self.i2c.writevto( self.addr, self.write_list )
+

@@ -32,18 +32,17 @@ class SSD1306(framebuf.FrameBuffer):
         self.external_vcc = external_vcc
         self.pages = self.height // 8
         self.buffer = bytearray(self.pages * self.width)
-        self.format = framebuf.MONO_VLSB
-        super().__init__(self.buffer, self.width, self.height, self.format)
+        super().__init__(self.buffer, self.width, self.height, framebuf.MONO_VLSB)
         self.init_display()
 
     def init_display(self):
         for cmd in (
-            SET_DISP,  # display off
+            SET_DISP | 0x00,  # off
             # address setting
             SET_MEM_ADDR,
             0x00,  # horizontal
             # resolution and layout
-            SET_DISP_START_LINE,  # start at line 0
+            SET_DISP_START_LINE | 0x00,
             SET_SEG_REMAP | 0x01,  # column addr 127 mapped to SEG0
             SET_MUX_RATIO,
             self.height - 1,
@@ -67,14 +66,14 @@ class SSD1306(framebuf.FrameBuffer):
             # charge pump
             SET_CHARGE_PUMP,
             0x10 if self.external_vcc else 0x14,
-            SET_DISP | 0x01,  # display on
+            SET_DISP | 0x01,
         ):  # on
             self.write_cmd(cmd)
         self.fill(0)
         self.show()
 
     def poweroff(self):
-        self.write_cmd(SET_DISP)
+        self.write_cmd(SET_DISP | 0x00)
 
     def poweron(self):
         self.write_cmd(SET_DISP | 0x01)
@@ -158,3 +157,4 @@ class SSD1306_SPI(SSD1306):
         self.cs(0)
         self.spi.write(buf)
         self.cs(1)
+

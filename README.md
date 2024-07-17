@@ -49,9 +49,9 @@ There is no sensible way of grouping general Unicode fonts into packs that are s
 
 # Font creator: [`bdf2dict.py`](bdf2dict.py)
 
-All the fonts packs provided here were made with this tool, it is a simple to use CPythom (not microPython) script that can import and process a `.bdf` font file and extract just the characters you need into a `.py` font file. It is fully compatible with Unicode characters and fonts.
+All the fonts packs provided here were made with this tool, it is a simple to use CPython *(not microPython!)* script that can import and process a `.bdf` font file and extract just the characters you need into a `.py` font file. It is fully compatible with Unicode characters and fonts.
 
-See [`BDF2DICT.md`](BDF2DICT.md) for further documentation and usage instructions, and the Unicode [readme](Unicode/README.md).
+See [`BDF2DICT.md`](BDF2DICT.md) for further documentation and usage instructions, and the Unicode [readme](Unicode/README.md) for some Unicode fonts and n example of using this tool to generate a custom font pack.
 
 ## Drivers
 
