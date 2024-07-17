@@ -52,7 +52,7 @@ from machine import Pin, I2C, SoftI2C
 # SSD 1306
 #from ssd1306 import SSD1306_I2C
 #display = SSD1306_I2C(128, 64, i2c, addr=0x3c)
-#display.invert(False)  # as needed
+#display.invert(1)      # as needed
 #display.rotate(0)      # as needed
 #display.contrast(128)  # as needed
 
@@ -64,11 +64,11 @@ from machine import Pin, I2C, SoftI2C
 # SH1106
 #from sh1106 import SH1106_I2C
 #display = SH1106_I2C(128, 64, i2c, addr=0x3c)
-#display.invert(1)  # as needed
-#display.flip()      # as needed
-#display.contrast(128)  # as needed
 #display.sleep(False)
 #display.fill(0)
+#display.invert(1)      # as needed
+#display.flip()         # as needed
+#display.contrast(128)  # as needed
 
 # Font Init
 font1 = ezFBfont(display, ezFBfont_23_spleen_12x24_ascii, tkey=0, verbose=True)

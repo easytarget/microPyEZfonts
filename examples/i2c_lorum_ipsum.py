@@ -58,11 +58,11 @@ from machine import Pin, I2C, SoftI2C
 # SH1106
 #from sh1106 import SH1106_I2C
 #display = SH1106_I2C(128, 64, i2c, addr=0x3c)
-#display.invert(1)  # as needed
-#display.flip()      # as needed
-#display.contrast(128)  # as needed
 #display.sleep(False)
 #display.fill(0)
+#display.invert(1)      # as needed
+#display.flip()         # as needed
+#display.contrast(128)  # as needed
 
 # Font Init
 font = ezFBfont(display, thefont, vgap=0, verbose=True)
