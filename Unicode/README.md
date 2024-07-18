@@ -27,54 +27,12 @@ Both Unicode fonts here are open source projects and have permissive licencing; 
 The following is a walkthrough of using `bdf2dict` to create a simple Unicode font pack for a simple app.
 
 ## Requirements
-A desktop/laptop system with a working python3.7+ install, and this repository.
+To run the tool you need a desktop/laptop system with a working python3.7+ install, and this repository cloned or unpacked.
 
-## App
-Starting in a project folder; we need an app to run.
+Next we will need a list of characters to add to the font!
+* The easiest way to do this is to create a 'charset' file with the characters you want in it.
 
-If you do not (yet) have your own app; the following is a simple example, it uses a ssd_1306 OLED display connected via I2C
-* adapt the diplay init for other displays
-* a 'more complete' version of this is in the examples folder
-
-Demo code example:
-
-```console
-user@pc:~/MPython/uniProj$ cat uniProj-i2c.py
-```
-```python
-from machine import Pin, I2C
-from ssd1306 import SSD1306_I2C
-from ezFBfont import ezFBfont
-
-import my_unifont_15_1_05 as unicode_font
-
-# HW
-#I2C0_SDA_PIN = 28  # default rp2040
-#I2C0_SCL_PIN = 29  # default rp2040
-I2C0_SDA_PIN = 21  # default esp32
-I2C0_SCL_PIN = 22  # default esp32
-i2c0=I2C(0,sda=Pin(I2C0_SDA_PIN), scl=Pin(I2C0_SCL_PIN))
-
-# Display
-display = SSD1306_I2C(128, 64, i2c0, addr=0x3c)
-
-# Font Init
-font = ezFBfont(display, unicode_font,
-                halign='center', valign='center',
-                hgap=1,
-                verbose=True)
-
-# Write (stripping trailing newlines)
-with open('unicode.txt','r') as text:
-    font.write(text.read().strip('\n'), 63, 31)
-display.show()
-```
-
-You need to copy the `ezFBfont.py` and `ssd1306.py` class libraries into the project via the file dialog in your IDE or whatever method you use.
-
-Next you will need a list of characters to add to the font: the easiest way to do this is to create a 'charset' file with the characters you want in it.
-
-For this example I am using 'Hello' in simplified Chinese, and microPython with a 'µ':
+For this example I have a file which says 'Hello' in simplified Chinese, a newline, and 'microPython' with a 'µ'.
 
 ```console
 user@pc:~/MPython/uniProj$ cat unicode.txt
@@ -84,11 +42,15 @@ user@pc:~/MPython/uniProj$ cat unicode.txt
 µPython
 ```
 
-Now we need to prepare our font file using `bdf2dict`.
+(You can also provide the charset as a string, via stdin or a user prompt. see the *bdf2dict* readme for more.)
 
-In this example I have cloned the *ezFBfont* repo alongside a folder for my project on my PC, and used relative paths for the tool and font source. The font is generated in this project folder then copied to the target device via the IDE (or whatever method used).
+Now we need to prepare our font module file using `bdf2dict`.
 
-See the [`bdf2dict`](../BDF2DICT.md) page to understand the options used here; we are using the unifont, and prefixing our font files with `my_`.
+In this example I have cloned the *ezFBfont* repo alongside a folder for my project on my PC, and used relative paths for the tool and font source.
+
+The font module file is generated and saved in the local working directory, then copied to the target device via the IDE (or whatever method used).
+
+See the [`bdf2dict`](../BDF2DICT.md) page to understand the options used here; we are using the unifont .bdf file, prefixing our output files with `my_`, and passing the charset in a (unicode) text file.
 
 ```console
 user@pc:~/MPython/uniProj$ python ../microPyEZfonts/bdf2dict.py ../microPyEZfonts/Unicode/unifont_15.1.05/unifont-15.1.05.bdf my_ unicode.txt 
@@ -104,7 +66,55 @@ total 48
 ```
 The font itself is in the `.py` file, the `.map` file has a summary of the glyphs and the `.set` file all the unique characters (the last two are just for reference, they do not belong in your project folder..)
 
-We should be able to run our demo now: Copy the `my_unifont_15_1_05.py` font file and `unicode.txt` to your project and run!
+## App
+
+Having made the font we need an app that uses it.
+
+If you do not (yet) have your own app the following is a simple example; it uses a ssd_1306 OLED display connected via I2C on a ESP32 / RP2040 default pins.
+* A 'more complete' version of this is in the examples folder,
+* that example has defaults for esp8266 and sh1106/st7567 displays.
+* for other displays you will need to find drivers etc and adapt the following as necesscary.
+
+Demo code example:
+
+```console
+user@pc:~/MPython/uniProj$ cat uniProj-i2c.py
+```
+```python
+from machine import Pin, I2C
+from ssd1306 import SSD1306_I2C
+from ezFBfont import ezFBfont
+
+import my_unifont_15_1_05 as unicode_font
+
+# HW
+#SDA = 28  # default rp2040
+#SCL = 29  # default rp2040
+SDA = 21  # default esp32
+SCL = 22  # default esp32
+i2c=I2C(0,sda=Pin(SDA), scl=Pin(SCL))
+
+# Display
+display = SSD1306_I2C(128, 64, i2c, addr=0x3c)
+
+# Font Init
+font = ezFBfont(display, unicode_font,
+                halign='center',
+                valign='center',
+                hgap=1,
+                verbose=True)
+
+# Write (stripping trailing newlines)
+with open('unicode.txt','r') as text:
+    font.write(text.read().strip('\n'), 63, 31)
+display.show()
+```
+
+You need to copy the `ezFBfont.py` and `ssd1306.py` class libraries into the project via the file dialog in your IDE or whatever method you use.
+
+We should be able to run the demo now: 
+* Copy the `my_unifont_15_1_05.py` font file we created above, and `unicode.txt` to your project
+* Run `uniProj-i2c.py` (or whatever your app is called.
 
 ## REPL
 
