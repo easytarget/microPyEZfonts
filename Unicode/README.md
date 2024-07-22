@@ -1,4 +1,5 @@
-# [Unicode Fonts](https://home.unicode.org/)
+# Unicode Fonts
+### [unicode.org](https://home.unicode.org/)
 
 This folder contains instructions and examples for producing custom Unicode font files suitable for use with `ezFBfont`.
 
@@ -8,14 +9,17 @@ Instead; this is a guide to producing a custom font pack with just the character
 
 ## Unicode font sources:
 Two Unicode font sets are provided here:
-* [efont](https://openlab.ring.gr.jp/efont/)
+* The Electronic Font Open Laboratory [efont](https://openlab.ring.gr.jp/efont/)
   * [Downloads](https://openlab.ring.gr.jp/efont/dist/unicode-bdf/).
   * These have multiple heights, and bold/italic variants.
-* [GNU unifont](https://savannah.gnu.org/projects/unifont)
-  * Downloads at [unifoundry](https://unifoundry.com/unifont/)).
-  * Only available as 16px height.
+  * Fixed-width and bi-width versions
+  * Partial; ~25k glyphs focussed on oriental and asian blocks.
+* GNU [unifont](https://savannah.gnu.org/projects/unifont)
+  * Downloads at [unifoundry](https://unifoundry.com/unifont/).
+  * Only available as 16px height, 8px / 16px bi-width.
+  * Complete; 65534 glyphs covering all blocks.
 
-Additionally: The Fixed and X11 fonts in the [Latin-1](../Latin-1/Latin-1-bdf-sources) folder (Helvetica, Times, Courier, Schoolbook and the fixed fonts) all have Unicode glyphs as part of the extended Latin-1 blocks.
+Additionally: The Fixed and X11 fonts in the [Latin-1](../Latin-1/Latin-1-bdf-sources) folder (Helvetica, Times, Courier, Schoolbook and the fixed fonts) all have some Unicode glyphs as part of the extended Latin-1 blocks.
 
 # COPYRIGHT
 Both Unicode fonts here are open source projects and have permissive licencing; but they **do** have licence terms and some restrictions:
@@ -32,7 +36,7 @@ To run the tool you need a desktop/laptop system with a working python3.7+ insta
 Next we will need a list of characters to add to the font!
 * The easiest way to do this is to create a 'charset' file with the characters you want in it.
 
-For this example I have a file which says 'Hello' in simplified Chinese, a newline, and 'microPython' with a 'µ'.
+For this example I have a file which says 'Hello' in simplified Chinese followed by a newline and 'microPython' with a 'µ'.
 
 ```console
 user@pc:~/MPython/uniProj$ cat unicode.txt
@@ -50,7 +54,7 @@ In this example I have cloned the *ezFBfont* repo alongside a folder for my proj
 
 The font module file is generated and saved in the local working directory, then copied to the target device via the IDE (or whatever method used).
 
-See the [`bdf2dict`](../BDF2DICT.md) page to understand the options used here; we are using the unifont .bdf file, prefixing our output files with `my_`, and passing the charset in a (unicode) text file.
+See the [`bdf2dict`](../BDF2DICT.md) page to understand the options used here; we are using the unifont `.bdf` file, prefixing our output files with `my_`, and passing the charset in a (unicode) text file.
 
 ```console
 user@pc:~/MPython/uniProj$ python ../microPyEZfonts/bdf2dict.py ../microPyEZfonts/Unicode/unifont_15.1.05/unifont-15.1.05.bdf my_ unicode.txt 
@@ -183,7 +187,8 @@ repl_1306: show
                                                                                  
                                                                                  
 ```
-## Experiment!
+# Experiment!
+
 The efont collection has bold and italic fonts, trying it is easy:
 ```console
 user@pc:~/MPython/uniProj$ python ../microPyEZfonts/bdf2dict.py ../microPyEZfonts/Unicode/efont-unicode-bdf-0.4.2/b16_b.bdf my_ unicode.txt 
@@ -220,9 +225,12 @@ repl_1306: show
          ▀▀                ▀▀▀▀▀                                                
 ```
 ## Note:
-* If you look above you will see that the *unifont* has ten matching glyphs, but the *efont* only has nine! This is because there is a informational  glyph for the `\n` newline character in the unifont, but not in efont.
+* If you look above you will see that the *unifont* has ten matching glyphs, but the *efont* only has nine!
+* This is because there is a informational glyph for the `\n` newline character in the unifont, but not in efont.
 
-# Unicode Block List
+-------------------------------------------
+
+# Addendum: Unicode Block List
 Unicode is divided into standard 'blocks' of related glyphs, this is an overview for reference.
 
 (from: https://www.unicode.org/Public/UCD/latest/ucd/Blocks.txt):
