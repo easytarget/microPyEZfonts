@@ -1,29 +1,17 @@
 # Fonts and Font Writer for the MicroPython framebuffer
 
-A collection of fonts and a writer for them, sourced from the [u8g2](https://github.com/olikraus/u8g2) project and packaged for use on small devices, with small displays, running [MicroPython](https://micropython.org/).
+A collection of fonts and a writer for them, inspired by the [u8g2](https://github.com/olikraus/u8g2) project and packaged for use on devices with small displays running [MicroPython](https://micropython.org/).
 
 [![Demo Examples on two different displays](examples/doc/demo-collage1.thumb.jpg)](examples/doc/demo-collage1.jpg)
 
-The font packs here will work with **`EZ Font Writer`** and **`EZ marquee`** (see below).
-* These are optimised for ease of installation and use; especially for small 'info panel' type projects and will work with *any* display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html).
+The font packs here will work with my **`Font Writer`** and **`Marquee`** classes (see below).
+* The writer and marquee are optimised for ease of installation and use; especially for small 'info panel' type projects and will work with *any* display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html).
 
-And will also work with Peter Hinche's comprehensive [writer](https://github.com/peterhinch/micropython-font-to-py/blob/master/writer/WRITER.md) class and [nano-gui](https://github.com/peterhinch/micropython-nano-gui/tree/master). And with the `EZFont` class from Brad Barnett's [mpdisplay](https://github.com/bdbarnett/mpdisplay)
+***Additionally*** these font packs also work with Peter Hinche's comprehensive [writer](https://github.com/peterhinch/micropython-font-to-py/blob/master/writer/WRITER.md) class and [nano-gui](https://github.com/peterhinch/micropython-nano-gui/tree/master) **and** the `EZFont` class from Brad Barnett's [mpdisplay](https://github.com/bdbarnett/mpdisplay)
 
 The font packs presented here were created using my own `bdf2dict` font module creator, see below.
 
 -----------------
-
-# Writer: [`ezFBfont.py`](ezFBfont.py)
-The writer class `exFBfont.py` works with these fonts, it takes a string to write, plus X and Y position, and writes the string in that position in the selected font. There are color, transparency, spacing and positioning options, plus functions to give info about the written area and support for multi-line strings.
-
-For more see the documentation in [`WRITER.md`](WRITER.md), there are examples of using this in the [examples](examples) folder.
-
-# Marquee: [`ezFBmarquee.py`](ezFBmarquee.py)
-
-A simple marquee / scrolling banner display that uses the fonts from this repo. You can define an output 'box' and the string will be scrolled within that. Supports a couple of 'modes' for the scroll, adjustable character spacing and step rate.
-
-Details are in [`MARQUEE.md`](MARQUEE.md), and examples of driving the animation with an IRQ timer loop are in the examples folder.
-
 # Latin-1 and Symbol Font Packs
 
 Font files are in the [`Latin-1`](Latin-1) and [`Symbols`](Symbols) folders as appropriate.
@@ -39,21 +27,35 @@ Fonts are generated and stored by font family, then character set and vertical s
 
 All provided font modules contain and retain the original copyright notices from the source '.bdf' files, most are very 'free'; but the proportional X11 derived fonts need extra consideration. See the documentation on the font index pages for more.
 
-## Unicode font packs?
-There is no sensible way of grouping general Unicode fonts into packs that are small enought to be useful on micropython devices. The most popular blocks have thousands of characters in them and the resulting files are too large to use sensibly Instead; tooling and examples are provided to help you make a custom font pack with the glyphs and characters you need, and no excess.
+# Unicode font packs?
+
+There is no sensible way of grouping general Unicode fonts into packs that are small enought to be useful on micropython devices. The common blocks have thousands of characters in them and the resulting files are too large to use sensibly.
+
+Instead; tooling and examples are provided to help you make a custom font pack with the glyphs and characters you need, and no excess.
 * The `bdf2dict` tool (below) is designed to be easy to install and use, just requiring Python3.7 or higher
-  * The [Unicode](Unicode/README.md) page has an example and notes about unicode font sources.
-  * You can specify your own charset when prompted on the command line (or via a file/arguments/stdin).
-  * The script will output a python font module containing only the characters requested, plus an ascii-art map of the glyphs.
-  * The [unifont](https://savannah.gnu.org/projects/unifont) and [efont](http://openlab.ring.gr.jp/efont/) unicode fonts are provided in the Unicode folder, but other fonts in the Latin-1 folder also provide unicode characters; as noted in the Unicode README.
+  * The [Unicode](Unicode/README.md) page has an example of it's use
+  * The [unifont](https://savannah.gnu.org/projects/unifont) and [efont](http://openlab.ring.gr.jp/efont/) unicode font *.bdf* sources are provided in the Unicode folder.
+ 
+-------------------------
 
-# Font creator: [`bdf2dict.py`](bdf2dict.py)
+# Font Writer: [`ezFBfont.py`](ezFBfont.py)
+The writer class `exFBfont.py` works with these fonts, it takes a string to write, plus X and Y position, and writes the string in that position in the selected font. There are color, transparency, spacing and positioning options, plus functions to give info about the written area and support for multi-line strings.
 
-All the fonts packs provided here were made with this tool, it is a simple to use CPython *(not microPython!)* script that can import and process a `.bdf` font file and extract just the characters you need into a `.py` font file. It is fully compatible with Unicode characters and fonts.
+For more see the documentation in [`WRITER.md`](WRITER.md), there are examples of using this in the [examples](examples) folder.
 
-See [`BDF2DICT.md`](BDF2DICT.md) for further documentation and usage instructions, and the Unicode [readme](Unicode/README.md) for some Unicode fonts and n example of using this tool to generate a custom font pack.
+# Marquee: [`ezFBmarquee.py`](ezFBmarquee.py)
 
-## Drivers
+A simple marquee / scrolling banner display that uses the fonts from this repo. You can define an output 'box' and the string will be scrolled within that. Supports a couple of 'modes' for the scroll, adjustable character spacing and step rate.
+
+Details are in [`MARQUEE.md`](MARQUEE.md), and examples of driving the animation with an IRQ timer loop are in the examples folder.
+
+# Font module creator: [`bdf2dict.py`](bdf2dict.py)
+
+All the font module packs provided here were made with this tool, it is a simple to use CPython *(not microPython!)* script that can import and process a `.bdf` font file and extract just the characters you need into a `.py` font module file. It is fully compatible with Unicode characters and fonts.
+
+See [`BDF2DICT.md`](BDF2DICT.md) for further documentation and usage instructions, and the Unicode [readme](Unicode/README.md) for some Unicode fonts and a documented example of using this tool to generate a custom font pack.
+
+# Display Drivers
 
 The font writer and marquee will work with **any** display that has a MicroPython **framebuffer** compatible driver.
 
@@ -61,9 +63,9 @@ A couple of common 'good' drivers for popular ssd1306 and st7567 displays are pr
 
 If you find a driver that works and is not in the list there please let me know by submitting a issue!
 
-## Alternatives
+# Alternatives
 
-If you are implementing a full 'GUI', or have a color display, especially a large(ish) one, then you should consider the alternatives below. They support large displays, full color displays, have GUI elements, are faster and use less memory..
+If you are implementing a full 'GUI', or have a color display, especially a large(ish) one, then you should consider the alternatives below. They support large displays, full color displays, have GUI elements, are fast and use less memory..
 
 The fonts in this repo will work with Peter Hinches `writer` and `nano-gui` classes:
 * https://github.com/peterhinch/micropython-font-to-py/blob/master/writer/WRITER.md
@@ -77,7 +79,7 @@ From the same author are the display drivers here:
 * https://github.com/peterhinch/micropython-nano-gui/blob/master/DRIVERS.md
 * These support several large color displays and can also use the fonts from this repo.
 
-Another great resource, especially for display drivers, is at:
+Another great resource for display drivers and GUI elements is Brad Barnetts `mpdisplay` at:
 * https://github.com/bdbarnett/mpdisplay
 * The EZFont class in his tooling (just one of several font classes it provides!) is compatible with my ezFBfont packs.
 
@@ -86,7 +88,7 @@ And finally; for people building fast GUI's on color displays and who are willin
 
 -----------------
 
-## Status
+# Status
 
 I created ezFBfont, the font packs and tooling to support a [project](https://github.com/easytarget/PrintPy2040) that I am currently working on, and several others I have planned.
 
