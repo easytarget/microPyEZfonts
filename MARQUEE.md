@@ -14,7 +14,7 @@ Copy the `ezFBmarquee.py` file from this repository into the root (or path) of y
 ## quickstart
 *ezFBmarquee* is a python class that is initiated against a framebuffer device, and a font. 
 
-You declare an output area during *init()* and then allocate messages to that with *start()*. A *step()* method needs to be called regularlly to advance th animation.
+You declare an output area during *init()* and then allocate messages to that with *start()*. A *step()* method needs to be called regularlly to advance the animation.
 
 See the [`examples`](examples) folder for some working code that uses the features described below, and shows how to drive the animation via a [Timer](https://docs.micropython.org/en/latest/library/machine.Timer.html) Interrupt.
 
@@ -128,7 +128,7 @@ If a *marquee* mode message's width is smaller than the output box width the mes
 ```python
 mymarquee.pause(pause)
 ```
-Sets the pause counter to the supplied value (must be positive)
+Sets the pause counter to the supplied value (integer, -1 pauses indefinately)
 
 #### active()
 ```python
