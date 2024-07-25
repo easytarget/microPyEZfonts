@@ -145,7 +145,7 @@ class ezFBfont():
         high = (len(lines) * (self._font.height() + self.vgap)) - self.vgap
         ypos = y
         if valign == 'baseline':
-            ypos = y - self._font.baseline()
+            ypos = y - self._font.baseline() + 1
         elif valign == 'center':
             ypos = int(y - (high / 2))
         elif valign == 'bottom':
