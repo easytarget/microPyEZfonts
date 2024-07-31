@@ -46,7 +46,7 @@ for family in sources:
                 if font.name[:len(prefix)] != prefix:
                     continue
                 namewidth = max(namewidth, len(font.name))
-                height = int(font.name.split('_')[1])
+                height = int(font.name.split('_')[-1].split('.')[0])
                 if height not in heights:
                     heights.append(height)
                 outmap[font.name] =  {'family':famname,

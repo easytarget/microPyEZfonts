@@ -76,7 +76,7 @@ def doFont(base, infile, cset):
         print(' {} (bad font return)'.format(cset), end='')
         return True
     print(' ' + cset, end='', flush=True)
-    outname = '{}_{:02d}_{}_{}'.format(prefix, fontheight, base.replace('-','_'), cset)
+    outname = '{}_{}_{}_{:02d}'.format(prefix, base.replace('-','_'), cset, fontheight)
     packageInfo(base, infile, outname, cset, fontheight, fontfamily)
     os.remove('_' + base + '.py')
     os.remove('_' + base + '.map')
