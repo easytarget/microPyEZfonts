@@ -63,6 +63,7 @@ mymarquee = ezFBmarquee(device, fontName,
                         mode='marquee',
                         pad=0.33, pause=0, hgap=0,
                         fg=1, bg=0,
+                        cswap = False,
                         verbose=False)
 ```
 Required Arguments:
@@ -88,6 +89,8 @@ Optional Arguments:
 * *fg*, *bg*: (integers) : foreground and background colors.
   * Foreground will default to 1; for color displays this needs to be set appropriately.
   * The marquee cannot be displayed transparently the box will always fully overwrite the specified area.
+* *cswap*: (bool) : Swap bytes in 16-bit color word.
+  * Default False; only needs to be set True for RGB displays with reversed byte order (eg st7789).
 * *verbose*: (bool) : enables verbose feedback on init, start, pause and stop.
 
 ### Methods:

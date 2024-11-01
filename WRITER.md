@@ -40,7 +40,10 @@ You then create a font instance for each imported font:
 ```python
 myfont = ezFBfont(device, fontName,
                   fg=1, bg=0 ,tkey=-1,
-                  halign='left', valign='top', hgap=0, vgap=0,
+                  halign='left', valign='top',
+                  hgap=0, vgap=0,
+                  split='\n'
+                  cswap=False,
                   verbose=False)
 ```
 Required Arguments:
@@ -62,7 +65,9 @@ Optional Arguments:
   * Defaults to `0`, and is only applied between individual characters and between lines, negative values are allowed.
   * This is a gap, not padding; no background is drawn in the spaces created by positive values.
   * Negative values are allowed, if using them you should also use a transparent background (`tkey=0`) to stop character backgrounds 'clipping' the previous characters as they are drawn.
-* *split*: (chr/string) : the character(s) to split multi-line strings on, defaults to '\n' (0xA).
+* *split*: (chr/string) : the character(s) to split multi-line strings on, defaults to '\n' (0x0A).
+* *cswap*: (bool) : Swap bytes in 16-bit color word.
+  * Default False; only needs to be set True for RGB displays with reversed byte order (eg st7789).
 * *verbose*: (bool) : Enables verbose feedback on init, default changes and missing characters, default `False`.
 
 ### Methods:
