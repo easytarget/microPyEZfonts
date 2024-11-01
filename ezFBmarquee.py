@@ -14,6 +14,7 @@ class ezFBmarquee():
                  mode='marquee',
                  pad=0.33, pause=0, hgap=0,
                  fg=1, bg=0,
+                 cswap = False,
                  verbose=False):
 
         self._device = display
@@ -26,6 +27,7 @@ class ezFBmarquee():
         self._hgap = int(hgap)
         self._fg = fg
         self._bg = bg
+        self._cswap = cswap
         self._verbose = verbose
 
         self.name = 'marquee_' + self._font.__name__
@@ -44,7 +46,7 @@ class ezFBmarquee():
         if width is None:
             try:
                 self._width = self._device.width - self._x
-            except: 
+            except:
                 r = "{}: Cannot determine display width; use 'width=<n>' in init()"
                 raise ValueError(r.format(self.name))
         else:
@@ -59,7 +61,7 @@ class ezFBmarquee():
             print('  x: {}, y: {}, height: {}, width: {}'.format(self._x, self._y, self._height, self._width))
             print('  pad: {}, default pause: {}, hgap: {}'.format(self._pad, self._dpause, self._hgap))
             print('  fg: {}, bg: {}'.format(self._fg, self._bg))
- 
+
     def _line_size(self, string, hgap):
         # Find the pixel size of a string with hgap applied
         x = 0
@@ -144,6 +146,10 @@ class ezFBmarquee():
             print('{}: stop()'.format(self.name))
 
     def start(self, string, mode=None, pause=None, pad=None, hgap=None, fg=None, bg=None):
+        def swap_bytes(color):
+            # flip the left and right bytes in a 16 bit color word if required
+            return ((color & 255) << 8) + (color >> 8) if self._cswap else color
+
         if self._string is not None:
             self.stop()
         mode = self._mode if mode is None else self._checkmode(mode)
@@ -153,14 +159,14 @@ class ezFBmarquee():
         fg = self._fg if fg is None else fg
         bg = self._bg if bg is None else bg
         # set color map
-        self._palette.pixel(0, 0, bg)
-        self._palette.pixel(self._font_colors -1, 0, fg)
+        self._palette.pixel(0, 0, swap_bytes(bg))
+        self._palette.pixel(self._font_colors -1, 0, swap_bytes(fg))
         # Create and fill the scroll buffer and attributes
         self._makescroll(string, mode, hgap, pad)
         # Set active and show the initial output
         self._string = string
         self._count = self._start
-        self.step(0) 
+        self.step(0)
         # Give info as needed
         if self._verbose:
             print('{}: start()\n  {}: {}'.format(self.name, mode, string))
@@ -203,7 +209,7 @@ class ezFBmarquee():
         self._pause = max(-1, int(pause))
         if self._verbose:
             print('{}: pause: {}'.format(self.name, self._pause))
-            
+
     def active(self):
         # Return true if active
         return False if self._string is None else True
