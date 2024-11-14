@@ -1,112 +1,112 @@
 # `ezFBfont.py`
-## a Font Writer for the MicroPython framebuffer
+## Font Writer for MicroPython Framebuffer
 
-A font system optimised for ease of installation and use; especially for small 'info panel' type projects.
+A font system designed for easy installation and use, particularly for small "info panel" type projects.
 
-This will work with *any* display that has a driver for the built-in microPyton [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html).
+This will work with *any* display that has a driver compatible with the built-in MicroPython [framebuffer](https://docs.micropython.org/en/latest/library/framebuf.html).
 
-## install:
-Copy the `ezFBfont.py` file from this repository into the root (or path) of your MicroPython project, along with the relevant display driver and font files you want to use. There are no other requirements.
+## Installation:
+Copy the `ezFBfont.py` file from this repository into the main directory (or specified path) of your MicroPython project. You’ll also need to include the display driver and any font files you want to use. No additional dependencies are required.
 
-## quickstart
-*ezFBfont* is a python class that is initiated against a framebuffer device, and a font. You then write strings to the framebuffer using the *write()* method.
+## Quick Start
+*ezFBfont* is a Python class you initialize with a framebuffer device and a font. Then, you can use the *write()* method to write text to the framebuffer.
 
-See the [`examples`](examples) folder for some working code that uses the features described below.
+Check the [`examples`](examples) folder for sample code that demonstrates the features explained below.
 ```python
 from ezFBfont import ezFBfont
 import mPyEZFont_XYZ
 
-... create a font object attached to a framebuffer device
+# Create a font object linked to a framebuffer device
 myfont = ezFBfont(device, mPyEZFont_XYZ)
 
-... use it to write on the framebuffer
+# Use it to write text on the framebuffer
 myfont.write('string', x, y)
 
-... eventually..
+# Finally, display the results
 device.show()
 ```
 
-## In detail
-### Create an instance for the font:
+## Detailed Guide
+### Creating a Font Instance:
 
-The font class and the font(s) required need to be imported:
+Import both the font class and any font(s) you need:
 ```python
 from ezFBfont import ezFBfont
 import mPyEZFont_myfont as fontName
-#...etc for all fonts
+#...repeat for all fonts
 ```
 
-You then create a font instance for each imported font:
+Then create a font instance for each imported font:
 ```python
 myfont = ezFBfont(device, fontName,
-                  fg=1, bg=0 ,tkey=-1,
+                  fg=1, bg=0, tkey=-1,
                   halign='left', valign='top',
                   hgap=0, vgap=0,
-                  split='\n'
+                  split='\n',
                   cswap=False,
                   verbose=False)
 ```
-Required Arguments:
-* *device* : The framebuffer device to write to.
-* *fontName* : the name of the imported font module.
 
-Optional Arguments:
-* *fg*, *bg*, *tkey*: (integers) : foreground and background colors, plus transparency key.
-  * foreground will default to 1 (mono) and will need to be set appropriately for color displays.
-  * background will default to 0.
-  * transparent key is `-1` by default (none), otherwise the font color that should be rendered transparent; currently we only support mono fonts so is limited to `-1`, `0` or `1`.
-* *halign*: (string) `left|right|center` : how to align on the X axis.
-  * Defaults to `left`.
-  * This also works as justification, and is applied on a per-line basis.
-* *valign*: (string) `top|center|baseline|bottom` : how to align on Y axis.
-  * Defaults to `top`.
-  * The `baseline` setting is applied at the first line with multi-line strings.
-* *hgap* & *vgap*: (integers) : add or remove spacing between characters and lines
-  * Defaults to `0`, and is only applied between individual characters and between lines, negative values are allowed.
-  * This is a gap, not padding; no background is drawn in the spaces created by positive values.
-  * Negative values are allowed, if using them you should also use a transparent background (`tkey=0`) to stop character backgrounds 'clipping' the previous characters as they are drawn.
-* *split*: (chr/string) : the character(s) to split multi-line strings on, defaults to '\n' (0x0A).
-* *cswap*: (bool) : Swap bytes in 16-bit color word.
-  * Default False; only needs to be set True for RGB displays with reversed byte order (eg st7789).
-* *verbose*: (bool) : Enables verbose feedback on init, default changes and missing characters, default `False`.
+**Required Arguments:**
+* *device*: The framebuffer device to write on.
+* *fontName*: The name of the imported font module.
+
+**Optional Arguments:**
+* *fg*, *bg*, *tkey* (integers): foreground and background colors, plus transparency key.
+  * Foreground defaults to 1 (mono); adjust as needed for color displays.
+  * Background defaults to 0.
+  * Transparency key is `-1` by default (none), otherwise set to the font color to make transparent; only supports `-1`, `0`, or `1` for mono fonts.
+* *halign* (string): `left|right|center`, sets horizontal alignment.
+  * Default is `left`.
+  * Aligns text line by line, effectively justifying each line.
+* *valign* (string): `top|center|baseline|bottom`, sets vertical alignment.
+  * Default is `top`.
+  * If using multi-line text, `baseline` aligns at the first line.
+* *hgap* & *vgap* (integers): controls space between characters and lines.
+  * Defaults to `0`. Negative values are allowed. This gap is not padding, so background won’t be drawn in these spaces.
+  * For negative values, consider using a transparent background (`tkey=0`) to prevent character backgrounds from "clipping" each other.
+* *split* (character/string): the character to split multi-line text, defaults to '\n' (newline).
+* *cswap* (bool): Swaps bytes in a 16-bit color word.
+  * Default is `False`; set to `True` for RGB displays with reversed byte order (e.g., st7789).
+* *verbose* (bool): Enables detailed feedback on initialization, default changes, and missing characters, default `False`.
 
 ### Methods:
-(After writing your data do not forget to do a `device.show()` or equivalent to see the results :wink:)
+*(Note: Don’t forget to call `device.show()` after writing text to make it visible on the display.)*
 
-#### write()
+#### `write()`
 ```python
 myfont.write(string, X, Y, fg=None, bg=None, tkey=None, halign=None, valign=None)
 ```
-Writes the supplied text to the framebuffer
+Writes the given text to the framebuffer.
 
-Positional Arguments:
-* *string* : The text to be written to the framebuffer
-* *x*, *y* : position (pixels), framebuffer top-left is 0, 0
+**Positional Arguments:**
+* *string*: The text to write on the framebuffer.
+* *x*, *y*: Position in pixels; top-left of framebuffer is 0, 0.
 
-Optional Arguments:
-* as per init options, values supplied will override the default.
+**Optional Arguments:**
+* Overrides for the initialization settings.
 
-Returns `False` if any characters failed to be written (not present in the font).
+Returns `False` if any characters fail to display (missing in the font).
 
-#### size()
+#### `size()`
 ```python
 x, y = myfont.size(str)
 ```
-Returns the pixel width and height of the string.
+Returns the width and height (in pixels) of the text string.
 
-#### rect()
+#### `rect()`
 ```python
 xmin, xmax, width, height = myfont.rect(str, x, y, halign=None, valign=None)
 ```
-Returns the exact area that the string would be written to with `myfont.write()`.
-* The return is suitable for passing directly to `display.rect()`.
-* The alignment options will override the current default.
+Returns the exact area that the text will cover when using `myfont.write()`.
+* This output can be directly used with `display.rect()`.
+* Alignment options will override current defaults.
 
-#### set_default()
+#### `set_default()`
 ```python
 myfont.set_default(fg=None, bg=None, tkey=None, halign=None, valign=None, hgap=None, vgap=None, split=None, verbose=None)
 ```
-Changes the default value of the supplied argument(s).
+Changes the default values for the specified argument(s).
 
 ### Properties
 ```
@@ -118,8 +118,8 @@ myfont.halign : default horizontal alignment
 myfont.valign : default vertical alignment
 myfont.hgap   : default horizontal gap
 myfont.vgap   : default vertical gap
-myfont.split  : default split char/string
+myfont.split  : default split character/string
 ```
 
-### Thoughts:
-* `Flip`, `Mirror`, `Turn`: these will allow all text directions and effects etc.
+### Future Ideas:
+* `Flip`, `Mirror`, `Turn`: to add various text orientations and effects.

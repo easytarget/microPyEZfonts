@@ -1,26 +1,26 @@
-# Symbol Font files
+# Symbol Font Files
 
-This folder contains font files suitable for use with `ezFBfont` and Peter Hinches `writer` class.
+This folder contains font files for use with `ezFBfont` and Peter Hinches' `writer` class.
 
-They are organised by font family, character set and vertical size.
-* See below for a discussion of the available character sets.
-* The font family is that declared in the source font file, or `Generic` if unknown.
-* The 'height' of each font set is the *true height*; the height of the tallest character in that set.
-  * This can vary from the height declared in the font name!
-  * The same fonts may appear listed as different heights depending which character set is being provided.
+They are organized by font family, character set, and vertical size:
+* See the discussion below on the different character sets.
+* The font family is taken from the source font file. If unknown, it is labeled `Generic`.
+* Each font set's height is the *true height*—meaning the height of the tallest character in that set.
+  * This may differ from the height indicated in the font name!
+  * The same fonts might appear with different heights depending on the character set being used.
 
-There is a mixture of proportional width and monospaced fonts in the collection; the font name will typically note the size for monospaced fonts. The proportional (X11) fonts also mostly come in regular and bold weights.
+There are both proportional-width and monospaced fonts in this collection. For monospaced fonts, the font name typically specifies the size. The proportional (X11) fonts usually come in both regular and bold styles.
 
 # COPYRIGHT
-Please read the copyright notices in the font files themselves; all the fonts here were sourced from the [u8g2](https://github.com/olikraus/u8g2/blob/master/LICENSE) project fonts; a curated repository of freely redistributable + open-source fonts.
+Please review the copyright details in each font file. All fonts here are from the [u8g2](https://github.com/olikraus/u8g2/blob/master/LICENSE) project fonts, a collection of freely redistributable and open-source fonts.
 
-All fonts retain copyright info in the `.py` include file for the font; some are very simple, especially the fonts created for the U8G2 project itself. Some are more general open-source type licences, all are redistributable as is.
+All fonts keep copyright information in the `.py` include file for each font. Some have simple notices, particularly those created for the U8G2 project, while others have more general open-source licenses, and all are freely redistributable.
 
-If using the X11 fonts (COUR, HELV, NCEN, TIM, SYMB) you should include the Adobe/Digital boilerplate licence in your distributed codes main licence, see the example in this repositories [LICENSE](/LICENSE) file.
+If you use any X11 fonts (such as COUR, HELV, NCEN, TIM, SYMB), please add the Adobe/Digital boilerplate license in your main code license, as seen in this repository’s [LICENSE](/LICENSE) file.
 
-# Collections (character sets)
+# Collections (Character Sets)
 
-The symbol character sets are organised into logical blocks based on the ordinal (character #) values. The sets are:
+The symbol character sets are grouped into blocks based on ordinal (character #) values. These sets include:
 
 * `  0x0_0x39` : **base**
 * `  0x40_0x7F`: **lower**
@@ -29,22 +29,21 @@ The symbol character sets are organised into logical blocks based on the ordinal
 * `0x100_0x1FF`: **extended**
 * `  0x0_0xFFF`: **full**
 
-These are essentially blocks of 64 characters covering the first 256 character values. Plus an extended range since several symbol fonts extend beyond `0xFF`.
+These blocks contain groups of 64 characters each, covering the first 256 character values. Additionally, an extended range is included since some symbol fonts go beyond `0xFF`.
 
-Sets will only be genereated when *unique*; if a previous set for the font already contains an identical charset the current set will be skipped.
+Sets are generated only if they are *unique*; if a previous set already includes an identical charset, the current set will be skipped.
 
-* Pay attention to the file sizes; the `extended` and `all` sets can get large, and will consume more ram on your target device.
-* For a detailed font file description and preview look at the corresponding `.map` file in the 'maps' sub-folder.
-  * This contains an ascii-art glyph for all characters in the font file; showing the name, size, bitmap and baseline.
+* Watch the file sizes; the `extended` and `all` sets can become large and use more memory on your device.
+* For a full font description and preview, check the corresponding `.map` file in the 'maps' sub-folder.
+  * The `.map` file includes an ASCII art glyph of all characters in the font file, showing each character's name, size, bitmap, and baseline.
 
-In addition there are a number of symbol related charsets that can be generated in the [Unicode](/Unicode) folder, including dingbats, arrows, mathematical symbols, runes and more.
+Additionally, various symbol-related character sets can be generated in the [Unicode](/Unicode) folder, including dingbats, arrows, mathematical symbols, runes, and more.
 
-For usage see the `ezFBfont.py` documentation in the main `README`.
+For usage instructions, refer to the `ezFBfont.py` documentation in the main `README`.
 
-# The list
+# The List
 
-Fonts as of 18 June 2024 organised by charset/family/height.
-
+This is a list of fonts (as of June 18, 2024) organized by character set, family, and height.
 ```
 Micropython font module tree for: Symbols
 

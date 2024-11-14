@@ -1,27 +1,27 @@
-# Latin-1 Font files
+# Latin-1 Font Files
 
-This folder contains font files suitable for use with `ezFBfont` and Peter Hinches `writer` class.
+This folder includes font files for use with `ezFBfont` and Peter Hinches' `writer` class.
 
-They are organised by character set, font family and vertical size.
-* See below for a discussion of the available character sets.
-* The font family is that declared in the source font file, or `Generic` if unknown.
-* The 'height' of each font set is the *true height*; the height of the tallest character in that set.
-  * This can vary from the height declared in the font name!
-  * The same fonts may appear listed as different heights depending which character set is being provided.
-    * eg: numeric charsets are typically shorter than the full ascii charsets.
+The fonts are organized by character set, font family, and vertical size:
+* See the discussion below for details on each character set.
+* The font family name comes from the source font file. If unknown, it is labeled `Generic`.
+* The 'height' of each font set refers to its *true height*—the height of the tallest character in that set.
+  * This may differ from the height specified in the font name!
+  * The same fonts may be listed with different heights depending on the character set provided.
+    * For example, numeric character sets are often shorter than full ASCII character sets.
 
-There is a mixture of proportional width and monospaced fonts in the collection; the font name will typically note the size for monospaced fonts. The proportional (X11) fonts also mostly come in regular and bold weights.
+There is a mix of proportional-width and monospaced fonts in the collection. Monospaced fonts usually have their size specified in the font name, while the proportional (X11) fonts typically come in both regular and bold styles.
 
 # COPYRIGHT
-Please read the copyright notices in the font files themselves; all the fonts here were sourced from the [u8g2](https://github.com/olikraus/u8g2/blob/master/LICENSE) project fonts; a curated repository of freely redistributable + open-source fonts.
+Please review the copyright notices in each font file. All fonts here are sourced from the [u8g2](https://github.com/olikraus/u8g2/blob/master/LICENSE) project fonts, a curated repository of freely redistributable, open-source fonts.
 
-All fonts retain copyright info in the `.py` include file for the font; some are very simple, especially the fonts created for the U8G2 project itself. Some are more general open-source type licences, all are redistributable as is.
+Each font retains copyright information in its `.py` include file. Some notices are simple, especially those for fonts created specifically for the U8G2 project, while others are more general open-source licenses. All fonts are freely redistributable.
 
-If using the X11 fonts (COUR, HELV, NCEN, TIM, SYMB) you should include the Adobe/Digital boilerplate licence in your distributed codes main licence, see the example in this repositories [LICENSE](/LICENSE) file.
+If using any X11 fonts (such as COUR, HELV, NCEN, TIM, SYMB), please include the Adobe/Digital boilerplate license in your main code license, as shown in this repository’s [LICENSE](/LICENSE) file.
 
-# Collections (character sets)
+# Collections (Character Sets)
 
-The character sets are organised by function, with small sets for time and sensor data, and larger sets with the full character range, as follows:
+The character sets are grouped by purpose, with smaller sets for time and sensor data, and larger sets with the full character range, as shown below:
 
 * **time** : ``` +-.0123456789:```
 * **num** : ``` %()*+,-./0123456789:°```
@@ -29,27 +29,25 @@ The character sets are organised by function, with small sets for time and senso
 * **ascii** : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~```
 * **supp** : ```¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ```
 * **latin** : ``` !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ```
-* **full** : All chars from `0x00` to `0xFF`
+* **full** : All characters from `0x00` to `0xFF`
 
-Nb: Most charsets begin with `0x32`, the space character.
+Note: Most character sets start with `0x32`, the space character.
 
-These can loosely be described as:
-* **Time** : numbers and seperators for clocks and timers.
-* **Num**eric : numbers, seperators and related symbols for displaying values.
-* **Upper**case : ascii charset up to `0x5F`, lower memory, useful for symbols etc.
-* **Ascii** : full ascii charset up to `0x7F`.
-* **Supp**lemental : characters from `0xA0` to `0xFF`.
-* **Latin** : all the *printable* chars in the font up to `0xFF`.
-* **Full** : every character in the font pack up to `0xFF`, even if not *printable*.
+These can be loosely described as:
+* **Time** : numbers and separators used for clocks and timers.
+* **Numeric** : numbers, separators, and related symbols used for displaying values.
+* **Upper**case : ASCII characters up to `0x5F`, useful for symbols, and requires less memory.
+* **Ascii** : full ASCII character set up to `0x7F`.
+* **Supplemental** : characters from `0xA0` to `0xFF`.
+* **Latin** : all *printable* characters in the font up to `0xFF`.
+* **Full** : all characters in the font up to `0xFF`, including those that may not be *printable*.
 
-Sets will only be genereated when *unique*; if a previous set for the font already contains an identical charset the current set will be skipped.
-* Pay attention to the file sizes; the full sets (especially the '`latin`' set) can get large.
-* For a detailed font file description and preview look at the corresponding `.map` file in the 'maps' sub-folder.
-  * This contains an ascii-art glyph for all characters in the font file; showing the name, size, bitmap and baseline.
+Sets are generated only if they are *unique*; if a previous set already contains an identical charset, the current set will be skipped.
+* Be aware of file sizes; full sets (especially the '`latin`' set) can become large.
+* For a detailed font file description and preview, check the corresponding `.map` file in the 'maps' sub-folder.
+  * The `.map` file includes an ASCII art glyph for all characters in the font file, showing each character's name, size, bitmap, and baseline.
 
-Only 'Basic Latin' and 'Latin Supplemental' characters are covered by these sets. If you want Latin characters from the Unicode 'Latin Extended ..' or 'IPA Extensions' blocks you will need to generate them using the tools in the [Unicode](/Unicode) folder.
-
-For usage see the `ezFBfont.py` documentation in the main `README`.
+These sets only cover 'Basic Latin' and 'Latin Supplemental' characters. If you need Latin characters from the Unicode 'Latin Extended ..' or 'IPA Extensions' blocks, you’ll need to generate them using the tools in the [Unicode Folder](/Unicode).
 
 # The list
 

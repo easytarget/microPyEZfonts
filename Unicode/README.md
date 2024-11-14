@@ -1,42 +1,42 @@
 # Unicode Fonts
 ### [unicode.org](https://home.unicode.org/)
 
-This folder contains instructions and examples for producing custom Unicode font files suitable for use with `ezFBfont`.
+This folder has instructions and examples to help you create custom Unicode font files that work with `ezFBfont`.
 
-There are many thousands of characters and glyphs in the Unicode character set, it is impractical to pre-prepare font files that contain usable & useful character sets, yet are small enough to fit on a micropython device.
+The Unicode character set has thousands of characters and symbols, so it's hard to create small font files with only useful characters that fit on a MicroPython device.
 
-Instead; this is a guide to producing a custom font pack with just the characters and symbols *you* need for *your* project.
+Instead, this guide shows you how to make a custom font pack with only the characters and symbols you need for your project.
 
-## Unicode font sources:
-Two Unicode font sets are provided here:
-* The Electronic Font Open Laboratory [efont](https://openlab.ring.gr.jp/efont/)
+## Unicode Font Sources:
+There are two Unicode font sets provided here:
+* **Electronic Font Open Laboratory [efont](https://openlab.ring.gr.jp/efont/)**
   * [Downloads](https://openlab.ring.gr.jp/efont/dist/unicode-bdf/).
-  * These have multiple heights, and bold/italic variants.
-  * Fixed-width and bi-width versions
-  * Partial; ~25k glyphs focussed on oriental and asian blocks.
-* GNU [unifont](https://savannah.gnu.org/projects/unifont)
-  * Downloads at [unifoundry](https://unifoundry.com/unifont/).
-  * Only available as 16px height, 8px / 16px bi-width.
-  * Complete; 65534 glyphs covering all blocks.
+  * Includes different heights and bold/italic versions.
+  * Has fixed-width and bi-width fonts.
+  * About 25,000 glyphs focused on Asian and oriental characters.
+* **GNU [unifont](https://savannah.gnu.org/projects/unifont)**
+  * [Downloads at unifoundry](https://unifoundry.com/unifont/).
+  * Only 16px height, 8px/16px bi-width.
+  * A complete set of 65,534 glyphs for all Unicode blocks.
 
-Additionally: The Fixed and X11 fonts in the [Latin-1](../Latin-1/Latin-1-bdf-sources) folder (Helvetica, Times, Courier, Schoolbook and the fixed fonts) all have some Unicode glyphs as part of the extended Latin-1 blocks.
+Also: The **Fixed** and **X11** fonts in the [Latin-1](../Latin-1/Latin-1-bdf-sources) folder (like Helvetica, Times, Courier, and Schoolbook) include some Unicode glyphs in the extended Latin-1 blocks.
 
 # COPYRIGHT
-Both Unicode fonts here are open source projects and have permissive licencing; but they **do** have licence terms and some restrictions:
-* Please read the copyright notice in the efont folder; and ensure you follow any restrictions and requirements there if you redistribute fonts based on this set; see [efont-unicode-bdf-0.4.2/COPYRIGHT](efont-unicode-bdf-0.4.2/COPYRIGHT)
-* The Unifont is dual licenced (SIL and GPL2 with font exceptions); see https://unifoundry.com/LICENSE.txt
+Both Unicode fonts are open-source and have permissive licenses, but they do have some terms and restrictions:
+* Please read the copyright notice in the **efont** folder and follow any rules if you redistribute these fonts. See [efont-unicode-bdf-0.4.2/COPYRIGHT](efont-unicode-bdf-0.4.2/COPYRIGHT).
+* The **Unifont** is licensed under both SIL and GPL2, with font exceptions. See [LICENSE.txt](https://unifoundry.com/LICENSE.txt).
 
 # Example
 
-The following is a walkthrough of using `bdf2dict` to create a simple Unicode font pack for a simple app.
+Here’s a step-by-step guide to using `bdf2dict` to create a simple Unicode font pack for an app.
 
 ## Requirements
-To run the tool you need a desktop/laptop system with a working python3.7+ install, and this repository cloned or unpacked.
+To use this tool, you need a desktop or laptop system with Python 3.7+ installed, and this repository should be downloaded or unpacked.
 
-Next we will need a list of characters to add to the font!
-* The easiest way to do this is to create a 'charset' file with the characters you want in it.
+Next, you'll need a list of characters to include in the font.
+* The easiest way is to create a **charset file** with the characters you want.
 
-For this example I have a file which says 'Hello' in simplified Chinese followed by a newline and 'microPython' with a 'µ'.
+For example, here’s a file with "Hello" in simplified Chinese, followed by "microPython" with a 'µ'.
 
 ```console
 user@pc:~/MPython/uniProj$ cat unicode.txt
@@ -46,15 +46,15 @@ user@pc:~/MPython/uniProj$ cat unicode.txt
 µPython
 ```
 
-(You can also provide the charset as a string, via stdin or a user prompt. see the *bdf2dict* readme for more.)
+(You can also provide the charset as a string, through stdin, or with a user prompt. See the *bdf2dict* readme for more.)
 
-Now we need to prepare our font module file using `bdf2dict`.
+Now, let’s create the font module using `bdf2dict`.
 
-In this example I have cloned the *ezFBfont* repo alongside a folder for my project on my PC, and used relative paths for the tool and font source.
+I’ve cloned the *ezFBfont* repo and created a folder for my project. I’m using relative paths for the tool and font source.
 
-The font module file is generated and saved in the local working directory, then copied to the target device via the IDE (or whatever method used).
+The font module is generated and saved in the working directory. You’ll then copy it to the target device through your IDE or any other method.
 
-See the [`bdf2dict`](../BDF2DICT.md) page to understand the options used here; we are using the unifont `.bdf` file, prefixing our output files with `my_`, and passing the charset in a (unicode) text file.
+Check the [`bdf2dict`](../BDF2DICT.md) page for more details on the options used here. We’re using the **unifont** `.bdf` file, prefixing our output files with `my_`, and passing the charset in a (unicode) text file.
 
 ```console
 user@pc:~/MPython/uniProj$ python ../microPyEZfonts/bdf2dict.py ../microPyEZfonts/Unicode/unifont_15.1.05/unifont-15.1.05.bdf my_ unicode.txt 
@@ -68,18 +68,20 @@ total 48
 -rw-r--r--. 1 owen owen   15 Jul  5 16:38 my_unifont_15_1_05.set
 -rw-r--r--. 1 owen owen   16 Jul  5 16:16 unicode.txt
 ```
-The font itself is in the `.py` file, the `.map` file has a summary of the glyphs and the `.set` file all the unique characters (the last two are just for reference, they do not belong in your project folder..)
+
+Now, you have a `.py` file with the font, a `.map` file with the glyph summary, and a `.set` file with all unique characters (the last two are just for reference and should not be included in your project folder).
 
 ## App
 
-Having made the font we need an app that uses it.
+After creating the font, you need an app to use it.
 
-If you do not (yet) have your own app the following is a simple example; it uses a ssd_1306 OLED display connected via I2C on a ESP32 / RP2040 default pins.
-* A 'more complete' version of this is in the examples folder,
-* that example has defaults for esp8266 and sh1106/st7567 displays.
-* for other displays you will need to find drivers etc and adapt the following as necesscary.
+If you don’t have your own app yet, here’s a simple example that uses an **ssd_1306** OLED display connected via I2C on an ESP32 or RP2040. 
 
-Demo code example:
+* A more complete version of this example is in the examples folder.
+* It has defaults for ESP8266 and SH1106/ST7567 displays.
+* For other displays, you’ll need to find drivers and adjust the code accordingly.
+
+Here’s the demo code:
 
 ```console
 user@pc:~/MPython/uniProj$ cat uniProj-i2c.py
@@ -91,55 +93,53 @@ from ezFBfont import ezFBfont
 
 import my_unifont_15_1_05 as unicode_font
 
-# HW
+# HW Setup
 #SDA = 28  # default rp2040
 #SCL = 29  # default rp2040
-SDA = 21  # default esp32
-SCL = 22  # default esp32
-i2c=I2C(0,sda=Pin(SDA), scl=Pin(SCL))
+SDA = 21  # Default ESP32
+SCL = 22  # Default ESP32
+i2c=I2C(0, sda=Pin(SDA), scl=Pin(SCL))
 
-# Display
+# Display Setup
 display = SSD1306_I2C(128, 64, i2c, addr=0x3c)
 
-# Font Init
+# Font Initialization
 font = ezFBfont(display, unicode_font,
                 halign='center',
                 valign='center',
                 hgap=1,
                 verbose=True)
-
-# Write (stripping trailing newlines)
-with open('unicode.txt','r') as text:
+# Write text (remove trailing newlines)
+with open('unicode.txt', 'r') as text:
     font.write(text.read().strip('\n'), 63, 31)
 display.show()
 ```
 
-You need to copy the `ezFBfont.py` and `ssd1306.py` class libraries into the project via the file dialog in your IDE or whatever method you use.
+You’ll need to copy the `ezFBfont.py` and `ssd1306.py` libraries into your project using your IDE’s file dialog (or your chosen method).
 
-We should be able to run the demo now: 
-* Copy the `my_unifont_15_1_05.py` font file we created above, and `unicode.txt` to your project
-* Run `uniProj-i2c.py` (or whatever your app is called.
+To run the demo:
+* Copy the `my_unifont_15_1_05.py` font file and `unicode.txt` to your project.
+* Run the script `uniProj-i2c.py` (or whatever you named your app).
 
 ## REPL
 
-It is possible to test using the [console/repl framebuffer driver](../drivers/repl_1306.py).
+You can also test using the [console/repl framebuffer driver](../drivers/repl_1306.py). This is useful for testing and development without needing hardware.
 
-This can be a good method for fast testing and developing without needing actual hardware.
+Make sure you have a MicroPython command-line port available. On Linux (Ubuntu/Fedora/Debian), install `micropython` via your package manager. It can then be run from the command line. Windows has a port of MicroPython, but it’s still a work-in-progress. Check the MicroPython docs for more info.
 
-You need to have a commandline port of MicroPython available, on Linux (RH/Fedora/Ubuntu/Debian) install 'micropython' via the package manager, it can then be run from the commandline. There *is* a windows port of micropython but it is a work-in-progress, see the micropython documentation for more.
+This example has been tested with MicroPython 1.23 on Fedora 40, Ubuntu 24.04, FreeBSD 14.1, and in the REPL console on an ESP32 devboard.
 
-The following has been tested with micopython 1.23 on Fedora40, Ubuntu24.04, FreeBSD14.1 and in the repl console of an ESP32 devboard.
 ```console
 user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/ezFBfont.py .
 user@pc:~/MPython/uniProj$ cp ../microPyEZfonts/drivers/repl_1306.py .
 ```
 
-The script is slightly different since it does not have a physical display.
+Since there’s no physical display, the script is slightly different.
 
 ```console
 user@pc:~/MPython/uniProj$ cat uniProj-repl.py
 ```
-```
+```python
 from repl_1306 import REPL_1306
 from ezFBfont import ezFBfont
 
@@ -147,20 +147,21 @@ import my_unifont_15_1_05 as unicode_font
 
 display = REPL_1306(80, 37)
 
-# Font Init
+# Font Initialization
 font = ezFBfont(display, unicode_font,
                 halign='center', valign='center',
                 hgap=1,
                 verbose=True)
 
-# Write (stripping trailing newlines)
-with open('unicode.txt','r') as text:
+# Write text (remove trailing newlines)
+with open('unicode.txt', 'r') as text:
     font.write(text.read().strip('\n'), 39, 17)
 display.show()
 ```
-run the script:
+Run the script:
 
-NOTE: *Some* web browsers (cough, Chrome on Android, cough) render the following badly since their 'monospaced' fonts are not very 'mono', just 'spaced'.
+*Note:* Some web browsers (like Chrome on Android) may render the following text poorly because their "monospaced" fonts are not properly spaced.
+
 ```console
 user@pc:~/MPython/uniProj$ micropython uniProj-repl.py 
 repl_1306: init 81x37
@@ -187,22 +188,28 @@ repl_1306: show
                                                                                  
                                                                                  
 ```
+
 # Experiment!
 
-The efont collection has bold and italic fonts, trying it is easy:
+The efont collection has bold and italic fonts. It’s easy to try these out:
+
 ```console
 user@pc:~/MPython/uniProj$ python ../microPyEZfonts/bdf2dict.py ../microPyEZfonts/Unicode/efont-unicode-bdf-0.4.2/b16_b.bdf my_ unicode.txt 
 bdf2dict.py: processing ../microPyEZfonts/Unicode/efont-unicode-bdf-0.4.2/b16_b.bdf
 9 Matching characters rendered to my_b16_b.py
 ```
-edit the font line in your code to read:
+
+Now, change the font line in your code to:
 
 `import my_b16_b as unicode_font`
 
-and try it out:
+Then try it out:
+
 ```console
 user@pc:~/MPython/uniProj$ micropython uniProj-repl.py 
-repl_1306: init 80x37
+re
+
+pl_1306: init 80x37
 my_b16_b : initialised: height: 16, max width: 16, baseline: 14
 my_b16_b = fg: 1, bg: 0, tkey: -1, halign: center, valign: center, hgap: 1, vgap: 0
 repl_1306: show
@@ -224,14 +231,14 @@ repl_1306: show
          ██ ▀ ▀  ▀▀            ██     ▀▀▀   ▀▀   ▀▀   ▀▀▀▀▀   ▀▀   ▀▀           
          ▀▀                ▀▀▀▀▀                                                
 ```
+
 ## Note:
-* If you look above you will see that the *unifont* has ten matching glyphs, but the *efont* only has nine!
-* This is because there is a informational glyph for the `\n` newline character in the unifont, but not in efont.
+* The **unifont** has 10 matching glyphs, while the **efont** has 9. The extra glyph in the **unifont** is for the newline character `\n`, which the **efont** doesn’t have.
 
--------------------------------------------
+---
 
-# Addendum: Unicode Block List
-Unicode is divided into standard 'blocks' of related glyphs, this is an overview for reference.
+### Addendum: Unicode Block List
+Unicode is organized into "blocks" of related glyphs. Here is an overview for reference.
 
 (from: https://www.unicode.org/Public/UCD/latest/ucd/Blocks.txt):
 ```
