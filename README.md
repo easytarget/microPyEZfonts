@@ -60,9 +60,9 @@ For more documentation and usage instructions, see [`BDF2DICT.md`](BDF2DICT.md) 
 
 The font writer and marquee work with **any** display that has a MicroPython **framebuffer** compatible driver.
 
-Common drivers for popular `ssd1306` and `st7567` displays are in the [`drivers`](drivers) folder. There is also documentation for finding and using drivers for other displays in the README there.
+Drivers for popular monochrome `ssd1306` and `st7567` displays are in the [`drivers`](drivers) folder. There is also documentation for finding and using drivers for other displays in the README there.
 
-I also have [my own version](https://github.com/easytarget/st7789-framebuffer) of the popular ST7789 (color TFT) driver that has been tested with the Writer and Marquee classes.
+I have [my own version](https://github.com/easytarget/st7789-framebuffer) of the `ST7789` *color TFT* display driver that has been tested with the Writer and Marquee classes.
 
 [![Running on my color driver](examples/doc/loose-ips.jpg)](https://github.com/easytarget/st7789-framebuffer)
 
