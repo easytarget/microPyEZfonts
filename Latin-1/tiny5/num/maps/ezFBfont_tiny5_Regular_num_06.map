@@ -1,23 +1,15 @@
-Font: font_tiny5 (Latin-1-bdf-sources/font_tiny5.bdf)
-Declared name: font_tiny5
-Declared family: generic
-Declared weight: none
+Font: tiny5_Regular (Latin-1-bdf-sources/tiny5-Regular.bdf)
+Declared name: -tiny5-regular-r-regular--9-9-75-75-c-80-iso10646-1
+Declared family: tiny5
+Declared weight: regular
 Declared size: None
-Characters: 22
+Characters: 21
 Height: 6
 Baseline: 5
 Max width: 5
 Fixed width: False
 
-Char 32 (032), width 2
-  .  . 
-  .  . 
-  .  . 
-  .  . 
- __  __
-  .  . 
-
-Char 37 (037), width 5
+Char 37 (U+0025), width 5
   .#  # . 
   .  #  . 
   . #   . 
@@ -25,7 +17,7 @@ Char 37 (037), width 5
  __     __
   .     . 
 
-Char 40 (040), width 3
+Char 40 (U+0028), width 3
   . # . 
   .#  . 
   .#  . 
@@ -33,7 +25,7 @@ Char 40 (040), width 3
  __ # __
   .   . 
 
-Char 41 (041), width 3
+Char 41 (U+0029), width 3
   .#  . 
   . # . 
   . # . 
@@ -41,7 +33,7 @@ Char 41 (041), width 3
  __#  __
   .   . 
 
-Char 42 (042), width 4
+Char 42 (U+002A), width 4
   . #  . 
   .### . 
   . #  . 
@@ -49,7 +41,7 @@ Char 42 (042), width 4
  __    __
   .    . 
 
-Char 43 (043), width 4
+Char 43 (U+002B), width 4
   .    . 
   . #  . 
   .### . 
@@ -57,7 +49,7 @@ Char 43 (043), width 4
  __    __
   .    . 
 
-Char 44 (044), width 3
+Char 44 (U+002C), width 3
   .   . 
   .   . 
   .   . 
@@ -65,7 +57,7 @@ Char 44 (044), width 3
  __ # __
   .#  . 
 
-Char 45 (045), width 4
+Char 45 (U+002D), width 4
   .    . 
   .    . 
   .### . 
@@ -73,7 +65,7 @@ Char 45 (045), width 4
  __    __
   .    . 
 
-Char 46 (046), width 2
+Char 46 (U+002E), width 2
   .  . 
   .  . 
   .  . 
@@ -81,7 +73,7 @@ Char 46 (046), width 2
  __# __
   .  . 
 
-Char 47 (047), width 3
+Char 47 (U+002F), width 3
   . # . 
   . # . 
   .#  . 
@@ -89,7 +81,7 @@ Char 47 (047), width 3
  __#  __
   .   . 
 
-Char 48 (048), width 4
+Char 48 (U+0030), width 4
   . #  . 
   .# # . 
   .# # . 
@@ -97,7 +89,7 @@ Char 48 (048), width 4
  __ #  __
   .    . 
 
-Char 49 (049), width 4
+Char 49 (U+0031), width 4
   . #  . 
   .##  . 
   . #  . 
@@ -105,7 +97,7 @@ Char 49 (049), width 4
  __ #  __
   .    . 
 
-Char 50 (050), width 4
+Char 50 (U+0032), width 4
   .##  . 
   .  # . 
   . #  . 
@@ -113,7 +105,7 @@ Char 50 (050), width 4
  __### __
   .    . 
 
-Char 51 (051), width 4
+Char 51 (U+0033), width 4
   .##  . 
   .  # . 
   . #  . 
@@ -121,7 +113,7 @@ Char 51 (051), width 4
  __##  __
   .    . 
 
-Char 52 (052), width 4
+Char 52 (U+0034), width 4
   .  # . 
   . ## . 
   .# # . 
@@ -129,7 +121,7 @@ Char 52 (052), width 4
  __  # __
   .    . 
 
-Char 53 (053), width 4
+Char 53 (U+0035), width 4
   .### . 
   .#   . 
   .##  . 
@@ -137,7 +129,7 @@ Char 53 (053), width 4
  __##  __
   .    . 
 
-Char 54 (054), width 4
+Char 54 (U+0036), width 4
   . ## . 
   .#   . 
   .##  . 
@@ -145,7 +137,7 @@ Char 54 (054), width 4
  __ #  __
   .    . 
 
-Char 55 (055), width 4
+Char 55 (U+0037), width 4
   .### . 
   .  # . 
   . #  . 
@@ -153,7 +145,7 @@ Char 55 (055), width 4
  __ #  __
   .    . 
 
-Char 56 (056), width 4
+Char 56 (U+0038), width 4
   . #  . 
   .# # . 
   . #  . 
@@ -161,7 +153,7 @@ Char 56 (056), width 4
  __ #  __
   .    . 
 
-Char 57 (057), width 4
+Char 57 (U+0039), width 4
   . #  . 
   .# # . 
   . ## . 
@@ -169,7 +161,7 @@ Char 57 (057), width 4
  __##  __
   .    . 
 
-Char 58 (058), width 2
+Char 58 (U+003A), width 2
   .  . 
   .# . 
   .  . 
@@ -177,7 +169,7 @@ Char 58 (058), width 2
  __# __
   .  . 
 
-Char 176 (176), width 4
+Char 176 (U+00B0), width 4
   . #  . 
   .# # . 
   . #  . 

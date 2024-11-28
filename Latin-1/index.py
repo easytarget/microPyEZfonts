@@ -78,13 +78,11 @@ for cset in csets:
             continue
         print('  {:3d}px:'.format(height))
         for font in fontlist:
-            famstr = font.split('_')[2:-1]
+            famstr = font.split('_')[1:-1]
             if 'B' in famstr[0]:
                 style = ' (bold)'
-            elif 'R' in famstr[0]:
+            elif 'R' in famstr[0] or famstr[1] == 'Regular':
                 style = ' (regular)'
-            elif famstr[-1] == 'b':
-                style = ' (bold)'
             else:
                 style = ''
             print('       {:>{}}  {:.>{}}{}'.format(outmap[font]['family'], famwidth, font, namewidth, style))
