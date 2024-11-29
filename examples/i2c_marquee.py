@@ -4,7 +4,6 @@ from time import sleep, ticks_ms
 
 # Interrupt timer
 from machine import Timer
-from micropython import schedule
 
 # fonts
 path.append('fonts')
