@@ -97,7 +97,7 @@ tim0 = Timer(0)
 tim0.init(period=100, mode=Timer.PERIODIC, callback=mstep)
 
 # Start the main marquee
-message = 'Info: This is a a long & boring informational message! [with ~{:d} chars]'
+message = 'Info: This is a long & boring informational message! [with ~{:d} chars]'
 marquee1.start(message.format(len(message)), pause=20)
 
 # A box around the uptime count
