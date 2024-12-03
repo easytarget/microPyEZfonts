@@ -31,7 +31,7 @@ class ezFBmarquee():
         self._verbose = verbose
 
         self.name = 'marquee_' + self._font.__name__
-        self._string = None
+        self.string = None
 
         # font details; only monochrome HLSB fonts are supported
         self._font_format = framebuf.MONO_HLSB
@@ -130,7 +130,7 @@ class ezFBmarquee():
         return char_width + hgap
 
     def stop(self):
-        self._string = None
+        self.string = None
         self._count = 0
         self._stepping = False
         self._stringwidth = 0
@@ -150,7 +150,7 @@ class ezFBmarquee():
             # flip the left and right bytes in a 16 bit color word if required
             return ((color & 255) << 8) + (color >> 8) if self._cswap else color
 
-        if self._string is not None:
+        if self.string is not None:
             self.stop()
         mode = self._mode if mode is None else self._checkmode(mode)
         self._pause = self._dpause if pause is None else max(-1,int(pause))
@@ -164,7 +164,7 @@ class ezFBmarquee():
         # Create and fill the scroll buffer and attributes
         self._makescroll(string, mode, hgap, pad)
         # Set active and show the initial output
-        self._string = string
+        self.string = string
         self._count = self._start
         self.step(0)
         # Give info as needed
@@ -182,7 +182,7 @@ class ezFBmarquee():
     def step(self, steps=1):
         # Step the marquee as necesscary
         steps = max(0,min(steps, self._width))
-        if self._string is None:
+        if self.string is None:
             return False
         # Do animation step
         res = False
@@ -212,4 +212,4 @@ class ezFBmarquee():
 
     def active(self):
         # Return true if active
-        return False if self._string is None else True
+        return False if self.string is None else True
