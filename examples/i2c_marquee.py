@@ -4,7 +4,6 @@ from time import sleep, ticks_ms
 
 # Interrupt timer
 from machine import Timer
-from micropython import schedule
 
 # fonts
 path.append('fonts')
@@ -98,7 +97,7 @@ tim0 = Timer(0)
 tim0.init(period=100, mode=Timer.PERIODIC, callback=mstep)
 
 # Start the main marquee
-message = 'Info: This is a a long & boring informational message! [with ~{:d} chars]'
+message = 'Info: This is a long & boring informational message! [with ~{:d} chars]'
 marquee1.start(message.format(len(message)), pause=20)
 
 # A box around the uptime count

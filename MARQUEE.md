@@ -140,6 +140,13 @@ mymarquee.active()
 ```
 Returns `True` if the marquee is active (showing a message).
 
+### Properties:
+#### `string`
+```python
+mymarquee.string
+```
+The current displaying marquee `'string'`, or `None` if marquee is stopped.
+
 -----------------------
 ### Future Ideas:
 These are not currently planned but should be relatively easy to add based on the marquee’s architecture:
