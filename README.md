@@ -102,5 +102,5 @@ I created `ezFBfont`, the font packs, and tools to support a [project](https://g
 This is a 3D printer status and progress display, driven by a Seeedstudio XIAO RP2040, and using my fonts, writer, and marquee.
 * It also uses another specialized MicroPython tool I created, [serialOM](https://github.com/easytarget/serialOM), which is a framework for fetching and syncing the RepRapFirmware [ObjectModel](https://docs.duet3d.com/en/User_manual/RepRapFirmware/Object_Model) via any serial stream. This tool works in both MicroPython and CPython.
 
-The fonts, writer, and marquee have been tested on an `ssd1306` OLED display and a `st7567` LCD module using I2C, on both ESP32 and RP2040 development boards.
+The fonts, writer, and marquee have been tested on `SSD1306` OLED displays and a `ST7567` LCD module using I2C, as well as several `ST7789` color TFT displays using SPI and i80 busses. Tested MCU's include *ESP8266*, *ESP32*, *ESP32-S3*, *ESP32-C3* and *RP2040* development boards.
 
