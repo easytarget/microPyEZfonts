@@ -188,15 +188,15 @@ class ezFBmarquee():
         res = False
         if (self._pause == 0) and (steps > 0):
             self._count += steps
-            # Blit the scrollbuffer over outbuffer offset by scroll value
-            if self._stepping:
-                self._outframe.blit(self._scrollframe, -self._count, 0)
             # Catch rollover
-            if self._count >= self._end:
+            if self._count  > self._end:
                 self._count = self._start
                 res = True
                 if self._verbose:
                     print('{}: rollover'.format(self.name))
+            # Blit the scrollbuffer over outbuffer offset by scroll value
+            if self._stepping:
+                self._outframe.blit(self._scrollframe, -self._count, 0)
         # Blit the output frame to screen, with colors are applied via palette
         self._device.blit(self._outframe, self._x, self._y, -1, self._palette)
         # Decrease the pause count towards zero
