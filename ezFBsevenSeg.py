@@ -62,13 +62,20 @@ _segs = {
     'rl' : array('i', [14, 15, 14, 30, 13, 29, 13, 16]),  # right lower
     # Special Symbols
     'dec' : array('i', [3, 30, 3, 31, 4, 31, 4, 30]),     # decimal point
-    'cou' : array('i', [3, 10, 3, 11, 4, 11, 4, 10]),     # colon upper
-    'col' : array('i', [3, 21, 3, 22, 4, 22, 4, 21]),     # colon lower
+    'cou' : array('i', [3, 8, 3, 9, 4, 9, 4, 8]),         # colon upper
+    'col' : array('i', [3, 20, 3, 21, 4, 21, 4, 20]),     # colon lower
     'min' : array('i', [1, 14, 1, 15, 6, 15, 6, 14]),     # minus
-    'pls' : array('i', [3, 12, 3, 17, 4, 17, 4, 12]),     # plus (bar, goes with minus)
-    'sel' : array('i', [1, 0, 1, 3, 2, 3, 2, 0]),         # seconds left
-    'ser' : array('i', [5, 0, 5, 3, 6, 3, 6, 0]),         # seconds right
-    'mns' : array('i', [3, 0, 3, 3, 4, 3, 4, 0]),         # minutes
+    'pls' : array('i', [3, 11, 3, 18, 4, 18, 4, 11]),     # plus (bar, goes with minus)
+    'sel' : array('i', [1, 0, 1, 5, 2, 5, 2, 0]),         # seconds left
+    'ser' : array('i', [5, 0, 5, 5, 6, 5, 6, 0]),         # seconds right
+    'mns' : array('i', [3, 0, 3, 5, 4, 5, 4, 0]),         # minutes
+    'dgl' : array('i', [1, 1, 1, 4, 2, 4, 2, 1]),         # degrees left
+    'dgr' : array('i', [5, 1, 5, 4, 6, 4, 6, 1]),         # degrees right
+    'dgu' : array('i', [2, 0, 2, 1, 5, 1, 5, 0]),         # degrees upper
+    'dgb' : array('i', [2, 4, 2, 5, 5, 5, 5, 4]),         # degrees lower
+    'pul' : array('i', [1, 0, 1, 1, 2, 1, 2, 0]),         # percent upper left
+    'plr' : array('i', [5, 4, 5, 5, 6, 5, 6, 4]),         # percent lower right
+    'psl' : array('i', [1, 4, 1, 5, 5, 1, 5, 0]),         # percent slant
 }
 
 # character polygon lists
@@ -79,6 +86,7 @@ _segs = {
 _chars = {
     32 : ([],True),                                    # space
     34 : (['sel','ser'],False),                        # "
+    37 : (['pul','plr','psl'],False),                  # %
     39 : (['mns'],False),                              # '
     43 : (['min','pls'],False),                        # +
     45 : (['min'],False),                              # -
@@ -100,6 +108,7 @@ _chars = {
     68 : (['ml','bl','ll','rl','ru'],True),            # D
     69 : (['ul','ml','bl','lu','ll'],True),            # E
     70 : (['ul','ml','lu','ll'],True),                 # F
+    176: (['dgl','dgr','dgu','dgb'],False),             # °
 }
 
 # dictionary to hold cached chars

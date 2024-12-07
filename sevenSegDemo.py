@@ -7,7 +7,7 @@ from ezFBfont import ezFBfont
 import ezFBsevenSeg as sevenSeg
 
 # Display
-display = REPL_1306(160, 32, clear=False, blocks=False)
+display = REPL_1306(160, 102, clear=False, blocks=True)
 display.invert(False)  # as needed
 display.rotate(0)      # as needed
 display.contrast(128)  # as needed
@@ -18,7 +18,8 @@ sevenSeg.set(pre='0123456789 ')
 
 print(sevenSeg.info())
 
-bigtime.write('8-+.:\'"',0,0)
-#bigtime.write('89ABCDEF',0,34)
+bigtime.write('-+.:\'"°8%)',0,0)
+bigtime.write('01234567',0,34)
+bigtime.write('89ABCDEF',0,68)
 
 display.show()
