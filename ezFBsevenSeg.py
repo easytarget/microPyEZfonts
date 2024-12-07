@@ -52,13 +52,23 @@ def max_ch():
 # - indexed by an abbreviated name
 # - values are an integer array of x,y pairs for use in framebuf.poly()
 _segs = {
-    'ul' : array('i', [1, 0, 2, 1, 13, 1, 14, 0]),  # base,
-    'ml' : array('i', [1, 13, 2, 14, 13, 14, 14, 13]),  # middle
-    'bl' : array('i', [1, 31, 2, 30, 13, 30, 14, 31]),  # base
-    'lu' : array('i', [0, 1, 0, 12, 1, 12, 1, 2]),  # left upper
-    'll' : array('i', [0, 14, 0, 30, 1, 29, 1, 15]),  # left lower
-    'ru' : array('i', [15, 1, 15, 12, 14, 12, 14, 2]),  # right upper
-    'rl' : array('i', [15, 14, 15, 30, 14, 29, 14, 15]),  # right lower
+    # conventional 7 segment
+    'ul' : array('i', [2, 0, 3, 1, 12, 1, 13, 0]),        # base,
+    'ml' : array('i', [2, 14, 3, 15, 12, 15, 13, 14]),    # middle
+    'bl' : array('i', [2, 31, 3, 30, 11, 30, 13, 31]),    # base
+    'lu' : array('i', [1, 1, 1, 13, 2, 13, 2, 2]),        # left upper
+    'll' : array('i', [1, 15, 1, 30, 2, 29, 2, 16]),      # left lower
+    'ru' : array('i', [14, 1, 14, 13, 13, 13, 13, 2]),    # right upper
+    'rl' : array('i', [14, 15, 14, 30, 13, 29, 13, 16]),  # right lower
+    # Special Symbols
+    'dec' : array('i', [3, 30, 3, 31, 4, 31, 4, 30]),     # decimal point
+    'cou' : array('i', [3, 10, 3, 11, 4, 11, 4, 10]),     # colon upper
+    'col' : array('i', [3, 21, 3, 22, 4, 22, 4, 21]),     # colon lower
+    'min' : array('i', [1, 14, 1, 15, 6, 15, 6, 14]),     # minus
+    'pls' : array('i', [3, 12, 3, 17, 4, 17, 4, 12]),     # plus (bar, goes with minus)
+    'sel' : array('i', [1, 0, 1, 3, 2, 3, 2, 0]),         # seconds left
+    'ser' : array('i', [5, 0, 5, 3, 6, 3, 6, 0]),         # seconds right
+    'mns' : array('i', [3, 0, 3, 3, 4, 3, 4, 0]),         # minutes
 }
 
 # character polygon lists
@@ -68,22 +78,28 @@ _segs = {
 # - keep this list ordered or max_char() will be wrong.
 _chars = {
     32 : ([],True),                                    # space
+    34 : (['sel','ser'],False),                        # "
+    39 : (['mns'],False),                              # '
+    43 : (['min','pls'],False),                        # +
+    45 : (['min'],False),                              # -
+    46 : (['dec'],False),                              # .
     48 : (['ul','bl','lu','ll','ru','rl'],True),       # 0
     49 : (['ru','rl'],True),                           # 1
-    50 : (['ul','ml','bl','ll','ru'],True),  # 2
-    51 : (['ul','ml','bl','lu','ll','ru','rl'],True),  # 3
-    52 : (['ul','ml','bl','lu','ll','ru','rl'],True),  # 4
-    53 : (['ul','ml','bl','lu','ll','ru','rl'],True),  # 5
-    54 : (['ul','ml','bl','lu','ll','ru','rl'],True),  # 6
-    55 : (['ul','ml','bl','lu','ll','ru','rl'],True),  # 7
+    50 : (['ul','ml','bl','ll','ru'],True),            # 2
+    51 : (['ul','ml','bl','ru','rl'],True),            # 3
+    52 : (['ml','lu','ru','rl'],True),                 # 4
+    53 : (['ul','ml','bl','lu','rl'],True),            # 5
+    54 : (['ul','ml','bl','lu','ll','rl'],True),       # 6
+    55 : (['ul','ru','rl'],True),                      # 7
     56 : (['ul','ml','bl','lu','ll','ru','rl'],True),  # 8
-    59 : (['ul','ml','bl','lu','ll','ru','rl'],True),  # 9
-    65 : (['ul','ml','bl','lu','ll','ru','rl'],True),  # A
-    66 : (['ul','ml','bl','lu','ll','ru','rl'],True),  # B
-    67 : (['ul','ml','bl','lu','ll','ru','rl'],True),  # C
-    68 : (['ul','ml','bl','lu','ll','ru','rl'],True),  # D
-    69 : (['ul','ml','bl','lu','ll','ru','rl'],True),  # E
-    70 : (['ul','ml','bl','lu','ll','ru','rl'],True),  # F
+    57 : (['ul','ml','bl','lu','ru','rl'],True),       # 9
+    58 : (['cou','col'],False),                        # :
+    65 : (['ul','ml','lu','ll','ru','rl'],True),       # A
+    66 : (['ml','bl','lu','ll','rl'],True),            # B
+    67 : (['ul','bl','lu','ll'],True),                 # C
+    68 : (['ml','bl','ll','rl','ru'],True),            # D
+    69 : (['ul','ml','bl','lu','ll'],True),            # E
+    70 : (['ul','ml','lu','ll'],True),                 # F
 }
 
 # dictionary to hold cached chars
@@ -99,7 +115,6 @@ def _gen(ch):
     ch = ord(ch) if type(ch) is str else ch
     if ch not in _chars.keys():
         return False
-    print('rendering: ',ch)
     _g[ch] = _render(*_chars[ch])
     
 def _render(segs,iswide):
@@ -113,6 +128,7 @@ def _render(segs,iswide):
     _canvas = FrameBuffer(_buf, wide, _high, MONO_HLSB)
     for poly in segs:
         _canvas.poly(0,0,_segs[poly],1,True)
+    _buf.append(wide)
     return _buf
     
 
@@ -149,4 +165,4 @@ def get_ch(ch):
         return None, 0, 0
     if c not in _g.keys():
         _gen(ch)
-    return memoryview(_g[c]), _high, _wide   # todo, half-wide..
+    return memoryview(_g[c]), _high, int(_g[c][-1])
