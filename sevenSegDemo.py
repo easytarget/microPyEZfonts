@@ -7,11 +7,19 @@ from ezFBfont import ezFBfont
 import ezFBsevenSeg as sevenSeg
 
 # Display
-display = REPL_1306(128, 64, clear=True)
+display = REPL_1306(100, 32, clear=False, blocks=False)
 display.invert(False)  # as needed
 display.rotate(0)      # as needed
 display.contrast(128)  # as needed
 
-bigtime = ezFBfont(display, sevenSeg, halign='center', valign='center')
+bigtime = ezFBfont(display, sevenSeg, hgap=2)
 
-sevenSeg.get()
+print(sevenSeg.info())
+
+sevenSeg.set(pre='8')
+
+print(sevenSeg.info())
+
+bigtime.write('0123456789',0,0)
+
+display.show()
