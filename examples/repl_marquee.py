@@ -11,8 +11,8 @@ from ezFBmarquee import ezFBmarquee
 
 # fonts
 path.append('fonts')
-import ezFBfont_15_helvR10_ascii as font1
-import ezFBfont_23_spleen_12x24_ascii as font2
+import ezFBfont_helvR10_ascii_15 as font1
+import ezFBfont_spleen_12x24_ascii_23 as font2
 
 '''
 A demo of using ezFBmarquee to animate messages
