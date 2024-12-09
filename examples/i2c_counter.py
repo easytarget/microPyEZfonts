@@ -4,13 +4,13 @@ from time import ticks_ms
 
 # fonts
 path.append('fonts')
-import ezFBfont_17_helvB12_ascii as header
-import ezFBfont_37_7_Seg_41x21_base as digits
-import ezFBfont_29_7_Seg_33x19_base as decimals
+import ezFBfont_helvB12_ascii_17 as header
+import ezFBfont_7_Seg_41x21_0x0_0x39_37 as digits
+import ezFBfont_7_Seg_33x19_0x0_0x39_29_base as decimals
 # Replace the digits and decimals to try a conventional font
-#import ezFBfont_26_spleen_16x32_num as digits
-#import ezFBfont_23_spleen_12x24_ascii as decimals
-import ezFBfont_16_open_iconic_human_2x_lower as icons
+#import ezFBfont_spleen_16x32_num_26 as digits
+#import ezFBfont_spleen_12x24_ascii_23 as decimals
+import ezFBfont_open_iconic_human_2x_0x40_0x79_16 as icons
 
 '''
 A demo of using ezMPfont to do a simple uptime counter.

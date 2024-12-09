@@ -5,10 +5,10 @@ from gc import collect, mem_free
 
 # fonts
 path.append('fonts')
-import ezFBfont_23_spleen_12x24_ascii
-import ezFBfont_26_spleen_16x32_num
-import ezFBfont_10_6x12_ascii
-#import ezFBfont_24_symb18_lower
+import ezFBfont_spleen_12x24_ascii_23
+import ezFBfont_spleen_16x32_num_26
+import ezFBfont_6x12_ascii_10
+#import ezFBfont_symb18_0x40_0x79_24
 
 '''
 A demo of using ezMPfont to splat a load of fonts onto
@@ -44,10 +44,10 @@ display.fill(0)
 display.show()
 
 # Font Init
-font1 = ezFBfont(display, ezFBfont_23_spleen_12x24_ascii, tkey=0, verbose=True)
-font2 = ezFBfont(display, ezFBfont_26_spleen_16x32_num, verbose=True)
-font3 = ezFBfont(display, ezFBfont_10_6x12_ascii, verbose=True)
-#font4 = ezFBfont(display, ezFBfont_24_symb18_lower, verbose=True)
+font1 = ezFBfont(display, ezFBfont_spleen_12x24_ascii_23, tkey=0, verbose=True)
+font2 = ezFBfont(display, ezFBfont_spleen_16x32_num_26, verbose=True)
+font3 = ezFBfont(display, ezFBfont_6x12_ascii_10, verbose=True)
+#font4 = ezFBfont(display, ezFBfont_symb18_0x40_0x79_24, verbose=True)
 
 # multiline demo stuff
 font3.set_default(tkey=0, halign='center', valign='baseline', vgap=-1)

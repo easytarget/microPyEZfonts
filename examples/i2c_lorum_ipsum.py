@@ -4,10 +4,10 @@ from sys import path
 # fonts
 path.append('fonts')
 # Choose a font below.
-#import ezFBfont_05_micro_ascii as thefont
-#import ezFBfont_07_font_tiny5_ascii as thefont
-import ezFBfont_10_6x12_ascii as thefont
-#import ezFBfont_17_helvB12_ascii as thefont
+#import ezFBfont_micro_ascii_05 as thefont
+#import ezFBfont_tiny5_Regular_ascii_07 as thefont
+import ezFBfont_6x12_ascii_10 as thefont
+#import ezFBfont_helvB12_ascii_17 as thefont
 
 '''
 A demo of using ezMPfont to splat a load of fonts onto

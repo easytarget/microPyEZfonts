@@ -4,7 +4,7 @@ from time import sleep_ms
 
 # fonts
 path.append('fonts')
-import ezFBfont_05_micro_ascii as crtfont
+import ezFBfont_micro_ascii_05 as crtfont
 
 '''
 A demo of using ezMPfont to simulate the login

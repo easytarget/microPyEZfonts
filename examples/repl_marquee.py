@@ -11,8 +11,8 @@ from ezFBmarquee import ezFBmarquee
 
 # fonts
 path.append('fonts')
-import ezFBfont_15_helvR10_ascii as font1
-import ezFBfont_23_spleen_12x24_ascii as font2
+import ezFBfont_helvR10_ascii_15 as font1
+import ezFBfont_spleen_12x24_ascii_23 as font2
 
 '''
 A demo of using ezFBmarquee to animate messages
@@ -44,7 +44,7 @@ def mstep():
     display.show()
 
 # Start the main marquee
-message = 'Info: This is a a long & boring informational message! [with ~{:d} chars]'
+message = 'Info: This is a long & boring informational message! [with ~{:d} chars]'
 marquee1.start(message.format(len(message)), pause=20)
 
 # A box around the uptime count
