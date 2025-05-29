@@ -3,11 +3,26 @@ Declared name: -freetype-pt sans-medium-r-normal--12-90-100-100-p-61-iso10646-1
 Declared family: pt sans
 Declared weight: medium
 Declared size: 12
-Characters: 63
+Characters: 64
 Height: 13
 Baseline: 10
 Max width: 14
 Fixed width: False
+
+Char 32 (0020), width 3
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+ __   __
+  .   . 
+  .   . 
+  .   . 
 
 Char 33 (0021), width 4
   .    . 

@@ -3,11 +3,24 @@ Declared name: -freetype-pt sans narrow-medium-r-normal--10-70-100-100-p-41-iso1
 Declared family: pt sans narrow
 Declared weight: medium
 Declared size: 10
-Characters: 63
+Characters: 64
 Height: 11
 Baseline: 8
 Max width: 9
 Fixed width: False
+
+Char 32 (0020), width 2
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+ __  __
+  .  . 
+  .  . 
+  .  . 
 
 Char 33 (0021), width 2
   .  . 
