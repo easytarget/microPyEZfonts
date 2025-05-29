@@ -17,13 +17,13 @@ The font packs here were created using my `bdf2dict` font module creator (see be
 The font files are in the [`Latin-1`](Latin-1) and [`Symbols`](Symbols) folders.
 * Check the `README` in each folder for a description, a map of all the fonts, their sizes, and other details.
 
-These font packs are based on the default U8G2 fonts. They include common X11 fonts, the 'spleen' small font set, OpenIconic icons, tiny fonts, and other symbol/icon fonts.
+These font packs are based on the default U8G2 fonts. They include common X11 fonts, the 'spleen' small font set, OpenIconic icons, tiny fonts, and other symbol/icon fonts. I have added the PTSans and PTSansNarrow fonts to the list myself.
 
-They come from **112** open and shareable *.bdf* font definition files covering 11 font families. These have been turned into *.py* font modules based on the character set(s) they include.
+They come from **119** open and shareable *.bdf* font definition files covering 12 font families. These have been turned into *.py* font modules based on the character set(s) they include.
 
 Fonts are organized by font family, then character set and size.
-* 561 **Latin-1** font modules cover the basic Latin character sets in groups of related characters.
-* 144 **Symbol** modules cover special symbols (battery, 7 segment, etc.) and the Open Iconic icon sets.
+* 800(ish)  **Latin-1** font modules cover the basic Latin character sets in groups of related characters.
+* 150(ish)  **Symbol** modules cover special symbols (battery, 7 segment, etc.) and the Open Iconic icon sets.
 
 All font modules keep the original copyright notices from the source '.bdf' files. Most fonts are very 'free', but the proportional X11 fonts need extra attention. For more details, check the documentation on the font index pages.
 
@@ -35,6 +35,7 @@ Instead, tools and examples are provided to help you make a custom font pack wit
 * The `bdf2dict` tool (below) is easy to install and use, just requiring Python 3.7 or higher.
   * The [Unicode](Unicode/README.md) page has an example of how to use it.
   * The [unifont](https://savannah.gnu.org/projects/unifont) and [efont](http://openlab.ring.gr.jp/efont/) Unicode font *.bdf* sources are in the Unicode folder.
+  * The PTSans and PTSansNarrow fonts (in the Latin1 collection) have a full [Cyrillic](https://en.wikipedia.org/wiki/Cyrillic_script) character set in their [*.bdf* sources](Latin-1/Latin-1-bdf-sources).
 
 -------------------------
 
