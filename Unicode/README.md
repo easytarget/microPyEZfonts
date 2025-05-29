@@ -19,12 +19,15 @@ There are two Unicode font sets provided here:
   * Only 16px height, 8px/16px bi-width.
   * A complete set of 65,534 glyphs for all Unicode blocks.
 
-Also: The **Fixed** and **X11** fonts in the [Latin-1](../Latin-1/Latin-1-bdf-sources) folder (like Helvetica, Times, Courier, and Schoolbook) include some Unicode glyphs in the extended Latin-1 blocks.
+Also:
+* The **PTSans** and **PTSansNarrow** fonts in the [Latin-1](../Latin-1/Latin-1-bdf-sources) folder have full Cyrillic character sets.
+* The **Fixed** and **X11** fonts in the [Latin-1](../Latin-1/Latin-1-bdf-sources) folder (like Helvetica, Times, Courier, and Schoolbook) include some Unicode glyphs in the extended Latin-1 blocks.
 
 # COPYRIGHT
 Both Unicode fonts are open-source and have permissive licenses, but they do have some terms and restrictions:
 * Please read the copyright notice in the **efont** folder and follow any rules if you redistribute these fonts. See [efont-unicode-bdf-0.4.2/COPYRIGHT](efont-unicode-bdf-0.4.2/COPYRIGHT).
 * The **Unifont** is licensed under both SIL and GPL2, with font exceptions. See [LICENSE.txt](https://unifoundry.com/LICENSE.txt).
+* PTSans and PTSansNarrow use the [SIL Open font licence](https://openfontlicense.org/).
 
 # Example
 

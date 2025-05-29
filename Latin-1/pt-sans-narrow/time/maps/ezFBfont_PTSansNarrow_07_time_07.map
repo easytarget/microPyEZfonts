@@ -1,0 +1,145 @@
+Font: PTSansNarrow_07 (./PTSansNarrow-07.bdf)
+Declared name: -freetype-pt sans narrow-medium-r-normal--10-70-100-100-p-41-iso10646-1
+Declared family: pt sans narrow
+Declared weight: medium
+Declared size: 10
+Characters: 15
+Height: 7
+Baseline: 7
+Max width: 5
+Fixed width: False
+
+Char 32 (0020), width 2
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+ __  __
+
+Char 43 (002B), width 4
+  .    . 
+  .    . 
+  . #  . 
+  .####. 
+  . #  . 
+  .    . 
+ __    __
+
+Char 45 (002D), width 3
+  .   . 
+  .   . 
+  .   . 
+  .   . 
+  .## . 
+  .   . 
+ __   __
+
+Char 46 (002E), width 2
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+ __# __
+
+Char 48 (0030), width 5
+  . ##  . 
+  .#  # . 
+  .#  # . 
+  .#  # . 
+  .#  # . 
+  .#  # . 
+ __ ##  __
+
+Char 49 (0031), width 5
+  .  #  . 
+  . ##  . 
+  .  #  . 
+  .  #  . 
+  .  #  . 
+  .  #  . 
+ __ ### __
+
+Char 50 (0032), width 5
+  . ##  . 
+  .   # . 
+  .   # . 
+  .  #  . 
+  .  #  . 
+  . #   . 
+ __ ### __
+
+Char 51 (0033), width 5
+  . ### . 
+  .  #  . 
+  .  #  . 
+  . ##  . 
+  .   # . 
+  .   # . 
+ __ ##  __
+
+Char 52 (0034), width 5
+  .  #  . 
+  .  #  . 
+  . ##  . 
+  .# #  . 
+  .#### . 
+  .  #  . 
+ __  #  __
+
+Char 53 (0035), width 5
+  . ### . 
+  . #   . 
+  . #   . 
+  . ##  . 
+  .   # . 
+  .   # . 
+ __ ##  __
+
+Char 54 (0036), width 5
+  .  #  . 
+  . #   . 
+  . #   . 
+  . ### . 
+  . # # . 
+  . # # . 
+ __ ### __
+
+Char 55 (0037), width 5
+  . ### . 
+  .   # . 
+  .  #  . 
+  .  #  . 
+  .  #  . 
+  . #   . 
+ __ #   __
+
+Char 56 (0038), width 5
+  . ##  . 
+  . # # . 
+  . # # . 
+  .  #  . 
+  . # # . 
+  . # # . 
+ __ ##  __
+
+Char 57 (0039), width 5
+  . ##  . 
+  .#  # . 
+  .#  # . 
+  . ### . 
+  .   # . 
+  .  #  . 
+ __ #   __
+
+Char 58 (003A), width 2
+  .  . 
+  .  . 
+  . #. 
+  .  . 
+  .  . 
+  .  . 
+ __ #__

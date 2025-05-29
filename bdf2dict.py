@@ -96,7 +96,7 @@ set_file = Path(outdir).joinpath(name + '.set')
 # Determine charset
 if len(argv) == 4:
     if Path(argv[3]).is_file():
-        with open(argv[3], 'r') as setfile:
+        with open(argv[3], 'r', encoding='utf-8') as setfile:
             cset = setfile.read()
     elif len(argv[3]) == 0:
         cset = None
@@ -186,7 +186,7 @@ def line_hex(glyph, line, device_wide, box_wide, xoff, hex_bits, extra_bits):
 # Main Code
 
 # Open and ingest the source
-with open(font_file,'r') as readlines:
+with open(font_file,'r', encoding='latin1', errors='replace') as readlines:
     bdf = readlines.read().split('STARTCHAR')
 startblock = bdf.pop(0).split('\n')
 

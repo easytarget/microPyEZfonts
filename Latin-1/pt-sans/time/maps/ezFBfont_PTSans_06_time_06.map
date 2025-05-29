@@ -1,0 +1,130 @@
+Font: PTSans_06 (./PTSans-06.bdf)
+Declared name: -freetype-pt sans-medium-r-normal--8-60-100-100-p-40-iso10646-1
+Declared family: pt sans
+Declared weight: medium
+Declared size: 8
+Characters: 15
+Height: 6
+Baseline: 6
+Max width: 4
+Fixed width: False
+
+Char 32 (0020), width 2
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+ __  __
+
+Char 43 (002B), width 4
+  .    . 
+  .    . 
+  . #  . 
+  .####. 
+  . #  . 
+ __    __
+
+Char 45 (002D), width 3
+  .   . 
+  .   . 
+  .   . 
+  .## . 
+  .   . 
+ __   __
+
+Char 46 (002E), width 2
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+  .  . 
+ __# __
+
+Char 48 (0030), width 4
+  . ## . 
+  .#  #. 
+  .#  #. 
+  .#  #. 
+  .#  #. 
+ __ ## __
+
+Char 49 (0031), width 4
+  .  # . 
+  . ## . 
+  .  # . 
+  .  # . 
+  .  # . 
+ __ ###__
+
+Char 50 (0032), width 4
+  . ## . 
+  .   #. 
+  .  # . 
+  .  # . 
+  . #  . 
+ __####__
+
+Char 51 (0033), width 4
+  . ###. 
+  .  # . 
+  . #  . 
+  .  ##. 
+  .   #. 
+ __ ## __
+
+Char 52 (0034), width 4
+  .  # . 
+  .  # . 
+  . ## . 
+  .# # . 
+  . ###. 
+ __  # __
+
+Char 53 (0035), width 4
+  . ## . 
+  . #  . 
+  . #  . 
+  .  # . 
+  .   #. 
+ __ ## __
+
+Char 54 (0036), width 4
+  .  # . 
+  . #  . 
+  .#   . 
+  .####. 
+  .#  #. 
+ __ ###__
+
+Char 55 (0037), width 4
+  .####. 
+  .  # . 
+  .  # . 
+  .  # . 
+  . #  . 
+ __ #  __
+
+Char 56 (0038), width 4
+  . ## . 
+  . # #. 
+  . ## . 
+  . ## . 
+  . # #. 
+ __ ###__
+
+Char 57 (0039), width 4
+  . ## . 
+  .#  #. 
+  .#  #. 
+  . ###. 
+  .  # . 
+ __ ## __
+
+Char 58 (003A), width 2
+  .  . 
+  .  . 
+  . #. 
+  .  . 
+  .  . 
+ __ #__
