@@ -6,7 +6,7 @@ from time import ticks_ms
 path.append('fonts')
 import ezFBfont_helvB12_ascii_17 as header
 import ezFBfont_7_Seg_41x21_0x0_0x39_37 as digits
-import ezFBfont_7_Seg_33x19_0x0_0x39_29_base as decimals
+import ezFBfont_7_Seg_33x19_0x0_0x39_29 as decimals
 # Replace the digits and decimals to try a conventional font
 #import ezFBfont_spleen_16x32_num_26 as digits
 #import ezFBfont_spleen_12x24_ascii_23 as decimals
