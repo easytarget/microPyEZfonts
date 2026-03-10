@@ -10,8 +10,7 @@
     Copyright:
 '''
 from framebuf import FrameBuffer, MONO_HLSB
-from math import ceil, floor
-from array import array
+from math import ceil
 
 version = '0.33'
 name = '0.0.1'
