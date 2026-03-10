@@ -7,7 +7,15 @@
       font-to-py tool: https://github.com/peterhinch/micropython-font-to-py
 '''
 '''
-    Copyright:
+MIT License
+
+Copyright (c) 2026 Owen Carter
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 '''
 from framebuf import FrameBuffer, MONO_HLSB
 from math import ceil
@@ -46,10 +54,8 @@ def min_ch():
 def max_ch():
     return max(_all_chars)
 
-# character polygon lists
+# character element lists
 # - index is the integer character ord(),
-# - value is a tuple with:
-# - keep these list ordered or max_char() will be wrong.
 _chars_full = {
     32 : [],                                    # space
     45 : ['bm'],                                # negative: '-'
@@ -110,7 +116,7 @@ def _render_half(segments):
     bytewide = ((wide - 1) // 8) + 1
     buf = bytearray(_high * bytewide)
     canvas = FrameBuffer(buf, wide, _high, MONO_HLSB)
-    _draw_full(canvas, wide, _high, segments, thick=2, gap=1)
+    _draw_half(canvas, wide, _high, segments, thick=2)
     buf.append(wide)
     return buf
 
@@ -142,6 +148,18 @@ def _draw_full(canvas, X, Y, elements, thick, gap):
         canvas.line(X-x-1, M+y, X-thick-x-1, M + thick+y, 0)
         canvas.line(x, Y-y-1, thick+x, Y-thick-y - 1, 0)
         canvas.line(X-x-1, Y-y-1, X-thick-x-1, Y-thick-y-1, 0)
+
+def _draw_half(canvas, X, Y, elements, thick):
+    U = int(Y*0.35)
+    L = int(Y*0.68)
+    C = int(X/2)
+    i = int(thick/2)
+    if 'de' in elements:
+        canvas.rect(C-i, Y-thick, thick, thick, 1, True)
+    if 'cu' in elements:
+        canvas.rect(C-i, U-i, thick, thick, 1, True)
+    if 'cl' in elements:
+        canvas.rect(C-i, L-i, thick, thick, 1, True)
 
 
 # NEEDS HEAVY RE_WRITE
