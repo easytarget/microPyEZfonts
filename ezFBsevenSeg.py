@@ -42,140 +42,122 @@ def monospaced():
     return False
 
 def min_ch():
-    return _chars.keys[0]
+    return min(_all_chars)
 
 def max_ch():
-    return _chars.keys()[-1]
-
-# segment polygons
-# - indexed by an abbreviated name
-# - values are a list of x,y pairs between 0->1 that are scaled for use in framebuf.poly()
-_segs = {
-    # conventional 7 segment
-    'ul' : [0.1333, 0, 0.2, 0.0323, 0.8, 0.0323, 0.8667, 0],                  # base,
-    'ml' : [0.1333, 0.4516, 0.2, 0.4839, 0.8, 0.4839, 0.8667, 0.4516],        # middle
-    'bl' : [0.1333, 1, 0.2, 0.9677, 0.7333, 0.9677, 0.8667, 1],               # base
-    'lu' : [0.0667, 0.0323, 0.0667, 0.4194, 0.1333, 0.4194, 0.1333, 0.0645],  # left upper
-    'll' : [0.0667, 0.4839, 0.0667, 0.9677, 0.1333, 0.9355, 0.1333, 0.5161],  # left lower
-    'ru' : [0.9333, 0.0323, 0.9333, 0.4194, 0.8667, 0.4194, 0.8667, 0.0645],  # right upper
-    'rl' : [0.9333, 0.4839, 0.9333, 0.9677, 0.8667, 0.9355, 0.8667, 0.5161],  # right lower
-    # Special Symbols - TODO:REDUCE
-   'dec' : [0.4286, 0.9677, 0.4286, 1, 0.5714, 1, 0.5714, 0.9677],            # decimal point
-   'cou' : [0.4286, 0.2581, 0.4286, 0.2903, 0.5714, 0.2903, 0.5714, 0.2581],  # colon upper
-   'col' : [0.4286, 0.6452, 0.4286, 0.6774, 0.5714, 0.6774, 0.5714, 0.6452],  # colon lower
-   'min' : [0.1429, 0.4516, 0.1429, 0.4839, 0.8571, 0.4839, 0.8571, 0.4516],  # minus
-   'pls' : [0.4286, 0.3226, 0.4286, 0.6129, 0.5714, 0.6129, 0.5714, 0.3226],  # plus (bar, goes with minus)
-   'sel' : [0.1429, 0, 0.1429, 0.1613, 0.2857, 0.1613, 0.2857, 0],            # seconds left
-   'ser' : [0.7143, 0, 0.7143, 0.1613, 0.8571, 0.1613, 0.8571, 0],            # seconds right
-   'mns' : [0.4286, 0, 0.4286, 0.1613, 0.5714, 0.1613, 0.5714, 0],            # minutes
-   'dgl' : [0.1429, 0.0323, 0.1429, 0.129, 0.2857, 0.129, 0.2857, 0.0323],    # degrees left
-   'dgr' : [0.7143, 0.0323, 0.7143, 0.129, 0.8571, 0.129, 0.8571, 0.0323],    # degrees right
-   'dgu' : [0.2857, 0, 0.2857, 0.0323, 0.7143, 0.0323, 0.7143, 0],            # degrees upper
-   'dgb' : [0.2857, 0.129, 0.2857, 0.1613, 0.7143, 0.1613, 0.7143, 0.129],    # degrees lower  
-   'pul' : [0.1429, 0, 0.1429, 0.0323, 0.2857, 0.0323, 0.2857, 0],            # percent upper left
-   'plr' : [0.7143, 0.1935, 0.7143, 0.2258, 0.8571, 0.2258, 0.8571, 0.1935],  # percent lower right
-   'psl' : [0.1429, 0.1935, 0.1429, 0.2258, 0.7143, 0.0323, 0.7143, 0],       # percent slant
-}
+    return max(_all_chars)
 
 # character polygon lists
 # - index is the integer character ord(),
 # - value is a tuple with:
-#   (active segments(list), full(bool:False=halfwidth)
-# - keep this list ordered or max_char() will be wrong.
-_chars = {
-    32 : ([],False),                                   # space
-    34 : (['sel','ser'],False),                        # "
-    37 : (['pul','plr','psl'],False),                  # %
-    39 : (['mns'],False),                              # '
-    43 : (['min','pls'],False),                        # +
-    45 : (['min'],False),                              # -
-    46 : (['dec'],False),                              # .
-    48 : (['ul','bl','lu','ll','ru','rl'],True),       # 0
-    49 : (['ru','rl'],True),                           # 1
-    50 : (['ul','ml','bl','ll','ru'],True),            # 2
-    51 : (['ul','ml','bl','ru','rl'],True),            # 3
-    52 : (['ml','lu','ru','rl'],True),                 # 4
-    53 : (['ul','ml','bl','lu','rl'],True),            # 5
-    54 : (['ul','ml','bl','lu','ll','rl'],True),       # 6
-    55 : (['ul','ru','rl'],True),                      # 7
-    56 : (['ul','ml','bl','lu','ll','ru','rl'],True),  # 8
-    57 : (['ul','ml','bl','lu','ru','rl'],True),       # 9
-    58 : (['cou','col'],False),                        # :
-    65 : (['ul','ml','lu','ll','ru','rl'],True),       # A
-    66 : (['ml','bl','lu','ll','rl'],True),            # B
-    67 : (['ul','bl','lu','ll'],True),                 # C
-    68 : (['ml','bl','ll','rl','ru'],True),            # D
-    69 : (['ul','ml','bl','lu','ll'],True),            # E
-    70 : (['ul','ml','lu','ll'],True),                 # F
-   176 : (['dgl','dgr','dgu','dgb'],False),            # °
+# - keep these list ordered or max_char() will be wrong.
+_chars_full = {
+    32 : [],                                    # space
+    45 : ['bm'],                                # negative: '-'
+    48 : ['bt','bb','lu','ll','ru','rl'],       # 0
+    49 : ['ru','rl'],                           # 1
+    50 : ['bt','bm','bb','ll','ru'],            # 2
+    51 : ['bt','bm','bb','ru','rl'],            # 3
+    52 : ['bm','lu','ru','rl'],                 # 4
+    53 : ['bt','bm','bb','lu','rl'],            # 5
+    54 : ['bt','bm','bb','lu','ll','rl'],       # 6
+    55 : ['bt','ru','rl'],                      # 7
+    56 : ['bt','bm','bb','lu','ll','ru','rl'],  # 8
+    57 : ['bt','bm','bb','lu','ru','rl'],       # 9
+    65 : ['bt','bm','lu','ll','ru','rl'],       # A
+    66 : ['bm','bb','lu','ll','rl'],            # B
+    67 : ['bt','bb','lu','ll'],                 # C
+    68 : ['bm','bb','ll','rl','ru'],            # D
+    69 : ['bt','bm','bb','lu','ll'],            # E
+    70 : ['bt','bm','lu','ll'],                 # F
 }
+
+_chars_half = {
+    46 : ['de'],       # decimal point: '.'
+    58 : ['cu','cl'],  # semicolon: ':'
+    8201 : [],         # thin space: unicode u+2009
+}
+
+_all_chars = list(_chars_full.keys()) + list(_chars_half.keys())
 
 # dictionary to hold cached chars
 _g = {}
-
-'''
-def conv():
-    for k in _segs.keys():
-        new = array('i',[])
-        if k in ['ul','ml','bl','lu','ll','ru','rl']:
-            ws = 1 / 15
-        else:
-            ws = 1 / 7
-        hs = 1 / 31
-        print('{:>8} '.format("'{}'".format(k)), end=': [')
-        for i in range(0,len(_segs[k]),2):
-            x = round(_segs[k][i] * ws, 4)
-            y = round(_segs[k][i+1] * hs, 4)
-            print('{:g}, {:g}'.format(x,y), end=', ')
-        print(']')
-'''
 
 def _clean_cache():
     global _g
     _g = {}
 
 def _gen(ch):
-    # Generate a char using segment map and adds
-    # - returns false if char not available
-    ch = ord(ch) if type(ch) is str else ch
-    if ch not in _chars.keys():
-        return None
-    return _render(*_chars[ch])
+    # Generate a char using segment map
+    if ch in _chars_half.keys():
+        return _render_half(_chars_half[ch])
+    else:
+        return _render_full(_chars_full[ch])
 
-def _render(segments,iswide):
+def _render_full(segments):
     # Render the char using a framebuf
     # returns a bytearray
-    # cache if needed
-    # if wide is False; do a half-width char.  TODO
-    wide = _wide if iswide else ceil(_wide/2)
+    bytewide = ((_wide - 1) // 8) + 1
+    buf = bytearray(_high * bytewide)
+    canvas = FrameBuffer(buf, _wide, _high, MONO_HLSB)
+    _draw_full(canvas, _wide, _high, segments, thick=2, gap=1)
+    buf.append(_wide)
+    return buf
+
+def _render_half(segments):
+    # Render the char using a framebuf
+    # returns a bytearray
+    wide = ceil(_wide/2)
     bytewide = ((wide - 1) // 8) + 1
     buf = bytearray(_high * bytewide)
     canvas = FrameBuffer(buf, wide, _high, MONO_HLSB)
-    for poly in segments:
-        pa = array('i',[])
-        pd = _segs[poly]
-        for i in range(0,len(pd),2):
-            pa.append(round(pd[i] * wide))
-            pa.append(round(pd[i+1] * _high))
-        canvas.poly(0,0,pa,1,True)
+    _draw_full(canvas, wide, _high, segments, thick=2, gap=1)
     buf.append(wide)
     return buf
 
+def _draw_full(canvas, X, Y, elements, thick, gap):
+    # Main body bars
+    M = int(Y/2)
+    for l in range(thick):
+        if 'bt' in elements:
+            canvas.hline(l, l, X-(2*l), 1)
+        if 'lu' in elements:
+            canvas.vline(l, l, M-(2*l), 1)
+        if 'ru' in elements:
+            canvas.vline(X-l-1, l, M-(2*l), 1)
+        if 'bm' in elements:
+            canvas.hline(l, M+l, X-(2*l), 1)
+        if 'll' in elements:
+            canvas.vline(l, M+l, M-(2*l), 1)
+        if 'rl' in elements:
+            canvas.vline(X-l-1,  M+l, M-(2*l), 1)
+        if 'bb' in elements:
+            canvas.hline(l, Y-l-1, X-(2*l), 1)
+    # Now create gaps between them
+    for l in range(gap):
+        f = (l+1)//2
+        (x, y) = (f, 0) if l % 2 else (0, f)
+        canvas.line(x, y, thick+x, thick+y, 0)
+        canvas.line(X - x-1, y, X-thick-x-1, thick+y, 0)
+        canvas.line(x, M+y, thick+x, M+thick + y, 0)
+        canvas.line(X-x-1, M+y, X-thick-x-1, M + thick+y, 0)
+        canvas.line(x, Y-y-1, thick+x, Y-thick-y - 1, 0)
+        canvas.line(X-x-1, Y-y-1, X-thick-x-1, Y-thick-y-1, 0)
 
-def set(height=None, width=None, slant=None, cached=None, pre=None):
+
+# NEEDS HEAVY RE_WRITE
+def set(height=None, width=None, thick=None, gap=None, cached=None, pre=None):
     # Always clean cache, then set/override defaults
     # - Pre-cache any chars passed by 'pre'
-    global _high, _wide, _slant, _cache
+    global _high, _wide, _cache
     _clean_cache()
     # modify defaults as required
     _high = height if height is not None else _high
     _wide = width if width is not None else _wide
-    _slant = slant if slant is not None else _slant
     _cache = cached if cached is not None else _cache
     # constrain to value and type
     _high = int(max(5, _high))  # integer, min = 5
     _wide = int(max(5, _wide))  # integer, min = 5
-    _slant = int(max(-_high, min(_high, _slant)))  # integer, max = (+/-)height
     _cache = bool(_cache)     # bool
     # precache
     if pre is not None:
@@ -183,15 +165,15 @@ def set(height=None, width=None, slant=None, cached=None, pre=None):
             _, _, _ = get_ch(ch)
 
 def info():
-    # useful for debug; returns height, width, slant,
+    # useful for debug; returns height, width
     # cache active(bool),and any current chached chars as a list
     c = list(_g.keys())
     c.sort()
-    return _wide, _high, _slant, _cache, c
+    return _wide, _high, _cache, c
 
 def get_ch(ch):
     c = ord(ch)
-    if c not in _chars.keys():
+    if c not in _all_chars:
         return None, 0, 0
     if c not in _g.keys():
         buf = _gen(c)

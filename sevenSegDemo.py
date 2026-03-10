@@ -15,12 +15,12 @@ display.contrast(128)  # as needed
 
 bigtime = ezFBfont(display, sevenSeg)
 
-sevenSeg.set(pre='0123456789 ')
+sevenSeg.set()
 
 print(sevenSeg.info())
 
 #sevenSeg.conv()
-bigtime.write('-+.:\'"°8%)',0,0)
+bigtime.write('-.:',0,0)
 bigtime.write('01234567',0,34)
 bigtime.write('89ABCDEF',0,68)
 
