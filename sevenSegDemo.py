@@ -3,6 +3,7 @@
 from sys import path
 path.append('drivers')
 from repl_1306 import REPL_1306
+path.append('demo_extra')
 from ezFBfont import ezFBfont
 import ezFBsevenSeg as sevenSeg
 
@@ -18,6 +19,7 @@ sevenSeg.set(pre='0123456789 ')
 
 print(sevenSeg.info())
 
+#sevenSeg.conv()
 bigtime.write('-+.:\'"°8%)',0,0)
 bigtime.write('01234567',0,34)
 bigtime.write('89ABCDEF',0,68)

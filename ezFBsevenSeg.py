@@ -10,7 +10,7 @@
     Copyright:
 '''
 from framebuf import FrameBuffer, MONO_HLSB
-from math import ceil
+from math import ceil, floor
 from array import array
 
 version = '0.33'
@@ -21,7 +21,6 @@ size = 32
 
 _high  = 32    # height
 _wide  = 16    # width
-_slant = 0     # slant (TODO!)
 _cache = True  # cached
 
 def height():
@@ -50,32 +49,32 @@ def max_ch():
 
 # segment polygons
 # - indexed by an abbreviated name
-# - values are an integer array of x,y pairs for use in framebuf.poly()
+# - values are a list of x,y pairs between 0->1 that are scaled for use in framebuf.poly()
 _segs = {
     # conventional 7 segment
-    'ul' : array('i', [2, 0, 3, 1, 12, 1, 13, 0]),        # base,
-    'ml' : array('i', [2, 14, 3, 15, 12, 15, 13, 14]),    # middle
-    'bl' : array('i', [2, 31, 3, 30, 11, 30, 13, 31]),    # base
-    'lu' : array('i', [1, 1, 1, 13, 2, 13, 2, 2]),        # left upper
-    'll' : array('i', [1, 15, 1, 30, 2, 29, 2, 16]),      # left lower
-    'ru' : array('i', [14, 1, 14, 13, 13, 13, 13, 2]),    # right upper
-    'rl' : array('i', [14, 15, 14, 30, 13, 29, 13, 16]),  # right lower
-    # Special Symbols
-    'dec' : array('i', [3, 30, 3, 31, 4, 31, 4, 30]),     # decimal point
-    'cou' : array('i', [3, 8, 3, 9, 4, 9, 4, 8]),         # colon upper
-    'col' : array('i', [3, 20, 3, 21, 4, 21, 4, 20]),     # colon lower
-    'min' : array('i', [1, 14, 1, 15, 6, 15, 6, 14]),     # minus
-    'pls' : array('i', [3, 11, 3, 18, 4, 18, 4, 11]),     # plus (bar, goes with minus)
-    'sel' : array('i', [1, 0, 1, 5, 2, 5, 2, 0]),         # seconds left
-    'ser' : array('i', [5, 0, 5, 5, 6, 5, 6, 0]),         # seconds right
-    'mns' : array('i', [3, 0, 3, 5, 4, 5, 4, 0]),         # minutes
-    'dgl' : array('i', [1, 1, 1, 4, 2, 4, 2, 1]),         # degrees left
-    'dgr' : array('i', [5, 1, 5, 4, 6, 4, 6, 1]),         # degrees right
-    'dgu' : array('i', [2, 0, 2, 1, 5, 1, 5, 0]),         # degrees upper
-    'dgb' : array('i', [2, 4, 2, 5, 5, 5, 5, 4]),         # degrees lower
-    'pul' : array('i', [1, 0, 1, 1, 2, 1, 2, 0]),         # percent upper left
-    'plr' : array('i', [5, 4, 5, 5, 6, 5, 6, 4]),         # percent lower right
-    'psl' : array('i', [1, 4, 1, 5, 5, 1, 5, 0]),         # percent slant
+    'ul' : [0.1333, 0, 0.2, 0.0323, 0.8, 0.0323, 0.8667, 0],                  # base,
+    'ml' : [0.1333, 0.4516, 0.2, 0.4839, 0.8, 0.4839, 0.8667, 0.4516],        # middle
+    'bl' : [0.1333, 1, 0.2, 0.9677, 0.7333, 0.9677, 0.8667, 1],               # base
+    'lu' : [0.0667, 0.0323, 0.0667, 0.4194, 0.1333, 0.4194, 0.1333, 0.0645],  # left upper
+    'll' : [0.0667, 0.4839, 0.0667, 0.9677, 0.1333, 0.9355, 0.1333, 0.5161],  # left lower
+    'ru' : [0.9333, 0.0323, 0.9333, 0.4194, 0.8667, 0.4194, 0.8667, 0.0645],  # right upper
+    'rl' : [0.9333, 0.4839, 0.9333, 0.9677, 0.8667, 0.9355, 0.8667, 0.5161],  # right lower
+    # Special Symbols - TODO:REDUCE
+   'dec' : [0.4286, 0.9677, 0.4286, 1, 0.5714, 1, 0.5714, 0.9677],            # decimal point
+   'cou' : [0.4286, 0.2581, 0.4286, 0.2903, 0.5714, 0.2903, 0.5714, 0.2581],  # colon upper
+   'col' : [0.4286, 0.6452, 0.4286, 0.6774, 0.5714, 0.6774, 0.5714, 0.6452],  # colon lower
+   'min' : [0.1429, 0.4516, 0.1429, 0.4839, 0.8571, 0.4839, 0.8571, 0.4516],  # minus
+   'pls' : [0.4286, 0.3226, 0.4286, 0.6129, 0.5714, 0.6129, 0.5714, 0.3226],  # plus (bar, goes with minus)
+   'sel' : [0.1429, 0, 0.1429, 0.1613, 0.2857, 0.1613, 0.2857, 0],            # seconds left
+   'ser' : [0.7143, 0, 0.7143, 0.1613, 0.8571, 0.1613, 0.8571, 0],            # seconds right
+   'mns' : [0.4286, 0, 0.4286, 0.1613, 0.5714, 0.1613, 0.5714, 0],            # minutes
+   'dgl' : [0.1429, 0.0323, 0.1429, 0.129, 0.2857, 0.129, 0.2857, 0.0323],    # degrees left
+   'dgr' : [0.7143, 0.0323, 0.7143, 0.129, 0.8571, 0.129, 0.8571, 0.0323],    # degrees right
+   'dgu' : [0.2857, 0, 0.2857, 0.0323, 0.7143, 0.0323, 0.7143, 0],            # degrees upper
+   'dgb' : [0.2857, 0.129, 0.2857, 0.1613, 0.7143, 0.1613, 0.7143, 0.129],    # degrees lower  
+   'pul' : [0.1429, 0, 0.1429, 0.0323, 0.2857, 0.0323, 0.2857, 0],            # percent upper left
+   'plr' : [0.7143, 0.1935, 0.7143, 0.2258, 0.8571, 0.2258, 0.8571, 0.1935],  # percent lower right
+   'psl' : [0.1429, 0.1935, 0.1429, 0.2258, 0.7143, 0.0323, 0.7143, 0],       # percent slant
 }
 
 # character polygon lists
@@ -84,7 +83,7 @@ _segs = {
 #   (active segments(list), full(bool:False=halfwidth)
 # - keep this list ordered or max_char() will be wrong.
 _chars = {
-    32 : ([],True),                                    # space
+    32 : ([],False),                                   # space
     34 : (['sel','ser'],False),                        # "
     37 : (['pul','plr','psl'],False),                  # %
     39 : (['mns'],False),                              # '
@@ -108,38 +107,60 @@ _chars = {
     68 : (['ml','bl','ll','rl','ru'],True),            # D
     69 : (['ul','ml','bl','lu','ll'],True),            # E
     70 : (['ul','ml','lu','ll'],True),                 # F
-    176: (['dgl','dgr','dgu','dgb'],False),             # °
+   176 : (['dgl','dgr','dgu','dgb'],False),            # °
 }
 
 # dictionary to hold cached chars
 _g = {}
 
+'''
+def conv():
+    for k in _segs.keys():
+        new = array('i',[])
+        if k in ['ul','ml','bl','lu','ll','ru','rl']:
+            ws = 1 / 15
+        else:
+            ws = 1 / 7
+        hs = 1 / 31
+        print('{:>8} '.format("'{}'".format(k)), end=': [')
+        for i in range(0,len(_segs[k]),2):
+            x = round(_segs[k][i] * ws, 4)
+            y = round(_segs[k][i+1] * hs, 4)
+            print('{:g}, {:g}'.format(x,y), end=', ')
+        print(']')
+'''
+
 def _clean_cache():
     global _g
     _g = {}
-    
+
 def _gen(ch):
-    # Generate a char using segment map.
+    # Generate a char using segment map and adds
     # - returns false if char not available
     ch = ord(ch) if type(ch) is str else ch
     if ch not in _chars.keys():
-        return False
-    _g[ch] = _render(*_chars[ch])
-    
-def _render(segs,iswide):
+        return None
+    return _render(*_chars[ch])
+
+def _render(segments,iswide):
     # Render the char using a framebuf
     # returns a bytearray
     # cache if needed
     # if wide is False; do a half-width char.  TODO
     wide = _wide if iswide else ceil(_wide/2)
     bytewide = ((wide - 1) // 8) + 1
-    _buf = bytearray(_high * bytewide)
-    _canvas = FrameBuffer(_buf, wide, _high, MONO_HLSB)
-    for poly in segs:
-        _canvas.poly(0,0,_segs[poly],1,True)
-    _buf.append(wide)
-    return _buf
-    
+    buf = bytearray(_high * bytewide)
+    canvas = FrameBuffer(buf, wide, _high, MONO_HLSB)
+    for poly in segments:
+        pa = array('i',[])
+        pd = _segs[poly]
+        for i in range(0,len(pd),2):
+            pa.append(round(pd[i] * wide))
+            pa.append(round(pd[i+1] * _high))
+        canvas.poly(0,0,pa,1,True)
+    buf.append(wide)
+    return buf
+
 
 def set(height=None, width=None, slant=None, cached=None, pre=None):
     # Always clean cache, then set/override defaults
@@ -159,7 +180,7 @@ def set(height=None, width=None, slant=None, cached=None, pre=None):
     # precache
     if pre is not None:
         for ch in pre:
-            _gen(ch)
+            _, _, _ = get_ch(ch)
 
 def info():
     # useful for debug; returns height, width, slant,
@@ -173,5 +194,10 @@ def get_ch(ch):
     if c not in _chars.keys():
         return None, 0, 0
     if c not in _g.keys():
-        _gen(ch)
-    return memoryview(_g[c]), _high, int(_g[c][-1])
+        buf = _gen(c)
+        if _cache:
+           _g[c] = buf
+    else:
+        buf = _g[c]
+    return memoryview(buf), _high, int(buf[-1])
+
