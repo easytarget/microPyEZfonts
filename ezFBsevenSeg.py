@@ -20,43 +20,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 from framebuf import FrameBuffer, MONO_HLSB
 from math import ceil
 
-version = '0.33'
-name = '0.0.1'
-family = 'fixed'
-weight = 'medium'
-size = 32
-
-_high  = 32    # height
-_wide  = 16    # width
-_cache = True  # cached
-
-def height():
-    return _high
-
-def baseline():
-    return _high
-
-def max_width():
-    return _wide
-
-def hmap():
-    return True
-
-def reverse():
-    return False
-
-def monospaced():
-    return False
-
-def min_ch():
-    return min(_all_chars)
-
-def max_ch():
-    return max(_all_chars)
 
 # character element lists
 # - index is the integer character ord(),
-_chars_full = {
+_CHARS_FULL = {
     32 : [],                                    # space
     45 : ['bm'],                                # negative: '-'
     48 : ['bt','bb','lu','ll','ru','rl'],       # 0
@@ -77,126 +44,181 @@ _chars_full = {
     70 : ['bt','bm','lu','ll'],                 # F
 }
 
-_chars_half = {
+_CHARS_HALF = {
     46 : ['de'],       # decimal point: '.'
     58 : ['cu','cl'],  # semicolon: ':'
+    183 : ['dm'],      # middle dot: unicode u+00B7
+    729 : ['da'],      # dot above: unicode u+02D9
     8201 : [],         # thin space: unicode u+2009
 }
 
-_all_chars = list(_chars_full.keys()) + list(_chars_half.keys())
+_ALL_CHARS = list(_CHARS_FULL.keys()) + list(_CHARS_HALF.keys())
 
-# dictionary to hold cached chars
-_g = {}
+class SEVEN_SEG:
+    version = '0.33'
+    name = 'seven_segment'
+    family = 'fixed'
+    weight = 'medium'
+    size = 32   # default
 
-def _clean_cache():
-    global _g
-    _g = {}
+    def __init__(self):
+        self._high  = 32    # height
+        self._wide  = 16    # width
+        self._thick = 2
+        self._gap = 1
+        self._use_cache = True  # cached
+        self._cache = {}
+        self.__name__ = '{}-{}x{}'.format(self.__module__,
+                                          self._wide,
+                                          self._high)
 
-def _gen(ch):
-    # Generate a char using segment map
-    if ch in _chars_half.keys():
-        return _render_half(_chars_half[ch])
-    else:
-        return _render_full(_chars_full[ch])
+    '''
+        Standard methods for a micropython font
+    '''
+    def height(self):
+        return self._high
 
-def _render_full(segments):
-    # Render the char using a framebuf
-    # returns a bytearray
-    bytewide = ((_wide - 1) // 8) + 1
-    buf = bytearray(_high * bytewide)
-    canvas = FrameBuffer(buf, _wide, _high, MONO_HLSB)
-    _draw_full(canvas, _wide, _high, segments, thick=2, gap=1)
-    buf.append(_wide)
-    return buf
+    def baseline(self):
+        return self._high
 
-def _render_half(segments):
-    # Render the char using a framebuf
-    # returns a bytearray
-    wide = ceil(_wide/2)
-    bytewide = ((wide - 1) // 8) + 1
-    buf = bytearray(_high * bytewide)
-    canvas = FrameBuffer(buf, wide, _high, MONO_HLSB)
-    _draw_half(canvas, wide, _high, segments, thick=2)
-    buf.append(wide)
-    return buf
+    def max_width(self):
+        return self._wide
 
-def _draw_full(canvas, X, Y, elements, thick, gap):
-    # Main body bars
-    M = int(Y/2)
-    for l in range(thick):
-        if 'bt' in elements:
-            canvas.hline(l, l, X-(2*l), 1)
-        if 'lu' in elements:
-            canvas.vline(l, l, M-(2*l), 1)
-        if 'ru' in elements:
-            canvas.vline(X-l-1, l, M-(2*l), 1)
-        if 'bm' in elements:
-            canvas.hline(l, M+l, X-(2*l), 1)
-        if 'll' in elements:
-            canvas.vline(l, M+l, M-(2*l), 1)
-        if 'rl' in elements:
-            canvas.vline(X-l-1,  M+l, M-(2*l), 1)
-        if 'bb' in elements:
-            canvas.hline(l, Y-l-1, X-(2*l), 1)
-    # Now create gaps between them
-    for l in range(gap):
-        f = (l+1)//2
-        (x, y) = (f, 0) if l % 2 else (0, f)
-        canvas.line(x, y, thick+x, thick+y, 0)
-        canvas.line(X - x-1, y, X-thick-x-1, thick+y, 0)
-        canvas.line(x, M+y, thick+x, M+thick + y, 0)
-        canvas.line(X-x-1, M+y, X-thick-x-1, M + thick+y, 0)
-        canvas.line(x, Y-y-1, thick+x, Y-thick-y - 1, 0)
-        canvas.line(X-x-1, Y-y-1, X-thick-x-1, Y-thick-y-1, 0)
+    def hmap(self):
+        return True
 
-def _draw_half(canvas, X, Y, elements, thick):
-    U = int(Y*0.35)
-    L = int(Y*0.68)
-    C = int(X/2)
-    i = int(thick/2)
-    if 'de' in elements:
-        canvas.rect(C-i, Y-thick, thick, thick, 1, True)
-    if 'cu' in elements:
-        canvas.rect(C-i, U-i, thick, thick, 1, True)
-    if 'cl' in elements:
-        canvas.rect(C-i, L-i, thick, thick, 1, True)
+    def reverse(self):
+        return False
 
+    def monospaced(self):
+        return False
 
-# NEEDS HEAVY RE_WRITE
-def set(height=None, width=None, thick=None, gap=None, cached=None, pre=None):
-    # Always clean cache, then set/override defaults
-    # - Pre-cache any chars passed by 'pre'
-    global _high, _wide, _cache
-    _clean_cache()
-    # modify defaults as required
-    _high = height if height is not None else _high
-    _wide = width if width is not None else _wide
-    _cache = cached if cached is not None else _cache
-    # constrain to value and type
-    _high = int(max(5, _high))  # integer, min = 5
-    _wide = int(max(5, _wide))  # integer, min = 5
-    _cache = bool(_cache)     # bool
-    # precache
-    if pre is not None:
-        for ch in pre:
-            _, _, _ = get_ch(ch)
+    def min_ch(self):
+        return min(_ALL_CHARS)
 
-def info():
-    # useful for debug; returns height, width
-    # cache active(bool),and any current chached chars as a list
-    c = list(_g.keys())
-    c.sort()
-    return _wide, _high, _cache, c
+    def max_ch(self):
+        return max(_ALL_CHARS)
 
-def get_ch(ch):
-    c = ord(ch)
-    if c not in _all_chars:
-        return None, 0, 0
-    if c not in _g.keys():
-        buf = _gen(c)
-        if _cache:
-           _g[c] = buf
-    else:
-        buf = _g[c]
-    return memoryview(buf), _high, int(buf[-1])
+    '''
+        Internal methods specific to the Seven Segment font
+    '''
+    def _gen(self, ch):
+        # Generate a char using segment map
+        if ch in _CHARS_FULL.keys():
+            return self._render_full(_CHARS_FULL[ch])
+        else:
+            return self._render_half(_CHARS_HALF[ch])
+
+    def _render_full(self, segments):
+        # Render the char using a framebuf, returns a bytearray
+        bytewide = ((self._wide - 1) // 8) + 1
+        buf = bytearray(self._high * bytewide)
+        canvas = FrameBuffer(buf, self._wide, self._high, MONO_HLSB)
+        self._draw_full(canvas, self._wide, self._high, self._thick, self._gap, segments)
+        buf.append(self._wide)
+        return buf
+
+    def _render_half(self, segments):
+        # Render the char using a half-width framebuf, returns a bytearray
+        wide = ceil(self._wide/2)
+        bytewide = ((wide - 1) // 8) + 1
+        buf = bytearray(self._high * bytewide)
+        canvas = FrameBuffer(buf, wide, self._high, MONO_HLSB)
+        self._draw_half(canvas, wide, self._high, self._thick, segments)
+        buf.append(wide)
+        return buf
+
+    def _draw_full(self, canvas, X, Y, T, G, elements):
+        # Main body bars
+        M = int(Y/2)
+        for l in range(T):
+            if 'bt' in elements:
+                canvas.hline(l, l, X-(2*l), 1)
+            if 'lu' in elements:
+                canvas.vline(l, l, M-(2*l), 1)
+            if 'ru' in elements:
+                canvas.vline(X-l-1, l, M-(2*l), 1)
+            if 'bm' in elements:
+                canvas.hline(l, M+l, X-(2*l), 1)
+            if 'll' in elements:
+                canvas.vline(l, M+l, M-(2*l), 1)
+            if 'rl' in elements:
+                canvas.vline(X-l-1,  M+l, M-(2*l), 1)
+            if 'bb' in elements:
+                canvas.hline(l, Y-l-1, X-(2*l), 1)
+        # Now create gaps between them
+        for l in range(G):
+            f = (l+1)//2
+            (x, y) = (f, 0) if l % 2 else (0, f)
+            canvas.line(x, y, T + x, T + y, 0)
+            canvas.line(X - x - 1, y, X - T - x - 1, T + y, 0)
+            canvas.line(x, M + y, T + x, M + T + y, 0)
+            canvas.line(X - x - 1, M + y, X - T - x - 1, M + T + y, 0)
+            canvas.line(x, Y - y - 1, T + x, Y - T - y - 1, 0)
+            canvas.line(X - x - 1, Y - y - 1, X - T - x - 1, Y - T - y - 1, 0)
+
+    def _draw_half(self, canvas, X, Y, T, elements):
+        U = int(Y*0.35)
+        M = int(Y/2)
+        L = int(Y*0.68)
+        C = int(X/2)
+        i = int(T/2)
+        if 'de' in elements:
+            canvas.rect(C-i, Y-T, T, T, 1, True)
+        if 'dm' in elements:
+            canvas.rect(C-i, M-i, T, T, 1, True)
+        if 'da' in elements:
+            canvas.rect(C-i, 0, T, T, 1, True)
+        if 'cu' in elements:
+            canvas.rect(C-i, U-i, T, T, 1, True)
+        if 'cl' in elements:
+            canvas.rect(C-i, L-i, T, T, 1, True)
+
+    '''
+        (re)Set the seven segment font parameters
+        -   call with no parameters to clear the cache
+    '''
+
+    # NEEDS HEAVY RE_WRITE
+    def set(self, height=None, width=None, box_X=None, box_y=None, thick=None, gap=None, cached=None, pre=None):
+        # Always clean cache
+        self._cache = {}
+        # modify defaults as required
+        self._high = height if height is not None else self._high
+        self._wide = width if width is not None else self._wide
+        self._thick = thick if thick is not None else self._thick
+        self._gap = gap if gap is not None else self._gap
+        self._use_cache = cached if cached is not None else self._use_cache
+
+        # constrain to value and type (todo: fixup values sensibly)
+        self._high = int(max(5, self._high))  # integer, min = 5
+        self._wide = int(max(5, self._wide))  # integer, min = 5
+        # Pre-cache any chars passed by 'pre'
+        if pre is not None:
+            for ch in pre:
+                _, _, _ = self.get_ch(ch)
+        self._use_cache = bool(self._use_cache)     # bool
+
+    # DEBUG: remove this later..
+    def info(self):
+        # useful for debug; returns height, width
+        # cache active(bool),and any current chached chars as a list
+        c = list(self._cache.keys())
+        c.sort()
+        return self._wide, self._high, self._thick, self._gap, self._use_cache, c
+
+    '''
+        get_ch() returns the glyph data
+    '''
+    def get_ch(self, ch):
+        c = ord(ch)
+        if c not in _ALL_CHARS:
+            return None, 0, 0
+        if c not in self._cache.keys():
+            buf = self._gen(c)
+            if self._use_cache:
+               self._cache[c] = buf
+        else:
+            buf = self._cache[c]
+        return memoryview(buf), self._high, int(buf[-1])
 
