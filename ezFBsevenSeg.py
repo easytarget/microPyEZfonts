@@ -55,53 +55,27 @@ _CHARS_HALF = {
 _ALL_CHARS = list(_CHARS_FULL.keys()) + list(_CHARS_HALF.keys())
 
 class SEVEN_SEG:
-    version = '0.33'
+    # Some (faked) standard fields for mPY fonts
+    version = '1.0'
     name = 'seven_segment'
-    family = 'fixed'
+    family = 'lcd'
     weight = 'medium'
     size = 32   # default
 
-    def __init__(self):
-        self._high  = 32    # height
-        self._wide  = 16    # width
-        self._thick = 2
-        self._gap = 1
-        self._use_cache = True  # cached
-        self._cache = {}
-        self.__name__ = '{}-{}x{}'.format(self.__module__,
-                                          self._wide,
-                                          self._high)
-
-    '''
-        Standard methods for a micropython font
-    '''
-    def height(self):
-        return self._high
-
-    def baseline(self):
-        return self._high
-
-    def max_width(self):
-        return self._wide
-
-    def hmap(self):
-        return True
-
-    def reverse(self):
-        return False
-
-    def monospaced(self):
-        return False
-
-    def min_ch(self):
-        return min(_ALL_CHARS)
-
-    def max_ch(self):
-        return max(_ALL_CHARS)
+    def __init__(self, height, width,
+                 led_high=None, led_wide=None,
+                 led_thick=3, led_gap=3,
+                 use_cache=True, precache=None):
+        self.__name__ = '{}-{}x{}'.format(self.__module__, height, width)
+        # Sensible (?) defaults
+        led_high = int(height * 0.8) if led_high is None else led_high
+        led_wide = int(width * 0.8) if led_wide is None else led_wide
+        self.set(height, width, led_high, led_wide, led_thick, led_gap, use_cache, precache)
 
     '''
         Internal methods specific to the Seven Segment font
     '''
+
     def _gen(self, ch):
         # Generate a char using segment map
         if ch in _CHARS_FULL.keys():
@@ -114,22 +88,26 @@ class SEVEN_SEG:
         bytewide = ((self._wide - 1) // 8) + 1
         buf = bytearray(self._high * bytewide)
         canvas = FrameBuffer(buf, self._wide, self._high, MONO_HLSB)
-        self._draw_full(canvas, self._wide, self._high, self._thick, self._gap, segments)
+        self._draw_full(canvas, self._led_wide, self._led_high, self._led_thick, self._led_gap, segments)
         buf.append(self._wide)
         return buf
 
     def _render_half(self, segments):
         # Render the char using a half-width framebuf, returns a bytearray
         wide = ceil(self._wide/2)
+        led_wide = ceil(self._led_wide/2)
         bytewide = ((wide - 1) // 8) + 1
         buf = bytearray(self._high * bytewide)
         canvas = FrameBuffer(buf, wide, self._high, MONO_HLSB)
-        self._draw_half(canvas, wide, self._high, self._thick, segments)
+        self._draw_half(canvas, led_wide, self._led_high, self._led_thick, segments)
         buf.append(wide)
         return buf
 
     def _draw_full(self, canvas, X, Y, T, G, elements):
-        # Main body bars
+        '''
+            Draw a Full-Width character using the 7 led segments
+        '''
+        # Draw the required bars in full (intersecting)
         M = int(Y/2)
         for l in range(T):
             if 'bt' in elements:
@@ -146,7 +124,7 @@ class SEVEN_SEG:
                 canvas.vline(X-l-1,  M+l, M-(2*l), 1)
             if 'bb' in elements:
                 canvas.hline(l, Y-l-1, X-(2*l), 1)
-        # Now create gaps between them
+        # Now create the gaps that seperate them
         for l in range(G):
             f = (l+1)//2
             (x, y) = (f, 0) if l % 2 else (0, f)
@@ -175,29 +153,61 @@ class SEVEN_SEG:
             canvas.rect(C-i, L-i, T, T, 1, True)
 
     '''
-        (re)Set the seven segment font parameters
-        -   call with no parameters to clear the cache
+        Standard public methods for a micropython font
     '''
 
+    def height(self):
+        return self._high
+
+    def baseline(self):
+        return self._high
+
+    def max_width(self):
+        return self._wide
+
+    def hmap(self):
+        return True
+
+    def reverse(self):
+        return False
+
+    def monospaced(self):
+        return False
+
+    def min_ch(self):
+        return min(_ALL_CHARS)
+
+    def max_ch(self):
+        return max(_ALL_CHARS)
+
     # NEEDS HEAVY RE_WRITE
-    def set(self, height=None, width=None, box_X=None, box_y=None, thick=None, gap=None, cached=None, pre=None):
+    def set(self, height=None, width=None,
+                  led_high=None, led_wide=None,
+                  led_thick=None, led_gap=None,
+                  cached=None, precache=None):
+        '''
+            Set the font parameters
+            -   See init() for description.
+            -   All parameters are optional
+            -   Always clears the cache
+        '''
         # Always clean cache
         self._cache = {}
-        # modify defaults as required
+        # constrain
+        # TODO
+        # set new value as necesscary
         self._high = height if height is not None else self._high
         self._wide = width if width is not None else self._wide
-        self._thick = thick if thick is not None else self._thick
-        self._gap = gap if gap is not None else self._gap
+        self._led_high = led_high if led_high is not None else self._led_high
+        self._led_wide = led_wide if led_wide is not None else self._led_wide
+        self._led_thick = led_thick if led_thick is not None else self._led_thick
+        self._led_gap = led_gap if led_gap is not None else self._led_gap
         self._use_cache = cached if cached is not None else self._use_cache
-
-        # constrain to value and type (todo: fixup values sensibly)
-        self._high = int(max(5, self._high))  # integer, min = 5
-        self._wide = int(max(5, self._wide))  # integer, min = 5
         # Pre-cache any chars passed by 'pre'
-        if pre is not None:
-            for ch in pre:
+        # - this works even if caching is disabled
+        if precache is not None:
+            for ch in precache:
                 _, _, _ = self.get_ch(ch)
-        self._use_cache = bool(self._use_cache)     # bool
 
     # DEBUG: remove this later..
     def info(self):
@@ -205,7 +215,7 @@ class SEVEN_SEG:
         # cache active(bool),and any current chached chars as a list
         c = list(self._cache.keys())
         c.sort()
-        return self._wide, self._high, self._thick, self._gap, self._use_cache, c
+        return self._wide, self._high, self._led_thick, self._led_gap, self._use_cache, c
 
     '''
         get_ch() returns the glyph data
