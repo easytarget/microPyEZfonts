@@ -7,24 +7,25 @@ path.append('demo_extra')
 from ezFBfont import ezFBfont
 from ezFBsevenSeg import SEVEN_SEG
 
-X = 20
-Y = 32
+X = 24
+Y = 36
 
 # Display
-display = REPL_1306(X * 7, Y * 3, clear=False, blocks=True)
+display = REPL_1306(X * 5, Y * 1, clear=False, blocks=True)
 
 # Create a font instance
-bigtimefont = SEVEN_SEG(height = Y, width = X)
+bigtimefont = SEVEN_SEG(height = Y, width = X, led_thick = 3)
 
 # Set font up
-bigtimefont.set(led_high=None, led_wide=None, led_thick=None, led_gap=None)
+bigtimefont.set(led_high=32, led_thick=4, led_gap=2)
 
 # Now create a font writer
-bigtime = ezFBfont(display, bigtimefont, fg=1, bg=0)
+bigtime = ezFBfont(display, bigtimefont, hgap=1, vgap=1, fg=0, bg=1)
 
 #bigtime.write(' -\u2009.\u00B7\u02D9:\n01234567\n89ABCDEF',0,0)
-bigtime.write('08:34\n56.79\u00B721\n ABCDEF',0,0)
+#bigtime.write('08:34\n56.79\u00B721\n ABCDEF',0,0)
+bigtime.write('08:34',0,0)
 
 display.show()
-print(' -\u2009.\u00B7\u02D9:\n01234567\n89ABCDEF')
+#print(' -\u2009.\u00B7\u02D9:\n01234567\n89ABCDEF')
 print(bigtimefont.info())

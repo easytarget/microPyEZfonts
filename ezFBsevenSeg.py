@@ -18,7 +18,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 '''
 from framebuf import FrameBuffer, MONO_HLSB
-from math import ceil
+from math import ceil, floor
 
 
 # character element lists
@@ -89,6 +89,9 @@ class SEVEN_SEG:
         buf = bytearray(self._high * bytewide)
         canvas = FrameBuffer(buf, self._wide, self._high, MONO_HLSB)
         self._draw_full(canvas, self._led_wide, self._led_high, self._led_thick, self._led_gap, segments)
+        canvas.scroll(self._addx, self._addy)
+        canvas.rect(0, 0, self._wide, self._addy, 0, True)
+        canvas.rect(0, 0, self._addx, self._high, 0, True)
         buf.append(self._wide)
         return buf
 
@@ -100,6 +103,10 @@ class SEVEN_SEG:
         buf = bytearray(self._high * bytewide)
         canvas = FrameBuffer(buf, wide, self._high, MONO_HLSB)
         self._draw_half(canvas, led_wide, self._led_high, self._led_thick, segments)
+        addx = int(self._addx/2)
+        canvas.scroll(addx, self._addy)
+        canvas.rect(0, 0, wide, self._addy, 0, True)
+        canvas.rect(0, 0, addx, self._high, 0, True)
         buf.append(wide)
         return buf
 
@@ -203,6 +210,9 @@ class SEVEN_SEG:
         self._led_thick = led_thick if led_thick is not None else self._led_thick
         self._led_gap = led_gap if led_gap is not None else self._led_gap
         self._use_cache = cached if cached is not None else self._use_cache
+        # Calculate led offset within char
+        self._addx = floor((self._wide - self._led_wide) / 2)
+        self._addy = floor((self._high - self._led_high) / 2)
         # Pre-cache any chars passed by 'pre'
         # - this works even if caching is disabled
         if precache is not None:
