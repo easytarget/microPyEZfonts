@@ -77,7 +77,7 @@ class SEVEN_SEG:
         led_wide = self._wide - 1 - (self._wide // 8) if led_wide is None else led_wide
         led_high = self._high - 1 - (self._high // 8) if led_high is None else led_high
         led_thick = 1 + floor(width // 10) if led_thick is None else led_thick
-        led_gap = 1 + floor(width // 20) if led_gap is None else led_gap
+        led_gap = 1 + floor(width // 16) if led_gap is None else led_gap
         # Apply initial settings
         self.set(led_wide, led_high, led_thick, led_gap, use_cache, precache)
 
