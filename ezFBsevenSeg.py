@@ -44,6 +44,8 @@ _CHARS_FULL = {
     70 : ['bt','bm','lu','ll'],                 # F
     95 : ['bb'],                                # underscore: '_'
     175 : ['bt'],                               # macron (overscore): '¯'
+    176 : ['bt','bm','lu','ru'],                # degrees: '°'
+    8801 : ['bt','bm','bb']                     # tribar: unicode u+2261
 }
 
 _CHARS_HALF = {
@@ -228,8 +230,8 @@ class SEVEN_SEG:
             for ch in precache:
                 _, _, _ = self.get_ch(ch)
 
-    # DEBUG: remove this later..
     def info(self):
+        ''' Useful for debug '''
         print('Width: {}, Height: {},\nled_wide: {}, led_high: {},\nled_thick: {}, led_gap: {},\naddx: {}, addy: {}'
               .format(self._wide, self._high, self._led_wide, self._led_high, self._led_thick, self._led_gap, self._addx, self._addy))
 
