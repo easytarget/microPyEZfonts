@@ -25,7 +25,7 @@ from math import ceil, floor
 # - index is the integer character ord(),
 _CHARS_FULL = {
     32 : [],                                    # space
-    45 : ['bm'],                                # negative: '-'
+    45 : ['bm'],                                # hyphen: '-'
     48 : ['bt','bb','lu','ll','ru','rl'],       # 0
     49 : ['ru','rl'],                           # 1
     50 : ['bt','bm','bb','ll','ru'],            # 2
